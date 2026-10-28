@@ -586,19 +586,13 @@ function ondeHTML(j){const e=x=>String(x).replace(/[&<>"]/g,c=>({"&":"&amp;","<"
 function renderHoje(){
   const el=document.getElementById("v-hoje"),e=x=>String(x).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
   let i=hojeIdx(),pre="";
-  if(i<0){pre=`<p class="eixo">A jornada começa ${br(dia(0))}${-i>1?`, daqui a ${-i} dias`:", amanhã"}. Este é o primeiro dia:</p>`;i=0}
+  if(i<0)i=0;
   if(i>181){el.innerHTML=`<div class="today"><span class="when">Jornada concluída</span><h2>Os 182 dias acabaram. Agora é revisar os erros e fazer provas antigas.</h2></div>`;return}
   const j=JOR[i],w=Math.floor(i/7)+1,f=FASES.find(x=>w>=x[0]&&w<=x[1]);
-  const nums=[j[3]&&`${e(j[3])}`,j[4]&&`meta ${e(j[4])} questões`,`semana ${w} de 26`,f[2]].filter(Boolean).map(x=>`<span>${x}</span>`).join("");
-  const seg=i-(i%7),wk=JOR.slice(seg,seg+7).map((x,k)=>`<div class="${seg+k===i?"on":""}"><b>${br(dia(seg+k))}</b><span>${e(x[1])}</span></div>`).join("");
-  el.innerHTML=`<div class="today">${pre}<span class="when">${br(dia(i))} · ${e(j[0])}</span><h2>${e(j[1])}</h2></div>
-  <div class="nums">${nums}</div>
+  const meta=[j[3],j[4]&&(j[4]+" questões")].filter(Boolean).map(e).join(" · ");
+  el.innerHTML=`<div class="today">${pre}<span class="when">${br(dia(i))}</span><h2>${e(j[1])}</h2>${meta?`<span class="when">${meta}</span>`:""}</div>
   ${ondeHTML(j)}
-  <div class="row2"><a class="ghost" href="#cards" style="text-decoration:none;text-align:center">Revisar flashcards</a><a class="ghost" href="#apostilas" style="text-decoration:none;text-align:center">Ver apostilas</a></div>
-  <p class="eixo">${e(j[2])}</p>
-  <h2 class="vh">Esta semana</h2><div class="week">${wk}</div>
-  <label class="start">Data de início da jornada (sempre numa segunda) <input type="date" id="inicio" value="${ymd(inicio())}"></label>`;
-  document.getElementById("inicio").addEventListener("change",ev=>{try{localStorage.setItem("medaj-inicio",ev.target.value)}catch(x){}renderHoje()});
+  <a class="ghost" href="#cards" style="text-decoration:none;text-align:center">Revisar flashcards</a>`;
 }
 function view(){
   let h=location.hash.slice(1)||"hoje",v=h.startsWith("cards")?"cards":h;
