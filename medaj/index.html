@@ -251,8 +251,8 @@ a.go:hover{border-color:var(--red)}
   <section class="view" id="v-apostilas" aria-label="Apostilas" hidden>
     <h2 class="vh">Bloco 1 · Preventiva</h2>
     <div class="blist">
-      <div class="bwrap"><a class="bitem" href="bloco1.html#pre4"><b>PRE 4 · SUS</b><span>História, Constituição, Leis 8.080 e 8.142, normas, Decreto 7.508, financiamento</span></a><button class="lida" type="button" data-lida="pre4" aria-pressed="false">Marcar como lida</button></div>
-      <div class="bwrap"><a class="bitem" href="bloco1.html#pre1"><b>PRE 1 · Medidas de saúde coletiva</b><span>Morbidade, mortalidade, indicadores, padronização, transição demográfica</span></a><button class="lida" type="button" data-lida="pre1" aria-pressed="false">Marcar como lida</button></div>
+      <div class="bwrap"><a class="bitem" href="bloco1.html#pre4"><b>SUS: história, leis e financiamento</b><span>História, Constituição, Leis 8.080 e 8.142, normas, Decreto 7.508, financiamento</span></a><button class="lida" type="button" data-lida="pre4" aria-pressed="false">Marcar como lida</button></div>
+      <div class="bwrap"><a class="bitem" href="bloco1.html#pre1"><b>Medidas de saúde coletiva</b><span>Morbidade, mortalidade, indicadores, padronização, transição demográfica</span></a><button class="lida" type="button" data-lida="pre1" aria-pressed="false">Marcar como lida</button></div>
     </div>
     <p class="soon">Em breve: Bloco 2 · GO (OBS 1 Pré-natal), Bloco 3 · Pediatria, Cirurgia e Clínica Médica. Cada capítulo novo aparece aqui e ganha cards no app.</p>
   </section>
@@ -333,7 +333,7 @@ a.go:hover{border-color:var(--red)}
 
 <script>
 const APOSTILA="bloco1.html";
-const CHAPTERS={pre4:"PRE 4 · SUS",pre1:"PRE 1 · Medidas de saúde coletiva"};
+const CHAPTERS={pre4:"Preventiva · SUS",pre1:"Preventiva · Medidas de saúde coletiva"};
 const SECS={historia:"Antes do SUS: a linha do tempo",constituicao:"A Constituição de 1988",l8080:"Lei 8.080/1990",l8142:"Lei 8.142/1990",normas:"Normas operacionais e Pacto pela Saúde",d7508:"Decreto 7.508/2011",financiamento:"Financiamento",
  "p1-morbidade":"Morbidade: incidência e prevalência","p1-mortalidade":"Mortalidade geral, específica e letalidade","p1-infantil":"Mortalidade infantil, perinatal e fetal","p1-materna":"Mortalidade materna","p1-proporcional":"Swaroop-Uemura e Nelson de Moraes","p1-padronizacao":"Padronização de coeficientes","p1-demografia":"Demografia e transições","p1-sis":"Sistemas de informação em saúde","p1-do":"Declaração de Óbito"};
 /* Cartões das apostilas medaj. Para acrescentar: [id único, capítulo, seção (âncora da apostila), pergunta, resposta]. */
@@ -480,7 +480,7 @@ function renderStats(){
   $("s-acc").textContent=d.n?Math.round(100*d.ok/d.n)+"%":"–";
   let s=0,t=today();if(!(S.days[t]&&S.days[t].n))t--;while(S.days[t]&&S.days[t].n){s++;t--}
   $("s-streak").textContent=s;
-  $("foot-info").textContent=`${CARDS.length} cartões das apostilas medaj. · PRE 4 e PRE 1`;
+  $("foot-info").textContent=`${CARDS.length} cartões das apostilas medaj. · Preventiva: SUS e Medidas de saúde coletiva`;
 }
 function renderCard(){
   const el=$("card");
@@ -586,8 +586,10 @@ function inicio(){let v="2026-11-02";try{v=localStorage.getItem("medaj-inicio")|
   const d=new Date(v+"T12:00:00");while(d.getDay()!==1)d.setDate(d.getDate()+1);return d}
 function dia(n){const d=inicio();d.setDate(d.getDate()+n);return d}
 function hojeIdx(){const a=new Date();a.setHours(12,0,0,0);return Math.round((a-inicio())/864e5)}
+const AREA={PRE:"Preventiva",OBS:"Obstetrícia",GIN:"Ginecologia",PED:"Pediatria",CIR:"Cirurgia",CAR:"Cardiologia",NEU:"Neurologia",REU:"Reumatologia",END:"Endocrinologia",INF:"Infectologia",GAS:"Gastroenterologia",HEM:"Hematologia",PNE:"Pneumologia",NEF:"Nefrologia",HEP:"Hepatologia",PSI:"Psiquiatria",DER:"Dermatologia",OFT:"Oftalmologia"};
+const full=t=>String(t).replace(/\b(PRE|OBS|GIN|PED|CIR|CAR|NEU|REU|END|INF|GAS|HEM|PNE|NEF|HEP|PSI|DER|OFT)(?: \d+(?: · \d+)?)? (?=[A-ZÁÉÍÓÚÂÊÔ])/g,(m,a)=>AREA[a]+" · ").replace(/Leitura (\d)\/(\d):/g,"Leitura (parte $1 de $2):").replace(/MFC e APS/g,"Medicina de Família e Atenção Primária");
 function ondeHTML(j){const e=x=>String(x).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-  return j[5]?`<a class="go" href="${e(j[5])}"><b>Onde ler</b><span>${e(j[6])}</span></a>`:`<div class="go off"><b>Onde ler</b><span>${e(j[6])}</span></div>`}
+  return j[5]?`<a class="go" href="${e(j[5])}"><b>Onde ler</b><span>${e(full(j[6]))}</span></a>`:`<div class="go off"><b>Onde ler</b><span>${e(full(j[6]))}</span></div>`}
 function renderHoje(){
   const el=document.getElementById("v-hoje"),e=x=>String(x).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
   let i=hojeIdx(),pre="";
@@ -595,7 +597,7 @@ function renderHoje(){
   if(i>181){el.innerHTML=`<div class="today"><span class="when">Jornada concluída</span><h2>Os 182 dias acabaram. Agora é revisar os erros e fazer provas antigas.</h2></div>`;return}
   const j=JOR[i],w=Math.floor(i/7)+1,f=FASES.find(x=>w>=x[0]&&w<=x[1]);
   const meta=[j[3],j[4]&&(j[4]+" questões")].filter(Boolean).map(e).join(" · ");
-  el.innerHTML=`<div class="today">${pre}<span class="when">${br(dia(i))}</span><h2>${e(j[1])}</h2>${meta?`<span class="when">${meta}</span>`:""}</div>
+  el.innerHTML=`<div class="today">${pre}<span class="when">${br(dia(i))}</span><h2>${e(full(j[1]))}</h2>${meta?`<span class="when">${meta}</span>`:""}</div>
   ${ondeHTML(j)}
   <a class="ghost" href="#cards" style="text-decoration:none;text-align:center">Revisar flashcards</a>`;
 }
