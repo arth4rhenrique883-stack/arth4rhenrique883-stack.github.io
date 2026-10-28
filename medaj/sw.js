@@ -1,7 +1,7 @@
 // medaj. flashcards: guarda o app e as fontes para abrir sem internet.
 // Ao publicar uma versão nova do index.html, troque o número abaixo.
-const V = "medaj-v9";
-const CORE = ["./", "index.html", "bloco2.html", "bloco1.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "icon-180.png"];
+const V = "medaj-v11";
+const CORE = ["./", "index.html", "bloco2.html", "bloco1.html", "manifest.webmanifest", "marca1-192.png", "marca1-512.png", "marca1-180.png"];
 
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(V).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));
