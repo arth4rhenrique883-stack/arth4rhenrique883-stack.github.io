@@ -3,32 +3,32 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#040308">
+<meta name="theme-color" content="#030303">
 <title>Apostilas · 8º período · medaj.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Archivo:wght@500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap">
 <style>
 /* Design-modelo do medaj. (o mesmo das apostilas da residência, bloco1.html): só as cores de tema mudam por período. */
 :root{
-  --bg:#040308; --fg:#ebebeb; --muted:#9c9c9c; --line:#1d1828; --line-2:#342a48; --raise:#0a0910; --surface:#0a0910; --surface-2:#110e19;
-  --red:#6b3fa0; --red-ink:#f0b9d6; --red-soft:#1f1530; --blue:#7f97bd;
+  --bg:#030303; --fg:#ebebeb; --muted:#9c9c9c; --line:#1b1b1b; --line-2:#2e2e2e; --raise:#0a0a0a; --surface:#0a0a0a; --surface-2:#101010;
+  --red:#9446ff; --red-ink:#ffb3df; --red-soft:#110a1c; --blue:#7f97bd;
   --upd-bg:#080a0d; --upd-line:#3d5072; --upd-ink:#cdd3dc;
   --ok:#5aa883; --bad:#c2414a;
   --brand:"Cormorant Garamond",Garamond,"Times New Roman",serif;
-  --display:"Archivo",ui-sans-serif,system-ui,sans-serif;
-  --head:"Archivo",ui-sans-serif,system-ui,sans-serif;
-  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
-  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --display:"Libre Caslon Display","Libre Caslon Text",Georgia,serif;
+  --head:"Libre Caslon Text",Georgia,serif;
+  --body:"Libre Caslon Text",Georgia,serif;
+  --mono:"Libre Caslon Text",Georgia,serif;
   /* nomes usados pelos diagramas antigos (svg dentro do conteúdo) */
   --ink:#ebebeb; --accent:var(--red-ink); --accent-soft:var(--red-soft); --amber:#d4ad55; --amber-soft:#0c0a06; --ok-soft:#08120d; --bad-soft:#140708; --f-body:var(--body); --f-mono:var(--mono);
   color-scheme:dark;scrollbar-color:#262626 var(--bg);
 }
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;color:var(--fg);font:18px/1.7 var(--body);-webkit-font-smoothing:antialiased;background:var(--bg);
+body{margin:0;min-height:100vh;color:var(--fg);font:17.5px/1.7 var(--body);-webkit-font-smoothing:antialiased;background:var(--bg);
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 72px}
 .wrap{max-width:720px;margin:0 auto}
 h1,h2,h3{margin:0;line-height:1.15;text-wrap:balance}
-h1,h2{font-family:var(--display);font-weight:600;letter-spacing:-.01em;color:#f5f5f5;-webkit-text-stroke:1px #000;paint-order:stroke fill;text-shadow:1px 1px 0 #000}
+h1,h2{font-family:var(--display);font-weight:400;letter-spacing:0;color:#f5f5f5;-webkit-text-stroke:1px #000;paint-order:stroke fill;text-shadow:1px 1px 0 #000}
 ::selection{background:var(--red-soft);color:#fff}
 a{color:var(--fg);text-decoration-color:#5a5a5a;text-underline-offset:3px}
 a:hover{text-decoration-color:var(--red)}
@@ -36,7 +36,7 @@ b,strong{font-weight:600;color:#fff}
 i,em{color:#dcdcdc}
 button{font:inherit;color:inherit;cursor:pointer}
 :focus-visible{outline:2px solid var(--fg);outline-offset:2px}
-.kick,.k{font:600 12px/1.4 var(--mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.kick,.k{font:400 11.5px/1.4 var(--mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
 
 /* topo: nome do app com a chama, como nas apostilas da residência */
 .top{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:calc(env(safe-area-inset-top,0px) + 12px) 0 12px;background:linear-gradient(var(--bg) 75%,transparent)}
@@ -58,7 +58,7 @@ h1::after{content:"";display:block;width:48px;height:3px;margin-top:16px;backgro
 .list{display:flex;flex-direction:column;gap:8px}
 .item{display:grid;grid-template-columns:2.4em minmax(0,1fr);gap:2px 8px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--fg);background:var(--raise)}
 .item:hover{border-color:var(--line-2)}
-.item .n{font:600 12px/1.9 var(--mono);color:var(--red-ink)}
+.item .n{font:600 12px/1.9 var(--mono);color:var(--muted)}
 .item b{font:600 16.5px/1.35 var(--head);color:var(--fg)}
 .item span:last-child{grid-column:2;font-size:14.5px;line-height:1.45;color:var(--muted)}
 .item.lida .n::after{content:" ✓";color:var(--ok)}
@@ -70,7 +70,7 @@ h1::after{content:"";display:block;width:48px;height:3px;margin-top:16px;backgro
 .head .sub{color:var(--muted);font-size:15.5px;line-height:1.5;margin:0}
 .pages{display:flex;gap:6px;flex-wrap:wrap}
 .pages button{min-width:32px;height:32px;border-radius:999px;border:1px solid var(--line);background:transparent;font:600 12px/1 var(--mono);color:var(--muted);padding:0 8px}
-.pages button[aria-current]{background:color-mix(in srgb,var(--red) 22%,#0d0d0d);border-color:var(--red);color:#fff}
+.pages button[aria-current]{background:transparent;border-color:var(--red);color:#fff}
 .pages button.seen:not([aria-current]){color:var(--fg);border-color:var(--line-2)}
 .toc{border:1px solid var(--line);border-radius:10px}
 .toc summary{list-style:none;padding:10px 14px;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
@@ -80,7 +80,7 @@ h1::after{content:"";display:block;width:48px;height:3px;margin-top:16px;backgro
 .toc ol{margin:0;padding:0 14px 8px;list-style:none;counter-reset:t}
 .toc li{counter-increment:t}
 .toc li button{display:flex;gap:12px;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:9px 0;font:400 16px/1.4 var(--body);color:var(--fg)}
-.toc li button::before{content:counter(t);font:600 12px/1.8 var(--mono);color:var(--red-ink);min-width:1.6em}
+.toc li button::before{content:counter(t);font:600 12px/1.8 var(--mono);color:var(--muted);min-width:1.6em}
 .toc li button[aria-current]{color:#fff;font-weight:600}
 .toc small{display:block;color:var(--muted);font:500 12px var(--mono)}
 
@@ -90,7 +90,7 @@ article h2{font-size:clamp(20px,4.6vw,24px);padding-top:16px;margin-top:10px;bac
 article>h2:first-child{margin-top:0}
 article p,article ul,article ol{margin:0}
 article ul,article ol{padding-left:22px;display:flex;flex-direction:column;gap:6px}
-article li::marker{color:var(--red-ink)}
+article li::marker{color:var(--muted)}
 article ul.sub{margin-top:6px;gap:4px}
 article ul.sub li{font-size:.94em;color:#d2d2d2}
 cx{display:inline-block;font:500 11.5px/1.4 var(--mono);padding:1px 7px;border-radius:4px;background:var(--upd-bg);color:#8fa6cc;border:1px solid #273042;white-space:nowrap;vertical-align:1px}
@@ -104,7 +104,7 @@ cx{display:inline-block;font:500 11.5px/1.4 var(--mono);padding:1px 7px;border-r
 .trap{background:#0e0607;border-color:#1f0d0f;border-left-color:#8c2228;color:#e4d6d6}.trap b.t{color:#e0757b}.trap b.t::before{content:"!"}
 .upd{background:var(--upd-bg);border-color:#141a24;border-left-color:var(--upd-line);color:var(--upd-ink)}.upd b.t{color:#8fa6cc}.upd b.t::before{content:"↻"}
 .dv{background:#0c0a06;border-color:#221d12;border-left-color:#b8923a;color:#e8e0cc}.dv b.t{color:#d4ad55}.dv b.t::before{content:"≠"}
-.lance{background:color-mix(in srgb,var(--red-soft) 70%,var(--bg));border-color:var(--line);border-left-color:var(--red)}.lance b.t{color:var(--red-ink)}.lance b.t::before{content:"?"}
+.lance{background:var(--raise);border-color:var(--line);border-left-color:var(--red)}.lance b.t{color:var(--red-ink)}.lance b.t::before{content:"?"}
 .lance .q{font-weight:600;color:#fff}
 .src{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
 a.btn,.src a{font:500 13px var(--head);text-decoration:none;color:var(--blue);border:1px solid #273042;border-radius:8px;padding:5px 10px}
@@ -191,7 +191,7 @@ figure .th{width:100%;border:0;border-radius:0}
 .pager a{display:flex;flex-direction:column;gap:3px;padding:11px 14px;border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--fg);min-height:60px}
 .pager a:hover{border-color:var(--line-2)}
 .pager a span:last-child{font:500 14.5px/1.3 var(--head)}
-.pager .nx{grid-column:2;align-items:flex-end;text-align:right;border-color:color-mix(in srgb,var(--red) 60%,var(--line))}
+.pager .nx{grid-column:2;align-items:flex-end;text-align:right;border-color:var(--line-2)}
 .endbar{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .endbar>*{flex:1;min-width:150px;text-align:center}
 .endbar [aria-pressed="true"]{border-color:var(--ok);color:var(--ok)}
@@ -200,6 +200,52 @@ figure .th{width:100%;border:0;border-radius:0}
 .ref b{font-weight:500;color:var(--fg);font-size:15.5px;line-height:1.45}
 .ref .btn{align-self:flex-start}
 .note{font-size:15px;color:var(--muted)}
+/* modo de leitura: o leitor escolhe no início de cada apostila (passar para o lado, como livro, ou rolar) */
+.modo{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.modo .kick{margin-right:4px}
+.modo button{font:500 13.5px var(--head);background:transparent;border:1px solid var(--line-2);border-radius:999px;padding:6px 12px;color:var(--muted)}
+.modo button[aria-pressed="true"]{color:#fff;border-color:var(--red)}
+.modo.ask{border:1px solid var(--line-2);border-radius:12px;padding:14px 16px;flex-direction:column;align-items:stretch}
+.modo.ask .kick{color:var(--fg)}
+.modo.ask button{padding:11px 14px;font-size:15px;text-align:left}
+body.bookmode{height:100vh;height:100dvh;overflow:hidden;padding-bottom:0}
+body.bookmode .wrap{height:100vh;height:100dvh;display:flex;flex-direction:column}
+body.bookmode .top{position:static;background:none}
+body.bookmode main{flex:1;min-height:0;display:flex;flex-direction:column}
+.bk-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:0 0 10px;border-bottom:1px solid var(--line)}
+.bk-head .kick{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.bk-head .modo button{padding:5px 10px;font-size:12.5px}
+.book{flex:1;min-height:0;position:relative;overflow:hidden;margin-top:14px;touch-action:pan-y}
+.cols{position:absolute;top:0;left:0;height:100%;column-gap:48px;column-fill:auto;transition:transform .32s ease}
+.cols>*{break-inside:avoid-column}
+.cols .ch{break-before:column}
+.cols .cover{display:flex;flex-direction:column;gap:14px;break-after:column}
+.cols .cover h1{font-size:clamp(30px,8vw,44px)}
+.cols .cover .sumario{margin:6px 0 0;padding:0;list-style:none;counter-reset:s}
+.cols .cover .sumario li{counter-increment:s;break-inside:avoid}
+.cols .cover .sumario button{display:flex;gap:10px;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:8px 0;font:400 15.5px/1.4 var(--body);color:var(--fg)}
+.cols .cover .sumario button::before{content:counter(s);font:600 11px/1.9 var(--mono);color:var(--muted);min-width:1.6em}
+.cols article{padding-top:0;display:block}
+.cols article>*{margin:0 0 16px}
+.cols article>p,.cols article>ul>li{text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.cols article>ul{list-style:none;padding:0}
+.cols article>ul>li{text-indent:1.3em;margin:0 0 9px}
+.cols article>ul>li::marker{content:""}
+.cols article h2{margin-top:0}
+.cols figure img{max-height:52vh;object-fit:contain}
+.cols .box,.cols .mcq,.cols .case,.cols .qi,.cols .sl,.cols figure,.cols .tw{break-inside:avoid}
+.cols h2,.cols .kick,.cols .k,.cols .box b.t{break-after:avoid}
+.cols .qz{break-inside:auto}
+.cols .fim{break-before:column;display:flex;flex-direction:column;gap:12px}
+.cols .fim h2{font-size:24px}
+.bk-foot{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:10px;padding:10px 0 calc(env(safe-area-inset-bottom,0px) + 12px);border-top:1px solid var(--line)}
+.bk-foot button{width:46px;height:40px;border:1px solid var(--line-2);border-radius:10px;background:transparent;font:400 22px/1 var(--head);color:#fff}
+.bk-foot button:disabled{opacity:.3}
+.bk-foot .where{text-align:center;min-width:0}
+.bk-foot .where b{display:block;font:600 12px/1.3 var(--mono);color:var(--fg);letter-spacing:.06em}
+.bk-foot .where span{display:block;font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bk-foot .prog{grid-column:1/-1;height:2px;background:var(--line);border-radius:2px;overflow:hidden}
+.bk-foot .prog i{display:block;height:100%;background:var(--red);transition:width .3s}
 /* chama: só as cores desta página, mudando a cada 5 s */
 .flame .hue{animation:none!important}
 #fl-out stop:nth-child(1){stop-color:#3b2457}#fl-out stop:nth-child(2){stop-color:#6b3fa0}#fl-out stop:nth-child(3){stop-color:#8d5cc4}
@@ -342,15 +388,63 @@ function wire(root){
 
 /* telas */
 let DOC=null;
-function home(){document.title="Apostilas · "+P.nome+" · medaj.";
+function home(){document.body.classList.remove("bookmode");onkey=null;onresize=null;document.title="Apostilas · "+P.nome+" · medaj.";
   let h=`<section class="home"><span class="kick">${esc(P.nome)} · apostilas</span><h1>Apostilas</h1><p class="lede">Os slides de cada aula são a base. O que vem de fora aparece em quadro azul (atualização) ou dourado (divergência com a diretriz), sempre com a fonte.</p>`;
   for(const c of P.cat){h+=`<div class="disc"><span class="kick">${esc(c.av)}</span><h2>${esc(c.nome)}</h2><div class="list">`;
     c.secs.forEach((s,i)=>{h+=`<a class="item${LIDAS[s.id]?" lida":""}" href="#${c.id}/resumos/${i}"><span class="n">${String(i+1).padStart(2,"0")}</span><b>${strip(s.t)}</b>${s.s?`<span>${strip(s.s)}</span>`:""}</a>`});
     h+=`</div></div>`}
   app.innerHTML=h+`</section>`;window.scrollTo(0,0)}
 
+
+/* modo de leitura (pedido de 28/10): no início de cada apostila, passar para o lado (livro) ou rolar; a escolha fica no aparelho */
+const MODO=()=>{try{return localStorage.getItem(LS("modo"))||""}catch(e){return""}};
+const setModo=m=>{try{localStorage.setItem(LS("modo"),m)}catch(e){}};
+function modoHtml(cur,ask){return ask
+  ?`<div class="modo ask" role="group" aria-label="Como ler esta apostila"><span class="kick">Como prefere ler?</span><button type="button" data-modo="livro">⇆ Passar para o lado, como um livro</button><button type="button" data-modo="rolar">⇅ Rolar para cima e para baixo</button></div>`
+  :`<div class="modo" role="group" aria-label="Modo de leitura"><button type="button" data-modo="livro" aria-pressed="${cur==="livro"}">⇆ Livro</button><button type="button" data-modo="rolar" aria-pressed="${cur!=="livro"}">⇅ Rolar</button></div>`}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-modo]");if(!b)return;setModo(b.dataset.modo);route()});
+
+async function livro(cid,bi,pi,c,D,s,PG){
+  document.body.classList.add("bookmode");
+  const nb=bi<D.sections.length-1?D.sections[bi+1]:null;
+  let h=`<div class="bk-head"><span class="kick">${esc(c.nome+" · "+c.av)}</span>${modoHtml("livro")}</div><div class="book" id="bk"><div class="cols" id="cols">`;
+  h+=`<section class="cover"><span class="kick">${esc(c.nome)} · ${esc(c.av)}</span><h1>${strip(s.title)}</h1>${s.sub?`<p class="sub" style="color:var(--muted);margin:0">${strip(s.sub)}</p>`:""}`;
+  if(PG.length>1)h+=`<span class="kick" style="margin-top:8px">Sumário</span><ol class="sumario">${PG.map((p,i)=>`<li><button type="button" data-go="${i}">${esc(p.title||"Início")}</button></li>`).join("")}</ol>`;
+  h+=`</section>`;
+  PG.forEach((pg,i)=>{h+=`<article class="ch" data-ch="${i}">${pg.blocks.map(b=>block(b)).join("")}${pg.lance?lance(pg.lance):""}</article>`});
+  h+=`<section class="fim"><span class="kick">Fim da aula</span><h2>${strip(s.title)}</h2><button type="button" class="btn2" id="lida" aria-pressed="${!!LIDAS[s.id]}">${LIDAS[s.id]?"✓ Lida":"Marcar a aula como lida"}</button><a class="btn2" style="text-decoration:none" href="#${cid}/fontes/${bi}">Fontes e artigos</a>${nb?`<a class="btn2" style="text-decoration:none" href="#${cid}/resumos/${bi+1}">Próxima aula: ${strip(nb.title)} →</a>`:""}</section>`;
+  h+=`</div></div><div class="bk-foot"><button type="button" id="bkP" aria-label="Página anterior">‹</button><div class="where"><b id="bkN"></b><span id="bkT"></span></div><button type="button" id="bkF" aria-label="Próxima página">›</button><div class="prog"><i id="bkG"></i></div></div>`;
+  app.innerHTML=h;wire(app);
+  const bk=$("bk"),cols=$("cols"),G=48;let W=0,N=1,k=0;
+  const chOf=pg=>{let r=-1;cols.querySelectorAll("[data-ch]").forEach(a=>{if(Math.floor((a.getBoundingClientRect().left-cols.getBoundingClientRect().left+2)/(W+G))<=pg)r=+a.dataset.ch});return r};
+  const pageOf=el=>Math.max(0,Math.floor((el.getBoundingClientRect().left-cols.getBoundingClientRect().left+2)/(W+G)));
+  function show(n,anim){k=Math.max(0,Math.min(N-1,n));cols.style.transition=anim===false?"none":"";cols.style.transform=`translateX(${-k*(W+G)}px)`;
+    const ch=chOf(k);$("bkN").textContent=`${k+1} / ${N}`;$("bkT").textContent=ch<0?"Capa e sumário":(PG[ch].title||strip(s.title));
+    $("bkG").style.width=((k+1)/N*100).toFixed(1)+"%";$("bkP").disabled=k===0;$("bkF").disabled=k===N-1;
+    VISTO[s.id]=VISTO[s.id]||{};if(ch>=0){VISTO[s.id][ch]=1;VISTO[s.id].last=ch}save("vistas",VISTO);
+    history.replaceState(null,"",`#${cid}/resumos/${bi}/${Math.max(0,ch)}`)}
+  function layout(keep){const ch=keep!=null?keep:null;W=bk.clientWidth;cols.style.width=W+"px";cols.style.columnWidth=W+"px";
+    N=Math.max(1,Math.round((cols.scrollWidth+G)/(W+G)));
+    if(ch!=null){const el=cols.querySelector(`[data-ch="${ch}"]`);show(el?pageOf(el):0,false)}else show(Math.min(k,N-1),false)}
+  layout(pi>0?pi:null);if(!(pi>0))show(0,false);
+  $("bkP").onclick=()=>show(k-1);$("bkF").onclick=()=>show(k+1);
+  cols.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>{const el=cols.querySelector(`[data-ch="${b.dataset.go}"]`);if(el)show(pageOf(el))});
+  cols.addEventListener("click",e=>{if(e.target.closest(".rv,.opt"))setTimeout(()=>{const at=k;layout();show(at,false)},0)});
+  let x0=null,y0=null;bk.addEventListener("touchstart",e=>{if(e.target.closest(".strip,.tw,.scroll,figure.wide")){x0=null;return}x0=e.touches[0].clientX;y0=e.touches[0].clientY},{passive:true});
+  bk.addEventListener("touchend",e=>{if(x0==null)return;const dx=e.changedTouches[0].clientX-x0,dy=e.changedTouches[0].clientY-y0;x0=null;if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy))show(k+(dx<0?1:-1))});
+  onkey=e=>{if(!$("vw").hidden)return;if(e.key==="ArrowRight")show(k+1);if(e.key==="ArrowLeft")show(k-1)};
+  onresize=()=>{const ch=chOf(k);layout(ch<0?null:ch)};
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>{const ch=chOf(k);layout(ch<0?null:ch)});
+  $("lida").onclick=()=>{if(LIDAS[s.id])delete LIDAS[s.id];else LIDAS[s.id]=Date.now();try{localStorage.setItem(LS("lidas"),JSON.stringify(LIDAS))}catch(e){}
+    $("lida").setAttribute("aria-pressed",!!LIDAS[s.id]);$("lida").textContent=LIDAS[s.id]?"✓ Lida":"Marcar a aula como lida"}}
+let onkey=null,onresize=null;
+document.addEventListener("keydown",e=>{if(onkey)onkey(e)});
+addEventListener("resize",()=>{if(onresize)onresize()});
+
 async function aula(cid,bi,pi){const c=CAT(cid);if(!c)return home();const D=await need(c);const s=D.sections[bi];if(!s)return home();
   const PG=pages(s.blocks);pi=Math.max(0,Math.min(PG.length-1,pi||0));const pg=PG[pi];
+  onkey=null;onresize=null;if(MODO()==="livro")return livro(cid,bi,pi,c,D,s,PG);
+  document.body.classList.remove("bookmode");
   DOC={tot:{}};if(s.deck&&s.nsl)DOC.tot[s.deck]=s.nsl;
   VISTO[s.id]=VISTO[s.id]||{};VISTO[s.id][pi]=1;VISTO[s.id].last=pi;save("vistas",VISTO);
   document.title=strip(s.title)+" · medaj.";
@@ -358,6 +452,7 @@ async function aula(cid,bi,pi){const c=CAT(cid);if(!c)return home();const D=awai
   let h=`<div class="bar"><i style="width:${((pi+1)/PG.length*100).toFixed(1)}%"></i></div><header class="head"><span class="kick">${esc(sub)}</span><h1>${strip(s.title)}</h1>${s.sub?`<p class="sub">${strip(s.sub)}</p>`:""}`;
   if(PG.length>1){h+=`<div class="pages" role="navigation" aria-label="Páginas">${PG.map((p,i)=>`<button type="button" data-pg="${i}"${i===pi?' aria-current="page"':""}${VISTO[s.id][i]?' class="seen"':""} aria-label="Página ${i+1}: ${esc(p.title)}">${i+1}</button>`).join("")}</div>`;
     h+=`<details class="toc"><summary><span class="kick">Página ${pi+1} de ${PG.length} · sumário</span></summary><ol>${PG.map((p,i)=>`<li><button type="button" data-pg="${i}"${i===pi?' aria-current="true"':""}><span>${esc(p.title||"Início")}${p.sl?`<small>${p.sl}</small>`:""}</span></button></li>`).join("")}</ol></details>`}
+  h+=modoHtml("rolar",!MODO());
   h+=`</header><article>${pg.blocks.map(b=>block(b)).join("")}${pg.lance?lance(pg.lance):""}</article>`;
   const prev=pi>0?PG[pi-1]:null,next=pi<PG.length-1?PG[pi+1]:null,nb=bi<D.sections.length-1?D.sections[bi+1]:null;
   h+=`<nav class="pager">${prev?`<a href="#${cid}/resumos/${bi}/${pi-1}"><span class="k">← Anterior</span><span>${esc(prev.title)}</span></a>`:""}`;
@@ -370,7 +465,7 @@ async function aula(cid,bi,pi){const c=CAT(cid);if(!c)return home();const D=awai
     $("lida").setAttribute("aria-pressed",!!LIDAS[s.id]);$("lida").textContent=LIDAS[s.id]?"✓ Lida":"Marcar a aula como lida"};
   window.scrollTo(0,0)}
 
-async function fontes(cid,bi){const c=CAT(cid);if(!c)return home();const D=await need(c);const s=D.sections[bi];if(!s)return home();
+async function fontes(cid,bi){document.body.classList.remove("bookmode");onkey=null;onresize=null;const c=CAT(cid);if(!c)return home();const D=await need(c);const s=D.sections[bi];if(!s)return home();
   const seen=new Set(),R=[];const add=(t,u)=>{if(!u||seen.has(u))return;seen.add(u);R.push([t,u])};
   for(const b of s.blocks){(b.src&&Array.isArray(b.src)?b.src:[]).forEach(x=>add(x[0],x[1]));
     const txt=JSON.stringify(b);for(const m of txt.matchAll(/<a href=\\"([^"\\]+)\\"[^>]*>(.*?)<\/a>/g))add(strip(m[2]),m[1])}
