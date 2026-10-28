@@ -276,11 +276,13 @@ a.go:hover{border-color:var(--red)}
 /*as:nome*/
 @font-palette-values --as-cromo{font-family:Nabla;override-colors:0 #d9d9d9,1 #2e2e2e,2 #f2f2f2,3 #7e7e7e,4 #c9c9c9,5 #4a4a4a,6 #a3a3a3,7 #ffffff,8 #ffffff,9 #ededed}
 @font-palette-values --as-tema{font-family:Nabla;override-colors:0 #ff5d8f,1 #3a1670,2 #ff8fb0,3 #0f5f69,4 #3fd6e6,5 #2a1660,6 #a77bff,7 #ffd0e0,8 #e8fbff,9 #c9b5ff}
-.asmed{display:inline-flex;align-items:flex-end;line-height:.9;white-space:nowrap}
-.asmed .t{font-family:Nabla,'Cormorant Garamond',serif;font-weight:400;font-style:normal;letter-spacing:0}
+.asmed{display:inline-flex;align-items:flex-end;line-height:.9;white-space:nowrap;font-size:.62em}
+.asmed .t{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-style:normal;letter-spacing:.01em;color:#f2f2f2}
 .asmed .t small{font-size:.62em}
-.asmed-r .t{font-palette:--as-cromo}.asmed-p .t{font-palette:--as-tema}
-.asmed .as-rainha{width:.62em;height:.81em;margin:0 0 .06em -.13em;flex:none;overflow:visible}
+.asmed .t small{font-style:italic}
+.asmed-r .t{text-shadow:1px 1px 0 #b5b5b5,2px 2px 0 #8a8a8a,3px 3px 0 #5a5a5a,4px 4px 0 #333,6px 9px 12px rgba(0,0,0,.8)}
+.asmed-p .t{color:#ffe3ee;text-shadow:1px 1px 0 #ff8fb0,2px 2px 0 #a77bff,3px 3px 0 #5a2ca3,4px 4px 0 #2a1660,6px 9px 12px rgba(0,0,0,.8)}
+.asmed .as-rainha{width:.62em;height:.81em;margin:0 0 .06em .04em;flex:none;overflow:visible}
 .asmed-r .as-rainha{filter:drop-shadow(.02em .03em 0 #333) drop-shadow(.02em .03em 0 #1a1a1a) drop-shadow(0 .08em .1em rgba(0,0,0,.7))}
 .asmed-p .as-rainha{filter:drop-shadow(.02em .03em 0 #2a1660) drop-shadow(.02em .03em 0 #120a2a) drop-shadow(0 .08em .1em rgba(0,0,0,.7))}
 @media (prefers-reduced-motion:no-preference){.asmed-p .qh{animation:as-hue 16s linear infinite}}
