@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
+<script data-tema>try{if(localStorage.getItem("medas-tema")==="claro")document.documentElement.dataset.tema="claro"}catch(e){}</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="apple-mobile-web-app-title" content="medASr">
@@ -221,6 +222,15 @@ a.btn{color:#cfcfcf;border-color:#2a2a2a}a.btn:hover{border-color:#8c8c8c}
 @keyframes as-cor{to{filter:hue-rotate(360deg)}}
 @keyframes as-feixe{0%{left:-10%;opacity:0}6%{opacity:.75}38%{left:75%;opacity:.75}46%,100%{left:85%;opacity:0}}
 @keyframes as-acende{0%,34%{opacity:0}48%{opacity:.7}70%,100%{opacity:0}}
+/* 28/10 22h45: sem feixe; o nome fica sempre no escuro; só a rainha brilha, sem parar, trocando de cor (paletas dos períodos) */
+.asmed::after,.asmed .qw::before{display:none!important}
+.asmed,.asmed .t,.asmed .qw,.asmed .qh{animation:none!important}
+.asmed .t{color:var(--c0)!important;text-shadow:var(--s0)!important}
+.asmed .qw{opacity:1!important}
+.asmed .as-rainha *{stroke:currentColor}
+.asmed .as-rainha{color:#a77bff;filter:drop-shadow(0 0 .05em #a77bff) drop-shadow(0 0 .22em #a77bff)}
+@media (prefers-reduced-motion:no-preference){.asmed .as-rainha{animation:as-cores 30s ease-in-out infinite}}
+@keyframes as-cores{0%{color:#ff5d8f;filter:drop-shadow(0 0 .05em #ff5d8f) drop-shadow(0 0 .22em #ff5d8f)} 20%{color:#ffb3df;filter:drop-shadow(0 0 .05em #ffb3df) drop-shadow(0 0 .22em #ffb3df)} 40%{color:#a77bff;filter:drop-shadow(0 0 .05em #a77bff) drop-shadow(0 0 .22em #a77bff)} 60%{color:#3fd6e6;filter:drop-shadow(0 0 .05em #3fd6e6) drop-shadow(0 0 .22em #3fd6e6)} 80%{color:#c8174a;filter:drop-shadow(0 0 .05em #c8174a) drop-shadow(0 0 .22em #c8174a)} 100%{color:#ff5d8f;filter:drop-shadow(0 0 .05em #ff5d8f) drop-shadow(0 0 .22em #ff5d8f)}}
 /*/as:nome*/
 /*as:visual*/
 :root{--bg:#000!important}html,body{background:#000!important}
@@ -229,6 +239,12 @@ a.btn{color:#cfcfcf;border-color:#2a2a2a}a.btn:hover{border-color:#8c8c8c}
 .top>:not(.brand):first-child{grid-column:1;grid-row:1;justify-self:start}
 .top>:not(.brand):last-child{grid-column:3;grid-row:1;justify-self:end;text-align:right}
 /*/as:visual*/
+/*tm:css*/
+html[data-tema=claro]{filter:invert(1) hue-rotate(180deg);background:#000}
+html[data-tema=claro] :is(img,video,picture,canvas,.asmed,[style*="background-image"]){filter:invert(1) hue-rotate(180deg)}
+.tm-bt{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);right:max(10px,env(safe-area-inset-right,0px));z-index:9997;width:36px;height:36px;border-radius:50%;border:1px solid #2a2a2a;background:#0b0b0b;color:#bdbdbd;font:16px/1 Georgia,serif;display:grid;place-items:center;cursor:pointer;padding:0}
+.tag-top{margin-right:44px}
+/*/tm:css*/
 /*gf:css*/
 mark.gf{background:color-mix(in srgb,var(--red,#ffffff) 30%,transparent);color:inherit;border-bottom:1px solid color-mix(in srgb,var(--red,#ffffff) 75%,transparent);border-radius:2px;padding:0 1px;cursor:pointer}
 :root:not([data-per]) mark.gf{background:rgba(255,255,255,.16);border-bottom-color:rgba(255,255,255,.55)}
@@ -982,6 +998,10 @@ addEventListener("hashchange",route);route();
 </script>
 
 <script>if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});</script>
+<script data-tema-bt>(function(){const b=document.createElement("button");b.type="button";b.className="tm-bt";
+const p=()=>{const c=document.documentElement.dataset.tema==="claro";b.textContent=c?"\u263E":"\u2600";b.setAttribute("aria-label",c?"Tema escuro":"Tema claro")};
+b.onclick=()=>{const c=document.documentElement.dataset.tema!=="claro";if(c)document.documentElement.dataset.tema="claro";else delete document.documentElement.dataset.tema;try{localStorage.setItem("medas-tema",c?"claro":"escuro")}catch(e){}p()};
+p();document.body.appendChild(b)})();</script>
 <script data-gf>/* grifo (28/10): offline, no aparelho */
 (function(){
 const KEY="medasr-grifos",SPA=false,BLK="p,li,td,th,h2,h3,h4,blockquote,dd,dt,figcaption";
@@ -1003,7 +1023,7 @@ function aplicar(){const pg=pagina();G.filter(g=>g.pg===pg&&!document.querySelec
 const bar=document.createElement("div");bar.className="gf-bar";document.body.appendChild(bar);
 ["pointerdown","mousedown","touchstart"].forEach(t=>bar.addEventListener(t,e=>{if(e.cancelable&&t!=="touchstart")e.preventDefault()},{passive:false}));
 const fb=document.createElement("button");fb.className="gf-fab";fb.type="button";document.body.appendChild(fb);
-function fab(){fb.textContent="Destaques · "+G.length;fb.hidden=!G.length}
+function fab(){fb.textContent="Destaques · "+G.length;fb.hidden=false}
 let alvo=null;
 function mostrar(html){bar.innerHTML=html;bar.classList.add("on")}
 function esconder(){bar.classList.remove("on");alvo=null}
