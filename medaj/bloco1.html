@@ -1,0 +1,856 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="theme-color" content="#050505">
+<style>.revcards{font:500 14px var(--display);color:var(--fg);border:1px solid var(--red);border-radius:999px;padding:8px 14px;text-decoration:none;display:inline-block;margin-top:8px}.revcards:hover{background:var(--red-soft)}</style>
+</head>
+<body>
+<title>medaj. · Preventiva</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Archivo:wght@500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: uma coluna de leitura (~68ch), cabeçalho simples, sumário, capítulo em seções numeradas. */
+/* medaj.: sempre escuro. Preto com azul-marinho e roxo-escuro ao fundo, laranja e amarelo só em detalhes. Títulos de tópico com contorno preto. A chama do nome só troca de cor, devagar. */
+:root{
+  --bg:#050505; --fg:#ebebeb; --muted:#9c9c9c; --line:#1f1f1f; --raise:#0b0b0b;
+  --red:#b02a30; --red-soft:#0e0606; --blue:#7f97bd;
+  --area:#d6d6d6; --area-soft:#0d0d0d; --area-ink:#c8c8c8;
+  --link:#ebebeb;
+  --upd-bg:#080a0d; --upd-line:#3d5072; --upd-ink:#cdd3dc;
+  --trap-bg:var(--red-soft); --trap-line:#8c2228; --trap-ink:#e4d6d6;
+  --ok:#5aa883; --bad:#c2414a;
+  --brand:"Cormorant Garamond",Garamond,"Times New Roman",serif;
+  --display:"Archivo",ui-sans-serif,system-ui,sans-serif;
+  --head:"Archivo",ui-sans-serif,system-ui,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  color-scheme:dark;scrollbar-color:#262626 var(--bg);
+}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--fg);font:18px/1.7 var(--body);-webkit-font-smoothing:antialiased;
+  background:var(--bg);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 72px}
+main{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+h1,h2,h3{margin:0;line-height:1.15;text-wrap:balance}
+h1,h2{font-family:var(--display);font-weight:600;letter-spacing:-.01em;color:#f5f5f5;
+  -webkit-text-stroke:1px #000;paint-order:stroke fill;text-shadow:1px 1px 0 #000}
+h1{font-size:clamp(30px,7vw,44px)}
+h1::after{content:"";display:block;width:48px;height:3px;margin-top:16px;background:var(--red);border-radius:2px}
+::selection{background:#3a1215;color:#fff}
+h2{font-size:clamp(20px,4.6vw,24px);padding-top:16px;background:linear-gradient(var(--red),var(--red)) 0 0/32px 2px no-repeat,linear-gradient(var(--line),var(--line)) 0 0/100% 1px no-repeat}
+h3{font-family:var(--head);font-size:18px;font-weight:600;letter-spacing:0}
+nav.toc h3,.crumb{font-family:var(--head)}
+p,ul,ol{margin:0}
+ul,ol{padding-left:22px;display:flex;flex-direction:column;gap:6px}
+a{color:var(--link);text-decoration-color:#5a5a5a;text-underline-offset:3px}
+a:hover{text-decoration-color:var(--red)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+section{display:flex;flex-direction:column;gap:14px}
+header{display:flex;flex-direction:column;gap:12px}
+.crumb{font:600 12px var(--mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.crumb a{color:var(--muted)}
+.lead{color:var(--muted)}
+.chapters{display:flex;flex-wrap:wrap;gap:8px}
+.chapters span,.chapters a{font:500 14px var(--head);padding:6px 12px;border-radius:999px;border:1px solid var(--line);text-decoration:none;color:var(--muted)}
+article.ch{display:flex;flex-direction:column;gap:40px}
+article.ch[hidden]{display:none}
+.chapters a:hover{color:var(--fg);border-color:#3a3a3a}
+.chapters .on{background:#121212;border-color:#4a4a4a;color:var(--fg)}
+.legend{display:flex;flex-direction:column;gap:6px;font-size:15px;color:var(--muted);padding:14px 16px;border:1px solid var(--line);border-radius:10px}
+nav.toc ol{font-size:16px}
+.src{display:inline-block;font:500 11.5px/1.4 var(--mono);padding:1px 7px;margin-left:4px;border-radius:4px;background:var(--area-soft);color:var(--area-ink);text-decoration:none;white-space:nowrap;vertical-align:1px;border:1px solid #232323}
+a.src:hover{text-decoration:underline}
+.box{padding:14px 16px;border-left:3px solid;border-radius:0 10px 10px 0;display:flex;flex-direction:column;gap:8px}
+.box b.t{font:700 12px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.upd{background:var(--upd-bg);border-color:var(--upd-line);color:var(--upd-ink)}
+.trap{background:var(--trap-bg);border-color:var(--trap-line);color:var(--trap-ink)}
+.law{background:var(--area-soft);border-color:#6b6b6b;color:var(--fg)}
+.law q{font-style:italic;quotes:"“" "”"}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font:700 12px var(--mono);letter-spacing:.04em;color:var(--muted);background:var(--raise)}
+tr:last-child td{border-bottom:0}
+td.y{white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:600}
+.q{border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:12px}
+.q .stem{font-weight:600}
+.q ol{list-style:none;padding:0;gap:8px}
+.q li button{all:unset;box-sizing:border-box;display:block;width:100%;padding:9px 12px;border:1px solid var(--line);border-radius:8px;cursor:pointer}
+.q li button:hover{border-color:#444}
+.q li button:focus-visible{outline:2px solid var(--fg)}
+.q li.right button{border-color:var(--ok);box-shadow:inset 3px 0 0 var(--ok)}
+.q li.wrong button{border-color:var(--bad);box-shadow:inset 3px 0 0 var(--bad)}
+.q .why{font-size:15px;color:var(--muted);padding:6px 2px 0 12px}
+.q .rev{font-size:15px}
+.q .dog{font-size:15px;color:var(--muted)}
+.refs{display:flex;flex-direction:column;gap:10px}
+.ref{display:flex;flex-direction:column;gap:6px;padding:12px 14px;border:1px solid var(--line);border-radius:10px}
+.ref p{font-size:15px}
+.ref .c{font-size:14px;color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:8px}
+a.btn{font:500 13px var(--head);text-decoration:none;color:var(--blue);border:1px solid #273042;border-radius:8px;padding:5px 10px}
+a.btn:hover{border-color:var(--blue)}
+.cardbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:15px}
+.cardbar button{font:500 14px var(--head);color:var(--fg);background:transparent;border:1px solid #3a3a3a;border-radius:8px;padding:7px 12px;cursor:pointer}
+.muted{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+.card{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:8px;padding:14px;border:1px solid var(--line);border-radius:10px;min-height:110px}
+.card:focus-visible{outline:2px solid var(--fg)}
+.card .tag{font:600 11.5px var(--mono);color:var(--area-ink);letter-spacing:.04em}
+.card .a{color:var(--area-ink);border-top:1px dashed var(--line);padding-top:8px}
+.card[aria-expanded="false"] .a{display:none}
+.card .hint{font-size:13px;color:var(--muted)}
+.card[aria-expanded="true"] .hint{display:none}
+code{font:14px var(--mono)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{display:inline-flex;align-items:flex-end;font:700 38px/1 var(--brand);letter-spacing:.01em;color:var(--fg);text-decoration:none}
+.flame{width:22px;height:31px;margin-left:2px;margin-bottom:2px;overflow:visible;flex:none}
+@media (prefers-reduced-motion:no-preference){.flame .hue{animation:hue 16s linear infinite}}
+@keyframes hue{0%{filter:hue-rotate(0deg)}30%{filter:hue-rotate(-30deg)}55%{filter:hue-rotate(-95deg)}80%{filter:hue-rotate(60deg)}100%{filter:hue-rotate(0deg)}}
+.tag-top{font:600 11px var(--mono);color:var(--muted);letter-spacing:.08em;text-transform:uppercase;text-align:right}
+.kit{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-size:14px;color:var(--muted)}
+a.copy{font:500 14px var(--head);text-decoration:none;color:var(--fg);background:transparent;border:1px solid rgba(176,42,48,.7);border-radius:8px;padding:7px 12px;white-space:nowrap}
+a.copy:hover{border-color:var(--red);color:#fff}
+footer{font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<linearGradient id="fl-out" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff3b0a"/><stop offset=".55" stop-color="#ff6a00"/><stop offset="1" stop-color="#ff2d55"/></linearGradient>
+<linearGradient id="fl-in" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ffd23f"/><stop offset="1" stop-color="#ff9a1f"/></linearGradient>
+<radialGradient id="fl-core" cx=".5" cy=".6" r=".6"><stop offset="0" stop-color="#fff8d6"/><stop offset="1" stop-color="#ffe066"/></radialGradient>
+</defs></svg>
+<main>
+<header>
+<div class="top">
+  <span class="brand" aria-label="medaj.">medaj<svg class="flame" viewBox="0 0 60 84" aria-hidden="true"><g class="hue">
+<path d="M38 30 C44 22 44 14 41 6 C50 14 53 26 47 38 Z" fill="url(#fl-out)" stroke="#000" stroke-width="2.6" stroke-linejoin="round"/>
+<path d="M17 36 C12 28 13 20 16 14 C20 22 24 25 24 31 Z" fill="url(#fl-out)" stroke="#000" stroke-width="2.6" stroke-linejoin="round"/>
+<path d="M30 80 C13 80 5 67 7 53 C9 42 16 37 16 26 C22 31 25 37 25 41 C27 30 31 18 38 8 C38 21 45 28 49 37 C52 34 52 30 51 26 C57 35 58 46 56 56 C54 70 46 80 30 80 Z" fill="url(#fl-out)" stroke="#000" stroke-width="2.8" stroke-linejoin="round"/>
+<path d="M30 76 C19 76 14 67 15.5 59 C17 51 22 48 22.5 41 C26 45 27.5 49 27.5 52 C30.5 44 33.5 38 38 32 C38.5 41 44 47 45 55 C46.5 67 40 76 30 76 Z" fill="url(#fl-in)"/>
+<ellipse cx="30" cy="68" rx="9" ry="7" fill="url(#fl-core)"/>
+<path d="M18.5 54 L27.5 57.5 L26.5 61 L19 58.5 Z" fill="#1a0614"/><path d="M41.5 54 L32.5 57.5 L33.5 61 L41 58.5 Z" fill="#1a0614"/>
+<circle cx="24.5" cy="58.4" r="1.3" fill="#fff6b0"/><circle cx="35.5" cy="58.4" r="1.3" fill="#fff6b0"/>
+<path d="M21 64 L23.6 67.6 L26.2 64.4 L28.8 68 L31.4 64.4 L34 68 L36.6 64.4 L39 64 Q31 75 21 64 Z" fill="#1a0614"/>
+</g></svg></span>
+  <span class="tag-top">Apostila<br>Bloco 1</span>
+</div>
+  <span class="crumb"><a href="./#hoje">← medaj. app</a> · <a href="./#apostilas">Apostilas</a> · Bloco 1 · Medicina Preventiva e Saúde Coletiva</span>
+  <div class="kit"><a class="copy" href="https://docs.google.com/spreadsheets/d/1Y9RxVuuvCvq9r7IoeMg4AhUHskRKyq4FiDYwnXIWcO0/copy" target="_blank" rel="noopener">Fazer minha cópia do checklist</a><span>Planilha do Google com a jornada dia a dia, com o link da seção a ler em cada dia. Cada pessoa usa a sua cópia.</span></div>
+  <div class="chapters" aria-label="Capítulos do bloco">
+    <a href="#pre4" data-ch="pre4">PRE 4 · SUS</a><a href="#pre1" data-ch="pre1">PRE 1 · Medidas de saúde coletiva</a><span>PRE 2 · em breve</span><span>PRE 3 · em breve</span><span>Ética e saúde do trabalhador · em breve</span>
+  </div>
+  <div class="legend">
+    <span><b>Como ler.</b> O texto corrido é o conteúdo-base. Cada afirmação traz a fonte primária num selo (por exemplo <a class="src" href="https://planalto.gov.br/ccivil_03/LEIS/L8080.htm" target="_blank" rel="noopener">Lei 8.080, art. 7º</a>), que abre o texto oficial.</span>
+    <span>Caixas com o título <b>Atualização</b> trazem o que mudou de 2024 a 2026. Caixas <b>Pegadinha</b> trazem o que as bancas usam para derrubar.</span>
+  </div>
+</header>
+
+<article class="ch" id="pre4">
+<h1>PRE 4 · SUS: história, diretrizes, propostas e financiamento</h1>
+<p class="lead">Semana 1 do cronograma. Tema de alta incidência no ENAMED, ENARE e SUS-SP: as bancas cobram texto de lei, ordem histórica e as mudanças de financiamento.</p>
+
+<nav class="toc" aria-label="Sumário do PRE 4">
+  <h3>Sumário</h3>
+  <ol>
+    <li><a href="#historia">Antes do SUS: a linha do tempo</a></li>
+    <li><a href="#constituicao">A Constituição de 1988</a></li>
+    <li><a href="#l8080">Lei 8.080/1990: a Lei Orgânica da Saúde</a></li>
+    <li><a href="#l8142">Lei 8.142/1990: participação social e repasses</a></li>
+    <li><a href="#normas">Normas operacionais e Pacto pela Saúde</a></li>
+    <li><a href="#d7508">Decreto 7.508/2011</a></li>
+    <li><a href="#financiamento">Financiamento</a></li>
+    <li><a href="#resumo">O que mais cai</a></li>
+    <li><a href="#questoes">Questões comentadas</a></li>
+    <li><a href="#cards">Flashcards</a></li>
+    <li><a href="#refs">Referências</a></li>
+  </ol>
+</nav>
+
+<section id="historia" aria-labelledby="h1s">
+  <h2 id="h1s">1. Antes do SUS: a linha do tempo</h2>
+  <p>Até 1988, a assistência médica pública no Brasil era ligada à previdência: só tinha direito quem contribuía, ou seja, o trabalhador com carteira assinada. O restante da população dependia de filantropia (Santas Casas), de serviço privado pago ou das poucas ações do Ministério da Saúde, que cuidava basicamente de campanhas e de doenças transmissíveis. O SUS nasce para romper esse modelo excludente.<a class="src" href="https://doi.org/10.1016/S0140-6736(11)60054-8" target="_blank" rel="noopener">Paim, Lancet 2011</a></p>
+  <div class="tbl"><table>
+    <thead><tr><th>Ano</th><th>Marco</th><th>O que a prova quer</th></tr></thead>
+    <tbody>
+      <tr><td class="y">1923</td><td>Lei Eloy Chaves: Caixas de Aposentadorias e Pensões (CAPs)</td><td>Organizadas <b>por empresa</b> (começou pelos ferroviários). Marco inicial da previdência social.</td></tr>
+      <tr><td class="y">1933</td><td>Institutos de Aposentadorias e Pensões (IAPs), era Vargas</td><td>Organizados <b>por categoria profissional</b>, com participação do Estado.</td></tr>
+      <tr><td class="y">1966</td><td>INPS</td><td>Unificou os IAPs. Expansão da compra de serviços do setor privado.</td></tr>
+      <tr><td class="y">1975–77</td><td>Sistema Nacional de Saúde (Lei 6.229) e SINPAS (Lei 6.439), que criou o INAMPS</td><td>INAMPS: assistência médica apenas aos contribuintes da previdência.</td></tr>
+      <tr><td class="y">1976</td><td>PIASS</td><td>Interiorização de ações de saúde no Nordeste; embrião da atenção primária.</td></tr>
+      <tr><td class="y">1982–83</td><td>CONASP e Ações Integradas de Saúde (AIS)</td><td>Crise da previdência; primeiros convênios entre INAMPS, estados e municípios.</td></tr>
+      <tr><td class="y">1986</td><td><b>8ª Conferência Nacional de Saúde</b></td><td>Marco da Reforma Sanitária: saúde como direito, conceito ampliado de saúde, base do texto constitucional.</td></tr>
+      <tr><td class="y">1987</td><td>SUDS</td><td>Sistema Unificado e Descentralizado de Saúde: transição para o SUS.</td></tr>
+      <tr><td class="y">1988</td><td>Constituição Federal</td><td>Cria o SUS: saúde como direito de todos e dever do Estado.</td></tr>
+      <tr><td class="y">1990</td><td>Leis 8.080 (setembro) e 8.142 (dezembro)</td><td>Leis Orgânicas da Saúde. Os vetos à 8.080 sobre participação social e repasses foram resolvidos na 8.142.</td></tr>
+      <tr><td class="y">1993</td><td>Extinção do INAMPS (Lei 8.689)</td><td>Fim do último resquício do modelo previdenciário.</td></tr>
+    </tbody>
+  </table></div>
+  <p>A Reforma Sanitária foi um movimento conduzido pela sociedade civil (sanitaristas, academia, movimentos populares), e não por governos ou organismos internacionais. Isso explica o peso que o SUS dá à participação da comunidade.<a class="src" href="https://doi.org/10.1016/S0140-6736(11)60054-8" target="_blank" rel="noopener">Paim, Lancet 2011</a></p>
+  <div class="box trap"><b class="t">Pegadinha</b><p>CAPs eram por <b>empresa</b>; IAPs, por <b>categoria</b>. E o INAMPS só foi extinto em 1993, três anos depois da Lei 8.080.</p></div>
+</section>
+
+<section id="constituicao" aria-labelledby="h2s">
+  <h2 id="h2s">2. A Constituição de 1988</h2>
+  <p>A saúde está na Seção II do capítulo da Seguridade Social, nos artigos 196 a 200.<a class="src" href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank" rel="noopener">CF, arts. 196–200</a></p>
+  <div class="box law"><b class="t">Art. 196, texto literal</b><p><q>A saúde é direito de todos e dever do Estado, garantido mediante políticas sociais e econômicas que visem à redução do risco de doença e de outros agravos e ao acesso universal e igualitário às ações e serviços para sua promoção, proteção e recuperação.</q></p></div>
+  <ul>
+    <li><b>Art. 197:</b> as ações e serviços de saúde são de relevância pública. A execução pode ser direta ou por terceiros, inclusive pessoa física ou jurídica de direito privado.</li>
+    <li><b>Art. 198:</b> o SUS é uma rede regionalizada e hierarquizada, com três diretrizes: (I) descentralização, com direção única em cada esfera de governo; (II) atendimento integral, com prioridade para as atividades preventivas, sem prejuízo dos serviços assistenciais; (III) participação da comunidade.</li>
+    <li><b>Art. 199:</b> a assistência é livre à iniciativa privada. As instituições privadas participam do SUS <b>de forma complementar</b>, por contrato ou convênio, com preferência para as filantrópicas e sem fins lucrativos. É vedado destinar recursos públicos para auxílios ou subvenções a instituições privadas com fins lucrativos.</li>
+    <li><b>Art. 200:</b> lista competências do SUS, entre elas vigilância sanitária e epidemiológica, saúde do trabalhador, ordenar a formação de recursos humanos, participar da política de saneamento básico e colaborar na proteção do meio ambiente, nele compreendido o do trabalho.</li>
+  </ul>
+  <div class="box trap"><b class="t">Pegadinha</b><p>A Constituição fala em acesso <b>universal e igualitário</b>. "Gratuidade" não está no art. 196; ela aparece na Lei 8.080 (art. 43), para os serviços públicos e privados contratados.</p></div>
+</section>
+
+<section id="l8080" aria-labelledby="h3s">
+  <h2 id="h3s">3. Lei 8.080/1990: a Lei Orgânica da Saúde</h2>
+  <p>Regula as ações e serviços de saúde em todo o território nacional: organização, direção e gestão do SUS, competências de cada esfera, participação complementar do setor privado e os subsistemas.<a class="src" href="https://planalto.gov.br/ccivil_03/LEIS/L8080.htm" target="_blank" rel="noopener">Lei 8.080</a></p>
+  <h3>Conceito ampliado de saúde</h3>
+  <p>A lei reconhece fatores determinantes e condicionantes da saúde, entre outros a alimentação, a moradia, o saneamento básico, o meio ambiente, o trabalho, a renda, a educação, a atividade física, o transporte, o lazer e o acesso a bens e serviços essenciais.<a class="src" href="https://planalto.gov.br/ccivil_03/LEIS/L8080.htm" target="_blank" rel="noopener">art. 3º</a></p>
+  <h3>Princípios e diretrizes do art. 7º</h3>
+  <p>As ações do SUS e dos serviços privados contratados obedecem aos princípios do art. 7º. Os que mais caem:<a class="src" href="https://planalto.gov.br/ccivil_03/LEIS/L8080.htm" target="_blank" rel="noopener">art. 7º</a></p>
+  <ul>
+    <li>I. Universalidade de acesso aos serviços de saúde em todos os níveis de assistência.</li>
+    <li>II. Integralidade de assistência: conjunto articulado e contínuo das ações e serviços preventivos e curativos, individuais e coletivos, em todos os níveis de complexidade.</li>
+    <li>III. Preservação da autonomia das pessoas na defesa de sua integridade física e moral.</li>
+    <li>IV. Igualdade da assistência à saúde, sem preconceitos ou privilégios de qualquer espécie.</li>
+    <li>V e VI. Direito à informação sobre a própria saúde e divulgação de informações sobre o potencial dos serviços.</li>
+    <li>VII. Utilização da epidemiologia para estabelecer prioridades, alocar recursos e orientar a programação.</li>
+    <li>VIII. Participação da comunidade.</li>
+    <li>IX. Descentralização político-administrativa, com direção única em cada esfera de governo, com ênfase na descentralização para os municípios e na regionalização e hierarquização da rede.</li>
+    <li>X a XIII. Integração das ações de saúde, meio ambiente e saneamento; conjugação de recursos das três esferas; capacidade de resolução em todos os níveis; organização que evite duplicidade de meios para fins idênticos.</li>
+    <li>XIV. Atendimento público específico e especializado para mulheres e vítimas de violência doméstica (incluído pela Lei 13.427/2017).</li>
+    <li>XV. Proteção integral dos direitos humanos dos usuários, com atenção especial à identificação de maus-tratos, negligência e violência sexual contra crianças e adolescentes (incluído pela Lei 14.679/2023).<a class="src" href="https://planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14679.htm" target="_blank" rel="noopener">Lei 14.679/2023</a></li>
+  </ul>
+  <h3>Doutrinários e organizativos</h3>
+  <p>A divisão em princípios doutrinários e organizativos não está no texto da lei. É uma classificação didática do Ministério da Saúde, mas as bancas a usam muito:</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Doutrinários (ético-filosóficos)</th><th>Organizativos (operacionais)</th></tr></thead>
+    <tbody><tr><td>Universalidade<br>Integralidade<br>Equidade</td><td>Descentralização com direção única<br>Regionalização e hierarquização<br>Participação da comunidade<br>Resolutividade e complementaridade do setor privado</td></tr></tbody>
+  </table></div>
+  <div class="box trap"><b class="t">Pegadinha clássica</b><p>A palavra <b>equidade</b> não aparece no art. 7º da Lei 8.080; o texto fala em <b>igualdade</b> da assistência. Se a questão pedir "segundo a Lei 8.080", a resposta literal é igualdade. Se pedir os princípios doutrinários, a resposta é equidade.</p></div>
+  <h3>Participação complementar do setor privado</h3>
+  <p>Quando a rede pública for insuficiente, o SUS pode recorrer ao setor privado, por contrato ou convênio, com preferência às entidades filantrópicas e sem fins lucrativos. Os serviços contratados seguem os princípios do SUS e a tabela de remuneração definida pela direção nacional, aprovada no Conselho Nacional de Saúde.<a class="src" href="https://planalto.gov.br/ccivil_03/LEIS/L8080.htm" target="_blank" rel="noopener">arts. 24–26</a></p>
+  <div class="box upd"><b class="t">Atualização que ainda cai</b><p>A Lei 13.097/2015 alterou o art. 23 da Lei 8.080 e passou a permitir a participação de capital estrangeiro na assistência à saúde em situações específicas, como hospitais e clínicas.<a class="src" href="https://planalto.gov.br/ccivil_03/LEIS/L8080.htm" target="_blank" rel="noopener">art. 23</a></p></div>
+  <h3>Subsistemas e capítulos acrescentados</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Tema</th><th>Lei que incluiu</th></tr></thead>
+    <tbody>
+      <tr><td>Subsistema de Atenção à Saúde Indígena (art. 19-A e seguintes)</td><td>Lei 9.836/1999</td></tr>
+      <tr><td>Atendimento e internação domiciliar (art. 19-I)</td><td>Lei 10.424/2002</td></tr>
+      <tr><td>Acompanhante no trabalho de parto, parto e pós-parto imediato (art. 19-J)</td><td>Lei 11.108/2005</td></tr>
+      <tr><td>Assistência terapêutica e incorporação de tecnologias, com a CONITEC (arts. 19-M a 19-U)</td><td>Lei 12.401/2011</td></tr>
+    </tbody>
+  </table></div>
+  <p>Pela Lei 12.401, a incorporação, exclusão ou alteração de medicamentos e procedimentos é atribuição do Ministério da Saúde, assessorado pela CONITEC. É vedado o pagamento pelo SUS de medicamento experimental ou sem registro na Anvisa.<a class="src" href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12401.htm" target="_blank" rel="noopener">Lei 12.401/2011</a></p>
+</section>
+
+<section id="l8142" aria-labelledby="h4s">
+  <h2 id="h4s">4. Lei 8.142/1990: participação social e repasses</h2>
+  <p>Trata de dois temas que foram vetados na Lei 8.080: a participação da comunidade na gestão do SUS e as transferências intergovernamentais.<a class="src" href="https://www.planalto.gov.br/ccivil_03/leis/l8142.htm" target="_blank" rel="noopener">Lei 8.142</a></p>
+  <div class="tbl"><table>
+    <thead><tr><th></th><th>Conferência de Saúde</th><th>Conselho de Saúde</th></tr></thead>
+    <tbody>
+      <tr><td><b>Frequência</b></td><td>A cada 4 anos</td><td>Permanente</td></tr>
+      <tr><td><b>Caráter</b></td><td>Avalia a situação de saúde e propõe diretrizes</td><td>Deliberativo: formula estratégias e controla a execução da política, inclusive nos aspectos econômicos e financeiros</td></tr>
+      <tr><td><b>Convocação</b></td><td>Pelo Poder Executivo ou, extraordinariamente, pela própria Conferência ou pelo Conselho</td><td>Decisões homologadas pelo chefe do poder legalmente constituído em cada esfera</td></tr>
+      <tr><td><b>Composição</b></td><td colspan="2">Representação dos usuários paritária em relação ao conjunto dos demais segmentos. Na prática, 50% usuários; a Resolução CNS 453/2012 divide o restante em 25% trabalhadores e 25% gestores e prestadores.</td></tr>
+    </tbody>
+  </table></div>
+  <p>Para receber os recursos do Fundo Nacional de Saúde de forma regular e automática, municípios, estados e o DF precisam ter: Fundo de Saúde, Conselho de Saúde com composição paritária, plano de saúde, relatório de gestão, contrapartida de recursos próprios no orçamento e comissão para elaborar o plano de carreira (PCCS), com prazo de dois anos. Sem esses requisitos, os recursos passam a ser administrados pelo estado ou pela União. Pelo menos 70% dos recursos vão para os municípios.<a class="src" href="https://www.planalto.gov.br/ccivil_03/leis/l8142.htm" target="_blank" rel="noopener">Lei 8.142, arts. 2º–4º</a></p>
+  <div class="box trap"><b class="t">Pegadinha</b><p>Paridade é dos <b>usuários</b> em relação aos demais segmentos somados, e não entre os quatro segmentos. E é o Conselho, e não a Conferência, que tem caráter deliberativo e permanente.</p></div>
+</section>
+
+<section id="normas" aria-labelledby="h5s">
+  <h2 id="h5s">5. Normas operacionais e Pacto pela Saúde</h2>
+  <p>Nos anos 1990, a descentralização foi conduzida por portarias do Ministério da Saúde, as Normas Operacionais Básicas (NOB) e de Assistência (NOAS). Elas definiam como estados e municípios assumiam a gestão.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Norma</th><th>Marca principal</th></tr></thead>
+    <tbody>
+      <tr><td class="y">NOB 91/92</td><td>Municípios tratados como prestadores, pagos por produção (AIH e SIA), ainda sob o INAMPS.</td></tr>
+      <tr><td class="y">NOB 93</td><td>Gestão incipiente, parcial e semiplena. Formaliza as comissões intergestores: CIT (nacional) e CIB (estadual).</td></tr>
+      <tr><td class="y">NOB 96</td><td>Gestão plena da atenção básica e gestão plena do sistema municipal. Cria o PAB fixo (per capita) e variável (PACS/PSF e outros incentivos) e a PPI.</td></tr>
+      <tr><td class="y">NOAS 2001/02</td><td>Ênfase na regionalização: Plano Diretor de Regionalização (PDR), de Investimentos (PDI) e PPI; módulos assistenciais.</td></tr>
+      <tr><td class="y">Pacto 2006</td><td>Substitui as habilitações por adesão ao Termo de Compromisso de Gestão. Três dimensões: <b>Pacto pela Vida, Pacto em Defesa do SUS e Pacto de Gestão</b>. Os repasses passam a ser feitos em blocos de financiamento.</td></tr>
+    </tbody>
+  </table></div>
+  <p>As seis prioridades originais do Pacto pela Vida: saúde do idoso; controle do câncer do colo do útero e de mama; redução da mortalidade infantil e materna; resposta às doenças emergentes e endemias (dengue, hanseníase, tuberculose, malária e influenza); promoção da saúde; e fortalecimento da atenção básica.</p>
+</section>
+
+<section id="d7508" aria-labelledby="h6s">
+  <h2 id="h6s">6. Decreto 7.508/2011</h2>
+  <p>Regulamenta a Lei 8.080 quanto à organização do SUS, ao planejamento, à assistência e à articulação entre os entes federados.<a class="src" href="https://planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7508.htm" target="_blank" rel="noopener">Decreto 7.508</a></p>
+  <ul>
+    <li><b>Região de Saúde:</b> agrupamento de municípios limítrofes. Para ser instituída, precisa conter no mínimo ações e serviços de atenção primária, urgência e emergência, atenção psicossocial, atenção ambulatorial especializada e hospitalar e vigilância em saúde.</li>
+    <li><b>Portas de entrada:</b> atenção primária, urgência e emergência, atenção psicossocial e serviços especiais de acesso aberto. O acesso universal e igualitário é ordenado pela atenção primária.</li>
+    <li><b>Instrumentos:</b> Mapa da Saúde, Rede de Atenção à Saúde, RENASES (relação de ações e serviços), RENAME (relação de medicamentos) e Protocolos Clínicos e Diretrizes Terapêuticas.</li>
+    <li><b>Contrato Organizativo da Ação Pública da Saúde (COAP):</b> acordo entre os entes de uma região, com responsabilidades, indicadores e metas.</li>
+    <li><b>Comissões intergestores:</b> CIT (União, estados e municípios), CIB (estado e municípios) e CIR (região de saúde). A Lei 12.466/2011 incluiu na Lei 8.080 a CIT e a CIB como foros de pactuação e reconheceu CONASS, CONASEMS e COSEMS.</li>
+  </ul>
+  <p>Para ter acesso a medicamentos pelo SUS, o usuário precisa: ser assistido por ações e serviços do SUS, ter prescrição de profissional no exercício regular de funções no SUS, a prescrição estar de acordo com a RENAME e os protocolos, e a dispensação ocorrer em unidade indicada pela direção do SUS.<a class="src" href="https://planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7508.htm" target="_blank" rel="noopener">art. 28</a></p>
+  <div class="box trap"><b class="t">Pegadinha</b><p>Ambulatório de especialidades <b>não é</b> porta de entrada. E a CIR é do Decreto 7.508; ela não existia nas NOB.</p></div>
+</section>
+
+<section id="financiamento" aria-labelledby="h7s">
+  <h2 id="h7s">7. Financiamento</h2>
+  <h3>Quanto cada ente aplica</h3>
+  <p>A Emenda Constitucional 29/2000 vinculou recursos à saúde, e a Lei Complementar 141/2012 a regulamentou. Os mínimos de estados e municípios são calculados sobre a receita de impostos e transferências.<a class="src" href="https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp141.htm" target="_blank" rel="noopener">LC 141/2012</a></p>
+  <div class="tbl"><table>
+    <thead><tr><th>Ente</th><th>Mínimo em ações e serviços públicos de saúde</th></tr></thead>
+    <tbody>
+      <tr><td><b>Municípios</b></td><td>15% da receita de impostos e transferências</td></tr>
+      <tr><td><b>Estados</b></td><td>12% da receita de impostos e transferências</td></tr>
+      <tr><td><b>Distrito Federal</b></td><td>12% ou 15%, conforme a origem do tributo (estadual ou municipal)</td></tr>
+      <tr><td><b>União</b></td><td>15% da receita corrente líquida (regra atual; ver a caixa abaixo)</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box upd"><b class="t">Atualização 2024</b>
+    <p>A regra da União mudou várias vezes. Até 2015: valor do ano anterior corrigido pela variação do PIB (LC 141). EC 86/2015: percentual da receita corrente líquida, escalonado até 15%. EC 95/2016 (teto de gastos): o piso foi congelado no valor de 2017 e corrigido só pela inflação. A EC 126/2022 (art. 9º) revogou o teto de gastos a partir da sanção da Lei Complementar 200/2023, o novo arcabouço fiscal, e desde o orçamento de 2024 vale de novo o piso de <b>15% da receita corrente líquida</b> do art. 198 da Constituição.<a class="src" href="https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc126.htm" target="_blank" rel="noopener">EC 126/2022, art. 9º</a><a class="src" href="https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp200.htm" target="_blank" rel="noopener">LC 200/2023</a><a class="src" href="https://www2.camara.leg.br/orcamento-da-uniao/estudos/2024/nt-36-de-2024-simulacoes-gastos-minimos-da-uniao-saude-educacao-e-beneficios-rgps" target="_blank" rel="noopener">Câmara, NT 36/2024</a></p>
+    <p>Durante o teto, a queda de recursos próprios atingiu sobretudo os municípios.<a class="src" href="https://doi.org/10.11606/s1518-8787.2024058005772" target="_blank" rel="noopener">Maia, Rev Saúde Pública 2024</a></p>
+  </div>
+  <p>A LC 141 também lista o que <b>não</b> conta como gasto em saúde: aposentadorias e pensões, inclusive dos servidores da saúde; assistência à saúde de clientela fechada, que não atenda ao princípio da universalidade; merenda escolar e programas de alimentação; saneamento básico financiado por taxas ou tarifas; limpeza urbana; preservação ambiental; assistência social; e obras de infraestrutura, mesmo que beneficiem a rede de saúde.<a class="src" href="https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp141.htm" target="_blank" rel="noopener">LC 141, art. 4º</a></p>
+  <h3>Como o dinheiro federal é repassado</h3>
+  <p>Os seis blocos de financiamento do Pacto (atenção básica, média e alta complexidade, vigilância, assistência farmacêutica, gestão e investimentos) foram substituídos em 2017 por apenas dois: custeio e investimento. Desde 2020 eles se chamam Bloco de Manutenção das Ações e Serviços Públicos de Saúde e Bloco de Estruturação da Rede de Serviços Públicos de Saúde. O repasse é fundo a fundo.</p>
+  <h3>Financiamento da atenção primária</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Período</th><th>Modelo</th></tr></thead>
+    <tbody>
+      <tr><td class="y">1998–2019</td><td>PAB fixo (valor per capita) e PAB variável (incentivos por equipe e programa), criados pela NOB 96.</td></tr>
+      <tr><td class="y">2020–2024</td><td>Previne Brasil (Portaria 2.979/2019): capitação ponderada pelos cadastrados, pagamento por desempenho em indicadores e incentivos a ações estratégicas.</td></tr>
+      <tr><td class="y">2024–hoje</td><td>Novo cofinanciamento federal (Portaria GM/MS 3.493/2024), que revogou o Previne Brasil.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box upd"><b class="t">Atualização 2024–2026: o modelo atual da APS</b>
+    <p>A Portaria GM/MS 3.493, de 10 de abril de 2024, criou seis componentes de cofinanciamento federal da atenção primária:<a class="src" href="https://www.cosemssp.org.br/wp-content/uploads/2026/05/PORTARIA-MS-3.493-nova-metodologia.pdf" target="_blank" rel="noopener">Portaria 3.493/2024, art. 9º</a></p>
+    <ol>
+      <li>Componente fixo por equipe, com recurso de implantação para equipes novas.</li>
+      <li>Componente de vínculo e acompanhamento territorial, que substitui a capitação ponderada e penaliza o excesso de cadastros.</li>
+      <li>Componente de qualidade, por indicadores.</li>
+      <li>Componente de implantação e manutenção de programas e equipes, como consultório na rua.</li>
+      <li>Componente de saúde bucal.</li>
+      <li>Componente per capita de base populacional.</li>
+    </ol>
+    <p>Os municípios são classificados em quatro estratos pelo Índice de Equidade e Dimensionamento (IED), que combina o Índice de Vulnerabilidade Social do Ipea com o porte populacional. O valor fixo mensal de uma equipe de Saúde da Família vai de R$ 18.000 no estrato 1 a R$ 12.000 no estrato 4. A Portaria 6.907/2025 estendeu a transição para 20 meses e adiou os indicadores de qualidade para o segundo quadrimestre de 2025.</p>
+    <p>A mudança devolveu à União maior participação no financiamento da APS, segundo estudo em Pernambuco, e foi pensada para reforçar a Estratégia Saúde da Família, que o Previne Brasil havia enfraquecido.<a class="src" href="https://doi.org/10.1590/1413-81232026319.14772025" target="_blank" rel="noopener">Silva Júnior, 2026</a><a class="src" href="https://doi.org/10.1590/1413-812320253012.12642025" target="_blank" rel="noopener">Melo, 2025</a></p>
+  </div>
+  <div class="box trap"><b class="t">Pegadinha</b><p>Questões antigas (até 2023) ainda dão o Previne Brasil como modelo vigente. Em prova de 2025 em diante, o gabarito correto é o modelo da Portaria 3.493/2024. Se a questão for antiga, responda pela regra da época.</p></div>
+</section>
+
+<section id="resumo" aria-labelledby="h8s">
+  <h2 id="h8s">8. O que mais cai</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Se a questão perguntar</th><th>Responda</th></tr></thead>
+    <tbody>
+      <tr><td>Marco da Reforma Sanitária</td><td>8ª Conferência Nacional de Saúde, 1986</td></tr>
+      <tr><td>Princípio literal da Lei 8.080</td><td>Igualdade da assistência (equidade é classificação didática)</td></tr>
+      <tr><td>Diretrizes constitucionais</td><td>Descentralização, atendimento integral e participação da comunidade</td></tr>
+      <tr><td>Conselho de Saúde</td><td>Permanente, deliberativo, 50% usuários</td></tr>
+      <tr><td>Conferência de Saúde</td><td>A cada 4 anos, avalia e propõe diretrizes</td></tr>
+      <tr><td>Portas de entrada</td><td>Atenção primária, urgência, atenção psicossocial e serviços especiais de acesso aberto</td></tr>
+      <tr><td>Mínimos de aplicação</td><td>Municípios 15%, estados 12%, União 15% da RCL desde 2024</td></tr>
+      <tr><td>Financiamento atual da APS</td><td>Portaria 3.493/2024, seis componentes, estratos pelo IED</td></tr>
+      <tr><td>Setor privado no SUS</td><td>Complementar, com preferência às filantrópicas e sem fins lucrativos</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="questoes" aria-labelledby="h9s">
+  <h2 id="h9s">9. Questões comentadas</h2>
+  <p class="lead">Questões no formato do ENAMED (quatro alternativas), escritas para este capítulo. Toque numa alternativa para ver a correção de todas.</p>
+  <div class="qs" data-ch="pre4"></div>
+</section>
+
+<section id="cards" aria-labelledby="h11s">
+  <h2 id="h11s">Flashcards do bloco até aqui</h2>
+  <p class="lead">Todos os capítulos já vistos do Bloco 1, acumulados. Tente responder antes de tocar no cartão.</p>
+  <div class="cardbar"><span class="cardcount"></span><a class="revcards" href="./#cards-pre4">Revisar no app os cards deste capítulo →</a></div>
+  <div class="cards" data-ch="pre4"></div>
+</section>
+
+<section id="refs" aria-labelledby="h10s">
+  <h2 id="h10s">10. Referências</h2>
+  <h3>Legislação (texto oficial)</h3>
+  <div class="btns">
+    <a class="btn" href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank" rel="noopener">Constituição, arts. 196–200</a>
+    <a class="btn" href="https://planalto.gov.br/ccivil_03/LEIS/L8080.htm" target="_blank" rel="noopener">Lei 8.080/1990</a>
+    <a class="btn" href="https://www.planalto.gov.br/ccivil_03/leis/l8142.htm" target="_blank" rel="noopener">Lei 8.142/1990</a>
+    <a class="btn" href="https://planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7508.htm" target="_blank" rel="noopener">Decreto 7.508/2011</a>
+    <a class="btn" href="https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp141.htm" target="_blank" rel="noopener">LC 141/2012</a>
+    <a class="btn" href="https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp200.htm" target="_blank" rel="noopener">LC 200/2023</a>
+    <a class="btn" href="https://www.cosemssp.org.br/wp-content/uploads/2026/05/PORTARIA-MS-3.493-nova-metodologia.pdf" target="_blank" rel="noopener">Portaria 3.493/2024 (compilada)</a>
+  </div>
+  <h3>Artigos (PubMed)</h3>
+  <div class="refs" data-ch="pre4"></div>
+</section>
+</article>
+
+<article class="ch" id="pre1" hidden>
+<h1>PRE 1 · Medidas de saúde coletiva</h1>
+<p class="lead">Semana 2 do cronograma. Indicadores, morbidade, mortalidade, padronização, demografia, sistemas de informação e Declaração de Óbito. Cai em toda prova, quase sempre como cálculo simples ou definição exata.</p>
+
+<nav class="toc" aria-label="Sumário do PRE 1">
+  <h3>Sumário</h3>
+  <ol>
+    <li><a href="#p1-indicadores">Indicadores: o que são e como se medem</a></li>
+    <li><a href="#p1-morbidade">Morbidade: incidência e prevalência</a></li>
+    <li><a href="#p1-mortalidade">Mortalidade geral, específica e letalidade</a></li>
+    <li><a href="#p1-infantil">Mortalidade infantil, perinatal e fetal</a></li>
+    <li><a href="#p1-materna">Mortalidade materna</a></li>
+    <li><a href="#p1-proporcional">Mortalidade proporcional: Swaroop-Uemura e Nelson de Moraes</a></li>
+    <li><a href="#p1-padronizacao">Padronização de coeficientes</a></li>
+    <li><a href="#p1-demografia">Demografia e transições</a></li>
+    <li><a href="#p1-sis">Sistemas de informação em saúde</a></li>
+    <li><a href="#p1-do">Declaração de Óbito</a></li>
+    <li><a href="#p1-resumo">O que mais cai</a></li>
+    <li><a href="#p1-questoes">Questões comentadas</a></li>
+    <li><a href="#p1-cards">Flashcards</a></li>
+    <li><a href="#p1-refs">Referências</a></li>
+  </ol>
+</nav>
+
+<section id="p1-indicadores" aria-labelledby="p1h1">
+  <h2 id="p1h1">1. Indicadores: o que são e como se medem</h2>
+  <p>Indicador de saúde é uma medida que resume uma dimensão do estado de saúde ou do desempenho do sistema, para comparar lugares e acompanhar o tempo. A referência oficial brasileira é o "Livro Verde" da RIPSA (Rede Interagencial de Informações para a Saúde), que define cada indicador, a fórmula, a fonte e as limitações.<a class="src" href="https://www.ripsa.org.br/wp-content/uploads/2026/06/livro_verde_24_06_2026_web_sumario_interativo.pdf" target="_blank" rel="noopener">RIPSA, 3ª ed. 2026</a></p>
+  <div class="box upd"><b class="t">Atualização 2026</b><p>Em julho de 2026 saiu a 3ª edição de <i>Indicadores Básicos para a Saúde no Brasil</i> (RIPSA), substituindo a 2ª edição de 2008, que ainda é a citada em muitas apostilas. A nova edição reorganiza os indicadores por dimensões temáticas e padroniza conceitos e métodos. As fórmulas clássicas cobradas em prova (mortalidade infantil, perinatal, materna, proporcional) não mudaram.</p></div>
+  <p>Um bom indicador tem <b>validade</b> (mede o que diz medir), <b>confiabilidade</b> (dá o mesmo resultado em medições repetidas), <b>mensurabilidade</b> (os dados existem), <b>relevância</b> e <b>custo-efetividade</b>. Um <b>índice</b> é diferente: combina vários indicadores num número só (o IDH junta renda, educação e longevidade).</p>
+  <h3>Coeficiente, proporção e razão</h3>
+  <p>As bancas cobram o nome certo de cada medida. A pergunta-chave é: o numerador está contido no denominador, e o denominador é a população exposta ao risco?</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Medida</th><th>Como é</th><th>Exemplos</th></tr></thead>
+    <tbody>
+      <tr><td><b>Coeficiente (taxa)</b></td><td>Numerador contido no denominador, que é a população exposta ao risco, num período. Estima <b>risco</b>.</td><td>Mortalidade geral, incidência, mortalidade infantil (por convenção)</td></tr>
+      <tr><td><b>Proporção (índice)</b></td><td>Parte sobre o todo do mesmo evento. Não mede risco, mede distribuição.</td><td>Mortalidade proporcional, Swaroop-Uemura, letalidade</td></tr>
+      <tr><td><b>Razão</b></td><td>Numerador <b>não</b> está contido no denominador.</td><td>Razão de mortalidade materna (óbitos de mulheres ÷ nascidos vivos), razão de sexos</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box trap"><b class="t">Pegadinha</b><p>Mortalidade materna é <b>razão</b>, não coeficiente: o denominador (nascidos vivos) não é o conjunto de mulheres expostas ao risco. Prova antiga chama de "coeficiente de mortalidade materna"; se a alternativa discutir o conceito, a resposta é razão.</p></div>
+</section>
+
+<section id="p1-morbidade" aria-labelledby="p1h2">
+  <h2 id="p1h2">2. Morbidade: incidência e prevalência</h2>
+  <p><b>Incidência</b> conta casos <b>novos</b> num período, numa população que estava em risco no início. Mede risco e velocidade de adoecimento, e é a medida para estudar causas. <b>Prevalência</b> conta <b>todos</b> os casos existentes (novos e antigos) num momento (pontual) ou num período (de período). Mede a carga da doença e serve para planejar serviços.</p>
+  <ul>
+    <li><b>Incidência acumulada</b> = casos novos ÷ população em risco no início. É uma proporção (risco), exige seguimento completo.</li>
+    <li><b>Densidade de incidência</b> = casos novos ÷ soma de pessoa-tempo em risco. Unidade: casos por pessoa-ano. Usada em coortes com entradas e saídas.</li>
+    <li><b>Taxa de ataque</b>: incidência acumulada num surto, em população e tempo restritos. <b>Taxa de ataque secundário</b> = casos entre contatos ÷ contatos suscetíveis (o caso índice sai do numerador e do denominador). Mede a transmissibilidade.</li>
+  </ul>
+  <div class="box law"><b class="t">A relação que mais cai</b><p>Em situação estável e doença pouco frequente: <b>Prevalência ≈ Incidência × Duração</b>. Tudo o que aumenta a duração da doença aumenta a prevalência, mesmo sem mudar a incidência.</p></div>
+  <div class="tbl"><table>
+    <thead><tr><th>Aumenta a prevalência</th><th>Diminui a prevalência</th></tr></thead>
+    <tbody>
+      <tr><td>Aumento da incidência</td><td>Queda da incidência</td></tr>
+      <tr><td>Tratamento que prolonga a vida <b>sem curar</b> (insulina, antirretroviral, diálise)</td><td>Cura mais rápida</td></tr>
+      <tr><td>Maior duração da doença</td><td>Alta letalidade (o doente sai da conta porque morre)</td></tr>
+      <tr><td>Chegada de doentes, saída de sadios</td><td>Chegada de sadios, saída de doentes</td></tr>
+      <tr><td>Melhora do diagnóstico ou da notificação</td><td></td></tr>
+    </tbody>
+  </table></div>
+  <div class="box trap"><b class="t">Pegadinha</b><p>"Novo tratamento reduz a mortalidade da doença X, sem curá-la." A prevalência <b>aumenta</b> e a incidência <b>não muda</b>. Vacina, ao contrário, reduz a incidência.</p></div>
+</section>
+
+<section id="p1-mortalidade" aria-labelledby="p1h3">
+  <h2 id="p1h3">3. Mortalidade geral, específica e letalidade</h2>
+  <ul>
+    <li><b>Coeficiente de mortalidade geral</b> = óbitos totais ÷ população no meio do ano × 1.000. É bruto: depende muito da estrutura etária. População velha tem coeficiente geral alto mesmo com boa saúde, por isso não serve para comparar lugares sem <a href="#p1-padronizacao">padronização</a>.</li>
+    <li><b>Mortalidade específica</b> (por causa, idade ou sexo) = óbitos daquele grupo ÷ população daquele grupo. Ex.: mortalidade por doença cardiovascular por 100.000 habitantes.</li>
+    <li><b>Letalidade</b> = óbitos pela doença ÷ casos da doença × 100. Mede <b>gravidade</b>, não risco populacional. Raiva tem letalidade próxima de 100% e mortalidade populacional baixíssima.</li>
+    <li><b>Mortalidade proporcional</b> = óbitos de um grupo ÷ óbitos totais × 100. Mostra a distribuição das mortes, não o risco.</li>
+  </ul>
+  <div class="box trap"><b class="t">Pegadinha clássica</b><p>Mortalidade é óbitos ÷ <b>população</b>. Letalidade é óbitos ÷ <b>doentes</b>. Se o enunciado dá número de casos, o que se calcula é letalidade.</p></div>
+  <p>Para a mortalidade prematura por doenças crônicas, a meta do ODS 3.4 é reduzir em um terço, até 2030, a mortalidade entre 30 e 69 anos por doenças crônicas não transmissíveis. É um indicador frequente em questões de política de saúde.<a class="src" href="https://doi.org/10.3389/fonc.2022.1060608" target="_blank" rel="noopener">De Camargo Cancela, Front Oncol 2023</a></p>
+</section>
+
+<section id="p1-infantil" aria-labelledby="p1h4">
+  <h2 id="p1h4">4. Mortalidade infantil, perinatal e fetal</h2>
+  <p>A mortalidade infantil é o indicador clássico das condições de vida de uma população. O denominador é sempre <b>nascidos vivos</b> do mesmo local e período, e o resultado vem por mil.<a class="src" href="https://www.ripsa.org.br/wp-content/uploads/2026/06/livro_verde_24_06_2026_web_sumario_interativo.pdf" target="_blank" rel="noopener">RIPSA 2026</a></p>
+  <div class="tbl"><table>
+    <thead><tr><th>Indicador</th><th>Numerador (óbitos)</th><th>Denominador</th></tr></thead>
+    <tbody>
+      <tr><td><b>Mortalidade infantil</b></td><td>Menores de 1 ano</td><td>Nascidos vivos × 1.000</td></tr>
+      <tr><td>Neonatal precoce</td><td>0 a 6 dias</td><td>Nascidos vivos × 1.000</td></tr>
+      <tr><td>Neonatal tardia</td><td>7 a 27 dias</td><td>Nascidos vivos × 1.000</td></tr>
+      <tr><td>Pós-neonatal (infantil tardia)</td><td>28 a 364 dias</td><td>Nascidos vivos × 1.000</td></tr>
+      <tr><td><b>Mortalidade na infância</b></td><td>Menores de 5 anos</td><td>Nascidos vivos × 1.000</td></tr>
+      <tr><td><b>Perinatal</b></td><td>Óbitos fetais com 22 semanas ou mais + neonatais precoces (0 a 6 dias)</td><td>Nascimentos totais (nascidos vivos + óbitos fetais de 22 semanas ou mais) × 1.000</td></tr>
+    </tbody>
+  </table></div>
+  <p>O componente <b>neonatal</b> depende sobretudo de pré-natal, parto e cuidado ao recém-nascido. O <b>pós-neonatal</b> depende de condições socioeconômicas e ambientais: saneamento, nutrição, vacinação, diarreia e pneumonia. Quando a mortalidade infantil cai, cai primeiro o pós-neonatal, e o neonatal (principalmente o precoce) passa a ser a maior parte. É o caso do Brasil hoje.</p>
+  <div class="box upd"><b class="t">Dados atuais</b><p>Pela tábua de mortalidade do IBGE, a mortalidade infantil no Brasil foi de <b>12,3 por mil nascidos vivos em 2024</b>, contra cerca de 146,6 por mil em 1940. A expectativa de vida ao nascer chegou a <b>76,6 anos</b> (73,3 para homens e 79,9 para mulheres), também recorde.<a class="src" href="https://biblioteca.ibge.gov.br/visualizacao/periodicos/3097/tcmb_2024.pdf" target="_blank" rel="noopener">IBGE, Tábuas 2024</a></p></div>
+  <div class="box trap"><b class="t">Pegadinha</b><p>Perinatal começa com <b>22 semanas completas</b> de gestação e termina com <b>7 dias completos</b> de vida (CID-10). Não confundir com o critério para emitir Declaração de Óbito fetal (20 semanas, 500 g ou 25 cm, ver <a href="#p1-do">seção 10</a>).</p></div>
+</section>
+
+<section id="p1-materna" aria-labelledby="p1h5">
+  <h2 id="p1h5">5. Mortalidade materna</h2>
+  <div class="box law"><b class="t">Definição (CID-10)</b><p><q>Morte de uma mulher durante a gestação ou dentro de um período de 42 dias após o término da gestação, independentemente da duração ou da localização da gravidez, devida a qualquer causa relacionada com ou agravada pela gravidez ou por medidas em relação a ela, porém não devida a causas acidentais ou incidentais.</q></p></div>
+  <ul>
+    <li><b>Morte materna tardia</b>: mais de 42 dias e menos de 1 ano após o fim da gestação. Não entra na razão de mortalidade materna padrão.</li>
+    <li><b>Obstétrica direta</b>: complicações da própria gestação, parto ou puerpério, ou de intervenções, omissões e tratamento incorreto (hipertensão, hemorragia, infecção puerperal, aborto).</li>
+    <li><b>Obstétrica indireta</b>: doença prévia ou que surgiu na gestação, agravada pelos efeitos fisiológicos da gravidez (cardiopatia, diabetes, covid-19).</li>
+    <li><b>Não obstétrica</b>: causa acidental ou incidental (acidente de trânsito, homicídio). Não é morte materna.</li>
+  </ul>
+  <p><b>Razão de mortalidade materna (RMM)</b> = óbitos maternos ÷ nascidos vivos × 100.000. Como há subnotificação, o Ministério da Saúde investiga todos os óbitos de mulheres em idade fértil (10 a 49 anos) e aplica fatores de correção.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Ano</th><th>RMM no Brasil (por 100 mil nascidos vivos)</th></tr></thead>
+    <tbody>
+      <tr><td class="y">2019</td><td>57,9</td></tr>
+      <tr><td class="y">2020</td><td>74,7</td></tr>
+      <tr><td class="y">2021</td><td><b>117,4</b> (pico da pandemia de covid-19)</td></tr>
+      <tr><td class="y">2022</td><td>57,7</td></tr>
+      <tr><td class="y">2023</td><td>55,3</td></tr>
+    </tbody>
+  </table></div>
+  <p class="muted">Fonte: SIM e SINASC, compilados na Nota Técnica Conjunta 227/2025 do Ministério da Saúde.<a class="src" href="https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2025/nota-tecnica-conjunta-no-2272025-svsa-saps-saes-sesai-ms.pdf" target="_blank" rel="noopener">NT 227/2025</a></p>
+  <div class="box upd"><b class="t">Atualização 2026</b><p>A RMM voltou ao patamar pré-pandemia, mas a desigualdade entre estados aumentou durante a pandemia e não voltou ao padrão anterior. A meta brasileira do ODS 3.1 é chegar a no máximo 30 por 100 mil nascidos vivos até 2030; a meta global é abaixo de 70.<a class="src" href="https://doi.org/10.1186/s12884-026-09290-z" target="_blank" rel="noopener">Bittencourt, BMC 2026</a></p></div>
+</section>
+
+<section id="p1-proporcional" aria-labelledby="p1h6">
+  <h2 id="p1h6">6. Mortalidade proporcional: Swaroop-Uemura e Nelson de Moraes</h2>
+  <p>Quando faltam bons dados de população, usa-se a distribuição dos óbitos por idade. Quanto mais as pessoas morrem velhas, melhor o nível de saúde.</p>
+  <h3>Indicador de Swaroop-Uemura</h3>
+  <p>Proporção de óbitos em pessoas com <b>50 anos ou mais</b> sobre o total de óbitos. Quanto maior, melhor. Classificação usual: grupo 1, 75% ou mais (países desenvolvidos); grupo 2, 50 a 74%; grupo 3, 25 a 49%; grupo 4, abaixo de 25% (alto subdesenvolvimento).</p>
+  <h3>Curva de Nelson de Moraes</h3>
+  <p>Gráfico da mortalidade proporcional em cinco faixas: menores de 1 ano, 1 a 4, 5 a 19, 20 a 49 e 50 anos ou mais. A soma das faixas é 100%.<a class="src" href="https://www.conass.org.br/guiainformacao/notas_tecnicas/NT1-CURVA-MORTALIDADE-PROPORCIONAL.pdf" target="_blank" rel="noopener">CONASS, NT 1</a></p>
+  <div class="tbl"><table>
+    <thead><tr><th>Tipo</th><th>Formato</th><th>Nível de saúde</th></tr></thead>
+    <tbody>
+      <tr><td><b>I</b></td><td>N invertido</td><td>Muito baixo: muitas mortes de crianças e jovens</td></tr>
+      <tr><td><b>II</b></td><td>L (ou J invertido)</td><td>Baixo: predomínio de óbitos em menores de 1 ano</td></tr>
+      <tr><td><b>III</b></td><td>U (ou V)</td><td>Regular: picos em menores de 1 ano e em 50 anos ou mais</td></tr>
+      <tr><td><b>IV</b></td><td>J</td><td>Elevado: a maioria morre com 50 anos ou mais. É o Brasil atual.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box trap"><b class="t">Pegadinha</b><p>Swaroop-Uemura e Nelson de Moraes são <b>proporções</b>, não medem risco. Um lugar pode ter Swaroop-Uemura alto por ter muitos idosos, não necessariamente por ter serviços melhores.</p></div>
+  <h3>Medidas de anos perdidos</h3>
+  <p><b>Anos potenciais de vida perdidos (APVP)</b> somam, para cada óbito, a diferença entre a idade de morte e um limite (por exemplo, 70 anos). Valorizam mortes de jovens, como as causas externas. O <b>DALY</b> (AVAI, anos de vida ajustados por incapacidade) soma anos perdidos por morte prematura (YLL) e anos vividos com incapacidade (YLD); é a métrica do estudo Global Burden of Disease.<a class="src" href="https://doi.org/10.1016/S0140-6736(24)00757-8" target="_blank" rel="noopener">GBD 2021, Lancet 2024</a></p>
+</section>
+
+<section id="p1-padronizacao" aria-labelledby="p1h7">
+  <h2 id="p1h7">7. Padronização de coeficientes</h2>
+  <p>Serve para comparar populações com estruturas etárias diferentes, removendo o efeito da idade.</p>
+  <ul>
+    <li><b>Método direto</b>: aplica os coeficientes específicos por idade de cada população a uma <b>população-padrão</b> única. Precisa dos coeficientes por idade de cada população. O resultado é um coeficiente "como se" as duas tivessem a mesma estrutura etária.</li>
+    <li><b>Método indireto</b>: aplica coeficientes de uma população-padrão à estrutura etária da população estudada, obtendo os <b>óbitos esperados</b>. Calcula-se a <b>razão de mortalidade padronizada (RMP)</b> = óbitos observados ÷ esperados. RMP acima de 1 indica excesso. Usado quando não há coeficientes por idade confiáveis ou os números são pequenos.</li>
+  </ul>
+  <h3>Exemplo para fixar</h3>
+  <div class="tbl"><table>
+    <thead><tr><th></th><th>Cidade A (jovem)</th><th>Cidade B (idosa)</th></tr></thead>
+    <tbody>
+      <tr><td>Jovens</td><td>9.000 pessoas, 18 óbitos (2 por mil)</td><td>2.000 pessoas, 6 óbitos (3 por mil)</td></tr>
+      <tr><td>Idosos</td><td>1.000 pessoas, 30 óbitos (30 por mil)</td><td>8.000 pessoas, 200 óbitos (25 por mil)</td></tr>
+      <tr><td><b>Coeficiente geral bruto</b></td><td>48 ÷ 10.000 = <b>4,8 por mil</b></td><td>206 ÷ 10.000 = <b>20,6 por mil</b></td></tr>
+      <tr><td><b>Padronizado (direto)</b>, padrão de 1.000 jovens + 1.000 idosos</td><td>(2 + 30) ÷ 2.000 = <b>16 por mil</b></td><td>(3 + 25) ÷ 2.000 = <b>14 por mil</b></td></tr>
+    </tbody>
+  </table></div>
+  <p>B parecia quatro vezes pior só porque é mais velha. Depois de padronizar, A tem mortalidade um pouco maior: em jovens B é pior, em idosos A é bem pior.</p>
+  <div class="box upd"><b class="t">Na vida real</b><p>Entre 2010 e 2022, a mortalidade bruta dos povos indígenas no Brasil foi <b>menor</b> que a da população não indígena (43,5 contra 74,8 por 10 mil em 2022), porque a população indígena é mais jovem. Por idade, a mortalidade de crianças e adolescentes indígenas foi 3,8 vezes maior. É o erro que a padronização evita.<a class="src" href="https://doi.org/10.1017/S0021932025100461" target="_blank" rel="noopener">Hyeda, J Biosoc Sci 2025</a></p></div>
+</section>
+
+<section id="p1-demografia" aria-labelledby="p1h8">
+  <h2 id="p1h8">8. Demografia e transições</h2>
+  <ul>
+    <li><b>Razão de dependência</b> = (menores de 15 + 65 anos ou mais) ÷ população de 15 a 64 anos × 100. Peso dos economicamente dependentes.</li>
+    <li><b>Índice de envelhecimento</b> = pessoas de 60 anos ou mais ÷ menores de 15 anos × 100 (definição da RIPSA).</li>
+    <li><b>Taxa de fecundidade total</b>: número médio de filhos por mulher ao fim da vida reprodutiva. Abaixo de 2,1, a população não se repõe a longo prazo. O Brasil está abaixo desse nível.</li>
+    <li><b>Esperança de vida ao nascer</b>: anos que um recém-nascido viveria se as taxas de mortalidade atuais se mantivessem. É afetada fortemente pela mortalidade infantil.</li>
+  </ul>
+  <h3>Transição demográfica</h3>
+  <p>Fase 1: natalidade e mortalidade altas, crescimento lento. Fase 2: a mortalidade cai e a natalidade continua alta, crescimento acelerado. Fase 3: a natalidade cai. Fase 4: ambas baixas, envelhecimento. A pirâmide etária perde a base larga e vira um formato de barril. No Brasil a transição foi rápida, com queda da fecundidade a partir dos anos 1960.</p>
+  <h3>Transição epidemiológica</h3>
+  <p>Nos países ricos, as doenças infecciosas deram lugar às crônicas de forma sequencial. No Brasil a transição é descrita como <b>polarizada e prolongada</b>: há superposição de etapas (infecciosas e crônicas ao mesmo tempo), contratransição (reemergência de doenças como dengue e sífilis) e polarização (perfis diferentes entre regiões e classes sociais). Daí a <b>tripla carga de doenças</b>: infecciosas e carenciais, crônicas não transmissíveis e causas externas.<a class="src" href="https://doi.org/10.1016/S0140-6736(25)01917-8" target="_blank" rel="noopener">GBD 2023, Lancet 2025</a></p>
+</section>
+
+<section id="p1-sis" aria-labelledby="p1h9">
+  <h2 id="p1h9">9. Sistemas de informação em saúde</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Sistema</th><th>Documento-base</th><th>Para que serve</th></tr></thead>
+    <tbody>
+      <tr><td><b>SIM</b></td><td>Declaração de Óbito (DO)</td><td>Mortalidade: causas, idade, local. Criado em 1975.</td></tr>
+      <tr><td><b>SINASC</b></td><td>Declaração de Nascido Vivo (DNV)</td><td>Nascimentos: denominador da mortalidade infantil e materna, pré-natal, tipo de parto, peso.</td></tr>
+      <tr><td><b>SINAN</b></td><td>Ficha de notificação e de investigação</td><td>Doenças e agravos de notificação compulsória (detalhes no PRE 3).</td></tr>
+      <tr><td><b>SIH</b></td><td>Autorização de Internação Hospitalar (AIH)</td><td>Internações pagas pelo SUS: morbidade hospitalar e custos.</td></tr>
+      <tr><td><b>SIA</b></td><td>BPA e APAC</td><td>Produção ambulatorial do SUS.</td></tr>
+      <tr><td><b>SI-PNI</b></td><td>Registro de vacinação</td><td>Doses aplicadas e coberturas vacinais.</td></tr>
+      <tr><td><b>SISAB / e-SUS APS</b></td><td>Prontuário e fichas da atenção primária</td><td>Produção e indicadores da APS.</td></tr>
+      <tr><td><b>CNES</b></td><td>Cadastro do estabelecimento</td><td>Estabelecimentos, leitos, equipamentos e profissionais.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box upd"><b class="t">Qualidade do SIM</b><p>Uma revisão de escopo de 2025 encontrou melhora geral do SIM, com queda de 68,5% dos códigos "garbage" (causas pouco úteis) entre 2000 e 2015, mas cobertura ainda abaixo de 90% no Acre e no Maranhão e pior desempenho no Norte e Nordeste. A proporção de óbitos por <b>causas mal definidas</b> (capítulo XVIII da CID-10, códigos R) é o indicador clássico de qualidade.<a class="src" href="https://doi.org/10.1590/1413-81232025301.08462023" target="_blank" rel="noopener">Rebouças, Ciênc Saúde Coletiva 2025</a></p></div>
+  <div class="box trap"><b class="t">Pegadinha</b><p>O SIH registra <b>internações</b>, não pessoas: a mesma pessoa internada três vezes conta três vezes. Por isso ele não serve para calcular incidência.</p></div>
+</section>
+
+<section id="p1-do" aria-labelledby="p1h10">
+  <h2 id="p1h10">10. Declaração de Óbito</h2>
+  <p>Preencher a DO é ato médico. Quem preenche depende do tipo de morte, segundo a Resolução CFM 1.779/2005.<a class="src" href="https://sites.usp.br/svoi/wp-content/uploads/sites/869/2021/01/resolucao_cfm_1779-05.pdf" target="_blank" rel="noopener">CFM 1.779/2005, art. 2º</a></p>
+  <div class="tbl"><table>
+    <thead><tr><th>Situação</th><th>Quem emite a DO</th></tr></thead>
+    <tbody>
+      <tr><td>Morte natural <b>com</b> assistência médica, paciente internado</td><td>Médico assistente; na falta dele, médico substituto da instituição</td></tr>
+      <tr><td>Com assistência, em regime ambulatorial</td><td>Médico designado pela instituição que prestava assistência, ou o SVO</td></tr>
+      <tr><td>Com assistência, em regime domiciliar (Saúde da Família, internação domiciliar)</td><td>Médico do programa em que o paciente estava cadastrado, ou o SVO</td></tr>
+      <tr><td>Morte natural <b>sem</b> assistência médica, onde há SVO</td><td>Médicos do Serviço de Verificação de Óbitos</td></tr>
+      <tr><td>Morte natural sem assistência, onde <b>não</b> há SVO</td><td>Médico do serviço público de saúde mais próximo; na falta, qualquer médico da localidade</td></tr>
+      <tr><td>Morte <b>violenta ou não natural</b> (acidente, homicídio, suicídio, suspeita)</td><td>Obrigatoriamente o serviço médico-legal (IML), mesmo que o paciente estivesse internado</td></tr>
+      <tr><td><b>Óbito fetal</b></td><td>Médico que assistiu a mãe, se gestação de 20 semanas ou mais, <b>ou</b> feto com 500 g ou mais, <b>e/ou</b> 25 cm ou mais</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box trap"><b class="t">Pegadinha</b><p>Nasceu com qualquer sinal de vida (respiração, batimento, movimento) e morreu logo depois: é <b>nascido vivo</b> seguido de óbito, com DNV <b>e</b> DO, qualquer que seja a idade gestacional ou o peso. O critério de 20 semanas/500 g vale só para óbito fetal.</p></div>
+  <h3>Causa básica e as partes I e II</h3>
+  <p>A <b>causa básica</b> é a doença ou lesão que iniciou a cadeia de acontecimentos que levou à morte, ou as circunstâncias do acidente ou violência que produziram a lesão fatal. É a causa que entra nas estatísticas oficiais.</p>
+  <ul>
+    <li><b>Parte I</b>: a cadeia, de cima para baixo, da causa terminal (linha a) até a causa básica, na <b>última linha preenchida</b>.</li>
+    <li><b>Parte II</b>: outras condições significativas que contribuíram para a morte, mas não fazem parte da cadeia.</li>
+    <li>Não se escrevem modos de morrer como causa ("parada cardiorrespiratória", "falência de múltiplos órgãos").</li>
+  </ul>
+  <p>Exemplo: (a) choque séptico, (b) pneumonia aspirativa, (c) acidente vascular cerebral isquêmico; parte II: diabetes tipo 2. Causa básica: AVC isquêmico.</p>
+  <p>A DO é emitida em três vias: a <b>branca</b> vai para a secretaria de saúde (alimenta o SIM), a <b>amarela</b> fica com a família para o registro em cartório e a <b>rosa</b> fica no estabelecimento de saúde.</p>
+</section>
+
+<section id="p1-resumo" aria-labelledby="p1h11">
+  <h2 id="p1h11">11. O que mais cai</h2>
+  <ol>
+    <li>Prevalência ≈ incidência × duração; tratamento que não cura <b>aumenta</b> a prevalência.</li>
+    <li>Letalidade (÷ doentes) × mortalidade (÷ população).</li>
+    <li>Componentes da mortalidade infantil, com os cortes de 7 e 28 dias, e a fórmula da perinatal com 22 semanas.</li>
+    <li>Definição de morte materna (42 dias), direta × indireta, e que a RMM é por 100 mil nascidos vivos.</li>
+    <li>Swaroop-Uemura (50 anos ou mais) e os formatos da curva de Nelson de Moraes (IV = J).</li>
+    <li>Padronização direta (população-padrão) × indireta (óbitos esperados e RMP).</li>
+    <li>Quem emite a DO em cada situação e os critérios do óbito fetal.</li>
+    <li>Qual sistema usa qual documento (SIM/DO, SINASC/DNV, SIH/AIH).</li>
+  </ol>
+</section>
+
+<section id="p1-questoes" aria-labelledby="p1h12">
+  <h2 id="p1h12">12. Questões comentadas</h2>
+  <p class="lead">Questões no formato do ENAMED (quatro alternativas), escritas para este capítulo. Toque numa alternativa para ver a correção de todas.</p>
+  <div class="qs" data-ch="pre1"></div>
+</section>
+
+<section id="p1-cards" aria-labelledby="p1h13">
+  <h2 id="p1h13">Flashcards do bloco até aqui</h2>
+  <p class="lead">PRE 4 e PRE 1 juntos, acumulados. Tente responder antes de tocar no cartão.</p>
+  <div class="cardbar"><span class="cardcount"></span><a class="revcards" href="./#cards-pre1">Revisar no app os cards deste capítulo →</a></div>
+  <div class="cards" data-ch="pre1"></div>
+</section>
+
+<section id="p1-refs" aria-labelledby="p1h14">
+  <h2 id="p1h14">13. Referências</h2>
+  <h3>Documentos oficiais</h3>
+  <div class="btns">
+    <a class="btn" href="https://www.ripsa.org.br/wp-content/uploads/2026/06/livro_verde_24_06_2026_web_sumario_interativo.pdf" target="_blank" rel="noopener">RIPSA, Indicadores Básicos (3ª ed., 2026)</a>
+    <a class="btn" href="https://biblioteca.ibge.gov.br/visualizacao/periodicos/3097/tcmb_2024.pdf" target="_blank" rel="noopener">IBGE, Tábuas de Mortalidade 2024</a>
+    <a class="btn" href="https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2025/nota-tecnica-conjunta-no-2272025-svsa-saps-saes-sesai-ms.pdf" target="_blank" rel="noopener">MS, NT 227/2025 (mortalidade materna)</a>
+    <a class="btn" href="https://sites.usp.br/svoi/wp-content/uploads/sites/869/2021/01/resolucao_cfm_1779-05.pdf" target="_blank" rel="noopener">Resolução CFM 1.779/2005</a>
+    <a class="btn" href="https://www.conass.org.br/guiainformacao/notas_tecnicas/NT1-CURVA-MORTALIDADE-PROPORCIONAL.pdf" target="_blank" rel="noopener">CONASS, curva de mortalidade proporcional</a>
+  </div>
+  <h3>Artigos (PubMed)</h3>
+  <div class="refs" data-ch="pre1"></div>
+</section>
+</article>
+
+
+<footer>
+  <p><b>medaj.</b> é um material aberto de estudo para a residência médica (ENAMED, ENARE, SUS-SP e Revalida). Não substitui as fontes oficiais.</p>
+  <p>Conteúdo-base montado a partir de leis, normas e documentos oficiais em vigor em outubro de 2026 e das referências de cada capítulo, obtidas pelo PubMed. Os flashcards de cada capítulo somam todos os capítulos anteriores do bloco.</p>
+</footer>
+</main>
+
+<script>
+const REFS={};
+REFS.pre4=[
+ {t:"The Brazilian health system: history, advances, and challenges.",c:"Paim J, Travassos C, Almeida C, Bahia L, Macinko J · Lancet 2011;377:1778-97",pmid:"21561655",doi:"10.1016/S0140-6736(11)60054-8",why:"A história do sistema e da Reforma Sanitária, conduzida pela sociedade civil."},
+ {t:"Brazil's unified health system: the first 30 years and prospects for the future.",c:"Castro MC et al. · Lancet 2019;394:345-56",pmid:"31303318",doi:"10.1016/S0140-6736(19)31243-7",why:"Balanço de 30 anos: acesso quase universal, desigualdade regional e subfinanciamento."},
+ {t:"After a far-right government: challenges for Brazil's Unified Health System.",c:"Massuda A et al. · Lancet 2023;401:886-8",pmid:"36841254",doi:"10.1016/S0140-6736(23)00352-5",why:"Desafios do SUS a partir de 2023, incluindo financiamento e atenção primária."},
+ {t:"PHC funding over time: inducement, expansion, and qualification of the Family Health Strategy model.",c:"Melo MA et al. · Ciênc Saúde Coletiva 2025;30(12)",pmid:"41538618",doi:"10.1590/1413-812320253012.12642025",why:"Do PAB ao Previne Brasil e à Portaria 3.493/2024: como cada modelo afetou a Saúde da Família."},
+ {t:"Analysis of Primary Health Care indicators and expenditures after changes in Federal Co-financing in the municipalities of Pernambuco, Brazil.",c:"Silva Júnior VB, Gurgel Júnior GD · Ciênc Saúde Coletiva 2026;31(9)",pmid:"42848629",doi:"10.1590/1413-81232026319.14772025",why:"Depois do fim do Previne Brasil, a participação da União no financiamento da APS aumentou."},
+ {t:"Fiscal austerity and municipal health spending: an interrupted time series study.",c:"Maia LR, Campos MR, Castanheira D · Rev Saúde Pública 2024;58:42",pmid:"39319934",doi:"10.11606/s1518-8787.2024058005772",why:"Impacto da austeridade fiscal sobre o gasto municipal em saúde."}
+];
+
+const QS={};
+QS.pre4=[
+ {s:"Segundo o texto do art. 7º da Lei 8.080/1990, constitui princípio do SUS:",o:[
+  ["Equidade na distribuição dos recursos entre as regiões.",0,"Equidade é princípio doutrinário na classificação didática do Ministério da Saúde, mas a palavra não está no art. 7º."],
+  ["Igualdade da assistência à saúde, sem preconceitos ou privilégios de qualquer espécie.",1,"Correta. É o inciso IV, com o texto literal da lei."],
+  ["Participação complementar do setor privado, com preferência às empresas com fins lucrativos.",0,"A preferência é às filantrópicas e sem fins lucrativos (CF, art. 199; Lei 8.080, art. 25)."],
+  ["Centralização da gestão no Ministério da Saúde, para evitar duplicidade de meios.",0,"A lei prevê descentralização com direção única em cada esfera. Evitar duplicidade é outro inciso (XIII) e não pressupõe centralização."]],
+  rev:"Revise: art. 7º da Lei 8.080 e a diferença entre texto legal e classificação didática.",dog:"Dr. Joey: \"leu 'segundo a lei'? Então é igualdade. Equidade fica para quando perguntarem os doutrinários.\""},
+ {s:"Sobre o Conselho de Saúde, conforme a Lei 8.142/1990, é correto afirmar:",o:[
+  ["Reúne-se a cada quatro anos para avaliar a situação de saúde e propor diretrizes.",0,"Essa é a Conferência de Saúde."],
+  ["Tem caráter consultivo e é composto igualmente pelos quatro segmentos.",0,"O Conselho é deliberativo, e a paridade é dos usuários em relação ao conjunto dos demais segmentos."],
+  ["Tem caráter permanente e deliberativo, e a representação dos usuários é paritária em relação ao conjunto dos demais segmentos.",1,"Correta. Art. 1º, §§ 2º e 4º."],
+  ["Suas decisões dispensam homologação do chefe do Poder Executivo.",0,"As decisões são homologadas pelo chefe do poder legalmente constituído em cada esfera."]],
+  rev:"Revise: tabela Conselho × Conferência na seção 4.",dog:"Dra. Mel: \"Conselho é permanente e decide. Conferência é de quatro em quatro anos e propõe. Sem confundir, por favor.\""},
+ {s:"De acordo com o Decreto 7.508/2011, NÃO é porta de entrada às ações e serviços de saúde nas Redes de Atenção:",o:[
+  ["Serviços de atenção primária.",0,"É porta de entrada e ordena o acesso."],
+  ["Serviços de atenção de urgência e emergência.",0,"É porta de entrada."],
+  ["Ambulatório de especialidades médicas.",1,"Correta. A atenção especializada é acessada por referência, não é porta de entrada."],
+  ["Serviços especiais de acesso aberto.",0,"É porta de entrada, ao lado da atenção psicossocial."]],
+  rev:"Revise: portas de entrada e conteúdo mínimo da Região de Saúde.",dog:"Dr. Thor: \"e-e-especialista não é porta de entrada... a-a-alguém precisa encaminhar antes.\""},
+ {s:"Um município aplicou recursos próprios em diversas ações. Segundo a LC 141/2012, conta para o mínimo constitucional em saúde:",o:[
+  ["Merenda escolar da rede municipal de ensino.",0,"Excluída expressamente (art. 4º)."],
+  ["Pagamento de aposentadorias de servidores da saúde.",0,"Excluído expressamente."],
+  ["Compra de medicamentos para a assistência farmacêutica do SUS.",1,"Correta. É ação de acesso universal, compatível com o art. 3º da LC 141."],
+  ["Limpeza urbana e remoção de resíduos.",0,"Excluída expressamente."]],
+  rev:"Revise: o que não é gasto em saúde (LC 141, art. 4º) e os mínimos de cada ente.",dog:"Dr. Joey: \"se dá para usar na escola, na previdência ou na rua, não é saúde para a LC 141. Simples assim.\""},
+ {s:"Sobre o financiamento federal da atenção primária a partir de 2024, assinale a correta:",o:[
+  ["O Previne Brasil segue vigente, com capitação ponderada e pagamento por desempenho.",0,"A Portaria 3.493/2024 revogou a Portaria 2.979/2019, que criou o Previne Brasil."],
+  ["O novo modelo tem um componente de vínculo e acompanhamento territorial e classifica os municípios por um índice que combina vulnerabilidade social e porte.",1,"Correta. Componente de vínculo e estratos de 1 a 4 pelo IED."],
+  ["O repasse passou a ser feito exclusivamente por produção de procedimentos.",0,"Não há pagamento exclusivo por produção; o modelo combina componentes fixos, de vínculo, de qualidade e per capita."],
+  ["O componente per capita foi extinto.",0,"O componente per capita de base populacional é um dos seis componentes."]],
+  rev:"Revise: caixa de atualização na seção 7.",dog:"Dra. Mel: \"questão de 2025 em diante com Previne Brasil vigente está errada. Atualize-se.\""},
+ {s:"Assinale a sequência cronológica correta:",o:[
+  ["IAPs, CAPs, INPS, 8ª Conferência Nacional de Saúde.",0,"As CAPs (1923) vêm antes dos IAPs (1933)."],
+  ["CAPs, IAPs, INPS, SUDS, extinção do INAMPS.",1,"Correta: 1923, 1933, 1966, 1987 e 1993."],
+  ["CAPs, INPS, IAPs, Constituição de 1988.",0,"O INPS (1966) unificou os IAPs, que já existiam desde 1933."],
+  ["8ª Conferência, SUDS, extinção do INAMPS, Constituição de 1988.",0,"O INAMPS foi extinto em 1993, depois da Constituição."]],
+  rev:"Revise: linha do tempo da seção 1.",dog:"Dr. Thor: \"f-fiz uma musiquinha: Caixa, Instituto, INPS, INAMPS... e o SUS chega pra salvar.\""},
+ {s:"O Pacto pela Saúde (2006) foi organizado em três dimensões. São elas:",o:[
+  ["Pacto pela Vida, Pacto em Defesa do SUS e Pacto de Gestão.",1,"Correta."],
+  ["Pacto pela Atenção Básica, Pacto pela Média Complexidade e Pacto pela Alta Complexidade.",0,"Não são dimensões do Pacto; são níveis de atenção."],
+  ["Pacto pela Vida, Pacto Federativo e Pacto de Financiamento.",0,"Mistura termos; o terceiro é Pacto de Gestão e o segundo, em Defesa do SUS."],
+  ["Pacto de Gestão, Pacto de Regionalização e Pacto de Programação.",0,"Regionalização e programação são eixos dentro do Pacto de Gestão."]],
+  rev:"Revise: seção 5 e as seis prioridades do Pacto pela Vida.",dog:"Dr. Joey: \"Vida, Defesa e Gestão. VDG. Pronto, pode dormir.\""}
+];
+const CARDS=[
+ ["PRE 4","Art. 196 da CF: a saúde é...","Direito de todos e dever do Estado, garantido por políticas sociais e econômicas, com acesso universal e igualitário."],
+ ["PRE 4","As três diretrizes do SUS no art. 198 da CF","Descentralização com direção única em cada esfera; atendimento integral com prioridade preventiva; participação da comunidade."],
+ ["PRE 4","Como o setor privado participa do SUS?","De forma complementar, por contrato ou convênio, com preferência às filantrópicas e sem fins lucrativos."],
+ ["PRE 4","Marco da Reforma Sanitária","8ª Conferência Nacional de Saúde, 1986."],
+ ["PRE 4","CAPs × IAPs","CAPs (1923, Lei Eloy Chaves): por empresa. IAPs (1933): por categoria profissional."],
+ ["PRE 4","Ano de extinção do INAMPS e lei","1993, Lei 8.689."],
+ ["PRE 4","A palavra 'equidade' está no art. 7º da Lei 8.080?","Não. O texto diz 'igualdade da assistência à saúde'. Equidade é princípio doutrinário na classificação didática."],
+ ["PRE 4","Princípios doutrinários do SUS","Universalidade, integralidade e equidade."],
+ ["PRE 4","Conferência de Saúde: frequência e papel","A cada 4 anos; avalia a situação de saúde e propõe diretrizes."],
+ ["PRE 4","Conselho de Saúde: caráter e composição","Permanente e deliberativo; usuários paritários em relação aos demais segmentos (50%)."],
+ ["PRE 4","Requisitos da Lei 8.142 para receber repasses","Fundo, Conselho, plano de saúde, relatório de gestão, contrapartida e comissão do PCCS."],
+ ["PRE 4","Portas de entrada (Decreto 7.508)","Atenção primária, urgência e emergência, atenção psicossocial e serviços especiais de acesso aberto."],
+ ["PRE 4","Conteúdo mínimo de uma Região de Saúde","Atenção primária, urgência e emergência, atenção psicossocial, ambulatorial especializada e hospitalar, vigilância em saúde."],
+ ["PRE 4","O que é o COAP?","Contrato Organizativo da Ação Pública da Saúde, acordo entre os entes de uma região (Decreto 7.508)."],
+ ["PRE 4","Mínimos em saúde: municípios e estados","Municípios 15% e estados 12% da receita de impostos e transferências (LC 141/2012)."],
+ ["PRE 4","Piso federal da saúde desde 2024","15% da receita corrente líquida (art. 198). A EC 126/2022 revogou o teto da EC 95 a partir da sanção da LC 200/2023."],
+ ["PRE 4","Três exemplos que NÃO contam como gasto em saúde (LC 141)","Merenda escolar, aposentadorias e pensões, limpeza urbana (também saneamento por taxa, assistência social, obras)."],
+ ["PRE 4","As três dimensões do Pacto pela Saúde (2006)","Pacto pela Vida, Pacto em Defesa do SUS e Pacto de Gestão."],
+ ["PRE 4","NOB 96 criou...","Gestão plena da atenção básica e do sistema municipal, PAB fixo e variável, PPI."],
+ ["PRE 4","Modelo atual de financiamento da APS","Portaria GM/MS 3.493/2024: seis componentes, municípios em 4 estratos pelo IED. Revogou o Previne Brasil."],
+ ["PRE 4","Previne Brasil (2019) tinha...","Capitação ponderada, pagamento por desempenho e incentivo a ações estratégicas."],
+ ["PRE 4","Quem assessora o MS na incorporação de tecnologias?","CONITEC (Lei 12.401/2011)."]
+];
+REFS.pre1=[
+ {t:"Persistent subnational disparities in the recovery of maternal mortality magnitude in Brazil after the COVID-19 pandemic.",c:"Bittencourt et al. · BMC Pregnancy Childbirth 2026;26",pmid:"42210103",doi:"10.1186/s12884-026-09290-z",why:"RMM por estado de 2000 a 2023: piora na pandemia, queda depois, desigualdade entre estados ainda maior."},
+ {t:"Quality evaluation of Brazilian Mortality Information System (SIM): a scoping review.",c:"Rebouças et al. · Ciênc Saúde Coletiva 2025;30(1):e08462023",pmid:"39879455",doi:"10.1590/1413-81232025301.08462023",why:"Cobertura, completude e causas mal definidas no SIM; desigualdade regional da qualidade."},
+ {t:"Mortality trends and disparities in Brazil's indigenous peoples: a comprehensive ecological time-series study spanning 2010-2022.",c:"Hyeda et al. · J Biosoc Sci 2025;57(6):689-700",pmid:"41449681",doi:"10.1017/S0021932025100461",why:"Exemplo real de por que comparar coeficientes brutos engana: estrutura etária jovem."},
+ {t:"Global burden of 292 causes of death in 204 countries and territories and 660 subnational locations, 1990-2023.",c:"GBD 2023 Causes of Death Collaborators · Lancet 2025;406:1811-72",pmid:"41092928",doi:"10.1016/S0140-6736(25)01917-8",why:"Mortalidade por causa e anos de vida perdidos (YLL), com dados subnacionais."},
+ {t:"Global incidence, prevalence, YLDs, DALYs, and HALE for 371 diseases and injuries in 204 countries and territories and 811 subnational locations, 1990-2021.",c:"GBD 2021 Diseases and Injuries Collaborators · Lancet 2024;403:2133-61",pmid:"38642570",doi:"10.1016/S0140-6736(24)00757-8",why:"Referência para DALY = YLL + YLD e para a expectativa de vida saudável (HALE)."},
+ {t:"Can the sustainable development goals for cancer be met in Brazil? A population-based study.",c:"De Camargo Cancela et al. · Front Oncol 2023;12:1060608",pmid:"36703792",doi:"10.3389/fonc.2022.1060608",why:"Mortalidade prematura (30 a 69 anos) e a meta do ODS 3.4 aplicada ao Brasil."}
+];
+QS.pre1=[
+ {s:"Um novo medicamento reduz a mortalidade de uma doença crônica, mas não a cura. Mantidas as demais condições, espera-se que:",o:[
+  ["a incidência e a prevalência diminuam",0,"Nada no enunciado reduz casos novos; o remédio age em quem já está doente."],
+  ["a incidência não se altere e a prevalência aumente",1,"Os doentes vivem mais sem sarar: a duração aumenta, e prevalência ≈ incidência × duração."],
+  ["a incidência aumente e a prevalência não se altere",0,"Tratamento não cria casos novos."],
+  ["a incidência não se altere e a prevalência diminua",0,"A prevalência só cairia se os doentes saíssem da conta, por cura ou morte."]],
+  rev:"Revise: relação P ≈ I × D e a tabela do que aumenta ou diminui a prevalência (seção 2).",dog:"Dr. Joey: \"remédio que não cura é tipo eu no plantão: fica, mas não resolve nada. Prevalência sobe.\""},
+ {s:"Num surto de sarampo, 40 crianças adoeceram entre 200 que frequentam uma creche. A medida que expressa esse resultado é:",o:[
+  ["prevalência pontual de 20%",0,"Prevalência conta casos existentes num momento; aqui são casos novos durante o surto."],
+  ["letalidade de 20%",0,"Letalidade usaria óbitos no numerador e doentes no denominador."],
+  ["taxa de ataque de 20%",1,"Incidência acumulada num surto, em população e tempo restritos: 40 ÷ 200 = 20%."],
+  ["densidade de incidência de 20%",0,"Densidade de incidência usa pessoa-tempo no denominador e não se expressa em porcentagem simples."]],
+  rev:"Revise: taxa de ataque e ataque secundário (seção 2).",dog:"Dr. Thor: \"q-quarenta de duzentos... e-eu vou ficar embaixo da maca até o surto passar.\""},
+ {s:"A taxa de mortalidade perinatal, segundo a CID-10 e a RIPSA, tem no numerador:",o:[
+  ["óbitos fetais de 20 semanas ou mais e óbitos neonatais até 28 dias",0,"Mistura o critério de Declaração de Óbito fetal (20 semanas) com o período neonatal inteiro."],
+  ["óbitos fetais de 22 semanas ou mais e óbitos neonatais de 0 a 6 dias",1,"Período perinatal: de 22 semanas completas de gestação a 7 dias completos de vida."],
+  ["apenas óbitos neonatais precoces",0,"Sem os óbitos fetais seria a mortalidade neonatal precoce."],
+  ["óbitos fetais de 28 semanas ou mais e óbitos de menores de 1 ano",0,"28 semanas era o critério antigo de natimorto; menores de 1 ano é mortalidade infantil."]],
+  rev:"Revise: tabela da seção 4 e a pegadinha 22 × 20 semanas.",dog:"Dra. Mel: \"22 semanas e 7 dias. Escreva dez vezes. Depois eu aceito um petisco.\""},
+ {s:"Mulher de 32 anos com cardiopatia reumática prévia morre no 20º dia de puerpério por insuficiência cardíaca descompensada. O óbito é classificado como:",o:[
+  ["morte materna obstétrica direta",0,"Direta é complicação da própria gestação ou parto (hemorragia, pré-eclâmpsia, infecção puerperal)."],
+  ["morte materna obstétrica indireta",1,"Doença prévia agravada pelos efeitos fisiológicos da gravidez, dentro de 42 dias."],
+  ["morte materna tardia",0,"Tardia é depois de 42 dias e antes de 1 ano; ela morreu no 20º dia."],
+  ["morte não materna, por ser doença preexistente",0,"Doença preexistente agravada pela gestação entra como materna indireta."]],
+  rev:"Revise: definição de morte materna e os tipos (seção 5).",dog:"Dr. Joey: \"o coração já vinha mal, a gravidez só deu o empurrão. Indireta. Posso voltar a dormir?\""},
+ {s:"Duas cidades têm coeficientes gerais de mortalidade de 5 e 18 por mil habitantes. A segunda tem proporção de idosos muito maior. Para comparar o risco de morrer entre elas, o mais adequado é:",o:[
+  ["comparar diretamente os coeficientes gerais",0,"O coeficiente bruto mistura risco com estrutura etária."],
+  ["usar a mortalidade proporcional por causas",0,"Mortalidade proporcional mostra distribuição, não risco."],
+  ["padronizar os coeficientes por idade",1,"A padronização (direta ou indireta) remove o efeito da diferença de idade entre as populações."],
+  ["calcular a letalidade de cada cidade",0,"Letalidade mede gravidade de uma doença entre os doentes, não o risco populacional."]],
+  rev:"Revise: padronização direta e indireta e o exemplo da seção 7.",dog:"Dra. Mel: \"comparar cidade de idosos com cidade de jovens sem padronizar? Não na minha enfermaria.\""},
+ {s:"Paciente internado há 5 dias por pneumonia cai da cama, sofre traumatismo craniano e morre. A Declaração de Óbito deve ser emitida:",o:[
+  ["pelo médico assistente, que acompanhava a internação",0,"A morte foi por causa externa; o vínculo assistencial não muda isso."],
+  ["pelo Serviço de Verificação de Óbitos",0,"O SVO cuida de mortes naturais sem diagnóstico; não de mortes violentas."],
+  ["pelo serviço médico-legal (IML)",1,"Morte violenta ou não natural: DO obrigatoriamente pelo serviço médico-legal (CFM 1.779/2005)."],
+  ["pelo plantonista que constatou o óbito",0,"Constatar o óbito não autoriza emitir a DO em morte violenta."]],
+  rev:"Revise: tabela de quem emite a DO (seção 10).",dog:"Dr. Thor: \"c-c-caiu da cama? IML. E-eu nunca mais subo em maca nenhuma.\""},
+ {s:"Assinale a associação correta entre sistema de informação e documento-base:",o:[
+  ["SINASC e Declaração de Óbito",0,"SINASC usa a Declaração de Nascido Vivo."],
+  ["SIH e Autorização de Internação Hospitalar",1,"O SIH se alimenta da AIH e registra internações, não pessoas."],
+  ["SIM e ficha de notificação compulsória",0,"Ficha de notificação é do SINAN; o SIM usa a DO."],
+  ["SINAN e Declaração de Nascido Vivo",0,"SINAN usa fichas de notificação e investigação."]],
+  rev:"Revise: tabela de sistemas da seção 9.",dog:"Dr. Joey: \"SIM é óbito, SINASC é nascimento, SINAN é notificação. O resto é sigla para te dar sono.\""}
+];
+CARDS.push(
+ ["PRE 1","Prevalência, incidência e duração","Prevalência ≈ incidência × duração (situação estável, doença rara)."],
+ ["PRE 1","Tratamento que prolonga a vida sem curar: efeito","Aumenta a prevalência; não muda a incidência."],
+ ["PRE 1","Incidência acumulada × densidade de incidência","Acumulada: casos novos ÷ população em risco no início (risco). Densidade: casos novos ÷ pessoa-tempo."],
+ ["PRE 1","Taxa de ataque secundário","Casos entre contatos ÷ contatos suscetíveis, excluindo o caso índice. Mede transmissibilidade."],
+ ["PRE 1","Letalidade × mortalidade","Letalidade = óbitos ÷ doentes (gravidade). Mortalidade = óbitos ÷ população (risco)."],
+ ["PRE 1","Por que a RMM é 'razão'?","O denominador (nascidos vivos) não contém o numerador nem é a população exposta ao risco."],
+ ["PRE 1","Cortes da mortalidade infantil","Neonatal precoce 0–6 dias; neonatal tardia 7–27 dias; pós-neonatal 28–364 dias."],
+ ["PRE 1","Mortalidade perinatal: numerador e denominador","Óbitos fetais ≥22 semanas + neonatais precoces ÷ (nascidos vivos + óbitos fetais ≥22 semanas) × 1.000."],
+ ["PRE 1","Componente que predomina hoje na mortalidade infantil do Brasil","Neonatal, sobretudo precoce (pré-natal, parto e cuidado ao recém-nascido)."],
+ ["PRE 1","Mortalidade infantil e expectativa de vida no Brasil, 2024 (IBGE)","12,3 por mil nascidos vivos; 76,6 anos (H 73,3; M 79,9)."],
+ ["PRE 1","Definição de morte materna","Na gestação ou até 42 dias após, por causa ligada ou agravada pela gravidez, não acidental ou incidental."],
+ ["PRE 1","Morte materna tardia","Mais de 42 dias e menos de 1 ano após o fim da gestação."],
+ ["PRE 1","Obstétrica direta × indireta","Direta: complicação da gestação/parto/puerpério. Indireta: doença prévia ou intercorrente agravada pela gravidez."],
+ ["PRE 1","RMM no Brasil: 2021 e 2023","117,4 (pico da covid-19) e 55,3 por 100 mil nascidos vivos."],
+ ["PRE 1","Meta brasileira do ODS 3.1","No máximo 30 óbitos maternos por 100 mil nascidos vivos até 2030."],
+ ["PRE 1","Indicador de Swaroop-Uemura","Proporção de óbitos com 50 anos ou mais. Quanto maior, melhor."],
+ ["PRE 1","Faixas da curva de Nelson de Moraes","<1, 1–4, 5–19, 20–49 e ≥50 anos."],
+ ["PRE 1","Formatos da curva de Nelson de Moraes","I: N invertido (muito baixo); II: L (baixo); III: U (regular); IV: J (elevado)."],
+ ["PRE 1","Padronização direta × indireta","Direta: taxas de cada população aplicadas a uma população-padrão. Indireta: taxas-padrão aplicadas à população estudada → esperados → RMP."],
+ ["PRE 1","DALY","YLL (anos perdidos por morte prematura) + YLD (anos vividos com incapacidade)."],
+ ["PRE 1","Índice de envelhecimento (RIPSA)","Pessoas com 60 anos ou mais ÷ menores de 15 anos × 100."],
+ ["PRE 1","Transição epidemiológica brasileira","Polarizada e prolongada: superposição de etapas, contratransição, tripla carga."],
+ ["PRE 1","Documento-base do SIM, SINASC e SIH","SIM: DO. SINASC: DNV. SIH: AIH."],
+ ["PRE 1","Quem emite a DO em morte violenta","Sempre o serviço médico-legal (IML), mesmo em paciente internado."],
+ ["PRE 1","Quem emite a DO em morte natural sem assistência e sem SVO","Médico do serviço público mais próximo; na falta, qualquer médico da localidade."],
+ ["PRE 1","Critério para DO de óbito fetal","Gestação ≥20 semanas, ou feto ≥500 g e/ou ≥25 cm."],
+ ["PRE 1","Onde fica a causa básica na DO","Na última linha preenchida da Parte I."]
+);
+
+const L="ABCD",ORDER=["pre4","pre1","pre2","pre3","etica"],TAG={pre4:"PRE 4",pre1:"PRE 1",pre2:"PRE 2",pre3:"PRE 3",etica:"Ética"};
+document.querySelectorAll(".refs[data-ch]").forEach(el=>{el.innerHTML=(REFS[el.dataset.ch]||[]).map(r=>`<div class="ref"><p><b>${r.t}</b></p><p class="c">${r.c}</p><p>${r.why}</p><div class="btns"><a class="btn" href="https://pubmed.ncbi.nlm.nih.gov/${r.pmid}/" target="_blank" rel="noopener">PubMed ${r.pmid}</a><a class="btn" href="https://doi.org/${r.doi}" target="_blank" rel="noopener">Artigo</a></div></div>`).join("")});
+document.querySelectorAll(".qs[data-ch]").forEach(el=>{
+  const list=QS[el.dataset.ch]||[];
+  el.innerHTML=list.map((q,i)=>`<div class="q" data-q="${i}"><p class="stem">${i+1}. ${q.s}</p><ol>${q.o.map((o,j)=>`<li><button type="button" data-j="${j}">${L[j]}) ${o[0]}</button><p class="why" hidden>${o[1]?"Certa. ":"Errada. "}${o[2]}</p></li>`).join("")}</ol><p class="rev" hidden>${q.rev}</p><p class="dog" hidden>${q.dog}</p></div>`).join("");
+  el.addEventListener("click",e=>{
+    const b=e.target.closest("button[data-j]");if(!b)return;
+    const box=b.closest(".q"),q=list[+box.dataset.q];
+    box.querySelectorAll("li").forEach((li,j)=>{li.classList.toggle("right",!!q.o[j][1]);li.classList.toggle("wrong",!q.o[j][1]&&j===+b.dataset.j);li.querySelector(".why").hidden=false});
+    box.querySelector(".rev").hidden=false;box.querySelector(".dog").hidden=false;
+  });
+});
+document.querySelectorAll(".cards[data-ch]").forEach(el=>{
+  const tags=ORDER.slice(0,ORDER.indexOf(el.dataset.ch)+1).map(c=>TAG[c]);
+  const list=CARDS.filter(c=>tags.includes(c[0])),sec=el.closest("section");
+  sec.querySelector(".cardcount").textContent=list.length+" cartões ("+tags.join(" + ")+")";
+  el.innerHTML=list.map(c=>`<button type="button" class="card" aria-expanded="false"><span class="tag">${c[0]}</span><span>${c[1]}</span><span class="hint">Toque para ver a resposta</span><span class="a">${c[2]}</span></button>`).join("");
+  el.addEventListener("click",e=>{const c=e.target.closest(".card");if(c)c.setAttribute("aria-expanded",c.getAttribute("aria-expanded")==="true"?"false":"true")});
+});
+const ARTS=[...document.querySelectorAll("article.ch")],CHIPS=[...document.querySelectorAll(".chapters a[data-ch]")];
+function route(){
+  let t=null;try{t=document.getElementById(decodeURIComponent(location.hash.slice(1)))}catch(e){}
+  const art=t?(t.matches("article.ch")?t:t.closest("article.ch")):null,cur=art||ARTS[0];
+  ARTS.forEach(a=>a.hidden=a!==cur);
+  CHIPS.forEach(c=>{const on=c.dataset.ch===cur.id;c.classList.toggle("on",on);if(on)c.setAttribute("aria-current","page");else c.removeAttribute("aria-current")});
+  if(t&&t!==cur)t.scrollIntoView();else if(art)window.scrollTo(0,0);
+}
+addEventListener("hashchange",route);route();
+</script>
+
+<script>if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});</script>
+</body>
+</html>
