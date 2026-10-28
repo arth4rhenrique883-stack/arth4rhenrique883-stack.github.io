@@ -1,6 +1,6 @@
 {
-  "name": "ASR",
-  "short_name": "ASR",
+  "name": "medASr",
+  "short_name": "medASr",
   "description": "Apostilas, jornada do dia e flashcards AS para residência médica.",
   "lang": "pt-BR",
   "start_url": "./",

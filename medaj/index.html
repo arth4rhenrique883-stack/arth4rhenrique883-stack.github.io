@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>ASr</title>
+<title>medASr</title>
 <meta name="theme-color" content="#000000">
-<meta name="apple-mobile-web-app-title" content="ASR">
+<meta name="apple-mobile-web-app-title" content="medASr">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="marca5-192.png">
 <link rel="apple-touch-icon" href="marca5-180.png">
@@ -17,7 +17,7 @@
 <link rel="stylesheet" data-res-dark href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
 <style>
 /* Layout: app de uma tela, bem simples: o nome no centro do preto, o baralho, o resumo e o cartão. */
-/* ASr (28/10): preto predominante, branco, vermelho sutil e mínimos detalhes de azul; só a chama do nome muda de cor. */
+/* medASr (28/10): preto predominante, branco, vermelho sutil e mínimos detalhes de azul; só a chama do nome muda de cor. */
 /* O Dr. Casa (avatar, falas e casos) continua no código, fora da tela: .casa[hidden]. Para trazê-lo de volta, tirar o hidden do <aside class="casa">. */
 :root{
   --bg:#050505; --surface:#0b0b0b; --surface-2:#111111; --line:#1f1f1f; --line-2:#333333;
@@ -250,7 +250,7 @@ a.btn{color:#cfcfcf;border-color:#2a2a2a}a.btn:hover{border-color:#8c8c8c}
 @keyframes gry{0%,100%{filter:brightness(1)}50%{filter:brightness(.62)}}
 /*/res:dark*/
 /*mj:logo*/
-/* chama do ASr (28/10 17h15): preta, com contorno na cor da página, balançando devagar; olhos = sombras */
+/* chama do medASr (28/10 17h15): preta, com contorno na cor da página, balançando devagar; olhos = sombras */
 .flame{color:#5c5c5c}
 .flame .sway{transform-box:fill-box;transform-origin:50% 100%}
 @media (prefers-reduced-motion:no-preference){.flame .sway{animation:mj-sway 7s ease-in-out infinite alternate}}
@@ -270,7 +270,31 @@ a.btn{color:#cfcfcf;border-color:#2a2a2a}a.btn:hover{border-color:#8c8c8c}
 .asmed-p .as-rainha{filter:drop-shadow(.02em .03em 0 #2a1660) drop-shadow(.02em .03em 0 #120a2a) drop-shadow(0 .08em .1em rgba(0,0,0,.7))}
 @media (prefers-reduced-motion:no-preference){.asmed-p .qh{animation:as-hue 16s linear infinite}}
 @keyframes as-hue{0%{filter:hue-rotate(0deg) saturate(1.1)}22%{filter:hue-rotate(-28deg) saturate(1.3)}45%{filter:hue-rotate(-95deg) saturate(1.2)}68%{filter:hue-rotate(75deg) saturate(1.25)}84%{filter:hue-rotate(20deg) saturate(1.2)}100%{filter:hue-rotate(0deg) saturate(1.1)}}
+.asmed{position:relative}.asmed-r{--gl:#ffffff}.asmed-p{--gl:#ff9fc0}
+.asmed .md{font-style:italic;font-weight:600;font-size:.5em;margin-right:.04em;opacity:.9}
+.asmed .qw{position:relative;display:inline-flex}
+.asmed .qw::before{content:"";position:absolute;inset:-30% -40%;background:radial-gradient(circle,var(--gl) 0,transparent 62%);opacity:0;mix-blend-mode:screen;pointer-events:none}
+.asmed::after{content:"";position:absolute;top:-10%;bottom:-10%;left:0;width:.45em;background:linear-gradient(90deg,transparent,var(--gl),transparent);opacity:0;mix-blend-mode:screen;filter:blur(.06em);pointer-events:none}
+@media (prefers-reduced-motion:no-preference){.asmed::after{animation:as-feixe 7s ease-in-out infinite}.asmed .qw::before{animation:as-acende 7s ease-in-out infinite}}
+@keyframes as-feixe{0%{left:-5%;opacity:0}6%{opacity:.55}38%{left:78%;opacity:.55}46%,100%{left:85%;opacity:0}}
+@keyframes as-acende{0%,34%{opacity:0}48%{opacity:.55}70%,100%{opacity:0}}
 /*/as:nome*/
+/*pg:mapa*/
+.pg-map{width:100%;max-width:440px;align-self:center;display:block}
+.pg-map .ln{stroke:#2a2a2a;stroke-width:1.2}
+.pg-map .bg{fill:none;stroke:#1a1a1a;stroke-width:5}
+.pg-map .fg{fill:none;stroke:url(#pg-g);stroke-width:5;stroke-linecap:round;transform:rotate(-90deg);transform-box:fill-box;transform-origin:center;transition:stroke-dashoffset 1s ease}
+.pg-map .nd{cursor:pointer}.pg-map .nd circle.in{fill:#080808;stroke:#222}
+.pg-map .nd[aria-pressed=true] circle.in{stroke:#cfcfcf}
+.pg-map text{fill:#f2f2f2;text-anchor:middle;font-family:"Libre Caslon Display",Georgia,serif}
+.pg-map .pc{font-size:15px}.pg-map .nm{font-size:10.5px;fill:#8a8a8a;letter-spacing:.06em}
+.pg-map .ct{font-size:30px}
+.pg-list{display:grid;gap:8px}
+.pg-row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;font-size:15px;color:#d8d8d8}
+.pg-row b{font-weight:400;font-family:"Libre Caslon Display",Georgia,serif;color:#f2f2f2;font-size:14px}
+.pg-row i{grid-column:1/-1;height:2px;background:#151515;border-radius:2px;overflow:hidden}.pg-row i s{display:block;height:100%;background:linear-gradient(90deg,#6a6a6a,#fff)}
+.pg-row.off{color:#4a4a4a}.pg-row.off b{color:#4a4a4a}
+/*/pg:mapa*/
 </style>
 <link data-as-fonte rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nabla&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap">
 </head>
@@ -288,17 +312,19 @@ a.btn{color:#cfcfcf;border-color:#2a2a2a}a.btn:hover{border-color:#8c8c8c}
 
 <div class="wrap">
   <header class="bar">
-    <div class="brand" aria-label="ASr">
-      <span class="word"><span class="asmed asmed-r" aria-label="ASr"><span class="t">AS<small>r</small></span><svg class="as-rainha" viewBox="8 10 84 104" aria-hidden="true"><defs><linearGradient id="as-q-r" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="0.5" stop-color="#9a9a9a"/><stop offset="1" stop-color="#e8e8e8"/></linearGradient></defs><g class="qh"><circle cx="26" cy="24" r="4" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="38" cy="20" r="4" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="50" cy="16" r="4" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="62" cy="20" r="4" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="74" cy="24" r="4" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M26 28 L33 44 L38 24 L44 42 L50 20 L56 42 L62 24 L67 44 L74 28 L70 54 C66 56 60 57 50 57 C40 57 34 56 30 54 Z" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M29 58 C36 61 64 61 71 58 L69 63 C62 65 38 65 31 63 Z" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M35 65 C40 67 60 67 65 65 C61 71 59 77 60 83 L40 83 C41 77 39 71 35 65 Z" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M33 84 L67 84 C69 85.5 69 88.5 67 90 L33 90 C31 88.5 31 85.5 33 84 Z" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M30 91 L70 91 C73 94 75 97 77 100 L23 100 C25 97 27 94 30 91 Z" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M17 101 L83 101 C86 101 87 103 87 105 L87 107 C87 109 86 110 83 110 L17 110 C14 110 13 109 13 107 L13 105 C13 103 14 101 17 101 Z" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M45.5 69 C46.5 74 46.5 78 46 81" stroke="url(#as-q-r)" stroke-width="1.3" fill="none" stroke-linecap="round" opacity=".6"/></g></svg></span></span>
+    <div class="brand" aria-label="medASr">
+      <span class="word"><span class="asmed asmed-r" aria-label="medASr"><span class="t"><span class="md">med</span>AS<small>r</small></span><span class="qw"><svg class="as-rainha" viewBox="8 10 84 104" aria-hidden="true"><defs><linearGradient id="as-q-r" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="0.5" stop-color="#9a9a9a"/><stop offset="1" stop-color="#e8e8e8"/></linearGradient></defs><g class="qh"><circle cx="26" cy="24" r="4" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="38" cy="20" r="4" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="50" cy="16" r="4" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="62" cy="20" r="4" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="74" cy="24" r="4" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M26 28 L33 44 L38 24 L44 42 L50 20 L56 42 L62 24 L67 44 L74 28 L70 54 C66 56 60 57 50 57 C40 57 34 56 30 54 Z" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M29 58 C36 61 64 61 71 58 L69 63 C62 65 38 65 31 63 Z" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M35 65 C40 67 60 67 65 65 C61 71 59 77 60 83 L40 83 C41 77 39 71 35 65 Z" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M33 84 L67 84 C69 85.5 69 88.5 67 90 L33 90 C31 88.5 31 85.5 33 84 Z" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M30 91 L70 91 C73 94 75 97 77 100 L23 100 C25 97 27 94 30 91 Z" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M17 101 L83 101 C86 101 87 103 87 105 L87 107 C87 109 86 110 83 110 L17 110 C14 110 13 109 13 107 L13 105 C13 103 14 101 17 101 Z" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M45.5 69 C46.5 74 46.5 78 46 81" stroke="url(#as-q-r)" stroke-width="1.3" fill="none" stroke-linecap="round" opacity=".6"/></g></svg></span></span></span></span></span></span></span></span></span>
       <span class="app-name">residência</span>
     </div>
   </header>
 
   <nav class="tabs" aria-label="Seções do app">
-    <a href="#hoje" data-view="hoje">Hoje</a><a href="#apostilas" data-view="apostilas">Apostilas</a><a href="#cards" data-view="cards">Flashcards</a>
+    <a href="#hoje" data-view="hoje">Hoje</a><a href="#apostilas" data-view="apostilas">Apostilas</a><a href="#cards" data-view="cards">Flashcards</a><a href="#progresso" data-view="progresso">Progresso</a>
   </nav>
 
   <section class="view" id="v-hoje" aria-label="Hoje na jornada"></section>
+
+  <section class="view" id="v-progresso" aria-label="Progresso" hidden></section>
 
   <section class="view" id="v-apostilas" aria-label="Apostilas" hidden>
     <details class="area" open><summary>Preventiva<span>2 de 6 prontos</span></summary><div class="blist"><div class="bwrap"><a class="bitem" href="bloco1.html#pre4"><b>Sistema Único de Saúde: história, leis, diretrizes e financiamento</b><span>História, Constituição, Leis 8.080 e 8.142, normas, Decreto 7.508, financiamento</span></a><button class="lida" type="button" data-lida="pre4" aria-pressed="false">Marcar como lida</button></div><div class="bitem off"><b>Medicina de Família e Comunidade e Atenção Primária: Política Nacional de Atenção Básica, abordagem familiar, genograma e ecomapa</b><span>Semana 2 · em breve</span></div><div class="bwrap"><a class="bitem" href="bloco1.html#pre1"><b>Medidas de saúde coletiva: indicadores, mortalidade e sistemas de informação</b><span>Morbidade, mortalidade, indicadores, padronização, transição demográfica</span></a><button class="lida" type="button" data-lida="pre1" aria-pressed="false">Marcar como lida</button></div><div class="bitem off"><b>Estudos epidemiológicos e epidemiologia clínica</b><span>Semana 7 · em breve</span></div><div class="bitem off"><b>Vigilância em saúde e processo epidêmico</b><span>Semana 9 · em breve</span></div><div class="bitem off"><b>Ética médica, bioética e saúde do trabalhador</b><span>Semana 24 · em breve</span></div></div></details>
@@ -389,7 +415,7 @@ const CHAPTERS={pre4:"Preventiva · SUS",pre1:"Preventiva · Medidas de saúde c
 const FILE={"obs1": "bloco2.html"};
 const SECS={"o1-diagnostico":"Diagnóstico de gravidez","o1-datacao":"Idade gestacional e data provável do parto","o1-modificacoes":"Modificações do organismo materno","o1-consultas":"Consultas: quando e quantas","o1-exames":"Exames por trimestre","o1-suplementos":"Suplementação","o1-vacinas":"Vacinas","o1-exame":"Exame obstétrico","o1-peso":"Ganho de peso","o1-queixas":"Queixas comuns","o1-risco":"Risco gestacional e alto risco","o1-resumo":"O que mais cai","o1-questoes":"Questões comentadas","o1-cards":"Flashcards do bloco até aqui","o1-refs":"Referências",historia:"Antes do SUS: a linha do tempo",constituicao:"A Constituição de 1988",l8080:"Lei 8.080/1990",l8142:"Lei 8.142/1990",normas:"Normas operacionais e Pacto pela Saúde",d7508:"Decreto 7.508/2011",financiamento:"Financiamento",
  "p1-morbidade":"Morbidade: incidência e prevalência","p1-mortalidade":"Mortalidade geral, específica e letalidade","p1-infantil":"Mortalidade infantil, perinatal e fetal","p1-materna":"Mortalidade materna","p1-proporcional":"Swaroop-Uemura e Nelson de Moraes","p1-padronizacao":"Padronização de coeficientes","p1-demografia":"Demografia e transições","p1-sis":"Sistemas de informação em saúde","p1-do":"Declaração de Óbito"};
-/* Cartões das apostilas ASr Para acrescentar: [id único, capítulo, seção (âncora da apostila), pergunta, resposta]. */
+/* Cartões das apostilas medASr Para acrescentar: [id único, capítulo, seção (âncora da apostila), pergunta, resposta]. */
 const CARDS=[
  ["obs1-01", "obs1", "o1-diagnostico", "Grau do beta-hCG positivo entre os sinais de gravidez", "Probabilidade (não é certeza)."],
  ["obs1-02", "obs1", "o1-diagnostico", "Sinais de certeza de gravidez", "BCF, movimentos fetais percebidos pelo examinador, palpação de partes fetais, embrião na USG."],
@@ -562,7 +588,7 @@ function renderStats(){
   $("s-acc").textContent=d.n?Math.round(100*d.ok/d.n)+"%":"–";
   let s=0,t=today();if(!(S.days[t]&&S.days[t].n))t--;while(S.days[t]&&S.days[t].n){s++;t--}
   $("s-streak").textContent=s;
-  $("foot-info").textContent=`${CARDS.length} cartões das apostilas ASr · Preventiva: SUS e Medidas de saúde coletiva`;
+  $("foot-info").textContent=`${CARDS.length} cartões das apostilas medASr · Preventiva: SUS e Medidas de saúde coletiva`;
 }
 function renderCard(){
   const el=$("card");
@@ -688,12 +714,36 @@ const LKEY="medaj-lidas";let LIDAS={};try{LIDAS=JSON.parse(localStorage.getItem(
 function renderLidas(){document.querySelectorAll("[data-lida]").forEach(b=>{const on=!!LIDAS[b.dataset.lida];b.setAttribute("aria-pressed",on);b.textContent=on?"Lida":"Marcar como lida"})}
 document.addEventListener("click",ev=>{const b=ev.target.closest("[data-lida]");if(!b)return;const k=b.dataset.lida;if(LIDAS[k])delete LIDAS[k];else LIDAS[k]=Date.now();try{localStorage.setItem(LKEY,JSON.stringify(LIDAS))}catch(e){}renderLidas()});
 renderLidas();
+/*pg:js*/
+const PG_TOP=[{"id": "pre4", "nome": "Sistema Único de Saúde: história, leis, diretrizes e financiamento", "area": "Preventiva", "href": "bloco1.html#pre4", "sem": 1}, {"id": "obs1", "nome": "Diagnóstico de gravidez e pré-natal", "area": "Ginecologia e Obstetrícia", "href": "bloco2.html#obs1", "sem": 1}, {"id": "ped2", "nome": "Aleitamento materno, crescimento e desenvolvimento", "area": "Pediatria", "href": "", "sem": 1}, {"id": "x2", "nome": "Medicina de Família e Comunidade e Atenção Primária: Política Nacional de Atenção Básica, abordagem familiar, genograma e ecomapa", "area": "Preventiva", "href": "", "sem": 2}, {"id": "pre1", "nome": "Medidas de saúde coletiva: indicadores, mortalidade e sistemas de informação", "area": "Preventiva", "href": "bloco1.html#pre1", "sem": 4}, {"id": "ped4", "nome": "Imunização", "area": "Pediatria", "href": "", "sem": 4}, {"id": "onco", "nome": "Oncologia clínica: câncer de pulmão e rastreamentos do adulto", "area": "Clínica Médica", "href": "", "sem": 4}, {"id": "x6", "nome": "Profilaxia da raiva e do tétano", "area": "Clínica Médica", "href": "", "sem": 6}, {"id": "pre2", "nome": "Estudos epidemiológicos e epidemiologia clínica", "area": "Preventiva", "href": "", "sem": 7}, {"id": "obs4", "nome": "Doença hipertensiva específica da gestação e diabetes gestacional", "area": "Ginecologia e Obstetrícia", "href": "", "sem": 7}, {"id": "end", "nome": "Diabetes mellitus e doenças da tireoide", "area": "Clínica Médica", "href": "", "sem": 7}, {"id": "obs3a", "nome": "Sangramentos da primeira metade da gestação: abortamento, gravidez ectópica e doença trofoblástica", "area": "Ginecologia e Obstetrícia", "href": "", "sem": 8}, {"id": "pre3", "nome": "Vigilância em saúde e processo epidêmico", "area": "Preventiva", "href": "", "sem": 9}, {"id": "gin1", "nome": "Ciclo menstrual, anticoncepção, amenorreia e síndrome dos ovários policísticos", "area": "Ginecologia e Obstetrícia", "href": "", "sem": 9}, {"id": "trauma1", "nome": "Trauma I: atendimento inicial ao politraumatizado, cabeça e tórax", "area": "Cirurgia", "href": "", "sem": 9}, {"id": "x9", "nome": "Violência sexual: atendimento, profilaxia pós-exposição e anticoncepção de emergência", "area": "Ginecologia e Obstetrícia", "href": "", "sem": 9}, {"id": "obs3b", "nome": "Sangramentos da segunda metade da gestação: descolamento prematuro de placenta, placenta prévia e rotura de vasa prévia", "area": "Ginecologia e Obstetrícia", "href": "", "sem": 10}, {"id": "obs2", "nome": "Mecanismo do parto e assistência ao parto", "area": "Ginecologia e Obstetrícia", "href": "", "sem": 11}, {"id": "ped1", "nome": "Neonatologia, com foco em reanimação neonatal", "area": "Pediatria", "href": "", "sem": 11}, {"id": "sepse", "nome": "Sepse e choque", "area": "Clínica Médica", "href": "", "sem": 11}, {"id": "obs5", "nome": "Sofrimento fetal, fórcipe e infecções puerperais", "area": "Ginecologia e Obstetrícia", "href": "", "sem": 12}, {"id": "ped5r", "nome": "Infecções respiratórias agudas na infância: asma, pneumonia e infecções das vias aéreas superiores", "area": "Pediatria", "href": "", "sem": 13}, {"id": "pne", "nome": "Asma, doença pulmonar obstrutiva crônica e tuberculose", "area": "Clínica Médica", "href": "", "sem": 13}, {"id": "inf134", "nome": "Pneumonia, meningite e síndromes febris (dengue, zika e chikungunya)", "area": "Clínica Médica", "href": "", "sem": 13}, {"id": "trauma2", "nome": "Trauma II: abdome e traumatismo cranioencefálico", "area": "Cirurgia", "href": "", "sem": 14}, {"id": "car12", "nome": "Arritmias, parada cardiorrespiratória e insuficiência cardíaca", "area": "Clínica Médica", "href": "", "sem": 14}, {"id": "hem23", "nome": "Leucemias, linfomas e distúrbios da hemostasia", "area": "Clínica Médica", "href": "", "sem": 14}, {"id": "gin62", "nome": "Infecções sexualmente transmissíveis, sangramento uterino anormal, mioma e endometriose", "area": "Ginecologia e Obstetrícia", "href": "", "sem": 15}, {"id": "abdome", "nome": "Abdome agudo: apendicite, obstrução intestinal e doença vascular", "area": "Cirurgia", "href": "", "sem": 15}, {"id": "uro", "nome": "Urologia e cabeça e pescoço: cálculo renal, hiperplasia e câncer de próstata, nódulo de tireoide", "area": "Cirurgia", "href": "", "sem": 15}, {"id": "preop", "nome": "Preparo pré-operatório, risco cirúrgico e complicações", "area": "Cirurgia", "href": "", "sem": 16}, {"id": "biliar", "nome": "Pancreatite e doenças das vias biliares", "area": "Cirurgia", "href": "", "sem": 16}, {"id": "hep", "nome": "Hepatites virais, cirrose e complicações", "area": "Clínica Médica", "href": "", "sem": 16}, {"id": "ped5d", "nome": "Diarreia aguda e desidratação na infância", "area": "Pediatria", "href": "", "sem": 17}, {"id": "endemerg", "nome": "Emergências endócrinas: cetoacidose diabética, estado hiperosmolar, adrenal e hipófise", "area": "Clínica Médica", "href": "", "sem": 17}, {"id": "nef", "nome": "Insuficiência renal e distúrbios ácido-base e hidroeletrolíticos", "area": "Clínica Médica", "href": "", "sem": 17}, {"id": "ped6", "nome": "Doenças exantemáticas e infecção urinária na infância", "area": "Pediatria", "href": "", "sem": 18}, {"id": "nefped", "nome": "Síndromes nefrítica e nefrótica, cirurgia pediátrica e maus-tratos", "area": "Pediatria", "href": "", "sem": 18}, {"id": "glom", "nome": "Glomerulopatias", "area": "Clínica Médica", "href": "", "sem": 18}, {"id": "cardped", "nome": "Cardiopatias congênitas, emergências pediátricas e intoxicações na infância", "area": "Pediatria", "href": "", "sem": 19}, {"id": "car23", "nome": "Hipertensão arterial, crise hipertensiva, infarto e angina", "area": "Clínica Médica", "href": "", "sem": 19}, {"id": "reu3", "nome": "Gota e febre reumática", "area": "Clínica Médica", "href": "", "sem": 19}, {"id": "x19", "nome": "Dislipidemia e obesidade", "area": "Clínica Médica", "href": "", "sem": 19}, {"id": "gin54", "nome": "Lesões precursoras, câncer de colo e de endométrio e doenças das mamas", "area": "Ginecologia e Obstetrícia", "href": "", "sem": 20}, {"id": "vasc", "nome": "Cirurgia vascular, coloproctologia e câncer gástrico e colorretal", "area": "Cirurgia", "href": "", "sem": 20}, {"id": "gas12", "nome": "Doenças do esôfago e do estômago e síndrome de má absorção", "area": "Clínica Médica", "href": "", "sem": 20}, {"id": "x20", "nome": "Hemorragia digestiva alta e baixa e doença inflamatória intestinal", "area": "Clínica Médica", "href": "", "sem": 20}, {"id": "infgest", "nome": "Infecções na gestação: sífilis, vírus da imunodeficiência humana, toxoplasmose e estreptococo do grupo B", "area": "Ginecologia e Obstetrícia", "href": "", "sem": 21}, {"id": "hem1", "nome": "Anemias", "area": "Clínica Médica", "href": "", "sem": 21}, {"id": "inf25", "nome": "Aids e parasitoses intestinais", "area": "Clínica Médica", "href": "", "sem": 21}, {"id": "x21", "nome": "Doenças tropicais: hanseníase, leishmanioses, leptospirose e malária", "area": "Clínica Médica", "href": "", "sem": 21}, {"id": "prem", "nome": "Prematuridade, rotura prematura de membranas, gestação prolongada e hemorragia pós-parto", "area": "Ginecologia e Obstetrícia", "href": "", "sem": 22}, {"id": "valv", "nome": "Valvopatias, endocardite e tromboembolismo venoso (trombose venosa profunda e embolia pulmonar)", "area": "Clínica Médica", "href": "", "sem": 22}, {"id": "reu12", "nome": "Artrites, colagenoses e vasculites", "area": "Clínica Médica", "href": "", "sem": 22}, {"id": "cir3", "nome": "Cicatrização, queimaduras e resposta metabólica ao trauma", "area": "Cirurgia", "href": "", "sem": 23}, {"id": "neu1", "nome": "Síndromes neurológicas, acidente vascular encefálico e cefaleias", "area": "Clínica Médica", "href": "", "sem": 23}, {"id": "intox", "nome": "Intoxicações exógenas e acidentes por animais peçonhentos", "area": "Clínica Médica", "href": "", "sem": 23}, {"id": "etica", "nome": "Ética médica, bioética e saúde do trabalhador", "area": "Preventiva", "href": "", "sem": 24}, {"id": "neu2", "nome": "Epilepsias, demências e doença de Parkinson", "area": "Clínica Médica", "href": "", "sem": 24}, {"id": "psi", "nome": "Psiquiatria I: depressão, ansiedade e risco de suicídio", "area": "Clínica Médica", "href": "", "sem": 24}, {"id": "x24", "nome": "Psiquiatria II: álcool e drogas, psicoses e transtorno bipolar", "area": "Clínica Médica", "href": "", "sem": 24}, {"id": "gin3", "nome": "Climatério, distopias genitais e incontinência urinária", "area": "Ginecologia e Obstetrícia", "href": "", "sem": 25}, {"id": "ovario", "nome": "Câncer de ovário, tumores anexiais e infertilidade", "area": "Ginecologia e Obstetrícia", "href": "", "sem": 25}, {"id": "ped3", "nome": "Distúrbios do crescimento: desnutrição, baixa estatura e obesidade", "area": "Pediatria", "href": "", "sem": 25}, {"id": "x25", "nome": "Geriatria e cuidados paliativos", "area": "Clínica Médica", "href": "", "sem": 25}, {"id": "hernia", "nome": "Hérnias da parede abdominal", "area": "Cirurgia", "href": "", "sem": 26}, {"id": "der", "nome": "Dermatologia básica", "area": "Clínica Médica", "href": "", "sem": 26}, {"id": "ortoft", "nome": "Ortopedia e oftalmologia básicas", "area": "Clínica Médica", "href": "", "sem": 26}],PG_AREAS=[["Preventiva","Preventiva"],["Ginecologia e Obstetrícia","GO"],["Pediatria","Pediatria"],["Clínica Médica","Clínica"],["Cirurgia","Cirurgia"]];let PG_SEL=null;
+function renderProg(){
+  let L={},S2={cards:{}};try{L=JSON.parse(localStorage.getItem("medaj-lidas")||"{}")}catch(e){}try{S2=Object.assign(S2,JSON.parse(localStorage.getItem("medaj-drcasa-v1")||"{}"))}catch(e){}
+  // progresso do tópico: metade leitura, metade cards firmes (sem cards, só a leitura)
+  const tp=t=>{const ids=CARDS.filter(c=>c.ch===t.id).map(c=>c.id);const lido=L[t.id]?1:0;if(!ids.length)return lido;const f=ids.filter(id=>{const s=S2.cards[id];return s&&s.r>=3}).length/ids.length;return (lido+f)/2};
+  const avg=a=>a.length?a.reduce((x,y)=>x+y,0)/a.length:0,P=x=>Math.round(100*x);
+  const ar=PG_AREAS.map(([a,c])=>({a,c,v:avg(PG_TOP.filter(t=>t.area===a).map(tp))}));const tot=avg(PG_TOP.map(tp));
+  const W=360,H=330,cx=180,cy=160,R=118,r=30,C=2*Math.PI*(r-3);
+  let g=`<svg class="pg-map" viewBox="0 0 ${W} ${H}" role="img" aria-label="Mapa do progresso"><defs><linearGradient id="pg-g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#7a7a7a"/></linearGradient></defs>`;
+  const pos=ar.map((x,i)=>{const ang=-Math.PI/2+i*2*Math.PI/5;return [cx+R*Math.cos(ang),cy+R*Math.sin(ang)]});
+  pos.forEach(([x,y])=>g+=`<line class="ln" x1="${cx}" y1="${cy}" x2="${x}" y2="${y}"/>`);
+  const ring=(x,y,rr,v)=>{const c=2*Math.PI*(rr-3);return `<circle class="in" cx="${x}" cy="${y}" r="${rr}"/><circle class="bg" cx="${x}" cy="${y}" r="${rr-3}"/><circle class="fg" cx="${x}" cy="${y}" r="${rr-3}" stroke-dasharray="${c}" stroke-dashoffset="${c*(1-v)}"/>`};
+  g+=`<g>${ring(cx,cy,46,tot)}<text class="ct" x="${cx}" y="${cy+10}">${P(tot)}%</text></g>`;
+  ar.forEach((x,i)=>{const [px,py]=pos[i];g+=`<g class="nd" data-ar="${i}" role="button" tabindex="0" aria-pressed="${PG_SEL===i}">${ring(px,py,r,x.v)}<text class="pc" x="${px}" y="${py+5}">${P(x.v)}%</text><text class="nm" x="${px}" y="${py+r+15}">${x.c}</text></g>`});
+  g+=`</svg>`;
+  let l="";if(PG_SEL!==null){l=`<div class="pg-list">`+PG_TOP.filter(t=>t.area===ar[PG_SEL].a).map(t=>{const v=tp(t);return `<div class="pg-row${t.href?"":" off"}"><b>${t.nome}</b><span>${P(v)}%</span><i><s style="width:${P(v)}%"></s></i></div>`}).join("")+`</div>`}
+  const el=document.getElementById("v-progresso");el.innerHTML=g+l;
+  el.onclick=ev=>{const n=ev.target.closest("[data-ar]");if(!n)return;const i=+n.dataset.ar;PG_SEL=PG_SEL===i?null:i;renderProg()};
+}
+addEventListener("storage",()=>{if(!document.getElementById("v-progresso").hidden)renderProg()});
+document.addEventListener("visibilitychange",()=>{if(!document.hidden&&!document.getElementById("v-progresso").hidden)renderProg()});
+/*/pg:js*/
 function view(){
   let h=location.hash.slice(1)||"hoje",v=h.startsWith("cards")?"cards":h;
-  if(!["hoje","apostilas","cards"].includes(v))v="hoje";
+  if(!["hoje","apostilas","cards","progresso"].includes(v))v="hoje";
   document.querySelectorAll(".view").forEach(x=>x.hidden=x.id!=="v-"+v);
   document.querySelectorAll(".tabs a").forEach(a=>{if(a.dataset.view===v)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
   if(v==="hoje")renderHoje();
+  if(v==="progresso")renderProg();
   if(v==="cards"){const d=h.split("-")[1];const b=document.querySelector(`[data-deck="${d||"all"}"]`);if(b&&b.getAttribute("aria-pressed")!=="true")b.click()}
   window.scrollTo(0,0);
 }

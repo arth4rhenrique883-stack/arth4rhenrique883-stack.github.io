@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#030303">
-<title>Apostilas · 8º período · ASp</title>
+<title>Apostilas · 8º período · medASp</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
 <style>
-/* Design-modelo do ASp (o mesmo das apostilas da residência, bloco1.html): só as cores de tema mudam por período. */
+/* Design-modelo do medASp (o mesmo das apostilas da residência, bloco1.html): só as cores de tema mudam por período. */
 :root{
   --bg:#030303; --fg:#ebebeb; --muted:#9c9c9c; --line:#1b1b1b; --line-2:#2e2e2e; --raise:#0a0a0a; --surface:#0a0a0a; --surface-2:#101010;
   --red:#9446ff; --red-ink:#ffb3df; --red-soft:#110a1c; --blue:#7f97bd;
@@ -275,6 +275,14 @@ body.bookmode main{flex:1;min-height:0;display:flex;flex-direction:column}
 .asmed-p .as-rainha{filter:drop-shadow(.02em .03em 0 #2a1660) drop-shadow(.02em .03em 0 #120a2a) drop-shadow(0 .08em .1em rgba(0,0,0,.7))}
 @media (prefers-reduced-motion:no-preference){.asmed-p .qh{animation:as-hue 16s linear infinite}}
 @keyframes as-hue{0%{filter:hue-rotate(0deg) saturate(1.1)}22%{filter:hue-rotate(-28deg) saturate(1.3)}45%{filter:hue-rotate(-95deg) saturate(1.2)}68%{filter:hue-rotate(75deg) saturate(1.25)}84%{filter:hue-rotate(20deg) saturate(1.2)}100%{filter:hue-rotate(0deg) saturate(1.1)}}
+.asmed{position:relative}.asmed-r{--gl:#ffffff}.asmed-p{--gl:#ff9fc0}
+.asmed .md{font-style:italic;font-weight:600;font-size:.5em;margin-right:.04em;opacity:.9}
+.asmed .qw{position:relative;display:inline-flex}
+.asmed .qw::before{content:"";position:absolute;inset:-30% -40%;background:radial-gradient(circle,var(--gl) 0,transparent 62%);opacity:0;mix-blend-mode:screen;pointer-events:none}
+.asmed::after{content:"";position:absolute;top:-10%;bottom:-10%;left:0;width:.45em;background:linear-gradient(90deg,transparent,var(--gl),transparent);opacity:0;mix-blend-mode:screen;filter:blur(.06em);pointer-events:none}
+@media (prefers-reduced-motion:no-preference){.asmed::after{animation:as-feixe 7s ease-in-out infinite}.asmed .qw::before{animation:as-acende 7s ease-in-out infinite}}
+@keyframes as-feixe{0%{left:-5%;opacity:0}6%{opacity:.55}38%{left:78%;opacity:.55}46%,100%{left:85%;opacity:0}}
+@keyframes as-acende{0%,34%{opacity:0}48%{opacity:.55}70%,100%{opacity:0}}
 /*/as:nome*/
 </style>
 <link data-as-fonte rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nabla&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap">
@@ -290,7 +298,7 @@ body.bookmode main{flex:1;min-height:0;display:flex;flex-direction:column}
     <linearGradient id="av-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a1a1a"/><stop offset="1" stop-color="#2a0d10"/></linearGradient>
   </defs>
 </svg>
-<header class="top"><a class="back" href="../p8.html#apostilas" id="back">← 8º período</a><a class="brand" href="./" aria-label="Todas as apostilas do 8º período"><span class="asmed asmed-p" aria-label="ASp"><span class="t">AS<small>p</small></span><svg class="as-rainha" viewBox="8 10 84 104" aria-hidden="true"><defs><linearGradient id="as-q-p" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff5d8f"/><stop offset="0.5" stop-color="#3fd6e6"/><stop offset="1" stop-color="#a77bff"/></linearGradient></defs><g class="qh"><circle cx="26" cy="24" r="4" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="38" cy="20" r="4" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="50" cy="16" r="4" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="62" cy="20" r="4" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="74" cy="24" r="4" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><path d="M26 28 L33 44 L38 24 L44 42 L50 20 L56 42 L62 24 L67 44 L74 28 L70 54 C66 56 60 57 50 57 C40 57 34 56 30 54 Z" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><path d="M29 58 C36 61 64 61 71 58 L69 63 C62 65 38 65 31 63 Z" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><path d="M35 65 C40 67 60 67 65 65 C61 71 59 77 60 83 L40 83 C41 77 39 71 35 65 Z" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><path d="M33 84 L67 84 C69 85.5 69 88.5 67 90 L33 90 C31 88.5 31 85.5 33 84 Z" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><path d="M30 91 L70 91 C73 94 75 97 77 100 L23 100 C25 97 27 94 30 91 Z" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><path d="M17 101 L83 101 C86 101 87 103 87 105 L87 107 C87 109 86 110 83 110 L17 110 C14 110 13 109 13 107 L13 105 C13 103 14 101 17 101 Z" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><path d="M45.5 69 C46.5 74 46.5 78 46 81" stroke="url(#as-q-p)" stroke-width="1.3" fill="none" stroke-linecap="round" opacity=".6"/></g></svg></span></a></header>
+<header class="top"><a class="back" href="../p8.html#apostilas" id="back">← 8º período</a><a class="brand" href="./" aria-label="Todas as apostilas do 8º período"><span class="asmed asmed-p" aria-label="medASp"><span class="t"><span class="md">med</span>AS<small>p</small></span><span class="qw"><svg class="as-rainha" viewBox="8 10 84 104" aria-hidden="true"><defs><linearGradient id="as-q-p" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff5d8f"/><stop offset="0.5" stop-color="#3fd6e6"/><stop offset="1" stop-color="#a77bff"/></linearGradient></defs><g class="qh"><circle cx="26" cy="24" r="4" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="38" cy="20" r="4" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="50" cy="16" r="4" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="62" cy="20" r="4" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="74" cy="24" r="4" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><path d="M26 28 L33 44 L38 24 L44 42 L50 20 L56 42 L62 24 L67 44 L74 28 L70 54 C66 56 60 57 50 57 C40 57 34 56 30 54 Z" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><path d="M29 58 C36 61 64 61 71 58 L69 63 C62 65 38 65 31 63 Z" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><path d="M35 65 C40 67 60 67 65 65 C61 71 59 77 60 83 L40 83 C41 77 39 71 35 65 Z" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><path d="M33 84 L67 84 C69 85.5 69 88.5 67 90 L33 90 C31 88.5 31 85.5 33 84 Z" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><path d="M30 91 L70 91 C73 94 75 97 77 100 L23 100 C25 97 27 94 30 91 Z" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><path d="M17 101 L83 101 C86 101 87 103 87 105 L87 107 C87 109 86 110 83 110 L17 110 C14 110 13 109 13 107 L13 105 C13 103 14 101 17 101 Z" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><path d="M45.5 69 C46.5 74 46.5 78 46 81" stroke="url(#as-q-p)" stroke-width="1.3" fill="none" stroke-linecap="round" opacity=".6"/></g></svg></span></span></span></span></a></header>
   <main id="app" aria-live="polite"></main>
 </div>
 <div class="vw" id="vw" role="dialog" aria-label="Slides da aula" hidden>
@@ -393,7 +401,7 @@ function wire(root){
 
 /* telas */
 let DOC=null;
-function home(){document.body.classList.remove("bookmode");onkey=null;onresize=null;document.title="Apostilas · "+P.nome+" · ASp";
+function home(){document.body.classList.remove("bookmode");onkey=null;onresize=null;document.title="Apostilas · "+P.nome+" · medASp";
   let h=`<section class="home"><span class="kick">${esc(P.nome)} · apostilas</span><h1>Apostilas</h1><p class="lede">Os slides de cada aula são a base. O que vem de fora aparece em quadro azul (atualização) ou dourado (divergência com a diretriz), sempre com a fonte.</p>`;
   for(const c of P.cat){h+=`<div class="disc"><span class="kick">${esc(c.av)}</span><h2>${esc(c.nome)}</h2><div class="list">`;
     c.secs.forEach((s,i)=>{h+=`<a class="item${LIDAS[s.id]?" lida":""}" href="#${c.id}/resumos/${i}"><span class="n">${String(i+1).padStart(2,"0")}</span><b>${strip(s.t)}</b>${s.s?`<span>${strip(s.s)}</span>`:""}</a>`});
@@ -452,7 +460,7 @@ async function aula(cid,bi,pi){const c=CAT(cid);if(!c)return home();const D=awai
   document.body.classList.remove("bookmode");
   DOC={tot:{}};if(s.deck&&s.nsl)DOC.tot[s.deck]=s.nsl;
   VISTO[s.id]=VISTO[s.id]||{};VISTO[s.id][pi]=1;VISTO[s.id].last=pi;save("vistas",VISTO);
-  document.title=strip(s.title)+" · ASp";
+  document.title=strip(s.title)+" · medASp";
   const sub=[c.nome+" · "+c.av,pg.sl].filter(Boolean).join(" · ");
   let h=`<div class="bar"><i style="width:${((pi+1)/PG.length*100).toFixed(1)}%"></i></div><header class="head"><span class="kick">${esc(sub)}</span><h1>${strip(s.title)}</h1>${s.sub?`<p class="sub">${strip(s.sub)}</p>`:""}`;
   if(PG.length>1){h+=`<div class="pages" role="navigation" aria-label="Páginas">${PG.map((p,i)=>`<button type="button" data-pg="${i}"${i===pi?' aria-current="page"':""}${VISTO[s.id][i]?' class="seen"':""} aria-label="Página ${i+1}: ${esc(p.title)}">${i+1}</button>`).join("")}</div>`;

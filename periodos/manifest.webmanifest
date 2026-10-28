@@ -1,6 +1,6 @@
 {
-  "name": "ASP",
-  "short_name": "ASP",
+  "name": "medASp",
+  "short_name": "medASp",
   "description": "Apostilas e flashcards do 6º e do 8º período, com A1 e A2.",
   "lang": "pt-BR",
   "start_url": "./",
