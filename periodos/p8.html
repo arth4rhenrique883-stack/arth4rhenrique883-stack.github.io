@@ -602,7 +602,7 @@ function view(){
 addEventListener("hashchange",view);view();
 if("serviceWorker" in navigator)addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
 </script>
-<script>/*per:js*/(function(){var me=document.documentElement.dataset.per||"";document.querySelectorAll(".pers a").forEach(function(a){if(a.dataset.per===me)a.setAttribute("aria-current","page")});
+<script>/*per:js*/(function(){var me=(document.documentElement.dataset.per||"").replace("ini","");document.querySelectorAll(".pers a").forEach(function(a){if(a.dataset.per===me)a.setAttribute("aria-current","page")});
 document.addEventListener("click",function(e){var a=e.target.closest(".pers a");if(a)try{localStorage.setItem("medaj-per",a.dataset.per)}catch(_){}});
 if(me)try{localStorage.setItem("medaj-per",me)}catch(_){}})();/*/per:js*/</script>
 </body>
