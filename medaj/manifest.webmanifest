@@ -10,8 +10,8 @@
   "background_color": "#050505",
   "theme_color": "#050505",
   "icons": [
-    {"src": "marca1-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
-    {"src": "marca1-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
-    {"src": "marca1-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+    {"src": "marca3-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "marca3-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "marca3-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
   ]
 }

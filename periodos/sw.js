@@ -1,7 +1,7 @@
 // medaj. períodos: guarda o app e as fontes para abrir sem internet.
 // Ao publicar uma versão nova do index.html, troque o número abaixo.
-const V = "periodos-v15";
-const CORE = ["./", "index.html", "p6.html", "p7.html", "p8.html", "manifest.webmanifest", "chama3-192.png", "chama3-512.png", "chama3-180.png"];
+const V = "periodos-v17";
+const CORE = ["./", "index.html", "p6.html", "p7.html", "p8.html", "manifest.webmanifest", "cobra1-192.png", "cobra1-512.png", "cobra1-180.png"];
 
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(V).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));
