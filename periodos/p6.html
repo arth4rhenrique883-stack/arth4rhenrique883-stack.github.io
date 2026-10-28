@@ -385,6 +385,7 @@ a.go:hover{border-color:var(--red)}
 <script>
 const APOSTILA="bloco1.html";
 const CHAPTERS={"neuro-A2": "Neurologia · A2", "cardio-A2": "Cardiologia · A2"};
+const FILE={"obs1": "bloco2.html"};
 const SECS={};
 /* Cartões das apostilas medaj. Para acrescentar: [id único, capítulo, seção (âncora da apostila), pergunta, resposta]. */
 const CARDS=PER.cards;
@@ -493,7 +494,7 @@ function renderCard(){
     html+=`<div class="spacer"></div><button class="reveal" type="button" data-act="reveal">Mostrar resposta<kbd>espaço</kbd></button>`;
   }else{
     const g=[[0,"Errei"],[3,"Difícil"],[4,"Bom"],[5,"Fácil"]];
-    html+=`<div class="ans"><span class="lbl">Resposta</span><p>${esc(cur.a)}</p><a class="read" href="${APOSTILA}#${cur.sec}">Ler na apostila: ${esc(cur.w||"")} ↗</a></div><div class="spacer"></div><div class="grades">${g.map(([q,l],k)=>`<button class="grade g${q}" type="button" data-q="${q}"><b>${l}</b><small>${fmt(plan(s,q))} · ${k+1}</small></button>`).join("")}</div>`;
+    html+=`<div class="ans"><span class="lbl">Resposta</span><p>${esc(cur.a)}</p><a class="read" href="${FILE[cur.ch]||APOSTILA}#${cur.sec}">Ler na apostila: ${esc(cur.w||"")} ↗</a></div><div class="spacer"></div><div class="grades">${g.map(([q,l],k)=>`<button class="grade g${q}" type="button" data-q="${q}"><b>${l}</b><small>${fmt(plan(s,q))} · ${k+1}</small></button>`).join("")}</div>`;
   }
   el.innerHTML=html;renderStats();
 }
