@@ -174,6 +174,7 @@ figure .th{width:100%;border:0;border-radius:0}
 .case h3{font:600 18px/1.3 var(--head)}
 .case p{margin:0}.case .ask{font-weight:600}
 .case .out{display:flex;flex-direction:column;gap:8px}
+.case.pv{border-color:var(--line-2)}.case.pv>.kick{color:var(--red-ink)}
 .calc{border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:4px}
 .calc label{font:600 12px/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:8px}
 .calc input{align-self:flex-start;font:400 16px var(--body);color:#fff;background:var(--bg);border:1px solid var(--line-2);border-radius:8px;padding:7px 10px;color-scheme:dark}
@@ -371,6 +372,7 @@ function block(b,id){switch(b.t){
   case "escreva":return "";   /* 28/10: "o que escrever à mão" saiu do app (pedido do Arthur: só apostila completa e flashcards) */
   case "q":return `<div class="qz"><span class="kick">Perguntas para revisar</span>${b.v.map(q=>`<div class="qi"><p>${q.q}</p><button type="button" class="btn2 rv">Mostrar resposta</button><p class="a" hidden>${q.a}</p></div>`).join("")}</div>`;
   case "mcq":return `<div class="mcq" data-ok="${b.ok}"><span class="kick">${esc(b.src||"Questão")}</span><p class="stem">${b.stem}</p><div class="opts">${b.opts.map((o,i)=>`<button type="button" class="opt" data-i="${i}"><b>${L[i]}</b><span>${o}</span></button>`).join("")}</div><div class="exp" hidden><span class="k">Comentário</span>${b.exp}</div></div>`;
+  case "prova":return `<div class="case pv"><span class="kick">Questão de prova antiga · ${esc(b.src)}</span><p>${b.stem}</p>${b.ask?`<p class="ask">${b.ask}</p>`:""}<button type="button" class="btn2 rv">Ver a resposta comentada</button><div class="out a" hidden>${b.reveal.map(x=>`<p>${x}</p>`).join("")}</div></div>`;   /* 28/10: provas antigas do 6º (app/provas6.py) */
   case "case":return `<div class="case"><span class="kick">Caso clínico</span><h3>${b.title}</h3>${b.body.map(x=>`<p>${x}</p>`).join("")}${b.ask?`<p class="ask">${b.ask}</p>`:""}<button type="button" class="btn2 rv">Ver o desfecho</button><div class="out a" hidden>${b.reveal.map(x=>`<p>${x}</p>`).join("")}</div></div>`;
   case "naegele":return `<div class="calc" id="naeg"><span class="kick">Calculadora de Näegele</span><label for="nDum">Data da última menstruação</label><input type="date" id="nDum" value="2023-03-26"><label for="nHoje">Data da consulta</label><input type="date" id="nHoje" value="2023-09-28"><div class="out" id="nOut"></div></div>`;
   default:return ""}}
@@ -379,7 +381,7 @@ function lance(b){return `<div class="box lance"><b class="t">Pergunta rápida</
 
 function wire(root){
   root.querySelectorAll(".th").forEach(t=>t.onclick=()=>{const sl=t.closest(".sl"),mine=sl?sl.dataset.mine.split(",").map(Number):[+t.dataset.n];openVW(t.dataset.deck,+t.dataset.tot,+t.dataset.n,mine)});
-  root.querySelectorAll(".rv").forEach(b=>b.onclick=()=>{const a=b.nextElementSibling;a.hidden=!a.hidden;b.textContent=a.hidden?(b.closest(".case")?"Ver o desfecho":"Mostrar resposta"):"Esconder"});
+  root.querySelectorAll(".rv").forEach(b=>b.onclick=()=>{const a=b.nextElementSibling;a.hidden=!a.hidden;b.textContent=a.hidden?(b.closest(".pv")?"Ver a resposta comentada":b.closest(".case")?"Ver o desfecho":"Mostrar resposta"):"Esconder"});
   root.querySelectorAll(".mcq").forEach(m=>m.querySelectorAll(".opt").forEach(o=>o.onclick=()=>{const ok=+m.dataset.ok;
     m.querySelectorAll(".opt").forEach(x=>{x.disabled=true;if(+x.dataset.i===ok)x.classList.add("ok")});if(+o.dataset.i!==ok)o.classList.add("no");m.querySelector(".exp").hidden=false}));
   root.querySelectorAll(".wrb").forEach(b=>b.onclick=()=>{const w=b.closest(".wr"),id=w.dataset.wr;ESCR[id]=ESCR[id]>0?0:Date.now();save("escrito",ESCR);
