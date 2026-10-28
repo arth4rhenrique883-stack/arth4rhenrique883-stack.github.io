@@ -87,7 +87,6 @@ td.y{white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:600}
 .q li.wrong button{border-color:var(--bad);box-shadow:inset 3px 0 0 var(--bad)}
 .q .why{font-size:15px;color:var(--muted);padding:6px 2px 0 12px}
 .q .rev{font-size:15px}
-.q .dog{font-size:15px;color:var(--muted)}
 .refs{display:flex;flex-direction:column;gap:10px}
 .ref{display:flex;flex-direction:column;gap:6px;padding:12px 14px;border:1px solid var(--line);border-radius:10px}
 .ref p{font-size:15px}
@@ -117,6 +116,28 @@ code{font:14px var(--mono)}
 a.copy{font:500 14px var(--head);text-decoration:none;color:var(--fg);background:transparent;border:1px solid rgba(176,42,48,.7);border-radius:8px;padding:7px 12px;white-space:nowrap}
 a.copy:hover{border-color:var(--red);color:#fff}
 footer{font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+/* quadros (28/10): fundo discreto, borda fina, faixa colorida à esquerda e um ícone no rótulo */
+.box{padding:14px 16px 15px;border:1px solid var(--line);border-left:3px solid;border-radius:6px 12px 12px 6px;gap:6px;font-size:16.5px;line-height:1.6}
+.box b.t{display:flex;align-items:center;gap:8px;font:700 11.5px/1.2 var(--mono);letter-spacing:.1em}
+.box b.t::before{display:inline-grid;place-items:center;flex:none;width:20px;height:20px;border:1px solid currentColor;border-radius:5px;font:600 12px/1 var(--mono);letter-spacing:0}
+.box.upd{border-color:#141a24;border-left-color:var(--upd-line)}.upd b.t{color:#8fa6cc}.upd b.t::before{content:"↻"}
+.box.trap{border-color:#1f0d0f;border-left-color:var(--trap-line)}.trap b.t{color:#e0757b}.trap b.t::before{content:"!"}
+.box.law{border-color:#1c1c1c;border-left-color:#6b6b6b}.law b.t{color:#bdbdbd}.law b.t::before{content:"§"}
+.pearl{background:#0c0a06;border-color:#221d12;border-left-color:#b8923a;color:#e8e0cc}.pearl b.t{color:#d4ad55}.pearl b.t::before{content:"◆"}
+.cur{background:#09090d;border-color:#1b1a24;border-left-color:#7a68a8;color:#dcd7e8}.cur b.t{color:#a897d6}.cur b.t::before{content:"✦"}
+.box .src{margin-left:6px}
+figure.fig{margin:0;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--raise)}
+.fig img,.fig svg{display:block;width:100%;height:auto}
+.fig figcaption{padding:10px 14px 12px;font-size:14px;line-height:1.5;color:var(--muted);border-top:1px solid var(--line)}
+.tbl-t{font:700 11.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:-6px}
+tbody tr:nth-child(even) td{background:#080808}
+/*res:flame*/
+/* chama da residência: só as cores da paleta (vermelho, branco, toque de azul), mesclando a cada 5 s */
+:root:not([data-per]) .flame .hue{animation:none;filter:none}
+:root:not([data-per]) #fl-out stop:nth-child(1){stop-color:#7d151b}:root:not([data-per]) #fl-out stop:nth-child(2){stop-color:#b02a30}:root:not([data-per]) #fl-out stop:nth-child(3){stop-color:#d9434a}:root:not([data-per]) #fl-in stop:nth-child(1){stop-color:#f4d9da}:root:not([data-per]) #fl-in stop:nth-child(2){stop-color:#e0666c}:root:not([data-per]) #fl-core stop:nth-child(1){stop-color:#ffffff}:root:not([data-per]) #fl-core stop:nth-child(2){stop-color:#f6dede}:root:not([data-per]) #fl-glow stop{stop-color:#b02a30}
+@media (prefers-reduced-motion:no-preference){:root:not([data-per]) #fl-out stop:nth-child(1){animation:fl-o1 20s ease-in-out infinite}:root:not([data-per]) #fl-out stop:nth-child(2){animation:fl-o2 20s ease-in-out infinite}:root:not([data-per]) #fl-out stop:nth-child(3){animation:fl-o3 20s ease-in-out infinite}:root:not([data-per]) #fl-in stop:nth-child(1){animation:fl-i1 20s ease-in-out infinite}:root:not([data-per]) #fl-in stop:nth-child(2){animation:fl-i2 20s ease-in-out infinite}:root:not([data-per]) #fl-core stop:nth-child(1){animation:fl-c1 20s ease-in-out infinite}:root:not([data-per]) #fl-core stop:nth-child(2){animation:fl-c2 20s ease-in-out infinite}:root:not([data-per]) #fl-glow stop{animation:fl-g 20s ease-in-out infinite}}
+@keyframes fl-o1{0%{stop-color:#7d151b}25%{stop-color:#b02a30}50%{stop-color:#9c2329}75%{stop-color:#5e0f14}100%{stop-color:#7d151b}}@keyframes fl-o2{0%{stop-color:#b02a30}25%{stop-color:#e0545a}50%{stop-color:#b02a30}75%{stop-color:#9c2329}100%{stop-color:#b02a30}}@keyframes fl-o3{0%{stop-color:#d9434a}25%{stop-color:#f3e9ea}50%{stop-color:#7f97bd}75%{stop-color:#c4343b}100%{stop-color:#d9434a}}@keyframes fl-i1{0%{stop-color:#f4d9da}25%{stop-color:#ffffff}50%{stop-color:#eef2f8}75%{stop-color:#ecc4c6}100%{stop-color:#f4d9da}}@keyframes fl-i2{0%{stop-color:#e0666c}25%{stop-color:#f2c9cb}50%{stop-color:#b8c6de}75%{stop-color:#c8464d}100%{stop-color:#e0666c}}@keyframes fl-c1{0%{stop-color:#ffffff}25%{stop-color:#ffffff}50%{stop-color:#ffffff}75%{stop-color:#fff3f3}100%{stop-color:#ffffff}}@keyframes fl-c2{0%{stop-color:#f6dede}25%{stop-color:#ffffff}50%{stop-color:#e6ecf5}75%{stop-color:#e9b5b8}100%{stop-color:#f6dede}}@keyframes fl-g{0%{stop-color:#b02a30}25%{stop-color:#d9434a}50%{stop-color:#7f97bd}75%{stop-color:#8c2228}100%{stop-color:#b02a30}}
+/*/res:flame*/
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
@@ -192,6 +213,7 @@ footer{font-size:14px;color:var(--muted);border-top:1px solid var(--line);paddin
   </table></div>
   <p>A Reforma Sanitária foi um movimento conduzido pela sociedade civil (sanitaristas, academia, movimentos populares), e não por governos ou organismos internacionais. Isso explica o peso que o SUS dá à participação da comunidade.<a class="src" href="https://doi.org/10.1016/S0140-6736(11)60054-8" target="_blank" rel="noopener">Paim, Lancet 2011</a></p>
   <div class="box trap"><b class="t">Pegadinha</b><p>CAPs eram por <b>empresa</b>; IAPs, por <b>categoria</b>. E o INAMPS só foi extinto em 1993, três anos depois da Lei 8.080.</p></div>
+  <div class="box cur"><b class="t">Curiosidade</b><p>A 8ª Conferência Nacional de Saúde, em 1986, reuniu cerca de 4 mil pessoas em Brasília e foi a primeira a incluir os usuários entre os participantes. Sergio Arouca, então presidente da Fiocruz, comandou a organização e abriu o encontro com o discurso "Democracia é saúde", frase que virou símbolo da Reforma Sanitária.<a class="src" href="https://doi.org/10.1590/0102-311X00122818" target="_blank" rel="noopener">Lima e Franco Netto, 2018</a></p></div>
 </section>
 
 <section id="constituicao" aria-labelledby="h2s">
@@ -264,6 +286,7 @@ footer{font-size:14px;color:var(--muted);border-top:1px solid var(--line);paddin
   </table></div>
   <p>Para receber os recursos do Fundo Nacional de Saúde de forma regular e automática, municípios, estados e o DF precisam ter: Fundo de Saúde, Conselho de Saúde com composição paritária, plano de saúde, relatório de gestão, contrapartida de recursos próprios no orçamento e comissão para elaborar o plano de carreira (PCCS), com prazo de dois anos. Sem esses requisitos, os recursos passam a ser administrados pelo estado ou pela União. Pelo menos 70% dos recursos vão para os municípios.<a class="src" href="https://www.planalto.gov.br/ccivil_03/leis/l8142.htm" target="_blank" rel="noopener">Lei 8.142, arts. 2º–4º</a></p>
   <div class="box trap"><b class="t">Pegadinha</b><p>Paridade é dos <b>usuários</b> em relação aos demais segmentos somados, e não entre os quatro segmentos. E é o Conselho, e não a Conferência, que tem caráter deliberativo e permanente.</p></div>
+  <div class="box pearl"><b class="t">Pérola</b><p><b>Conselho</b>: permanente, deliberativo, metade das vagas para usuários. <b>Conferência</b>: a cada 4 anos, avalia e propõe. Decidiu? Conselho. Propôs? Conferência.</p></div>
 </section>
 
 <section id="normas" aria-labelledby="h5s">
@@ -525,6 +548,7 @@ footer{font-size:14px;color:var(--muted);border-top:1px solid var(--line);paddin
     </tbody>
   </table></div>
   <div class="box trap"><b class="t">Pegadinha</b><p>Swaroop-Uemura e Nelson de Moraes são <b>proporções</b>, não medem risco. Um lugar pode ter Swaroop-Uemura alto por ter muitos idosos, não necessariamente por ter serviços melhores.</p></div>
+  <div class="box cur"><b class="t">Curiosidade</b><p>O indicador nasceu em 1957, num artigo de dois estatísticos da Organização Mundial da Saúde, S. Swaroop e K. Uemura. Eles procuravam um número simples para comparar o nível de saúde entre países com estatísticas de qualidade muito diferente, e perceberam que a proporção de mortes aos 50 anos ou mais bastava.<a class="src" href="https://pubmed.ncbi.nlm.nih.gov/13500159/" target="_blank" rel="noopener">Swaroop e Uemura, 1957</a></p></div>
   <h3>Medidas de anos perdidos</h3>
   <p><b>Anos potenciais de vida perdidos (APVP)</b> somam, para cada óbito, a diferença entre a idade de morte e um limite (por exemplo, 70 anos). Valorizam mortes de jovens, como as causas externas. O <b>DALY</b> (AVAI, anos de vida ajustados por incapacidade) soma anos perdidos por morte prematura (YLL) e anos vividos com incapacidade (YLD); é a métrica do estudo Global Burden of Disease.<a class="src" href="https://doi.org/10.1016/S0140-6736(24)00757-8" target="_blank" rel="noopener">GBD 2021, Lancet 2024</a></p>
 </section>
@@ -606,6 +630,7 @@ footer{font-size:14px;color:var(--muted);border-top:1px solid var(--line);paddin
     <li><b>Parte II</b>: outras condições significativas que contribuíram para a morte, mas não fazem parte da cadeia.</li>
     <li>Não se escrevem modos de morrer como causa ("parada cardiorrespiratória", "falência de múltiplos órgãos").</li>
   </ul>
+  <div class="box pearl"><b class="t">Pérola</b><p>Morte violenta ou suspeita vai <b>sempre</b> para o Instituto Médico Legal, mesmo com o paciente internado. E a causa básica fica na <b>última linha preenchida</b> da parte I.</p></div>
   <p>Exemplo: (a) choque séptico, (b) pneumonia aspirativa, (c) acidente vascular cerebral isquêmico; parte II: diabetes tipo 2. Causa básica: AVC isquêmico.</p>
   <p>A DO é emitida em três vias: a <b>branca</b> vai para a secretaria de saúde (alimenta o SIM), a <b>amarela</b> fica com a família para o registro em cartório e a <b>rosa</b> fica no estabelecimento de saúde.</p>
 </section>
@@ -677,43 +702,43 @@ QS.pre4=[
   ["Igualdade da assistência à saúde, sem preconceitos ou privilégios de qualquer espécie.",1,"Correta. É o inciso IV, com o texto literal da lei."],
   ["Participação complementar do setor privado, com preferência às empresas com fins lucrativos.",0,"A preferência é às filantrópicas e sem fins lucrativos (CF, art. 199; Lei 8.080, art. 25)."],
   ["Centralização da gestão no Ministério da Saúde, para evitar duplicidade de meios.",0,"A lei prevê descentralização com direção única em cada esfera. Evitar duplicidade é outro inciso (XIII) e não pressupõe centralização."]],
-  rev:"Revise: art. 7º da Lei 8.080 e a diferença entre texto legal e classificação didática.",dog:"Dr. Joey: \"leu 'segundo a lei'? Então é igualdade. Equidade fica para quando perguntarem os doutrinários.\""},
+  rev:"Revise: art. 7º da Lei 8.080 e a diferença entre texto legal e classificação didática."},
  {s:"Sobre o Conselho de Saúde, conforme a Lei 8.142/1990, é correto afirmar:",o:[
   ["Reúne-se a cada quatro anos para avaliar a situação de saúde e propor diretrizes.",0,"Essa é a Conferência de Saúde."],
   ["Tem caráter consultivo e é composto igualmente pelos quatro segmentos.",0,"O Conselho é deliberativo, e a paridade é dos usuários em relação ao conjunto dos demais segmentos."],
   ["Tem caráter permanente e deliberativo, e a representação dos usuários é paritária em relação ao conjunto dos demais segmentos.",1,"Correta. Art. 1º, §§ 2º e 4º."],
   ["Suas decisões dispensam homologação do chefe do Poder Executivo.",0,"As decisões são homologadas pelo chefe do poder legalmente constituído em cada esfera."]],
-  rev:"Revise: tabela Conselho × Conferência na seção 4.",dog:"Dra. Mel: \"Conselho é permanente e decide. Conferência é de quatro em quatro anos e propõe. Sem confundir, por favor.\""},
+  rev:"Revise: tabela Conselho × Conferência na seção 4."},
  {s:"De acordo com o Decreto 7.508/2011, NÃO é porta de entrada às ações e serviços de saúde nas Redes de Atenção:",o:[
   ["Serviços de atenção primária.",0,"É porta de entrada e ordena o acesso."],
   ["Serviços de atenção de urgência e emergência.",0,"É porta de entrada."],
   ["Ambulatório de especialidades médicas.",1,"Correta. A atenção especializada é acessada por referência, não é porta de entrada."],
   ["Serviços especiais de acesso aberto.",0,"É porta de entrada, ao lado da atenção psicossocial."]],
-  rev:"Revise: portas de entrada e conteúdo mínimo da Região de Saúde.",dog:"Dr. Thor: \"e-e-especialista não é porta de entrada... a-a-alguém precisa encaminhar antes.\""},
+  rev:"Revise: portas de entrada e conteúdo mínimo da Região de Saúde."},
  {s:"Um município aplicou recursos próprios em diversas ações. Segundo a LC 141/2012, conta para o mínimo constitucional em saúde:",o:[
   ["Merenda escolar da rede municipal de ensino.",0,"Excluída expressamente (art. 4º)."],
   ["Pagamento de aposentadorias de servidores da saúde.",0,"Excluído expressamente."],
   ["Compra de medicamentos para a assistência farmacêutica do SUS.",1,"Correta. É ação de acesso universal, compatível com o art. 3º da LC 141."],
   ["Limpeza urbana e remoção de resíduos.",0,"Excluída expressamente."]],
-  rev:"Revise: o que não é gasto em saúde (LC 141, art. 4º) e os mínimos de cada ente.",dog:"Dr. Joey: \"se dá para usar na escola, na previdência ou na rua, não é saúde para a LC 141. Simples assim.\""},
+  rev:"Revise: o que não é gasto em saúde (LC 141, art. 4º) e os mínimos de cada ente."},
  {s:"Sobre o financiamento federal da atenção primária a partir de 2024, assinale a correta:",o:[
   ["O Previne Brasil segue vigente, com capitação ponderada e pagamento por desempenho.",0,"A Portaria 3.493/2024 revogou a Portaria 2.979/2019, que criou o Previne Brasil."],
   ["O novo modelo tem um componente de vínculo e acompanhamento territorial e classifica os municípios por um índice que combina vulnerabilidade social e porte.",1,"Correta. Componente de vínculo e estratos de 1 a 4 pelo IED."],
   ["O repasse passou a ser feito exclusivamente por produção de procedimentos.",0,"Não há pagamento exclusivo por produção; o modelo combina componentes fixos, de vínculo, de qualidade e per capita."],
   ["O componente per capita foi extinto.",0,"O componente per capita de base populacional é um dos seis componentes."]],
-  rev:"Revise: caixa de atualização na seção 7.",dog:"Dra. Mel: \"questão de 2025 em diante com Previne Brasil vigente está errada. Atualize-se.\""},
+  rev:"Revise: caixa de atualização na seção 7."},
  {s:"Assinale a sequência cronológica correta:",o:[
   ["IAPs, CAPs, INPS, 8ª Conferência Nacional de Saúde.",0,"As CAPs (1923) vêm antes dos IAPs (1933)."],
   ["CAPs, IAPs, INPS, SUDS, extinção do INAMPS.",1,"Correta: 1923, 1933, 1966, 1987 e 1993."],
   ["CAPs, INPS, IAPs, Constituição de 1988.",0,"O INPS (1966) unificou os IAPs, que já existiam desde 1933."],
   ["8ª Conferência, SUDS, extinção do INAMPS, Constituição de 1988.",0,"O INAMPS foi extinto em 1993, depois da Constituição."]],
-  rev:"Revise: linha do tempo da seção 1.",dog:"Dr. Thor: \"f-fiz uma musiquinha: Caixa, Instituto, INPS, INAMPS... e o SUS chega pra salvar.\""},
+  rev:"Revise: linha do tempo da seção 1."},
  {s:"O Pacto pela Saúde (2006) foi organizado em três dimensões. São elas:",o:[
   ["Pacto pela Vida, Pacto em Defesa do SUS e Pacto de Gestão.",1,"Correta."],
   ["Pacto pela Atenção Básica, Pacto pela Média Complexidade e Pacto pela Alta Complexidade.",0,"Não são dimensões do Pacto; são níveis de atenção."],
   ["Pacto pela Vida, Pacto Federativo e Pacto de Financiamento.",0,"Mistura termos; o terceiro é Pacto de Gestão e o segundo, em Defesa do SUS."],
   ["Pacto de Gestão, Pacto de Regionalização e Pacto de Programação.",0,"Regionalização e programação são eixos dentro do Pacto de Gestão."]],
-  rev:"Revise: seção 5 e as seis prioridades do Pacto pela Vida.",dog:"Dr. Joey: \"Vida, Defesa e Gestão. VDG. Pronto, pode dormir.\""}
+  rev:"Revise: seção 5 e as seis prioridades do Pacto pela Vida."}
 ];
 const CARDS=[
  ["PRE 4","Art. 196 da CF: a saúde é...","Direito de todos e dever do Estado, garantido por políticas sociais e econômicas, com acesso universal e igualitário."],
@@ -753,43 +778,43 @@ QS.pre1=[
   ["a incidência não se altere e a prevalência aumente",1,"Os doentes vivem mais sem sarar: a duração aumenta, e prevalência ≈ incidência × duração."],
   ["a incidência aumente e a prevalência não se altere",0,"Tratamento não cria casos novos."],
   ["a incidência não se altere e a prevalência diminua",0,"A prevalência só cairia se os doentes saíssem da conta, por cura ou morte."]],
-  rev:"Revise: relação P ≈ I × D e a tabela do que aumenta ou diminui a prevalência (seção 2).",dog:"Dr. Joey: \"remédio que não cura é tipo eu no plantão: fica, mas não resolve nada. Prevalência sobe.\""},
+  rev:"Revise: relação P ≈ I × D e a tabela do que aumenta ou diminui a prevalência (seção 2)."},
  {s:"Num surto de sarampo, 40 crianças adoeceram entre 200 que frequentam uma creche. A medida que expressa esse resultado é:",o:[
   ["prevalência pontual de 20%",0,"Prevalência conta casos existentes num momento; aqui são casos novos durante o surto."],
   ["letalidade de 20%",0,"Letalidade usaria óbitos no numerador e doentes no denominador."],
   ["taxa de ataque de 20%",1,"Incidência acumulada num surto, em população e tempo restritos: 40 ÷ 200 = 20%."],
   ["densidade de incidência de 20%",0,"Densidade de incidência usa pessoa-tempo no denominador e não se expressa em porcentagem simples."]],
-  rev:"Revise: taxa de ataque e ataque secundário (seção 2).",dog:"Dr. Thor: \"q-quarenta de duzentos... e-eu vou ficar embaixo da maca até o surto passar.\""},
+  rev:"Revise: taxa de ataque e ataque secundário (seção 2)."},
  {s:"A taxa de mortalidade perinatal, segundo a CID-10 e a RIPSA, tem no numerador:",o:[
   ["óbitos fetais de 20 semanas ou mais e óbitos neonatais até 28 dias",0,"Mistura o critério de Declaração de Óbito fetal (20 semanas) com o período neonatal inteiro."],
   ["óbitos fetais de 22 semanas ou mais e óbitos neonatais de 0 a 6 dias",1,"Período perinatal: de 22 semanas completas de gestação a 7 dias completos de vida."],
   ["apenas óbitos neonatais precoces",0,"Sem os óbitos fetais seria a mortalidade neonatal precoce."],
   ["óbitos fetais de 28 semanas ou mais e óbitos de menores de 1 ano",0,"28 semanas era o critério antigo de natimorto; menores de 1 ano é mortalidade infantil."]],
-  rev:"Revise: tabela da seção 4 e a pegadinha 22 × 20 semanas.",dog:"Dra. Mel: \"22 semanas e 7 dias. Escreva dez vezes. Depois eu aceito um petisco.\""},
+  rev:"Revise: tabela da seção 4 e a pegadinha 22 × 20 semanas."},
  {s:"Mulher de 32 anos com cardiopatia reumática prévia morre no 20º dia de puerpério por insuficiência cardíaca descompensada. O óbito é classificado como:",o:[
   ["morte materna obstétrica direta",0,"Direta é complicação da própria gestação ou parto (hemorragia, pré-eclâmpsia, infecção puerperal)."],
   ["morte materna obstétrica indireta",1,"Doença prévia agravada pelos efeitos fisiológicos da gravidez, dentro de 42 dias."],
   ["morte materna tardia",0,"Tardia é depois de 42 dias e antes de 1 ano; ela morreu no 20º dia."],
   ["morte não materna, por ser doença preexistente",0,"Doença preexistente agravada pela gestação entra como materna indireta."]],
-  rev:"Revise: definição de morte materna e os tipos (seção 5).",dog:"Dr. Joey: \"o coração já vinha mal, a gravidez só deu o empurrão. Indireta. Posso voltar a dormir?\""},
+  rev:"Revise: definição de morte materna e os tipos (seção 5)."},
  {s:"Duas cidades têm coeficientes gerais de mortalidade de 5 e 18 por mil habitantes. A segunda tem proporção de idosos muito maior. Para comparar o risco de morrer entre elas, o mais adequado é:",o:[
   ["comparar diretamente os coeficientes gerais",0,"O coeficiente bruto mistura risco com estrutura etária."],
   ["usar a mortalidade proporcional por causas",0,"Mortalidade proporcional mostra distribuição, não risco."],
   ["padronizar os coeficientes por idade",1,"A padronização (direta ou indireta) remove o efeito da diferença de idade entre as populações."],
   ["calcular a letalidade de cada cidade",0,"Letalidade mede gravidade de uma doença entre os doentes, não o risco populacional."]],
-  rev:"Revise: padronização direta e indireta e o exemplo da seção 7.",dog:"Dra. Mel: \"comparar cidade de idosos com cidade de jovens sem padronizar? Não na minha enfermaria.\""},
+  rev:"Revise: padronização direta e indireta e o exemplo da seção 7."},
  {s:"Paciente internado há 5 dias por pneumonia cai da cama, sofre traumatismo craniano e morre. A Declaração de Óbito deve ser emitida:",o:[
   ["pelo médico assistente, que acompanhava a internação",0,"A morte foi por causa externa; o vínculo assistencial não muda isso."],
   ["pelo Serviço de Verificação de Óbitos",0,"O SVO cuida de mortes naturais sem diagnóstico; não de mortes violentas."],
   ["pelo serviço médico-legal (IML)",1,"Morte violenta ou não natural: DO obrigatoriamente pelo serviço médico-legal (CFM 1.779/2005)."],
   ["pelo plantonista que constatou o óbito",0,"Constatar o óbito não autoriza emitir a DO em morte violenta."]],
-  rev:"Revise: tabela de quem emite a DO (seção 10).",dog:"Dr. Thor: \"c-c-caiu da cama? IML. E-eu nunca mais subo em maca nenhuma.\""},
+  rev:"Revise: tabela de quem emite a DO (seção 10)."},
  {s:"Assinale a associação correta entre sistema de informação e documento-base:",o:[
   ["SINASC e Declaração de Óbito",0,"SINASC usa a Declaração de Nascido Vivo."],
   ["SIH e Autorização de Internação Hospitalar",1,"O SIH se alimenta da AIH e registra internações, não pessoas."],
   ["SIM e ficha de notificação compulsória",0,"Ficha de notificação é do SINAN; o SIM usa a DO."],
   ["SINAN e Declaração de Nascido Vivo",0,"SINAN usa fichas de notificação e investigação."]],
-  rev:"Revise: tabela de sistemas da seção 9.",dog:"Dr. Joey: \"SIM é óbito, SINASC é nascimento, SINAN é notificação. O resto é sigla para te dar sono.\""}
+  rev:"Revise: tabela de sistemas da seção 9."}
 ];
 CARDS.push(
  ["PRE 1","Prevalência, incidência e duração","Prevalência ≈ incidência × duração (situação estável, doença rara)."],
@@ -825,12 +850,12 @@ const L="ABCD",ORDER=["pre4","pre1","pre2","pre3","etica"],TAG={pre4:"PRE 4",pre
 document.querySelectorAll(".refs[data-ch]").forEach(el=>{el.innerHTML=(REFS[el.dataset.ch]||[]).map(r=>`<div class="ref"><p><b>${r.t}</b></p><p class="c">${r.c}</p><p>${r.why}</p><div class="btns"><a class="btn" href="https://pubmed.ncbi.nlm.nih.gov/${r.pmid}/" target="_blank" rel="noopener">PubMed ${r.pmid}</a><a class="btn" href="https://doi.org/${r.doi}" target="_blank" rel="noopener">Artigo</a></div></div>`).join("")});
 document.querySelectorAll(".qs[data-ch]").forEach(el=>{
   const list=QS[el.dataset.ch]||[];
-  el.innerHTML=list.map((q,i)=>`<div class="q" data-q="${i}"><p class="stem">${i+1}. ${q.s}</p><ol>${q.o.map((o,j)=>`<li><button type="button" data-j="${j}">${L[j]}) ${o[0]}</button><p class="why" hidden>${o[1]?"Certa. ":"Errada. "}${o[2]}</p></li>`).join("")}</ol><p class="rev" hidden>${q.rev}</p><p class="dog" hidden>${q.dog}</p></div>`).join("");
+  el.innerHTML=list.map((q,i)=>`<div class="q" data-q="${i}"><p class="stem">${i+1}. ${q.s}</p><ol>${q.o.map((o,j)=>`<li><button type="button" data-j="${j}">${L[j]}) ${o[0]}</button><p class="why" hidden>${o[1]?"Certa. ":"Errada. "}${o[2]}</p></li>`).join("")}</ol><p class="rev" hidden>${q.rev}</p></div>`).join("");
   el.addEventListener("click",e=>{
     const b=e.target.closest("button[data-j]");if(!b)return;
     const box=b.closest(".q"),q=list[+box.dataset.q];
     box.querySelectorAll("li").forEach((li,j)=>{li.classList.toggle("right",!!q.o[j][1]);li.classList.toggle("wrong",!q.o[j][1]&&j===+b.dataset.j);li.querySelector(".why").hidden=false});
-    box.querySelector(".rev").hidden=false;box.querySelector(".dog").hidden=false;
+    box.querySelector(".rev").hidden=false;
   });
 });
 document.querySelectorAll(".cards[data-ch]").forEach(el=>{
