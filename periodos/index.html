@@ -203,6 +203,15 @@ a.go:hover{border-color:var(--red)}
 .lida[aria-pressed="true"]{color:#5aa883;border-color:#2e5a45}
 .lida[aria-pressed="true"]::before{content:"✓ "}
 .soon{font:400 14px/1.5 var(--body);color:var(--dim);margin:0}
+.area{border-top:1px solid var(--line);padding-top:6px}
+.area summary{display:flex;justify-content:space-between;align-items:baseline;gap:12px;cursor:pointer;padding:10px 0;font:600 17px var(--display);list-style:none}
+.area summary::-webkit-details-marker{display:none}
+.area summary::before{content:"+";font:500 15px var(--mono);color:var(--muted);margin-right:-4px;width:14px}
+.area[open] summary::before{content:"−"}
+.area summary span{margin-left:auto;font:500 12px var(--mono);color:var(--muted);letter-spacing:.06em}
+.area .blist{padding-bottom:12px}
+.bitem.off{background:transparent;border-style:dashed}
+.bitem.off b{font-weight:500;color:var(--muted)}
 @media (pointer:coarse){.tabs a{padding:11px 18px;font-size:15px}}
 @media (max-width:420px){.row2{grid-template-columns:minmax(0,1fr)}.week div{grid-template-columns:56px minmax(0,1fr)}}
 /*per:css*/

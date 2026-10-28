@@ -202,6 +202,15 @@ a.go:hover{border-color:var(--red)}
 .lida[aria-pressed="true"]{color:#5aa883;border-color:#2e5a45}
 .lida[aria-pressed="true"]::before{content:"✓ "}
 .soon{font:400 14px/1.5 var(--body);color:var(--dim);margin:0}
+.area{border-top:1px solid var(--line);padding-top:6px}
+.area summary{display:flex;justify-content:space-between;align-items:baseline;gap:12px;cursor:pointer;padding:10px 0;font:600 17px var(--display);list-style:none}
+.area summary::-webkit-details-marker{display:none}
+.area summary::before{content:"+";font:500 15px var(--mono);color:var(--muted);margin-right:-4px;width:14px}
+.area[open] summary::before{content:"−"}
+.area summary span{margin-left:auto;font:500 12px var(--mono);color:var(--muted);letter-spacing:.06em}
+.area .blist{padding-bottom:12px}
+.bitem.off{background:transparent;border-style:dashed}
+.bitem.off b{font-weight:500;color:var(--muted)}
 @media (pointer:coarse){.tabs a{padding:11px 18px;font-size:15px}}
 @media (max-width:420px){.row2{grid-template-columns:minmax(0,1fr)}.week div{grid-template-columns:56px minmax(0,1fr)}}
 /*per:css*/
@@ -222,7 +231,18 @@ a.go:hover{border-color:var(--red)}
 .tag.new{border-color:var(--red-deep)}.bubble.story{border-color:var(--red-deep)}
 .tabs a[aria-current="page"]{background:color-mix(in srgb,var(--red) 18%,#0d0d0d)}
 .chip[aria-pressed="true"]{border-color:var(--red);background:color-mix(in srgb,var(--red) 14%,#0d0d0d)}
-.disc{font:600 13px var(--display);color:var(--red-ink);margin:10px 0 0;letter-spacing:.02em}
+.disc{display:block;font:600 13px var(--display);color:var(--red-ink);margin:8px 0 6px;letter-spacing:.02em}
+.mat{border:1px solid var(--line-2);border-radius:12px;padding:0 16px;background:var(--surface)}
+.mat[open]{padding-bottom:12px}
+.mat summary{display:flex;align-items:center;gap:12px;padding:15px 0;cursor:pointer;list-style:none}
+.mat summary::-webkit-details-marker{display:none}
+.mat summary b{font:600 17px var(--display);flex:1}
+.mat summary span{font:500 12px var(--mono);color:var(--muted);white-space:nowrap}
+.mat summary::after{content:"›";font:400 22px/1 var(--display);color:var(--muted);transition:transform .2s}
+.mat[open] summary::after{transform:rotate(90deg)}
+#v-apostilas{gap:10px}
+.mat .soon{margin:0 0 6px}
+.avbar{justify-content:center}
 .bfoot{display:flex}.bfoot .lida{flex:1}.bfoot .refs{flex:none;border-left:1px solid var(--line-2);border-bottom-left-radius:0;text-decoration:none;color:var(--blue)}
 .bfoot .lida:first-child:not(:last-child){border-bottom-right-radius:0}
 .week div{grid-template-columns:minmax(0,1fr) auto;align-items:center}
@@ -361,7 +381,7 @@ a.go:hover{border-color:var(--red)}
   </footer>
 </div>
 
-<script>const PER={"id":"p7","site":"","aulas":[],"cards":[],"provas":[],"datas":{},"soon":"O 7º período ainda está vazio: as matérias entram aqui quando chegarem os slides."};</script>
+<script>const PER={"id":"p7","site":"","aulas":[],"grade":[],"cards":[],"provas":[],"datas":{},"soon":"O 7º período ainda está vazio: as matérias entram aqui quando chegarem os slides."};</script>
 <script>
 const APOSTILA="bloco1.html";
 const CHAPTERS={};
@@ -576,17 +596,24 @@ function renderHoje(){
 }
 document.addEventListener("change",ev=>{const i=ev.target.closest("[data-prova]");if(!i)return;
   const k=i.dataset.prova;if(i.value)DATAS[k]=i.value;else DATAS[k]="";try{localStorage.setItem(DKEY,JSON.stringify(DATAS))}catch(e){}renderHoje()});
+const AKEY="medaj-"+PER.id+"-av";let ABERTA={};
+document.addEventListener("toggle",ev=>{const d=ev.target;if(d.matches&&d.matches("details.mat"))ABERTA[d.dataset.mat]=d.open},true);
+let AV=(()=>{let v=null;try{v=localStorage.getItem(AKEY)}catch(e){}return v||(PER.aulas.some(a=>a.av==="A2")?"A2":"A1")})();
 function renderApostilas(){
-  const el=document.getElementById("v-apostilas");let h="";
-  for(const av of ["A1","A2"]){const L=PER.aulas.filter(a=>a.av===av);
-    h+=`<h2 class="vh">${av}</h2>`;
-    if(!L.length){h+=`<p class="soon">Ainda sem apostilas da ${av}.</p>`;continue}
-    let disc="";h+=`<div class="blist">`;
-    for(const a of L){if(a.disc!==disc){disc=a.disc;h+=`<span class="disc">${e_(disc)}</span>`}
-      h+=`<div class="bwrap"><a class="bitem" href="${e_(site(a.u))}"><b>${e_(a.t)}</b>${a.s?`<span>${e_(a.s)}</span>`:""}</a><div class="bfoot"><button class="lida" type="button" data-lida="${e_(a.id)}" aria-pressed="false">Marcar como lida</button>${a.refs?`<a class="lida refs" href="${e_(site(a.refs))}">Artigos ↗</a>`:""}</div></div>`}
-    h+=`</div>`}
-  h+=`<p class="soon">${e_(PER.soon)}</p>`;el.innerHTML=h;renderLidas();
+  const el=document.getElementById("v-apostilas");
+  if(!PER.grade.length){el.innerHTML=`<p class="soon">${e_(PER.soon)}</p>`;return}
+  let h=`<div class="deckbar avbar">${["A1","A2"].map(av=>`<button class="chip" type="button" data-av="${av}" aria-pressed="${AV===av}">${av}<span class="n">${PER.aulas.filter(a=>a.av===av).length}</span></button>`).join("")}</div>`;
+  const item=a=>`<div class="bwrap"><a class="bitem" href="${e_(site(a.u))}"><b>${e_(a.t)}</b>${a.s?`<span>${e_(a.s)}</span>`:""}</a><div class="bfoot"><button class="lida" type="button" data-lida="${e_(a.id)}" aria-pressed="false">Marcar como lida</button>${a.refs?`<a class="lida refs" href="${e_(site(a.refs))}">Artigos ↗</a>`:""}</div></div>`;
+  for(const [mat,subs] of PER.grade){
+    const n=PER.aulas.filter(a=>a.mat===mat&&a.av===AV).length,lid=PER.aulas.filter(a=>a.mat===mat&&a.av===AV&&LIDAS[a.id]).length;
+    h+=`<details class="mat"${ABERTA[mat]?" open":""} data-mat="${e_(mat)}"><summary><b>${e_(mat)}</b><span>${n?`${lid} de ${n} lidas`:"em breve"}</span></summary>`;
+    for(const [sub] of subs){const L=PER.aulas.filter(a=>a.mat===mat&&a.sub===sub&&a.av===AV);
+      if(sub)h+=`<span class="disc">${e_(sub)}</span>`;
+      h+=L.length?`<div class="blist">${L.map(item).join("")}</div>`:`<p class="soon">Em breve</p>`}
+    h+=`</details>`}
+  el.innerHTML=h;renderLidas();
 }
+document.addEventListener("click",ev=>{const b=ev.target.closest("[data-av]");if(!b)return;AV=b.dataset.av;try{localStorage.setItem(AKEY,AV)}catch(e){}renderApostilas()});
 function renderLidas(){document.querySelectorAll("[data-lida]").forEach(b=>{const on=!!LIDAS[b.dataset.lida];b.setAttribute("aria-pressed",on);b.textContent=on?"Lida":"Marcar como lida"})}
 document.addEventListener("click",ev=>{const b=ev.target.closest("[data-lida]");if(!b)return;const k=b.dataset.lida;if(LIDAS[k])delete LIDAS[k];else LIDAS[k]=Date.now();try{localStorage.setItem(LKEY,JSON.stringify(LIDAS))}catch(e){}renderLidas()});
 renderApostilas();
