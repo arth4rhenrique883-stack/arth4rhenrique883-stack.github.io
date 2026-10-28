@@ -1,7 +1,7 @@
 // medaj. flashcards: guarda o app e as fontes para abrir sem internet.
 // Ao publicar uma versão nova do index.html, troque o número abaixo.
-const V = "medaj-v7";
-const CORE = ["./", "index.html", "bloco1.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "icon-180.png"];
+const V = "medaj-v8";
+const CORE = ["./", "index.html", "bloco2.html", "bloco1.html", "manifest.webmanifest", "icon-192.png", "icon-512.png", "icon-180.png"];
 
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(V).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));
@@ -16,7 +16,7 @@ self.addEventListener("fetch", e => {
   // página: rede primeiro (pega versão nova), cache se estiver sem internet
   if (r.mode === "navigate") {
     e.respondWith(fetch(r).then(res => { const cp = res.clone(); caches.open(V).then(c => c.put(r, cp)); return res; })
-      .catch(() => caches.match(r, {ignoreSearch: true}).then(h => h || caches.match(u.pathname.endsWith("bloco1.html") ? "bloco1.html" : "index.html"))));
+      .catch(() => caches.match(r, {ignoreSearch: true}).then(h => h || caches.match(u.pathname.split("/").pop() || "index.html"))));
     return;
   }
   // fontes do Google e arquivos do app: cache primeiro

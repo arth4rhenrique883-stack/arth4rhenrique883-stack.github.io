@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="theme-color" content="#050505">
+<style>.revcards{font:500 14px var(--display);color:var(--fg);border:1px solid var(--red);border-radius:999px;padding:8px 14px;text-decoration:none;display:inline-block;margin-top:8px}.revcards:hover{background:var(--red-soft)}</style>
+</head>
+<body>
+<title>medaj. · Ginecologia e Obstetrícia</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Archivo:wght@500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: uma coluna de leitura (~68ch), cabeçalho simples, sumário, capítulo em seções numeradas. */
+/* medaj.: sempre escuro. Preto com azul-marinho e roxo-escuro ao fundo, laranja e amarelo só em detalhes. Títulos de tópico com contorno preto. A chama do nome só troca de cor, devagar. */
+:root{
+  --bg:#050505; --fg:#ebebeb; --muted:#9c9c9c; --line:#1f1f1f; --raise:#0b0b0b;
+  --red:#b02a30; --red-soft:#0e0606; --blue:#7f97bd;
+  --area:#d6d6d6; --area-soft:#0d0d0d; --area-ink:#c8c8c8;
+  --link:#ebebeb;
+  --upd-bg:#080a0d; --upd-line:#3d5072; --upd-ink:#cdd3dc;
+  --trap-bg:var(--red-soft); --trap-line:#8c2228; --trap-ink:#e4d6d6;
+  --ok:#5aa883; --bad:#c2414a;
+  --brand:"Cormorant Garamond",Garamond,"Times New Roman",serif;
+  --display:"Archivo",ui-sans-serif,system-ui,sans-serif;
+  --head:"Archivo",ui-sans-serif,system-ui,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  color-scheme:dark;scrollbar-color:#262626 var(--bg);
+}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--fg);font:18px/1.7 var(--body);-webkit-font-smoothing:antialiased;
+  background:var(--bg);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 72px}
+main{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+h1,h2,h3{margin:0;line-height:1.15;text-wrap:balance}
+h1,h2{font-family:var(--display);font-weight:600;letter-spacing:-.01em;color:#f5f5f5;
+  -webkit-text-stroke:1px #000;paint-order:stroke fill;text-shadow:1px 1px 0 #000}
+h1{font-size:clamp(30px,7vw,44px)}
+h1::after{content:"";display:block;width:48px;height:3px;margin-top:16px;background:var(--red);border-radius:2px}
+::selection{background:#3a1215;color:#fff}
+h2{font-size:clamp(20px,4.6vw,24px);padding-top:16px;background:linear-gradient(var(--red),var(--red)) 0 0/32px 2px no-repeat,linear-gradient(var(--line),var(--line)) 0 0/100% 1px no-repeat}
+h3{font-family:var(--head);font-size:18px;font-weight:600;letter-spacing:0}
+nav.toc h3,.crumb{font-family:var(--head)}
+p,ul,ol{margin:0}
+ul,ol{padding-left:22px;display:flex;flex-direction:column;gap:6px}
+a{color:var(--link);text-decoration-color:#5a5a5a;text-underline-offset:3px}
+a:hover{text-decoration-color:var(--red)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+section{display:flex;flex-direction:column;gap:14px}
+header{display:flex;flex-direction:column;gap:12px}
+.crumb{font:600 12px var(--mono);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.crumb a{color:var(--muted)}
+.lead{color:var(--muted)}
+.chapters{display:flex;flex-wrap:wrap;gap:8px}
+.chapters span,.chapters a{font:500 14px var(--head);padding:6px 12px;border-radius:999px;border:1px solid var(--line);text-decoration:none;color:var(--muted)}
+article.ch{display:flex;flex-direction:column;gap:40px}
+article.ch[hidden]{display:none}
+.chapters a:hover{color:var(--fg);border-color:#3a3a3a}
+.chapters .on{background:#121212;border-color:#4a4a4a;color:var(--fg)}
+.legend{display:flex;flex-direction:column;gap:6px;font-size:15px;color:var(--muted);padding:14px 16px;border:1px solid var(--line);border-radius:10px}
+nav.toc ol{font-size:16px}
+.src{display:inline-block;font:500 11.5px/1.4 var(--mono);padding:1px 7px;margin-left:4px;border-radius:4px;background:var(--area-soft);color:var(--area-ink);text-decoration:none;white-space:nowrap;vertical-align:1px;border:1px solid #232323}
+a.src:hover{text-decoration:underline}
+.box{padding:14px 16px;border-left:3px solid;border-radius:0 10px 10px 0;display:flex;flex-direction:column;gap:8px}
+.box b.t{font:700 12px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.upd{background:var(--upd-bg);border-color:var(--upd-line);color:var(--upd-ink)}
+.trap{background:var(--trap-bg);border-color:var(--trap-line);color:var(--trap-ink)}
+.law{background:var(--area-soft);border-color:#6b6b6b;color:var(--fg)}
+.law q{font-style:italic;quotes:"“" "”"}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.5}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font:700 12px var(--mono);letter-spacing:.04em;color:var(--muted);background:var(--raise)}
+tr:last-child td{border-bottom:0}
+td.y{white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:600}
+.q{border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:12px}
+.q .stem{font-weight:600}
+.q ol{list-style:none;padding:0;gap:8px}
+.q li button{all:unset;box-sizing:border-box;display:block;width:100%;padding:9px 12px;border:1px solid var(--line);border-radius:8px;cursor:pointer}
+.q li button:hover{border-color:#444}
+.q li button:focus-visible{outline:2px solid var(--fg)}
+.q li.right button{border-color:var(--ok);box-shadow:inset 3px 0 0 var(--ok)}
+.q li.wrong button{border-color:var(--bad);box-shadow:inset 3px 0 0 var(--bad)}
+.q .why{font-size:15px;color:var(--muted);padding:6px 2px 0 12px}
+.q .rev{font-size:15px}
+.refs{display:flex;flex-direction:column;gap:10px}
+.ref{display:flex;flex-direction:column;gap:6px;padding:12px 14px;border:1px solid var(--line);border-radius:10px}
+.ref p{font-size:15px}
+.ref .c{font-size:14px;color:var(--muted)}
+.btns{display:flex;flex-wrap:wrap;gap:8px}
+a.btn{font:500 13px var(--head);text-decoration:none;color:var(--blue);border:1px solid #273042;border-radius:8px;padding:5px 10px}
+a.btn:hover{border-color:var(--blue)}
+.cardbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:15px}
+.cardbar button{font:500 14px var(--head);color:var(--fg);background:transparent;border:1px solid #3a3a3a;border-radius:8px;padding:7px 12px;cursor:pointer}
+.muted{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+.card{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:8px;padding:14px;border:1px solid var(--line);border-radius:10px;min-height:110px}
+.card:focus-visible{outline:2px solid var(--fg)}
+.card .tag{font:600 11.5px var(--mono);color:var(--area-ink);letter-spacing:.04em}
+.card .a{color:var(--area-ink);border-top:1px dashed var(--line);padding-top:8px}
+.card[aria-expanded="false"] .a{display:none}
+.card .hint{font-size:13px;color:var(--muted)}
+.card[aria-expanded="true"] .hint{display:none}
+code{font:14px var(--mono)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{display:inline-flex;align-items:flex-end;font:700 38px/1 var(--brand);letter-spacing:.01em;color:var(--fg);text-decoration:none}
+.flame{width:22px;height:31px;margin-left:2px;margin-bottom:2px;overflow:visible;flex:none}
+@media (prefers-reduced-motion:no-preference){.flame .hue{animation:hue 16s linear infinite}}
+@keyframes hue{0%{filter:hue-rotate(0deg)}30%{filter:hue-rotate(-30deg)}55%{filter:hue-rotate(-95deg)}80%{filter:hue-rotate(60deg)}100%{filter:hue-rotate(0deg)}}
+.tag-top{font:600 11px var(--mono);color:var(--muted);letter-spacing:.08em;text-transform:uppercase;text-align:right}
+.kit{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;font-size:14px;color:var(--muted)}
+a.copy{font:500 14px var(--head);text-decoration:none;color:var(--fg);background:transparent;border:1px solid rgba(176,42,48,.7);border-radius:8px;padding:7px 12px;white-space:nowrap}
+a.copy:hover{border-color:var(--red);color:#fff}
+footer{font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+/* quadros (28/10): fundo discreto, borda fina, faixa colorida à esquerda e um ícone no rótulo */
+.box{padding:14px 16px 15px;border:1px solid var(--line);border-left:3px solid;border-radius:6px 12px 12px 6px;gap:6px;font-size:16.5px;line-height:1.6}
+.box b.t{display:flex;align-items:center;gap:8px;font:700 11.5px/1.2 var(--mono);letter-spacing:.1em}
+.box b.t::before{display:inline-grid;place-items:center;flex:none;width:20px;height:20px;border:1px solid currentColor;border-radius:5px;font:600 12px/1 var(--mono);letter-spacing:0}
+.box.upd{border-color:#141a24;border-left-color:var(--upd-line)}.upd b.t{color:#8fa6cc}.upd b.t::before{content:"↻"}
+.box.trap{border-color:#1f0d0f;border-left-color:var(--trap-line)}.trap b.t{color:#e0757b}.trap b.t::before{content:"!"}
+.box.law{border-color:#1c1c1c;border-left-color:#6b6b6b}.law b.t{color:#bdbdbd}.law b.t::before{content:"§"}
+.pearl{background:#0c0a06;border-color:#221d12;border-left-color:#b8923a;color:#e8e0cc}.pearl b.t{color:#d4ad55}.pearl b.t::before{content:"◆"}
+.cur{background:#09090d;border-color:#1b1a24;border-left-color:#7a68a8;color:#dcd7e8}.cur b.t{color:#a897d6}.cur b.t::before{content:"✦"}
+.box .src{margin-left:6px}
+figure.fig{margin:0;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--raise)}
+.fig img,.fig svg{display:block;width:100%;height:auto}
+.fig figcaption{padding:10px 14px 12px;font-size:14px;line-height:1.5;color:var(--muted);border-top:1px solid var(--line)}
+.tbl-t{font:700 11.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:-6px}
+tbody tr:nth-child(even) td{background:#080808}
+/*res:flame*/
+/* chama da residência: só as cores da paleta (vermelho, branco, toque de azul), mesclando a cada 5 s */
+:root:not([data-per]) .flame .hue{animation:none;filter:none}
+:root:not([data-per]) #fl-out stop:nth-child(1){stop-color:#7d151b}:root:not([data-per]) #fl-out stop:nth-child(2){stop-color:#b02a30}:root:not([data-per]) #fl-out stop:nth-child(3){stop-color:#d9434a}:root:not([data-per]) #fl-in stop:nth-child(1){stop-color:#f4d9da}:root:not([data-per]) #fl-in stop:nth-child(2){stop-color:#e0666c}:root:not([data-per]) #fl-core stop:nth-child(1){stop-color:#ffffff}:root:not([data-per]) #fl-core stop:nth-child(2){stop-color:#f6dede}:root:not([data-per]) #fl-glow stop{stop-color:#b02a30}
+@media (prefers-reduced-motion:no-preference){:root:not([data-per]) #fl-out stop:nth-child(1){animation:fl-o1 20s ease-in-out infinite}:root:not([data-per]) #fl-out stop:nth-child(2){animation:fl-o2 20s ease-in-out infinite}:root:not([data-per]) #fl-out stop:nth-child(3){animation:fl-o3 20s ease-in-out infinite}:root:not([data-per]) #fl-in stop:nth-child(1){animation:fl-i1 20s ease-in-out infinite}:root:not([data-per]) #fl-in stop:nth-child(2){animation:fl-i2 20s ease-in-out infinite}:root:not([data-per]) #fl-core stop:nth-child(1){animation:fl-c1 20s ease-in-out infinite}:root:not([data-per]) #fl-core stop:nth-child(2){animation:fl-c2 20s ease-in-out infinite}:root:not([data-per]) #fl-glow stop{animation:fl-g 20s ease-in-out infinite}}
+@keyframes fl-o1{0%{stop-color:#7d151b}25%{stop-color:#b02a30}50%{stop-color:#9c2329}75%{stop-color:#5e0f14}100%{stop-color:#7d151b}}@keyframes fl-o2{0%{stop-color:#b02a30}25%{stop-color:#e0545a}50%{stop-color:#b02a30}75%{stop-color:#9c2329}100%{stop-color:#b02a30}}@keyframes fl-o3{0%{stop-color:#d9434a}25%{stop-color:#f3e9ea}50%{stop-color:#7f97bd}75%{stop-color:#c4343b}100%{stop-color:#d9434a}}@keyframes fl-i1{0%{stop-color:#f4d9da}25%{stop-color:#ffffff}50%{stop-color:#eef2f8}75%{stop-color:#ecc4c6}100%{stop-color:#f4d9da}}@keyframes fl-i2{0%{stop-color:#e0666c}25%{stop-color:#f2c9cb}50%{stop-color:#b8c6de}75%{stop-color:#c8464d}100%{stop-color:#e0666c}}@keyframes fl-c1{0%{stop-color:#ffffff}25%{stop-color:#ffffff}50%{stop-color:#ffffff}75%{stop-color:#fff3f3}100%{stop-color:#ffffff}}@keyframes fl-c2{0%{stop-color:#f6dede}25%{stop-color:#ffffff}50%{stop-color:#e6ecf5}75%{stop-color:#e9b5b8}100%{stop-color:#f6dede}}@keyframes fl-g{0%{stop-color:#b02a30}25%{stop-color:#d9434a}50%{stop-color:#7f97bd}75%{stop-color:#8c2228}100%{stop-color:#b02a30}}
+/*/res:flame*/
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<linearGradient id="fl-out" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff3b0a"/><stop offset=".55" stop-color="#ff6a00"/><stop offset="1" stop-color="#ff2d55"/></linearGradient>
+<linearGradient id="fl-in" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ffd23f"/><stop offset="1" stop-color="#ff9a1f"/></linearGradient>
+<radialGradient id="fl-core" cx=".5" cy=".6" r=".6"><stop offset="0" stop-color="#fff8d6"/><stop offset="1" stop-color="#ffe066"/></radialGradient>
+</defs></svg>
+<main>
+<header>
+<div class="top">
+  <span class="brand" aria-label="medaj.">medaj<svg class="flame" viewBox="0 0 60 84" aria-hidden="true"><g class="hue">
+<path d="M38 30 C44 22 44 14 41 6 C50 14 53 26 47 38 Z" fill="url(#fl-out)" stroke="#000" stroke-width="2.6" stroke-linejoin="round"/>
+<path d="M17 36 C12 28 13 20 16 14 C20 22 24 25 24 31 Z" fill="url(#fl-out)" stroke="#000" stroke-width="2.6" stroke-linejoin="round"/>
+<path d="M30 80 C13 80 5 67 7 53 C9 42 16 37 16 26 C22 31 25 37 25 41 C27 30 31 18 38 8 C38 21 45 28 49 37 C52 34 52 30 51 26 C57 35 58 46 56 56 C54 70 46 80 30 80 Z" fill="url(#fl-out)" stroke="#000" stroke-width="2.8" stroke-linejoin="round"/>
+<path d="M30 76 C19 76 14 67 15.5 59 C17 51 22 48 22.5 41 C26 45 27.5 49 27.5 52 C30.5 44 33.5 38 38 32 C38.5 41 44 47 45 55 C46.5 67 40 76 30 76 Z" fill="url(#fl-in)"/>
+<ellipse cx="30" cy="68" rx="9" ry="7" fill="url(#fl-core)"/>
+<path d="M18.5 54 L27.5 57.5 L26.5 61 L19 58.5 Z" fill="#1a0614"/><path d="M41.5 54 L32.5 57.5 L33.5 61 L41 58.5 Z" fill="#1a0614"/>
+<circle cx="24.5" cy="58.4" r="1.3" fill="#fff6b0"/><circle cx="35.5" cy="58.4" r="1.3" fill="#fff6b0"/>
+<path d="M21 64 L23.6 67.6 L26.2 64.4 L28.8 68 L31.4 64.4 L34 68 L36.6 64.4 L39 64 Q31 75 21 64 Z" fill="#1a0614"/>
+</g></svg></span>
+  <span class="tag-top">Apostila<br>Bloco 2</span>
+</div>
+  <span class="crumb"><a href="./#hoje">← medaj. app</a> · <a href="./#apostilas">Apostilas</a> · Bloco 2 · Ginecologia e Obstetrícia</span>
+  <div class="kit"><a class="copy" href="https://docs.google.com/spreadsheets/d/1Y9RxVuuvCvq9r7IoeMg4AhUHskRKyq4FiDYwnXIWcO0/copy" target="_blank" rel="noopener">Fazer minha cópia do checklist</a><span>Planilha do Google com a jornada dia a dia, com o link da seção a ler em cada dia. Cada pessoa usa a sua cópia.</span></div>
+  <div class="chapters" aria-label="Capítulos do bloco">
+    <a href="#obs1" data-ch="obs1">Pré-natal</a><span>Doença hipertensiva e diabetes gestacional · em breve</span><span>Sangramentos da primeira metade · em breve</span>
+  </div>
+  <div class="legend">
+    <span><b>Como ler.</b> O texto corrido é o conteúdo-base. Cada afirmação traz a fonte primária num selo (por exemplo <a class="src" href="https://planalto.gov.br/ccivil_03/LEIS/L8080.htm" target="_blank" rel="noopener">Lei 8.080, art. 7º</a>), que abre o texto oficial.</span>
+    <span>Caixas com o título <b>Atualização</b> trazem o que mudou de 2024 a 2026. Caixas <b>Pegadinha</b> trazem o que as bancas usam para derrubar, <b>Pérola</b> o detalhe que resolve a questão e <b>Curiosidade</b> um fato da medicina ligado ao tema.</span>
+  </div>
+</header>
+
+<article class="ch" id="obs1">
+<h1>Diagnóstico de gravidez e pré-natal</h1>
+<p class="lead">Semana 1 da jornada, junto com o capítulo do Sistema Único de Saúde. Cai em toda prova: datação, calendário de consultas e exames, suplementação, vacinas e a conduta diante de um resultado alterado na primeira consulta.</p>
+
+<nav class="toc" aria-label="Sumário do capítulo">
+  <h3>Sumário</h3>
+  <ol>
+    <li><a href="#o1-diagnostico">Diagnóstico de gravidez</a></li>
+    <li><a href="#o1-datacao">Idade gestacional e data provável do parto</a></li>
+    <li><a href="#o1-modificacoes">Modificações do organismo materno</a></li>
+    <li><a href="#o1-consultas">Consultas: quando e quantas</a></li>
+    <li><a href="#o1-exames">Exames por trimestre</a></li>
+    <li><a href="#o1-suplementos">Suplementação</a></li>
+    <li><a href="#o1-vacinas">Vacinas</a></li>
+    <li><a href="#o1-exame">Exame obstétrico</a></li>
+    <li><a href="#o1-peso">Ganho de peso</a></li>
+    <li><a href="#o1-queixas">Queixas comuns</a></li>
+    <li><a href="#o1-risco">Risco gestacional e alto risco</a></li>
+    <li><a href="#o1-resumo">O que mais cai</a></li>
+    <li><a href="#o1-questoes">Questões comentadas</a></li>
+    <li><a href="#o1-cards">Flashcards</a></li>
+    <li><a href="#o1-refs">Referências</a></li>
+  </ol>
+</nav>
+
+<section id="o1-diagnostico" aria-labelledby="o1h1">
+  <h2 id="o1h1">1. Diagnóstico de gravidez</h2>
+  <p>O diagnóstico clínico usa sinais classificados em três graus. As bancas cobram os epônimos e, principalmente, quais sinais dão <b>certeza</b>.<a class="src" href="https://bvsms.saude.gov.br/bvs/publicacoes/cadernos_atencao_basica_32_prenatal.pdf" target="_blank" rel="noopener">MS, Caderno de Atenção Básica 32</a></p>
+  <div class="tbl"><table>
+    <thead><tr><th>Grau</th><th>Sinais</th><th>O que a prova quer</th></tr></thead>
+    <tbody>
+      <tr><td><b>Presunção</b></td><td>Atraso menstrual, náuseas e vômitos, mastalgia, polaciúria, sonolência; tubérculos de Montgomery, rede venosa de Haller, aréola secundária (sinal de Hunter); percepção de movimentos fetais pela própria mulher</td><td>Dependem da mulher ou são inespecíficos</td></tr>
+      <tr><td><b>Probabilidade</b></td><td>Útero aumentado e amolecido; <b>Hegar</b> (istmo amolecido no toque bimanual); <b>Piskacek</b> (assimetria uterina pela implantação); <b>Nobile-Budin</b> (fundo de saco lateral preenchido); <b>Goodell</b> (colo amolecido); <b>Jacquemier/Chadwick</b> (vulva e vagina violáceas); <b>Kluge</b> (vagina violácea); <b>Osiander</b> (pulso vaginal palpável); beta-hCG positivo</td><td>O beta-hCG positivo é sinal de <b>probabilidade</b>, não de certeza</td></tr>
+      <tr><td><b>Certeza</b></td><td>Batimentos cardíacos fetais (sonar a partir de 10–12 semanas, Pinard a partir de ~20); movimentos fetais percebidos pelo examinador; palpação de partes fetais (Puzos: rechaço fetal); embrião ou feto à ultrassonografia</td><td>Exige ver, ouvir ou palpar o concepto</td></tr>
+    </tbody>
+  </table></div>
+  <h3>Beta-hCG</h3>
+  <ul>
+    <li>Produzido pelo sinciciotrofoblasto; aparece no sangue cerca de 8 a 10 dias após a fecundação, perto da implantação. O teste urinário costuma positivar por volta do atraso menstrual.</li>
+    <li>Na gestação inicial viável, os níveis sobem rapidamente (em geral dobram em cerca de 48 horas) até o pico, entre 8 e 10 semanas; depois caem e estabilizam.</li>
+    <li><b>Zona discriminatória:</b> valor de beta-hCG acima do qual o saco gestacional deveria ser visto na USG transvaginal. A referência clássica é 1.500 a 2.000 mUI/mL; diretrizes recentes recomendam cautela e aceitam valores até cerca de 3.500 antes de concluir que não há gestação tópica, para não interromper gestação viável.</li>
+  </ul>
+  <h3>Ultrassonografia transvaginal (marcos aproximados)</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Idade gestacional</th><th>Achado</th></tr></thead>
+    <tbody>
+      <tr><td>4,5–5 semanas</td><td>Saco gestacional</td></tr>
+      <tr><td>5,5 semanas</td><td>Vesícula vitelínica (primeira estrutura que confirma gestação intrauterina)</td></tr>
+      <tr><td>6 semanas</td><td>Embrião com atividade cardíaca</td></tr>
+    </tbody>
+  </table></div>
+  <p>Na Rede Alyne, o teste rápido de gravidez é feito na própria unidade de saúde, e o resultado positivo já abre o pré-natal (captação precoce, até 12 semanas).<a class="src" href="https://acoesnacionais.iff.fiocruz.br/wp-content/uploads/bp-attachments/23250/PRT_GM_MS_5350_2024_diretrizes.pdf" target="_blank" rel="noopener">Portaria GM/MS 5.350/2024</a></p>
+  <div class="box trap"><b class="t">Pegadinha</b><p>Beta-hCG positivo é sinal de <b>probabilidade</b>. Certeza só com o concepto: BCF, movimento fetal sentido pelo examinador ou embrião na USG. E a primeira estrutura que confirma gestação intrauterina é a <b>vesícula vitelínica</b>, não o saco gestacional (que pode ser um pseudossaco na gravidez ectópica).</p></div>
+</section>
+
+<section id="o1-datacao" aria-labelledby="o1h2">
+  <h2 id="o1h2">2. Idade gestacional e data provável do parto</h2>
+  <p>A idade gestacional (IG) é contada a partir do primeiro dia da última menstruação (DUM), não da concepção. Com DUM confiável, a IG em semanas é o número de dias desde a DUM dividido por 7.<a class="src" href="https://bvsms.saude.gov.br/bvs/publicacoes/cadernos_atencao_basica_32_prenatal.pdf" target="_blank" rel="noopener">MS, CAB 32</a></p>
+  <div class="box law"><b class="t">Regra de Naegele</b><p>DPP = DUM <b>+ 7 dias − 3 meses</b> (ou + 9 meses, se a DUM for de janeiro a março). Exemplo: DUM em 10/01/2026 → DPP em 17/10/2026. Se a soma dos dias passar do fim do mês, avance também o mês.</p></div>
+  <div class="box cur"><b class="t">Curiosidade</b><p>A regra leva o nome de Franz Naegele (1778–1851), obstetra alemão, mas o cálculo já aparecia em Boerhaave em 1744. E ela erra para menos: num estudo de Harvard com gestações sem complicações, as primíparas deram à luz, em mediana, cerca de 8 dias depois do que a regra previa. Por isso a ultrassonografia do primeiro trimestre manda na datação.<a class="src" href="https://pubmed.ncbi.nlm.nih.gov/21726180/" target="_blank" rel="noopener">Obladen, 2011</a><a class="src" href="https://pubmed.ncbi.nlm.nih.gov/2342739/" target="_blank" rel="noopener">Mittendorf, 1990</a></p></div>
+  <h3>Quando a USG corrige a DUM</h3>
+  <p>A USG do primeiro trimestre, pelo comprimento cabeça-nádega (CCN), é o método mais preciso de datação. A DUM é substituída pela USG quando a diferença entre as duas passa do limite para a idade gestacional do exame. Sem USG antes de 22 semanas, a gestação é considerada com datação subótima.<a class="src" href="https://doi.org/10.1097/AOG.0000000000002046" target="_blank" rel="noopener">ACOG 700, 2017</a></p>
+  <div class="tbl"><table>
+    <thead><tr><th>IG pela DUM no dia da USG</th><th>Método</th><th>Redatar se a diferença for</th></tr></thead>
+    <tbody>
+      <tr><td>Até 8 6/7 semanas</td><td>CCN</td><td>&gt; 5 dias</td></tr>
+      <tr><td>9 0/7 a 13 6/7</td><td>CCN</td><td>&gt; 7 dias</td></tr>
+      <tr><td>14 0/7 a 15 6/7</td><td>Biometria</td><td>&gt; 7 dias</td></tr>
+      <tr><td>16 0/7 a 21 6/7</td><td>Biometria</td><td>&gt; 10 dias</td></tr>
+      <tr><td>22 0/7 a 27 6/7</td><td>Biometria</td><td>&gt; 14 dias</td></tr>
+      <tr><td>28 0/7 ou mais</td><td>Biometria</td><td>&gt; 21 dias</td></tr>
+    </tbody>
+  </table></div>
+  <p>Sem DUM e sem USG, a altura uterina estima a IG grosseiramente (ver seção 8). Depois que a DPP é definida pela USG precoce, ela não muda com exames posteriores.</p>
+  <div class="box trap"><b class="t">Pegadinha</b><p>USG tardia não "corrige" uma USG precoce. Quanto mais avançada a gestação, maior o erro da biometria; por isso o limite de diferença cresce com a idade gestacional.</p></div>
+</section>
+
+<section id="o1-modificacoes" aria-labelledby="o1h3">
+  <h2 id="o1h3">3. Modificações do organismo materno</h2>
+  <p>As provas usam essas mudanças para separar o fisiológico do patológico, sobretudo em exames laboratoriais.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Sistema</th><th>O que muda</th><th>Consequência para a prova</th></tr></thead>
+    <tbody>
+      <tr><td>Hematológico</td><td>Volume plasmático sobe proporcionalmente mais que a massa de hemácias</td><td>Anemia dilucional; na gestação, anemia é Hb &lt; 11 g/dL. Leucocitose leve é normal</td></tr>
+      <tr><td>Coagulação</td><td>Fibrinogênio e vários fatores sobem</td><td>Estado de hipercoagulabilidade: maior risco de trombose</td></tr>
+      <tr><td>Cardiovascular</td><td>Débito cardíaco e frequência cardíaca sobem; resistência vascular cai</td><td>PA cai no segundo trimestre. Útero comprime a cava em decúbito dorsal: hipotensão supina, aliviada pelo decúbito lateral esquerdo</td></tr>
+      <tr><td>Respiratório</td><td>Volume corrente e ventilação-minuto aumentam (efeito da progesterona)</td><td>Alcalose respiratória compensada (PaCO₂ mais baixa); dispneia leve fisiológica</td></tr>
+      <tr><td>Renal</td><td>Fluxo plasmático renal e filtração glomerular sobem; ureteres dilatam (mais à direita)</td><td>Creatinina e ureia mais baixas que fora da gestação; glicosúria pode ocorrer sem diabetes; estase urinária favorece pielonefrite</td></tr>
+      <tr><td>Metabólico</td><td>Resistência à insulina progressiva, mediada por hormônios placentários (hPL)</td><td>Base fisiológica do diabetes gestacional, que costuma surgir na segunda metade</td></tr>
+      <tr><td>Tireoide</td><td>O hCG estimula o receptor de TSH no primeiro trimestre</td><td>TSH pode ficar baixo no início da gestação sem doença</td></tr>
+      <tr><td>Gastrointestinal</td><td>Progesterona relaxa a musculatura lisa</td><td>Pirose, constipação, esvaziamento gástrico mais lento</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="o1-consultas" aria-labelledby="o1h4">
+  <h2 id="o1h4">4. Consultas: quando e quantas</h2>
+  <p>A Rede Alyne (Portaria GM/MS 5.350/2024) substituiu a Rede Cegonha. Ela fixa o início do pré-natal <b>até 12 semanas</b> e <b>no mínimo 7 consultas</b>, intercaladas entre enfermagem e medicina na atenção primária.<a class="src" href="https://acoesnacionais.iff.fiocruz.br/wp-content/uploads/bp-attachments/23250/PRT_GM_MS_5350_2024_diretrizes.pdf" target="_blank" rel="noopener">Portaria GM/MS 5.350/2024</a></p>
+  <div class="tbl"><table>
+    <thead><tr><th>Período</th><th>Frequência das consultas (MS)</th></tr></thead>
+    <tbody>
+      <tr><td>Até 28 semanas</td><td>Mensais</td></tr>
+      <tr><td>28 a 36 semanas</td><td>Quinzenais</td></tr>
+      <tr><td>36 a 41 semanas</td><td>Semanais</td></tr>
+    </tbody>
+  </table></div>
+  <p>Não existe "alta do pré-natal": o acompanhamento segue até o parto, e a puérpera recebe visita domiciliar até o 7º dia após o parto.<a class="src" href="https://bvsms.saude.gov.br/bvs/publicacoes/cadernos_atencao_basica_32_prenatal.pdf" target="_blank" rel="noopener">MS, CAB 32</a><a class="src" href="https://acoesnacionais.iff.fiocruz.br/wp-content/uploads/bp-attachments/23250/PRT_GM_MS_5350_2024_diretrizes.pdf" target="_blank" rel="noopener">Portaria 5.350/2024</a></p>
+  <div class="box upd"><b class="t">Atualização</b><p>Questões antigas (Rede Cegonha e PHPN) falam em <b>no mínimo 6 consultas</b>. Com a Rede Alyne (2024), o mínimo passou a <b>7</b>, e a gestante de alto risco acompanhada no AGPAR (ambulatório de gestação e puerpério de alto risco) faz pelo menos 12. Em uma questão de 2025 em diante, use 7.</p></div>
+  <p>O pré-natal que existe no papel não é o mesmo que o pré-natal de qualidade: no estudo Nascer no Brasil, a cobertura era alta, mas apenas uma pequena parcela das mulheres recebeu todos os cuidados recomendados.<a class="src" href="https://doi.org/10.11606/s1518-8787.2020054002021" target="_blank" rel="noopener">Bittencourt, Rev Saúde Pública 2020</a></p>
+</section>
+
+<section id="o1-exames" aria-labelledby="o1h5">
+  <h2 id="o1h5">5. Exames por trimestre</h2>
+  <p>Rotina do pré-natal de risco habitual no SUS. A Rede Alyne cofinancia os testes rápidos (gravidez, sífilis, HIV, hepatites B e C), o HTLV, a urocultura, a hemoglobina e o hematócrito, a ultrassonografia para todas e o Coombs indireto nas Rh negativas.<a class="src" href="https://acoesnacionais.iff.fiocruz.br/wp-content/uploads/bp-attachments/23250/PRT_GM_MS_5350_2024_diretrizes.pdf" target="_blank" rel="noopener">Portaria 5.350/2024</a><a class="src" href="https://bvsms.saude.gov.br/bvs/publicacoes/cadernos_atencao_basica_32_prenatal.pdf" target="_blank" rel="noopener">MS, CAB 32</a></p>
+  <div class="tbl"><table>
+    <thead><tr><th>Momento</th><th>Exames</th></tr></thead>
+    <tbody>
+      <tr><td><b>1ª consulta (1º trimestre)</b></td><td>Hemograma; tipagem ABO e fator Rh; Coombs indireto se Rh negativo; glicemia de jejum; testes rápidos ou sorologias para sífilis, HIV, hepatite B (HBsAg) e hepatite C; <b>HTLV</b>; toxoplasmose IgG e IgM; urina tipo 1 e <b>urocultura</b>; ultrassonografia obstétrica; citopatológico se estiver em atraso pelo rastreamento</td></tr>
+      <tr><td><b>2º trimestre</b></td><td><b>TOTG 75 g entre 24 e 28 semanas</b> (se a glicemia de jejum inicial foi &lt; 92 mg/dL); Coombs indireto nas Rh negativas não sensibilizadas; toxoplasmose se suscetível</td></tr>
+      <tr><td><b>3º trimestre</b></td><td>Hemograma; glicemia de jejum; repetir sífilis, HIV e hepatite B; toxoplasmose se suscetível; urocultura</td></tr>
+      <tr><td><b>No parto</b></td><td>Teste para sífilis e HIV na admissão (este, se não houver resultado recente)</td></tr>
+    </tbody>
+  </table></div>
+  <h3>Diabetes gestacional: o critério brasileiro</h3>
+  <p>O consenso brasileiro (OPAS, MS, FEBRASGO e SBD) adota os pontos de corte da IADPSG, que vieram do estudo HAPO: a relação entre glicemia materna e desfechos ruins é contínua, sem limiar natural.<a class="src" href="https://portaldeboaspraticas.iff.fiocruz.br/biblioteca/rastreamento-e-diagnostico-de-diabetes-mellitus-gestacional-no-brasil-2016/" target="_blank" rel="noopener">Consenso DMG Brasil 2016</a><a class="src" href="https://doi.org/10.1056/NEJMoa0707943" target="_blank" rel="noopener">HAPO, NEJM 2008</a><a class="src" href="https://doi.org/10.2337/dc09-1848" target="_blank" rel="noopener">IADPSG 2010</a></p>
+  <div class="tbl"><table>
+    <thead><tr><th>Exame</th><th>Diabetes gestacional</th><th>Diabetes prévio (franco)</th></tr></thead>
+    <tbody>
+      <tr><td>Glicemia de jejum na 1ª consulta</td><td>92 a 125 mg/dL</td><td>≥ 126 mg/dL</td></tr>
+      <tr><td>TOTG 75 g (24–28 semanas): um valor alterado basta</td><td>Jejum 92–125; 1 h ≥ 180; 2 h 153–199</td><td>Jejum ≥ 126 ou 2 h ≥ 200</td></tr>
+    </tbody>
+  </table></div>
+  <p>Onde não há TOTG disponível, o consenso aceita a glicemia de jejum entre 24 e 28 semanas como alternativa, com os mesmos cortes.</p>
+  <h3>Estreptococo do grupo B</h3>
+  <p>A referência internacional recomenda cultura vaginal e retal de todas as gestantes entre <b>36 0/7 e 37 6/7 semanas</b>, com antibiótico intraparto nas positivas (exceto cesárea eletiva com membranas íntegras).<a class="src" href="https://doi.org/10.1097/AOG.0000000000003668" target="_blank" rel="noopener">ACOG 797, 2020</a> No SUS, a cultura não está entre os exames cofinanciados da Rede Alyne e a oferta varia por serviço; onde não há rastreio, usa-se a profilaxia pelos fatores de risco. Qualquer estratégia reduz a sepse neonatal precoce pelo GBS em relação a nenhuma, e o rastreio universal parece mais eficaz que o baseado em risco, com evidência de baixa certeza.<a class="src" href="https://doi.org/10.1111/apa.70568" target="_blank" rel="noopener">Campbell, Acta Paediatr 2026</a></p>
+  <div class="box trap"><b class="t">Pegadinha</b><p>Bacteriúria assintomática na gestação <b>sempre se trata</b>, guiada pela urocultura: sem tratamento, aumenta o risco de pielonefrite. E glicemia de jejum de 92 já na primeira consulta <b>fecha o diagnóstico</b> de diabetes gestacional; não precisa de TOTG depois.</p></div>
+  <div class="box pearl"><b class="t">Pérola</b><p>Glicemia de jejum na gestação: <b>abaixo de 92</b>, normal (fazer o teste de 75 g entre 24 e 28 semanas); <b>92 a 125</b>, diabetes gestacional; <b>126 ou mais</b>, diabetes prévio.</p></div>
+</section>
+
+<section id="o1-suplementos" aria-labelledby="o1h6">
+  <h2 id="o1h6">6. Suplementação</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Suplemento</th><th>Dose e período</th><th>Para quê</th></tr></thead>
+    <tbody>
+      <tr><td><b>Ácido fólico</b></td><td>0,4 mg/dia, idealmente desde pelo menos 30 dias antes da concepção até 12 semanas. Doses altas (4 a 5 mg/dia) quando há filho anterior com defeito do tubo neural</td><td>Prevenção de defeitos do tubo neural</td></tr>
+      <tr><td><b>Ferro</b></td><td>40 mg de ferro elementar/dia (sulfato ferroso) da descoberta da gestação até o 3º mês pós-parto</td><td>Prevenção da anemia ferropriva</td></tr>
+      <tr><td><b>Cálcio</b></td><td>Carbonato de cálcio 1.250 mg duas vezes ao dia (1 g de cálcio elementar), da 12ª semana até o parto, para <b>todas</b> as gestantes, 2 horas longe do ferro</td><td>Prevenção de pré-eclâmpsia e suas complicações</td></tr>
+      <tr><td><b>AAS</b></td><td>100 a 150 mg/dia, à noite, iniciado de preferência entre 12 e 16 semanas, até 36 semanas, <b>só no alto risco</b> para pré-eclâmpsia</td><td>Prevenção de pré-eclâmpsia pré-termo</td></tr>
+    </tbody>
+  </table></div>
+  <p>O ácido fólico tem base sólida: no ensaio do MRC, em mulheres com gestação anterior afetada, a suplementação reduziu a recorrência de defeitos do tubo neural em 72%.<a class="src" href="https://pubmed.ncbi.nlm.nih.gov/1677062/" target="_blank" rel="noopener">MRC Vitamin Study, Lancet 1991</a> O AAS ganhou força com o ASPRE: 150 mg/noite de 11–14 até 36 semanas em gestantes de alto risco pelo rastreio reduziu a pré-eclâmpsia pré-termo.<a class="src" href="https://doi.org/10.1056/NEJMoa1704559" target="_blank" rel="noopener">ASPRE, NEJM 2017</a></p>
+  <p>O cálcio universal é recomendação do Ministério da Saúde desde a nota técnica conjunta 251/2024.<a class="src" href="https://portaldeboaspraticas.iff.fiocruz.br/wp-content/uploads/2025/02/nota-tecnica-conjunta-no-251-2024-coemm-cgesmu-dgci-saps-ms-e-cgan-deppros-saps-ms.pdf" target="_blank" rel="noopener">NT Conjunta 251/2024</a></p>
+  <div class="box upd"><b class="t">Atualização</b><p>A revisão Cochrane de 2025 sobre cálcio na gestação excluiu ensaios por problemas de confiabilidade e passou a concluir que o cálcio pode fazer <b>pouca ou nenhuma diferença</b> na pré-eclâmpsia (RR 0,83; IC 95% 0,67–1,04).<a class="src" href="https://doi.org/10.1002/14651858.CD001059.pub6" target="_blank" rel="noopener">Cochrane 2025</a> Autores brasileiros contestaram a forma como os ensaios foram excluídos.<a class="src" href="https://doi.org/10.1186/s12978-026-02395-w" target="_blank" rel="noopener">Torloni, Reprod Health 2026</a> Para a prova: a recomendação do MS e da OMS segue vigente; a evidência é que está em disputa.</p></div>
+  <div class="box trap"><b class="t">Pegadinha</b><p>Cálcio e ferro <b>não</b> se tomam juntos (o cálcio reduz a absorção do ferro). E AAS não é para todas: é para quem tem alto risco de pré-eclâmpsia.</p></div>
+</section>
+
+<section id="o1-vacinas" aria-labelledby="o1h7">
+  <h2 id="o1h7">7. Vacinas</h2>
+  <p>Calendário da gestante segundo a Instrução Normativa do Calendário Nacional de Vacinação de 2026.<a class="src" href="https://www.gov.br/saude/pt-br/composicao/svsa/pni/calendario-tecnico/instrucao-normativa-que-instrui-o-calendario-nacional-de-vacinacao-2026" target="_blank" rel="noopener">IN do Calendário Nacional 2026</a></p>
+  <div class="tbl"><table>
+    <thead><tr><th>Vacina</th><th>Quando</th><th>Detalhe que cai</th></tr></thead>
+    <tbody>
+      <tr><td><b>dTpa</b></td><td>1 dose a partir da 20ª semana, <b>em cada gestação</b></td><td>Protege o recém-nascido da coqueluche por anticorpos transplacentários. Se não for feita, aplicar no puerpério, até 45 dias</td></tr>
+      <tr><td><b>dT</b> (completar esquema)</td><td>Sem vacina prévia: 3 doses (2 dT + 1 dTpa a partir de 20 semanas), intervalo de 60 dias. Com 1 dose prévia: 1 dT + 1 dTpa. Com 2 doses: 1 dTpa</td><td>A dTpa sempre entra como uma das doses do esquema</td></tr>
+      <tr><td><b>Hepatite B</b></td><td>Se o esquema de 3 doses não estiver completo, iniciar ou completar logo no início do pré-natal</td><td>Esquema interrompido não se reinicia. Suscetível exposta: vacina + imunoglobulina</td></tr>
+      <tr><td><b>Influenza</b></td><td>1 dose por temporada, em cada gestação, em qualquer idade gestacional</td><td>Se perdida, até 45 dias pós-parto</td></tr>
+      <tr><td><b>Covid-19</b> (RNAm)</td><td>1 dose em cada gestação, em qualquer idade gestacional, com pelo menos 6 meses desde a última dose</td><td></td></tr>
+      <tr><td><b>VSR</b> (vírus sincicial respiratório)</td><td>Dose única em cada gestação, <b>a partir de 28 semanas</b></td><td>Protege o bebê nos primeiros meses contra bronquiolite. Pode ser dada junto com as outras</td></tr>
+    </tbody>
+  </table></div>
+  <p><b>Contraindicadas na gestação:</b> vacinas de vírus vivo, como tríplice viral, varicela e BCG. Febre amarela só em situação excepcional, pesando risco e benefício.</p>
+  <div class="box upd"><b class="t">Atualização</b><p>A vacina materna contra o VSR foi incorporada ao SUS em 2025 (Portaria SECTICS 14/2025). No ensaio MATISSE, a vacinação materna reduziu a doença grave do trato respiratório inferior por VSR no bebê.<a class="src" href="https://doi.org/10.1097/AOG.0000000000005816" target="_blank" rel="noopener">Simões, Obstet Gynecol 2025</a> Houve um sinal de mais partos pré-termo em países de renda média e baixa, sem relação causal comprovada.<a class="src" href="https://doi.org/10.1097/AOG.0000000000005817" target="_blank" rel="noopener">Madhi, Obstet Gynecol 2025</a> Por isso a aplicação a partir de 28 semanas.</p></div>
+</section>
+
+<section id="o1-exame" aria-labelledby="o1h8">
+  <h2 id="o1h8">8. Exame obstétrico</h2>
+  <h3>Altura uterina</h3>
+  <ul>
+    <li><b>12 semanas:</b> o útero começa a ser palpável acima da sínfise púbica.</li>
+    <li><b>16 semanas:</b> entre a sínfise e a cicatriz umbilical.</li>
+    <li><b>20 semanas:</b> na altura da cicatriz umbilical.</li>
+    <li><b>De 20 a ~32 semanas:</b> a altura uterina em centímetros acompanha a idade gestacional em semanas (regra de McDonald), com tolerância de cerca de 2 cm.</li>
+  </ul>
+  <p>Altura uterina maior que o esperado: erro de data, gestação múltipla, polidrâmnio, macrossomia, mioma. Menor: erro de data, restrição de crescimento, oligoâmnio. A conduta é solicitar ultrassonografia.<a class="src" href="https://bvsms.saude.gov.br/bvs/publicacoes/cadernos_atencao_basica_32_prenatal.pdf" target="_blank" rel="noopener">MS, CAB 32</a></p>
+  <h3>Manobras de Leopold</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Tempo</th><th>O que avalia</th></tr></thead>
+    <tbody>
+      <tr><td>1º</td><td>Fundo uterino: qual polo fetal ocupa o fundo (situação e apresentação)</td></tr>
+      <tr><td>2º</td><td>Flancos: de que lado está o dorso fetal (posição)</td></tr>
+      <tr><td>3º (Leopold-Zweifel)</td><td>Polo inferior e sua mobilidade (apresentação)</td></tr>
+      <tr><td>4º</td><td>Grau de penetração do polo na pelve (insinuação)</td></tr>
+    </tbody>
+  </table></div>
+  <h3>Batimentos cardíacos fetais</h3>
+  <p>Sonar Doppler a partir de 10–12 semanas; estetoscópio de Pinard a partir de cerca de 20 semanas. Faixa normal: <b>110 a 160 bpm</b>. O foco fica do lado do dorso fetal.</p>
+</section>
+
+<section id="o1-peso" aria-labelledby="o1h9">
+  <h2 id="o1h9">9. Ganho de peso</h2>
+  <p>O Brasil passou a usar curvas próprias de ganho de peso gestacional, construídas com dados de gestantes brasileiras, no lugar das faixas do IOM norte-americano.<a class="src" href="https://doi.org/10.1093/ajcn/nqaa402" target="_blank" rel="noopener">Kac, Am J Clin Nutr 2021</a> As faixas de ganho total associadas ao menor risco de desfechos ruins, pelo IMC pré-gestacional, são:<a class="src" href="https://doi.org/10.1016/j.ajcnut.2022.11.021" target="_blank" rel="noopener">Carrilho, Am J Clin Nutr 2022</a></p>
+  <div class="tbl"><table>
+    <thead><tr><th>IMC pré-gestacional</th><th>Ganho total (Brasil)</th><th>IOM 2009 (questões antigas)</th></tr></thead>
+    <tbody>
+      <tr><td>Baixo peso (&lt; 18,5)</td><td>8,8 a 12,6 kg</td><td>12,5 a 18 kg</td></tr>
+      <tr><td>Eutrofia (18,5–24,9)</td><td>8,7 a 12,4 kg</td><td>11,5 a 16 kg</td></tr>
+      <tr><td>Sobrepeso (25–29,9)</td><td>7,0 a 8,9 kg</td><td>7 a 11,5 kg</td></tr>
+      <tr><td>Obesidade (≥ 30)</td><td>5,0 a 7,2 kg</td><td>5 a 9 kg</td></tr>
+    </tbody>
+  </table></div>
+  <div class="box upd"><b class="t">Atualização</b><p>As faixas brasileiras são menores que as do IOM. As curvas servem para monitorar o ganho, mas sozinhas têm baixa capacidade de prever recém-nascido pequeno ou grande para a idade gestacional.<a class="src" href="https://doi.org/10.1093/ajcn/nqac164" target="_blank" rel="noopener">Farias, Am J Clin Nutr 2022</a> Se a questão citar o IOM, responda pelo IOM.</p></div>
+</section>
+
+<section id="o1-queixas" aria-labelledby="o1h10">
+  <h2 id="o1h10">10. Queixas comuns</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Queixa</th><th>Orientação</th><th>Sinal de alerta</th></tr></thead>
+    <tbody>
+      <tr><td>Náuseas e vômitos</td><td>Refeições pequenas e frequentes, evitar jejum prolongado; se necessário, piridoxina com ou sem doxilamina, ou antiemético</td><td>Perda de peso, desidratação, cetonúria: hiperêmese gravídica</td></tr>
+      <tr><td>Pirose</td><td>Fracionar refeições, não deitar logo após comer, elevar a cabeceira; antiácido se necessário</td><td>Dor epigástrica intensa no 3º trimestre: pensar em pré-eclâmpsia/HELLP</td></tr>
+      <tr><td>Constipação e hemorroidas</td><td>Fibras, água, atividade física</td><td>Sangramento importante</td></tr>
+      <tr><td>Cãibras</td><td>Alongamento, hidratação</td><td>Dor unilateral com edema na panturrilha: trombose venosa</td></tr>
+      <tr><td>Varizes e edema</td><td>Meia elástica, elevar as pernas, decúbito lateral</td><td>Edema súbito de face e mãos, com PA elevada: pré-eclâmpsia</td></tr>
+      <tr><td>Lombalgia</td><td>Postura, calor local, exercício orientado</td><td>Febre e dor lombar: pielonefrite</td></tr>
+      <tr><td>Polaciúria</td><td>Fisiológica no 1º e no 3º trimestres</td><td>Disúria, febre: infecção urinária</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="o1-risco" aria-labelledby="o1h11">
+  <h2 id="o1h11">11. Risco gestacional e alto risco</h2>
+  <p>A estratificação de risco é feita na primeira consulta e <b>refeita em todas as outras</b>, porque o risco muda ao longo da gestação. Gestantes de alto risco são referenciadas ao AGPAR, mas continuam vinculadas à equipe da atenção primária, que coordena o cuidado.<a class="src" href="https://acoesnacionais.iff.fiocruz.br/wp-content/uploads/bp-attachments/23250/PRT_GM_MS_5350_2024_diretrizes.pdf" target="_blank" rel="noopener">Portaria 5.350/2024</a></p>
+  <div class="tbl"><table>
+    <thead><tr><th>Grupo</th><th>Exemplos que indicam alto risco</th></tr></thead>
+    <tbody>
+      <tr><td>Doenças maternas prévias</td><td>Hipertensão crônica, diabetes prévio, cardiopatia, nefropatia, doença autoimune, epilepsia em tratamento, HIV, trombofilia, obesidade grave</td></tr>
+      <tr><td>História obstétrica</td><td>Pré-eclâmpsia ou eclâmpsia anterior, perdas gestacionais de repetição, parto pré-termo anterior, óbito fetal, isoimunização Rh</td></tr>
+      <tr><td>Gestação atual</td><td>Gestação múltipla, restrição de crescimento, placenta prévia, pré-eclâmpsia, diabetes gestacional que precisa de insulina, alterações do líquido amniótico</td></tr>
+    </tbody>
+  </table></div>
+  <p>Fatores individuais e sociais (idade &lt; 15 ou &gt; 35 anos, baixa escolaridade, violência, uso de substâncias) aumentam a vigilância e podem justificar encaminhamento, conforme o protocolo local.</p>
+  <div class="box trap"><b class="t">Pegadinha</b><p>Encaminhar para o alto risco <b>não</b> tira a gestante da atenção primária. A equipe da APS continua responsável pelo vínculo, pelas visitas e pela coordenação do cuidado.</p></div>
+</section>
+
+<section id="o1-resumo" aria-labelledby="o1h12">
+  <h2 id="o1h12">12. O que mais cai</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Tema</th><th>Resposta</th></tr></thead>
+    <tbody>
+      <tr><td>Sinal de certeza</td><td>BCF, movimento fetal sentido pelo examinador, embrião na USG</td></tr>
+      <tr><td>Naegele</td><td>DUM + 7 dias − 3 meses</td></tr>
+      <tr><td>Datação mais precisa</td><td>CCN no 1º trimestre; redatar se diferença &gt; 7 dias entre 9 e 13 6/7 semanas</td></tr>
+      <tr><td>Mínimo de consultas</td><td>7 (Rede Alyne, 2024); início até 12 semanas</td></tr>
+      <tr><td>DMG</td><td>Jejum 92–125 em qualquer momento; TOTG 24–28 semanas: 92 / 180 / 153</td></tr>
+      <tr><td>Exame novo na rotina</td><td>HTLV na primeira consulta (Rede Alyne)</td></tr>
+      <tr><td>Cálcio</td><td>1 g/dia de 12 semanas até o parto, para todas (NT 251/2024)</td></tr>
+      <tr><td>dTpa</td><td>A partir de 20 semanas, em cada gestação</td></tr>
+      <tr><td>VSR</td><td>A partir de 28 semanas, em cada gestação</td></tr>
+      <tr><td>Altura uterina</td><td>20 semanas na cicatriz umbilical; depois cm ≈ semanas</td></tr>
+      <tr><td>BCF normal</td><td>110 a 160 bpm</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="o1-questoes" aria-labelledby="o1h13">
+  <h2 id="o1h13">13. Questões comentadas</h2>
+  <p class="lead">Questões no formato do ENAMED (quatro alternativas), escritas para este capítulo. Toque numa alternativa para ver a correção de todas.</p>
+  <div class="qs" data-ch="obs1"></div>
+</section>
+
+<section id="o1-cards" aria-labelledby="o1h14">
+  <h2 id="o1h14">Flashcards do bloco até aqui</h2>
+  <p class="lead">Todos os capítulos já vistos do Bloco 2, acumulados. Tente responder antes de tocar no cartão.</p>
+  <div class="cardbar"><span class="cardcount"></span><a class="revcards" href="./#cards-obs1">Revisar no app os cards deste capítulo →</a></div>
+  <div class="cards" data-ch="obs1"></div>
+</section>
+
+<section id="o1-refs" aria-labelledby="o1h15">
+  <h2 id="o1h15">14. Referências</h2>
+  <h3>Documentos oficiais</h3>
+  <div class="btns">
+    <a class="btn" href="https://acoesnacionais.iff.fiocruz.br/wp-content/uploads/bp-attachments/23250/PRT_GM_MS_5350_2024_diretrizes.pdf" target="_blank" rel="noopener">Portaria GM/MS 5.350/2024 (Rede Alyne)</a>
+    <a class="btn" href="https://bvsms.saude.gov.br/bvs/publicacoes/cadernos_atencao_basica_32_prenatal.pdf" target="_blank" rel="noopener">MS, Caderno de Atenção Básica 32</a>
+    <a class="btn" href="https://www.gov.br/saude/pt-br/composicao/svsa/pni/calendario-tecnico/instrucao-normativa-que-instrui-o-calendario-nacional-de-vacinacao-2026" target="_blank" rel="noopener">Calendário Nacional de Vacinação 2026</a>
+    <a class="btn" href="https://portaldeboaspraticas.iff.fiocruz.br/wp-content/uploads/2025/02/nota-tecnica-conjunta-no-251-2024-coemm-cgesmu-dgci-saps-ms-e-cgan-deppros-saps-ms.pdf" target="_blank" rel="noopener">NT Conjunta 251/2024 (cálcio)</a>
+    <a class="btn" href="https://portaldeboaspraticas.iff.fiocruz.br/biblioteca/rastreamento-e-diagnostico-de-diabetes-mellitus-gestacional-no-brasil-2016/" target="_blank" rel="noopener">Consenso DMG Brasil 2016</a>
+    <a class="btn" href="https://www.who.int/publications/i/item/9789241549912" target="_blank" rel="noopener">OMS, pré-natal 2016</a>
+  </div>
+  <h3>Artigos (PubMed)</h3>
+  <div class="refs" data-ch="obs1"></div>
+</section>
+</article>
+
+<footer>
+  <p><b>medaj.</b> é um material aberto de estudo para a residência médica (ENAMED, ENARE, SUS-SP e Revalida). Não substitui as fontes oficiais.</p>
+  <p>Conteúdo-base montado a partir de leis, normas e documentos oficiais em vigor em outubro de 2026 e das referências de cada capítulo, obtidas pelo PubMed. Os flashcards de cada capítulo somam todos os capítulos anteriores do bloco.</p>
+</footer>
+</main>
+
+<script>
+const REFS={};
+const QS={};
+REFS.obs1=[
+ {t:"Prevention of neural tube defects: results of the Medical Research Council Vitamin Study.",c:"MRC Vitamin Study Research Group · Lancet 1991;338:131-7",pmid:"1677062",doi:"10.1016/0140-6736(91)90133-A",why:"Ensaio que provou o ácido fólico: 72% menos recorrência de defeitos do tubo neural."},
+ {t:"Methods for Estimating the Due Date. Committee Opinion No. 700.",c:"ACOG · Obstet Gynecol 2017;129:e150-4",pmid:"28426621",doi:"10.1097/AOG.0000000000002046",why:"Quando a ultrassonografia corrige a data da última menstruação."},
+ {t:"Hyperglycemia and adverse pregnancy outcomes (HAPO).",c:"HAPO Study Cooperative Research Group · N Engl J Med 2008;358:1991-2002",pmid:"18463375",doi:"10.1056/NEJMoa0707943",why:"Relação contínua entre glicemia materna e desfechos; base dos cortes do diabetes gestacional."},
+ {t:"IADPSG recommendations on the diagnosis and classification of hyperglycemia in pregnancy.",c:"IADPSG Consensus Panel · Diabetes Care 2010;33:676-82",pmid:"20190296",doi:"10.2337/dc09-1848",why:"Pontos de corte 92 / 180 / 153 adotados pelo consenso brasileiro."},
+ {t:"Aspirin versus Placebo in Pregnancies at High Risk for Preterm Preeclampsia (ASPRE).",c:"Rolnik DL et al. · N Engl J Med 2017;377:613-22",pmid:"28657417",doi:"10.1056/NEJMoa1704559",why:"AAS 150 mg à noite reduziu a pré-eclâmpsia pré-termo no alto risco."},
+ {t:"Calcium supplementation during pregnancy for preventing hypertensive disorders and related problems.",c:"Cluver CA et al. · Cochrane Database Syst Rev 2025;12:CD001059",pmid:"41330480",doi:"10.1002/14651858.CD001059.pub6",why:"Atualização 2025: efeito do cálcio sobre a pré-eclâmpsia ficou incerto."},
+ {t:"Trial trustworthiness assessment: commentary on the Cochrane 2025 review on calcium supplementation during pregnancy.",c:"Torloni MR, Cormick G, Atallah AN · Reprod Health 2026;23",pmid:"42374462",doi:"10.1186/s12978-026-02395-w",why:"Crítica brasileira à exclusão de ensaios na revisão de 2025."},
+ {t:"Prevention of Group B Streptococcal Early-Onset Disease in Newborns. Committee Opinion No. 797.",c:"ACOG · Obstet Gynecol 2020;135:e51-72",pmid:"31977795",doi:"10.1097/AOG.0000000000003668",why:"Rastreio universal do estreptococo B entre 36 0/7 e 37 6/7 semanas."},
+ {t:"Benefits and harms of antenatal/intrapartum screening for maternal group B streptococcus versus risk-based protocols: a rapid review.",c:"Campbell P et al. · Acta Paediatr 2026;115:1598-610",pmid:"42060466",doi:"10.1111/apa.70568",why:"Rastreio universal × baseado em risco: evidência de baixa certeza."},
+ {t:"Gestational weight gain charts: results from the Brazilian Maternal and Child Nutrition Consortium.",c:"Kac G et al. · Am J Clin Nutr 2021;113:1351-60",pmid:"33740055",doi:"10.1093/ajcn/nqaa402",why:"Curvas brasileiras de ganho de peso gestacional."},
+ {t:"Lowest-risk gestational weight gain ranges by prepregnancy BMI in Brazil.",c:"Carrilho TRB et al. · Am J Clin Nutr 2022",pmid:"36811564",doi:"10.1016/j.ajcnut.2022.11.021",why:"Faixas de ganho total de menor risco para cada IMC."},
+ {t:"Brazilian gestational weight gain charts and prediction of small and large for gestational age.",c:"Farias DR et al. · Am J Clin Nutr 2022",pmid:"35675297",doi:"10.1093/ajcn/nqac164",why:"As curvas, sozinhas, preveem mal PIG e GIG."},
+ {t:"Efficacy, Safety, and Immunogenicity of the MATISSE RSV Prefusion F Maternal Vaccine Trial.",c:"Simões EAF et al. · Obstet Gynecol 2025",pmid:"39746212",doi:"10.1097/AOG.0000000000005816",why:"Vacina materna contra o VSR reduziu doença respiratória grave no bebê."},
+ {t:"Preterm Birth Frequency and Associated Outcomes From the MATISSE Maternal RSV Vaccine Trial.",c:"Madhi SA et al. · Obstet Gynecol 2025",pmid:"39746206",doi:"10.1097/AOG.0000000000005817",why:"Sinal de mais partos pré-termo em países de renda média e baixa; por isso aplicar a partir de 28 semanas."},
+ {t:"Quality of prenatal care in Brazil (Nascer no Brasil).",c:"Bittencourt SDA et al. · Rev Saúde Pública 2020;54:100",pmid:"33146323",doi:"10.11606/s1518-8787.2020054002021",why:"Cobertura alta, mas poucas gestantes recebem todos os cuidados recomendados."}
+];
+
+QS.obs1=[
+ {s:"Mulher de 26 anos, ciclos regulares, informa que a última menstruação começou em 10 de janeiro de 2026. Pela regra de Naegele, a data provável do parto é:",o:[
+  ["10 de outubro de 2026.",0,"Somou 9 meses sem acrescentar os 7 dias."],
+  ["17 de outubro de 2026.",1,"Correta. DUM + 7 dias (17/01) − 3 meses, ou + 9 meses: 17/10/2026."],
+  ["3 de outubro de 2026.",0,"Subtraiu 7 dias em vez de somar."],
+  ["17 de novembro de 2026.",0,"Somou 10 meses."]],
+  rev:"Revise: seção 2, regra de Naegele."},
+ {s:"Gestante com data da última menstruação confiável, que corresponde a 11 semanas e 2 dias, faz ultrassonografia com comprimento cabeça-nádega compatível com 10 semanas e 4 dias. A conduta quanto à idade gestacional é:",o:[
+  ["Redatar pela ultrassonografia, porque ela é sempre mais precisa que a data da última menstruação.",0,"A USG só substitui a DUM quando a diferença ultrapassa o limite para a idade gestacional."],
+  ["Manter a data da última menstruação, porque a diferença é de 5 dias, abaixo do limite de 7 dias para esta idade gestacional.",1,"Correta. Entre 9 0/7 e 13 6/7 semanas, redata-se só se a diferença for maior que 7 dias."],
+  ["Repetir a ultrassonografia com 20 semanas para decidir.",0,"A USG precoce é a mais precisa; exames tardios não a corrigem."],
+  ["Usar a média entre as duas datas.",0,"Não existe média: ou se mantém a DUM ou se redata."]],
+  rev:"Revise: seção 2, tabela de redatação."},
+ {s:"Primigesta de 9 semanas na primeira consulta de pré-natal apresenta glicemia de jejum de 98 mg/dL. A conduta correta é:",o:[
+  ["Solicitar teste oral de tolerância à glicose de 75 g entre 24 e 28 semanas para confirmar.",0,"Com jejum entre 92 e 125 já há diagnóstico; não é preciso TOTG."],
+  ["Diagnosticar diabetes mellitus prévio à gestação.",0,"Diabetes prévio exige jejum ≥ 126 mg/dL."],
+  ["Diagnosticar diabetes mellitus gestacional e iniciar orientação nutricional e monitorização.",1,"Correta. Jejum de 92 a 125 mg/dL em qualquer momento da gestação define diabetes gestacional."],
+  ["Considerar normal, porque o limite na gestação é 100 mg/dL.",0,"O corte na gestação é 92 mg/dL (IADPSG)."]],
+  rev:"Revise: seção 5, diabetes gestacional."},
+ {s:"Gestante de 30 semanas, que recebeu dTpa na gestação anterior há dois anos e tomou a última dose de vacina contra covid-19 há um ano, vem à consulta em julho. Segundo o calendário de 2026, deve receber hoje:",o:[
+  ["Somente influenza, porque a dTpa da gestação anterior ainda protege.",0,"A dTpa é repetida em cada gestação, a partir de 20 semanas."],
+  ["dTpa, vacina contra o vírus sincicial respiratório, influenza e covid-19.",1,"Correta. dTpa e VSR em cada gestação (a partir de 20 e de 28 semanas), influenza na temporada e covid-19 porque já passaram 6 meses."],
+  ["dTpa e tríplice viral.",0,"Tríplice viral é de vírus vivo: contraindicada na gestação."],
+  ["dTpa e vírus sincicial respiratório só depois do parto.",0,"Ambas são indicadas durante a gestação, para proteger o recém-nascido."]],
+  rev:"Revise: seção 7, vacinas."},
+ {s:"Segundo a nota técnica do Ministério da Saúde de 2024, a suplementação de cálcio na gestação deve ser:",o:[
+  ["Restrita às gestantes de alto risco para pré-eclâmpsia, a partir de 20 semanas.",0,"A nota recomenda para todas as gestantes, desde 12 semanas."],
+  ["Oferecida a todas as gestantes, 1 g de cálcio elementar por dia, de 12 semanas até o parto, separada do ferro.",1,"Correta. Carbonato de cálcio 1.250 mg duas vezes ao dia, 2 horas longe do sulfato ferroso."],
+  ["Tomada junto com o sulfato ferroso, para melhorar a adesão.",0,"O cálcio reduz a absorção do ferro; devem ser separados."],
+  ["Substituída pelo AAS em todas as gestantes.",0,"AAS é só para alto risco; não substitui o cálcio."]],
+  rev:"Revise: seção 6, suplementação, e a caixa de atualização sobre a Cochrane 2025."},
+ {s:"Gestante de 26 semanas, com idade gestacional confirmada por ultrassonografia de 8 semanas, tem altura uterina de 33 cm. A conduta mais adequada é:",o:[
+  ["Tranquilizar, porque a altura uterina varia muito e não tem valor clínico.",0,"A altura uterina é um rastreio útil; diferença acima de 2 a 3 cm deve ser investigada."],
+  ["Redatar a gestação pela altura uterina.",0,"A data já foi confirmada por USG precoce, que não muda."],
+  ["Solicitar ultrassonografia para investigar gestação múltipla, polidrâmnio ou macrossomia.",1,"Correta. Entre 20 e 32 semanas a altura uterina deve acompanhar a idade gestacional; 7 cm acima pede investigação."],
+  ["Indicar interrupção imediata da gestação.",0,"Não há indicação de interromper sem diagnóstico."]],
+  rev:"Revise: seção 8, altura uterina."}
+];
+
+const CARDS_OBS1=[
+ ["Grau do beta-hCG positivo entre os sinais de gravidez","Probabilidade (não é certeza).","o1-diagnostico"],
+ ["Sinais de certeza de gravidez","BCF, movimentos fetais percebidos pelo examinador, palpação de partes fetais, embrião na USG.","o1-diagnostico"],
+ ["Sinal de Hegar","Amolecimento do istmo uterino ao toque bimanual (probabilidade).","o1-diagnostico"],
+ ["Primeira estrutura que confirma gestação intrauterina na USG","Vesícula vitelínica (cerca de 5,5 semanas).","o1-diagnostico"],
+ ["Regra de Naegele","DPP = DUM + 7 dias − 3 meses.","o1-datacao"],
+ ["Redatar pela USG entre 9 0/7 e 13 6/7 semanas quando","A diferença entre DUM e CCN for maior que 7 dias.","o1-datacao"],
+ ["Anemia na gestação (OMS)","Hemoglobina abaixo de 11 g/dL.","o1-modificacoes"],
+ ["Gasometria normal da gestante","Alcalose respiratória compensada (PaCO₂ mais baixa), pela progesterona.","o1-modificacoes"],
+ ["Mínimo de consultas de pré-natal na Rede Alyne","7, com início até 12 semanas (antes eram 6).","o1-consultas"],
+ ["Frequência das consultas (MS)","Mensal até 28 semanas, quinzenal de 28 a 36, semanal de 36 a 41.","o1-consultas"],
+ ["Exame incluído na primeira consulta pela Rede Alyne","Teste para HTLV.","o1-exames"],
+ ["Diabetes gestacional pela glicemia de jejum","92 a 125 mg/dL em qualquer momento da gestação.","o1-exames"],
+ ["Cortes do TOTG 75 g (24–28 semanas)","Jejum 92, 1 hora 180, 2 horas 153 mg/dL; um valor alterado basta.","o1-exames"],
+ ["Diabetes prévio (franco) na gestação","Jejum ≥ 126 ou 2 horas do TOTG ≥ 200 mg/dL.","o1-exames"],
+ ["Bacteriúria assintomática na gestação","Sempre tratar, guiado pela urocultura (evita pielonefrite).","o1-exames"],
+ ["Rastreio do estreptococo B (ACOG 2020)","Cultura vaginal e retal entre 36 0/7 e 37 6/7 semanas.","o1-exames"],
+ ["Ácido fólico na gestação","0,4 mg/dia de 30 dias antes da concepção até 12 semanas; 4–5 mg se filho anterior com defeito do tubo neural.","o1-suplementos"],
+ ["Ferro na gestação","40 mg de ferro elementar/dia até 3 meses pós-parto.","o1-suplementos"],
+ ["Cálcio na gestação (NT 251/2024)","1 g de cálcio elementar/dia para todas, de 12 semanas ao parto, longe do ferro.","o1-suplementos"],
+ ["AAS na gestação","100–150 mg à noite, de 12–16 até 36 semanas, só no alto risco de pré-eclâmpsia.","o1-suplementos"],
+ ["dTpa na gestação","1 dose a partir de 20 semanas, em cada gestação.","o1-vacinas"],
+ ["Vacina contra o VSR na gestação","Dose única a partir de 28 semanas, em cada gestação.","o1-vacinas"],
+ ["Covid-19 na gestação (2026)","1 dose em cada gestação, com pelo menos 6 meses da última dose.","o1-vacinas"],
+ ["Vacinas contraindicadas na gestação","As de vírus vivo: tríplice viral, varicela, BCG (febre amarela só se excepcional).","o1-vacinas"],
+ ["Altura uterina com 20 semanas","Na cicatriz umbilical; de 20 a 32 semanas, cm ≈ semanas.","o1-exame"],
+ ["Terceira manobra de Leopold","Leopold-Zweifel: polo inferior e sua mobilidade (apresentação).","o1-exame"],
+ ["Frequência cardíaca fetal normal","110 a 160 bpm.","o1-exame"],
+ ["Ganho de peso total para eutrófica (curvas brasileiras)","8,7 a 12,4 kg.","o1-peso"],
+ ["Gestante de alto risco e a atenção primária","Vai ao AGPAR, mas segue vinculada à APS, que coordena o cuidado.","o1-risco"]
+];
+const CARDS=CARDS_OBS1.map(c=>["Pré-natal",c[0],c[1]]);
+
+const L="ABCD",ORDER=["obs1"],TAG={obs1:"Pré-natal"};
+document.querySelectorAll(".refs[data-ch]").forEach(el=>{el.innerHTML=(REFS[el.dataset.ch]||[]).map(r=>`<div class="ref"><p><b>${r.t}</b></p><p class="c">${r.c}</p><p>${r.why}</p><div class="btns"><a class="btn" href="https://pubmed.ncbi.nlm.nih.gov/${r.pmid}/" target="_blank" rel="noopener">PubMed ${r.pmid}</a><a class="btn" href="https://doi.org/${r.doi}" target="_blank" rel="noopener">Artigo</a></div></div>`).join("")});
+document.querySelectorAll(".qs[data-ch]").forEach(el=>{
+  const list=QS[el.dataset.ch]||[];
+  el.innerHTML=list.map((q,i)=>`<div class="q" data-q="${i}"><p class="stem">${i+1}. ${q.s}</p><ol>${q.o.map((o,j)=>`<li><button type="button" data-j="${j}">${L[j]}) ${o[0]}</button><p class="why" hidden>${o[1]?"Certa. ":"Errada. "}${o[2]}</p></li>`).join("")}</ol><p class="rev" hidden>${q.rev}</p></div>`).join("");
+  el.addEventListener("click",e=>{
+    const b=e.target.closest("button[data-j]");if(!b)return;
+    const box=b.closest(".q"),q=list[+box.dataset.q];
+    box.querySelectorAll("li").forEach((li,j)=>{li.classList.toggle("right",!!q.o[j][1]);li.classList.toggle("wrong",!q.o[j][1]&&j===+b.dataset.j);li.querySelector(".why").hidden=false});
+    box.querySelector(".rev").hidden=false;
+  });
+});
+document.querySelectorAll(".cards[data-ch]").forEach(el=>{
+  const tags=ORDER.slice(0,ORDER.indexOf(el.dataset.ch)+1).map(c=>TAG[c]);
+  const list=CARDS.filter(c=>tags.includes(c[0])),sec=el.closest("section");
+  sec.querySelector(".cardcount").textContent=list.length+" cartões ("+tags.join(" + ")+")";
+  el.innerHTML=list.map(c=>`<button type="button" class="card" aria-expanded="false"><span class="tag">${c[0]}</span><span>${c[1]}</span><span class="hint">Toque para ver a resposta</span><span class="a">${c[2]}</span></button>`).join("");
+  el.addEventListener("click",e=>{const c=e.target.closest(".card");if(c)c.setAttribute("aria-expanded",c.getAttribute("aria-expanded")==="true"?"false":"true")});
+});
+const ARTS=[...document.querySelectorAll("article.ch")],CHIPS=[...document.querySelectorAll(".chapters a[data-ch]")];
+function route(){
+  let t=null;try{t=document.getElementById(decodeURIComponent(location.hash.slice(1)))}catch(e){}
+  const art=t?(t.matches("article.ch")?t:t.closest("article.ch")):null,cur=art||ARTS[0];
+  ARTS.forEach(a=>a.hidden=a!==cur);
+  CHIPS.forEach(c=>{const on=c.dataset.ch===cur.id;c.classList.toggle("on",on);if(on)c.setAttribute("aria-current","page");else c.removeAttribute("aria-current")});
+  if(t&&t!==cur)t.scrollIntoView();else if(art)window.scrollTo(0,0);
+}
+addEventListener("hashchange",route);route();
+</script>
+
+<script>if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});</script>
+</body>
+</html>
