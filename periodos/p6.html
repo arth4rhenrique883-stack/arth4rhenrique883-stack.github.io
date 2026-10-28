@@ -572,7 +572,7 @@ const DIAS=["dom","seg","ter","qua","qui","sex","sáb"],pad=n=>String(n).padStar
 const br=d=>DIAS[d.getDay()]+" "+pad(d.getDate())+"/"+pad(d.getMonth()+1);
 const LKEY="medaj-"+PER.id+"-lidas",DKEY="medaj-"+PER.id+"-provas";
 let LIDAS={},DATAS={};try{LIDAS=JSON.parse(localStorage.getItem(LKEY)||"{}")}catch(e){}
-try{DATAS=Object.assign({},PER.datas,JSON.parse(localStorage.getItem(DKEY)||"{}"))}catch(e){DATAS=Object.assign({},PER.datas)}
+DATAS=Object.assign({},PER.datas);   /* 28/10: datas de prova só pelo código (DATAS no gerador), sem campo no app */
 const site=u=>PER.site+"#"+u;
 /* link "Ler na apostila" de cada cartão: página certa do site do período */
 const _rc=renderCard;renderCard=function(){_rc();const a=document.querySelector("#card .ans .read");if(a&&cur){a.href=site(cur.sec);a.textContent="Ler na apostila: "+cur.w+" ↗"}};
@@ -584,18 +584,15 @@ function renderHoje(){
   let h=`<div class="today"><span class="when">${br(now)}</span>`;
   if(p){const n=Math.round((p.d-new Date(now.getFullYear(),now.getMonth(),now.getDate(),12))/864e5);
     h+=`<h2>${e_(p.nome)} · ${p.obs?e_(p.obs):p.av}</h2><span class="when">${n===0?"a prova é hoje":n===1?"amanhã":"faltam "+n+" dias"} · ${br(p.d)}</span>`}
-  else h+=`<h2>Nenhuma prova marcada</h2>${PER.provas.length?`<span class="when">marque as datas lá embaixo</span>`:""}`;
+  else h+=`<h2>Nenhuma prova marcada</h2>`;
   h+=`</div>`;
   const nx=(p&&PER.aulas.find(a=>!LIDAS[a.id]&&a.pv===p.id&&a.av===p.av))||PER.aulas.find(a=>!LIDAS[a.id]);
   if(!PER.aulas.length)h+=`<div class="go off"><b>Apostilas</b><span>${e_(PER.soon)}</span></div>`;
   else h+=nx?`<a class="go" href="${e_(site(nx.u))}"><b>Continuar · ${e_(nx.disc)} · ${nx.av}</b><span>${e_(nx.t)}</span></a>`:`<div class="go off"><b>Apostilas</b><span>Todas marcadas como lidas.</span></div>`;
   const c=counts(()=>true);
   h+=`<a class="ghost" href="#cards" style="text-decoration:none;text-align:center">Revisar flashcards · ${c.avail} para hoje</a>`;
-  if(PER.provas.length)h+=`<h2 class="vh">Datas de prova</h2><div class="week">${PER.provas.map(([id,nome])=>`<div><b>${e_(nome)}</b><span class="start">${["A1","A2"].map(av=>{const v=DATAS[id+"-"+av];return `<label>${av} <input type="date" data-prova="${id}-${av}" value="${e_(Array.isArray(v)?v[0]:v||"")}"></label>`}).join("")}</span></div>`).join("")}</div>`;
   el.innerHTML=h;
 }
-document.addEventListener("change",ev=>{const i=ev.target.closest("[data-prova]");if(!i)return;
-  const k=i.dataset.prova;if(i.value)DATAS[k]=i.value;else DATAS[k]="";try{localStorage.setItem(DKEY,JSON.stringify(DATAS))}catch(e){}renderHoje()});
 const AKEY="medaj-"+PER.id+"-av";let ABERTA={};
 document.addEventListener("toggle",ev=>{const d=ev.target;if(d.matches&&d.matches("details.mat"))ABERTA[d.dataset.mat]=d.open},true);
 let AV=(()=>{let v=null;try{v=localStorage.getItem(AKEY)}catch(e){}return v||(PER.aulas.some(a=>a.av==="A2")?"A2":"A1")})();
