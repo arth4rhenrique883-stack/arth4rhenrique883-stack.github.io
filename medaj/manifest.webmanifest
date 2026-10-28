@@ -1,7 +1,7 @@
 {
-  "name": "medaj.",
-  "short_name": "medaj.",
-  "description": "Apostilas, jornada do dia e flashcards medaj. para residência médica.",
+  "name": "as_med",
+  "short_name": "as_med",
+  "description": "Apostilas, jornada do dia e flashcards as_med para residência médica.",
   "lang": "pt-BR",
   "start_url": "./",
   "scope": "./",
@@ -10,8 +10,8 @@
   "background_color": "#050505",
   "theme_color": "#050505",
   "icons": [
-    {"src": "marca3-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
-    {"src": "marca3-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
-    {"src": "marca3-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+    {"src": "marca4-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "marca4-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "marca4-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
   ]
 }
