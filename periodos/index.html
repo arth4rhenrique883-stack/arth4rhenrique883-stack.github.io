@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <script>try{var _p=localStorage.getItem("medaj-per");if(/^p[678]$/.test(_p))location.replace(_p+".html")}catch(e){}</script>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>as_med</title>
+<title>ASp</title>
 <meta name="theme-color" content="#000000">
 <meta name="apple-mobile-web-app-title" content="ASP">
 <link rel="manifest" href="manifest.webmanifest">
@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
 <style>
 /* Layout: app de uma tela, bem simples: o nome no centro do preto, o baralho, o resumo e o cartão. */
-/* as_med (28/10): preto predominante, branco, vermelho sutil e mínimos detalhes de azul; só a chama do nome muda de cor. */
+/* ASp (28/10): preto predominante, branco, vermelho sutil e mínimos detalhes de azul; só a chama do nome muda de cor. */
 /* O Dr. Casa (avatar, falas e casos) continua no código, fora da tela: .casa[hidden]. Para trazê-lo de volta, tirar o hidden do <aside class="casa">. */
 :root{
   --bg:#050505; --surface:#0b0b0b; --surface-2:#111111; --line:#1f1f1f; --line-2:#333333;
@@ -217,7 +217,7 @@ a.go:hover{border-color:var(--red)}
 @media (pointer:coarse){.tabs a{padding:11px 18px;font-size:15px}}
 @media (max-width:420px){.row2{grid-template-columns:minmax(0,1fr)}.week div{grid-template-columns:56px minmax(0,1fr)}}
 /*mj:logo*/
-/* chama do as_med (28/10 17h15): preta, com contorno na cor da página, balançando devagar; olhos = sombras */
+/* chama do ASp (28/10 17h15): preta, com contorno na cor da página, balançando devagar; olhos = sombras */
 .flame{color:#5c5c5c}
 .flame .sway{transform-box:fill-box;transform-origin:50% 100%}
 @media (prefers-reduced-motion:no-preference){.flame .sway{animation:mj-sway 7s ease-in-out infinite alternate}}
@@ -248,17 +248,20 @@ a.go:hover{border-color:var(--red)}
 @keyframes ci1{0.00%{stop-color:#c8eef2}33.33%{stop-color:#ffd9ea}66.67%{stop-color:#f2c1cd}100%{stop-color:#c8eef2}}
 @media (prefers-reduced-motion:no-preference){#fl-out stop:nth-child(1){animation:cf0 30s linear infinite}#fl-out stop:nth-child(2){animation:cf1 30s linear infinite}#fl-out stop:nth-child(3){animation:cf2 30s linear infinite}#fl-in stop:nth-child(1){animation:ci0 15s linear infinite}#fl-in stop:nth-child(2){animation:ci1 15s linear infinite}}
 /*as:nome*/
-.asmed{font-family:'Cormorant Garamond',Georgia,serif;display:inline-flex;align-items:baseline;line-height:1;color:#f4f1ea;font-weight:700;white-space:nowrap}
-.asmed .a{font-style:italic;font-weight:600;letter-spacing:-.015em}
-.asmed .u{display:inline-block;width:.5em;height:.05em;margin:0 .06em;transform:translateY(.09em);border-radius:.03em;background:linear-gradient(90deg,var(--as1,#4a4a4a),var(--as2,#ffffff) 50%,var(--as1,#4a4a4a));background-size:240% 100%}
-.asmed .m{font-weight:700;letter-spacing:.02em}
-.asmed .as-rainha{width:.56em;height:.7em;margin-left:.14em;align-self:center;overflow:visible;flex:none}
-@media (prefers-reduced-motion:no-preference){.asmed .u{animation:as-luz 7s ease-in-out infinite}.asmed .qh{animation:as-hue 16s linear infinite}}
-@keyframes as-luz{0%,100%{background-position:100% 0}50%{background-position:0 0}}
+@font-palette-values --as-cromo{font-family:Nabla;override-colors:0 #d9d9d9,1 #2e2e2e,2 #f2f2f2,3 #7e7e7e,4 #c9c9c9,5 #4a4a4a,6 #a3a3a3,7 #ffffff,8 #ffffff,9 #ededed}
+@font-palette-values --as-tema{font-family:Nabla;override-colors:0 #ff5d8f,1 #3a1670,2 #ff8fb0,3 #0f5f69,4 #3fd6e6,5 #2a1660,6 #a77bff,7 #ffd0e0,8 #e8fbff,9 #c9b5ff}
+.asmed{display:inline-flex;align-items:flex-end;line-height:.9;white-space:nowrap}
+.asmed .t{font-family:Nabla,'Cormorant Garamond',serif;font-weight:400;font-style:normal;letter-spacing:0}
+.asmed .t small{font-size:.62em}
+.asmed-r .t{font-palette:--as-cromo}.asmed-p .t{font-palette:--as-tema}
+.asmed .as-rainha{width:.62em;height:.81em;margin:0 0 .06em -.13em;flex:none;overflow:visible}
+.asmed-r .as-rainha{filter:drop-shadow(.02em .03em 0 #333) drop-shadow(.02em .03em 0 #1a1a1a) drop-shadow(0 .08em .1em rgba(0,0,0,.7))}
+.asmed-p .as-rainha{filter:drop-shadow(.02em .03em 0 #2a1660) drop-shadow(.02em .03em 0 #120a2a) drop-shadow(0 .08em .1em rgba(0,0,0,.7))}
+@media (prefers-reduced-motion:no-preference){.asmed-p .qh{animation:as-hue 16s linear infinite}}
 @keyframes as-hue{0%{filter:hue-rotate(0deg) saturate(1.1)}22%{filter:hue-rotate(-28deg) saturate(1.3)}45%{filter:hue-rotate(-95deg) saturate(1.2)}68%{filter:hue-rotate(75deg) saturate(1.25)}84%{filter:hue-rotate(20deg) saturate(1.2)}100%{filter:hue-rotate(0deg) saturate(1.1)}}
 /*/as:nome*/
 </style>
-<link data-as-fonte rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap">
+<link data-as-fonte rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nabla&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap">
 </head>
 <body>
 
@@ -274,8 +277,8 @@ a.go:hover{border-color:var(--red)}
 
 <div class="wrap">
   <header class="bar">
-    <div class="brand" aria-label="as_med">
-      <span class="word"><span class="asmed" aria-label="as_med"><span class="a">as</span><span class="u"></span><span class="m">med</span><svg class="as-rainha" viewBox="8 10 84 104" aria-hidden="true"><defs><linearGradient id="as-q" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff5d8f"/><stop offset=".5" stop-color="#3fd6e6"/><stop offset="1" stop-color="#a77bff"/></linearGradient></defs><g class="qh"><circle cx="26" cy="24" r="4" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><circle cx="38" cy="20" r="4" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><circle cx="50" cy="16" r="4" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><circle cx="62" cy="20" r="4" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><circle cx="74" cy="24" r="4" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><path d="M26 28 L33 44 L38 24 L44 42 L50 20 L56 42 L62 24 L67 44 L74 28 L70 54 C66 56 60 57 50 57 C40 57 34 56 30 54 Z" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><path d="M29 58 C36 61 64 61 71 58 L69 63 C62 65 38 65 31 63 Z" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><path d="M35 65 C40 67 60 67 65 65 C61 71 59 77 60 83 L40 83 C41 77 39 71 35 65 Z" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><path d="M33 84 L67 84 C69 85.5 69 88.5 67 90 L33 90 C31 88.5 31 85.5 33 84 Z" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><path d="M30 91 L70 91 C73 94 75 97 77 100 L23 100 C25 97 27 94 30 91 Z" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><path d="M17 101 L83 101 C86 101 87 103 87 105 L87 107 C87 109 86 110 83 110 L17 110 C14 110 13 109 13 107 L13 105 C13 103 14 101 17 101 Z" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><path d="M45.5 69 C46.5 74 46.5 78 46 81" stroke="url(#as-q)" stroke-width="1.3" fill="none" stroke-linecap="round" opacity=".6"/></g></svg></span></span>
+    <div class="brand" aria-label="ASp">
+      <span class="word"><span class="asmed asmed-p" aria-label="ASp"><span class="t">AS<small>p</small></span><svg class="as-rainha" viewBox="8 10 84 104" aria-hidden="true"><defs><linearGradient id="as-q-p" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff5d8f"/><stop offset="0.5" stop-color="#3fd6e6"/><stop offset="1" stop-color="#a77bff"/></linearGradient></defs><g class="qh"><circle cx="26" cy="24" r="4" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="38" cy="20" r="4" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="50" cy="16" r="4" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="62" cy="20" r="4" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="74" cy="24" r="4" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><path d="M26 28 L33 44 L38 24 L44 42 L50 20 L56 42 L62 24 L67 44 L74 28 L70 54 C66 56 60 57 50 57 C40 57 34 56 30 54 Z" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><path d="M29 58 C36 61 64 61 71 58 L69 63 C62 65 38 65 31 63 Z" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><path d="M35 65 C40 67 60 67 65 65 C61 71 59 77 60 83 L40 83 C41 77 39 71 35 65 Z" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><path d="M33 84 L67 84 C69 85.5 69 88.5 67 90 L33 90 C31 88.5 31 85.5 33 84 Z" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><path d="M30 91 L70 91 C73 94 75 97 77 100 L23 100 C25 97 27 94 30 91 Z" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><path d="M17 101 L83 101 C86 101 87 103 87 105 L87 107 C87 109 86 110 83 110 L17 110 C14 110 13 109 13 107 L13 105 C13 103 14 101 17 101 Z" fill="none" stroke="url(#as-q-p)" stroke-width="3.4" stroke-linejoin="round"/><path d="M45.5 69 C46.5 74 46.5 78 46 81" stroke="url(#as-q-p)" stroke-width="1.3" fill="none" stroke-linecap="round" opacity=".6"/></g></svg></span></span>
       <span class="app-name">períodos</span>
     </div>
   </header>

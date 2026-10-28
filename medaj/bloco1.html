@@ -9,16 +9,16 @@
 <meta name="theme-color" content="#000000">
 <link rel="stylesheet" data-res-dark href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
 <style>.revcards{font:500 14px var(--display);color:var(--fg);border:1px solid var(--red);border-radius:999px;padding:8px 14px;text-decoration:none;display:inline-block;margin-top:8px}.revcards:hover{background:var(--red-soft)}</style>
-<link data-as-fonte rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap">
+<link data-as-fonte rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nabla&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap">
 </head>
 <body>
-<title>as_med · Preventiva</title>
+<title>ASr · Preventiva</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Archivo:wght@500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@500;600&display=swap">
 <style>
 /* Layout: uma coluna de leitura (~68ch), cabeçalho simples, sumário, capítulo em seções numeradas. */
-/* as_med: sempre escuro. Preto com azul-marinho e roxo-escuro ao fundo, laranja e amarelo só em detalhes. Títulos de tópico com contorno preto. A chama do nome só troca de cor, devagar. */
+/* ASr: sempre escuro. Preto com azul-marinho e roxo-escuro ao fundo, laranja e amarelo só em detalhes. Títulos de tópico com contorno preto. A chama do nome só troca de cor, devagar. */
 :root{
   --bg:#050505; --fg:#ebebeb; --muted:#9c9c9c; --line:#1f1f1f; --raise:#0b0b0b;
   --red:#b02a30; --red-soft:#0e0606; --blue:#7f97bd;
@@ -169,20 +169,23 @@ a.btn{color:#cfcfcf;border-color:#2a2a2a}a.btn:hover{border-color:#8c8c8c}
 @keyframes gry{0%,100%{filter:brightness(1)}50%{filter:brightness(.62)}}
 /*/res:dark*/
 /*mj:logo*/
-/* chama do as_med (28/10 17h15): preta, com contorno na cor da página, balançando devagar; olhos = sombras */
+/* chama do ASr (28/10 17h15): preta, com contorno na cor da página, balançando devagar; olhos = sombras */
 .flame{color:#5c5c5c}
 .flame .sway{transform-box:fill-box;transform-origin:50% 100%}
 @media (prefers-reduced-motion:no-preference){.flame .sway{animation:mj-sway 7s ease-in-out infinite alternate}}
 @keyframes mj-sway{0%{transform:rotate(-2.5deg) scale(1,.98)}50%{transform:rotate(1deg) scale(.98,1.03)}100%{transform:rotate(2.5deg) scale(1.01,.99)}}
 /*/mj:logo*/
 /*as:nome*/
-.asmed{font-family:'Cormorant Garamond',Georgia,serif;display:inline-flex;align-items:baseline;line-height:1;color:#f4f1ea;font-weight:700;white-space:nowrap}
-.asmed .a{font-style:italic;font-weight:600;letter-spacing:-.015em}
-.asmed .u{display:inline-block;width:.5em;height:.05em;margin:0 .06em;transform:translateY(.09em);border-radius:.03em;background:linear-gradient(90deg,var(--as1,#4a4a4a),var(--as2,#ffffff) 50%,var(--as1,#4a4a4a));background-size:240% 100%}
-.asmed .m{font-weight:700;letter-spacing:.02em}
-.asmed .as-rainha{width:.56em;height:.7em;margin-left:.14em;align-self:center;overflow:visible;flex:none}
-@media (prefers-reduced-motion:no-preference){.asmed .u{animation:as-luz 7s ease-in-out infinite}.asmed .qh{animation:as-hue 16s linear infinite}}
-@keyframes as-luz{0%,100%{background-position:100% 0}50%{background-position:0 0}}
+@font-palette-values --as-cromo{font-family:Nabla;override-colors:0 #d9d9d9,1 #2e2e2e,2 #f2f2f2,3 #7e7e7e,4 #c9c9c9,5 #4a4a4a,6 #a3a3a3,7 #ffffff,8 #ffffff,9 #ededed}
+@font-palette-values --as-tema{font-family:Nabla;override-colors:0 #ff5d8f,1 #3a1670,2 #ff8fb0,3 #0f5f69,4 #3fd6e6,5 #2a1660,6 #a77bff,7 #ffd0e0,8 #e8fbff,9 #c9b5ff}
+.asmed{display:inline-flex;align-items:flex-end;line-height:.9;white-space:nowrap}
+.asmed .t{font-family:Nabla,'Cormorant Garamond',serif;font-weight:400;font-style:normal;letter-spacing:0}
+.asmed .t small{font-size:.62em}
+.asmed-r .t{font-palette:--as-cromo}.asmed-p .t{font-palette:--as-tema}
+.asmed .as-rainha{width:.62em;height:.81em;margin:0 0 .06em -.13em;flex:none;overflow:visible}
+.asmed-r .as-rainha{filter:drop-shadow(.02em .03em 0 #333) drop-shadow(.02em .03em 0 #1a1a1a) drop-shadow(0 .08em .1em rgba(0,0,0,.7))}
+.asmed-p .as-rainha{filter:drop-shadow(.02em .03em 0 #2a1660) drop-shadow(.02em .03em 0 #120a2a) drop-shadow(0 .08em .1em rgba(0,0,0,.7))}
+@media (prefers-reduced-motion:no-preference){.asmed-p .qh{animation:as-hue 16s linear infinite}}
 @keyframes as-hue{0%{filter:hue-rotate(0deg) saturate(1.1)}22%{filter:hue-rotate(-28deg) saturate(1.3)}45%{filter:hue-rotate(-95deg) saturate(1.2)}68%{filter:hue-rotate(75deg) saturate(1.25)}84%{filter:hue-rotate(20deg) saturate(1.2)}100%{filter:hue-rotate(0deg) saturate(1.1)}}
 /*/as:nome*/
 </style>
@@ -195,10 +198,10 @@ a.btn{color:#cfcfcf;border-color:#2a2a2a}a.btn:hover{border-color:#8c8c8c}
 <main>
 <header>
 <div class="top">
-  <span class="brand" aria-label="as_med"><span class="asmed" aria-label="as_med"><span class="a">as</span><span class="u"></span><span class="m">med</span><svg class="as-rainha" viewBox="8 10 84 104" aria-hidden="true"><defs><linearGradient id="as-q" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff5d8f"/><stop offset=".5" stop-color="#3fd6e6"/><stop offset="1" stop-color="#a77bff"/></linearGradient></defs><g class="qh"><circle cx="26" cy="24" r="4" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><circle cx="38" cy="20" r="4" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><circle cx="50" cy="16" r="4" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><circle cx="62" cy="20" r="4" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><circle cx="74" cy="24" r="4" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><path d="M26 28 L33 44 L38 24 L44 42 L50 20 L56 42 L62 24 L67 44 L74 28 L70 54 C66 56 60 57 50 57 C40 57 34 56 30 54 Z" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><path d="M29 58 C36 61 64 61 71 58 L69 63 C62 65 38 65 31 63 Z" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><path d="M35 65 C40 67 60 67 65 65 C61 71 59 77 60 83 L40 83 C41 77 39 71 35 65 Z" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><path d="M33 84 L67 84 C69 85.5 69 88.5 67 90 L33 90 C31 88.5 31 85.5 33 84 Z" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><path d="M30 91 L70 91 C73 94 75 97 77 100 L23 100 C25 97 27 94 30 91 Z" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><path d="M17 101 L83 101 C86 101 87 103 87 105 L87 107 C87 109 86 110 83 110 L17 110 C14 110 13 109 13 107 L13 105 C13 103 14 101 17 101 Z" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><path d="M45.5 69 C46.5 74 46.5 78 46 81" stroke="url(#as-q)" stroke-width="1.3" fill="none" stroke-linecap="round" opacity=".6"/></g></svg></span></span>
+  <span class="brand" aria-label="ASr"><span class="asmed asmed-r" aria-label="ASr"><span class="t">AS<small>r</small></span><svg class="as-rainha" viewBox="8 10 84 104" aria-hidden="true"><defs><linearGradient id="as-q-r" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="0.5" stop-color="#9a9a9a"/><stop offset="1" stop-color="#e8e8e8"/></linearGradient></defs><g class="qh"><circle cx="26" cy="24" r="4" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="38" cy="20" r="4" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="50" cy="16" r="4" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="62" cy="20" r="4" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="74" cy="24" r="4" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M26 28 L33 44 L38 24 L44 42 L50 20 L56 42 L62 24 L67 44 L74 28 L70 54 C66 56 60 57 50 57 C40 57 34 56 30 54 Z" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M29 58 C36 61 64 61 71 58 L69 63 C62 65 38 65 31 63 Z" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M35 65 C40 67 60 67 65 65 C61 71 59 77 60 83 L40 83 C41 77 39 71 35 65 Z" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M33 84 L67 84 C69 85.5 69 88.5 67 90 L33 90 C31 88.5 31 85.5 33 84 Z" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M30 91 L70 91 C73 94 75 97 77 100 L23 100 C25 97 27 94 30 91 Z" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M17 101 L83 101 C86 101 87 103 87 105 L87 107 C87 109 86 110 83 110 L17 110 C14 110 13 109 13 107 L13 105 C13 103 14 101 17 101 Z" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M45.5 69 C46.5 74 46.5 78 46 81" stroke="url(#as-q-r)" stroke-width="1.3" fill="none" stroke-linecap="round" opacity=".6"/></g></svg></span></span>
   <span class="tag-top">Apostila<br>Bloco 1</span>
 </div>
-  <span class="crumb"><a href="./#hoje">← as_med app</a> · <a href="./#apostilas">Apostilas</a> · Bloco 1 · Medicina Preventiva e Saúde Coletiva</span>
+  <span class="crumb"><a href="./#hoje">← ASr app</a> · <a href="./#apostilas">Apostilas</a> · Bloco 1 · Medicina Preventiva e Saúde Coletiva</span>
   <div class="kit"><a class="copy" href="https://docs.google.com/spreadsheets/d/1Y9RxVuuvCvq9r7IoeMg4AhUHskRKyq4FiDYwnXIWcO0/copy" target="_blank" rel="noopener">Fazer minha cópia do checklist</a><span>Planilha do Google com a jornada dia a dia, com o link da seção a ler em cada dia. Cada pessoa usa a sua cópia.</span></div>
   <div class="chapters" aria-label="Capítulos do bloco">
     <a href="#pre4" data-ch="pre4">Sistema Único de Saúde</a><a href="#pre1" data-ch="pre1">Medidas de saúde coletiva</a><span>Estudos epidemiológicos · em breve</span><span>Vigilância em saúde · em breve</span><span>Ética e saúde do trabalhador · em breve</span>
@@ -717,7 +720,7 @@ a.btn{color:#cfcfcf;border-color:#2a2a2a}a.btn:hover{border-color:#8c8c8c}
 
 
 <footer>
-  <p><b>as_med</b> é um material aberto de estudo para a residência médica (ENAMED, ENARE, SUS-SP e Revalida). Não substitui as fontes oficiais.</p>
+  <p><b>ASr</b> é um material aberto de estudo para a residência médica (ENAMED, ENARE, SUS-SP e Revalida). Não substitui as fontes oficiais.</p>
   <p>Conteúdo-base montado a partir de leis, normas e documentos oficiais em vigor em outubro de 2026 e das referências de cada capítulo, obtidas pelo PubMed. Os flashcards de cada capítulo somam todos os capítulos anteriores do bloco.</p>
 </footer>
 </main>

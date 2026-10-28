@@ -1,6 +1,6 @@
 // medaj. flashcards: guarda o app e as fontes para abrir sem internet.
 // Ao publicar uma versão nova do index.html, troque o número abaixo.
-const V = "medaj-v15";
+const V = "medaj-v16";
 const CORE = ["./", "index.html", "bloco2.html", "bloco1.html", "manifest.webmanifest", "marca5-192.png", "marca5-512.png", "marca5-180.png"];
 
 self.addEventListener("install", e => {

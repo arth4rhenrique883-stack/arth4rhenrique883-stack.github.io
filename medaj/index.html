@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>as_med</title>
+<title>ASr</title>
 <meta name="theme-color" content="#000000">
 <meta name="apple-mobile-web-app-title" content="ASR">
 <link rel="manifest" href="manifest.webmanifest">
@@ -17,7 +17,7 @@
 <link rel="stylesheet" data-res-dark href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
 <style>
 /* Layout: app de uma tela, bem simples: o nome no centro do preto, o baralho, o resumo e o cartão. */
-/* as_med (28/10): preto predominante, branco, vermelho sutil e mínimos detalhes de azul; só a chama do nome muda de cor. */
+/* ASr (28/10): preto predominante, branco, vermelho sutil e mínimos detalhes de azul; só a chama do nome muda de cor. */
 /* O Dr. Casa (avatar, falas e casos) continua no código, fora da tela: .casa[hidden]. Para trazê-lo de volta, tirar o hidden do <aside class="casa">. */
 :root{
   --bg:#050505; --surface:#0b0b0b; --surface-2:#111111; --line:#1f1f1f; --line-2:#333333;
@@ -250,24 +250,27 @@ a.btn{color:#cfcfcf;border-color:#2a2a2a}a.btn:hover{border-color:#8c8c8c}
 @keyframes gry{0%,100%{filter:brightness(1)}50%{filter:brightness(.62)}}
 /*/res:dark*/
 /*mj:logo*/
-/* chama do as_med (28/10 17h15): preta, com contorno na cor da página, balançando devagar; olhos = sombras */
+/* chama do ASr (28/10 17h15): preta, com contorno na cor da página, balançando devagar; olhos = sombras */
 .flame{color:#5c5c5c}
 .flame .sway{transform-box:fill-box;transform-origin:50% 100%}
 @media (prefers-reduced-motion:no-preference){.flame .sway{animation:mj-sway 7s ease-in-out infinite alternate}}
 @keyframes mj-sway{0%{transform:rotate(-2.5deg) scale(1,.98)}50%{transform:rotate(1deg) scale(.98,1.03)}100%{transform:rotate(2.5deg) scale(1.01,.99)}}
 /*/mj:logo*/
 /*as:nome*/
-.asmed{font-family:'Cormorant Garamond',Georgia,serif;display:inline-flex;align-items:baseline;line-height:1;color:#f4f1ea;font-weight:700;white-space:nowrap}
-.asmed .a{font-style:italic;font-weight:600;letter-spacing:-.015em}
-.asmed .u{display:inline-block;width:.5em;height:.05em;margin:0 .06em;transform:translateY(.09em);border-radius:.03em;background:linear-gradient(90deg,var(--as1,#4a4a4a),var(--as2,#ffffff) 50%,var(--as1,#4a4a4a));background-size:240% 100%}
-.asmed .m{font-weight:700;letter-spacing:.02em}
-.asmed .as-rainha{width:.56em;height:.7em;margin-left:.14em;align-self:center;overflow:visible;flex:none}
-@media (prefers-reduced-motion:no-preference){.asmed .u{animation:as-luz 7s ease-in-out infinite}.asmed .qh{animation:as-hue 16s linear infinite}}
-@keyframes as-luz{0%,100%{background-position:100% 0}50%{background-position:0 0}}
+@font-palette-values --as-cromo{font-family:Nabla;override-colors:0 #d9d9d9,1 #2e2e2e,2 #f2f2f2,3 #7e7e7e,4 #c9c9c9,5 #4a4a4a,6 #a3a3a3,7 #ffffff,8 #ffffff,9 #ededed}
+@font-palette-values --as-tema{font-family:Nabla;override-colors:0 #ff5d8f,1 #3a1670,2 #ff8fb0,3 #0f5f69,4 #3fd6e6,5 #2a1660,6 #a77bff,7 #ffd0e0,8 #e8fbff,9 #c9b5ff}
+.asmed{display:inline-flex;align-items:flex-end;line-height:.9;white-space:nowrap}
+.asmed .t{font-family:Nabla,'Cormorant Garamond',serif;font-weight:400;font-style:normal;letter-spacing:0}
+.asmed .t small{font-size:.62em}
+.asmed-r .t{font-palette:--as-cromo}.asmed-p .t{font-palette:--as-tema}
+.asmed .as-rainha{width:.62em;height:.81em;margin:0 0 .06em -.13em;flex:none;overflow:visible}
+.asmed-r .as-rainha{filter:drop-shadow(.02em .03em 0 #333) drop-shadow(.02em .03em 0 #1a1a1a) drop-shadow(0 .08em .1em rgba(0,0,0,.7))}
+.asmed-p .as-rainha{filter:drop-shadow(.02em .03em 0 #2a1660) drop-shadow(.02em .03em 0 #120a2a) drop-shadow(0 .08em .1em rgba(0,0,0,.7))}
+@media (prefers-reduced-motion:no-preference){.asmed-p .qh{animation:as-hue 16s linear infinite}}
 @keyframes as-hue{0%{filter:hue-rotate(0deg) saturate(1.1)}22%{filter:hue-rotate(-28deg) saturate(1.3)}45%{filter:hue-rotate(-95deg) saturate(1.2)}68%{filter:hue-rotate(75deg) saturate(1.25)}84%{filter:hue-rotate(20deg) saturate(1.2)}100%{filter:hue-rotate(0deg) saturate(1.1)}}
 /*/as:nome*/
 </style>
-<link data-as-fonte rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap">
+<link data-as-fonte rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nabla&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap">
 </head>
 <body>
 
@@ -283,8 +286,8 @@ a.btn{color:#cfcfcf;border-color:#2a2a2a}a.btn:hover{border-color:#8c8c8c}
 
 <div class="wrap">
   <header class="bar">
-    <div class="brand" aria-label="as_med">
-      <span class="word"><span class="asmed" aria-label="as_med"><span class="a">as</span><span class="u"></span><span class="m">med</span><svg class="as-rainha" viewBox="8 10 84 104" aria-hidden="true"><defs><linearGradient id="as-q" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff5d8f"/><stop offset=".5" stop-color="#3fd6e6"/><stop offset="1" stop-color="#a77bff"/></linearGradient></defs><g class="qh"><circle cx="26" cy="24" r="4" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><circle cx="38" cy="20" r="4" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><circle cx="50" cy="16" r="4" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><circle cx="62" cy="20" r="4" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><circle cx="74" cy="24" r="4" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><path d="M26 28 L33 44 L38 24 L44 42 L50 20 L56 42 L62 24 L67 44 L74 28 L70 54 C66 56 60 57 50 57 C40 57 34 56 30 54 Z" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><path d="M29 58 C36 61 64 61 71 58 L69 63 C62 65 38 65 31 63 Z" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><path d="M35 65 C40 67 60 67 65 65 C61 71 59 77 60 83 L40 83 C41 77 39 71 35 65 Z" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><path d="M33 84 L67 84 C69 85.5 69 88.5 67 90 L33 90 C31 88.5 31 85.5 33 84 Z" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><path d="M30 91 L70 91 C73 94 75 97 77 100 L23 100 C25 97 27 94 30 91 Z" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><path d="M17 101 L83 101 C86 101 87 103 87 105 L87 107 C87 109 86 110 83 110 L17 110 C14 110 13 109 13 107 L13 105 C13 103 14 101 17 101 Z" fill="none" stroke="url(#as-q)" stroke-width="2.6" stroke-linejoin="round"/><path d="M45.5 69 C46.5 74 46.5 78 46 81" stroke="url(#as-q)" stroke-width="1.3" fill="none" stroke-linecap="round" opacity=".6"/></g></svg></span></span>
+    <div class="brand" aria-label="ASr">
+      <span class="word"><span class="asmed asmed-r" aria-label="ASr"><span class="t">AS<small>r</small></span><svg class="as-rainha" viewBox="8 10 84 104" aria-hidden="true"><defs><linearGradient id="as-q-r" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="0.5" stop-color="#9a9a9a"/><stop offset="1" stop-color="#e8e8e8"/></linearGradient></defs><g class="qh"><circle cx="26" cy="24" r="4" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="38" cy="20" r="4" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="50" cy="16" r="4" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="62" cy="20" r="4" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><circle cx="74" cy="24" r="4" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M26 28 L33 44 L38 24 L44 42 L50 20 L56 42 L62 24 L67 44 L74 28 L70 54 C66 56 60 57 50 57 C40 57 34 56 30 54 Z" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M29 58 C36 61 64 61 71 58 L69 63 C62 65 38 65 31 63 Z" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M35 65 C40 67 60 67 65 65 C61 71 59 77 60 83 L40 83 C41 77 39 71 35 65 Z" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M33 84 L67 84 C69 85.5 69 88.5 67 90 L33 90 C31 88.5 31 85.5 33 84 Z" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M30 91 L70 91 C73 94 75 97 77 100 L23 100 C25 97 27 94 30 91 Z" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M17 101 L83 101 C86 101 87 103 87 105 L87 107 C87 109 86 110 83 110 L17 110 C14 110 13 109 13 107 L13 105 C13 103 14 101 17 101 Z" fill="none" stroke="url(#as-q-r)" stroke-width="3.4" stroke-linejoin="round"/><path d="M45.5 69 C46.5 74 46.5 78 46 81" stroke="url(#as-q-r)" stroke-width="1.3" fill="none" stroke-linecap="round" opacity=".6"/></g></svg></span></span>
       <span class="app-name">residência</span>
     </div>
   </header>
@@ -384,7 +387,7 @@ const CHAPTERS={pre4:"Preventiva · SUS",pre1:"Preventiva · Medidas de saúde c
 const FILE={"obs1": "bloco2.html"};
 const SECS={"o1-diagnostico":"Diagnóstico de gravidez","o1-datacao":"Idade gestacional e data provável do parto","o1-modificacoes":"Modificações do organismo materno","o1-consultas":"Consultas: quando e quantas","o1-exames":"Exames por trimestre","o1-suplementos":"Suplementação","o1-vacinas":"Vacinas","o1-exame":"Exame obstétrico","o1-peso":"Ganho de peso","o1-queixas":"Queixas comuns","o1-risco":"Risco gestacional e alto risco","o1-resumo":"O que mais cai","o1-questoes":"Questões comentadas","o1-cards":"Flashcards do bloco até aqui","o1-refs":"Referências",historia:"Antes do SUS: a linha do tempo",constituicao:"A Constituição de 1988",l8080:"Lei 8.080/1990",l8142:"Lei 8.142/1990",normas:"Normas operacionais e Pacto pela Saúde",d7508:"Decreto 7.508/2011",financiamento:"Financiamento",
  "p1-morbidade":"Morbidade: incidência e prevalência","p1-mortalidade":"Mortalidade geral, específica e letalidade","p1-infantil":"Mortalidade infantil, perinatal e fetal","p1-materna":"Mortalidade materna","p1-proporcional":"Swaroop-Uemura e Nelson de Moraes","p1-padronizacao":"Padronização de coeficientes","p1-demografia":"Demografia e transições","p1-sis":"Sistemas de informação em saúde","p1-do":"Declaração de Óbito"};
-/* Cartões das apostilas as_med Para acrescentar: [id único, capítulo, seção (âncora da apostila), pergunta, resposta]. */
+/* Cartões das apostilas ASr Para acrescentar: [id único, capítulo, seção (âncora da apostila), pergunta, resposta]. */
 const CARDS=[
  ["obs1-01", "obs1", "o1-diagnostico", "Grau do beta-hCG positivo entre os sinais de gravidez", "Probabilidade (não é certeza)."],
  ["obs1-02", "obs1", "o1-diagnostico", "Sinais de certeza de gravidez", "BCF, movimentos fetais percebidos pelo examinador, palpação de partes fetais, embrião na USG."],
@@ -557,7 +560,7 @@ function renderStats(){
   $("s-acc").textContent=d.n?Math.round(100*d.ok/d.n)+"%":"–";
   let s=0,t=today();if(!(S.days[t]&&S.days[t].n))t--;while(S.days[t]&&S.days[t].n){s++;t--}
   $("s-streak").textContent=s;
-  $("foot-info").textContent=`${CARDS.length} cartões das apostilas as_med · Preventiva: SUS e Medidas de saúde coletiva`;
+  $("foot-info").textContent=`${CARDS.length} cartões das apostilas ASr · Preventiva: SUS e Medidas de saúde coletiva`;
 }
 function renderCard(){
   const el=$("card");

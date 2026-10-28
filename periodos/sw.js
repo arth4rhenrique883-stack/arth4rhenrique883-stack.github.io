@@ -1,6 +1,6 @@
 // medaj. períodos: guarda o app e as fontes para abrir sem internet.
 // Ao publicar uma versão nova do index.html, troque o número abaixo.
-const V = "periodos-v20";
+const V = "periodos-v21";
 const CORE = ["./", "index.html", "p6.html", "p7.html", "p8.html", "manifest.webmanifest", "rainha2-192.png", "rainha2-512.png", "rainha2-180.png"];
 
 self.addEventListener("install", e => {
