@@ -249,6 +249,9 @@ html[data-tema=claro] :is(img,video,picture,canvas,.asmed,[style*="background-im
 mark.gf{background:color-mix(in srgb,var(--red,#ffffff) 30%,transparent);color:inherit;border-bottom:1px solid color-mix(in srgb,var(--red,#ffffff) 75%,transparent);border-radius:2px;padding:0 1px;cursor:pointer}
 :root:not([data-per]) mark.gf{background:rgba(255,255,255,.16);border-bottom-color:rgba(255,255,255,.55)}
 .gf-bar{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:9999;display:none;gap:8px}
+/* 28/10 22h55: no tablet o menu de seleção do Google cobria o botão; agora fica fixo no canto esquerdo, com marca-texto */
+.gf-bar{left:max(10px,env(safe-area-inset-left,0px));top:50%;bottom:auto;transform:translateY(-50%);flex-direction:column}
+.gf-bar button.gf-pri{display:flex;flex-direction:column;align-items:center;gap:4px;padding:12px 10px;border-radius:16px;font-size:12px}
 .gf-bar.on{display:flex}
 .gf-bar button,.gf-fab{font:500 15px "Libre Caslon Text",Georgia,serif;color:#f2f2f2;background:#111;border:1px solid #3a3a3a;border-radius:999px;padding:10px 18px;box-shadow:0 8px 24px rgba(0,0,0,.6);cursor:pointer}
 .gf-bar button.gf-pri{background:#f2f2f2;color:#000;border-color:#f2f2f2}
@@ -747,7 +750,7 @@ function esconder(){bar.classList.remove("on");alvo=null}
 document.addEventListener("selectionchange",()=>{const s=getSelection();if(!s||s.isCollapsed||!s.toString().trim()){if(alvo&&alvo.sel){clearTimeout(esconder._t);esconder._t=setTimeout(esconder,350)}return}
   const r=s.getRangeAt(0),a=r.startContainer.parentElement,b=a&&a.closest(BLK),e=r.endContainer.parentElement&&r.endContainer.parentElement.closest(BLK);
   if(!b||b!==e||b.closest("nav,header,button,.gf-pan,.gf-bar")||!root().contains(b)){if(alvo&&alvo.sel)esconder();return}
-  clearTimeout(esconder._t);alvo={sel:1,b,r:r.cloneRange()};mostrar('<button class="gf-pri" type="button" data-gf-a="grifar">Destacar</button>')});
+  clearTimeout(esconder._t);alvo={sel:1,b,r:r.cloneRange()};mostrar('<button class="gf-pri" type="button" data-gf-a="grifar" aria-label="Destacar"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15.5 3.5l5 5-8.5 8.5H7v-5z" fill="#ffe14d" stroke="#000" stroke-width="1.4" stroke-linejoin="round"/><path d="M7 12l5 5" stroke="#000" stroke-width="1.4"/><path d="M7 17l-3 3h6" fill="#ffe14d" stroke="#000" stroke-width="1.2" stroke-linejoin="round"/><path d="M3 21.5h18" stroke="#ffe14d" stroke-width="2"/></svg><span>Destacar</span></button>')});
 document.addEventListener("click",ev=>{const x=ev.target.closest("[data-gf-a]");
   if(x)ev.preventDefault();
   if(x&&x.dataset.gfA==="grifar"&&alvo&&alvo.sel){const b=alvo.b,r=alvo.r,id=Date.now().toString(36);
