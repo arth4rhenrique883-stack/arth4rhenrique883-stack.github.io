@@ -1,6 +1,6 @@
 // medASr: guarda o app inteiro (páginas, apostilas, dados e imagens dos slides) para funcionar sem internet.
 // Gerado por app/offline.py. Ao publicar uma versão nova, troque o número abaixo.
-const V = "medaj-v19";
+const V = "medaj-v20";
 const MIDIA = "medasr-midia";
 const CORE = ["./", "bloco1.html", "bloco2.html", "icon-180.png", "icon-192.png", "icon-512.png", "index.html", "manifest.webmanifest", "marca5-180.png", "marca5-192.png", "marca5-512.png"];
 const IMGS = [];
