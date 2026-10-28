@@ -196,6 +196,11 @@ a.go:hover{border-color:var(--red)}
 .bitem b{font:600 17px var(--display)}
 .bitem span{font:400 14px/1.45 var(--body);color:var(--muted)}
 .bitem:hover{border-color:var(--red)}
+.bwrap{display:flex;flex-direction:column;gap:0}
+.bwrap .bitem{border-bottom-left-radius:0;border-bottom-right-radius:0}
+.lida{font:500 13px var(--display);color:var(--muted);background:transparent;border:1px solid var(--line-2);border-top:0;border-radius:0 0 12px 12px;padding:10px 18px;text-align:left;cursor:pointer}
+.lida[aria-pressed="true"]{color:#5aa883;border-color:#2e5a45}
+.lida[aria-pressed="true"]::before{content:"✓ "}
 .soon{font:400 14px/1.5 var(--body);color:var(--dim);margin:0}
 @media (pointer:coarse){.tabs a{padding:11px 18px;font-size:15px}}
 @media (max-width:420px){.row2{grid-template-columns:minmax(0,1fr)}.week div{grid-template-columns:56px minmax(0,1fr)}}
@@ -246,8 +251,8 @@ a.go:hover{border-color:var(--red)}
   <section class="view" id="v-apostilas" aria-label="Apostilas" hidden>
     <h2 class="vh">Bloco 1 · Preventiva</h2>
     <div class="blist">
-      <a class="bitem" href="bloco1.html#pre4"><b>PRE 4 · SUS</b><span>História, Constituição, Leis 8.080 e 8.142, normas, Decreto 7.508, financiamento</span></a>
-      <a class="bitem" href="bloco1.html#pre1"><b>PRE 1 · Medidas de saúde coletiva</b><span>Morbidade, mortalidade, indicadores, padronização, transição demográfica</span></a>
+      <div class="bwrap"><a class="bitem" href="bloco1.html#pre4"><b>PRE 4 · SUS</b><span>História, Constituição, Leis 8.080 e 8.142, normas, Decreto 7.508, financiamento</span></a><button class="lida" type="button" data-lida="pre4" aria-pressed="false">Marcar como lida</button></div>
+      <div class="bwrap"><a class="bitem" href="bloco1.html#pre1"><b>PRE 1 · Medidas de saúde coletiva</b><span>Morbidade, mortalidade, indicadores, padronização, transição demográfica</span></a><button class="lida" type="button" data-lida="pre1" aria-pressed="false">Marcar como lida</button></div>
     </div>
     <p class="soon">Em breve: Bloco 2 · GO (OBS 1 Pré-natal), Bloco 3 · Pediatria, Cirurgia e Clínica Médica. Cada capítulo novo aparece aqui e ganha cards no app.</p>
   </section>
@@ -594,6 +599,11 @@ function renderHoje(){
   ${ondeHTML(j)}
   <a class="ghost" href="#cards" style="text-decoration:none;text-align:center">Revisar flashcards</a>`;
 }
+/* apostilas lidas: salvo neste aparelho */
+const LKEY="medaj-lidas";let LIDAS={};try{LIDAS=JSON.parse(localStorage.getItem(LKEY)||"{}")}catch(e){}
+function renderLidas(){document.querySelectorAll("[data-lida]").forEach(b=>{const on=!!LIDAS[b.dataset.lida];b.setAttribute("aria-pressed",on);b.textContent=on?"Lida":"Marcar como lida"})}
+document.addEventListener("click",ev=>{const b=ev.target.closest("[data-lida]");if(!b)return;const k=b.dataset.lida;if(LIDAS[k])delete LIDAS[k];else LIDAS[k]=Date.now();try{localStorage.setItem(LKEY,JSON.stringify(LIDAS))}catch(e){}renderLidas()});
+renderLidas();
 function view(){
   let h=location.hash.slice(1)||"hoje",v=h.startsWith("cards")?"cards":h;
   if(!["hoje","apostilas","cards"].includes(v))v="hoje";
