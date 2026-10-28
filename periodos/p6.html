@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="pt-BR" data-per="p6">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>medaj. · 6º período</title>
+<meta name="theme-color" content="#060304">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Archivo:wght@500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: app de uma tela, bem simples: o nome no centro do preto, o baralho, o resumo e o cartão. */
+/* medaj. (28/10): preto predominante, branco, vermelho sutil e mínimos detalhes de azul; só a chama do nome muda de cor. */
+/* O Dr. Casa (avatar, falas e casos) continua no código, fora da tela: .casa[hidden]. Para trazê-lo de volta, tirar o hidden do <aside class="casa">. */
+:root{
+  --bg:#050505; --surface:#0b0b0b; --surface-2:#111111; --line:#1f1f1f; --line-2:#333333;
+  --fg:#ebebeb; --muted:#9c9c9c; --dim:#6b6b6b;
+  --red:#b02a30; --red-ink:#d0585e; --blue:#7f97bd;
+  --bad:#c2414a; --hard:#bdbdbd; --good:#7f97bd; --easy:#5aa883;
+  --brand:"Cormorant Garamond",Garamond,"Times New Roman",serif;
+  --display:"Archivo",ui-sans-serif,system-ui,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{margin:0;color:var(--fg);font:17px/1.6 var(--body);-webkit-font-smoothing:antialiased;
+  background:var(--bg);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:14px 40px}
+button{font:inherit;color:inherit}
+a{color:var(--fg);text-decoration-color:#5a5a5a;text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.wrap{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
+
+/* barra */
+.bar{display:flex;justify-content:center;padding:clamp(28px,8vh,72px) 0 clamp(8px,3vh,24px)}
+.brand{display:flex;flex-direction:column;align-items:center;gap:10px;text-decoration:none;color:var(--fg)}
+.word{font:700 clamp(64px,16vw,104px)/.9 var(--brand);letter-spacing:.01em;display:inline-flex;align-items:flex-end;color:#f5f5f5}
+.flame{width:.36em;height:.5em;margin-left:.03em;margin-bottom:.04em;overflow:visible;flex:none}
+.app-name{font:500 11px/1.2 var(--mono);color:var(--muted);letter-spacing:.24em;text-transform:uppercase}
+
+/* chama: desenho animado, quente e macabra; a única coisa que muda de cor */
+.flame .tongue{transform-box:fill-box;transform-origin:50% 100%}
+.flame .all{transform-box:fill-box;transform-origin:50% 100%}
+@media (prefers-reduced-motion:no-preference){
+  .flame .hue{animation:hue 16s linear infinite}
+  .flame .eyes{animation:blink 5s steps(1) infinite}
+}
+@keyframes hue{0%{filter:hue-rotate(0deg) saturate(1.1)}22%{filter:hue-rotate(-28deg) saturate(1.3)}45%{filter:hue-rotate(-95deg) saturate(1.2)}68%{filter:hue-rotate(75deg) saturate(1.25)}84%{filter:hue-rotate(20deg) saturate(1.2)}100%{filter:hue-rotate(0deg) saturate(1.1)}}
+@keyframes flick{0%{transform:scale(1,1) skewX(0)}50%{transform:scale(.97,1.05) skewX(-2deg)}100%{transform:scale(1.03,.96) skewX(2deg)}}
+@keyframes lick{from{transform:rotate(-6deg) scaleY(.94)}to{transform:rotate(5deg) scaleY(1.08)}}
+@keyframes blink{0%,92%{opacity:1}93%,96%{opacity:0}97%{opacity:1}}
+@keyframes pulse{from{opacity:.45}to{opacity:.85}}
+
+/* painel */
+.deckbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.chip{display:inline-flex;align-items:center;gap:8px;font:500 13px var(--display);padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:transparent;cursor:pointer;color:var(--muted)}
+.chip:hover{color:var(--fg);border-color:var(--line-2)}
+.chip[aria-pressed="true"]{color:var(--fg);border-color:#4a4a4a;background:#141414}
+.chip .n{font:700 11px var(--mono);padding:1px 6px;border-radius:6px;background:var(--surface-2);color:var(--muted)}
+.chip[aria-pressed="true"] .n{color:var(--red-ink)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 18px}
+.stat{display:flex;flex-direction:column;gap:2px;min-width:0}
+.stat b{font:600 24px/1.1 var(--display);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.stat span{font:400 13px/1.3 var(--body);color:var(--muted)}
+.stat.hot b{color:var(--red-ink)}
+
+.main{display:block}
+.casa[hidden]{display:none!important}
+
+/* cartão */
+.card{display:flex;flex-direction:column;gap:16px;min-height:340px}
+.meta{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font:500 12px var(--mono);color:var(--muted)}
+.tag{padding:2px 8px;border-radius:6px;border:1px solid var(--line-2);color:var(--fg)}
+.tag.new{border-color:#6a2226;color:var(--red-ink)}
+.meta .pos{margin-left:auto;font-variant-numeric:tabular-nums}
+.progress{height:4px;border-radius:4px;background:var(--line);overflow:hidden}
+.progress i{display:block;height:100%;width:0;background:var(--red);transition:width .3s}
+.q{font:600 clamp(21px,3.4vw,26px)/1.35 var(--body);letter-spacing:0;margin:6px 0 0;text-wrap:balance}
+.ans{border-top:1px dashed var(--line-2);padding-top:14px;display:flex;flex-direction:column;gap:10px}
+.ans p{margin:0;font:400 18px/1.65 var(--body)}
+.ans .lbl{font:700 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.ans .read{font:500 13px var(--display);color:var(--blue);text-decoration:none;display:inline-flex;gap:6px;align-items:center}
+.ans .read:hover{text-decoration:underline}
+.spacer{flex:1}
+.reveal{align-self:stretch;font:500 15px var(--display);letter-spacing:.02em;padding:14px 18px;border-radius:12px;border:1px solid var(--line-2);background:var(--surface-2);color:#fff;cursor:pointer}
+.reveal:hover{border-color:var(--red)}
+kbd{font:500 11px var(--mono);padding:1px 6px;border-radius:5px;border:1px solid currentColor;opacity:.7;margin-left:8px}
+.grades{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.grade{display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 6px;border-radius:12px;border:1px solid var(--line-2);background:var(--surface-2);cursor:pointer;min-width:0}
+.grade b{font:500 14px var(--display)}
+.grade small{font:500 11px var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.grade.g0{border-color:color-mix(in srgb,var(--bad) 60%,transparent)}.grade.g0 b{color:var(--bad)}
+.grade.g3{border-color:color-mix(in srgb,var(--hard) 50%,transparent)}.grade.g3 b{color:var(--hard)}
+.grade.g4{border-color:color-mix(in srgb,var(--good) 55%,transparent)}.grade.g4 b{color:var(--good)}
+.grade.g5{border-color:color-mix(in srgb,var(--easy) 55%,transparent)}.grade.g5 b{color:var(--easy)}
+.grade:hover{background:color-mix(in srgb,var(--surface-2) 70%,var(--line-2))}
+.done{display:flex;flex-direction:column;gap:14px}
+.done h2{font:600 clamp(24px,4vw,32px)/1.15 var(--display);letter-spacing:-.01em;margin:0;text-wrap:balance}
+.done .sum{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.done .sum div{border:1px solid var(--line-2);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column}
+.done .sum b{font:600 22px var(--display);font-variant-numeric:tabular-nums}
+.done .sum span{font-size:12px;color:var(--muted)}
+.row{display:flex;flex-wrap:wrap;gap:8px}
+.ghost{font:500 14px var(--display);padding:10px 14px;border-radius:12px;border:1px solid var(--line-2);background:transparent;cursor:pointer}
+.ghost:hover{border-color:#5a5a5a}
+
+/* Dr. Casa */
+.casa{position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px);display:flex;flex-direction:column;gap:12px}
+.casa-top{display:flex;gap:12px;align-items:center}
+.avatar{width:96px;height:112px;flex:none}
+.who b{display:block;font:600 20px/1 var(--display);letter-spacing:-.02em}
+.who span{display:block;font:500 12px/1.35 var(--body);color:var(--muted);margin-top:4px}
+.bubble{position:relative;background:var(--surface-2);border:1px solid var(--line-2);border-radius:14px;padding:12px 14px;font:500 15px/1.55 var(--body);min-height:84px}
+.bubble::before{content:"";position:absolute;top:-7px;left:38px;width:12px;height:12px;background:var(--surface-2);border-left:1px solid var(--line-2);border-top:1px solid var(--line-2);transform:rotate(45deg)}
+.bubble.story{border-color:#6a2226}
+.bubble .case{display:block;font:700 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--red-ink);margin-bottom:4px}
+.casa .row .ghost{flex:1;font-size:13px;padding:8px 10px}
+@media (prefers-reduced-motion:no-preference){
+  .avatar .cane{transform-box:view-box;transform-origin:165px 236px}
+  .avatar.tap .cane{animation:tap .5s ease-in-out 2}
+  .avatar .lids{animation:blink 6s steps(1) infinite}
+  .avatar .brow-r{transform-box:fill-box;transform-origin:0 100%;transition:transform .25s}
+  .avatar.raise .brow-r{transform:translateY(-4px) rotate(-8deg)}
+  .avatar.smug .mouth{transform:translateY(-1px)}
+}
+@keyframes tap{0%,100%{transform:rotate(0)}50%{transform:rotate(-4deg)}}
+
+footer{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between;font-size:13px;color:var(--dim);border-top:1px solid var(--line);padding-top:12px}
+footer .linkbtn{background:none;border:0;padding:0;color:var(--muted);text-decoration:underline;cursor:pointer;font-size:13px}
+.confirm{display:inline-flex;gap:8px;align-items:center}
+.confirm button{font:500 12px var(--display);padding:5px 10px;border-radius:8px;border:1px solid var(--line-2);background:transparent;cursor:pointer}
+.confirm .danger{border-color:var(--bad);color:var(--bad)}
+
+@media (max-width:820px){
+  .casa{position:static;order:-1;gap:10px}
+  .avatar{width:64px;height:75px}
+  .who b{font-size:17px}
+  .bubble{min-height:0;font-size:14px}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:420px){
+  .card{min-height:0}
+  .grades{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .done .sum{grid-template-columns:minmax(0,1fr)}
+}
+/* tablet e toque: alvos maiores, sem dica de teclado */
+@media (min-width:700px){
+  .wrap{max-width:780px}
+  .q{font-size:clamp(24px,3.2vw,30px)}
+  .ans p{font-size:20px}
+}
+@media (min-width:600px) and (max-width:820px){.stats{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (pointer:coarse){
+  kbd{display:none}
+  .chip{padding:10px 14px;font-size:14px}
+  .reveal{padding:18px;font-size:17px}
+  .grade{padding:14px 6px}
+  .grade b{font-size:16px}
+  button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+}
+
+/* app único: abas */
+.tabs{display:flex;justify-content:center;gap:4px;border:1px solid var(--line);border-radius:999px;padding:4px;align-self:center;margin-top:-6px}
+.tabs a{font:500 14px var(--display);color:var(--muted);text-decoration:none;padding:8px 16px;border-radius:999px;letter-spacing:.02em}
+.tabs a[aria-current="page"]{color:#fff;background:#151515;box-shadow:inset 0 -2px 0 var(--red)}
+.view[hidden]{display:none!important}
+.view{display:flex;flex-direction:column;gap:18px}
+.vh{font:600 13px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:4px 0 0}
+.today .when{font:500 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.today h2{font:600 clamp(22px,3.6vw,28px)/1.3 var(--body);margin:6px 0 0;text-wrap:pretty}
+.today .area{font:500 14px var(--display);color:var(--fg)}
+.today .eixo{font:400 15px/1.6 var(--body);color:var(--muted);margin:0}
+.nums{display:flex;flex-wrap:wrap;gap:8px}
+.nums span{font:500 12px var(--mono);border:1px solid var(--line-2);border-radius:6px;padding:3px 8px}
+.go{display:flex;flex-direction:column;gap:4px;padding:16px 18px;border-radius:12px;border:1px solid var(--line-2);background:var(--surface-2);text-decoration:none;color:var(--fg)}
+.go b{font:500 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--red-ink)}
+.go span{font:500 16px/1.45 var(--display)}
+a.go:hover{border-color:var(--red)}
+.go.off{opacity:.7}
+.row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.week{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.week div{display:grid;grid-template-columns:68px minmax(0,1fr);gap:10px;padding:10px 0;border-bottom:1px solid var(--line);font:400 14px/1.45 var(--body)}
+.week div b{font:500 12px var(--mono);color:var(--muted);padding-top:2px}
+.week div.on b{color:var(--red-ink)}
+.start{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font:400 13px var(--body);color:var(--muted)}
+.start input{font:500 13px var(--mono);color:var(--fg);background:var(--surface-2);border:1px solid var(--line-2);border-radius:8px;padding:6px 8px;color-scheme:dark}
+.blist{display:flex;flex-direction:column;gap:8px}
+.bitem{display:flex;flex-direction:column;gap:4px;padding:16px 18px;border:1px solid var(--line-2);border-radius:12px;text-decoration:none;color:var(--fg);background:var(--surface-2)}
+.bitem b{font:600 17px var(--display)}
+.bitem span{font:400 14px/1.45 var(--body);color:var(--muted)}
+.bitem:hover{border-color:var(--red)}
+.bwrap{display:flex;flex-direction:column;gap:0}
+.bwrap .bitem{border-bottom-left-radius:0;border-bottom-right-radius:0}
+.lida{font:500 13px var(--display);color:var(--muted);background:transparent;border:1px solid var(--line-2);border-top:0;border-radius:0 0 12px 12px;padding:10px 18px;text-align:left;cursor:pointer}
+.lida[aria-pressed="true"]{color:#5aa883;border-color:#2e5a45}
+.lida[aria-pressed="true"]::before{content:"✓ "}
+.soon{font:400 14px/1.5 var(--body);color:var(--dim);margin:0}
+@media (pointer:coarse){.tabs a{padding:11px 18px;font-size:15px}}
+@media (max-width:420px){.row2{grid-template-columns:minmax(0,1fr)}.week div{grid-template-columns:56px minmax(0,1fr)}}
+/*per:css*/
+.pers{display:flex;justify-content:center;flex-wrap:wrap;gap:5px;margin-top:-10px}
+.pers a{display:inline-flex;align-items:center;gap:7px;font:500 10.5px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:8px 10px;white-space:nowrap;border-radius:999px;border:1px solid var(--line)}
+.pers a::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
+.pers a[data-per="res"]{--c:#b02a30}.pers a[data-per="p6"]{--c:#8c2340}.pers a[data-per="p7"]{--c:#1f6f7d}.pers a[data-per="p8"]{--c:#6b3fa0;}
+.pers a[aria-current]{color:#fff;border-color:var(--c);background:color-mix(in srgb,var(--c) 14%,transparent)}
+@media (pointer:coarse){.pers a{padding:10px 10px}}
+@media (max-width:360px){.pers a{letter-spacing:.02em;padding:9px 8px}}
+/* a chama mescla de cor a cada 5 segundos (pedido de 28/10): seis cores em 30 s, sempre em transição */
+@media (prefers-reduced-motion:no-preference){.flame .hue{animation:hue5 30s linear infinite}}
+@keyframes hue5{0%{filter:hue-rotate(0deg) saturate(1.15)}16.66%{filter:hue-rotate(-40deg) saturate(1.35)}33.33%{filter:hue-rotate(-110deg) saturate(1.25)}50%{filter:hue-rotate(160deg) saturate(1.2)}66.66%{filter:hue-rotate(80deg) saturate(1.3)}83.33%{filter:hue-rotate(28deg) saturate(1.2)}100%{filter:hue-rotate(0deg) saturate(1.15)}}
+/*/per:css*/
+
+/* período: cor oficial no lugar do vermelho, sobre preto e branco */
+:root{--bg:#060304;--surface:#0c0708;--surface-2:#130a0c;--line:#24161a;--line-2:#3a2228;--red:#8c2340;--red-ink:#d98a9e;--red-deep:#4a1422}
+.tag.new{border-color:var(--red-deep)}.bubble.story{border-color:var(--red-deep)}
+.tabs a[aria-current="page"]{background:color-mix(in srgb,var(--red) 18%,#0d0d0d)}
+.chip[aria-pressed="true"]{border-color:var(--red);background:color-mix(in srgb,var(--red) 14%,#0d0d0d)}
+.disc{font:600 13px var(--display);color:var(--red-ink);margin:10px 0 0;letter-spacing:.02em}
+.bfoot{display:flex}.bfoot .lida{flex:1}.bfoot .refs{flex:none;border-left:1px solid var(--line-2);border-bottom-left-radius:0;text-decoration:none;color:var(--blue)}
+.bfoot .lida:first-child:not(:last-child){border-bottom-right-radius:0}
+.week div{grid-template-columns:minmax(0,1fr) auto;align-items:center}
+.week div b{font:500 14px var(--display);color:var(--fg);padding:0}
+.week .start{flex-wrap:nowrap}.week label{display:inline-flex;gap:6px;align-items:center;font:500 12px var(--mono);color:var(--muted)}
+@media (max-width:520px){.week div{grid-template-columns:minmax(0,1fr)}.week .start{flex-wrap:wrap}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="fl-out" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff3b0a"/><stop offset=".55" stop-color="#ff6a00"/><stop offset="1" stop-color="#ff2d55"/></linearGradient>
+    <linearGradient id="fl-in" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ffd23f"/><stop offset="1" stop-color="#ff9a1f"/></linearGradient>
+    <radialGradient id="fl-core" cx=".5" cy=".6" r=".6"><stop offset="0" stop-color="#fff8d6"/><stop offset="1" stop-color="#ffe066"/></radialGradient>
+    <radialGradient id="fl-glow" cx=".5" cy=".7" r=".5"><stop offset="0" stop-color="#ff7a1a" stop-opacity=".9"/><stop offset="1" stop-color="#ff7a1a" stop-opacity="0"/></radialGradient>
+    <linearGradient id="av-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a1a1a"/><stop offset="1" stop-color="#2a0d10"/></linearGradient>
+  </defs>
+</svg>
+
+<div class="wrap">
+  <header class="bar">
+    <div class="brand" aria-label="medaj.">
+      <span class="word">medaj<svg class="flame" viewBox="0 0 60 84" aria-hidden="true">
+        <ellipse class="glow" cx="30" cy="70" rx="28" ry="16" fill="url(#fl-glow)"/>
+        <g class="hue"><g class="all">
+          <path class="tongue t2" d="M38 30 C44 22 44 14 41 6 C50 14 53 26 47 38 Z" fill="url(#fl-out)" stroke="#14061c" stroke-width="2.6" stroke-linejoin="round"/>
+          <path class="tongue t1" d="M17 36 C12 28 13 20 16 14 C20 22 24 25 24 31 Z" fill="url(#fl-out)" stroke="#14061c" stroke-width="2.6" stroke-linejoin="round"/>
+          <path d="M30 80 C13 80 5 67 7 53 C9 42 16 37 16 26 C22 31 25 37 25 41 C27 30 31 18 38 8 C38 21 45 28 49 37 C52 34 52 30 51 26 C57 35 58 46 56 56 C54 70 46 80 30 80 Z" fill="url(#fl-out)" stroke="#14061c" stroke-width="2.8" stroke-linejoin="round"/>
+          <path d="M30 76 C19 76 14 67 15.5 59 C17 51 22 48 22.5 41 C26 45 27.5 49 27.5 52 C30.5 44 33.5 38 38 32 C38.5 41 44 47 45 55 C46.5 67 40 76 30 76 Z" fill="url(#fl-in)"/>
+          <ellipse cx="30" cy="68" rx="9" ry="7" fill="url(#fl-core)"/>
+          <g class="eyes">
+            <path d="M18.5 54 L27.5 57.5 L26.5 61 L19 58.5 Z" fill="#1a0614"/>
+            <path d="M41.5 54 L32.5 57.5 L33.5 61 L41 58.5 Z" fill="#1a0614"/>
+            <circle cx="24.5" cy="58.4" r="1.3" fill="#fff6b0"/><circle cx="35.5" cy="58.4" r="1.3" fill="#fff6b0"/>
+          </g>
+          <path d="M21 64 L23.6 67.6 L26.2 64.4 L28.8 68 L31.4 64.4 L34 68 L36.6 64.4 L39 64 Q31 75 21 64 Z" fill="#1a0614"/>
+        </g></g>
+        <circle cx="30" cy="80" r="3.2" fill="#14061c"/>
+      </svg></span>
+      <span class="app-name">6º período</span>
+    </div>
+  </header>
+  <!--per:nav--><nav class="pers" aria-label="Escolher o período"><a href="p6.html" data-per="p6">6º período</a><a href="p7.html" data-per="p7">7º período</a><a href="p8.html" data-per="p8">8º período</a></nav><!--/per:nav-->
+
+  <nav class="tabs" aria-label="Seções do app">
+    <a href="#hoje" data-view="hoje">Hoje</a><a href="#apostilas" data-view="apostilas">Apostilas</a><a href="#cards" data-view="cards">Flashcards</a>
+  </nav>
+
+  <section class="view" id="v-hoje" aria-label="Hoje"></section>
+
+  <section class="view" id="v-apostilas" aria-label="Apostilas" hidden></section>
+
+  <div class="view" id="v-cards" hidden>
+  <nav class="deckbar" id="decks" aria-label="Escolher o baralho"></nav>
+  <section class="stats" aria-label="Resumo de hoje">
+    <div class="stat hot"><b id="s-due">0</b><span>para estudar hoje</span></div>
+    <div class="stat"><b id="s-new">0</b><span>cartões nunca vistos</span></div>
+    <div class="stat"><b id="s-acc">–</b><span>acerto hoje</span></div>
+    <div class="stat"><b id="s-streak">0</b><span>dias seguidos</span></div>
+  </section>
+
+  <div class="main">
+    <section class="card" id="card" aria-live="polite"></section>
+
+    <aside class="casa" aria-label="Dr. Casa" hidden>
+      <div class="casa-top">
+        <svg class="avatar" id="avatar" viewBox="0 0 200 234" role="img" aria-label="Dr. Casa, com a bengala marrom">
+          <circle cx="100" cy="112" r="96" fill="url(#av-bg)"/>
+          <circle cx="100" cy="112" r="96" fill="none" stroke="#ff7a1a" stroke-opacity=".55" stroke-width="2" stroke-dasharray="3 9"/>
+          <path d="M14 234 C20 192 52 172 100 168 C148 172 180 192 186 234 Z" fill="#141c45"/>
+          <path d="M79 172 L100 214 L121 172 Z" fill="#3b1d63"/>
+          <path d="M70 175 L100 214 L82 234 L60 234 C60 210 63 190 70 175 Z" fill="#0d1333"/>
+          <path d="M130 175 L100 214 L118 234 L140 234 C140 210 137 190 130 175 Z" fill="#0d1333"/>
+          <path d="M86 146 L114 146 L117 176 Q100 186 83 176 Z" fill="#c48a64"/>
+          <ellipse cx="61" cy="110" rx="7" ry="11" fill="#cf9570"/><ellipse cx="139" cy="110" rx="7" ry="11" fill="#cf9570"/>
+          <ellipse cx="100" cy="106" rx="39" ry="47" fill="#dba27c"/>
+          <path d="M63 116 C65 148 84 157 100 157 C116 157 135 148 137 116 C131 134 116 142 100 142 C84 142 69 134 63 116 Z" fill="#5c4637" opacity=".42"/>
+          <path d="M86 134 Q100 128 114 134 Q100 140 86 134 Z" fill="#5c4637" opacity=".45"/>
+          <path d="M61 98 C58 70 76 50 102 52 C127 53 145 70 141 98 C137 86 131 79 123 77 C121 85 112 83 106 75 C100 84 90 81 86 75 C80 82 70 85 61 98 Z" fill="#46424d"/>
+          <path d="M70 80 C78 70 88 66 96 66 M110 64 C120 66 130 72 134 82 M80 72 C86 68 92 66 98 67" stroke="#9a96a3" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M73 95 L92 98" stroke="#36323c" stroke-width="4.5" stroke-linecap="round"/>
+          <path class="brow-r" d="M108 97 L127 91" stroke="#36323c" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M74 109 Q83 104 92 109 Q83 113 74 109 Z" fill="#f4efe8"/><path d="M108 109 Q117 104 126 109 Q117 113 108 109 Z" fill="#f4efe8"/>
+          <circle cx="84" cy="109" r="3.1" fill="#4d6f99"/><circle cx="118" cy="109" r="3.1" fill="#4d6f99"/>
+          <circle cx="84" cy="109" r="1.2" fill="#111"/><circle cx="118" cy="109" r="1.2" fill="#111"/>
+          <g class="lids">
+            <path d="M73 108.5 Q83 101 93 108.5 L93 106 Q83 99 73 106 Z" fill="#c9906b"/>
+            <path d="M107 108.5 Q117 101 127 108.5 L127 106 Q117 99 107 106 Z" fill="#c9906b"/>
+          </g>
+          <path d="M73 108.5 Q83 102.5 93 108.5 M107 108.5 Q117 102.5 127 108.5" stroke="#3a2a22" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <path d="M76 116 Q83 119 90 116 M110 116 Q117 119 124 116" stroke="#b07a58" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+          <path d="M100 108 L95 126 Q100 130 106 126" stroke="#a46d4b" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path class="mouth" d="M87 139 Q100 142 115 134" stroke="#6e3a30" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+          <g class="cane">
+            <path d="M166 236 L160 126" stroke="#24130a" stroke-width="11" stroke-linecap="round"/>
+            <path d="M166 236 L160 126" stroke="#6b4220" stroke-width="7.5" stroke-linecap="round"/>
+            <path d="M164.6 220 L159.4 140" stroke="#8d5a2c" stroke-width="1.6" stroke-dasharray="9 7" stroke-linecap="round"/>
+            <ellipse cx="163.6" cy="196" rx="4.6" ry="2.6" fill="#3d2410" transform="rotate(-3 163.6 196)"/>
+            <ellipse cx="161.9" cy="164" rx="4.2" ry="2.3" fill="#3d2410" transform="rotate(-3 161.9 164)"/>
+            <path d="M160 128 C158 98 194 92 193 118 C192.6 127 186 131 181 126" stroke="#24130a" stroke-width="11" fill="none" stroke-linecap="round"/>
+            <path d="M160 128 C158 98 194 92 193 118 C192.6 127 186 131 181 126" stroke="#6b4220" stroke-width="7.5" fill="none" stroke-linecap="round"/>
+            <path d="M163 112 C166 101 184 98 188 110" stroke="#9a6534" stroke-width="2" fill="none" stroke-linecap="round" opacity=".8"/>
+            <path d="M164 228 L167 238" stroke="#2e1a0c" stroke-width="9" stroke-linecap="round"/>
+            <ellipse cx="160" cy="136" rx="11" ry="9" fill="#d29a74"/>
+            <path d="M151 133 Q160 128 169 133 M151 138 Q160 134 169 138" stroke="#a46d4b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </g>
+        </svg>
+        <div class="who"><b>Dr. Casa</b><span>Diagnosticista. Manca, acerta e não tem paciência para quem chuta.</span></div>
+      </div>
+      <p class="bubble" id="bubble"></p>
+      <div class="row">
+        <button class="ghost" id="b-case" type="button">Conte um caso</button>
+        <button class="ghost" id="b-hint" type="button">Me dá uma dica</button>
+      </div>
+    </aside>
+  </div>
+
+  </div>
+
+  <footer>
+    <span id="foot-info"></span>
+    <span id="sync">Progresso salvo neste aparelho.</span>
+    <span id="reset-slot"><button class="linkbtn" id="b-reset" type="button">Zerar meu progresso</button></span>
+  </footer>
+</div>
+
+<script>const PER={"id":"p6","site":"sexto/index.html","aulas":[{"id":"neuro-alzheimer","ch":"neuro-A2","av":"A2","pv":"cm","disc":"Neurologia","t":"Doença de Alzheimer","s":"Neurologia · Prof. Leandro Cruz · 57 slides","u":"/a/neuro-alzheimer","refs":"/a/neuro-alzheimer/artigos"},{"id":"cm2-cardio-taqui","ch":"cardio-A2","av":"A2","pv":"cm","disc":"Cardiologia","t":"Taquiarritmias supraventriculares","s":"Aula 7 · Prof. Hélio Brito Jr. · TPSV, WPW, flutter e fibrilação atrial · 79 slides","u":"/a/cm2-cardio-taqui","refs":"/a/cm2-cardio-taqui/artigos"},{"id":"ps-conceito","ch":"psiq-A1","av":"A1","pv":"psiq","disc":"Psiquiatria","t":"1. O que é o TOC","s":"Conceito, as duas peças (obsessão e compulsão), a história da ideia e a epidemiologia · DSM-5-TR, CID-11, NCS-R e metanálises","u":"/a/ps-conceito","refs":"/a/ps-conceito/artigos"},{"id":"ps-clinica","ch":"psiq-A1","av":"A1","pv":"psiq","disc":"Psiquiatria","t":"2. A clínica do TOC","s":"As dimensões de sintomas, os rituais invisíveis, o insight, a acomodação familiar e como o quadro evolui · DSM-5-TR, Y-BOCS e estudos de seguimento","u":"/a/ps-clinica","refs":"/a/ps-clinica/artigos"},{"id":"ps-diag","ch":"psiq-A1","av":"A1","pv":"psiq","disc":"Psiquiatria","t":"3. Diagnóstico: DSM-5-TR, CID-11 e escalas","s":"Critérios A a D, especificadores, CID-11 6B20 e CID-10 F42, o capítulo dos transtornos relacionados, a Y-BOCS e a avaliação inicial","u":"/a/ps-diag","refs":"/a/ps-diag/artigos"},{"id":"ps-dif","ch":"psiq-A1","av":"A1","pv":"psiq","disc":"Psiquiatria","t":"4. Diferenciais, comorbidades e suicídio","s":"TAG, depressão, personalidade obsessivo-compulsiva, psicose, tiques, autismo, causas orgânicas, comorbidades e o risco de suicídio · DSM-5-TR e coorte sueca","u":"/a/ps-dif","refs":"/a/ps-dif/artigos"},{"id":"ps-neuro","ch":"psiq-A1","av":"A1","pv":"psiq","disc":"Psiquiatria","t":"5. Por que acontece: neurobiologia e psicologia","s":"Genética, o circuito córtico-estriado-tálamo-cortical, serotonina, dopamina e glutamato, os modelos cognitivo-comportamentais, hábito e a hipótese PANDAS/PANS","u":"/a/ps-neuro","refs":"/a/ps-neuro/artigos"},{"id":"ps-tcc","ch":"psiq-A1","av":"A1","pv":"psiq","disc":"Psiquiatria","t":"6. Tratamento I: princípios e a terapia com exposição","s":"Psicoeducação, escolha do tratamento pela gravidade, TCC com exposição e prevenção de resposta (EPR), terapia cognitiva, formatos e o que ainda é pesquisa · APA, NICE, WFSBP, Öst 2015 e Skapinakis 2016","u":"/a/ps-tcc","refs":"/a/ps-tcc/artigos"},{"id":"ps-farmaco","ch":"psiq-A1","av":"A1","pv":"psiq","disc":"Psiquiatria","t":"7. Tratamento II: os inibidores da recaptação de serotonina","s":"ISRS e clomipramina, doses, tempo de teste, efeitos adversos, manutenção, retirada, gestação, amamentação e infância · APA 2007, Bloch 2010, Skapinakis 2016, POTS 2004","u":"/a/ps-farmaco","refs":"/a/ps-farmaco/artigos"},{"id":"ps-resist","ch":"psiq-A1","av":"A1","pv":"psiq","disc":"Psiquiatria","t":"8. Quando não responde: TOC resistente","s":"Definição, checagem do \"falso resistente\", troca, reforço com EPR ou antipsicótico, glutamatérgicos, neuromodulação (EMT profunda, ECP), neurocirurgia e o que é emergente · Bloch 2006, Simpson 2013, Carmi 2019, Alonso 2015, Lopes 2014","u":"/a/ps-resist","refs":"/a/ps-resist/artigos"},{"id":"ps-vida","ch":"psiq-A1","av":"A1","pv":"psiq","disc":"Psiquiatria","t":"9. O TOC na vida real e as leituras","s":"Família, parceiros e como ajudar sem alimentar o ciclo, estigma e linguagem, onde buscar ajuda no Brasil, e a biblioteca do tema: clássicos, livros de referência, literatura e artigos","u":"/a/ps-vida","refs":"/a/ps-vida/artigos"}],"cards":[{"id":"neuro-alzheimer-0-0","ch":"neuro-A2","av":"A2","q":"O que a aula exige para tratar Alzheimer?","a":"Diagnóstico clínico + biomarcador (β-amiloide).","sec":"/a/neuro-alzheimer/1","w":"Doença de Alzheimer · Alzheimer: quem foi, quem foi a paciente · slides 1–5"},{"id":"cm2-cardio-taqui-0-0","ch":"cardio-A2","av":"A2","q":"O que define uma taquiarritmia como supraventricular?","a":"Nascer acima da divisão do feixe de His.","sec":"/a/cm2-cardio-taqui/1","w":"Taquiarritmias supraventriculares · O mapa das taquiarritmias · slides 3, 6"},{"id":"ps-conceito-0-0","ch":"psiq-A1","av":"A1","q":"O que torna uma obsessão \"egodistônica\"?","a":"A pessoa reconhece o pensamento como da própria mente, mas sente que ele contraria quem ela é e o que ela quer.","sec":"/a/ps-conceito/1","w":"1. O que é o TOC · Obsessão e compulsão: as duas peças"},{"id":"neuro-alzheimer-1-0","ch":"neuro-A2","av":"A2","q":"Qual a sobrevida média na doença de Alzheimer?","a":"De 7 a 10 anos.","sec":"/a/neuro-alzheimer/2","w":"Doença de Alzheimer · Epidemiologia · slide 6"},{"id":"cm2-cardio-taqui-1-0","ch":"cardio-A2","av":"A2","q":"Quais as três condições da reentrada?","a":"Duas vias, bloqueio unidirecional e condução lenta.","sec":"/a/cm2-cardio-taqui/2","w":"Taquiarritmias supraventriculares · Os três mecanismos e a reentrada · slides 4–5"},{"id":"ps-conceito-1-0","ch":"psiq-A1","av":"A1","q":"Por que o alívio depois do ritual mantém o TOC?","a":"É reforço negativo: retira a ansiedade, aumenta a chance de repetir o ritual e impede a pessoa de aprender que a ansiedade cairia sozinha.","sec":"/a/ps-conceito/2","w":"1. O que é o TOC · O ciclo que mantém o TOC"},{"id":"neuro-alzheimer-2-0","ch":"neuro-A2","av":"A2","q":"Onde começam os emaranhados nos estágios I e II de Braak?","a":"No córtex transentorrinal e entorrinal.","sec":"/a/neuro-alzheimer/3","w":"Doença de Alzheimer · Fisiopatologia: placa, emaranhado e Braak · slide 7"},{"id":"cm2-cardio-taqui-2-0","ch":"cardio-A2","av":"A2","q":"Quais os limites do triângulo de Koch?","a":"Tendão de Todaro, anel da tricúspide e óstio do seio coronário.","sec":"/a/cm2-cardio-taqui/3","w":"Taquiarritmias supraventriculares · Triângulo de Koch: onde mora o nó AV · slides 7–8"},{"id":"ps-conceito-2-0","ch":"psiq-A1","av":"A1","q":"O que diferencia a obsessão de uma intrusão comum?","a":"A importância e a responsabilidade atribuídas ao pensamento, a tentativa de suprimi-lo e os rituais para neutralizá-lo.","sec":"/a/ps-conceito/3","w":"1. O que é o TOC · Pensamento intrusivo é humano; o que muda no TOC"},{"id":"neuro-alzheimer-3-0","ch":"neuro-A2","av":"A2","q":"Cite os três fatores de proteção do slide.","a":"Anos de educação formal, atividade física e vida social.","sec":"/a/neuro-alzheimer/4","w":"Doença de Alzheimer · Fatores de risco e de proteção · slides 8–10"},{"id":"cm2-cardio-taqui-3-0","ch":"cardio-A2","av":"A2","q":"Como é o ECG basal de quem tem TRN?","a":"Normal.","sec":"/a/cm2-cardio-taqui/4","w":"Taquiarritmias supraventriculares · TRN: a dupla via nodal e a clínica · slides 9–11"},{"id":"ps-conceito-3-0","ch":"psiq-A1","av":"A1","q":"Em que ano e por quem foi descrita a exposição com prevenção de resposta?","a":"Victor Meyer, em 1966.","sec":"/a/ps-conceito/4","w":"1. O que é o TOC · Uma ideia com dois séculos"},{"id":"neuro-alzheimer-4-0","ch":"neuro-A2","av":"A2","q":"O valaciclovir funcionou no ensaio VALAD?","a":"Não; não é recomendado para tratar Alzheimer.","sec":"/a/neuro-alzheimer/5","w":"Doença de Alzheimer · Infecções como fator de risco · slides 11–12"},{"id":"cm2-cardio-taqui-4-0","ch":"cardio-A2","av":"A2","q":"Qual o RP' da TRN e onde está a P?","a":"Menor que 70 ms, com a P no final do QRS em V1.","sec":"/a/cm2-cardio-taqui/5","w":"Taquiarritmias supraventriculares · TRN: o ECG da crise · slides 14–17"},{"id":"ps-conceito-4-0","ch":"psiq-A1","av":"A1","q":"Qual o sinal de alerta na idade de início?","a":"Início após os 35 anos é incomum e pede investigar causa orgânica.","sec":"/a/ps-conceito/5","w":"1. O que é o TOC · Epidemiologia: quanto, quem e quando"},{"id":"neuro-alzheimer-5-0","ch":"neuro-A2","av":"A2","q":"Quanto o APOE ε4 em homozigose aumenta o risco?","a":"Cerca de 10 vezes em relação ao ε3/ε3.","sec":"/a/neuro-alzheimer/6","w":"Doença de Alzheimer · Genética: APOE e companhia · slides 13–17"},{"id":"cm2-cardio-taqui-5-0","ch":"cardio-A2","av":"A2","q":"Qual via é ablacionada na TRN e com que sucesso?","a":"A via lenta, com cerca de 95% de sucesso.","sec":"/a/cm2-cardio-taqui/6","w":"Taquiarritmias supraventriculares · TRN: tratamento e ablação por cateter · slides 18–24"},{"id":"ps-conceito-5-0","ch":"psiq-A1","av":"A1","q":"Qual a diferença de função entre a obsessão e a compulsão no ciclo do TOC?","a":"A obsessão é intrusiva e aumenta a ansiedade (ou nojo, culpa, incompletude); a compulsão é feita para neutralizar a obsessão e reduzir esse desconforto, o que traz alívio passageiro e reforça o ciclo (reforço negativo).","sec":"/a/ps-conceito/6","w":"1. O que é o TOC · Perguntas para revisar"},{"id":"neuro-alzheimer-6-0","ch":"neuro-A2","av":"A2","q":"Quanto do CCL progride para DA em 2 anos?","a":"14,9% (22,9 a 50% se Aβ positivo).","sec":"/a/neuro-alzheimer/7","w":"Doença de Alzheimer · Apresentação clássica e comprometimento cognitivo leve · slides 18–23"},{"id":"cm2-cardio-taqui-6-0","ch":"cardio-A2","av":"A2","q":"Quais os dois achados da pré-excitação no ECG?","a":"PR curto e onda delta.","sec":"/a/cm2-cardio-taqui/7","w":"Taquiarritmias supraventriculares · Via acessória e Wolff-Parkinson-White · slides 26, 28–29"},{"id":"ps-conceito-5-1","ch":"psiq-A1","av":"A1","q":"Por que dizer que a compulsão dá \"alívio, e não prazer\" é importante para o diagnóstico?","a":"Porque separa o TOC dos comportamentos impulsivos (jogo, compras, uso de substância), em que o ato traz gratificação; no TOC o ato é feito para escapar de um estado aversivo.","sec":"/a/ps-conceito/6","w":"1. O que é o TOC · Perguntas para revisar"},{"id":"neuro-alzheimer-7-0","ch":"neuro-A2","av":"A2","q":"O que significa CDR 2?","a":"Demência moderada.","sec":"/a/neuro-alzheimer/8","w":"Doença de Alzheimer · CDR: a régua da gravidade · slide 24"},{"id":"cm2-cardio-taqui-7-0","ch":"cardio-A2","av":"A2","q":"Qual a forma mais comum de TRAV e como é o QRS?","a":"Ortodrômica (95%), com QRS estreito.","sec":"/a/cm2-cardio-taqui/8","w":"Taquiarritmias supraventriculares · TRAV: o ECG da crise e a comparação com a TRN · slides 27, 30–32"},{"id":"ps-conceito-5-2","ch":"psiq-A1","av":"A1","q":"Se pensamentos intrusivos são quase universais, o que torna um pensamento uma obsessão do TOC?","a":"A interpretação e a resposta: a pessoa dá importância e responsabilidade exageradas ao pensamento, tenta suprimi-lo e o neutraliza com rituais, e isso consome tempo (mais de 1 hora por dia) ou causa sofrimento e prejuízo.","sec":"/a/ps-conceito/6","w":"1. O que é o TOC · Perguntas para revisar"},{"id":"neuro-alzheimer-8-0","ch":"neuro-A2","av":"A2","q":"Qual a tríade da hidrocefalia de pressão normal?","a":"Apraxia da marcha, incontinência urinária e alteração da memória.","sec":"/a/neuro-alzheimer/9","w":"Doença de Alzheimer · Diagnóstico diferencial: as demências tratáveis · slide 25"},{"id":"cm2-cardio-taqui-8-0","ch":"cardio-A2","av":"A2","q":"Qual cardiopatia mais se associa ao WPW?","a":"A anomalia de Ebstein.","sec":"/a/cm2-cardio-taqui/9","w":"Taquiarritmias supraventriculares · WPW: quem tem, o que sente e o risco · slide 33"},{"id":"ps-conceito-5-3","ch":"psiq-A1","av":"A1","q":"Qual a prevalência aproximada do TOC na vida e qual a idade típica de início?","a":"Cerca de 1 a 3% ao longo da vida (2,3% no NCS-R; 1,3% em metanálise mundial). Início bimodal, com média por volta dos 19,5 anos e cerca de um quarto dos casos antes dos 14 anos.","sec":"/a/ps-conceito/6","w":"1. O que é o TOC · Perguntas para revisar"},{"id":"neuro-alzheimer-9-0","ch":"neuro-A2","av":"A2","q":"Qual a 2ª causa de demência pelo ranking da aula?","a":"A mista: Alzheimer + AVC.","sec":"/a/neuro-alzheimer/10","w":"Doença de Alzheimer · Outras demências degenerativas · slide 26"},{"id":"cm2-cardio-taqui-9-0","ch":"cardio-A2","av":"A2","q":"Cite dois antiarrítmicos da profilaxia da TRAV.","a":"Sotalol, propafenona, flecainida ou amiodarona.","sec":"/a/cm2-cardio-taqui/10","w":"Taquiarritmias supraventriculares · TRAV: tratamento · slides 34–37"},{"id":"ps-conceito-5-4","ch":"psiq-A1","av":"A1","q":"O que muda quando os sintomas obsessivos começam depois dos 35 anos?","a":"Início tardio é incomum e pede investigação de causa secundária (lesão dos núcleos da base ou do lobo frontal, neuroinfecção, doença neurodegenerativa, substância) antes de fechar TOC primário.","sec":"/a/ps-conceito/6","w":"1. O que é o TOC · Perguntas para revisar"},{"id":"neuro-alzheimer-10-0","ch":"neuro-A2","av":"A2","q":"Biomarcador negativo faz o quê com o diagnóstico de DA?","a":"Exclui DA.","sec":"/a/neuro-alzheimer/11","w":"Doença de Alzheimer · Biomarcadores · slides 27–31"},{"id":"cm2-cardio-taqui-10-0","ch":"cardio-A2","av":"A2","q":"O que fazer na TPSV com instabilidade?","a":"Cardioversão elétrica.","sec":"/a/cm2-cardio-taqui/11","w":"Taquiarritmias supraventriculares · TPSV na emergência · slides 38–39"},{"id":"ps-clinica-0-0","ch":"psiq-A1","av":"A1","q":"Quais são as quatro dimensões de sintomas do TOC?","a":"Contaminação; responsabilidade por dano e dúvida; simetria e ordem; pensamentos proibidos (agressivos, sexuais, religiosos).","sec":"/a/ps-clinica/1","w":"2. A clínica do TOC · As dimensões de sintomas"},{"id":"neuro-alzheimer-11-0","ch":"neuro-A2","av":"A2","q":"Que três medidas compõem o MTA?","a":"Fissura coroide, corno temporal e altura do hipocampo.","sec":"/a/neuro-alzheimer/12","w":"Doença de Alzheimer · Exames complementares e o escore MTA · slides 32–34"},{"id":"cm2-cardio-taqui-11-0","ch":"cardio-A2","av":"A2","q":"Por que a FC do flutter típico costuma ser 150?","a":"Átrio a 300 bpm com condução AV 2:1.","sec":"/a/cm2-cardio-taqui/12","w":"Taquiarritmias supraventriculares · Flutter atrial: o circuito e o ECG · slides 42–44"},{"id":"ps-clinica-1-0","ch":"psiq-A1","av":"A1","q":"Por que perguntar \"você tem certeza de que está tudo bem?\" pode ser compulsão?","a":"Porque é busca de reasseguramento: alivia na hora e mantém a dúvida, como qualquer ritual.","sec":"/a/ps-clinica/2","w":"2. A clínica do TOC · Rituais invisíveis, evitação e reasseguramento"},{"id":"neuro-alzheimer-12-0","ch":"neuro-A2","av":"A2","q":"Qual variante da afasia primária progressiva é mais ligada à DA?","a":"A logopênica (86 a 90%).","sec":"/a/neuro-alzheimer/13","w":"Doença de Alzheimer · Alzheimer atípico · slides 35–42"},{"id":"cm2-cardio-taqui-12-0","ch":"cardio-A2","av":"A2","q":"Com quanto tempo o flutter traz risco de tromboembolismo?","a":"Mais de 48 horas.","sec":"/a/cm2-cardio-taqui/13","w":"Taquiarritmias supraventriculares · Flutter atrial: classificação e clínica · slide 48"},{"id":"ps-clinica-2-0","ch":"psiq-A1","av":"A1","q":"Convicção total restrita ao tema obsessivo, sem outros sintomas psicóticos: qual o diagnóstico?","a":"TOC com insight ausente/crenças delirantes.","sec":"/a/ps-clinica/3","w":"2. A clínica do TOC · Insight: do bom ao delirante"},{"id":"neuro-alzheimer-13-0","ch":"neuro-A2","av":"A2","q":"Que proteína define a LATE?","a":"TDP-43.","sec":"/a/neuro-alzheimer/14","w":"Doença de Alzheimer · LATE, PART e outras doenças do idoso muito idoso · slides 43, 54–57"},{"id":"cm2-cardio-taqui-13-0","ch":"cardio-A2","av":"A2","q":"Qual o alvo da ablação do flutter típico?","a":"O istmo cavotricuspídeo.","sec":"/a/cm2-cardio-taqui/14","w":"Taquiarritmias supraventriculares · Flutter atrial: tratamento · slides 45–47, 49"},{"id":"ps-clinica-3-0","ch":"psiq-A1","av":"A1","q":"Qual o efeito da acomodação familiar no TOC?","a":"Alivia no curto prazo e mantém o TOC; associa-se a maior gravidade e pior resposta.","sec":"/a/ps-clinica/4","w":"2. A clínica do TOC · A família dentro do ritual: acomodação"},{"id":"neuro-alzheimer-14-0","ch":"neuro-A2","av":"A2","q":"Quais os efeitos colaterais dos IAChE anotados na aula?","a":"Hipotensão postural e anorexia.","sec":"/a/neuro-alzheimer/15","w":"Doença de Alzheimer · Tratamento sintomático · slides 44–46"},{"id":"cm2-cardio-taqui-14-0","ch":"cardio-A2","av":"A2","q":"Qual a pista mais forte de FA no ECG?","a":"RR irregularmente irregular, sem onda P.","sec":"/a/cm2-cardio-taqui/15","w":"Taquiarritmias supraventriculares · Fibrilação atrial: o que é e como aparece no ECG · slides 51–54"},{"id":"ps-clinica-4-0","ch":"psiq-A1","av":"A1","q":"Qual a definição de remissão no TOC?","a":"Y-BOCS de 12 ou menos por pelo menos uma semana.","sec":"/a/ps-clinica/5","w":"2. A clínica do TOC · Curso e prognóstico"},{"id":"neuro-alzheimer-15-0","ch":"neuro-A2","av":"A2","q":"Qual o principal efeito adverso dos anticorpos anti-amiloide?","a":"ARIA: edema e micro-hemorragia cerebral.","sec":"/a/neuro-alzheimer/16","w":"Doença de Alzheimer · Anticorpos anti-amiloide · slides 47–49"},{"id":"cm2-cardio-taqui-15-0","ch":"cardio-A2","av":"A2","q":"Que fração dos AVC isquêmicos se deve à FA?","a":"De 20 a 30%.","sec":"/a/cm2-cardio-taqui/16","w":"Taquiarritmias supraventriculares · Fibrilação atrial: epidemiologia e prognóstico · slides 55–56, 61, 63"},{"id":"ps-clinica-6-0","ch":"psiq-A1","av":"A1","q":"Quais são as quatro dimensões de sintomas do TOC e uma compulsão típica de cada uma?","a":"Contaminação (lavar, limpar); responsabilidade por dano e dúvida (verificar, perguntar); simetria e ordem (organizar, repetir, contar); pensamentos proibidos agressivos, sexuais ou religiosos (rituais mentais, rezar, evitar).","sec":"/a/ps-clinica/7","w":"2. A clínica do TOC · Perguntas para revisar"},{"id":"neuro-alzheimer-16-0","ch":"neuro-A2","av":"A2","q":"Qual a 1ª linha para sintomas psiquiátricos na DA?","a":"Donepezila e memantina.","sec":"/a/neuro-alzheimer/17","w":"Doença de Alzheimer · Sintomas psiquiátricos e delirium · slides 50–52"},{"id":"cm2-cardio-taqui-16-0","ch":"cardio-A2","av":"A2","q":"O que é FA permanente?","a":"A FA aceita por paciente e médico, sem novas tentativas de reverter.","sec":"/a/cm2-cardio-taqui/17","w":"Taquiarritmias supraventriculares · Fibrilação atrial: classificação e evolução · slides 62, 65–66"},{"id":"ps-clinica-6-1","ch":"psiq-A1","av":"A1","q":"Por que a busca de reasseguramento é tratada como compulsão?","a":"Porque segue a mesma lógica do ritual: é feita para aliviar a ansiedade gerada pela obsessão, alivia por pouco tempo e mantém a dúvida e o ciclo.","sec":"/a/ps-clinica/7","w":"2. A clínica do TOC · Perguntas para revisar"},{"id":"neuro-alzheimer-17-0","ch":"neuro-A2","av":"A2","q":"Até quando o tratamento será sintomático?","a":"Até surgirem novas terapias modificadoras.","sec":"/a/neuro-alzheimer/18","w":"Doença de Alzheimer · Conclusões do professor · slide 53"},{"id":"cm2-cardio-taqui-17-0","ch":"cardio-A2","av":"A2","q":"Quantas derivações tem o ECG de bolso do slide?","a":"Seis: DI, DII, DIII, aVR, aVL e aVF.","sec":"/a/cm2-cardio-taqui/18","w":"Taquiarritmias supraventriculares · Detectar a arritmia: do ECG de bolso ao monitor implantável · slides 12–13, 57–60"},{"id":"ps-clinica-6-2","ch":"psiq-A1","av":"A1","q":"Paciente com convicção total de que vai contaminar a família, rituais de limpeza e sem outros sintomas psicóticos: qual o diagnóstico?","a":"TOC com insight ausente/crenças delirantes. A convicção restrita ao tema obsessivo não muda o diagnóstico para psicose.","sec":"/a/ps-clinica/7","w":"2. A clínica do TOC · Perguntas para revisar"},{"id":"cm2-cardio-taqui-18-0","ch":"cardio-A2","av":"A2","q":"Com quantos pontos a ESC 2020 recomenda anticoagular um homem?","a":"Com 2 ou mais.","sec":"/a/cm2-cardio-taqui/19","w":"Taquiarritmias supraventriculares · CHA2DS2-VASc e anticoagulação · slides 64, 67–69"},{"id":"ps-clinica-6-3","ch":"psiq-A1","av":"A1","q":"O que é acomodação familiar e por que ela importa no tratamento?","a":"É a participação da família nos sintomas (responder perguntas repetidas, participar dos rituais, mudar a rotina). Nasce do afeto, mas mantém o TOC e se associa a maior gravidade e pior resposta; reduzi-la de forma gradual faz parte do tratamento.","sec":"/a/ps-clinica/7","w":"2. A clínica do TOC · Perguntas para revisar"},{"id":"cm2-cardio-taqui-19-0","ch":"cardio-A2","av":"A2","q":"Qual a meta de FC em repouso no slide?","a":"De 60 a 80 bpm (menos de 110 no esforço).","sec":"/a/cm2-cardio-taqui/20","w":"Taquiarritmias supraventriculares · Fibrilação atrial: tratamento · slide 70"},{"id":"ps-clinica-6-4","ch":"psiq-A1","av":"A1","q":"Como o consenso internacional define resposta e remissão no TOC?","a":"Resposta: redução de pelo menos 35% na Y-BOCS com CGI-I 1 ou 2. Remissão: Y-BOCS de 12 ou menos por pelo menos uma semana.","sec":"/a/ps-clinica/7","w":"2. A clínica do TOC · Perguntas para revisar"},{"id":"cm2-cardio-taqui-20-0","ch":"cardio-A2","av":"A2","q":"De onde vêm os gatilhos da FA?","a":"Das veias pulmonares.","sec":"/a/cm2-cardio-taqui/21","w":"Taquiarritmias supraventriculares · Ablação da FA: isolar as veias pulmonares · slides 71–77"},{"id":"ps-diag-0-0","ch":"psiq-A1","av":"A1","q":"O critério B exige mais de 1 hora por dia?","a":"Não: é consumo de tempo OU sofrimento OU prejuízo significativo.","sec":"/a/ps-diag/1","w":"3. Diagnóstico: DSM-5-TR, CID-11 e escalas · Os critérios do DSM-5-TR"},{"id":"cm2-cardio-taqui-21-0","ch":"cardio-A2","av":"A2","q":"O que fazer antes de cardioverter uma FA com mais de 48 h?","a":"Anticoagular por 3 semanas ou fazer ETE sem trombo.","sec":"/a/cm2-cardio-taqui/22","w":"Taquiarritmias supraventriculares · FA e flutter na emergência · slide 78"},{"id":"ps-diag-1-0","ch":"psiq-A1","av":"A1","q":"Qual o código do TOC na CID-11 e na CID-10?","a":"6B20 na CID-11 e F42 na CID-10.","sec":"/a/ps-diag/2","w":"3. Diagnóstico: DSM-5-TR, CID-11 e escalas · A CID-11 e a CID-10"},{"id":"cm2-cardio-taqui-22-0","ch":"cardio-A2","av":"A2","q":"Quais são as três condições para existir uma reentrada?","a":"Duas vias de condução, bloqueio unidirecional em uma delas e condução lenta na outra.","sec":"/a/cm2-cardio-taqui/23","w":"Taquiarritmias supraventriculares · Perguntas dos doutores"},{"id":"ps-diag-2-0","ch":"psiq-A1","av":"A1","q":"Que transtorno a CID-11 põe no grupo do TOC e o DSM-5-TR deixa no capítulo somático?","a":"A hipocondria (no DSM-5-TR, transtorno de ansiedade de doença).","sec":"/a/ps-diag/3","w":"3. Diagnóstico: DSM-5-TR, CID-11 e escalas · O capítulo dos transtornos relacionados"},{"id":"cm2-cardio-taqui-22-1","ch":"cardio-A2","av":"A2","q":"Qual é a TPSV mais comum e qual a sua proporção?","a":"A taquicardia reentrante nodal AV (TRN), com 60 a 70% das TPSV.","sec":"/a/cm2-cardio-taqui/23","w":"Taquiarritmias supraventriculares · Perguntas dos doutores"},{"id":"ps-diag-3-0","ch":"psiq-A1","av":"A1","q":"Qual a faixa de Y-BOCS do TOC grave?","a":"De 24 a 31 (32 a 40 é extremo).","sec":"/a/ps-diag/4","w":"3. Diagnóstico: DSM-5-TR, CID-11 e escalas · A Y-BOCS e outras escalas"},{"id":"cm2-cardio-taqui-22-2","ch":"cardio-A2","av":"A2","q":"O que é o \"frog sign\"?","a":"A turgência jugular pulsátil na crise de TPSV (típica da TRN), porque o átrio contrai com a tricúspide fechada.","sec":"/a/cm2-cardio-taqui/23","w":"Taquiarritmias supraventriculares · Perguntas dos doutores"},{"id":"ps-diag-4-0","ch":"psiq-A1","av":"A1","q":"Que medicamento antipsicótico pode induzir sintomas obsessivo-compulsivos?","a":"A clozapina.","sec":"/a/ps-diag/5","w":"3. Diagnóstico: DSM-5-TR, CID-11 e escalas · A avaliação inicial na prática"},{"id":"cm2-cardio-taqui-22-3","ch":"cardio-A2","av":"A2","q":"Onde fica a onda P na crise de TRN e qual o RP'?","a":"No final do QRS (vista em V1), com RP' menor que 70 ms.","sec":"/a/cm2-cardio-taqui/23","w":"Taquiarritmias supraventriculares · Perguntas dos doutores"},{"id":"ps-diag-5-0","ch":"psiq-A1","av":"A1","q":"Quais os quatro critérios (A a D) do DSM-5-TR para TOC?","a":"A: obsessões, compulsões ou ambas. B: consomem tempo (mais de 1 hora por dia) ou causam sofrimento ou prejuízo significativo. C: não atribuíveis a substância ou a outra condição médica. D: não mais bem explicados por outro transtorno mental.","sec":"/a/ps-diag/6","w":"3. Diagnóstico: DSM-5-TR, CID-11 e escalas · Perguntas para revisar"},{"id":"cm2-cardio-taqui-22-4","ch":"cardio-A2","av":"A2","q":"Onde fica a onda P na crise de TRAV e qual o RP'?","a":"Depois do QRS, separada dele, com RP' maior que 70 ms.","sec":"/a/cm2-cardio-taqui/23","w":"Taquiarritmias supraventriculares · Perguntas dos doutores"},{"id":"ps-diag-5-1","ch":"psiq-A1","av":"A1","q":"Qual o código do TOC na CID-11 e como ele se subdivide?","a":"6B20, subdividido pelo insight: 6B20.0 com insight razoável a bom e 6B20.1 com insight pobre a ausente.","sec":"/a/ps-diag/6","w":"3. Diagnóstico: DSM-5-TR, CID-11 e escalas · Perguntas para revisar"},{"id":"cm2-cardio-taqui-22-5","ch":"cardio-A2","av":"A2","q":"O que define a síndrome de Wolff-Parkinson-White?","a":"Pré-excitação ventricular no ECG (PR curto e onda delta) acompanhada de sintomas (taquiarritmia).","sec":"/a/cm2-cardio-taqui/23","w":"Taquiarritmias supraventriculares · Perguntas dos doutores"},{"id":"ps-diag-5-2","ch":"psiq-A1","av":"A1","q":"Que dois transtornos a CID-11 inclui no grupo do TOC e que o DSM-5-TR deixa em outro lugar?","a":"Hipocondria (6B23), que no DSM-5-TR é transtorno de ansiedade de doença, no capítulo somático; e síndrome de referência olfativa (6B22), que no DSM-5-TR aparece como \"outro transtorno obsessivo-compulsivo especificado\".","sec":"/a/ps-diag/6","w":"3. Diagnóstico: DSM-5-TR, CID-11 e escalas · Perguntas para revisar"},{"id":"cm2-cardio-taqui-22-6","ch":"cardio-A2","av":"A2","q":"Qual a forma mais comum de TRAV e como é o QRS nela?","a":"A ortodrômica (95%), com QRS estreito: desce pelo nó AV e volta pela via acessória.","sec":"/a/cm2-cardio-taqui/23","w":"Taquiarritmias supraventriculares · Perguntas dos doutores"},{"id":"ps-diag-5-3","ch":"psiq-A1","av":"A1","q":"Como é estruturada a Y-BOCS e quais as faixas de gravidade?","a":"10 itens (5 de obsessões e 5 de compulsões) pontuados de 0 a 4, total de 0 a 40. 0–7 subclínico, 8–15 leve, 16–23 moderado, 24–31 grave, 32–40 extremo.","sec":"/a/ps-diag/6","w":"3. Diagnóstico: DSM-5-TR, CID-11 e escalas · Perguntas para revisar"},{"id":"cm2-cardio-taqui-22-7","ch":"cardio-A2","av":"A2","q":"Qual a sequência de tratamento da TPSV estável na emergência?","a":"Manobra vagal, depois adenosina IV (6 mg em bolus rápido), depois verapamil IV (se FE maior que 40%) e, se falhar, cardioversão elétrica.","sec":"/a/cm2-cardio-taqui/23","w":"Taquiarritmias supraventriculares · Perguntas dos doutores"},{"id":"ps-diag-5-4","ch":"psiq-A1","av":"A1","q":"Quando investigar causa orgânica num quadro obsessivo-compulsivo?","a":"Início após os 35 anos, sinais neurológicos focais, curso atípico ou início abrupto (especialmente na infância), uso de substância ou de medicamento que possa induzir sintomas.","sec":"/a/ps-diag/6","w":"3. Diagnóstico: DSM-5-TR, CID-11 e escalas · Perguntas para revisar"},{"id":"cm2-cardio-taqui-22-8","ch":"cardio-A2","av":"A2","q":"Qual o tratamento curativo da TRN e o da TRAV?","a":"Ablação por cateter: da via lenta na TRN (cerca de 95%) e do feixe anômalo na TRAV (cerca de 94%).","sec":"/a/cm2-cardio-taqui/23","w":"Taquiarritmias supraventriculares · Perguntas dos doutores"},{"id":"ps-dif-0-0","ch":"psiq-A1","av":"A1","q":"O que diferencia a preocupação do TAG da obsessão?","a":"A preocupação do TAG é sobre problemas reais e é egossintônica, sem ritual.","sec":"/a/ps-dif/1","w":"4. Diferenciais, comorbidades e suicídio · TOC × TAG × depressão"},{"id":"cm2-cardio-taqui-22-9","ch":"cardio-A2","av":"A2","q":"Qual a FC atrial do flutter típico e por que a FC ventricular costuma ser 150?","a":"De 250 a 300 bpm, com condução AV 2:1, o que dá cerca de 150 bpm no ventrículo.","sec":"/a/cm2-cardio-taqui/23","w":"Taquiarritmias supraventriculares · Perguntas dos doutores"},{"id":"ps-dif-1-0","ch":"psiq-A1","av":"A1","q":"Qual a palavra que separa o TPOC do TOC?","a":"Egossintonia: no TPOC a pessoa acha que o jeito dela é o certo.","sec":"/a/ps-dif/2","w":"4. Diferenciais, comorbidades e suicídio · TOC × personalidade obsessivo-compulsiva"},{"id":"cm2-cardio-taqui-22-10","ch":"cardio-A2","av":"A2","q":"Em quais derivações aparecem as ondas F negativas do flutter típico anti-horário?","a":"DII, DIII e aVF (o \"serrilhado\").","sec":"/a/cm2-cardio-taqui/23","w":"Taquiarritmias supraventriculares · Perguntas dos doutores"},{"id":"ps-dif-2-0","ch":"psiq-A1","av":"A1","q":"Obsessão de dano ao bebê com horror e evitação: TOC ou psicose puerperal?","a":"TOC: egodistônico, a mãe se protege do pensamento.","sec":"/a/ps-dif/3","w":"4. Diferenciais, comorbidades e suicídio · TOC × psicose"},{"id":"cm2-cardio-taqui-22-11","ch":"cardio-A2","av":"A2","q":"Quais os três achados do ECG na fibrilação atrial?","a":"Ausência de onda P, ondas f e intervalos RR irregularmente irregulares.","sec":"/a/cm2-cardio-taqui/23","w":"Taquiarritmias supraventriculares · Perguntas dos doutores"},{"id":"ps-dif-3-0","ch":"psiq-A1","av":"A1","q":"Que proporção das pessoas com TOC tem tique ao longo da vida?","a":"Até 30%.","sec":"/a/ps-dif/4","w":"4. Diferenciais, comorbidades e suicídio · Tiques, autismo e causas orgânicas"},{"id":"cm2-cardio-taqui-22-12","ch":"cardio-A2","av":"A2","q":"Como se classifica a FA pelo tempo?","a":"Paroxística (menos de 7 dias), persistente (7 dias ou mais), persistente de longa duração (mais de 1 ano) e permanente (sem novas tentativas de reverter).","sec":"/a/cm2-cardio-taqui/23","w":"Taquiarritmias supraventriculares · Perguntas dos doutores"},{"id":"ps-dif-4-0","ch":"psiq-A1","av":"A1","q":"Qual a comorbidade mais frequente do TOC ao longo da vida?","a":"Transtornos de ansiedade, em cerca de 76%.","sec":"/a/ps-dif/5","w":"4. Diferenciais, comorbidades e suicídio · Comorbidades"},{"id":"cm2-cardio-taqui-22-13","ch":"cardio-A2","av":"A2","q":"Quais itens valem 2 pontos no CHA2DS2-VASc?","a":"Idade de 75 anos ou mais e AVC, AIT ou tromboembolismo prévio.","sec":"/a/cm2-cardio-taqui/23","w":"Taquiarritmias supraventriculares · Perguntas dos doutores"},{"id":"ps-dif-5-0","ch":"psiq-A1","av":"A1","q":"Qual o maior preditor de morte por suicídio na coorte sueca?","a":"Tentativa de suicídio prévia.","sec":"/a/ps-dif/6","w":"4. Diferenciais, comorbidades e suicídio · Suicídio no TOC"},{"id":"cm2-cardio-taqui-22-14","ch":"cardio-A2","av":"A2","q":"Quando se pode cardioverter uma FA sem anticoagulação prévia de 3 semanas?","a":"Se começou há menos de 48 h (ESC 2024: menos de 24 h) ou se o ecocardiograma transesofágico não mostra trombo.","sec":"/a/cm2-cardio-taqui/23","w":"Taquiarritmias supraventriculares · Perguntas dos doutores"},{"id":"ps-dif-6-0","ch":"psiq-A1","av":"A1","q":"Qual a diferença essencial entre a preocupação do TAG e a obsessão do TOC?","a":"A preocupação do TAG é sobre problemas reais do cotidiano e é egossintônica, sem ritual; a obsessão é intrusiva, frequentemente irracional ou tabu, egodistônica e acompanhada de compulsão para neutralizá-la.","sec":"/a/ps-dif/7","w":"4. Diferenciais, comorbidades e suicídio · Perguntas para revisar"},{"id":"cm2-cardio-taqui-22-15","ch":"cardio-A2","av":"A2","q":"Qual o alvo da ablação da fibrilação atrial?","a":"O isolamento elétrico das veias pulmonares, onde nascem as extrassístoles que disparam a FA.","sec":"/a/cm2-cardio-taqui/23","w":"Taquiarritmias supraventriculares · Perguntas dos doutores"},{"id":"ps-dif-6-1","ch":"psiq-A1","av":"A1","q":"Como diferenciar TOC de transtorno da personalidade obsessivo-compulsiva?","a":"O TPOC é um padrão global e egossintônico de perfeccionismo, ordem e controle, sem obsessões nem compulsões verdadeiras; o TOC tem obsessões e compulsões egodistônicas que causam sofrimento. Podem coexistir.","sec":"/a/ps-dif/7","w":"4. Diferenciais, comorbidades e suicídio · Perguntas para revisar"},{"id":"ps-dif-6-2","ch":"psiq-A1","av":"A1","q":"Que antipsicótico é classicamente associado a indução ou piora de sintomas obsessivo-compulsivos?","a":"A clozapina (e outros antipsicóticos de segunda geração), possivelmente pelo antagonismo 5-HT2A.","sec":"/a/ps-dif/7","w":"4. Diferenciais, comorbidades e suicídio · Perguntas para revisar"},{"id":"ps-dif-6-3","ch":"psiq-A1","av":"A1","q":"Quais as comorbidades mais frequentes do TOC ao longo da vida, segundo o DSM-5-TR?","a":"Transtornos de ansiedade (cerca de 76%), transtornos depressivos ou bipolares (cerca de 63%, com depressão maior em 41%), TPOC (23 a 32%) e tiques (até 30%).","sec":"/a/ps-dif/7","w":"4. Diferenciais, comorbidades e suicídio · Perguntas para revisar"},{"id":"ps-dif-6-4","ch":"psiq-A1","av":"A1","q":"O que mostrou a coorte sueca sobre suicídio no TOC?","a":"Risco muito aumentado de morte por suicídio (OR ≈ 9,8) e de tentativa (OR ≈ 5,5) em relação a controles, que continuou significativo após ajuste para comorbidades; o maior preditor de morte foi tentativa prévia.","sec":"/a/ps-dif/7","w":"4. Diferenciais, comorbidades e suicídio · Perguntas para revisar"},{"id":"ps-neuro-0-0","ch":"psiq-A1","av":"A1","q":"Qual a herdabilidade estimada do TOC no estudo sueco?","a":"Cerca de 47%.","sec":"/a/ps-neuro/1","w":"5. Por que acontece: neurobiologia e psicologia · Genética: o TOC corre em famílias"},{"id":"ps-neuro-1-0","ch":"psiq-A1","av":"A1","q":"Que estudo mostrou a normalização do caudado com fluoxetina e com terapia?","a":"Baxter e cols., 1992.","sec":"/a/ps-neuro/2","w":"5. Por que acontece: neurobiologia e psicologia · O circuito que não desliga"},{"id":"ps-neuro-2-0","ch":"psiq-A1","av":"A1","q":"Que tricíclico não funciona no TOC e por isso apoia a hipótese serotonérgica?","a":"A desipramina.","sec":"/a/ps-neuro/3","w":"5. Por que acontece: neurobiologia e psicologia · Neurotransmissores: serotonina, dopamina e glutamato"},{"id":"ps-neuro-3-0","ch":"psiq-A1","av":"A1","q":"Qual crença Salkovskis pôs no centro do modelo cognitivo?","a":"A responsabilidade inflada.","sec":"/a/ps-neuro/4","w":"5. Por que acontece: neurobiologia e psicologia · Os modelos cognitivo-comportamentais"},{"id":"ps-neuro-4-0","ch":"psiq-A1","av":"A1","q":"Quais os quatro elementos de PANDAS?","a":"Início abrupto, criança pré-púbere, relação com estreptococo e curso em surtos.","sec":"/a/ps-neuro/5","w":"5. Por que acontece: neurobiologia e psicologia · Hábito, dúvida e a hipótese PANDAS/PANS"},{"id":"ps-neuro-5-0","ch":"psiq-A1","av":"A1","q":"O que o estudo populacional sueco de 2013 mostrou sobre a herdabilidade do TOC?","a":"Herdabilidade de cerca de 47% (fatores genéticos aditivos), sem efeito significativo do ambiente compartilhado; o ambiente não compartilhado pesou pelo menos tanto quanto a genética.","sec":"/a/ps-neuro/6","w":"5. Por que acontece: neurobiologia e psicologia · Perguntas para revisar"},{"id":"ps-neuro-5-1","ch":"psiq-A1","av":"A1","q":"Quais as estruturas do circuito córtico-estriado-tálamo-cortical implicadas no TOC?","a":"Córtex orbitofrontal, cíngulo anterior, estriado (caudado), globo pálido e tálamo, com hipótese de predomínio da via direta sobre a indireta.","sec":"/a/ps-neuro/6","w":"5. Por que acontece: neurobiologia e psicologia · Perguntas para revisar"},{"id":"ps-neuro-5-2","ch":"psiq-A1","av":"A1","q":"O que Baxter e colaboradores mostraram em 1992?","a":"Que o metabolismo de glicose do caudado direito, aumentado no TOC, diminuiu nos pacientes que responderam tanto à fluoxetina quanto à terapia comportamental, e não nos que não responderam.","sec":"/a/ps-neuro/6","w":"5. Por que acontece: neurobiologia e psicologia · Perguntas para revisar"},{"id":"ps-neuro-5-3","ch":"psiq-A1","av":"A1","q":"Qual a principal evidência a favor do papel da serotonina no TOC e qual sua limitação?","a":"A resposta seletiva aos inibidores potentes da recaptação de serotonina (clomipramina e ISRS), e não à desipramina. A limitação é que cerca de metade responde mal e não há déficit de serotonina demonstrável, então a hipótese é insuficiente.","sec":"/a/ps-neuro/6","w":"5. Por que acontece: neurobiologia e psicologia · Perguntas para revisar"},{"id":"ps-neuro-5-4","ch":"psiq-A1","av":"A1","q":"O que é fusão pensamento-ação?","a":"A crença de que pensar em algo aumenta a probabilidade de acontecer (fusão de probabilidade) ou equivale moralmente a fazê-lo (fusão moral).","sec":"/a/ps-neuro/6","w":"5. Por que acontece: neurobiologia e psicologia · Perguntas para revisar"},{"id":"ps-neuro-5-5","ch":"psiq-A1","av":"A1","q":"Quais as características que definem PANDAS e qual o status dessa hipótese?","a":"Início abrupto de TOC ou tiques em criança pré-púbere, relação temporal com infecção estreptocócica, curso em surtos e alterações neurológicas. É uma hipótese controversa, com evidência causal e terapêutica limitada.","sec":"/a/ps-neuro/6","w":"5. Por que acontece: neurobiologia e psicologia · Perguntas para revisar"},{"id":"ps-tcc-0-0","ch":"psiq-A1","av":"A1","q":"Qual o tratamento inicial do TOC grave em adultos pelo NICE?","a":"ISRS combinado com TCC com EPR.","sec":"/a/ps-tcc/1","w":"6. Tratamento I: princípios e a terapia com exposição · O que dizem as diretrizes"},{"id":"ps-tcc-1-0","ch":"psiq-A1","av":"A1","q":"Que frase ajuda o paciente a ganhar distância do pensamento?","a":"\"Isso é o TOC falando, não é você.\"","sec":"/a/ps-tcc/2","w":"6. Tratamento I: princípios e a terapia com exposição · Psicoeducação: o primeiro tratamento"},{"id":"ps-tcc-2-0","ch":"psiq-A1","av":"A1","q":"Exposição sem prevenção de resposta funciona?","a":"Não: o ritual depois da exposição cancela o aprendizado.","sec":"/a/ps-tcc/3","w":"6. Tratamento I: princípios e a terapia com exposição · Exposição com prevenção de resposta (EPR)"},{"id":"ps-tcc-3-0","ch":"psiq-A1","av":"A1","q":"Qual o tamanho de efeito da TCC contra lista de espera em Öst (2015)?","a":"g ≈ 1,31 (muito grande).","sec":"/a/ps-tcc/4","w":"6. Tratamento I: princípios e a terapia com exposição · Quanto funciona: a evidência"},{"id":"ps-tcc-4-0","ch":"psiq-A1","av":"A1","q":"Que formato de TCC a WFSBP registrou como superior a controles ativos?","a":"A TCC pela internet.","sec":"/a/ps-tcc/5","w":"6. Tratamento I: princípios e a terapia com exposição · Terapia cognitiva, formatos e o que é pesquisa"},{"id":"ps-tcc-6-0","ch":"psiq-A1","av":"A1","q":"Como o NICE escalona o tratamento inicial do TOC em adultos pela gravidade?","a":"Prejuízo leve: TCC de baixa intensidade com EPR. Moderado: ISRS ou TCC mais intensiva com EPR. Grave: combinação de ISRS com TCC com EPR.","sec":"/a/ps-tcc/7","w":"6. Tratamento I: princípios e a terapia com exposição · Perguntas para revisar"},{"id":"ps-tcc-6-1","ch":"psiq-A1","av":"A1","q":"Quais os dois componentes da EPR e por que os dois são necessários?","a":"Exposição planejada e repetida ao gatilho, e prevenção da resposta (não fazer ritual, neutralização, evitação nem reasseguramento). Sem a prevenção, o ritual alivia e impede a aprendizagem de que a catástrofe não acontece e de que a ansiedade cai sozinha.","sec":"/a/ps-tcc/7","w":"6. Tratamento I: princípios e a terapia com exposição · Perguntas para revisar"},{"id":"ps-tcc-6-2","ch":"psiq-A1","av":"A1","q":"Qual a diferença entre o modelo de habituação e o de aprendizagem inibitória na exposição?","a":"Na habituação, o objetivo é a ansiedade cair durante a exposição. Na aprendizagem inibitória, o objetivo é aprender uma nova associação que compete com o medo, violando a expectativa catastrófica e tolerando a incerteza, mesmo que a ansiedade não caia muito na sessão.","sec":"/a/ps-tcc/7","w":"6. Tratamento I: princípios e a terapia com exposição · Perguntas para revisar"},{"id":"ps-tcc-6-3","ch":"psiq-A1","av":"A1","q":"O que a metanálise de Öst (2015) mostrou sobre a TCC no TOC?","a":"Efeito muito grande contra lista de espera (g ≈ 1,31) e placebo (g ≈ 1,33), superioridade em relação aos antidepressivos (g ≈ 0,55) e ausência de diferença significativa entre formato individual e em grupo e entre EPR e terapia cognitiva.","sec":"/a/ps-tcc/7","w":"6. Tratamento I: princípios e a terapia com exposição · Perguntas para revisar"},{"id":"ps-tcc-6-4","ch":"psiq-A1","av":"A1","q":"Qual a principal limitação na comparação entre psicoterapia e medicação na metanálise em rede de Skapinakis (2016)?","a":"A maioria dos ensaios de psicoterapia (80%) incluía pacientes já em uso estável de antidepressivo, o que favorece a psicoterapia na comparação com o placebo de comprimido.","sec":"/a/ps-tcc/7","w":"6. Tratamento I: princípios e a terapia com exposição · Perguntas para revisar"},{"id":"ps-farmaco-0-0","ch":"psiq-A1","av":"A1","q":"Por que a clomipramina é segunda linha?","a":"Não é superior aos ISRS e é menos tolerada.","sec":"/a/ps-farmaco/1","w":"7. Tratamento II: os inibidores da recaptação de serotonina · Quais medicamentos funcionam"},{"id":"ps-farmaco-1-0","ch":"psiq-A1","av":"A1","q":"Qual a dose-alvo usual da fluoxetina no TOC?","a":"40 a 60 mg/dia (até 80).","sec":"/a/ps-farmaco/2","w":"7. Tratamento II: os inibidores da recaptação de serotonina · Doses: mais altas que na depressão"},{"id":"ps-farmaco-2-0","ch":"psiq-A1","av":"A1","q":"O que é um teste adequado com ISRS no TOC?","a":"8 a 12 semanas, com 4 a 6 na dose máxima tolerada.","sec":"/a/ps-farmaco/3","w":"7. Tratamento II: os inibidores da recaptação de serotonina · Tempo: o teste adequado e a manutenção"},{"id":"ps-farmaco-3-0","ch":"psiq-A1","av":"A1","q":"Qual o limite de dose do citalopram pela FDA acima de 60 anos?","a":"20 mg/dia.","sec":"/a/ps-farmaco/4","w":"7. Tratamento II: os inibidores da recaptação de serotonina · Efeitos adversos e segurança"},{"id":"ps-farmaco-4-0","ch":"psiq-A1","av":"A1","q":"Qual braço teve maior remissão no POTS?","a":"A combinação TCC + sertralina (53,6%).","sec":"/a/ps-farmaco/5","w":"7. Tratamento II: os inibidores da recaptação de serotonina · Crianças, gestação e amamentação"},{"id":"ps-farmaco-5-0","ch":"psiq-A1","av":"A1","q":"Quais classes de medicamentos têm eficácia como monoterapia no TOC?","a":"Apenas os inibidores potentes da recaptação de serotonina: os ISRS (fluoxetina, fluvoxamina, sertralina, paroxetina, citalopram, escitalopram) e a clomipramina.","sec":"/a/ps-farmaco/6","w":"7. Tratamento II: os inibidores da recaptação de serotonina · Perguntas para revisar"},{"id":"ps-farmaco-5-1","ch":"psiq-A1","av":"A1","q":"Por que a clomipramina costuma ser segunda linha se foi o primeiro fármaco eficaz no TOC?","a":"Porque não foi superior aos ISRS em eficácia e é menos tolerada (anticolinérgico, sedação, ganho de peso, risco de convulsão e cardiotoxicidade, letal em superdose).","sec":"/a/ps-farmaco/6","w":"7. Tratamento II: os inibidores da recaptação de serotonina · Perguntas para revisar"},{"id":"ps-farmaco-5-2","ch":"psiq-A1","av":"A1","q":"O que define um teste adequado com ISRS no TOC?","a":"Uso por 8 a 12 semanas, com pelo menos 4 a 6 semanas na dose máxima tolerada.","sec":"/a/ps-farmaco/6","w":"7. Tratamento II: os inibidores da recaptação de serotonina · Perguntas para revisar"},{"id":"ps-farmaco-5-3","ch":"psiq-A1","av":"A1","q":"O que a metanálise de Bloch (2010) mostrou sobre a dose dos ISRS no TOC?","a":"Doses mais altas foram mais eficazes que doses baixas ou médias, com mais abandono por efeitos adversos, um padrão de dose-resposta diferente do da depressão.","sec":"/a/ps-farmaco/6","w":"7. Tratamento II: os inibidores da recaptação de serotonina · Perguntas para revisar"},{"id":"ps-farmaco-5-4","ch":"psiq-A1","av":"A1","q":"Por quanto tempo manter o ISRS após a resposta e como retirar?","a":"Manter por 1 a 2 anos (APA), ou pelo menos 12 meses após a remissão (NICE). Retirar devagar, reduzindo 10 a 25% da dose a cada 1 a 2 meses, monitorando recaída.","sec":"/a/ps-farmaco/6","w":"7. Tratamento II: os inibidores da recaptação de serotonina · Perguntas para revisar"},{"id":"ps-farmaco-5-5","ch":"psiq-A1","av":"A1","q":"Quais foram as taxas de remissão do POTS?","a":"Combinação TCC + sertralina 53,6%; TCC 39,3%; sertralina 21,4%; placebo 3,6%.","sec":"/a/ps-farmaco/6","w":"7. Tratamento II: os inibidores da recaptação de serotonina · Perguntas para revisar"},{"id":"ps-resist-0-0","ch":"psiq-A1","av":"A1","q":"O que conferir antes de chamar de resistente?","a":"Dose, tempo, adesão, EPR de verdade, diagnóstico, comorbidades e acomodação.","sec":"/a/ps-resist/1","w":"8. Quando não responde: TOC resistente · O que é resistência e o \"falso resistente\""},{"id":"ps-resist-1-0","ch":"psiq-A1","av":"A1","q":"Quanto tempo de IRS em dose máxima antes de reforçar com antipsicótico?","a":"Pelo menos 3 meses.","sec":"/a/ps-resist/2","w":"8. Quando não responde: TOC resistente · O algoritmo depois de um IRS que não bastou"},{"id":"ps-resist-2-0","ch":"psiq-A1","av":"A1","q":"Qual reforço foi superior no ensaio de Simpson (2013)?","a":"A EPR (80% de resposta × 23% com risperidona).","sec":"/a/ps-resist/3","w":"8. Quando não responde: TOC resistente · Reforço: EPR ou antipsicótico?"},{"id":"ps-resist-3-0","ch":"psiq-A1","av":"A1","q":"Qual o status dos glutamatérgicos no TOC?","a":"Evidência emergente: sinal moderado, heterogêneo, não é rotina.","sec":"/a/ps-resist/4","w":"8. Quando não responde: TOC resistente · Glutamatérgicos e outras pistas"},{"id":"ps-resist-4-0","ch":"psiq-A1","av":"A1","q":"Qual a taxa de resposta à ECP na metanálise de Alonso (2015)?","a":"60%, com redução média de 45% da Y-BOCS.","sec":"/a/ps-resist/5","w":"8. Quando não responde: TOC resistente · Neuromodulação e neurocirurgia"},{"id":"ps-resist-5-0","ch":"psiq-A1","av":"A1","q":"A psilocibina é tratamento do TOC?","a":"Não: é evidência emergente de estudos muito pequenos, só em pesquisa.","sec":"/a/ps-resist/6","w":"8. Quando não responde: TOC resistente · Psicodélicos e o horizonte"},{"id":"ps-resist-6-0","ch":"psiq-A1","av":"A1","q":"Como se define TOC resistente?","a":"Resposta insuficiente a pelo menos dois testes adequados com inibidor de recaptação de serotonina (dose e tempo) e, idealmente, a um curso adequado de TCC com EPR.","sec":"/a/ps-resist/7","w":"8. Quando não responde: TOC resistente · Perguntas para revisar"},{"id":"ps-resist-6-1","ch":"psiq-A1","av":"A1","q":"O que conferir antes de rotular um paciente como resistente?","a":"Dose e tempo adequados, adesão, se a EPR foi feita de verdade, se o diagnóstico está certo, comorbidades não tratadas, acomodação familiar e interações que reduzem o nível do fármaco.","sec":"/a/ps-resist/7","w":"8. Quando não responde: TOC resistente · Perguntas para revisar"},{"id":"ps-resist-6-2","ch":"psiq-A1","av":"A1","q":"O que mostrou o ensaio de Simpson (2013) sobre reforço do IRS?","a":"Acrescentar EPR foi superior à risperidona e ao placebo (resposta de 80% × 23% × 15%; sintomas mínimos em 43% × 13% × 5%), e a risperidona não diferiu do placebo.","sec":"/a/ps-resist/7","w":"8. Quando não responde: TOC resistente · Perguntas para revisar"},{"id":"ps-resist-6-3","ch":"psiq-A1","av":"A1","q":"Em que subgrupo o reforço com antipsicótico tem maior benefício?","a":"No TOC com tiques comórbidos (diferença absoluta de risco de 0,43 na metanálise de Bloch, 2006).","sec":"/a/ps-resist/7","w":"8. Quando não responde: TOC resistente · Perguntas para revisar"},{"id":"ps-resist-6-4","ch":"psiq-A1","av":"A1","q":"Qual técnica de neuromodulação não invasiva foi liberada pela FDA para TOC e com que resultado?","a":"A estimulação magnética transcraniana profunda (2018), com resposta de 38,1% contra 11,1% do sham no ensaio de Carmi (2019).","sec":"/a/ps-resist/7","w":"8. Quando não responde: TOC resistente · Perguntas para revisar"},{"id":"ps-resist-6-5","ch":"psiq-A1","av":"A1","q":"Quais as indicações para neurocirurgia no TOC?","a":"TOC grave e crônico, com falha documentada de múltiplos IRS, reforços e EPR adequada, avaliado por equipe multidisciplinar em centro especializado.","sec":"/a/ps-resist/7","w":"8. Quando não responde: TOC resistente · Perguntas para revisar"},{"id":"ps-vida-0-0","ch":"psiq-A1","av":"A1","q":"Qual a fórmula de empatia e confiança para familiares?","a":"\"Eu sei que é difícil, e eu confio que você consegue aguentar sem o ritual.\"","sec":"/a/ps-vida/1","w":"9. O TOC na vida real e as leituras · Como apoiar sem alimentar o ciclo"},{"id":"ps-vida-1-0","ch":"psiq-A1","av":"A1","q":"O TOC de relacionamento indica falta de amor?","a":"Não: o TOC tende a atacar o que a pessoa mais valoriza.","sec":"/a/ps-vida/2","w":"9. O TOC na vida real e as leituras · TOC e relacionamentos"},{"id":"ps-vida-2-0","ch":"psiq-A1","av":"A1","q":"O que perguntar ao procurar um terapeuta para TOC?","a":"Se ele trabalha com exposição e prevenção de resposta.","sec":"/a/ps-vida/3","w":"9. O TOC na vida real e as leituras · Estigma, linguagem e onde buscar ajuda"},{"id":"ps-vida-3-0","ch":"psiq-A1","av":"A1","q":"Quem descreveu o \"Homem dos Ratos\"?","a":"Freud, em 1909.","sec":"/a/ps-vida/4","w":"9. O TOC na vida real e as leituras · A biblioteca do TOC: clássicos"},{"id":"ps-vida-4-0","ch":"psiq-A1","av":"A1","q":"Qual a principal referência brasileira de TCC no TOC?","a":"Aristides Cordioli (UFRGS).","sec":"/a/ps-vida/5","w":"9. O TOC na vida real e as leituras · Livros de referência e literatura"},{"id":"ps-vida-5-0","ch":"psiq-A1","av":"A1","q":"Qual revisão dá o panorama atual do TOC?","a":"Stein e cols., Nature Reviews Disease Primers, 2019.","sec":"/a/ps-vida/6","w":"9. O TOC na vida real e as leituras · Artigos e diretrizes de alto valor"},{"id":"ps-vida-6-0","ch":"psiq-A1","av":"A1","q":"Como apoiar alguém que pede reasseguramento repetido sem alimentar o TOC?","a":"Validar a emoção sem responder ao conteúdo repetidamente, e combinar com a pessoa (idealmente com o terapeuta) uma redução gradual do reasseguramento, mantendo presença e empatia.","sec":"/a/ps-vida/7","w":"9. O TOC na vida real e as leituras · Perguntas para revisar"},{"id":"ps-vida-6-1","ch":"psiq-A1","av":"A1","q":"O que é o TOC de relacionamento?","a":"Uma apresentação do TOC com dúvidas obsessivas sobre amar ou ser amado pelo parceiro, ou foco obsessivo em defeitos percebidos dele, com rituais de verificação, comparação e busca de reasseguramento. Não indica falta de amor.","sec":"/a/ps-vida/7","w":"9. O TOC na vida real e as leituras · Perguntas para revisar"},{"id":"ps-vida-6-2","ch":"psiq-A1","av":"A1","q":"Qual livro é a principal referência brasileira sobre TCC no TOC?","a":"Os manuais de Aristides Volpato Cordioli (UFRGS), como \"Vencendo o transtorno obsessivo-compulsivo\".","sec":"/a/ps-vida/7","w":"9. O TOC na vida real e as leituras · Perguntas para revisar"},{"id":"ps-vida-6-3","ch":"psiq-A1","av":"A1","q":"Que artigo de 1966 inaugura a exposição com prevenção de resposta?","a":"Victor Meyer, \"Modification of expectations in cases with obsessional rituals\", Behaviour Research and Therapy.","sec":"/a/ps-vida/7","w":"9. O TOC na vida real e as leituras · Perguntas para revisar"}],"provas":[["cm","Clínica médica"],["pato","Patologia"],["aps","Atenção primária"],["psiq","Psiquiatria"]],"datas":{},"soon":"Reumatologia, Pneumologia, Patologia e Atenção primária entram aqui quando chegarem os slides."};</script>
+<script>
+const APOSTILA="bloco1.html";
+const CHAPTERS={"A1": "Tudo da A1", "A2": "Tudo da A2", "neuro-A2": "Neurologia · A2", "cardio-A2": "Cardiologia · A2", "psiq-A1": "Psiquiatria · A1"};
+const SECS={};
+/* Cartões das apostilas medaj. Para acrescentar: [id único, capítulo, seção (âncora da apostila), pergunta, resposta]. */
+const CARDS=PER.cards;
+
+/* Falas do Dr. Casa */
+const SAY={
+ hello:["Sente. Vamos ver quanto da apostila sobreviveu dentro dessa cabeça.","Mais um candidato a residente. Já vi pior. Pouco, mas já vi.","Regra do meu plantão: você responde, eu julgo, e a apostila é a única que sempre tem razão."],
+ ask:["Leia o enunciado inteiro. Metade dos erros que eu vejo nasce de quem lê só até a vírgula.","Pense antes de virar. Virar cartão não é raciocínio clínico.","Na prova ninguém espera você lembrar o número da lei. Vai.","Fale a resposta em voz alta. Se soar ridículo, provavelmente está errado.","Esse aqui derruba metade da turma todo ano. Quero ver se você é da outra metade."],
+ reveal:["Agora seja honesto. Eu percebo quando alguém marca \"Bom\" por vaidade.","Compare palavra por palavra. A banca adora quem acerta a ideia e erra o detalhe.","Se você acertou só metade, você errou. Bem-vindo à medicina."],
+ g0:["Errado. Pelo menos você errou com convicção, o que é quase um talento.","Tive um estagiário que errava isso. Hoje ele é muito feliz vendendo plano de saúde.","Diagnóstico: lacuna de conteúdo, grave, porém tratável. Prescrição: reler a seção e me encarar de novo daqui a pouco.","Se a prova fosse oral, eu já teria pedido para você sair da sala. Com educação. Mais ou menos.","Esse cartão volta daqui a três. Vai voltar até você parar de errar ou eu parar de mancar. Aposto em você, por pouco.","Interessante. Você inventou uma resposta que nem a banca teria coragem de usar como distratora."],
+ g3:["Acertou sofrendo. Vale, mas eu vi a gota de suor.","Difícil? Era das mais fáceis do bloco. Mas você marcou com honestidade, e isso eu respeito.","Acertou no limite. No plantão, isso se chama sorte com carimbo."],
+ g4:["Certo. Não vou bater palma, senão você se acostuma mal.","Correto. Fiquei levemente impressionado. Levemente.","Bom. Volta em alguns dias, para eu ter certeza de que não foi sorte."],
+ g5:["Fácil, é? Vou lembrar disso quando ele voltar daqui a uma semana e você travar.","Arrogância é um sintoma. Neste caso, justificada.","Rápido e certo. Se continuar assim, vou ter que arrumar outro alvo."],
+ streak:["Três seguidas. Começo a suspeitar que você leu a apostila. Não conto para ninguém.","Sequência boa. Não se empolgue: o próximo cartão não sabe que você está inspirado."],
+ done:["Plantão encerrado. Você sobreviveu, e os pacientes imaginários também. Amanhã tem mais.","Acabou por hoje. Vá dormir: memória sem sono é igual a prontuário sem assinatura, não vale nada."],
+ doneBad:["Acabou. O placar não foi bonito, mas aqui o erro sai barato. Na prova ele sai caro. Releia as seções e volte amanhã."],
+ empty:["Nada para revisar hoje. Vá viver um pouco. Ou leia o próximo capítulo, que é mais útil.","Fila vazia. Até eu estou sem ter de quem reclamar. Que tédio."]
+};
+const CASES=[
+ "Caso de 2003. Um secretário de saúde jurou que o Conselho Municipal era \"só consultivo\". Mostrei a Lei 8.142: permanente e deliberativo. Ele mudou de cor três vezes. Nenhuma delas era saudável.",
+ "Num plantão de 2011, um colega escreveu a causa básica na primeira linha da Declaração de Óbito. A causa básica vai na última linha preenchida da Parte I. Hoje ele revisa declarações de óbito. Por castigo, claro.",
+ "Tive uma residente que dizia: \"o paciente era meu, eu assino\". Ele tinha caído da cama da enfermaria. Morte violenta é com o IML, mesmo dentro do hospital. Ela aprendeu no dia em que o delegado ligou.",
+ "Uma vez me pediram para comparar a mortalidade de uma cidade de aposentados com a de uma cidade universitária, sem padronizar. Recusei. Comparar coeficiente bruto entre populações diferentes é como comparar a febre de um bebê com a de um elefante.",
+ "Em 2021 eu vi a razão de mortalidade materna passar de cem por cem mil. Aquilo não era estatística, eram mulheres. É por isso que a banca cobra esse indicador: para você nunca esquecer o que ele mede.",
+ "Um gestor apresentou o aumento da prevalência como fracasso do programa. Era um remédio novo que fazia os pacientes viverem mais. Prevalência sobe quando a duração aumenta. Ele foi promovido mesmo assim. O mundo é injusto.",
+ "Um aluno jurou que \"equidade\" estava escrita no art. 7º da Lei 8.080. Pedi que ele achasse. Ele procura até hoje. O texto diz igualdade.",
+ "Conheci um prefeito que contava merenda escolar como gasto em saúde para fechar os 15%. A LC 141 não deixa. O Tribunal de Contas também não deixou.",
+ "Num surto de sarampo numa creche, a enfermeira me perguntou se 40 em 200 era prevalência. Era taxa de ataque: 20%. Dois anos depois ela passou na residência e me mandou um bolo. O bolo estava ruim, mas o gesto valeu.",
+ "Atendi um paciente que achava que o ambulatório de especialidades era porta de entrada do SUS. A culpa não era dele, era de quem ensinou. Porta de entrada é atenção primária, urgência, atenção psicossocial e serviço especial de acesso aberto.",
+ "Minha perna dói desde antes de você nascer. Mesmo assim chego ao plantão antes de quem tem as duas boas. Disciplina é isso: ir mesmo quando dói. Revise hoje.",
+ "Uma vez um interno me disse que o INAMPS acabou junto com a Lei 8.080. Acabou em 1993, pela Lei 8.689. Ele ainda me deve um café pela aposta. Juros de três décadas."
+];
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+
+/* Estado e repetição espaçada (SM-2 adaptado) */
+const DAY=86400000,NEW_PER_DAY=20,KEY="medaj-p6-cards-v1";
+const today=()=>{const d=new Date();return Math.floor((d-d.getTimezoneOffset()*60000)/DAY)};
+let S={cards:{},days:{},t:0};
+try{const raw=localStorage.getItem(KEY);if(raw)S=Object.assign(S,JSON.parse(raw))}catch(e){}
+const st=id=>S.cards[id]||{r:0,i:0,e:2.5,due:0,l:0,last:0,seen:0};
+function plan(c,q){
+  let {r,i,e,l}=c;
+  if(q===0) return {r:0,i:0,e:Math.max(1.3,e-.2),l:l+1,again:true};
+  const e2=Math.max(1.3,e+(.1-(5-q)*(.08+(5-q)*.02)));
+  let i2;
+  if(r===0) i2=q===5?4:1;
+  else if(r===1) i2=q===3?3:q===4?6:8;
+  else i2=Math.max(i+1,Math.round(i*(q===3?1.2:q===4?e2:e2*1.3)));
+  return {r:r+1,i:i2,e:e2,l};
+}
+const fmt=p=>p.again?"agora":p.i===1?"amanhã":p.i<14?p.i+" dias":p.i<60?Math.round(p.i/7)+" sem":Math.round(p.i/30)+" meses";
+
+let deck="all",queue=[],cur=null,shown=false,sess={n:0,ok:0,total:0,streak:0};
+const inDeck=c=>deck==="all"||c.ch===deck||c.av===deck;
+const isNew=c=>!S.cards[c.id];
+const newToday=()=>(S.days[today()]||{}).nw||0;
+function counts(filter){
+  const t=today(),list=CARDS.filter(filter);
+  const due=list.filter(c=>!isNew(c)&&st(c.id).due<=t).length;
+  const nw=list.filter(isNew).length;
+  return {due,nw,avail:due+Math.min(nw,Math.max(0,NEW_PER_DAY-newToday()))};
+}
+function build(){
+  const t=today(),list=CARDS.filter(inDeck);
+  const rev=list.filter(c=>!isNew(c)&&st(c.id).due<=t).sort((a,b)=>st(a.id).due-st(b.id).due);
+  const nw=list.filter(isNew).slice(0,Math.max(0,NEW_PER_DAY-newToday()));
+  queue=[];while(rev.length||nw.length){if(rev.length)queue.push(rev.shift());if(rev.length)queue.push(rev.shift());if(nw.length)queue.push(nw.shift())}
+  sess={n:0,ok:0,total:queue.length,streak:0};
+}
+
+/* Tela */
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+function say(text,story){const b=$("bubble");b.classList.toggle("story",!!story);b.innerHTML=story?`<span class="case">Caso do Dr. Casa</span>${esc(text)}`:esc(text)}
+function mood(m){const a=$("avatar");a.classList.remove("raise","smug","tap");void a.getBoundingClientRect();if(m)m.split(" ").forEach(x=>a.classList.add(x))}
+function renderDecks(){
+  const opts=[["all","Tudo"],...Object.entries(CHAPTERS)];
+  $("decks").innerHTML=opts.map(([k,l])=>{const c=counts(x=>k==="all"||x.ch===k||x.av===k);return `<button class="chip" type="button" data-deck="${k}" aria-pressed="${deck===k}">${esc(l)}<span class="n">${c.avail}</span></button>`}).join("");
+}
+function renderStats(){
+  const c=counts(inDeck),d=S.days[today()]||{n:0,ok:0};
+  $("s-due").textContent=queue.length+(cur?1:0);
+  $("s-new").textContent=c.nw;
+  $("s-acc").textContent=d.n?Math.round(100*d.ok/d.n)+"%":"–";
+  let s=0,t=today();if(!(S.days[t]&&S.days[t].n))t--;while(S.days[t]&&S.days[t].n){s++;t--}
+  $("s-streak").textContent=s;
+  $("foot-info").textContent=`${CARDS.length} cartões das apostilas do 6º período`;
+}
+function renderCard(){
+  const el=$("card");
+  if(!cur){
+    if(sess.total===0){
+      el.innerHTML=`<div class="done"><h2>Nada para hoje neste baralho</h2><p>Os cartões que você já estudou voltam na data certa. Cartões novos entram ${NEW_PER_DAY} por dia.</p><div class="row"><button class="ghost" type="button" data-act="ahead">Adiantar 10 cartões</button><a class="ghost" href="${APOSTILA}" style="text-decoration:none;color:inherit">Abrir as apostilas</a></div></div>`;
+      say(pick(SAY.empty));
+    }else{
+      const acc=sess.n?Math.round(100*sess.ok/sess.n):0,tm=counts(inDeck);
+      el.innerHTML=`<div class="done"><span class="meta">${esc(deck==="all"?"Tudo":CHAPTERS[deck])}</span><h2>Plantão encerrado</h2><div class="sum"><div><b>${sess.n}</b><span>respostas</span></div><div><b>${acc}%</b><span>de acerto</span></div><div><b>${tm.nw}</b><span>cartões novos ainda na fila</span></div></div><div class="row"><button class="ghost" type="button" data-act="ahead">Adiantar 10 cartões</button><a class="ghost" href="${APOSTILA}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">Abrir as apostilas</a></div></div>`;
+      say(pick(acc>=70?SAY.done:SAY.doneBad));mood(acc>=70?"smug":"raise");
+    }
+    renderStats();return;
+  }
+  const s=st(cur.id),fresh=isNew(cur),pos=sess.total-queue.length;
+  const pct=sess.total?Math.round(100*(pos-1)/sess.total):0;
+  let html=`<div class="meta"><span class="tag">${esc(CHAPTERS[cur.ch])}</span>${fresh?'<span class="tag new">novo</span>':""}<span class="pos">${pos} de ${sess.total}</span></div><div class="progress"><i style="width:${pct}%"></i></div><p class="q">${esc(cur.q)}</p>`;
+  if(!shown){
+    html+=`<div class="spacer"></div><button class="reveal" type="button" data-act="reveal">Mostrar resposta<kbd>espaço</kbd></button>`;
+  }else{
+    const g=[[0,"Errei"],[3,"Difícil"],[4,"Bom"],[5,"Fácil"]];
+    html+=`<div class="ans"><span class="lbl">Resposta</span><p>${esc(cur.a)}</p><a class="read" href="${APOSTILA}#${cur.sec}">Ler na apostila: ${esc(cur.w||"")} ↗</a></div><div class="spacer"></div><div class="grades">${g.map(([q,l],k)=>`<button class="grade g${q}" type="button" data-q="${q}"><b>${l}</b><small>${fmt(plan(s,q))} · ${k+1}</small></button>`).join("")}</div>`;
+  }
+  el.innerHTML=html;renderStats();
+}
+function next(){cur=queue.shift()||null;shown=false;renderCard();if(cur&&sess.n>0&&Math.random()<.5)say(pick(SAY.ask));}
+function grade(q){
+  if(!cur||!shown)return;
+  const p=plan(st(cur.id),q),t=today(),was=isNew(cur);
+  S.cards[cur.id]={r:p.r,i:p.i,e:+p.e.toFixed(2),due:p.again?t:t+p.i,l:p.l,last:Date.now(),seen:(st(cur.id).seen||0)+1};
+  const d=S.days[t]||(S.days[t]={n:0,ok:0,nw:0});d.n++;if(q>=3)d.ok++;if(was)d.nw=(d.nw||0)+1;
+  sess.n++;if(q>=3){sess.ok++;sess.streak++}else sess.streak=0;
+  if(p.again){queue.splice(Math.min(3,queue.length),0,cur);sess.total++}
+  if(sess.streak===3||sess.streak===7){say(pick(SAY.streak));mood("smug tap")}
+  else{say(pick(SAY["g"+q]));mood(q===0?"raise tap":q===5?"raise":"smug")}
+  save();next();renderDecks();
+}
+
+/* Salvar: aparelho sempre; conta (claude.ai) quando disponível */
+let remote=null,busy=Promise.resolve(),timer=null;
+function save(){
+  S.t=Date.now();
+  try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}
+  if(remote){clearTimeout(timer);timer=setTimeout(()=>{const body=JSON.parse(JSON.stringify(S));busy=busy.then(()=>remote.set(body)).catch(()=>{$("sync").textContent="Não deu para salvar na conta agora. O progresso ficou neste aparelho."})},800)}
+}
+function merge(o){
+  if(!o||!o.cards)return;
+  for(const [id,c] of Object.entries(o.cards)){const m=S.cards[id];if(!m||(c.last||0)>(m.last||0))S.cards[id]=c}
+  for(const [d,v] of Object.entries(o.days||{})){const m=S.days[d];if(!m||v.n>m.n)S.days[d]=v}
+}
+(async()=>{
+  try{
+    if(!window.claude||!window.claude.use)return;
+    const [db,user]=await Promise.all([claude.use("db"),claude.use("user")]);
+    if(!db||!user)return;
+    const uid=await user.id();if(!uid)return;
+    remote=db.doc("data/users/"+uid+"/drcasa");
+    const snap=await remote.get();
+    if(snap.exists){merge(snap.data());try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+    else if(Object.keys(S.cards).length)save();
+    $("sync").textContent="Progresso salvo na sua conta: aparece no celular e no computador.";
+    if(!cur||!shown){build();next()}
+    renderDecks();
+  }catch(e){}
+})();
+
+/* Eventos */
+document.addEventListener("click",e=>{
+  const b=e.target.closest("[data-deck],[data-act],[data-q]");if(!b)return;
+  if(b.dataset.deck){deck=b.dataset.deck;build();next();renderDecks();say(pick(SAY.hello));return}
+  if(b.dataset.act==="reveal"){shown=true;renderCard();say(pick(SAY.reveal));return}
+  if(b.dataset.act==="ahead"){const t=today();const pool=CARDS.filter(inDeck).filter(c=>!isNew(c)&&st(c.id).due>t).sort((a,b)=>st(a.id).due-st(b.id).due);const nw=CARDS.filter(inDeck).filter(isNew);queue=pool.concat(nw).slice(0,10);sess={n:0,ok:0,total:queue.length,streak:0};if(!queue.length){say("Não sobrou nada para adiantar. Você zerou o baralho. Vá ler o próximo capítulo.");return}next();say("Adiantando. Ambição é bom, desde que venha acompanhada de sono.");return}
+  if(b.dataset.q!==undefined)grade(+b.dataset.q);
+});
+$("b-case").addEventListener("click",()=>{say(pick(CASES),true);mood("tap")});
+$("b-hint").addEventListener("click",()=>{if(!cur){say("Dica: abra a apostila. É onde moram as respostas. Revolucionário, eu sei.");return}say(`Dica: está na seção "${cur.w}" do ${CHAPTERS[cur.ch]}. A resposta eu não dou. Sofrer um pouco também ensina.`);mood("raise")});
+document.addEventListener("keydown",e=>{
+  if(e.target.closest("input,textarea"))return;
+  if((e.key===" "||e.key==="Enter")&&cur&&!shown&&!e.target.closest("button,a")){e.preventDefault();shown=true;renderCard();say(pick(SAY.reveal));return}
+  if(shown&&["1","2","3","4"].includes(e.key)){grade([0,3,4,5][+e.key-1])}
+});
+$("b-reset").addEventListener("click",()=>{
+  const slot=$("reset-slot");
+  slot.innerHTML=`<span class="confirm">Apagar todo o progresso? <button class="danger" type="button" id="r-yes">Apagar</button><button type="button" id="r-no">Cancelar</button></span>`;
+  $("r-no").onclick=()=>location.reload();
+  $("r-yes").onclick=()=>{S={cards:{},days:{},t:Date.now()};save();location.reload()};
+});
+
+/* Tema: escuro por padrão */
+
+build();renderDecks();next();say(pick(SAY.hello));
+</script>
+
+<script>
+/* período: Hoje + Apostilas + Flashcards (gerado por build-periodos.py) */
+const e_=x=>String(x).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const DIAS=["dom","seg","ter","qua","qui","sex","sáb"],pad=n=>String(n).padStart(2,"0");
+const br=d=>DIAS[d.getDay()]+" "+pad(d.getDate())+"/"+pad(d.getMonth()+1);
+const LKEY="medaj-"+PER.id+"-lidas",DKEY="medaj-"+PER.id+"-provas";
+let LIDAS={},DATAS={};try{LIDAS=JSON.parse(localStorage.getItem(LKEY)||"{}")}catch(e){}
+try{DATAS=Object.assign({},PER.datas,JSON.parse(localStorage.getItem(DKEY)||"{}"))}catch(e){DATAS=Object.assign({},PER.datas)}
+const site=u=>PER.site+"#"+u;
+/* link "Ler na apostila" de cada cartão: página certa do site do período */
+const _rc=renderCard;renderCard=function(){_rc();const a=document.querySelector("#card .ans .read");if(a&&cur){a.href=site(cur.sec);a.textContent="Ler na apostila: "+cur.w+" ↗"}};
+function proxima(){const t=new Date();t.setHours(0,0,0,0);let best=null;
+  for(const [id,nome] of PER.provas)for(const av of ["A1","A2"]){const v=DATAS[id+"-"+av];const d=v&&new Date((Array.isArray(v)?v[0]:v)+"T12:00:00");
+    if(d&&d>=t&&(!best||d<best.d))best={d,id,nome,av,obs:Array.isArray(v)?v[1]:""}}return best}
+function renderHoje(){
+  const el=document.getElementById("v-hoje"),now=new Date(),p=proxima();
+  let h=`<div class="today"><span class="when">${br(now)}</span>`;
+  if(p){const n=Math.round((p.d-new Date(now.getFullYear(),now.getMonth(),now.getDate(),12))/864e5);
+    h+=`<h2>${e_(p.nome)} · ${p.obs?e_(p.obs):p.av}</h2><span class="when">${n===0?"a prova é hoje":n===1?"amanhã":"faltam "+n+" dias"} · ${br(p.d)}</span>`}
+  else h+=`<h2>Nenhuma prova marcada</h2>${PER.provas.length?`<span class="when">marque as datas lá embaixo</span>`:""}`;
+  h+=`</div>`;
+  const nx=(p&&PER.aulas.find(a=>!LIDAS[a.id]&&a.pv===p.id&&a.av===p.av))||PER.aulas.find(a=>!LIDAS[a.id]);
+  if(!PER.aulas.length)h+=`<div class="go off"><b>Apostilas</b><span>${e_(PER.soon)}</span></div>`;
+  else h+=nx?`<a class="go" href="${e_(site(nx.u))}"><b>Continuar · ${e_(nx.disc)} · ${nx.av}</b><span>${e_(nx.t)}</span></a>`:`<div class="go off"><b>Apostilas</b><span>Todas marcadas como lidas.</span></div>`;
+  const c=counts(()=>true);
+  h+=`<a class="ghost" href="#cards" style="text-decoration:none;text-align:center">Revisar flashcards · ${c.avail} para hoje</a>`;
+  if(PER.provas.length)h+=`<h2 class="vh">Datas de prova</h2><div class="week">${PER.provas.map(([id,nome])=>`<div><b>${e_(nome)}</b><span class="start">${["A1","A2"].map(av=>{const v=DATAS[id+"-"+av];return `<label>${av} <input type="date" data-prova="${id}-${av}" value="${e_(Array.isArray(v)?v[0]:v||"")}"></label>`}).join("")}</span></div>`).join("")}</div>`;
+  el.innerHTML=h;
+}
+document.addEventListener("change",ev=>{const i=ev.target.closest("[data-prova]");if(!i)return;
+  const k=i.dataset.prova;if(i.value)DATAS[k]=i.value;else DATAS[k]="";try{localStorage.setItem(DKEY,JSON.stringify(DATAS))}catch(e){}renderHoje()});
+function renderApostilas(){
+  const el=document.getElementById("v-apostilas");let h="";
+  for(const av of ["A1","A2"]){const L=PER.aulas.filter(a=>a.av===av);
+    h+=`<h2 class="vh">${av}</h2>`;
+    if(!L.length){h+=`<p class="soon">Ainda sem apostilas da ${av}.</p>`;continue}
+    let disc="";h+=`<div class="blist">`;
+    for(const a of L){if(a.disc!==disc){disc=a.disc;h+=`<span class="disc">${e_(disc)}</span>`}
+      h+=`<div class="bwrap"><a class="bitem" href="${e_(site(a.u))}"><b>${e_(a.t)}</b>${a.s?`<span>${e_(a.s)}</span>`:""}</a><div class="bfoot"><button class="lida" type="button" data-lida="${e_(a.id)}" aria-pressed="false">Marcar como lida</button>${a.refs?`<a class="lida refs" href="${e_(site(a.refs))}">Artigos ↗</a>`:""}</div></div>`}
+    h+=`</div>`}
+  h+=`<p class="soon">${e_(PER.soon)}</p>`;el.innerHTML=h;renderLidas();
+}
+function renderLidas(){document.querySelectorAll("[data-lida]").forEach(b=>{const on=!!LIDAS[b.dataset.lida];b.setAttribute("aria-pressed",on);b.textContent=on?"Lida":"Marcar como lida"})}
+document.addEventListener("click",ev=>{const b=ev.target.closest("[data-lida]");if(!b)return;const k=b.dataset.lida;if(LIDAS[k])delete LIDAS[k];else LIDAS[k]=Date.now();try{localStorage.setItem(LKEY,JSON.stringify(LIDAS))}catch(e){}renderLidas()});
+renderApostilas();
+function view(){
+  let h=location.hash.slice(1)||"hoje",v=h.startsWith("cards")?"cards":h;
+  if(!["hoje","apostilas","cards"].includes(v))v="hoje";
+  document.querySelectorAll(".view").forEach(x=>x.hidden=x.id!=="v-"+v);
+  document.querySelectorAll(".tabs a").forEach(a=>{if(a.dataset.view===v)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
+  if(v==="hoje")renderHoje();
+  if(v==="cards"){const d=h.slice(6);const b=document.querySelector(`[data-deck="${d||"all"}"]`);if(b&&b.getAttribute("aria-pressed")!=="true")b.click()}
+  window.scrollTo(0,0);
+}
+addEventListener("hashchange",view);view();
+if("serviceWorker" in navigator)addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
+</script>
+<script>/*per:js*/(function(){var me=document.documentElement.dataset.per||"";document.querySelectorAll(".pers a").forEach(function(a){if(a.dataset.per===me)a.setAttribute("aria-current","page")});
+document.addEventListener("click",function(e){var a=e.target.closest(".pers a");if(a)try{localStorage.setItem("medaj-per",a.dataset.per)}catch(_){}});
+if(me)try{localStorage.setItem("medaj-per",me)}catch(_){}})();/*/per:js*/</script>
+</body>
+</html>
