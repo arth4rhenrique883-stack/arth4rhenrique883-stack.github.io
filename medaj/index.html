@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>medaj.</title>
-<meta name="theme-color" content="#050505">
+<meta name="theme-color" content="#000000">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-180.png">
@@ -13,6 +13,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Archivo:wght@500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" data-res-dark href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
 <style>
 /* Layout: app de uma tela, bem simples: o nome no centro do preto, o baralho, o resumo e o cartão. */
 /* medaj. (28/10): preto predominante, branco, vermelho sutil e mínimos detalhes de azul; só a chama do nome muda de cor. */
@@ -220,6 +221,33 @@ a.go:hover{border-color:var(--red)}
 @media (prefers-reduced-motion:no-preference){:root:not([data-per]) #fl-out stop:nth-child(1){animation:fl-o1 20s ease-in-out infinite}:root:not([data-per]) #fl-out stop:nth-child(2){animation:fl-o2 20s ease-in-out infinite}:root:not([data-per]) #fl-out stop:nth-child(3){animation:fl-o3 20s ease-in-out infinite}:root:not([data-per]) #fl-in stop:nth-child(1){animation:fl-i1 20s ease-in-out infinite}:root:not([data-per]) #fl-in stop:nth-child(2){animation:fl-i2 20s ease-in-out infinite}:root:not([data-per]) #fl-core stop:nth-child(1){animation:fl-c1 20s ease-in-out infinite}:root:not([data-per]) #fl-core stop:nth-child(2){animation:fl-c2 20s ease-in-out infinite}:root:not([data-per]) #fl-glow stop{animation:fl-g 20s ease-in-out infinite}}
 @keyframes fl-o1{0%{stop-color:#7d151b}25%{stop-color:#b02a30}50%{stop-color:#9c2329}75%{stop-color:#5e0f14}100%{stop-color:#7d151b}}@keyframes fl-o2{0%{stop-color:#b02a30}25%{stop-color:#e0545a}50%{stop-color:#b02a30}75%{stop-color:#9c2329}100%{stop-color:#b02a30}}@keyframes fl-o3{0%{stop-color:#d9434a}25%{stop-color:#f3e9ea}50%{stop-color:#7f97bd}75%{stop-color:#c4343b}100%{stop-color:#d9434a}}@keyframes fl-i1{0%{stop-color:#f4d9da}25%{stop-color:#ffffff}50%{stop-color:#eef2f8}75%{stop-color:#ecc4c6}100%{stop-color:#f4d9da}}@keyframes fl-i2{0%{stop-color:#e0666c}25%{stop-color:#f2c9cb}50%{stop-color:#b8c6de}75%{stop-color:#c8464d}100%{stop-color:#e0666c}}@keyframes fl-c1{0%{stop-color:#ffffff}25%{stop-color:#ffffff}50%{stop-color:#ffffff}75%{stop-color:#fff3f3}100%{stop-color:#ffffff}}@keyframes fl-c2{0%{stop-color:#f6dede}25%{stop-color:#ffffff}50%{stop-color:#e6ecf5}75%{stop-color:#e9b5b8}100%{stop-color:#f6dede}}@keyframes fl-g{0%{stop-color:#b02a30}25%{stop-color:#d9434a}50%{stop-color:#7f97bd}75%{stop-color:#8c2228}100%{stop-color:#b02a30}}
 /*/res:flame*/
+/*res:dark*/
+/* residência: só preto e tons de preto (28/10, 17h); Caslon nos títulos, Newsreader no texto */
+:root{--bg:#000;--surface:#070707;--surface-2:#0c0c0c;--raise:#070707;--line:#171717;--line-2:#262626;
+  --fg:#e6e6e6;--muted:#8c8c8c;--dim:#5e5e5e;
+  --red:#9a9a9a;--red-ink:#d4d4d4;--red-soft:#0b0b0b;--blue:#a9a9a9;--link:#e6e6e6;
+  --area:#cfcfcf;--area-soft:#0b0b0b;--area-ink:#c4c4c4;
+  --upd-bg:#090909;--upd-line:#6a6a6a;--upd-ink:#d8d8d8;--trap-bg:#0b0b0b;--trap-line:#9a9a9a;--trap-ink:#e2e2e2;
+  --hard:#bdbdbd;--good:#d4d4d4;
+  --display:"Libre Caslon Text",Georgia,serif;--head:"Libre Caslon Text",Georgia,serif;--body:"Newsreader",Georgia,serif;--mono:"Libre Caslon Text",Georgia,serif}
+body{background:#000}
+h1,h2,.q,.today h2{font-family:"Libre Caslon Display","Libre Caslon Text",Georgia,serif!important;font-weight:400!important}
+::selection{background:#2a2a2a;color:#fff}
+.upd b.t,.law b.t{color:#bdbdbd}.trap b.t{color:#e2e2e2}.box.upd{border-color:#161616}.box.trap{border-color:#1a1a1a}
+.pearl{background:#0a0a0a;border-color:#1a1a1a;border-left-color:#8a8a8a;color:#e2e2e2}.pearl b.t{color:#cfcfcf}
+.cur{background:#0a0a0a;border-color:#1a1a1a;border-left-color:#5e5e5e;color:#dcdcdc}.cur b.t{color:#bdbdbd}
+a.copy{border-color:#3a3a3a}a.copy:hover{border-color:#8c8c8c}
+a.btn{color:#cfcfcf;border-color:#2a2a2a}a.btn:hover{border-color:#8c8c8c}
+.tag.new{border-color:#3a3a3a;color:#e6e6e6}
+.tabs a[aria-current="page"]{background:#111!important;box-shadow:inset 0 -1px 0 #8c8c8c}
+.chip[aria-pressed="true"]{border-color:#5e5e5e!important;background:#111!important}
+.flame .hue{animation:none!important;filter:none!important}
+#fl-out stop,#fl-in stop,#fl-core stop,#fl-glow stop{animation:none!important}
+#fl-out stop:nth-child(1){stop-color:#3a3a3a!important}#fl-out stop:nth-child(2){stop-color:#6e6e6e!important}#fl-out stop:nth-child(3){stop-color:#a8a8a8!important}
+#fl-in stop:nth-child(1){stop-color:#d6d6d6!important}#fl-in stop:nth-child(2){stop-color:#f2f2f2!important}#fl-core stop{stop-color:#fff!important}#fl-glow stop{stop-color:#555!important}
+@media (prefers-reduced-motion:no-preference){.flame .all{animation:gry 10s ease-in-out infinite}}
+@keyframes gry{0%,100%{filter:brightness(1)}50%{filter:brightness(.62)}}
+/*/res:dark*/
 </style>
 </head>
 <body>
