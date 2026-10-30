@@ -253,6 +253,7 @@ body.bookmode main{flex:1;min-height:0;display:flex;flex-direction:column}
 .bk-foot .prog i{display:block;height:100%;background:var(--red);transition:width .3s}
 /* 30/10: "slide N" citado no texto abre o slide; e o leitor decide, na hora, se quer o slide ao lado do texto (acompanha a leitura) */
 .sr{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline dotted color-mix(in srgb,var(--red) 70%,transparent);text-underline-offset:3px}
+.slx.sr{text-decoration-style:solid}
 .sr.on{background:color-mix(in srgb,var(--red) 22%,transparent);border-radius:3px}
 .modo .ld{margin-left:auto}
 .modo.ask .ld{margin-left:0}
@@ -496,7 +497,7 @@ function home(){document.body.classList.remove("bookmode");onkey=null;onresize=n
 /* modo de leitura (pedido de 28/10): no início de cada apostila, passar para o lado (livro) ou rolar; a escolha fica no aparelho */
 const MODO=()=>{try{return localStorage.getItem(LS("modo"))||""}catch(e){return""}};
 const setModo=m=>{try{localStorage.setItem(LS("modo"),m)}catch(e){}};
-const ldBt=ask=>CUR.deck?`<button type="button" class="ld" data-lado aria-pressed="${LADO()}">${ask?"▣ Mostrar o slide ao lado do texto (liga e desliga quando quiser)":"▣ Slide ao lado"}</button>`:"";
+const ldBt=ask=>(CUR.deck||CUR.multi)?`<button type="button" class="ld" data-lado aria-pressed="${LADO()}">${ask?"▣ Mostrar o slide ao lado do texto (liga e desliga quando quiser)":"▣ Slide ao lado"}</button>`:"";
 function modoHtml(cur,ask){return ask
   ?`<div class="modo ask" role="group" aria-label="Como ler esta apostila"><span class="kick">Como prefere ler?</span><button type="button" data-modo="livro">⇆ Passar para o lado, como um livro</button><button type="button" data-modo="rolar">⇅ Rolar para cima e para baixo</button>${ldBt(1)}</div>`
   :`<div class="modo" role="group" aria-label="Modo de leitura"><button type="button" data-modo="livro" aria-pressed="${cur==="livro"}">⇆ Livro</button><button type="button" data-modo="rolar" aria-pressed="${cur!=="livro"}">⇅ Rolar</button>${ldBt(0)}</div>`}
@@ -504,13 +505,13 @@ function modoHtml(cur,ask){return ask
 let CUR={deck:null,tot:0},LDK="";
 const LADO=()=>{try{return localStorage.getItem(LS("lado"))==="1"}catch(e){return false}};
 function ladoSet(on){try{localStorage.setItem(LS("lado"),on?"1":"0")}catch(e){}ladoApply()}
-function ladoApply(){const on=!!CUR.deck&&LADO();document.body.classList.toggle("ld-on",on);
+function ladoApply(){const on=!!(CUR.deck||CUR.multi)&&LADO();document.body.classList.toggle("ld-on",on);
   document.querySelectorAll("[data-lado]").forEach(b=>b.setAttribute("aria-pressed",on));
   if(!on)app.querySelectorAll(".sr.on").forEach(x=>x.classList.remove("on"));
   LDK="";if(onresize)onresize();if(on)ladoPick()}
-function ladoShow(n,mine){if(!CUR.deck)return;n=Math.max(1,Math.min(CUR.tot,n));CUR.n=n;CUR.mine=mine||CUR.mine||[];
-  const s=slStyle(CUR.deck,n,0,CUR.tot);$("ldI").style.cssText=s.css+`;aspect-ratio:${s.ar}`;$("ldI").setAttribute("aria-label","Slide "+n);
-  $("ldN").textContent=`Slide ${n} de ${CUR.tot}`}
+function ladoShow(n,mine,deck){deck=deck||CUR.sd||CUR.deck;if(!deck)return;const tot=deckTot(deck);n=Math.max(1,Math.min(tot,n));CUR.sd=deck;CUR.n=n;CUR.mine=mine||CUR.mine||[];
+  const s=slStyle(deck,n,0,tot);$("ldI").style.cssText=s.css+`;aspect-ratio:${s.ar}`;$("ldI").setAttribute("aria-label","Slide "+n);
+  $("ldN").textContent=`${CUR.multi&&P.dk&&P.dk[deck]?P.dk[deck]+" · ":""}Slide ${n} de ${tot}`}
 function ladoPick(){if(!document.body.classList.contains("ld-on"))return;
   const els=[...app.querySelectorAll(".sr,.sl")];if(!els.length)return;let pick=null;
   if(document.body.classList.contains("bookmode")){const r=$("bk").getBoundingClientRect();
@@ -520,14 +521,15 @@ function ladoPick(){if(!document.body.classList.contains("ld-on"))return;
   pick=pick||els[0];const ns=(pick.dataset.ns||pick.dataset.mine||"").split(",").map(Number).filter(Boolean);if(!ns.length)return;
   const key=els.indexOf(pick)+":"+ns[0];if(key===LDK)return;LDK=key;
   app.querySelectorAll(".sr.on").forEach(x=>x.classList.remove("on"));if(pick.classList.contains("sr"))pick.classList.add("on");
-  ladoShow(ns[0],ns)}
+  const th=pick.querySelector&&pick.querySelector(".th");ladoShow(ns[0],ns,pick.dataset.deck||(th&&th.dataset.deck)||CUR.deck)}
 let ldRaf=0;addEventListener("scroll",()=>{if(ldRaf)return;ldRaf=requestAnimationFrame(()=>{ldRaf=0;ladoPick()})},{passive:true});
 $("ldP").onclick=()=>ladoShow(CUR.n-1);$("ldF").onclick=()=>ladoShow(CUR.n+1);$("ldX").onclick=()=>ladoSet(false);
-$("ldI").onclick=()=>openVW(CUR.deck,CUR.tot,CUR.n,CUR.mine);
+$("ldI").onclick=()=>openVW(CUR.sd,deckTot(CUR.sd),CUR.n,CUR.mine);
 document.addEventListener("click",e=>{if(e.target.closest("[data-lado]"))ladoSet(!LADO())});
 /* "slide N", "slides 5 e 6", "slides 2-3, 10" no texto viram botões que abrem o slide */
-function slRefs(root){if(!CUR.deck)return;const re=/\bslides?\s+\d+(?:(?:\s*[-–,]\s*|\s+e\s+)\d+)*/g,T=[];
-  const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest("button,a,.sl,.kick,h1,.lado,.vw,script,style")?2:1});
+function slRefs(root){root.querySelectorAll(".slx").forEach(e=>{e.classList.add("sr");e.setAttribute("role","button");e.tabIndex=0});
+  if(CUR.deck){const re=/\bslides?\s+\d+(?:(?:\s*[-–,]\s*|\s+e\s+)\d+)*/g,T=[];
+  const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest("button,a,.sl,.slx,.kick,h1,.lado,.vw,script,style")?2:1});
   while(w.nextNode())if(/slides?\s+\d/.test(w.currentNode.nodeValue))T.push(w.currentNode);
   for(const t of T){const v=t.nodeValue,f=document.createDocumentFragment();let i=0;
     for(const m of v.matchAll(re)){const ns=[];for(const r of m[0].replace(/^slides?\s+/,"").split(/\s*,\s*|\s+e\s+/)){const q=r.split(/\s*[-–]\s*/).map(Number);
@@ -535,14 +537,14 @@ function slRefs(root){if(!CUR.deck)return;const re=/\bslides?\s+\d+(?:(?:\s*[-�
       const ok=ns.filter(n=>n>=1&&n<=CUR.tot);if(!ok.length)continue;
       f.append(v.slice(i,m.index));const b=document.createElement("button");b.type="button";b.className="sr";b.dataset.ns=ok.join(",");b.textContent=m[0];
       b.setAttribute("aria-label","Abrir "+m[0]);f.append(b);i=m.index+m[0].length}
-    if(i){f.append(v.slice(i));t.replaceWith(f)}}
-  root.querySelectorAll(".sr").forEach(b=>b.onclick=()=>{const ns=b.dataset.ns.split(",").map(Number);
-    if(document.body.classList.contains("ld-on")){LDK="";app.querySelectorAll(".sr.on").forEach(x=>x.classList.remove("on"));b.classList.add("on");ladoShow(ns[0],ns)}
-    else openVW(CUR.deck,CUR.tot,ns[0],ns)})}
+    if(i){f.append(v.slice(i));t.replaceWith(f)}}}
+  root.querySelectorAll(".sr").forEach(b=>b.onclick=()=>{const ns=b.dataset.ns.split(",").map(Number),dk=b.dataset.deck||CUR.deck;
+    if(document.body.classList.contains("ld-on")){LDK="";app.querySelectorAll(".sr.on").forEach(x=>x.classList.remove("on"));b.classList.add("on");ladoShow(ns[0],ns,dk)}
+    else openVW(dk,deckTot(dk),ns[0],ns)})}
 document.addEventListener("click",e=>{const b=e.target.closest("[data-modo]");if(!b)return;setModo(b.dataset.modo);route()});
 
 async function livro(cid,bi,pi,c,D,s,PG){
-  document.body.classList.add("bookmode");CUR={deck:s.deck||null,tot:s.nsl||deckTot(s.deck)};
+  document.body.classList.add("bookmode");CUR={deck:s.deck||null,tot:s.nsl||deckTot(s.deck),multi:!s.deck&&JSON.stringify(s.blocks).includes('class=\\"slx')};
   const nb=bi<D.sections.length-1?D.sections[bi+1]:null;
   let h=`<div class="bk-head"><span class="kick">${esc(c.nome+" · "+c.av)}</span>${modoHtml("livro")}</div><div class="book" id="bk"><div class="cols" id="cols">`;
   h+=`<section class="cover"><span class="kick">${esc(c.nome)} · ${esc(c.av)}</span><h1>${strip(s.title)}</h1>${s.sub?`<p class="sub" style="color:var(--muted);margin:0">${strip(s.sub)}</p>`:""}`;
@@ -581,7 +583,7 @@ addEventListener("resize",()=>{if(onresize)onresize()});
 
 async function aula(cid,bi,pi){const c=CAT(cid);if(!c)return home();const D=await need(c);const s=D.sections[bi];if(!s)return home();
   const PG=pages(s.blocks);pi=Math.max(0,Math.min(PG.length-1,pi||0));const pg=PG[pi];
-  onkey=null;onresize=null;CUR={deck:s.deck||null,tot:s.nsl||deckTot(s.deck)};if(MODO()==="livro")return livro(cid,bi,pi,c,D,s,PG);
+  onkey=null;onresize=null;CUR={deck:s.deck||null,tot:s.nsl||deckTot(s.deck),multi:!s.deck&&JSON.stringify(s.blocks).includes('class=\\"slx')};if(MODO()==="livro")return livro(cid,bi,pi,c,D,s,PG);
   document.body.classList.remove("bookmode");
   DOC={tot:{}};if(s.deck&&s.nsl)DOC.tot[s.deck]=s.nsl;
   VISTO[s.id]=VISTO[s.id]||{};VISTO[s.id][pi]=1;VISTO[s.id].last=pi;save("vistas",VISTO);
