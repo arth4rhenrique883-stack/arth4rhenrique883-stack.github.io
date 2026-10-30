@@ -1,6 +1,6 @@
 {
-  "name": "medASp",
-  "short_name": "medASp",
+  "name": "xequemate med · períodos",
+  "short_name": "xequemate p",
   "description": "Apostilas e flashcards do 6º e do 8º período, com A1 e A2.",
   "lang": "pt-BR",
   "start_url": "./",
@@ -11,19 +11,19 @@
   "theme_color": "#050505",
   "icons": [
     {
-      "src": "rainha2-192.png",
+      "src": "rainha3-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "rainha2-512.png",
+      "src": "rainha3-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "rainha2-512.png",
+      "src": "rainha3-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"

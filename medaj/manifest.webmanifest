@@ -1,6 +1,6 @@
 {
-  "name": "medASr",
-  "short_name": "medASr",
+  "name": "xequemate med · residência",
+  "short_name": "xequemate r",
   "description": "Apostilas, jornada do dia e flashcards AS para residência médica.",
   "lang": "pt-BR",
   "start_url": "./",
@@ -10,8 +10,8 @@
   "background_color": "#050505",
   "theme_color": "#050505",
   "icons": [
-    {"src": "marca5-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
-    {"src": "marca5-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
-    {"src": "marca5-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+    {"src": "marca6-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "marca6-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "marca6-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
   ]
 }
