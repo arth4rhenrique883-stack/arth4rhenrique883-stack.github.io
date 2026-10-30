@@ -229,7 +229,7 @@ a.go:hover{border-color:var(--red)}
 .pers{display:flex;justify-content:center;flex-wrap:wrap;gap:5px;margin-top:-10px}
 .pers a{display:inline-flex;align-items:center;gap:7px;font:500 10.5px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:8px 10px;white-space:nowrap;border-radius:999px;border:1px solid var(--line)}
 .pers a::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
-.pers a[data-per="res"]{--c:#b02a30}.pers a[data-per="p6"]{--c:#c8174a}.pers a[data-per="p7"]{--c:#12a5b8}.pers a[data-per="p8"]{--c:#9446ff;}.pers a[data-per="p3"]{--c:#bf8118}.pers a[data-per="p4"]{--c:#18bf2e}.pers a[data-per="p5"]{--c:#1855bf}.pers a[data-per="p9"]{--c:#bf5518}.pers a[data-per="p10"]{--c:#bf1881}.pers a[data-per="p11"]{--c:#18bf95}.pers a[data-per="p12"]{--c:#bf9d18}
+.pers a[data-per="res"]{--c:#b02a30}.pers a[data-per="p6"]{--c:#c8174a}.pers a[data-per="p7"]{--c:#12a5b8}.pers a[data-per="p8"]{--c:#9446ff;}.pers a[data-per="p3"]{--c:#bf8118}.pers a[data-per="p4"]{--c:#18bf2e}.pers a[data-per="p5"]{--c:#1855bf}
 .pers a[aria-current]{color:#fff;border-color:var(--c);background:color-mix(in srgb,var(--c) 14%,transparent)}
 @media (pointer:coarse){.pers a{padding:10px 10px}}
 @media (max-width:360px){.pers a{letter-spacing:.02em;padding:9px 8px}}
@@ -243,7 +243,7 @@ a.go:hover{border-color:var(--red)}
 :root{--display:"Libre Caslon Text",Georgia,serif;--body:"Newsreader",Georgia,serif;--mono:"Libre Caslon Text",Georgia,serif}
 .today h2,.q{font-family:"Libre Caslon Display","Libre Caslon Text",Georgia,serif;font-weight:400}
 /* período: cor oficial no lugar do vermelho, sobre preto e branco */
-:root{--bg:#030303;--surface:#0a0a0a;--surface-2:#101010;--line:#1b1b1b;--line-2:#2e2e2e;--red:#18bf2e;--red-ink:#8fff9e;--red-deep:#14521d}
+:root{--bg:#050505;--surface:#0b0b0b;--surface-2:#101010;--line:#1b1b1b;--line-2:#2e2e2e;--red:#b02a30;--red-ink:#d0585e;--red-deep:#5a1417}
 .tag.new{border-color:var(--red-deep)}.bubble.story{border-color:var(--red-deep)}
 .tabs a[aria-current="page"]{background:#111;box-shadow:inset 0 -2px 0 var(--red)}
 .chip[aria-pressed="true"]{border-color:var(--red);background:#111}
@@ -269,14 +269,14 @@ a.go:hover{border-color:var(--red)}
 @media (max-width:520px){.week div{grid-template-columns:minmax(0,1fr)}.week .start{flex-wrap:wrap}}
 /* chama: só as cores desta página, mudando a cada 5 s */
 .flame .hue{animation:none!important}
-#fl-out stop:nth-child(1){stop-color:#14521d}#fl-out stop:nth-child(2){stop-color:#1f7a2b}#fl-out stop:nth-child(3){stop-color:#259333}
-#fl-in stop:nth-child(1){stop-color:#86ea93}#fl-in stop:nth-child(2){stop-color:#c2f4c9}
-#fl-core stop{stop-color:#ebffed}#fl-glow stop{stop-color:#21832e}
-@keyframes cf0{0.00%{stop-color:#14521d}16.67%{stop-color:#1f7a2b}33.33%{stop-color:#259333}50.00%{stop-color:#1b6a25}66.67%{stop-color:#2bab3c}83.33%{stop-color:#21832e}100%{stop-color:#14521d}}
-@keyframes cf1{0.00%{stop-color:#259333}16.67%{stop-color:#1b6a25}33.33%{stop-color:#2bab3c}50.00%{stop-color:#21832e}66.67%{stop-color:#14521d}83.33%{stop-color:#1f7a2b}100%{stop-color:#259333}}
-@keyframes cf2{0.00%{stop-color:#2bab3c}16.67%{stop-color:#21832e}33.33%{stop-color:#14521d}50.00%{stop-color:#1f7a2b}66.67%{stop-color:#259333}83.33%{stop-color:#1b6a25}100%{stop-color:#2bab3c}}
-@keyframes ci0{0.00%{stop-color:#86ea93}33.33%{stop-color:#c2f4c9}66.67%{stop-color:#a8f0b2}100%{stop-color:#86ea93}}
-@keyframes ci1{0.00%{stop-color:#c2f4c9}33.33%{stop-color:#a8f0b2}66.67%{stop-color:#86ea93}100%{stop-color:#c2f4c9}}
+#fl-out stop:nth-child(1){stop-color:#521419}#fl-out stop:nth-child(2){stop-color:#7a1f26}#fl-out stop:nth-child(3){stop-color:#93252e}
+#fl-in stop:nth-child(1){stop-color:#ea868e}#fl-in stop:nth-child(2){stop-color:#f4c2c6}
+#fl-core stop{stop-color:#ffebec}#fl-glow stop{stop-color:#832129}
+@keyframes cf0{0.00%{stop-color:#521419}16.67%{stop-color:#7a1f26}33.33%{stop-color:#93252e}50.00%{stop-color:#6a1b21}66.67%{stop-color:#ab2b36}83.33%{stop-color:#832129}100%{stop-color:#521419}}
+@keyframes cf1{0.00%{stop-color:#93252e}16.67%{stop-color:#6a1b21}33.33%{stop-color:#ab2b36}50.00%{stop-color:#832129}66.67%{stop-color:#521419}83.33%{stop-color:#7a1f26}100%{stop-color:#93252e}}
+@keyframes cf2{0.00%{stop-color:#ab2b36}16.67%{stop-color:#832129}33.33%{stop-color:#521419}50.00%{stop-color:#7a1f26}66.67%{stop-color:#93252e}83.33%{stop-color:#6a1b21}100%{stop-color:#ab2b36}}
+@keyframes ci0{0.00%{stop-color:#ea868e}33.33%{stop-color:#f4c2c6}66.67%{stop-color:#f0a8ae}100%{stop-color:#ea868e}}
+@keyframes ci1{0.00%{stop-color:#f4c2c6}33.33%{stop-color:#f0a8ae}66.67%{stop-color:#ea868e}100%{stop-color:#f4c2c6}}
 @media (prefers-reduced-motion:no-preference){#fl-out stop:nth-child(1){animation:cf0 30s linear infinite}#fl-out stop:nth-child(2){animation:cf1 30s linear infinite}#fl-out stop:nth-child(3){animation:cf2 30s linear infinite}#fl-in stop:nth-child(1){animation:ci0 15s linear infinite}#fl-in stop:nth-child(2){animation:ci1 15s linear infinite}}
 /*as:nome*/
 .asmed{position:relative;display:inline-flex;flex-direction:column;align-items:center;gap:.1em;line-height:1;white-space:nowrap;font-size:17px;transform-origin:50% 60%}
@@ -342,7 +342,7 @@ html[data-tema=claro] :is(img,video,picture,canvas,[style*="background-image"]){
       <span class="app-name">4º período</span>
     </div>
   </header>
-  <!--per:nav--><nav class="pers" aria-label="Escolher o período"><a href="p3.html" data-per="p3">3º período</a><a href="p4.html" data-per="p4">4º período</a><a href="p5.html" data-per="p5">5º período</a><a href="p6.html" data-per="p6">6º período</a><a href="p7.html" data-per="p7">7º período</a><a href="p8.html" data-per="p8">8º período</a><a href="p9.html" data-per="p9">9º período</a><a href="p10.html" data-per="p10">10º período</a><a href="p11.html" data-per="p11">11º período</a><a href="p12.html" data-per="p12">12º período</a></nav><!--/per:nav-->
+  <!--per:nav--><nav class="pers" aria-label="Escolher o período"><a href="p3.html" data-per="p3">3º período</a><a href="p4.html" data-per="p4">4º período</a><a href="p5.html" data-per="p5">5º período</a><a href="p6.html" data-per="p6">6º período</a><a href="p7.html" data-per="p7">7º período</a><a href="p8.html" data-per="p8">8º período</a></nav><!--/per:nav-->
 
   <nav class="tabs" aria-label="Seções do app">
     <a href="#hoje" data-view="hoje">Hoje</a><a href="#apostilas" data-view="apostilas">Apostilas</a><a href="#cards" data-view="cards">Flashcards</a>
