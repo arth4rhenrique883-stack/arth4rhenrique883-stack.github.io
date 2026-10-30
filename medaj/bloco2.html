@@ -9,7 +9,70 @@
 <link rel="apple-touch-icon" href="marca6-180.png">
 <meta name="theme-color" content="#000000">
 <link rel="stylesheet" data-res-dark href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
-<style>.revcards{font:500 14px var(--display);color:var(--fg);border:1px solid var(--red);border-radius:999px;padding:8px 14px;text-decoration:none;display:inline-block;margin-top:8px}.revcards:hover{background:var(--red-soft)}</style>
+<style>.revcards{font:500 14px var(--display);color:var(--fg);border:1px solid var(--red);border-radius:999px;padding:8px 14px;text-decoration:none;display:inline-block;margin-top:8px}.revcards:hover{background:var(--red-soft)}/*as:nome*/
+.asmed{position:relative;display:inline-flex;flex-direction:column;align-items:center;gap:.1em;line-height:1;white-space:nowrap;font-size:17px;transform-origin:50% 60%}
+.brand .asmed{font-size:13px}.brand .word .asmed{font-size:17px}
+.asmed .t{font-family:Outfit,system-ui,sans-serif;font-weight:300;letter-spacing:.06em;font-style:normal;color:#ececec;text-shadow:0 1px 0 #2a2a2a,0 2px 3px rgba(0,0,0,.7)}
+.asmed .t b{font-weight:500}
+.asmed-r .t b{color:#a8a8a8}
+.asmed-p .t{color:#fff0f5}.asmed-p .t b{color:#ff8fb0}
+.asmed .qw{display:block;line-height:0}
+.asmed .xm-ecg{width:9.5em;height:1.82em;overflow:visible;display:block}
+.xm-base{opacity:.28}.xm-gl{opacity:.08}
+.xm-b{opacity:.45}
+.xm-sw{stroke-dasharray:14 200;stroke-dashoffset:14}
+@media (prefers-reduced-motion:no-preference){
+.xm-sw{animation:xm-sweep 2.4s linear infinite}
+.asmed,.xm-mini{animation:xm-sis 2.4s linear infinite;will-change:transform}
+.xm-gl{animation:xm-gl 2.4s linear infinite}.xm-b{animation:xm-bo 2.4s linear infinite}}
+@keyframes xm-sweep{to{stroke-dashoffset:-100}}
+@keyframes xm-sis{0%,39%{transform:scale(1)}43%{transform:scale(1.03)}49%,100%{transform:scale(1)}}
+@keyframes xm-gl{0%,39%{opacity:.08}43%{opacity:.55}55%,100%{opacity:.08}}
+@keyframes xm-bo{0%,39%{opacity:.45}43%{opacity:1}60%,100%{opacity:.45}}
+.xm-mini{width:30px;height:30px;padding:3px;border-radius:9px;background:#050505;border:1px solid #1e1e1e;box-sizing:border-box;flex:none}
+/*/as:nome*/
+/*as:visual*/
+:root{--bg:#000!important}
+.top{display:grid!important;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px}
+.top>.brand{grid-column:2;grid-row:1;justify-self:center}
+.top>:not(.brand):first-child{grid-column:1;grid-row:1;justify-self:start}
+.top>:not(.brand):last-child{grid-column:3;grid-row:1;justify-self:end;text-align:right}
+html{background:#000 linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px) 0 0/40px 40px,#000 linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px) 0 0/40px 40px!important;background-color:#000!important}html::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:-1;background:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px) 0 0/8px 8px,linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px) 0 0/8px 8px}body{background:transparent!important}
+.xm-canto{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);left:max(10px,env(safe-area-inset-left,0px));z-index:9997;line-height:0}.xm-canto .xm-mini{width:36px;height:36px}
+/*/as:visual*/
+/*tm:css*/
+html[data-tema=claro]{filter:invert(1) hue-rotate(180deg);background:#000}
+html[data-tema=claro] :is(img,video,picture,canvas,[style*="background-image"]){filter:invert(1) hue-rotate(180deg)}
+.tm-bt{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);right:max(10px,env(safe-area-inset-right,0px));z-index:9997;width:36px;height:36px;border-radius:50%;border:1px solid #2a2a2a;background:#0b0b0b;color:#bdbdbd;font:16px/1 Georgia,serif;display:grid;place-items:center;cursor:pointer;padding:0}
+.tag-top{margin-right:44px}
+/*/tm:css*/
+/*gf:css*/
+mark.gf{background:color-mix(in srgb,var(--red,#ffffff) 30%,transparent);color:inherit;border-bottom:1px solid color-mix(in srgb,var(--red,#ffffff) 75%,transparent);border-radius:2px;padding:0 1px;cursor:pointer}
+:root:not([data-per]) mark.gf{background:rgba(255,255,255,.16);border-bottom-color:rgba(255,255,255,.55)}
+.gf-bar{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:9999;display:none;gap:8px}
+/* 28/10 22h55: no tablet o menu de seleção do Google cobria o botão; agora fica fixo no canto esquerdo, com marca-texto */
+.gf-bar{left:max(10px,env(safe-area-inset-left,0px));top:50%;bottom:auto;transform:translateY(-50%);flex-direction:column}
+.gf-bar button.gf-pri{display:flex;flex-direction:column;align-items:center;gap:4px;padding:12px 10px;border-radius:16px;font-size:12px}
+.gf-bar.on{display:flex}
+.gf-bar button,.gf-fab{font:500 15px "Libre Caslon Text",Georgia,serif;color:#f2f2f2;background:#111;border:1px solid #3a3a3a;border-radius:999px;padding:10px 18px;box-shadow:0 8px 24px rgba(0,0,0,.6);cursor:pointer}
+.gf-bar button.gf-pri{background:#f2f2f2;color:#000;border-color:#f2f2f2}
+.gf-fab{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:9998;font-size:13px;padding:8px 14px;opacity:.9}
+.gf-fab[hidden]{display:none}
+.gf-pan{position:fixed;inset:0;z-index:10000;background:#000;overflow:auto;-webkit-overflow-scrolling:touch;display:none}
+.gf-pan.on{display:block}
+.gf-in{max-width:720px;margin:0 auto;padding:22px 18px 60px}
+.gf-hd{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:6px}
+.gf-hd h2{font:400 28px "Libre Caslon Display",Georgia,serif;color:#f2f2f2;margin:0}
+.gf-hd button{background:none;border:1px solid #333;color:#ddd;border-radius:999px;padding:6px 14px;font:inherit;cursor:pointer}
+.gf-sub{color:#7a7a7a;font-size:13px;letter-spacing:.08em;margin:0 0 18px}
+.gf-ap{font:400 13px "Libre Caslon Text",Georgia,serif;letter-spacing:.14em;text-transform:uppercase;color:var(--red-ink,#9a9a9a);margin:26px 0 8px;border-top:1px solid #1a1a1a;padding-top:16px}
+.gf-sec{font:400 18px "Libre Caslon Display",Georgia,serif;color:#e8e8e8;margin:14px 0 8px}
+.gf-it{display:flex;gap:10px;align-items:flex-start;margin:0 0 10px}
+.gf-it a{flex:1;display:block;color:#e6e6e6;text-decoration:none;font:400 17px/1.55 Newsreader,Georgia,serif;border-left:2px solid color-mix(in srgb,var(--red,#ffffff) 70%,transparent);padding:2px 0 2px 12px}
+.gf-it button{background:none;border:0;color:#555;font-size:18px;cursor:pointer;padding:2px 6px}
+.gf-vz{color:#777;font:400 16px Newsreader,Georgia,serif}
+/*/gf:css*/
+</style>
 <link data-as-fonte rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&family=Nabla&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap">
 </head>
 <body>
@@ -176,69 +239,6 @@ a.btn{color:#cfcfcf;border-color:#2a2a2a}a.btn:hover{border-color:#8c8c8c}
 @media (prefers-reduced-motion:no-preference){.flame .sway{animation:mj-sway 7s ease-in-out infinite alternate}}
 @keyframes mj-sway{0%{transform:rotate(-2.5deg) scale(1,.98)}50%{transform:rotate(1deg) scale(.98,1.03)}100%{transform:rotate(2.5deg) scale(1.01,.99)}}
 /*/mj:logo*/
-/*as:nome*/
-.asmed{position:relative;display:inline-flex;flex-direction:column;align-items:center;gap:.1em;line-height:1;white-space:nowrap;font-size:17px;transform-origin:50% 60%}
-.brand .asmed{font-size:13px}.brand .word .asmed{font-size:17px}
-.asmed .t{font-family:Outfit,system-ui,sans-serif;font-weight:300;letter-spacing:.06em;font-style:normal;color:#ececec;text-shadow:0 1px 0 #2a2a2a,0 2px 3px rgba(0,0,0,.7)}
-.asmed .t b{font-weight:500}
-.asmed-r .t b{color:#a8a8a8}
-.asmed-p .t{color:#fff0f5}.asmed-p .t b{color:#ff8fb0}
-.asmed .qw{display:block;line-height:0}
-.asmed .xm-ecg{width:9.5em;height:1.82em;overflow:visible;display:block}
-.xm-base{opacity:.28}.xm-gl{opacity:.08}
-.xm-b{opacity:.45}
-.xm-sw{stroke-dasharray:14 200;stroke-dashoffset:14}
-@media (prefers-reduced-motion:no-preference){
-.xm-sw{animation:xm-sweep 2.4s linear infinite}
-.asmed,.xm-mini{animation:xm-sis 2.4s linear infinite;will-change:transform}
-.xm-gl{animation:xm-gl 2.4s linear infinite}.xm-b{animation:xm-bo 2.4s linear infinite}}
-@keyframes xm-sweep{to{stroke-dashoffset:-100}}
-@keyframes xm-sis{0%,39%{transform:scale(1)}43%{transform:scale(1.03)}49%,100%{transform:scale(1)}}
-@keyframes xm-gl{0%,39%{opacity:.08}43%{opacity:.55}55%,100%{opacity:.08}}
-@keyframes xm-bo{0%,39%{opacity:.45}43%{opacity:1}60%,100%{opacity:.45}}
-.xm-mini{width:30px;height:30px;padding:3px;border-radius:9px;background:#050505;border:1px solid #1e1e1e;box-sizing:border-box;flex:none}
-/*/as:nome*/
-/*as:visual*/
-:root{--bg:#000!important}
-.top{display:grid!important;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px}
-.top>.brand{grid-column:2;grid-row:1;justify-self:center}
-.top>:not(.brand):first-child{grid-column:1;grid-row:1;justify-self:start}
-.top>:not(.brand):last-child{grid-column:3;grid-row:1;justify-self:end;text-align:right}
-html{background:#000 linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px) 0 0/40px 40px,#000 linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px) 0 0/40px 40px!important;background-color:#000!important}html::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:-1;background:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px) 0 0/8px 8px,linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px) 0 0/8px 8px}body{background:transparent!important}
-.xm-canto{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);left:max(10px,env(safe-area-inset-left,0px));z-index:9997;line-height:0}.xm-canto .xm-mini{width:36px;height:36px}
-/*/as:visual*/
-/*tm:css*/
-html[data-tema=claro]{filter:invert(1) hue-rotate(180deg);background:#000}
-html[data-tema=claro] :is(img,video,picture,canvas,[style*="background-image"]){filter:invert(1) hue-rotate(180deg)}
-.tm-bt{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);right:max(10px,env(safe-area-inset-right,0px));z-index:9997;width:36px;height:36px;border-radius:50%;border:1px solid #2a2a2a;background:#0b0b0b;color:#bdbdbd;font:16px/1 Georgia,serif;display:grid;place-items:center;cursor:pointer;padding:0}
-.tag-top{margin-right:44px}
-/*/tm:css*/
-/*gf:css*/
-mark.gf{background:color-mix(in srgb,var(--red,#ffffff) 30%,transparent);color:inherit;border-bottom:1px solid color-mix(in srgb,var(--red,#ffffff) 75%,transparent);border-radius:2px;padding:0 1px;cursor:pointer}
-:root:not([data-per]) mark.gf{background:rgba(255,255,255,.16);border-bottom-color:rgba(255,255,255,.55)}
-.gf-bar{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:9999;display:none;gap:8px}
-/* 28/10 22h55: no tablet o menu de seleção do Google cobria o botão; agora fica fixo no canto esquerdo, com marca-texto */
-.gf-bar{left:max(10px,env(safe-area-inset-left,0px));top:50%;bottom:auto;transform:translateY(-50%);flex-direction:column}
-.gf-bar button.gf-pri{display:flex;flex-direction:column;align-items:center;gap:4px;padding:12px 10px;border-radius:16px;font-size:12px}
-.gf-bar.on{display:flex}
-.gf-bar button,.gf-fab{font:500 15px "Libre Caslon Text",Georgia,serif;color:#f2f2f2;background:#111;border:1px solid #3a3a3a;border-radius:999px;padding:10px 18px;box-shadow:0 8px 24px rgba(0,0,0,.6);cursor:pointer}
-.gf-bar button.gf-pri{background:#f2f2f2;color:#000;border-color:#f2f2f2}
-.gf-fab{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom));z-index:9998;font-size:13px;padding:8px 14px;opacity:.9}
-.gf-fab[hidden]{display:none}
-.gf-pan{position:fixed;inset:0;z-index:10000;background:#000;overflow:auto;-webkit-overflow-scrolling:touch;display:none}
-.gf-pan.on{display:block}
-.gf-in{max-width:720px;margin:0 auto;padding:22px 18px 60px}
-.gf-hd{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:6px}
-.gf-hd h2{font:400 28px "Libre Caslon Display",Georgia,serif;color:#f2f2f2;margin:0}
-.gf-hd button{background:none;border:1px solid #333;color:#ddd;border-radius:999px;padding:6px 14px;font:inherit;cursor:pointer}
-.gf-sub{color:#7a7a7a;font-size:13px;letter-spacing:.08em;margin:0 0 18px}
-.gf-ap{font:400 13px "Libre Caslon Text",Georgia,serif;letter-spacing:.14em;text-transform:uppercase;color:var(--red-ink,#9a9a9a);margin:26px 0 8px;border-top:1px solid #1a1a1a;padding-top:16px}
-.gf-sec{font:400 18px "Libre Caslon Display",Georgia,serif;color:#e8e8e8;margin:14px 0 8px}
-.gf-it{display:flex;gap:10px;align-items:flex-start;margin:0 0 10px}
-.gf-it a{flex:1;display:block;color:#e6e6e6;text-decoration:none;font:400 17px/1.55 Newsreader,Georgia,serif;border-left:2px solid color-mix(in srgb,var(--red,#ffffff) 70%,transparent);padding:2px 0 2px 12px}
-.gf-it button{background:none;border:0;color:#555;font-size:18px;cursor:pointer;padding:2px 6px}
-.gf-vz{color:#777;font:400 16px Newsreader,Georgia,serif}
-/*/gf:css*/
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>

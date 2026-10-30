@@ -3,7 +3,7 @@
 <head>
 <script data-tema>try{if(localStorage.getItem("medas-tema")==="claro")document.documentElement.dataset.tema="claro"}catch(e){}</script>
 <meta charset="utf-8">
-<script>try{var _p=localStorage.getItem("medaj-per");if(/^p[678]$/.test(_p))location.replace(_p+".html")}catch(e){}</script>
+<script type="text/plain" data-guardado>try{var _p=localStorage.getItem("medaj-per");if(/^p[678]$/.test(_p))location.replace(_p+".html")}catch(e){}</script>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>xequemate med</title>
 <meta name="theme-color" content="#000000">
@@ -280,6 +280,7 @@ html{background:#000 linear-gradient(rgba(167,123,255,.06) 1px,transparent 1px) 
 .xm-canto{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);left:max(10px,env(safe-area-inset-left,0px));z-index:9997;line-height:0}.xm-canto .xm-mini{width:36px;height:36px}
 :root{--display:"Libre Caslon Text",Georgia,serif;--body:"Newsreader",Georgia,serif;--mono:"Libre Caslon Text",Georgia,serif}
 /*/as:visual*/
+/*ini:css*/body:not(.ini) .pers,body:not(.ini) .soon{display:none}body.ini .ini-bt{display:none}.ini-bt{display:block;margin:34px auto 0;font:400 18px "Libre Caslon Text",Georgia,serif;letter-spacing:.14em;text-transform:uppercase;color:#f2f2f2;background:#0b0b0b;border:1px solid #3a3a3a;border-radius:999px;padding:14px 40px;cursor:pointer}/*/ini:css*/
 /*tm:css*/
 html[data-tema=claro]{filter:invert(1) hue-rotate(180deg);background:#000}
 html[data-tema=claro] :is(img,video,picture,canvas,[style*="background-image"]){filter:invert(1) hue-rotate(180deg)}
@@ -309,7 +310,8 @@ html[data-tema=claro] :is(img,video,picture,canvas,[style*="background-image"]){
       <span class="app-name">períodos</span>
     </div>
   </header>
-  <!--per:nav--><nav class="pers" aria-label="Escolher o período"><a href="p6.html" data-per="p6">6º período</a><a href="p7.html" data-per="p7">7º período</a><a href="p8.html" data-per="p8">8º período</a></nav><!--/per:nav-->
+  <button type="button" class="ini-bt" onclick="document.body.classList.add('ini')">Iniciar</button>
+<!--per:nav--><nav class="pers" aria-label="Escolher o período"><a href="p6.html" data-per="p6">6º período</a><a href="p7.html" data-per="p7">7º período</a><a href="p8.html" data-per="p8">8º período</a></nav><!--/per:nav-->
 
   <p class="soon" style="text-align:center">Escolha o período. O app guarda a escolha neste aparelho e abre direto nele.</p>
 </div>

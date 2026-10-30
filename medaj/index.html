@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
 <script data-tema>try{if(localStorage.getItem("medas-tema")==="claro")document.documentElement.dataset.tema="claro"}catch(e){}</script>
+<script data-sem-hoje>(function(){function f(){if(!location.hash||location.hash==="#hoje")history.replaceState(null,"",location.pathname+location.search+"#apostilas")}f();addEventListener("hashchange",f,true)})();</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>xequemate med</title>
@@ -306,6 +307,7 @@ a.btn{color:#cfcfcf;border-color:#2a2a2a}a.btn:hover{border-color:#8c8c8c}
 html{background:#000 linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px) 0 0/40px 40px,#000 linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px) 0 0/40px 40px!important;background-color:#000!important}html::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:-1;background:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px) 0 0/8px 8px,linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px) 0 0/8px 8px}body{background:transparent!important}
 .xm-canto{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);left:max(10px,env(safe-area-inset-left,0px));z-index:9997;line-height:0}.xm-canto .xm-mini{width:36px;height:36px}
 /*/as:visual*/
+/*hj:css*/.tabs a[data-view="hoje"]{display:none!important}/*/hj:css*/
 /*tm:css*/
 html[data-tema=claro]{filter:invert(1) hue-rotate(180deg);background:#000}
 html[data-tema=claro] :is(img,video,picture,canvas,[style*="background-image"]){filter:invert(1) hue-rotate(180deg)}

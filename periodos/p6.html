@@ -2,6 +2,7 @@
 <html lang="pt-BR" data-per="p6">
 <head>
 <script data-tema>try{if(localStorage.getItem("medas-tema")==="claro")document.documentElement.dataset.tema="claro"}catch(e){}</script>
+<script data-sem-hoje>(function(){function f(){if(!location.hash||location.hash==="#hoje")history.replaceState(null,"",location.pathname+location.search+"#apostilas")}f();addEventListener("hashchange",f,true)})();</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>xequemate med</title>
@@ -276,6 +277,44 @@ a.go:hover{border-color:var(--red)}
 @keyframes ci0{0.00%{stop-color:#d98a9e}33.33%{stop-color:#f2c1cd}66.67%{stop-color:#e7a3b4}100%{stop-color:#d98a9e}}
 @keyframes ci1{0.00%{stop-color:#f2c1cd}33.33%{stop-color:#e7a3b4}66.67%{stop-color:#d98a9e}100%{stop-color:#f2c1cd}}
 @media (prefers-reduced-motion:no-preference){#fl-out stop:nth-child(1){animation:cf0 30s linear infinite}#fl-out stop:nth-child(2){animation:cf1 30s linear infinite}#fl-out stop:nth-child(3){animation:cf2 30s linear infinite}#fl-in stop:nth-child(1){animation:ci0 15s linear infinite}#fl-in stop:nth-child(2){animation:ci1 15s linear infinite}}
+/*as:nome*/
+.asmed{position:relative;display:inline-flex;flex-direction:column;align-items:center;gap:.1em;line-height:1;white-space:nowrap;font-size:17px;transform-origin:50% 60%}
+.brand .asmed{font-size:13px}.brand .word .asmed{font-size:17px}
+.asmed .t{font-family:Outfit,system-ui,sans-serif;font-weight:300;letter-spacing:.06em;font-style:normal;color:#ececec;text-shadow:0 1px 0 #2a2a2a,0 2px 3px rgba(0,0,0,.7)}
+.asmed .t b{font-weight:500}
+.asmed-r .t b{color:#a8a8a8}
+.asmed-p .t{color:#fff0f5}.asmed-p .t b{color:#ff8fb0}
+.asmed .qw{display:block;line-height:0}
+.asmed .xm-ecg{width:9.5em;height:1.82em;overflow:visible;display:block}
+.xm-base{opacity:.28}.xm-gl{opacity:.08}
+.xm-b{opacity:.45}
+.xm-sw{stroke-dasharray:14 200;stroke-dashoffset:14}
+@media (prefers-reduced-motion:no-preference){
+.xm-sw{animation:xm-sweep 2.4s linear infinite}
+.asmed,.xm-mini{animation:xm-sis 2.4s linear infinite;will-change:transform}
+.xm-gl{animation:xm-gl 2.4s linear infinite}.xm-b{animation:xm-bo 2.4s linear infinite}}
+@keyframes xm-sweep{to{stroke-dashoffset:-100}}
+@keyframes xm-sis{0%,39%{transform:scale(1)}43%{transform:scale(1.03)}49%,100%{transform:scale(1)}}
+@keyframes xm-gl{0%,39%{opacity:.08}43%{opacity:.55}55%,100%{opacity:.08}}
+@keyframes xm-bo{0%,39%{opacity:.45}43%{opacity:1}60%,100%{opacity:.45}}
+.xm-mini{width:30px;height:30px;padding:3px;border-radius:9px;background:#050505;border:1px solid #1e1e1e;box-sizing:border-box;flex:none}
+/*/as:nome*/
+/*as:visual*/
+:root{--bg:#000!important}
+.top{display:grid!important;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px}
+.top>.brand{grid-column:2;grid-row:1;justify-self:center}
+.top>:not(.brand):first-child{grid-column:1;grid-row:1;justify-self:start}
+.top>:not(.brand):last-child{grid-column:3;grid-row:1;justify-self:end;text-align:right}
+html{background:#000 linear-gradient(rgba(167,123,255,.06) 1px,transparent 1px) 0 0/40px 40px,#000 linear-gradient(90deg,rgba(167,123,255,.06) 1px,transparent 1px) 0 0/40px 40px!important;background-color:#000!important}html::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:-1;background:linear-gradient(rgba(255,93,143,.025) 1px,transparent 1px) 0 0/8px 8px,linear-gradient(90deg,rgba(255,93,143,.025) 1px,transparent 1px) 0 0/8px 8px}body{background:transparent!important}
+.xm-canto{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);left:max(10px,env(safe-area-inset-left,0px));z-index:9997;line-height:0}.xm-canto .xm-mini{width:36px;height:36px}
+/*/as:visual*/
+/*hj:css*/.tabs a[data-view="hoje"]{display:none!important}/*/hj:css*/
+/*tm:css*/
+html[data-tema=claro]{filter:invert(1) hue-rotate(180deg);background:#000}
+html[data-tema=claro] :is(img,video,picture,canvas,[style*="background-image"]){filter:invert(1) hue-rotate(180deg)}
+.tm-bt{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);right:max(10px,env(safe-area-inset-right,0px));z-index:9997;width:36px;height:36px;border-radius:50%;border:1px solid #2a2a2a;background:#0b0b0b;color:#bdbdbd;font:16px/1 Georgia,serif;display:grid;place-items:center;cursor:pointer;padding:0}
+.tag-top{margin-right:44px}
+/*/tm:css*/
 </style>
 <link data-as-fonte rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&family=Nabla&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap">
 </head>
@@ -586,44 +625,7 @@ function proxima(){const t=new Date();t.setHours(0,0,0,0);let best=null;
 function renderHoje(){
   // 28/10 21h: aba Hoje simplificada (pedido do Arthur): próxima prova em destaque e duas ações
   const el=document.getElementById("v-hoje"),now=new Date(),p=proxima();
-  let h=`<style>.hj-prova{display:flex;align-items:center;gap:16px;padding:18px 0 22px}.hj-n{font:400 64px/1 "Libre Caslon Display",Georgia,serif;color:var(--ink,#fff);min-width:1.1em;text-align:center}.hj-prova b{display:block;font-weight:400;font-size:21px;line-height:1.3}.hj-prova small{display:block;color:var(--muted,#999);font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-top:4px}.hj-acoes{display:grid;gap:12px}.hj-acoes .go{margin:0}/*as:nome*/
-.asmed{position:relative;display:inline-flex;flex-direction:column;align-items:center;gap:.1em;line-height:1;white-space:nowrap;font-size:17px;transform-origin:50% 60%}
-.brand .asmed{font-size:13px}.brand .word .asmed{font-size:17px}
-.asmed .t{font-family:Outfit,system-ui,sans-serif;font-weight:300;letter-spacing:.06em;font-style:normal;color:#ececec;text-shadow:0 1px 0 #2a2a2a,0 2px 3px rgba(0,0,0,.7)}
-.asmed .t b{font-weight:500}
-.asmed-r .t b{color:#a8a8a8}
-.asmed-p .t{color:#fff0f5}.asmed-p .t b{color:#ff8fb0}
-.asmed .qw{display:block;line-height:0}
-.asmed .xm-ecg{width:9.5em;height:1.82em;overflow:visible;display:block}
-.xm-base{opacity:.28}.xm-gl{opacity:.08}
-.xm-b{opacity:.45}
-.xm-sw{stroke-dasharray:14 200;stroke-dashoffset:14}
-@media (prefers-reduced-motion:no-preference){
-.xm-sw{animation:xm-sweep 2.4s linear infinite}
-.asmed,.xm-mini{animation:xm-sis 2.4s linear infinite;will-change:transform}
-.xm-gl{animation:xm-gl 2.4s linear infinite}.xm-b{animation:xm-bo 2.4s linear infinite}}
-@keyframes xm-sweep{to{stroke-dashoffset:-100}}
-@keyframes xm-sis{0%,39%{transform:scale(1)}43%{transform:scale(1.03)}49%,100%{transform:scale(1)}}
-@keyframes xm-gl{0%,39%{opacity:.08}43%{opacity:.55}55%,100%{opacity:.08}}
-@keyframes xm-bo{0%,39%{opacity:.45}43%{opacity:1}60%,100%{opacity:.45}}
-.xm-mini{width:30px;height:30px;padding:3px;border-radius:9px;background:#050505;border:1px solid #1e1e1e;box-sizing:border-box;flex:none}
-/*/as:nome*/
-/*as:visual*/
-:root{--bg:#000!important}
-.top{display:grid!important;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px}
-.top>.brand{grid-column:2;grid-row:1;justify-self:center}
-.top>:not(.brand):first-child{grid-column:1;grid-row:1;justify-self:start}
-.top>:not(.brand):last-child{grid-column:3;grid-row:1;justify-self:end;text-align:right}
-html{background:#000 linear-gradient(rgba(167,123,255,.06) 1px,transparent 1px) 0 0/40px 40px,#000 linear-gradient(90deg,rgba(167,123,255,.06) 1px,transparent 1px) 0 0/40px 40px!important;background-color:#000!important}html::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:-1;background:linear-gradient(rgba(255,93,143,.025) 1px,transparent 1px) 0 0/8px 8px,linear-gradient(90deg,rgba(255,93,143,.025) 1px,transparent 1px) 0 0/8px 8px}body{background:transparent!important}
-.xm-canto{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);left:max(10px,env(safe-area-inset-left,0px));z-index:9997;line-height:0}.xm-canto .xm-mini{width:36px;height:36px}
-/*/as:visual*/
-/*tm:css*/
-html[data-tema=claro]{filter:invert(1) hue-rotate(180deg);background:#000}
-html[data-tema=claro] :is(img,video,picture,canvas,[style*="background-image"]){filter:invert(1) hue-rotate(180deg)}
-.tm-bt{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);right:max(10px,env(safe-area-inset-right,0px));z-index:9997;width:36px;height:36px;border-radius:50%;border:1px solid #2a2a2a;background:#0b0b0b;color:#bdbdbd;font:16px/1 Georgia,serif;display:grid;place-items:center;cursor:pointer;padding:0}
-.tag-top{margin-right:44px}
-/*/tm:css*/
-</style>`;
+  let h=`<style>.hj-prova{display:flex;align-items:center;gap:16px;padding:18px 0 22px}.hj-n{font:400 64px/1 "Libre Caslon Display",Georgia,serif;color:var(--ink,#fff);min-width:1.1em;text-align:center}.hj-prova b{display:block;font-weight:400;font-size:21px;line-height:1.3}.hj-prova small{display:block;color:var(--muted,#999);font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-top:4px}.hj-acoes{display:grid;gap:12px}.hj-acoes .go{margin:0}</style>`;
   if(p){const n=Math.round((p.d-new Date(now.getFullYear(),now.getMonth(),now.getDate(),12))/864e5);
     h+=`<div class="hj-prova"><span class="hj-n">${n<=0?"Hoje":n}</span><span><b>${e_(p.nome)} · ${p.obs?e_(p.obs):p.av}</b><small>${n<=0?"a prova é hoje":(n===1?"dia":"dias")+" para a prova · "+br(p.d)}</small></span></div>`}
   else h+=`<div class="hj-prova"><span><b>Nenhuma prova marcada</b></span></div>`;
