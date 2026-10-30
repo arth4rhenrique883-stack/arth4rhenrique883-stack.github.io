@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="pt-BR" data-per="p9">
+<head>
+<script data-tema>try{if(localStorage.getItem("medas-tema")==="claro")document.documentElement.dataset.tema="claro"}catch(e){}</script>
+<script data-sem-hoje>(function(){function f(){if(!location.hash||location.hash==="#hoje")history.replaceState(null,"",location.pathname+location.search+"#apostilas")}f();addEventListener("hashchange",f,true)})();</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>xequemate med</title>
+<meta name="theme-color" content="#000000">
+<meta name="apple-mobile-web-app-title" content="xmp">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="rainha3-192.png">
+<link rel="apple-touch-icon" href="rainha3-180.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Archivo:wght@500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
+<style>
+/* Layout: app de uma tela, bem simples: o nome no centro do preto, o baralho, o resumo e o cartão. */
+/* xequemate med (28/10): preto predominante, branco, vermelho sutil e mínimos detalhes de azul; só a chama do nome muda de cor. */
+/* O Dr. Casa (avatar, falas e casos) continua no código, fora da tela: .casa[hidden]. Para trazê-lo de volta, tirar o hidden do <aside class="casa">. */
+:root{
+  --bg:#050505; --surface:#0b0b0b; --surface-2:#111111; --line:#1f1f1f; --line-2:#333333;
+  --fg:#ebebeb; --muted:#9c9c9c; --dim:#6b6b6b;
+  --red:#b02a30; --red-ink:#d0585e; --blue:#7f97bd;
+  --bad:#c2414a; --hard:#bdbdbd; --good:#7f97bd; --easy:#5aa883;
+  --brand:"Cormorant Garamond",Garamond,"Times New Roman",serif;
+  --display:"Archivo",ui-sans-serif,system-ui,sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{margin:0;color:var(--fg);font:17px/1.6 var(--body);-webkit-font-smoothing:antialiased;
+  background:var(--bg);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:14px 40px}
+button{font:inherit;color:inherit}
+a{color:var(--fg);text-decoration-color:#5a5a5a;text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.wrap{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
+
+/* barra */
+.bar{display:flex;justify-content:center;padding:clamp(28px,8vh,72px) 0 clamp(8px,3vh,24px)}
+.brand{display:flex;flex-direction:column;align-items:center;gap:10px;text-decoration:none;color:var(--fg)}
+.word{font:700 clamp(64px,16vw,104px)/.9 var(--brand);letter-spacing:.01em;display:inline-flex;align-items:flex-end;color:#f5f5f5}
+.flame{width:.36em;height:.5em;margin-left:.03em;margin-bottom:.04em;overflow:visible;flex:none}
+.app-name{font:500 11px/1.2 var(--mono);color:var(--muted);letter-spacing:.24em;text-transform:uppercase}
+
+/* chama: desenho animado, quente e macabra; a única coisa que muda de cor */
+.flame .tongue{transform-box:fill-box;transform-origin:50% 100%}
+.flame .all{transform-box:fill-box;transform-origin:50% 100%}
+@media (prefers-reduced-motion:no-preference){
+  .flame .hue{animation:hue 16s linear infinite}
+  .flame .eyes{animation:blink 5s steps(1) infinite}
+}
+@keyframes hue{0%{filter:hue-rotate(0deg) saturate(1.1)}22%{filter:hue-rotate(-28deg) saturate(1.3)}45%{filter:hue-rotate(-95deg) saturate(1.2)}68%{filter:hue-rotate(75deg) saturate(1.25)}84%{filter:hue-rotate(20deg) saturate(1.2)}100%{filter:hue-rotate(0deg) saturate(1.1)}}
+@keyframes flick{0%{transform:scale(1,1) skewX(0)}50%{transform:scale(.97,1.05) skewX(-2deg)}100%{transform:scale(1.03,.96) skewX(2deg)}}
+@keyframes lick{from{transform:rotate(-6deg) scaleY(.94)}to{transform:rotate(5deg) scaleY(1.08)}}
+@keyframes blink{0%,92%{opacity:1}93%,96%{opacity:0}97%{opacity:1}}
+@keyframes pulse{from{opacity:.45}to{opacity:.85}}
+
+/* painel */
+.deckbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.chip{display:inline-flex;align-items:center;gap:8px;font:500 13px var(--display);padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:transparent;cursor:pointer;color:var(--muted)}
+.chip:hover{color:var(--fg);border-color:var(--line-2)}
+.chip[aria-pressed="true"]{color:var(--fg);border-color:#4a4a4a;background:#141414}
+.chip .n{font:700 11px var(--mono);padding:1px 6px;border-radius:6px;background:var(--surface-2);color:var(--muted)}
+.chip[aria-pressed="true"] .n{color:var(--red-ink)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px 18px}
+.stat{display:flex;flex-direction:column;gap:2px;min-width:0}
+.stat b{font:600 24px/1.1 var(--display);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.stat span{font:400 13px/1.3 var(--body);color:var(--muted)}
+.stat.hot b{color:var(--red-ink)}
+
+.main{display:block}
+.casa[hidden]{display:none!important}
+
+/* cartão */
+.card{display:flex;flex-direction:column;gap:16px;min-height:340px}
+.meta{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font:500 12px var(--mono);color:var(--muted)}
+.tag{padding:2px 8px;border-radius:6px;border:1px solid var(--line-2);color:var(--fg)}
+.tag.new{border-color:#6a2226;color:var(--red-ink)}
+.meta .pos{margin-left:auto;font-variant-numeric:tabular-nums}
+.progress{height:4px;border-radius:4px;background:var(--line);overflow:hidden}
+.progress i{display:block;height:100%;width:0;background:var(--red);transition:width .3s}
+.q{font:600 clamp(21px,3.4vw,26px)/1.35 var(--body);letter-spacing:0;margin:6px 0 0;text-wrap:balance}
+.ans{border-top:1px dashed var(--line-2);padding-top:14px;display:flex;flex-direction:column;gap:10px}
+.ans p{margin:0;font:400 18px/1.65 var(--body)}
+.ans .lbl{font:700 11px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.ans .read{font:500 13px var(--display);color:var(--blue);text-decoration:none;display:inline-flex;gap:6px;align-items:center}
+.ans .read:hover{text-decoration:underline}
+.spacer{flex:1}
+.reveal{align-self:stretch;font:500 15px var(--display);letter-spacing:.02em;padding:14px 18px;border-radius:12px;border:1px solid var(--line-2);background:var(--surface-2);color:#fff;cursor:pointer}
+.reveal:hover{border-color:var(--red)}
+kbd{font:500 11px var(--mono);padding:1px 6px;border-radius:5px;border:1px solid currentColor;opacity:.7;margin-left:8px}
+.grades{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.grade{display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 6px;border-radius:12px;border:1px solid var(--line-2);background:var(--surface-2);cursor:pointer;min-width:0}
+.grade b{font:500 14px var(--display)}
+.grade small{font:500 11px var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.grade.g0{border-color:color-mix(in srgb,var(--bad) 60%,transparent)}.grade.g0 b{color:var(--bad)}
+.grade.g3{border-color:color-mix(in srgb,var(--hard) 50%,transparent)}.grade.g3 b{color:var(--hard)}
+.grade.g4{border-color:color-mix(in srgb,var(--good) 55%,transparent)}.grade.g4 b{color:var(--good)}
+.grade.g5{border-color:color-mix(in srgb,var(--easy) 55%,transparent)}.grade.g5 b{color:var(--easy)}
+.grade:hover{background:color-mix(in srgb,var(--surface-2) 70%,var(--line-2))}
+.done{display:flex;flex-direction:column;gap:14px}
+.done h2{font:600 clamp(24px,4vw,32px)/1.15 var(--display);letter-spacing:-.01em;margin:0;text-wrap:balance}
+.done .sum{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.done .sum div{border:1px solid var(--line-2);border-radius:12px;padding:10px 12px;display:flex;flex-direction:column}
+.done .sum b{font:600 22px var(--display);font-variant-numeric:tabular-nums}
+.done .sum span{font-size:12px;color:var(--muted)}
+.row{display:flex;flex-wrap:wrap;gap:8px}
+.ghost{font:500 14px var(--display);padding:10px 14px;border-radius:12px;border:1px solid var(--line-2);background:transparent;cursor:pointer}
+.ghost:hover{border-color:#5a5a5a}
+
+/* Dr. Casa */
+.casa{position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px);display:flex;flex-direction:column;gap:12px}
+.casa-top{display:flex;gap:12px;align-items:center}
+.avatar{width:96px;height:112px;flex:none}
+.who b{display:block;font:600 20px/1 var(--display);letter-spacing:-.02em}
+.who span{display:block;font:500 12px/1.35 var(--body);color:var(--muted);margin-top:4px}
+.bubble{position:relative;background:var(--surface-2);border:1px solid var(--line-2);border-radius:14px;padding:12px 14px;font:500 15px/1.55 var(--body);min-height:84px}
+.bubble::before{content:"";position:absolute;top:-7px;left:38px;width:12px;height:12px;background:var(--surface-2);border-left:1px solid var(--line-2);border-top:1px solid var(--line-2);transform:rotate(45deg)}
+.bubble.story{border-color:#6a2226}
+.bubble .case{display:block;font:700 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--red-ink);margin-bottom:4px}
+.casa .row .ghost{flex:1;font-size:13px;padding:8px 10px}
+@media (prefers-reduced-motion:no-preference){
+  .avatar .cane{transform-box:view-box;transform-origin:165px 236px}
+  .avatar.tap .cane{animation:tap .5s ease-in-out 2}
+  .avatar .lids{animation:blink 6s steps(1) infinite}
+  .avatar .brow-r{transform-box:fill-box;transform-origin:0 100%;transition:transform .25s}
+  .avatar.raise .brow-r{transform:translateY(-4px) rotate(-8deg)}
+  .avatar.smug .mouth{transform:translateY(-1px)}
+}
+@keyframes tap{0%,100%{transform:rotate(0)}50%{transform:rotate(-4deg)}}
+
+footer{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between;font-size:13px;color:var(--dim);border-top:1px solid var(--line);padding-top:12px}
+footer .linkbtn{background:none;border:0;padding:0;color:var(--muted);text-decoration:underline;cursor:pointer;font-size:13px}
+.confirm{display:inline-flex;gap:8px;align-items:center}
+.confirm button{font:500 12px var(--display);padding:5px 10px;border-radius:8px;border:1px solid var(--line-2);background:transparent;cursor:pointer}
+.confirm .danger{border-color:var(--bad);color:var(--bad)}
+
+@media (max-width:820px){
+  .casa{position:static;order:-1;gap:10px}
+  .avatar{width:64px;height:75px}
+  .who b{font-size:17px}
+  .bubble{min-height:0;font-size:14px}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:420px){
+  .card{min-height:0}
+  .grades{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .done .sum{grid-template-columns:minmax(0,1fr)}
+}
+/* tablet e toque: alvos maiores, sem dica de teclado */
+@media (min-width:700px){
+  .wrap{max-width:780px}
+  .q{font-size:clamp(24px,3.2vw,30px)}
+  .ans p{font-size:20px}
+}
+@media (min-width:600px) and (max-width:820px){.stats{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (pointer:coarse){
+  kbd{display:none}
+  .chip{padding:10px 14px;font-size:14px}
+  .reveal{padding:18px;font-size:17px}
+  .grade{padding:14px 6px}
+  .grade b{font-size:16px}
+  button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+}
+
+/* app único: abas */
+.tabs{display:flex;justify-content:center;gap:4px;border:1px solid var(--line);border-radius:999px;padding:4px;align-self:center;margin-top:-6px}
+.tabs a{font:500 14px var(--display);color:var(--muted);text-decoration:none;padding:8px 16px;border-radius:999px;letter-spacing:.02em}
+.tabs a[aria-current="page"]{color:#fff;background:#151515;box-shadow:inset 0 -2px 0 var(--red)}
+.view[hidden]{display:none!important}
+.view{display:flex;flex-direction:column;gap:18px}
+.vh{font:600 13px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:4px 0 0}
+.today .when{font:500 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.today h2{font:600 clamp(22px,3.6vw,28px)/1.3 var(--body);margin:6px 0 0;text-wrap:pretty}
+.today .area{font:500 14px var(--display);color:var(--fg)}
+.today .eixo{font:400 15px/1.6 var(--body);color:var(--muted);margin:0}
+.nums{display:flex;flex-wrap:wrap;gap:8px}
+.nums span{font:500 12px var(--mono);border:1px solid var(--line-2);border-radius:6px;padding:3px 8px}
+.go{display:flex;flex-direction:column;gap:4px;padding:16px 18px;border-radius:12px;border:1px solid var(--line-2);background:var(--surface-2);text-decoration:none;color:var(--fg)}
+.go b{font:500 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--red-ink)}
+.go span{font:500 16px/1.45 var(--display)}
+a.go:hover{border-color:var(--red)}
+.go.off{opacity:.7}
+.row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.week{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.week div{display:grid;grid-template-columns:68px minmax(0,1fr);gap:10px;padding:10px 0;border-bottom:1px solid var(--line);font:400 14px/1.45 var(--body)}
+.week div b{font:500 12px var(--mono);color:var(--muted);padding-top:2px}
+.week div.on b{color:var(--red-ink)}
+.start{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;font:400 13px var(--body);color:var(--muted)}
+.start input{font:500 13px var(--mono);color:var(--fg);background:var(--surface-2);border:1px solid var(--line-2);border-radius:8px;padding:6px 8px;color-scheme:dark}
+.blist{display:flex;flex-direction:column;gap:8px}
+.bitem{display:flex;flex-direction:column;gap:4px;padding:16px 18px;border:1px solid var(--line-2);border-radius:12px;text-decoration:none;color:var(--fg);background:var(--surface-2)}
+.bitem b{font:600 17px var(--display)}
+.bitem span{font:400 14px/1.45 var(--body);color:var(--muted)}
+.bitem:hover{border-color:var(--red)}
+.bwrap{display:flex;flex-direction:column;gap:0}
+.bwrap .bitem{border-bottom-left-radius:0;border-bottom-right-radius:0}
+.lida{font:500 13px var(--display);color:var(--muted);background:transparent;border:1px solid var(--line-2);border-top:0;border-radius:0 0 12px 12px;padding:10px 18px;text-align:left;cursor:pointer}
+.lida[aria-pressed="true"]{color:#5aa883;border-color:#2e5a45}
+.lida[aria-pressed="true"]::before{content:"✓ "}
+.soon{font:400 14px/1.5 var(--body);color:var(--dim);margin:0}
+.area{border-top:1px solid var(--line);padding-top:6px}
+.area summary{display:flex;justify-content:space-between;align-items:baseline;gap:12px;cursor:pointer;padding:10px 0;font:600 17px var(--display);list-style:none}
+.area summary::-webkit-details-marker{display:none}
+.area summary::before{content:"+";font:500 15px var(--mono);color:var(--muted);margin-right:-4px;width:14px}
+.area[open] summary::before{content:"−"}
+.area summary span{margin-left:auto;font:500 12px var(--mono);color:var(--muted);letter-spacing:.06em}
+.area .blist{padding-bottom:12px}
+.bitem.off{background:transparent;border-style:dashed}
+.bitem.off b{font-weight:500;color:var(--muted)}
+@media (pointer:coarse){.tabs a{padding:11px 18px;font-size:15px}}
+@media (max-width:420px){.row2{grid-template-columns:minmax(0,1fr)}.week div{grid-template-columns:56px minmax(0,1fr)}}
+/*mj:logo*/
+/* chama do xequemate med (28/10 17h15): preta, com contorno na cor da página, balançando devagar; olhos = sombras */
+.flame{color:#5c5c5c}
+.flame .sway{transform-box:fill-box;transform-origin:50% 100%}
+@media (prefers-reduced-motion:no-preference){.flame .sway{animation:mj-sway 7s ease-in-out infinite alternate}}
+@keyframes mj-sway{0%{transform:rotate(-2.5deg) scale(1,.98)}50%{transform:rotate(1deg) scale(.98,1.03)}100%{transform:rotate(2.5deg) scale(1.01,.99)}}
+/*/mj:logo*/
+/*hj:css*/.tabs a[data-view="hoje"]{display:none!important}/*/hj:css*/
+/*per:css*/
+.pers{display:flex;justify-content:center;flex-wrap:wrap;gap:5px;margin-top:-10px}
+.pers a{display:inline-flex;align-items:center;gap:7px;font:500 10.5px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:8px 10px;white-space:nowrap;border-radius:999px;border:1px solid var(--line)}
+.pers a::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
+.pers a[data-per="res"]{--c:#b02a30}.pers a[data-per="p6"]{--c:#c8174a}.pers a[data-per="p7"]{--c:#12a5b8}.pers a[data-per="p8"]{--c:#9446ff;}.pers a[data-per="p3"]{--c:#bf8118}.pers a[data-per="p4"]{--c:#18bf2e}.pers a[data-per="p5"]{--c:#1855bf}.pers a[data-per="p9"]{--c:#bf5518}.pers a[data-per="p10"]{--c:#bf1881}.pers a[data-per="p11"]{--c:#18bf95}.pers a[data-per="p12"]{--c:#bf9d18}
+.pers a[aria-current]{color:#fff;border-color:var(--c);background:color-mix(in srgb,var(--c) 14%,transparent)}
+@media (pointer:coarse){.pers a{padding:10px 10px}}
+@media (max-width:360px){.pers a{letter-spacing:.02em;padding:9px 8px}}
+/* a chama mescla de cor a cada 5 segundos (pedido de 28/10): seis cores em 30 s, sempre em transição */
+@media (prefers-reduced-motion:no-preference){.flame .hue{animation:hue5 30s linear infinite}}
+@keyframes hue5{0%{filter:hue-rotate(0deg) saturate(1.15)}16.66%{filter:hue-rotate(-40deg) saturate(1.35)}33.33%{filter:hue-rotate(-110deg) saturate(1.25)}50%{filter:hue-rotate(160deg) saturate(1.2)}66.66%{filter:hue-rotate(80deg) saturate(1.3)}83.33%{filter:hue-rotate(28deg) saturate(1.2)}100%{filter:hue-rotate(0deg) saturate(1.15)}}
+.flame{color:var(--red)}
+/*/per:css*/
+
+/* 28/10: fonte Caslon em tudo (escolha do Arthur); Cormorant fica só no nome medaj */
+:root{--display:"Libre Caslon Text",Georgia,serif;--body:"Newsreader",Georgia,serif;--mono:"Libre Caslon Text",Georgia,serif}
+.today h2,.q{font-family:"Libre Caslon Display","Libre Caslon Text",Georgia,serif;font-weight:400}
+/* período: cor oficial no lugar do vermelho, sobre preto e branco */
+:root{--bg:#030303;--surface:#0a0a0a;--surface-2:#101010;--line:#1b1b1b;--line-2:#2e2e2e;--red:#bf5518;--red-ink:#ffb88f;--red-deep:#522b14}
+.tag.new{border-color:var(--red-deep)}.bubble.story{border-color:var(--red-deep)}
+.tabs a[aria-current="page"]{background:#111;box-shadow:inset 0 -2px 0 var(--red)}
+.chip[aria-pressed="true"]{border-color:var(--red);background:#111}
+.disc{display:block;font:600 13px var(--display);color:var(--red-ink);margin:8px 0 6px;letter-spacing:.02em}
+.mat{border:1px solid var(--line-2);border-radius:12px;padding:0 16px;background:var(--surface)}
+.mat[open]{padding-bottom:12px}
+.mat summary{display:flex;align-items:center;gap:12px;padding:15px 0;cursor:pointer;list-style:none}
+.mat summary::-webkit-details-marker{display:none}
+.mat summary b{font:600 17px var(--display);flex:1}
+.mat summary span{font:500 12px var(--mono);color:var(--muted);white-space:nowrap}
+.mat summary::after{content:"›";font:400 22px/1 var(--display);color:var(--muted);transition:transform .2s}
+.mat[open] summary::after{transform:rotate(90deg)}
+#v-apostilas{gap:10px}
+.mat .soon{margin:0 0 6px}
+.avbar{justify-content:center}
+.espbar{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 12px}.espbar .chip{flex:1 1 auto;justify-content:center}
+.tag.pa{border-color:var(--red);color:var(--red-ink)}
+.bfoot{display:flex}.bfoot .lida{flex:1}.bfoot .refs{flex:none;border-left:1px solid var(--line-2);border-bottom-left-radius:0;text-decoration:none;color:var(--blue)}
+.bfoot .lida:first-child:not(:last-child){border-bottom-right-radius:0}
+.week div{grid-template-columns:minmax(0,1fr) auto;align-items:center}
+.week div b{font:500 14px var(--display);color:var(--fg);padding:0}
+.week .start{flex-wrap:nowrap}.week label{display:inline-flex;gap:6px;align-items:center;font:500 12px var(--mono);color:var(--muted)}
+@media (max-width:520px){.week div{grid-template-columns:minmax(0,1fr)}.week .start{flex-wrap:wrap}}
+/* chama: só as cores desta página, mudando a cada 5 s */
+.flame .hue{animation:none!important}
+#fl-out stop:nth-child(1){stop-color:#522b14}#fl-out stop:nth-child(2){stop-color:#7a401f}#fl-out stop:nth-child(3){stop-color:#934d25}
+#fl-in stop:nth-child(1){stop-color:#eaaa86}#fl-in stop:nth-child(2){stop-color:#f4d5c2}
+#fl-core stop{stop-color:#fff2eb}#fl-glow stop{stop-color:#834521}
+@keyframes cf0{0.00%{stop-color:#522b14}16.67%{stop-color:#7a401f}33.33%{stop-color:#934d25}50.00%{stop-color:#6a381b}66.67%{stop-color:#ab5a2b}83.33%{stop-color:#834521}100%{stop-color:#522b14}}
+@keyframes cf1{0.00%{stop-color:#934d25}16.67%{stop-color:#6a381b}33.33%{stop-color:#ab5a2b}50.00%{stop-color:#834521}66.67%{stop-color:#522b14}83.33%{stop-color:#7a401f}100%{stop-color:#934d25}}
+@keyframes cf2{0.00%{stop-color:#ab5a2b}16.67%{stop-color:#834521}33.33%{stop-color:#522b14}50.00%{stop-color:#7a401f}66.67%{stop-color:#934d25}83.33%{stop-color:#6a381b}100%{stop-color:#ab5a2b}}
+@keyframes ci0{0.00%{stop-color:#eaaa86}33.33%{stop-color:#f4d5c2}66.67%{stop-color:#f0c2a8}100%{stop-color:#eaaa86}}
+@keyframes ci1{0.00%{stop-color:#f4d5c2}33.33%{stop-color:#f0c2a8}66.67%{stop-color:#eaaa86}100%{stop-color:#f4d5c2}}
+@media (prefers-reduced-motion:no-preference){#fl-out stop:nth-child(1){animation:cf0 30s linear infinite}#fl-out stop:nth-child(2){animation:cf1 30s linear infinite}#fl-out stop:nth-child(3){animation:cf2 30s linear infinite}#fl-in stop:nth-child(1){animation:ci0 15s linear infinite}#fl-in stop:nth-child(2){animation:ci1 15s linear infinite}}
+/*as:nome*/
+.asmed{position:relative;display:inline-flex;flex-direction:column;align-items:center;gap:.1em;line-height:1;white-space:nowrap;font-size:17px;transform-origin:50% 60%}
+.brand .asmed{font-size:13px}.brand .word .asmed{font-size:17px}
+.asmed .t{font-family:Outfit,system-ui,sans-serif;font-weight:300;letter-spacing:.06em;font-style:normal;color:#ececec;text-shadow:0 1px 0 #2a2a2a,0 2px 3px rgba(0,0,0,.7)}
+.asmed .t b{font-weight:500}
+.asmed-r .t b{color:#a8a8a8}
+.asmed-p .t{color:#fff0f5}.asmed-p .t b{color:#ff8fb0}
+.asmed .qw{display:block;line-height:0}
+.asmed .xm-ecg{width:9.5em;height:1.82em;overflow:visible;display:block}
+.xm-base{opacity:.28}.xm-gl{opacity:.08}
+.xm-b{opacity:.45}
+.xm-sw{stroke-dasharray:14 200;stroke-dashoffset:14}
+@media (prefers-reduced-motion:no-preference){
+.xm-sw{animation:xm-sweep 2.4s linear infinite}
+.asmed,.xm-mini{animation:xm-sis 2.4s linear infinite;will-change:transform}
+.xm-gl{animation:xm-gl 2.4s linear infinite}.xm-b{animation:xm-bo 2.4s linear infinite}}
+@keyframes xm-sweep{to{stroke-dashoffset:-100}}
+@keyframes xm-sis{0%,39%{transform:scale(1)}43%{transform:scale(1.03)}49%,100%{transform:scale(1)}}
+@keyframes xm-gl{0%,39%{opacity:.08}43%{opacity:.55}55%,100%{opacity:.08}}
+@keyframes xm-bo{0%,39%{opacity:.45}43%{opacity:1}60%,100%{opacity:.45}}
+.xm-mini{width:30px;height:30px;padding:3px;border-radius:9px;background:#050505;border:1px solid #1e1e1e;box-sizing:border-box;flex:none}
+/*/as:nome*/
+/*as:visual*/
+/* 30/10: fonte "O Acadêmico Contemporâneo" em tudo (escolha do Arthur): Merriweather no corpo, Lato nos títulos, botões, abas e no nome */
+body,body *:not(svg):not(svg *){font-family:Merriweather,Georgia,serif!important}
+:is(h1,h2,h3,h4,h5,h6,nav,nav *,button,.tabs a,.chip,.tag,.tag-top,.back,.crumb,.app-name,label,summary,summary *,small,.k,.disc,.hj-n,.ini-bt,.gf-hd h2,.gf-ap,.gf-sec,.gf-sub,.gf-fab,.asmed .t,.asmed .t *,[class*="tit"],[class*="label"],.kicker,.eyebrow,.meta,.sem,.num,.n){font-family:Lato,system-ui,sans-serif!important}
+body{overflow-wrap:break-word}
+:root{--bg:#000!important}
+.top{display:grid!important;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:10px}
+.top>.brand{grid-column:2;grid-row:1;justify-self:center}
+.top>:not(.brand):first-child{grid-column:1;grid-row:1;justify-self:start}
+.top>:not(.brand):last-child{grid-column:3;grid-row:1;justify-self:end;text-align:right}
+html{background:#000 linear-gradient(rgba(167,123,255,.06) 1px,transparent 1px) 0 0/40px 40px,#000 linear-gradient(90deg,rgba(167,123,255,.06) 1px,transparent 1px) 0 0/40px 40px!important;background-color:#000!important}html::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:-1;background:linear-gradient(rgba(255,93,143,.025) 1px,transparent 1px) 0 0/8px 8px,linear-gradient(90deg,rgba(255,93,143,.025) 1px,transparent 1px) 0 0/8px 8px}body{background:transparent!important}
+.xm-canto{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);left:max(10px,env(safe-area-inset-left,0px));z-index:9997;line-height:0}.xm-canto .xm-mini{width:36px;height:36px}
+/*/as:visual*/
+/*tm:css*/
+html[data-tema=claro]{filter:invert(1) hue-rotate(180deg);background:#000}
+html[data-tema=claro] :is(img,video,picture,canvas,[style*="background-image"]){filter:invert(1) hue-rotate(180deg)}
+.tm-bt{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);right:max(10px,env(safe-area-inset-right,0px));z-index:9997;width:36px;height:36px;border-radius:50%;border:1px solid #2a2a2a;background:#0b0b0b;color:#bdbdbd;font:16px/1 Georgia,serif;display:grid;place-items:center;cursor:pointer;padding:0}
+.tag-top{margin-right:44px}
+/*/tm:css*/
+</style>
+<link data-as-fonte rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Nabla&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="fl-out" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff3b0a"/><stop offset=".55" stop-color="#ff6a00"/><stop offset="1" stop-color="#ff2d55"/></linearGradient>
+    <linearGradient id="fl-in" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ffd23f"/><stop offset="1" stop-color="#ff9a1f"/></linearGradient>
+    <radialGradient id="fl-core" cx=".5" cy=".6" r=".6"><stop offset="0" stop-color="#fff8d6"/><stop offset="1" stop-color="#ffe066"/></radialGradient>
+    <radialGradient id="fl-glow" cx=".5" cy=".7" r=".5"><stop offset="0" stop-color="#ff7a1a" stop-opacity=".9"/><stop offset="1" stop-color="#ff7a1a" stop-opacity="0"/></radialGradient>
+    <linearGradient id="av-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a1a1a"/><stop offset="1" stop-color="#2a0d10"/></linearGradient>
+  </defs>
+</svg>
+
+<div class="wrap">
+  <span class="xm-canto"><svg class="xm-mini" viewBox="70 0 100 46" aria-hidden="true"><defs><linearGradient id="xm-gm-p" x1="0" y1="0" x2="240" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff5d8f"/><stop offset="0.5" stop-color="#3fd6e6"/><stop offset="1" stop-color="#a77bff"/></linearGradient></defs><g fill="none" stroke="url(#xm-gm-p)" stroke-linejoin="round" stroke-linecap="round"><path class="xm-gl" d="M0 34H62L66 30H70L74 34H100L104 38L109 15L115 25L120 6L125 25L131 15L136 42L140 34H160L166 28H172L178 34H240" stroke-width="5"/><path class="xm-base" d="M0 34H62L66 30H70L74 34H100L104 38L109 15L115 25L120 6L125 25L131 15L136 42L140 34H160L166 28H172L178 34H240" stroke-width="1.4"/><path class="xm-sw" d="M0 34H62L66 30H70L74 34H100L104 38L109 15L115 25L120 6L125 25L131 15L136 42L140 34H160L166 28H172L178 34H240" pathLength="100" stroke-width="2"/><g class="xm-b" stroke-width="1.3"><circle cx="109" cy="12.4" r="2.3"/><circle cx="120" cy="3.4" r="2.3"/><circle cx="131" cy="12.4" r="2.3"/></g></g></svg></span>
+<header class="bar">
+    <div class="brand" aria-label="xequemate med">
+      <span class="word"><span class="asmed asmed-p xm" aria-label="xequemate med"><span class="t">xequemate <b>med</b></span><span class="qw"><svg class="xm-ecg" viewBox="0 0 240 46" aria-hidden="true"><defs><linearGradient id="xm-gt-p" x1="0" y1="0" x2="240" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff5d8f"/><stop offset="0.5" stop-color="#3fd6e6"/><stop offset="1" stop-color="#a77bff"/></linearGradient></defs><g fill="none" stroke="url(#xm-gt-p)" stroke-linejoin="round" stroke-linecap="round"><path class="xm-gl" d="M0 34H62L66 30H70L74 34H100L104 38L109 15L115 25L120 6L125 25L131 15L136 42L140 34H160L166 28H172L178 34H240" stroke-width="5"/><path class="xm-base" d="M0 34H62L66 30H70L74 34H100L104 38L109 15L115 25L120 6L125 25L131 15L136 42L140 34H160L166 28H172L178 34H240" stroke-width="1.4"/><path class="xm-sw" d="M0 34H62L66 30H70L74 34H100L104 38L109 15L115 25L120 6L125 25L131 15L136 42L140 34H160L166 28H172L178 34H240" pathLength="100" stroke-width="2"/><g class="xm-b" stroke-width="1.3"><circle cx="109" cy="12.4" r="2.3"/><circle cx="120" cy="3.4" r="2.3"/><circle cx="131" cy="12.4" r="2.3"/></g></g></svg></span></span></span>
+      <span class="app-name">9º período</span>
+    </div>
+  </header>
+  <!--per:nav--><nav class="pers" aria-label="Escolher o período"><a href="p3.html" data-per="p3">3º período</a><a href="p4.html" data-per="p4">4º período</a><a href="p5.html" data-per="p5">5º período</a><a href="p6.html" data-per="p6">6º período</a><a href="p7.html" data-per="p7">7º período</a><a href="p8.html" data-per="p8">8º período</a><a href="p9.html" data-per="p9">9º período</a><a href="p10.html" data-per="p10">10º período</a><a href="p11.html" data-per="p11">11º período</a><a href="p12.html" data-per="p12">12º período</a></nav><!--/per:nav-->
+
+  <nav class="tabs" aria-label="Seções do app">
+    <a href="#hoje" data-view="hoje">Hoje</a><a href="#apostilas" data-view="apostilas">Apostilas</a><a href="#cards" data-view="cards">Flashcards</a>
+  </nav>
+
+  <section class="view" id="v-hoje" aria-label="Hoje"></section>
+
+  <section class="view" id="v-apostilas" aria-label="Apostilas" hidden></section>
+
+  <div class="view" id="v-cards" hidden>
+  <nav class="deckbar" id="decks" aria-label="Escolher o baralho"></nav>
+  <section class="stats" aria-label="Resumo de hoje">
+    <div class="stat hot"><b id="s-due">0</b><span>para estudar hoje</span></div>
+    <div class="stat"><b id="s-new">0</b><span>cartões nunca vistos</span></div>
+    <div class="stat"><b id="s-acc">–</b><span>acerto hoje</span></div>
+    <div class="stat"><b id="s-streak">0</b><span>dias seguidos</span></div>
+  </section>
+
+  <div class="main">
+    <section class="card" id="card" aria-live="polite"></section>
+
+    <aside class="casa" aria-label="Dr. Casa" hidden>
+      <div class="casa-top">
+        <svg class="avatar" id="avatar" viewBox="0 0 200 234" role="img" aria-label="Dr. Casa, com a bengala marrom">
+          <circle cx="100" cy="112" r="96" fill="url(#av-bg)"/>
+          <circle cx="100" cy="112" r="96" fill="none" stroke="#ff7a1a" stroke-opacity=".55" stroke-width="2" stroke-dasharray="3 9"/>
+          <path d="M14 234 C20 192 52 172 100 168 C148 172 180 192 186 234 Z" fill="#141c45"/>
+          <path d="M79 172 L100 214 L121 172 Z" fill="#3b1d63"/>
+          <path d="M70 175 L100 214 L82 234 L60 234 C60 210 63 190 70 175 Z" fill="#0d1333"/>
+          <path d="M130 175 L100 214 L118 234 L140 234 C140 210 137 190 130 175 Z" fill="#0d1333"/>
+          <path d="M86 146 L114 146 L117 176 Q100 186 83 176 Z" fill="#c48a64"/>
+          <ellipse cx="61" cy="110" rx="7" ry="11" fill="#cf9570"/><ellipse cx="139" cy="110" rx="7" ry="11" fill="#cf9570"/>
+          <ellipse cx="100" cy="106" rx="39" ry="47" fill="#dba27c"/>
+          <path d="M63 116 C65 148 84 157 100 157 C116 157 135 148 137 116 C131 134 116 142 100 142 C84 142 69 134 63 116 Z" fill="#5c4637" opacity=".42"/>
+          <path d="M86 134 Q100 128 114 134 Q100 140 86 134 Z" fill="#5c4637" opacity=".45"/>
+          <path d="M61 98 C58 70 76 50 102 52 C127 53 145 70 141 98 C137 86 131 79 123 77 C121 85 112 83 106 75 C100 84 90 81 86 75 C80 82 70 85 61 98 Z" fill="#46424d"/>
+          <path d="M70 80 C78 70 88 66 96 66 M110 64 C120 66 130 72 134 82 M80 72 C86 68 92 66 98 67" stroke="#9a96a3" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M73 95 L92 98" stroke="#36323c" stroke-width="4.5" stroke-linecap="round"/>
+          <path class="brow-r" d="M108 97 L127 91" stroke="#36323c" stroke-width="4.5" stroke-linecap="round"/>
+          <path d="M74 109 Q83 104 92 109 Q83 113 74 109 Z" fill="#f4efe8"/><path d="M108 109 Q117 104 126 109 Q117 113 108 109 Z" fill="#f4efe8"/>
+          <circle cx="84" cy="109" r="3.1" fill="#4d6f99"/><circle cx="118" cy="109" r="3.1" fill="#4d6f99"/>
+          <circle cx="84" cy="109" r="1.2" fill="#111"/><circle cx="118" cy="109" r="1.2" fill="#111"/>
+          <g class="lids">
+            <path d="M73 108.5 Q83 101 93 108.5 L93 106 Q83 99 73 106 Z" fill="#c9906b"/>
+            <path d="M107 108.5 Q117 101 127 108.5 L127 106 Q117 99 107 106 Z" fill="#c9906b"/>
+          </g>
+          <path d="M73 108.5 Q83 102.5 93 108.5 M107 108.5 Q117 102.5 127 108.5" stroke="#3a2a22" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <path d="M76 116 Q83 119 90 116 M110 116 Q117 119 124 116" stroke="#b07a58" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+          <path d="M100 108 L95 126 Q100 130 106 126" stroke="#a46d4b" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path class="mouth" d="M87 139 Q100 142 115 134" stroke="#6e3a30" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+          <g class="cane">
+            <path d="M166 236 L160 126" stroke="#24130a" stroke-width="11" stroke-linecap="round"/>
+            <path d="M166 236 L160 126" stroke="#6b4220" stroke-width="7.5" stroke-linecap="round"/>
+            <path d="M164.6 220 L159.4 140" stroke="#8d5a2c" stroke-width="1.6" stroke-dasharray="9 7" stroke-linecap="round"/>
+            <ellipse cx="163.6" cy="196" rx="4.6" ry="2.6" fill="#3d2410" transform="rotate(-3 163.6 196)"/>
+            <ellipse cx="161.9" cy="164" rx="4.2" ry="2.3" fill="#3d2410" transform="rotate(-3 161.9 164)"/>
+            <path d="M160 128 C158 98 194 92 193 118 C192.6 127 186 131 181 126" stroke="#24130a" stroke-width="11" fill="none" stroke-linecap="round"/>
+            <path d="M160 128 C158 98 194 92 193 118 C192.6 127 186 131 181 126" stroke="#6b4220" stroke-width="7.5" fill="none" stroke-linecap="round"/>
+            <path d="M163 112 C166 101 184 98 188 110" stroke="#9a6534" stroke-width="2" fill="none" stroke-linecap="round" opacity=".8"/>
+            <path d="M164 228 L167 238" stroke="#2e1a0c" stroke-width="9" stroke-linecap="round"/>
+            <ellipse cx="160" cy="136" rx="11" ry="9" fill="#d29a74"/>
+            <path d="M151 133 Q160 128 169 133 M151 138 Q160 134 169 138" stroke="#a46d4b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </g>
+        </svg>
+        <div class="who"><b>Dr. Casa</b><span>Diagnosticista. Manca, acerta e não tem paciência para quem chuta.</span></div>
+      </div>
+      <p class="bubble" id="bubble"></p>
+      <div class="row">
+        <button class="ghost" id="b-case" type="button">Conte um caso</button>
+        <button class="ghost" id="b-hint" type="button">Me dá uma dica</button>
+      </div>
+    </aside>
+  </div>
+
+  </div>
+
+  <footer>
+    <span id="foot-info"></span>
+    <span id="sync">Progresso salvo neste aparelho.</span>
+    <span id="reset-slot"><button class="linkbtn" id="b-reset" type="button">Zerar meu progresso</button></span>
+  </footer>
+</div>
+
+<script>const PER={"id":"p9","site":"","aulas":[],"grade":[],"cards":[],"provas":[],"datas":{},"soon":"O 9º período ainda está vazio: as matérias entram aqui quando chegarem os slides."};</script>
+<script>
+const APOSTILA="bloco1.html";
+const CHAPTERS={};
+const FILE={"obs1": "bloco2.html"};
+const SECS={};
+/* Cartões das apostilas xequemate med Para acrescentar: [id único, capítulo, seção (âncora da apostila), pergunta, resposta]. */
+const CARDS=PER.cards;
+
+/* Falas do Dr. Casa */
+const SAY={
+ hello:["Sente. Vamos ver quanto da apostila sobreviveu dentro dessa cabeça.","Mais um candidato a residente. Já vi pior. Pouco, mas já vi.","Regra do meu plantão: você responde, eu julgo, e a apostila é a única que sempre tem razão."],
+ ask:["Leia o enunciado inteiro. Metade dos erros que eu vejo nasce de quem lê só até a vírgula.","Pense antes de virar. Virar cartão não é raciocínio clínico.","Na prova ninguém espera você lembrar o número da lei. Vai.","Fale a resposta em voz alta. Se soar ridículo, provavelmente está errado.","Esse aqui derruba metade da turma todo ano. Quero ver se você é da outra metade."],
+ reveal:["Agora seja honesto. Eu percebo quando alguém marca \"Bom\" por vaidade.","Compare palavra por palavra. A banca adora quem acerta a ideia e erra o detalhe.","Se você acertou só metade, você errou. Bem-vindo à medicina."],
+ g0:["Errado. Pelo menos você errou com convicção, o que é quase um talento.","Tive um estagiário que errava isso. Hoje ele é muito feliz vendendo plano de saúde.","Diagnóstico: lacuna de conteúdo, grave, porém tratável. Prescrição: reler a seção e me encarar de novo daqui a pouco.","Se a prova fosse oral, eu já teria pedido para você sair da sala. Com educação. Mais ou menos.","Esse cartão volta daqui a três. Vai voltar até você parar de errar ou eu parar de mancar. Aposto em você, por pouco.","Interessante. Você inventou uma resposta que nem a banca teria coragem de usar como distratora."],
+ g3:["Acertou sofrendo. Vale, mas eu vi a gota de suor.","Difícil? Era das mais fáceis do bloco. Mas você marcou com honestidade, e isso eu respeito.","Acertou no limite. No plantão, isso se chama sorte com carimbo."],
+ g4:["Certo. Não vou bater palma, senão você se acostuma mal.","Correto. Fiquei levemente impressionado. Levemente.","Bom. Volta em alguns dias, para eu ter certeza de que não foi sorte."],
+ g5:["Fácil, é? Vou lembrar disso quando ele voltar daqui a uma semana e você travar.","Arrogância é um sintoma. Neste caso, justificada.","Rápido e certo. Se continuar assim, vou ter que arrumar outro alvo."],
+ streak:["Três seguidas. Começo a suspeitar que você leu a apostila. Não conto para ninguém.","Sequência boa. Não se empolgue: o próximo cartão não sabe que você está inspirado."],
+ done:["Plantão encerrado. Você sobreviveu, e os pacientes imaginários também. Amanhã tem mais.","Acabou por hoje. Vá dormir: memória sem sono é igual a prontuário sem assinatura, não vale nada."],
+ doneBad:["Acabou. O placar não foi bonito, mas aqui o erro sai barato. Na prova ele sai caro. Releia as seções e volte amanhã."],
+ empty:["Nada para revisar hoje. Vá viver um pouco. Ou leia o próximo capítulo, que é mais útil.","Fila vazia. Até eu estou sem ter de quem reclamar. Que tédio."]
+};
+const CASES=[
+ "Caso de 2003. Um secretário de saúde jurou que o Conselho Municipal era \"só consultivo\". Mostrei a Lei 8.142: permanente e deliberativo. Ele mudou de cor três vezes. Nenhuma delas era saudável.",
+ "Num plantão de 2011, um colega escreveu a causa básica na primeira linha da Declaração de Óbito. A causa básica vai na última linha preenchida da Parte I. Hoje ele revisa declarações de óbito. Por castigo, claro.",
+ "Tive uma residente que dizia: \"o paciente era meu, eu assino\". Ele tinha caído da cama da enfermaria. Morte violenta é com o IML, mesmo dentro do hospital. Ela aprendeu no dia em que o delegado ligou.",
+ "Uma vez me pediram para comparar a mortalidade de uma cidade de aposentados com a de uma cidade universitária, sem padronizar. Recusei. Comparar coeficiente bruto entre populações diferentes é como comparar a febre de um bebê com a de um elefante.",
+ "Em 2021 eu vi a razão de mortalidade materna passar de cem por cem mil. Aquilo não era estatística, eram mulheres. É por isso que a banca cobra esse indicador: para você nunca esquecer o que ele mede.",
+ "Um gestor apresentou o aumento da prevalência como fracasso do programa. Era um remédio novo que fazia os pacientes viverem mais. Prevalência sobe quando a duração aumenta. Ele foi promovido mesmo assim. O mundo é injusto.",
+ "Um aluno jurou que \"equidade\" estava escrita no art. 7º da Lei 8.080. Pedi que ele achasse. Ele procura até hoje. O texto diz igualdade.",
+ "Conheci um prefeito que contava merenda escolar como gasto em saúde para fechar os 15%. A LC 141 não deixa. O Tribunal de Contas também não deixou.",
+ "Num surto de sarampo numa creche, a enfermeira me perguntou se 40 em 200 era prevalência. Era taxa de ataque: 20%. Dois anos depois ela passou na residência e me mandou um bolo. O bolo estava ruim, mas o gesto valeu.",
+ "Atendi um paciente que achava que o ambulatório de especialidades era porta de entrada do SUS. A culpa não era dele, era de quem ensinou. Porta de entrada é atenção primária, urgência, atenção psicossocial e serviço especial de acesso aberto.",
+ "Minha perna dói desde antes de você nascer. Mesmo assim chego ao plantão antes de quem tem as duas boas. Disciplina é isso: ir mesmo quando dói. Revise hoje.",
+ "Uma vez um interno me disse que o INAMPS acabou junto com a Lei 8.080. Acabou em 1993, pela Lei 8.689. Ele ainda me deve um café pela aposta. Juros de três décadas."
+];
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+
+/* Estado e repetição espaçada (SM-2 adaptado) */
+const DAY=86400000,NEW_PER_DAY=20,KEY="medaj-p9-cards-v1";
+const today=()=>{const d=new Date();return Math.floor((d-d.getTimezoneOffset()*60000)/DAY)};
+let S={cards:{},days:{},t:0};
+try{const raw=localStorage.getItem(KEY);if(raw)S=Object.assign(S,JSON.parse(raw))}catch(e){}
+const st=id=>S.cards[id]||{r:0,i:0,e:2.5,due:0,l:0,last:0,seen:0};
+function plan(c,q){
+  let {r,i,e,l}=c;
+  if(q===0) return {r:0,i:0,e:Math.max(1.3,e-.2),l:l+1,again:true};
+  const e2=Math.max(1.3,e+(.1-(5-q)*(.08+(5-q)*.02)));
+  let i2;
+  if(r===0) i2=q===5?4:1;
+  else if(r===1) i2=q===3?3:q===4?6:8;
+  else i2=Math.max(i+1,Math.round(i*(q===3?1.2:q===4?e2:e2*1.3)));
+  return {r:r+1,i:i2,e:e2,l};
+}
+const fmt=p=>p.again?"agora":p.i===1?"amanhã":p.i<14?p.i+" dias":p.i<60?Math.round(p.i/7)+" sem":Math.round(p.i/30)+" meses";
+
+let deck="all",queue=[],cur=null,shown=false,sess={n:0,ok:0,total:0,streak:0};
+const inDeck=c=>deck==="all"||c.ch===deck||c.av===deck;
+const isNew=c=>!S.cards[c.id];
+const newToday=()=>(S.days[today()]||{}).nw||0;
+function counts(filter){
+  const t=today(),list=CARDS.filter(filter);
+  const due=list.filter(c=>!isNew(c)&&st(c.id).due<=t).length;
+  const nw=list.filter(isNew).length;
+  return {due,nw,avail:due+Math.min(nw,Math.max(0,NEW_PER_DAY-newToday()))};
+}
+function build(){
+  const t=today(),list=CARDS.filter(inDeck);
+  const rev=list.filter(c=>!isNew(c)&&st(c.id).due<=t).sort((a,b)=>st(a.id).due-st(b.id).due);
+  const nw=list.filter(isNew).slice(0,Math.max(0,NEW_PER_DAY-newToday()));
+  queue=[];while(rev.length||nw.length){if(rev.length)queue.push(rev.shift());if(rev.length)queue.push(rev.shift());if(nw.length)queue.push(nw.shift())}
+  sess={n:0,ok:0,total:queue.length,streak:0};
+}
+
+/* Tela */
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+function say(text,story){const b=$("bubble");b.classList.toggle("story",!!story);b.innerHTML=story?`<span class="case">Caso do Dr. Casa</span>${esc(text)}`:esc(text)}
+function mood(m){const a=$("avatar");a.classList.remove("raise","smug","tap");void a.getBoundingClientRect();if(m)m.split(" ").forEach(x=>a.classList.add(x))}
+function renderDecks(){
+  const opts=[["all","Tudo"],...Object.entries(CHAPTERS)];
+  $("decks").innerHTML=opts.map(([k,l])=>{const c=counts(x=>k==="all"||x.ch===k||x.av===k);return `<button class="chip" type="button" data-deck="${k}" aria-pressed="${deck===k}">${esc(l)}<span class="n">${c.avail}</span></button>`}).join("");
+}
+function renderStats(){
+  const c=counts(inDeck),d=S.days[today()]||{n:0,ok:0};
+  $("s-due").textContent=queue.length+(cur?1:0);
+  $("s-new").textContent=c.nw;
+  $("s-acc").textContent=d.n?Math.round(100*d.ok/d.n)+"%":"–";
+  let s=0,t=today();if(!(S.days[t]&&S.days[t].n))t--;while(S.days[t]&&S.days[t].n){s++;t--}
+  $("s-streak").textContent=s;
+  $("foot-info").textContent=`${CARDS.length} cartões das apostilas do 9º período`;
+}
+function renderCard(){
+  const el=$("card");
+  if(!cur){
+    if(sess.total===0){
+      el.innerHTML=`<div class="done"><h2>Nada para hoje neste baralho</h2><p>Os cartões que você já estudou voltam na data certa. Cartões novos entram ${NEW_PER_DAY} por dia.</p><div class="row"><button class="ghost" type="button" data-act="ahead">Adiantar 10 cartões</button><a class="ghost" href="${APOSTILA}" style="text-decoration:none;color:inherit">Abrir as apostilas</a></div></div>`;
+      say(pick(SAY.empty));
+    }else{
+      const acc=sess.n?Math.round(100*sess.ok/sess.n):0,tm=counts(inDeck);
+      el.innerHTML=`<div class="done"><span class="meta">${esc(deck==="all"?"Tudo":CHAPTERS[deck])}</span><h2>Plantão encerrado</h2><div class="sum"><div><b>${sess.n}</b><span>respostas</span></div><div><b>${acc}%</b><span>de acerto</span></div><div><b>${tm.nw}</b><span>cartões novos ainda na fila</span></div></div><div class="row"><button class="ghost" type="button" data-act="ahead">Adiantar 10 cartões</button><a class="ghost" href="${APOSTILA}" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">Abrir as apostilas</a></div></div>`;
+      say(pick(acc>=70?SAY.done:SAY.doneBad));mood(acc>=70?"smug":"raise");
+    }
+    renderStats();return;
+  }
+  const s=st(cur.id),fresh=isNew(cur),pos=sess.total-queue.length;
+  const pct=sess.total?Math.round(100*(pos-1)/sess.total):0;
+  let html=`<div class="meta"><span class="tag">${esc(CHAPTERS[cur.ch])}</span>${fresh?'<span class="tag new">novo</span>':""}<span class="pos">${pos} de ${sess.total}</span></div><div class="progress"><i style="width:${pct}%"></i></div><p class="q">${esc(cur.q)}</p>`;
+  if(!shown){
+    html+=`<div class="spacer"></div><button class="reveal" type="button" data-act="reveal">Mostrar resposta<kbd>espaço</kbd></button>`;
+  }else{
+    const g=[[0,"Errei"],[3,"Difícil"],[4,"Bom"],[5,"Fácil"]];
+    html+=`<div class="ans"><span class="lbl">Resposta</span><p>${esc(cur.a)}</p><a class="read" href="${FILE[cur.ch]||APOSTILA}#${cur.sec}">Ler na apostila: ${esc(cur.w||"")} ↗</a></div><div class="spacer"></div><div class="grades">${g.map(([q,l],k)=>`<button class="grade g${q}" type="button" data-q="${q}"><b>${l}</b><small>${fmt(plan(s,q))} · ${k+1}</small></button>`).join("")}</div>`;
+  }
+  el.innerHTML=html;renderStats();
+}
+function next(){cur=queue.shift()||null;shown=false;renderCard();if(cur&&sess.n>0&&Math.random()<.5)say(pick(SAY.ask));}
+function grade(q){
+  if(!cur||!shown)return;
+  const p=plan(st(cur.id),q),t=today(),was=isNew(cur);
+  S.cards[cur.id]={r:p.r,i:p.i,e:+p.e.toFixed(2),due:p.again?t:t+p.i,l:p.l,last:Date.now(),seen:(st(cur.id).seen||0)+1};
+  const d=S.days[t]||(S.days[t]={n:0,ok:0,nw:0});d.n++;if(q>=3)d.ok++;if(was)d.nw=(d.nw||0)+1;
+  sess.n++;if(q>=3){sess.ok++;sess.streak++}else sess.streak=0;
+  if(p.again){queue.splice(Math.min(3,queue.length),0,cur);sess.total++}
+  if(sess.streak===3||sess.streak===7){say(pick(SAY.streak));mood("smug tap")}
+  else{say(pick(SAY["g"+q]));mood(q===0?"raise tap":q===5?"raise":"smug")}
+  save();next();renderDecks();
+}
+
+/* Salvar: aparelho sempre; conta (claude.ai) quando disponível */
+let remote=null,busy=Promise.resolve(),timer=null;
+function save(){
+  S.t=Date.now();
+  try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}
+  if(remote){clearTimeout(timer);timer=setTimeout(()=>{const body=JSON.parse(JSON.stringify(S));busy=busy.then(()=>remote.set(body)).catch(()=>{$("sync").textContent="Não deu para salvar na conta agora. O progresso ficou neste aparelho."})},800)}
+}
+function merge(o){
+  if(!o||!o.cards)return;
+  for(const [id,c] of Object.entries(o.cards)){const m=S.cards[id];if(!m||(c.last||0)>(m.last||0))S.cards[id]=c}
+  for(const [d,v] of Object.entries(o.days||{})){const m=S.days[d];if(!m||v.n>m.n)S.days[d]=v}
+}
+(async()=>{
+  try{
+    if(!window.claude||!window.claude.use)return;
+    const [db,user]=await Promise.all([claude.use("db"),claude.use("user")]);
+    if(!db||!user)return;
+    const uid=await user.id();if(!uid)return;
+    remote=db.doc("data/users/"+uid+"/drcasa");
+    const snap=await remote.get();
+    if(snap.exists){merge(snap.data());try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+    else if(Object.keys(S.cards).length)save();
+    $("sync").textContent="Progresso salvo na sua conta: aparece no celular e no computador.";
+    if(!cur||!shown){build();next()}
+    renderDecks();
+  }catch(e){}
+})();
+
+/* Eventos */
+document.addEventListener("click",e=>{
+  const b=e.target.closest("[data-deck],[data-act],[data-q]");if(!b)return;
+  if(b.dataset.deck){deck=b.dataset.deck;build();next();renderDecks();say(pick(SAY.hello));return}
+  if(b.dataset.act==="reveal"){shown=true;renderCard();say(pick(SAY.reveal));return}
+  if(b.dataset.act==="ahead"){const t=today();const pool=CARDS.filter(inDeck).filter(c=>!isNew(c)&&st(c.id).due>t).sort((a,b)=>st(a.id).due-st(b.id).due);const nw=CARDS.filter(inDeck).filter(isNew);queue=pool.concat(nw).slice(0,10);sess={n:0,ok:0,total:queue.length,streak:0};if(!queue.length){say("Não sobrou nada para adiantar. Você zerou o baralho. Vá ler o próximo capítulo.");return}next();say("Adiantando. Ambição é bom, desde que venha acompanhada de sono.");return}
+  if(b.dataset.q!==undefined)grade(+b.dataset.q);
+});
+$("b-case").addEventListener("click",()=>{say(pick(CASES),true);mood("tap")});
+$("b-hint").addEventListener("click",()=>{if(!cur){say("Dica: abra a apostila. É onde moram as respostas. Revolucionário, eu sei.");return}say(`Dica: está na seção "${cur.w}" do ${CHAPTERS[cur.ch]}. A resposta eu não dou. Sofrer um pouco também ensina.`);mood("raise")});
+document.addEventListener("keydown",e=>{
+  if(e.target.closest("input,textarea"))return;
+  if((e.key===" "||e.key==="Enter")&&cur&&!shown&&!e.target.closest("button,a")){e.preventDefault();shown=true;renderCard();say(pick(SAY.reveal));return}
+  if(shown&&["1","2","3","4"].includes(e.key)){grade([0,3,4,5][+e.key-1])}
+});
+$("b-reset").addEventListener("click",()=>{
+  const slot=$("reset-slot");
+  slot.innerHTML=`<span class="confirm">Apagar todo o progresso? <button class="danger" type="button" id="r-yes">Apagar</button><button type="button" id="r-no">Cancelar</button></span>`;
+  $("r-no").onclick=()=>location.reload();
+  $("r-yes").onclick=()=>{S={cards:{},days:{},t:Date.now()};save();location.reload()};
+});
+
+/* Tema: escuro por padrão */
+
+build();renderDecks();next();say(pick(SAY.hello));
+</script>
+
+<script>
+/* período: Hoje + Apostilas + Flashcards (gerado por build-periodos.py) */
+const e_=x=>String(x).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const DIAS=["dom","seg","ter","qua","qui","sex","sáb"],pad=n=>String(n).padStart(2,"0");
+const br=d=>DIAS[d.getDay()]+" "+pad(d.getDate())+"/"+pad(d.getMonth()+1);
+const LKEY="medaj-"+PER.id+"-lidas",DKEY="medaj-"+PER.id+"-provas";
+let LIDAS={},DATAS={};try{LIDAS=JSON.parse(localStorage.getItem(LKEY)||"{}")}catch(e){}
+DATAS=Object.assign({},PER.datas);   /* 28/10: datas de prova só pelo código (DATAS no gerador), sem campo no app */
+const site=u=>PER.site+"#"+u;
+/* link "Ler na apostila" de cada cartão: página certa do site do período */
+const _rc=renderCard;renderCard=function(){_rc();const a=document.querySelector("#card .ans .read");if(a&&cur){a.href=site(cur.sec);a.textContent="Ler na apostila: "+cur.w+" ↗"}
+  const m=document.querySelector("#card .meta .tag");if(m&&cur&&cur.pa)m.insertAdjacentHTML("afterend",'<span class="tag pa">Baseado em provas antigas</span>')};   /* 28/10: selo pedido por ele */
+function proxima(){const t=new Date();t.setHours(0,0,0,0);let best=null;
+  for(const [id,nome] of PER.provas)for(const av of ["A1","A2"]){const v=DATAS[id+"-"+av];const d=v&&new Date((Array.isArray(v)?v[0]:v)+"T12:00:00");
+    if(d&&d>=t&&(!best||d<best.d))best={d,id,nome,av,obs:Array.isArray(v)?v[1]:""}}return best}
+function renderHoje(){
+  // 28/10 21h: aba Hoje simplificada (pedido do Arthur): próxima prova em destaque e duas ações
+  const el=document.getElementById("v-hoje"),now=new Date(),p=proxima();
+  let h=`<style>.hj-prova{display:flex;align-items:center;gap:16px;padding:18px 0 22px}.hj-n{font:400 64px/1 "Libre Caslon Display",Georgia,serif;color:var(--ink,#fff);min-width:1.1em;text-align:center}.hj-prova b{display:block;font-weight:400;font-size:21px;line-height:1.3}.hj-prova small{display:block;color:var(--muted,#999);font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-top:4px}.hj-acoes{display:grid;gap:12px}.hj-acoes .go{margin:0}</style>`;
+  if(p){const n=Math.round((p.d-new Date(now.getFullYear(),now.getMonth(),now.getDate(),12))/864e5);
+    h+=`<div class="hj-prova"><span class="hj-n">${n<=0?"Hoje":n}</span><span><b>${e_(p.nome)} · ${p.obs?e_(p.obs):p.av}</b><small>${n<=0?"a prova é hoje":(n===1?"dia":"dias")+" para a prova · "+br(p.d)}</small></span></div>`}
+  else h+=`<div class="hj-prova"><span><b>Nenhuma prova marcada</b></span></div>`;
+  const nx=(p&&PER.aulas.find(a=>!LIDAS[a.id]&&a.pv===p.id&&a.av===p.av))||PER.aulas.find(a=>!LIDAS[a.id]);
+  const c=counts(()=>true);
+  h+=`<div class="hj-acoes">`+(!PER.aulas.length?`<div class="go off"><b>Apostilas</b><span>${e_(PER.soon)}</span></div>`:
+    nx?`<a class="go" href="${e_(site(nx.u))}"><b>Continuar leitura</b><span>${e_(nx.disc)} · ${e_(nx.t)}</span></a>`:`<div class="go off"><b>Apostilas</b><span>Todas lidas.</span></div>`)+
+    `<a class="go" href="#cards"><b>Flashcards</b><span>${c.avail} para revisar hoje</span></a></div>`;
+  el.innerHTML=h;
+}
+const AKEY="medaj-"+PER.id+"-av";let ABERTA={};
+document.addEventListener("toggle",ev=>{const d=ev.target;if(d.matches&&d.matches("details.mat"))ABERTA[d.dataset.mat]=d.open},true);
+let AV=(()=>{let v=null;try{v=localStorage.getItem(AKEY)}catch(e){}return v||(PER.aulas.some(a=>a.av==="A2")?"A2":"A1")})();
+function renderApostilas(){
+  const el=document.getElementById("v-apostilas");
+  if(!PER.grade.length){el.innerHTML=`<p class="soon">${e_(PER.soon)}</p>`;return}
+  let h=`<div class="deckbar avbar">${["A1","A2"].map(av=>`<button class="chip" type="button" data-av="${av}" aria-pressed="${AV===av}">${av}<span class="n">${PER.aulas.filter(a=>a.av===av).length}</span></button>`).join("")}</div>`;
+  const item=a=>`<div class="bwrap"><a class="bitem${a.pa?" pa":""}" href="${e_(site(a.u))}"><b>${e_(a.t)}</b>${a.s?`<span>${e_(a.s)}</span>`:""}</a><div class="bfoot"><button class="lida" type="button" data-lida="${e_(a.id)}" aria-pressed="false">Marcar como lida</button>${a.refs?`<a class="lida refs" href="${e_(site(a.refs))}">Artigos ↗</a>`:""}</div></div>`;
+  for(const [mat,subs] of PER.grade){
+    const n=PER.aulas.filter(a=>a.mat===mat&&a.av===AV).length,lid=PER.aulas.filter(a=>a.mat===mat&&a.av===AV&&LIDAS[a.id]).length;
+    h+=`<details class="mat"${ABERTA[mat]?" open":""} data-mat="${e_(mat)}"><summary><b>${e_(mat)}</b><span>${n?`${lid} de ${n} lidas`:"em breve"}</span></summary>`;
+    /* 28/10: matéria com especialidades = uma fileira de botões; mostra só a especialidade escolhida (pedido dele: mais simples) */
+    const nomes=subs.map(x=>x[0]).filter(Boolean),de=sub=>PER.aulas.filter(a=>a.mat===mat&&a.sub===sub&&a.av===AV);
+    if(nomes.length>1){let cur=ESP[mat];if(!nomes.includes(cur))cur=nomes.find(x=>de(x).length)||nomes[0];
+      h+=`<div class="espbar">${nomes.map(x=>`<button class="chip" type="button" data-esp="${e_(x)}" data-espmat="${e_(mat)}" aria-pressed="${x===cur}">${e_(x)}<span class="n">${de(x).length}</span></button>`).join("")}</div>`;
+      const L=de(cur);h+=L.length?`<div class="blist">${L.map(item).join("")}</div>`:`<p class="soon">${e_(cur)} da ${AV}: em breve.</p>`}
+    else for(const [sub] of subs){const L=de(sub);
+      if(sub)h+=`<span class="disc">${e_(sub)}</span>`;
+      h+=L.length?`<div class="blist">${L.map(item).join("")}</div>`:`<p class="soon">Em breve</p>`}
+    h+=`</details>`}
+  el.innerHTML=h;renderLidas();
+}
+const EKEY="medaj-"+PER.id+"-esp";let ESP={};try{ESP=JSON.parse(localStorage.getItem(EKEY)||"{}")}catch(e){}
+document.addEventListener("click",ev=>{const b=ev.target.closest("[data-esp]");if(!b)return;ESP[b.dataset.espmat]=b.dataset.esp;try{localStorage.setItem(EKEY,JSON.stringify(ESP))}catch(e){}renderApostilas()});
+document.addEventListener("click",ev=>{const b=ev.target.closest("[data-av]");if(!b)return;AV=b.dataset.av;try{localStorage.setItem(AKEY,AV)}catch(e){}renderApostilas()});
+function renderLidas(){document.querySelectorAll("[data-lida]").forEach(b=>{const on=!!LIDAS[b.dataset.lida];b.setAttribute("aria-pressed",on);b.textContent=on?"Lida":"Marcar como lida"})}
+document.addEventListener("click",ev=>{const b=ev.target.closest("[data-lida]");if(!b)return;const k=b.dataset.lida;if(LIDAS[k])delete LIDAS[k];else LIDAS[k]=Date.now();try{localStorage.setItem(LKEY,JSON.stringify(LIDAS))}catch(e){}renderLidas()});
+renderApostilas();
+function view(){
+  let h=location.hash.slice(1)||"hoje",v=h.startsWith("cards")?"cards":h;
+  if(!["hoje","apostilas","cards"].includes(v))v="hoje";
+  document.querySelectorAll(".view").forEach(x=>x.hidden=x.id!=="v-"+v);
+  document.querySelectorAll(".tabs a").forEach(a=>{if(a.dataset.view===v)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
+  if(v==="hoje")renderHoje();
+  if(v==="cards"){const d=h.slice(6);const b=document.querySelector(`[data-deck="${d||"all"}"]`);if(b&&b.getAttribute("aria-pressed")!=="true")b.click()}
+  window.scrollTo(0,0);
+}
+addEventListener("hashchange",view);view();
+if("serviceWorker" in navigator)addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
+</script>
+<script>/*per:js*/(function(){var me=(document.documentElement.dataset.per||"").replace("ini","");document.querySelectorAll(".pers a").forEach(function(a){if(a.dataset.per===me)a.setAttribute("aria-current","page")});
+document.addEventListener("click",function(e){var a=e.target.closest(".pers a");if(a)try{localStorage.setItem("medaj-per",a.dataset.per)}catch(_){}});
+if(me)try{localStorage.setItem("medaj-per",me)}catch(_){}})();/*/per:js*/</script>
+<script data-tema-bt>(function(){const b=document.createElement("button");b.type="button";b.className="tm-bt";
+const p=()=>{const c=document.documentElement.dataset.tema==="claro";b.textContent=c?"\u263E":"\u2600";b.setAttribute("aria-label",c?"Tema escuro":"Tema claro")};
+b.onclick=()=>{const c=document.documentElement.dataset.tema!=="claro";if(c)document.documentElement.dataset.tema="claro";else delete document.documentElement.dataset.tema;try{localStorage.setItem("medas-tema",c?"claro":"escuro")}catch(e){}p()};
+p();document.body.appendChild(b)})();</script>
+</body>
+</html>

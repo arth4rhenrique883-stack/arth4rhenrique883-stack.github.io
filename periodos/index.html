@@ -3,7 +3,7 @@
 <head>
 <script data-tema>try{if(localStorage.getItem("medas-tema")==="claro")document.documentElement.dataset.tema="claro"}catch(e){}</script>
 <meta charset="utf-8">
-<script type="text/plain" data-guardado>try{var _p=localStorage.getItem("medaj-per");if(/^p[678]$/.test(_p))location.replace(_p+".html")}catch(e){}</script>
+<script type="text/plain" data-guardado>try{var _p=localStorage.getItem("medaj-per");if(/^p(?:[3-9]|1[0-2])$/.test(_p))location.replace(_p+".html")}catch(e){}</script>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>xequemate med</title>
 <meta name="theme-color" content="#000000">
@@ -228,7 +228,7 @@ a.go:hover{border-color:var(--red)}
 .pers{display:flex;justify-content:center;flex-wrap:wrap;gap:5px;margin-top:-10px}
 .pers a{display:inline-flex;align-items:center;gap:7px;font:500 10.5px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:8px 10px;white-space:nowrap;border-radius:999px;border:1px solid var(--line)}
 .pers a::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
-.pers a[data-per="res"]{--c:#b02a30}.pers a[data-per="p6"]{--c:#c8174a}.pers a[data-per="p7"]{--c:#12a5b8}.pers a[data-per="p8"]{--c:#9446ff;}
+.pers a[data-per="res"]{--c:#b02a30}.pers a[data-per="p6"]{--c:#c8174a}.pers a[data-per="p7"]{--c:#12a5b8}.pers a[data-per="p8"]{--c:#9446ff;}.pers a[data-per="p3"]{--c:#bf8118}.pers a[data-per="p4"]{--c:#18bf2e}.pers a[data-per="p5"]{--c:#1855bf}.pers a[data-per="p9"]{--c:#bf5518}.pers a[data-per="p10"]{--c:#bf1881}.pers a[data-per="p11"]{--c:#18bf95}.pers a[data-per="p12"]{--c:#bf9d18}
 .pers a[aria-current]{color:#fff;border-color:var(--c);background:color-mix(in srgb,var(--c) 14%,transparent)}
 @media (pointer:coarse){.pers a{padding:10px 10px}}
 @media (max-width:360px){.pers a{letter-spacing:.02em;padding:9px 8px}}
@@ -282,7 +282,6 @@ body{overflow-wrap:break-word}
 .top>:not(.brand):last-child{grid-column:3;grid-row:1;justify-self:end;text-align:right}
 html{background:#000 linear-gradient(rgba(167,123,255,.06) 1px,transparent 1px) 0 0/40px 40px,#000 linear-gradient(90deg,rgba(167,123,255,.06) 1px,transparent 1px) 0 0/40px 40px!important;background-color:#000!important}html::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:-1;background:linear-gradient(rgba(255,93,143,.025) 1px,transparent 1px) 0 0/8px 8px,linear-gradient(90deg,rgba(255,93,143,.025) 1px,transparent 1px) 0 0/8px 8px}body{background:transparent!important}
 .xm-canto{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);left:max(10px,env(safe-area-inset-left,0px));z-index:9997;line-height:0}.xm-canto .xm-mini{width:36px;height:36px}
-:root{--display:"Libre Caslon Text",Georgia,serif;--body:"Newsreader",Georgia,serif;--mono:"Libre Caslon Text",Georgia,serif}
 /*/as:visual*/
 /*ini:css*/body:not(.ini) .pers,body:not(.ini) .soon{display:none}body.ini .ini-bt{display:none}.ini-bt{display:block;margin:34px auto 0;font:400 18px "Libre Caslon Text",Georgia,serif;letter-spacing:.14em;text-transform:uppercase;color:#f2f2f2;background:#0b0b0b;border:1px solid #3a3a3a;border-radius:999px;padding:14px 40px;cursor:pointer}/*/ini:css*/
 /*tm:css*/
@@ -315,7 +314,7 @@ html[data-tema=claro] :is(img,video,picture,canvas,[style*="background-image"]){
     </div>
   </header>
   <button type="button" class="ini-bt" onclick="document.body.classList.add('ini')">Iniciar</button>
-<!--per:nav--><nav class="pers" aria-label="Escolher o período"><a href="p6.html" data-per="p6">6º período</a><a href="p7.html" data-per="p7">7º período</a><a href="p8.html" data-per="p8">8º período</a></nav><!--/per:nav-->
+<!--per:nav--><nav class="pers" aria-label="Escolher o período"><a href="p3.html" data-per="p3">3º período</a><a href="p4.html" data-per="p4">4º período</a><a href="p5.html" data-per="p5">5º período</a><a href="p6.html" data-per="p6">6º período</a><a href="p7.html" data-per="p7">7º período</a><a href="p8.html" data-per="p8">8º período</a><a href="p9.html" data-per="p9">9º período</a><a href="p10.html" data-per="p10">10º período</a><a href="p11.html" data-per="p11">11º período</a><a href="p12.html" data-per="p12">12º período</a></nav><!--/per:nav-->
 
   <p class="soon" style="text-align:center">Escolha o período. O app guarda a escolha neste aparelho e abre direto nele.</p>
 </div>
