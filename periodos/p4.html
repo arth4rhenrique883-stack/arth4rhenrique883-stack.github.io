@@ -700,7 +700,7 @@ const p=()=>{const c=document.documentElement.dataset.tema==="claro";b.textConte
 b.onclick=()=>{const c=document.documentElement.dataset.tema!=="claro";if(c)document.documentElement.dataset.tema="claro";else delete document.documentElement.dataset.tema;try{localStorage.setItem("medas-tema",c?"claro":"escuro")}catch(e){}p()};
 p();document.body.appendChild(b)})();</script>
 <script data-nuvem>(function(){
-var C={"url": "", "anon": ""},ON=!!(C.url&&C.anon),LS=localStorage,K_S="nuvem-sessao",K_T="nuvem-tempos";
+var C={"url": "https://phzcjcduvfrizcgfosxu.supabase.co", "anon": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBoemNqY2R1dmZyaXpjZ2Zvc3h1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTMzOTcxNzcsImV4cCI6MjEwODk3MzE3N30.Ig3K34fh1PkC4GiGRrsHKLrzuryQ6zsnmxTTYSMw5Dk"},ON=!!(C.url&&C.anon),LS=localStorage,K_S="nuvem-sessao",K_T="nuvem-tempos";
 function ls(k,v){try{if(v===undefined)return LS.getItem(k);LS.setItem(k,v)}catch(e){return null}}
 var sinc=function(k){return /^(medaj|medas-tema)/.test(k)};
 var T={};try{T=JSON.parse(ls(K_T)||"{}")}catch(e){}
