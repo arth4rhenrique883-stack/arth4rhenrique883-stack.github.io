@@ -299,8 +299,12 @@ a.btn{color:#cfcfcf;border-color:#2a2a2a}a.btn:hover{border-color:#8c8c8c}
 .xm-mini{width:30px;height:30px;padding:3px;border-radius:9px;background:#050505;border:1px solid #1e1e1e;box-sizing:border-box;flex:none}
 /*/as:nome*/
 /*as:visual*/
+/* 30/10: fonte "O Acadêmico Contemporâneo" em tudo (escolha do Arthur): Merriweather no corpo, Lato nos títulos, botões, abas e no nome */
+body,body *:not(svg):not(svg *){font-family:Merriweather,Georgia,serif!important}
+:is(h1,h2,h3,h4,h5,h6,nav,nav *,button,.tabs a,.chip,.tag,.tag-top,.back,.crumb,.app-name,label,summary,summary *,small,.k,.disc,.hj-n,.ini-bt,.gf-hd h2,.gf-ap,.gf-sec,.gf-sub,.gf-fab,.asmed .t,.asmed .t *,[class*="tit"],[class*="label"],.kicker,.eyebrow,.meta,.sem,.num,.n){font-family:Lato,system-ui,sans-serif!important}
+body{overflow-wrap:break-word}
 :root{--bg:#000!important}
-.top{display:grid!important;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px}
+.top{display:grid!important;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:10px}
 .top>.brand{grid-column:2;grid-row:1;justify-self:center}
 .top>:not(.brand):first-child{grid-column:1;grid-row:1;justify-self:start}
 .top>:not(.brand):last-child{grid-column:3;grid-row:1;justify-self:end;text-align:right}
@@ -315,7 +319,7 @@ html[data-tema=claro] :is(img,video,picture,canvas,[style*="background-image"]){
 .tag-top{margin-right:44px}
 /*/tm:css*/
 </style>
-<link data-as-fonte rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&family=Nabla&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap">
+<link data-as-fonte rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Nabla&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap">
 </head>
 <body>
 

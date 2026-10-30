@@ -32,8 +32,12 @@
 .xm-mini{width:30px;height:30px;padding:3px;border-radius:9px;background:#050505;border:1px solid #1e1e1e;box-sizing:border-box;flex:none}
 /*/as:nome*/
 /*as:visual*/
+/* 30/10: fonte "O Acadêmico Contemporâneo" em tudo (escolha do Arthur): Merriweather no corpo, Lato nos títulos, botões, abas e no nome */
+body,body *:not(svg):not(svg *){font-family:Merriweather,Georgia,serif!important}
+:is(h1,h2,h3,h4,h5,h6,nav,nav *,button,.tabs a,.chip,.tag,.tag-top,.back,.crumb,.app-name,label,summary,summary *,small,.k,.disc,.hj-n,.ini-bt,.gf-hd h2,.gf-ap,.gf-sec,.gf-sub,.gf-fab,.asmed .t,.asmed .t *,[class*="tit"],[class*="label"],.kicker,.eyebrow,.meta,.sem,.num,.n){font-family:Lato,system-ui,sans-serif!important}
+body{overflow-wrap:break-word}
 :root{--bg:#000!important}
-.top{display:grid!important;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px}
+.top{display:grid!important;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:10px}
 .top>.brand{grid-column:2;grid-row:1;justify-self:center}
 .top>:not(.brand):first-child{grid-column:1;grid-row:1;justify-self:start}
 .top>:not(.brand):last-child{grid-column:3;grid-row:1;justify-self:end;text-align:right}
@@ -71,9 +75,23 @@ mark.gf{background:color-mix(in srgb,var(--red,#ffffff) 30%,transparent);color:i
 .gf-it a{flex:1;display:block;color:#e6e6e6;text-decoration:none;font:400 17px/1.55 Newsreader,Georgia,serif;border-left:2px solid color-mix(in srgb,var(--red,#ffffff) 70%,transparent);padding:2px 0 2px 12px}
 .gf-it button{background:none;border:0;color:#555;font-size:18px;cursor:pointer;padding:2px 6px}
 .gf-vz{color:#777;font:400 16px Newsreader,Georgia,serif}
+/* 30/10: cores (amarelo importante, vermelho cai na prova, azul não entendi), nota no trecho, filtro e copiar */
+mark.gf.gf-y,:root:not([data-per]) mark.gf.gf-y{background:rgba(255,214,10,.28);border-bottom-color:rgba(255,214,10,.85)}
+mark.gf.gf-r,:root:not([data-per]) mark.gf.gf-r{background:rgba(255,69,58,.26);border-bottom-color:rgba(255,69,58,.9)}
+mark.gf.gf-b,:root:not([data-per]) mark.gf.gf-b{background:rgba(64,156,255,.26);border-bottom-color:rgba(64,156,255,.9)}
+mark.gf[data-nota]::after{content:"✎";font-size:.7em;vertical-align:super;margin-left:1px;opacity:.8}
+.gf-bar button.gf-c{display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:14px;font-size:12px;text-align:left}
+.gf-bar i.gf-dot{width:14px;height:14px;border-radius:50%;display:inline-block;flex:none}
+.gf-dot.y{background:#ffd60a}.gf-dot.r{background:#ff453a}.gf-dot.b{background:#409cff}
+.gf-bar textarea{width:min(260px,70vw);min-height:80px;background:#0b0b0b;color:#eee;border:1px solid #3a3a3a;border-radius:12px;padding:10px;font:400 15px/1.4 Newsreader,Georgia,serif}
+.gf-fil{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 6px}
+.gf-fil button{display:flex;align-items:center;gap:6px;background:none;border:1px solid #333;color:#ccc;border-radius:999px;padding:5px 12px;font:inherit;font-size:13px;cursor:pointer}
+.gf-fil button[aria-pressed=true]{border-color:#eee;color:#fff}
+.gf-it a.y{border-left-color:#ffd60a}.gf-it a.r{border-left-color:#ff453a}.gf-it a.b{border-left-color:#409cff}
+.gf-it a small{display:block;color:#9a9a9a;font-size:14px;margin-top:4px;font-style:italic}
 /*/gf:css*/
 </style>
-<link data-as-fonte rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&family=Nabla&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap">
+<link data-as-fonte rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Nabla&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap">
 </head>
 <body>
 <title>xequemate med · Preventiva</title>
@@ -977,6 +995,8 @@ p();document.body.appendChild(b)})();</script>
 (function(){
 const KEY="medasr-grifos",SPA=false,BLK="p,li,td,th,h2,h3,h4,blockquote,dd,dt,figcaption";
 let G=[];try{G=JSON.parse(localStorage.getItem(KEY)||"[]")}catch(e){}
+const CORES=[["y","Importante"],["r","Cai na prova"],["b","Não entendi"]],CN={y:"Importante",r:"Cai na prova",b:"Não entendi"};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(G))}catch(e){}fab()};
 const root=()=>document.querySelector("main")||document.body;
 const pagina=()=>SPA?((document.querySelector("#app h1")||{}).textContent||location.hash).trim():(location.pathname.split("/").pop()||"index.html");
@@ -986,13 +1006,14 @@ function titulo(b){const a=b.closest("article[id]");const h=(a&&a.querySelector(
 function envolver(b,t,id,k){k=k||0;const w=document.createTreeWalker(b,NodeFilter.SHOW_TEXT);let s="",ns=[];while(w.nextNode()){if(w.currentNode.parentElement.closest("mark.gf"))continue;ns.push([w.currentNode,s.length]);s+=w.currentNode.nodeValue}
   let i=s.indexOf(t);for(let q=0;q<k&&i>=0;q++)i=s.indexOf(t,i+1);if(i<0)i=s.indexOf(t);if(i<0)return false;const j=i+t.length,r=document.createRange();
   for(const [n,o] of ns){const L=n.nodeValue.length;if(i>=o&&i<=o+L&&!r._s){r.setStart(n,i-o);r._s=1}if(j>=o&&j<=o+L){r.setEnd(n,j-o);break}}
-  const m=document.createElement("mark");m.className="gf";m.dataset.gf=id;try{m.appendChild(r.extractContents());r.insertNode(m)}catch(e){return false}return true}
+  const m=document.createElement("mark");m.className="gf";m.dataset.gf=id;try{m.appendChild(r.extractContents());r.insertNode(m)}catch(e){return false}pinta(m);return true}
+function pinta(m){const g=G.find(x=>x.id===m.dataset.gf);if(!g)return;m.classList.remove("gf-y","gf-r","gf-b");m.classList.add("gf-"+(g.c||"y"));if(g.n)m.dataset.nota=1;else delete m.dataset.nota;m.title=g.n||""}
 function aplicar(){const pg=pagina();G.filter(g=>g.pg===pg&&!document.querySelector(`mark.gf[data-gf="${g.id}"]`)).forEach(g=>{
   const c=(g.an&&document.getElementById(g.an))||root(),bs=[...c.querySelectorAll(BLK)];const b=bs[g.bi];
   if(!(b&&envolver(b,g.t,g.id,g.k)))bs.some(x=>x.textContent.includes(g.t)&&envolver(x,g.t,g.id))});
   const go=sessionStorage.getItem("gf-go");if(go){const m=document.querySelector(`mark.gf[data-gf="${go}"]`);if(m){sessionStorage.removeItem("gf-go");const a=m.closest("article[hidden]");if(a)a.hidden=false;setTimeout(()=>m.scrollIntoView({block:"center"}),60)}}}
 const bar=document.createElement("div");bar.className="gf-bar";document.body.appendChild(bar);
-["pointerdown","mousedown","touchstart"].forEach(t=>bar.addEventListener(t,e=>{if(e.cancelable&&t!=="touchstart")e.preventDefault()},{passive:false}));
+["pointerdown","mousedown","touchstart"].forEach(t=>bar.addEventListener(t,e=>{if(e.target.closest("textarea"))return;if(e.cancelable&&t!=="touchstart")e.preventDefault()},{passive:false}));
 const fb=document.createElement("button");fb.className="gf-fab";fb.type="button";document.body.appendChild(fb);
 function fab(){fb.textContent="Destaques · "+G.length;fb.hidden=false}
 let alvo=null;
@@ -1001,7 +1022,7 @@ function esconder(){bar.classList.remove("on");alvo=null}
 document.addEventListener("selectionchange",()=>{const s=getSelection();if(!s||s.isCollapsed||!s.toString().trim()){if(alvo&&alvo.sel){clearTimeout(esconder._t);esconder._t=setTimeout(esconder,350)}return}
   const r=s.getRangeAt(0),a=r.startContainer.parentElement,b=a&&a.closest(BLK),e=r.endContainer.parentElement&&r.endContainer.parentElement.closest(BLK);
   if(!b||b!==e||b.closest("nav,header,button,.gf-pan,.gf-bar")||!root().contains(b)){if(alvo&&alvo.sel)esconder();return}
-  clearTimeout(esconder._t);alvo={sel:1,b,r:r.cloneRange()};mostrar('<button class="gf-pri" type="button" data-gf-a="grifar" aria-label="Destacar"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15.5 3.5l5 5-8.5 8.5H7v-5z" fill="#ffe14d" stroke="#000" stroke-width="1.4" stroke-linejoin="round"/><path d="M7 12l5 5" stroke="#000" stroke-width="1.4"/><path d="M7 17l-3 3h6" fill="#ffe14d" stroke="#000" stroke-width="1.2" stroke-linejoin="round"/><path d="M3 21.5h18" stroke="#ffe14d" stroke-width="2"/></svg><span>Destacar</span></button>')});
+  clearTimeout(esconder._t);alvo={sel:1,b,r:r.cloneRange()};mostrar(CORES.map(([c,n])=>`<button class="gf-c gf-pri" type="button" data-gf-a="grifar" data-c="${c}"><i class="gf-dot ${c}"></i><span>${n}</span></button>`).join(""))});
 document.addEventListener("click",ev=>{const x=ev.target.closest("[data-gf-a]");
   if(x)ev.preventDefault();
   if(x&&x.dataset.gfA==="grifar"&&alvo&&alvo.sel){const b=alvo.b,r=alvo.r,id=Date.now().toString(36);
@@ -1011,22 +1032,29 @@ document.addEventListener("click",ev=>{const x=ev.target.closest("[data-gf-a]");
     getSelection().removeAllRanges();
     const m=document.createElement("mark");m.className="gf";m.dataset.gf=id;
     try{m.appendChild(r.extractContents());r.insertNode(m)}catch(e){esconder();return}
-    G.push({id,pg:pagina(),url:location.pathname.split("/").pop()+location.hash,an:c,bi:bs.indexOf(b),k,t:m.textContent,ti:titulo(b),se:secao(b),d:Date.now()});save();
+    G.push({id,pg:pagina(),url:location.pathname.split("/").pop()+location.hash,an:c,bi:bs.indexOf(b),k,t:m.textContent,ti:titulo(b),se:secao(b),d:Date.now(),c:x.dataset.c||"y"});save();pinta(m);
     esconder();return}
   if(x&&x.dataset.gfA==="tirar"&&alvo){const m=document.querySelector(`mark.gf[data-gf="${alvo.id}"]`);if(m){m.replaceWith(...m.childNodes)}G=G.filter(g=>g.id!==alvo.id);save();esconder();return}
-  const m=ev.target.closest("mark.gf");if(m){alvo={id:m.dataset.gf};mostrar('<button type="button" data-gf-a="tirar">Remover destaque</button>');return}
+  if(x&&x.dataset.gfA==="cor"&&alvo){const g=G.find(z=>z.id===alvo.id);if(g){g.c=x.dataset.c;save();const m=document.querySelector(`mark.gf[data-gf="${g.id}"]`);if(m)pinta(m)}esconder();return}
+  if(x&&x.dataset.gfA==="nota"&&alvo){const g=G.find(z=>z.id===alvo.id);mostrar(`<textarea placeholder="Sua nota sobre este trecho">${esc((g&&g.n)||"")}</textarea><button class="gf-pri" type="button" data-gf-a="salvar">Salvar nota</button>`);const ta=bar.querySelector("textarea");if(ta)ta.focus();return}
+  if(x&&x.dataset.gfA==="salvar"&&alvo){const g=G.find(z=>z.id===alvo.id),ta=bar.querySelector("textarea");if(g&&ta){g.n=ta.value.trim();save();const m=document.querySelector(`mark.gf[data-gf="${g.id}"]`);if(m)pinta(m)}esconder();return}
+  const m=ev.target.closest("mark.gf");if(m){alvo={id:m.dataset.gf};const g=G.find(z=>z.id===m.dataset.gf)||{};mostrar(CORES.filter(([c])=>c!==(g.c||"y")).map(([c,n])=>`<button class="gf-c" type="button" data-gf-a="cor" data-c="${c}"><i class="gf-dot ${c}"></i><span>${n}</span></button>`).join("")+`<button type="button" data-gf-a="nota">${g.n?"Editar nota":"Escrever nota"}</button><button type="button" data-gf-a="tirar">Remover destaque</button>`);return}
   if(alvo&&!alvo.sel&&!ev.target.closest(".gf-bar"))esconder()});
+bar.addEventListener("pointerdown",e=>{if(e.target.closest("textarea"))e.stopPropagation()},true);
 const pan=document.createElement("div");pan.className="gf-pan";pan.setAttribute("role","dialog");pan.setAttribute("aria-label","Destaques");document.body.appendChild(pan);
-const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 function painel(){let h='<div class="gf-in"><div class="gf-hd"><h2>Destaques</h2><button type="button" data-gf-x>Fechar</button></div><p class="gf-sub">Revisão rápida dos trechos que você destacou</p>';
+  const F=painel.f||"";h+='<div class="gf-fil">'+[["","Todos"]].concat(CORES).map(([c,n])=>`<button type="button" data-gf-f="${c}" aria-pressed="${c===F}">${c?`<i class="gf-dot ${c}" style="width:10px;height:10px;border-radius:50%;display:inline-block"></i>`:""}${n} · ${c?G.filter(g=>(g.c||"y")===c).length:G.length}</button>`).join("")+'<button type="button" data-gf-cp>Copiar</button></div>';
   if(!G.length)h+='<p class="gf-vz">Nenhum destaque ainda. Selecione um trecho da apostila e toque em Destacar.</p>';
-  const por={};G.forEach(g=>{(por[g.ti]=por[g.ti]||[]).push(g)});
+  const por={};G.filter(g=>!F||(g.c||"y")===F).forEach(g=>{(por[g.ti]=por[g.ti]||[]).push(g)});
   for(const ti in por){h+=`<div class="gf-ap">${esc(ti)}</div>`;let se=null;por[ti].sort((a,b)=>(a.bi-b.bi)||(a.d-b.d)).forEach(g=>{if(g.se!==se){se=g.se;if(se)h+=`<div class="gf-sec">${esc(se)}</div>`}
-    h+=`<div class="gf-it"><a href="${esc(g.url)}" data-gf-ir="${g.id}">${esc(g.t)}</a><button type="button" data-gf-del="${g.id}" aria-label="Apagar destaque">×</button></div>`})}
+    h+=`<div class="gf-it"><a class="${g.c||"y"}" href="${esc(g.url)}" data-gf-ir="${g.id}">${esc(g.t)}${g.n?`<small>✎ ${esc(g.n)}</small>`:""}</a><button type="button" data-gf-del="${g.id}" aria-label="Apagar destaque">×</button></div>`})}
   pan.innerHTML=h+'</div>';pan.classList.add("on");document.documentElement.style.overflow="hidden"}
 function fechar(){pan.classList.remove("on");document.documentElement.style.overflow=""}
 fb.onclick=painel;
 pan.addEventListener("click",ev=>{if(ev.target.closest("[data-gf-x]"))return fechar();
+  const fl=ev.target.closest("[data-gf-f]");if(fl){painel.f=fl.dataset.gfF;return painel()}
+  if(ev.target.closest("[data-gf-cp]")){const F=painel.f||"";let t="",ti=null;G.filter(g=>!F||(g.c||"y")===F).forEach(g=>{if(g.ti!==ti){ti=g.ti;t+="\n"+ti+"\n"}t+="• ["+CN[g.c||"y"]+"] "+g.t+(g.n?"\n   Nota: "+g.n:"")+"\n"});
+    const b=ev.target.closest("[data-gf-cp]");(navigator.clipboard?navigator.clipboard.writeText(t.trim()):Promise.reject()).then(()=>{b.textContent="Copiado"},()=>{b.textContent="Não deu para copiar"});return}
   const d=ev.target.closest("[data-gf-del]");if(d){G=G.filter(g=>g.id!==d.dataset.gfDel);const m=document.querySelector(`mark.gf[data-gf="${d.dataset.gfDel}"]`);if(m)m.replaceWith(...m.childNodes);save();return painel()}
   const a=ev.target.closest("[data-gf-ir]");if(a){sessionStorage.setItem("gf-go",a.dataset.gfIr);fechar();if(a.getAttribute("href")===location.pathname.split("/").pop()+location.hash){ev.preventDefault();aplicar()}}});
 new MutationObserver(()=>{clearTimeout(aplicar._t);aplicar._t=setTimeout(aplicar,120)}).observe(root(),{childList:true,subtree:true});
