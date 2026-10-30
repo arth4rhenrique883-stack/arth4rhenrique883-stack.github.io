@@ -90,6 +90,18 @@ mark.gf[data-nota]::after{content:"✎";font-size:.7em;vertical-align:super;marg
 .gf-it a.y{border-left-color:#ffd60a}.gf-it a.r{border-left-color:#ff453a}.gf-it a.b{border-left-color:#409cff}
 .gf-it a small{display:block;color:#9a9a9a;font-size:14px;margin-top:4px;font-style:italic}
 /*/gf:css*/
+/*nv:css*/
+.nv-beta{position:fixed;top:calc(env(safe-area-inset-top,0px) + 14px);left:max(10px,env(safe-area-inset-left,0px));z-index:9997;font:700 9px/1 Lato,system-ui,sans-serif;letter-spacing:.14em;color:#d8b36a;border:1px solid #4a3d22;background:#0b0b0b;padding:4px 6px;border-radius:5px;cursor:pointer}
+.nv-bt{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);right:max(54px,calc(env(safe-area-inset-right,0px) + 54px));z-index:9997;width:36px;height:36px;border-radius:50%;border:1px solid #2a2a2a;background:#0b0b0b;color:#bdbdbd;display:grid;place-items:center;cursor:pointer;padding:0;position:fixed}
+.nv-bt svg{width:18px;height:18px}.nv-bt i{position:absolute;right:3px;bottom:3px;width:8px;height:8px;border-radius:50%;background:#3ddc84;display:none;border:1px solid #0b0b0b}.nv-bt.on i{display:block}.nv-bt.off i{background:#e0a030}
+.tag-top{margin-right:88px}
+.nv-bk{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.72);display:none;align-items:center;justify-content:center;padding:16px}.nv-bk.on{display:flex}
+.nv-box{background:#0e0e0e;color:#e6e6e6;border:1px solid #2a2a2a;border-radius:12px;max-width:380px;width:100%;max-height:92vh;overflow:auto;padding:18px;font:15px/1.5 Lato,system-ui,sans-serif}
+.nv-box h3{margin:0 0 6px;font-size:18px}.nv-box p{margin:6px 0;color:#b5b5b5;font-size:13px}.nv-box input[type=email],.nv-box input[type=password]{width:100%;box-sizing:border-box;margin:5px 0;padding:10px;border-radius:8px;border:1px solid #333;background:#050505;color:#eee;font:inherit}
+.nv-box button{font:inherit;cursor:pointer;border-radius:8px;border:1px solid #333;background:#171717;color:#e6e6e6;padding:10px 12px;margin:4px 4px 0 0}.nv-box button.pr{background:#d8b36a;color:#111;border-color:#d8b36a;font-weight:700}
+.nv-box .tabs button{opacity:.6}.nv-box .tabs button.a{opacity:1;border-color:#d8b36a}.nv-box label{display:flex;gap:8px;font-size:12px;color:#b5b5b5;margin:8px 0}
+.nv-msg{min-height:18px;font-size:13px;color:#e0a030}.nv-box details{font-size:12px;color:#9a9a9a;margin-top:8px}.nv-box a{color:#d8b36a}
+/*/nv:css*/
 </style>
 <link data-as-fonte rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Nabla&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap">
 </head>
@@ -777,5 +789,66 @@ pan.addEventListener("click",ev=>{if(ev.target.closest("[data-gf-x]"))return fec
 new MutationObserver(()=>{clearTimeout(aplicar._t);aplicar._t=setTimeout(aplicar,120)}).observe(root(),{childList:true,subtree:true});
 fab();aplicar();
 })();</script>
+<script data-nuvem>(function(){
+var C={"url": "", "anon": ""},ON=!!(C.url&&C.anon),LS=localStorage,K_S="nuvem-sessao",K_T="nuvem-tempos";
+function ls(k,v){try{if(v===undefined)return LS.getItem(k);LS.setItem(k,v)}catch(e){return null}}
+var sinc=function(k){return /^(medaj|medas-tema)/.test(k)};
+var T={};try{T=JSON.parse(ls(K_T)||"{}")}catch(e){}
+var SI=Storage.prototype.setItem,RI=Storage.prototype.removeItem,dirty=!!ls("nuvem-sujo"),tm=0;
+function marca(k){if(!sinc(k))return;T[k]=Date.now();SI.call(LS,K_T,JSON.stringify(T));SI.call(LS,"nuvem-sujo","1");dirty=true;if(sess()){clearTimeout(tm);tm=setTimeout(push,2500)}}
+Storage.prototype.setItem=function(k,v){SI.call(this,k,v);if(this===LS)marca(k)};
+Storage.prototype.removeItem=function(k){RI.call(this,k);if(this===LS)marca(k)};
+function sess(){try{return JSON.parse(ls(K_S))}catch(e){return null}}
+function setSess(s){if(s)SI.call(LS,K_S,JSON.stringify(s));else RI.call(LS,K_S)}
+function H(tok){return {apikey:C.anon,Authorization:"Bearer "+(tok||C.anon),"Content-Type":"application/json"}}
+function api(p,o){return fetch(C.url+p,o).then(function(r){return r.text().then(function(t){var j={};try{j=JSON.parse(t)}catch(e){}if(!r.ok)throw new Error(j.msg||j.error_description||j.message||j.error||("Erro "+r.status));return j})})}
+function guarda(j){if(!j.access_token)return false;setSess({at:j.access_token,rt:j.refresh_token,exp:Date.now()+(j.expires_in||3600)*1000-60000,uid:(j.user||{}).id,email:(j.user||{}).email});return true}
+function token(){var s=sess();if(!s)return Promise.reject(new Error("sem sessão"));if(Date.now()<s.exp)return Promise.resolve(s);
+ return api("/auth/v1/token?grant_type=refresh_token",{method:"POST",headers:H(),body:JSON.stringify({refresh_token:s.rt})}).then(function(j){var n={at:j.access_token,rt:j.refresh_token,exp:Date.now()+(j.expires_in||3600)*1000-60000,uid:s.uid,email:s.email};setSess(n);return n})}
+function locais(){var o={};for(var i=0;i<LS.length;i++){var k=LS.key(i);if(sinc(k))o[k]={v:LS.getItem(k),t:T[k]||1}}return o}
+var busy=false;
+function sync(){if(busy||!ON||!sess())return Promise.resolve();busy=true;st("Sincronizando…");
+ return token().then(function(s){return api("/rest/v1/estado?select=dados&user_id=eq."+s.uid,{headers:H(s.at)}).then(function(rows){
+  var rem=(rows[0]&&rows[0].dados)||{},mudou=false,loc=locais(),tudo={};
+  Object.keys(rem).forEach(function(k){var r=rem[k],l=T[k]||(LS.getItem(k)!=null?1:0);if(r.t>l){if(r.v==null)RI.call(LS,k);else SI.call(LS,k,r.v);T[k]=r.t;mudou=true}});
+  loc=locais();Object.keys(rem).forEach(function(k){tudo[k]=rem[k]});Object.keys(loc).forEach(function(k){if(!tudo[k]||loc[k].t>=tudo[k].t)tudo[k]=loc[k]});
+  Object.keys(T).forEach(function(k){if(LS.getItem(k)==null&&(!tudo[k]||T[k]>tudo[k].t))tudo[k]={v:null,t:T[k]}});
+  SI.call(LS,K_T,JSON.stringify(T));
+  return api("/rest/v1/estado?on_conflict=user_id",{method:"POST",headers:Object.assign(H(s.at),{Prefer:"resolution=merge-duplicates,return=minimal"}),body:JSON.stringify({user_id:s.uid,dados:tudo,atualizado:new Date().toISOString()})}).then(function(){
+   RI.call(LS,"nuvem-sujo");dirty=false;st("Sincronizado "+new Date().toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"}),1);
+   if(mudou&&!sessionStorage.getItem("nuvem-rec")){sessionStorage.setItem("nuvem-rec","1");location.reload()}})})})
+ .catch(function(e){st(navigator.onLine?"Falha ao sincronizar: "+e.message:"Sem internet; sincroniza quando voltar.",0,1)}).then(function(){busy=false})}
+function push(){return sync()}
+var bt,bk,box,msg,estado="";
+function st(t,ok,off){estado=t;if(bt){bt.className="nv-bt"+(sess()?(off?" on off":" on"):"")}var e=document.getElementById("nv-st");if(e)e.textContent=t}
+var PRIV='<details><summary>Privacidade (LGPD)</summary><p>Se você criar conta, guardamos seu e-mail e os dados de estudo do app (lidas, destaques, flashcards, tema) para sincronizar entre aparelhos. Base legal: seu consentimento. Os dados ficam no Supabase (servidores de terceiros, possivelmente fora do Brasil) e não são vendidos nem usados para publicidade. Sem conta, nada sai do seu aparelho. Para acessar, corrigir ou apagar tudo, use os botões aqui ou escreva para arth4rhenrique883@gmail.com.</p></details>';
+function cena(){var s=sess();
+ if(!s){box.innerHTML='<h3>Entrar na nuvem</h3><p>Opcional: o app funciona sem conta. Entrando, seu progresso e destaques acompanham você em qualquer aparelho.</p><div class="tabs"><button class="a" data-m="in">Entrar</button><button data-m="up">Criar conta</button></div><input type="email" id="nv-e" placeholder="e-mail" autocomplete="email"><input type="password" id="nv-p" placeholder="senha (mín. 6)" autocomplete="current-password"><label id="nv-c" style="display:none"><input type="checkbox" id="nv-ck"> Li o aviso de privacidade e concordo com o uso dos meus dados de estudo e e-mail para sincronização.</label><div><button class="pr" id="nv-go">Entrar</button><button id="nv-g">Google</button><button id="nv-rs">Esqueci a senha</button></div><div class="nv-msg" id="nv-m"></div>'+PRIV+'<button id="nv-x">Continuar sem login</button>';
+  var modo="in";msg=box.querySelector("#nv-m");
+  box.querySelectorAll(".tabs button").forEach(function(b){b.onclick=function(){modo=b.dataset.m;box.querySelectorAll(".tabs button").forEach(function(x){x.classList.toggle("a",x===b)});box.querySelector("#nv-go").textContent=modo==="in"?"Entrar":"Criar conta";box.querySelector("#nv-c").style.display=modo==="up"?"flex":"none"}});
+  box.querySelector("#nv-go").onclick=function(){var e=box.querySelector("#nv-e").value.trim(),p=box.querySelector("#nv-p").value;if(!e||p.length<6){msg.textContent="Informe e-mail e senha (mín. 6).";return}
+   if(modo==="up"&&!box.querySelector("#nv-ck").checked){msg.textContent="Marque a concordância com o aviso de privacidade.";return}
+   msg.textContent="Aguarde…";
+   api(modo==="in"?"/auth/v1/token?grant_type=password":"/auth/v1/signup",{method:"POST",headers:H(),body:JSON.stringify({email:e,password:p})}).then(function(j){if(guarda(j)){fecha();sync()}else{msg.textContent="Conta criada. Confirme pelo e-mail que enviamos e depois entre."}}).catch(function(x){msg.textContent=/Invalid login/i.test(x.message)?"E-mail ou senha incorretos (ou e-mail ainda não confirmado).":x.message})};
+  box.querySelector("#nv-g").onclick=function(){location.href=C.url+"/auth/v1/authorize?provider=google&redirect_to="+encodeURIComponent(location.origin+location.pathname)};
+  box.querySelector("#nv-rs").onclick=function(){var e=box.querySelector("#nv-e").value.trim();if(!e){msg.textContent="Digite o e-mail acima.";return}api("/auth/v1/recover",{method:"POST",headers:H(),body:JSON.stringify({email:e})}).then(function(){msg.textContent="Enviamos o link de redefinição para o seu e-mail."}).catch(function(x){msg.textContent=x.message})};
+  box.querySelector("#nv-x").onclick=fecha;
+ }else{box.innerHTML='<h3>Conta</h3><p>'+s.email+'</p><p id="nv-st">'+estado+'</p><div><button class="pr" id="nv-sy">Sincronizar agora</button><button id="nv-out">Sair</button></div><div><button id="nv-del">Apagar meus dados da nuvem</button></div><div class="nv-msg" id="nv-m"></div>'+PRIV+'<button id="nv-x">Fechar</button>';
+  msg=box.querySelector("#nv-m");
+  box.querySelector("#nv-sy").onclick=sync;box.querySelector("#nv-x").onclick=fecha;
+  box.querySelector("#nv-out").onclick=function(){setSess(null);fecha();st("");sessionStorage.removeItem("nuvem-rec")};
+  box.querySelector("#nv-del").onclick=function(){if(!confirm("Apagar da nuvem todos os dados de estudo desta conta? O que está neste aparelho continua."))return;token().then(function(t){return api("/rest/v1/estado?user_id=eq."+t.uid,{method:"DELETE",headers:H(t.at)})}).then(function(){msg.textContent="Dados da nuvem apagados. Para excluir também a conta, escreva para arth4rhenrique883@gmail.com."}).catch(function(x){msg.textContent=x.message})}}}
+function abre(){cena();bk.classList.add("on")}function fecha(){bk.classList.remove("on")}
+function ui(){var b=document.createElement("button");b.type="button";b.className="nv-beta";b.textContent="BETA";b.title="Versão de teste";
+ b.onclick=function(){box.innerHTML='<h3>Versão beta</h3><p>Este app está em fase de teste: pode mudar, ter erros ou ficar fora do ar. Confira doses e condutas nas fontes indicadas. Ajude avisando o que encontrar.</p><button id="nv-x">Entendi</button>';box.querySelector("#nv-x").onclick=fecha;bk.classList.add("on")};document.body.appendChild(b);
+ bk=document.createElement("div");bk.className="nv-bk";box=document.createElement("div");box.className="nv-box";bk.appendChild(box);bk.onclick=function(e){if(e.target===bk)fecha()};document.body.appendChild(bk);
+ if(!ON)return;bt=document.createElement("button");bt.type="button";bt.className="nv-bt";bt.setAttribute("aria-label","Conta e nuvem");
+ bt.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg><i></i>';bt.onclick=abre;document.body.appendChild(bt);st("")}
+function volta(){var h=location.hash;if(ON&&/access_token=/.test(h)){var p=new URLSearchParams(h.slice(1)),j={access_token:p.get("access_token"),refresh_token:p.get("refresh_token"),expires_in:+p.get("expires_in")||3600};
+ history.replaceState(null,"",location.pathname+location.search);
+ api("/auth/v1/user",{headers:H(j.access_token)}).then(function(u){j.user=u;guarda(j);sync()}).catch(function(){})}}
+function ini(){ui();volta();if(ON&&sess())sync()}
+document.addEventListener("visibilitychange",function(){if(!document.hidden&&sess()&&dirty)sync()});addEventListener("online",function(){if(sess()&&dirty)sync()});
+if(document.body)ini();else addEventListener("DOMContentLoaded",ini)})();</script>
 </body>
 </html>
