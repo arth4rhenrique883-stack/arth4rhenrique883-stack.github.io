@@ -251,6 +251,34 @@ body.bookmode main{flex:1;min-height:0;display:flex;flex-direction:column}
 .bk-foot .where span{display:block;font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .bk-foot .prog{grid-column:1/-1;height:2px;background:var(--line);border-radius:2px;overflow:hidden}
 .bk-foot .prog i{display:block;height:100%;background:var(--red);transition:width .3s}
+/* 30/10: "slide N" citado no texto abre o slide; e o leitor decide, na hora, se quer o slide ao lado do texto (acompanha a leitura) */
+.sr{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline dotted color-mix(in srgb,var(--red) 70%,transparent);text-underline-offset:3px}
+.sr.on{background:color-mix(in srgb,var(--red) 22%,transparent);border-radius:3px}
+.modo .ld{margin-left:auto}
+.modo.ask .ld{margin-left:0}
+:root{--ladoW:min(44vw,640px);--ladoH:min(40vh,calc((100vw - 32px) * .5625 + 50px))}
+.lado{position:fixed;z-index:50;background:var(--bg);display:none;flex-direction:column;gap:8px}
+body.ld-on .lado{display:flex}
+.lado .lt{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.lado .lt .k{font:600 12px/1.3 var(--mono);color:var(--muted);letter-spacing:.06em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.lado .lt span.b{display:flex;gap:6px;flex:none}
+.lado .lt button{width:34px;height:30px;border:1px solid var(--line-2);border-radius:8px;background:transparent;color:var(--fg);font:400 16px/1 var(--head);padding:0}
+.lado .lst{flex:1;min-height:0;display:flex;align-items:flex-start;justify-content:center}
+.lado .slimg{height:100%;width:auto;max-width:100%;border-radius:6px;cursor:zoom-in}
+@media (min-width:1000px){
+  .lado{top:56px;right:0;bottom:0;width:var(--ladoW);padding:4px 20px 20px;border-left:1px solid var(--line)}
+  .lado .lst{align-items:flex-start}
+  .lado .slimg{height:auto;width:100%}
+  body.ld-on{padding-right:calc(var(--ladoW) + 24px)}}
+@media (max-width:999.98px){
+  .lado{left:0;right:0;bottom:0;height:var(--ladoH);padding:8px max(16px,env(safe-area-inset-left,0px)) calc(env(safe-area-inset-bottom,0px) + 8px);border-top:1px solid var(--line-2);box-shadow:0 -8px 24px #000a}
+  body.ld-on{padding-bottom:calc(var(--ladoH) + 24px)}
+  body.ld-on.bookmode{padding-bottom:0}
+  body.ld-on.bookmode .wrap{height:calc(100dvh - var(--ladoH))}
+  body.ld-on .gf-fab{bottom:calc(var(--ladoH) + 12px)}
+  body.ld-on.bookmode .gf-fab{bottom:calc(var(--ladoH) + 84px)}}
+/* no modo livro do celular o botão Destaques cobria a seta de avançar */
+@media (max-width:999.98px){body.bookmode .gf-fab{bottom:calc(env(safe-area-inset-bottom,0px) + 84px)}}
 /* chama: só as cores desta página, mudando a cada 5 s */
 .flame .hue{animation:none!important}
 #fl-out stop:nth-child(1){stop-color:#3b2457}#fl-out stop:nth-child(2){stop-color:#6b3fa0}#fl-out stop:nth-child(3){stop-color:#8d5cc4}
@@ -324,6 +352,20 @@ mark.gf{background:color-mix(in srgb,var(--red,#ffffff) 30%,transparent);color:i
 .gf-it a{flex:1;display:block;color:#e6e6e6;text-decoration:none;font:400 17px/1.55 Newsreader,Georgia,serif;border-left:2px solid color-mix(in srgb,var(--red,#ffffff) 70%,transparent);padding:2px 0 2px 12px}
 .gf-it button{background:none;border:0;color:#555;font-size:18px;cursor:pointer;padding:2px 6px}
 .gf-vz{color:#777;font:400 16px Newsreader,Georgia,serif}
+/* 30/10: cores (amarelo importante, vermelho cai na prova, azul não entendi), nota no trecho, filtro e copiar */
+mark.gf.gf-y,:root:not([data-per]) mark.gf.gf-y{background:rgba(255,214,10,.28);border-bottom-color:rgba(255,214,10,.85)}
+mark.gf.gf-r,:root:not([data-per]) mark.gf.gf-r{background:rgba(255,69,58,.26);border-bottom-color:rgba(255,69,58,.9)}
+mark.gf.gf-b,:root:not([data-per]) mark.gf.gf-b{background:rgba(64,156,255,.26);border-bottom-color:rgba(64,156,255,.9)}
+mark.gf[data-nota]::after{content:"✎";font-size:.7em;vertical-align:super;margin-left:1px;opacity:.8}
+.gf-bar button.gf-c{display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:14px;font-size:12px;text-align:left}
+.gf-bar i.gf-dot{width:14px;height:14px;border-radius:50%;display:inline-block;flex:none}
+.gf-dot.y{background:#ffd60a}.gf-dot.r{background:#ff453a}.gf-dot.b{background:#409cff}
+.gf-bar textarea{width:min(260px,70vw);min-height:80px;background:#0b0b0b;color:#eee;border:1px solid #3a3a3a;border-radius:12px;padding:10px;font:400 15px/1.4 Newsreader,Georgia,serif}
+.gf-fil{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 6px}
+.gf-fil button{display:flex;align-items:center;gap:6px;background:none;border:1px solid #333;color:#ccc;border-radius:999px;padding:5px 12px;font:inherit;font-size:13px;cursor:pointer}
+.gf-fil button[aria-pressed=true]{border-color:#eee;color:#fff}
+.gf-it a.y{border-left-color:#ffd60a}.gf-it a.r{border-left-color:#ff453a}.gf-it a.b{border-left-color:#409cff}
+.gf-it a small{display:block;color:#9a9a9a;font-size:14px;margin-top:4px;font-style:italic}
 /*/gf:css*/
 </style>
 <link data-as-fonte rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500&family=Nabla&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap">
@@ -342,6 +384,7 @@ mark.gf{background:color-mix(in srgb,var(--red,#ffffff) 30%,transparent);color:i
 <header class="top"><a class="back" href="../p8.html#apostilas" id="back">← 8º período</a><a class="brand" href="./" aria-label="Todas as apostilas do 8º período"><span class="asmed asmed-p xm" aria-label="xequemate med"><span class="t">xequemate <b>med</b></span><span class="qw"><svg class="xm-ecg" viewBox="0 0 240 46" aria-hidden="true"><defs><linearGradient id="xm-gt-p" x1="0" y1="0" x2="240" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff5d8f"/><stop offset="0.5" stop-color="#3fd6e6"/><stop offset="1" stop-color="#a77bff"/></linearGradient></defs><g fill="none" stroke="url(#xm-gt-p)" stroke-linejoin="round" stroke-linecap="round"><path class="xm-gl" d="M0 34H62L66 30H70L74 34H100L104 38L109 15L115 25L120 6L125 25L131 15L136 42L140 34H160L166 28H172L178 34H240" stroke-width="5"/><path class="xm-base" d="M0 34H62L66 30H70L74 34H100L104 38L109 15L115 25L120 6L125 25L131 15L136 42L140 34H160L166 28H172L178 34H240" stroke-width="1.4"/><path class="xm-sw" d="M0 34H62L66 30H70L74 34H100L104 38L109 15L115 25L120 6L125 25L131 15L136 42L140 34H160L166 28H172L178 34H240" pathLength="100" stroke-width="2"/><g class="xm-b" stroke-width="1.3"><circle cx="109" cy="12.4" r="2.3"/><circle cx="120" cy="3.4" r="2.3"/><circle cx="131" cy="12.4" r="2.3"/></g></g></svg></span></span></a></header>
   <main id="app" aria-live="polite"></main>
 </div>
+<aside class="lado" id="lado" aria-label="Slide ao lado do texto"><div class="lt"><span class="k" id="ldN"></span><span class="b"><button type="button" id="ldP" aria-label="Slide anterior">‹</button><button type="button" id="ldF" aria-label="Próximo slide">›</button><button type="button" id="ldX" aria-label="Fechar o slide ao lado">✕</button></span></div><div class="lst"><div class="slimg" id="ldI" role="img" title="Ampliar o slide"></div></div></aside>
 <div class="vw" id="vw" role="dialog" aria-label="Slides da aula" hidden>
   <div class="vt"><span class="k" id="vwN"></span><button type="button" id="vwX">Fechar</button></div>
   <div class="st"><button type="button" class="nv" id="vwP" aria-label="Slide anterior">‹</button><div class="slimg" id="vwI" role="img"></div><button type="button" class="nv" id="vwF" aria-label="Próximo slide">›</button></div>
@@ -453,13 +496,53 @@ function home(){document.body.classList.remove("bookmode");onkey=null;onresize=n
 /* modo de leitura (pedido de 28/10): no início de cada apostila, passar para o lado (livro) ou rolar; a escolha fica no aparelho */
 const MODO=()=>{try{return localStorage.getItem(LS("modo"))||""}catch(e){return""}};
 const setModo=m=>{try{localStorage.setItem(LS("modo"),m)}catch(e){}};
+const ldBt=ask=>CUR.deck?`<button type="button" class="ld" data-lado aria-pressed="${LADO()}">${ask?"▣ Mostrar o slide ao lado do texto (liga e desliga quando quiser)":"▣ Slide ao lado"}</button>`:"";
 function modoHtml(cur,ask){return ask
-  ?`<div class="modo ask" role="group" aria-label="Como ler esta apostila"><span class="kick">Como prefere ler?</span><button type="button" data-modo="livro">⇆ Passar para o lado, como um livro</button><button type="button" data-modo="rolar">⇅ Rolar para cima e para baixo</button></div>`
-  :`<div class="modo" role="group" aria-label="Modo de leitura"><button type="button" data-modo="livro" aria-pressed="${cur==="livro"}">⇆ Livro</button><button type="button" data-modo="rolar" aria-pressed="${cur!=="livro"}">⇅ Rolar</button></div>`}
+  ?`<div class="modo ask" role="group" aria-label="Como ler esta apostila"><span class="kick">Como prefere ler?</span><button type="button" data-modo="livro">⇆ Passar para o lado, como um livro</button><button type="button" data-modo="rolar">⇅ Rolar para cima e para baixo</button>${ldBt(1)}</div>`
+  :`<div class="modo" role="group" aria-label="Modo de leitura"><button type="button" data-modo="livro" aria-pressed="${cur==="livro"}">⇆ Livro</button><button type="button" data-modo="rolar" aria-pressed="${cur!=="livro"}">⇅ Rolar</button>${ldBt(0)}</div>`}
+/* slide ao lado: liga/desliga a qualquer momento (fica guardado no aparelho); mostra o slide citado no trecho que está sendo lido */
+let CUR={deck:null,tot:0},LDK="";
+const LADO=()=>{try{return localStorage.getItem(LS("lado"))==="1"}catch(e){return false}};
+function ladoSet(on){try{localStorage.setItem(LS("lado"),on?"1":"0")}catch(e){}ladoApply()}
+function ladoApply(){const on=!!CUR.deck&&LADO();document.body.classList.toggle("ld-on",on);
+  document.querySelectorAll("[data-lado]").forEach(b=>b.setAttribute("aria-pressed",on));
+  if(!on)app.querySelectorAll(".sr.on").forEach(x=>x.classList.remove("on"));
+  LDK="";if(onresize)onresize();if(on)ladoPick()}
+function ladoShow(n,mine){if(!CUR.deck)return;n=Math.max(1,Math.min(CUR.tot,n));CUR.n=n;CUR.mine=mine||CUR.mine||[];
+  const s=slStyle(CUR.deck,n,0,CUR.tot);$("ldI").style.cssText=s.css+`;aspect-ratio:${s.ar}`;$("ldI").setAttribute("aria-label","Slide "+n);
+  $("ldN").textContent=`Slide ${n} de ${CUR.tot}`}
+function ladoPick(){if(!document.body.classList.contains("ld-on"))return;
+  const els=[...app.querySelectorAll(".sr,.sl")];if(!els.length)return;let pick=null;
+  if(document.body.classList.contains("bookmode")){const r=$("bk").getBoundingClientRect();
+    for(const e of els){const b=e.getBoundingClientRect();if(b.right<=r.left+4){pick=e;continue}if(b.left<r.right-4){pick=e}break}}
+  else{const line=(document.body.classList.contains("ld-on")&&innerWidth<1000?innerHeight-$("lado").offsetHeight:innerHeight)*.42;
+    for(const e of els){if(e.getBoundingClientRect().top<=line)pick=e;else break}}
+  pick=pick||els[0];const ns=(pick.dataset.ns||pick.dataset.mine||"").split(",").map(Number).filter(Boolean);if(!ns.length)return;
+  const key=els.indexOf(pick)+":"+ns[0];if(key===LDK)return;LDK=key;
+  app.querySelectorAll(".sr.on").forEach(x=>x.classList.remove("on"));if(pick.classList.contains("sr"))pick.classList.add("on");
+  ladoShow(ns[0],ns)}
+let ldRaf=0;addEventListener("scroll",()=>{if(ldRaf)return;ldRaf=requestAnimationFrame(()=>{ldRaf=0;ladoPick()})},{passive:true});
+$("ldP").onclick=()=>ladoShow(CUR.n-1);$("ldF").onclick=()=>ladoShow(CUR.n+1);$("ldX").onclick=()=>ladoSet(false);
+$("ldI").onclick=()=>openVW(CUR.deck,CUR.tot,CUR.n,CUR.mine);
+document.addEventListener("click",e=>{if(e.target.closest("[data-lado]"))ladoSet(!LADO())});
+/* "slide N", "slides 5 e 6", "slides 2-3, 10" no texto viram botões que abrem o slide */
+function slRefs(root){if(!CUR.deck)return;const re=/\bslides?\s+\d+(?:(?:\s*[-–,]\s*|\s+e\s+)\d+)*/g,T=[];
+  const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest("button,a,.sl,.kick,h1,.lado,.vw,script,style")?2:1});
+  while(w.nextNode())if(/slides?\s+\d/.test(w.currentNode.nodeValue))T.push(w.currentNode);
+  for(const t of T){const v=t.nodeValue,f=document.createDocumentFragment();let i=0;
+    for(const m of v.matchAll(re)){const ns=[];for(const r of m[0].replace(/^slides?\s+/,"").split(/\s*,\s*|\s+e\s+/)){const q=r.split(/\s*[-–]\s*/).map(Number);
+        if(q.length===2&&q[1]>q[0]&&q[1]-q[0]<40)for(let k=q[0];k<=q[1];k++)ns.push(k);else ns.push(q[0])}
+      const ok=ns.filter(n=>n>=1&&n<=CUR.tot);if(!ok.length)continue;
+      f.append(v.slice(i,m.index));const b=document.createElement("button");b.type="button";b.className="sr";b.dataset.ns=ok.join(",");b.textContent=m[0];
+      b.setAttribute("aria-label","Abrir "+m[0]);f.append(b);i=m.index+m[0].length}
+    if(i){f.append(v.slice(i));t.replaceWith(f)}}
+  root.querySelectorAll(".sr").forEach(b=>b.onclick=()=>{const ns=b.dataset.ns.split(",").map(Number);
+    if(document.body.classList.contains("ld-on")){LDK="";app.querySelectorAll(".sr.on").forEach(x=>x.classList.remove("on"));b.classList.add("on");ladoShow(ns[0],ns)}
+    else openVW(CUR.deck,CUR.tot,ns[0],ns)})}
 document.addEventListener("click",e=>{const b=e.target.closest("[data-modo]");if(!b)return;setModo(b.dataset.modo);route()});
 
 async function livro(cid,bi,pi,c,D,s,PG){
-  document.body.classList.add("bookmode");
+  document.body.classList.add("bookmode");CUR={deck:s.deck||null,tot:s.nsl||deckTot(s.deck)};
   const nb=bi<D.sections.length-1?D.sections[bi+1]:null;
   let h=`<div class="bk-head"><span class="kick">${esc(c.nome+" · "+c.av)}</span>${modoHtml("livro")}</div><div class="book" id="bk"><div class="cols" id="cols">`;
   h+=`<section class="cover"><span class="kick">${esc(c.nome)} · ${esc(c.av)}</span><h1>${strip(s.title)}</h1>${s.sub?`<p class="sub" style="color:var(--muted);margin:0">${strip(s.sub)}</p>`:""}`;
@@ -468,7 +551,7 @@ async function livro(cid,bi,pi,c,D,s,PG){
   PG.forEach((pg,i)=>{h+=`<article class="ch" data-ch="${i}">${pg.blocks.map(b=>block(b)).join("")}${pg.lance?lance(pg.lance):""}</article>`});
   h+=`<section class="fim"><span class="kick">Fim da aula</span><h2>${strip(s.title)}</h2><button type="button" class="btn2" id="lida" aria-pressed="${!!LIDAS[s.id]}">${LIDAS[s.id]?"✓ Lida":"Marcar a aula como lida"}</button><a class="btn2" style="text-decoration:none" href="#${cid}/fontes/${bi}">Fontes e artigos</a>${nb?`<a class="btn2" style="text-decoration:none" href="#${cid}/resumos/${bi+1}">Próxima aula: ${strip(nb.title)} →</a>`:""}</section>`;
   h+=`</div></div><div class="bk-foot"><button type="button" id="bkP" aria-label="Página anterior">‹</button><div class="where"><b id="bkN"></b><span id="bkT"></span></div><button type="button" id="bkF" aria-label="Próxima página">›</button><div class="prog"><i id="bkG"></i></div></div>`;
-  app.innerHTML=h;wire(app);
+  app.innerHTML=h;wire(app);slRefs(app);
   const bk=$("bk"),cols=$("cols"),G=48;let W=0,N=1,k=0;
   const chOf=pg=>{let r=-1;cols.querySelectorAll("[data-ch]").forEach(a=>{if(Math.floor((a.getBoundingClientRect().left-cols.getBoundingClientRect().left+2)/(W+G))<=pg)r=+a.dataset.ch});return r};
   const pageOf=el=>Math.max(0,Math.floor((el.getBoundingClientRect().left-cols.getBoundingClientRect().left+2)/(W+G)));
@@ -476,7 +559,7 @@ async function livro(cid,bi,pi,c,D,s,PG){
     const ch=chOf(k);$("bkN").textContent=`${k+1} / ${N}`;$("bkT").textContent=ch<0?"Capa e sumário":(PG[ch].title||strip(s.title));
     $("bkG").style.width=((k+1)/N*100).toFixed(1)+"%";$("bkP").disabled=k===0;$("bkF").disabled=k===N-1;
     VISTO[s.id]=VISTO[s.id]||{};if(ch>=0){VISTO[s.id][ch]=1;VISTO[s.id].last=ch}save("vistas",VISTO);
-    history.replaceState(null,"",`#${cid}/resumos/${bi}/${Math.max(0,ch)}`)}
+    history.replaceState(null,"",`#${cid}/resumos/${bi}/${Math.max(0,ch)}`);setTimeout(ladoPick,anim===false?0:360)}
   function layout(keep){const ch=keep!=null?keep:null;W=bk.clientWidth;cols.style.width=W+"px";cols.style.columnWidth=W+"px";
     N=Math.max(1,Math.round((cols.scrollWidth+G)/(W+G)));
     if(ch!=null){const el=cols.querySelector(`[data-ch="${ch}"]`);show(el?pageOf(el):0,false)}else show(Math.min(k,N-1),false)}
@@ -489,6 +572,7 @@ async function livro(cid,bi,pi,c,D,s,PG){
   onkey=e=>{if(!$("vw").hidden)return;if(e.key==="ArrowRight")show(k+1);if(e.key==="ArrowLeft")show(k-1)};
   onresize=()=>{const ch=chOf(k);layout(ch<0?null:ch)};
   if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>{const ch=chOf(k);layout(ch<0?null:ch)});
+  ladoApply();
   $("lida").onclick=()=>{if(LIDAS[s.id])delete LIDAS[s.id];else LIDAS[s.id]=Date.now();try{localStorage.setItem(LS("lidas"),JSON.stringify(LIDAS))}catch(e){}
     $("lida").setAttribute("aria-pressed",!!LIDAS[s.id]);$("lida").textContent=LIDAS[s.id]?"✓ Lida":"Marcar a aula como lida"}}
 let onkey=null,onresize=null;
@@ -497,7 +581,7 @@ addEventListener("resize",()=>{if(onresize)onresize()});
 
 async function aula(cid,bi,pi){const c=CAT(cid);if(!c)return home();const D=await need(c);const s=D.sections[bi];if(!s)return home();
   const PG=pages(s.blocks);pi=Math.max(0,Math.min(PG.length-1,pi||0));const pg=PG[pi];
-  onkey=null;onresize=null;if(MODO()==="livro")return livro(cid,bi,pi,c,D,s,PG);
+  onkey=null;onresize=null;CUR={deck:s.deck||null,tot:s.nsl||deckTot(s.deck)};if(MODO()==="livro")return livro(cid,bi,pi,c,D,s,PG);
   document.body.classList.remove("bookmode");
   DOC={tot:{}};if(s.deck&&s.nsl)DOC.tot[s.deck]=s.nsl;
   VISTO[s.id]=VISTO[s.id]||{};VISTO[s.id][pi]=1;VISTO[s.id].last=pi;save("vistas",VISTO);
@@ -515,9 +599,10 @@ async function aula(cid,bi,pi){const c=CAT(cid);if(!c)return home();const D=awai
   h+=`</nav><div class="endbar"><button type="button" class="btn2" id="lida" aria-pressed="${!!LIDAS[s.id]}">${LIDAS[s.id]?"✓ Lida":"Marcar a aula como lida"}</button><a class="btn2" style="text-decoration:none" href="#${cid}/fontes/${bi}">Fontes e artigos</a></div>`;
   app.innerHTML=h;wire(app);
   app.querySelectorAll("[data-pg]").forEach(b=>b.onclick=()=>{location.hash=`${cid}/resumos/${bi}/${b.dataset.pg}`});
+  slRefs(app);
   $("lida").onclick=()=>{if(LIDAS[s.id])delete LIDAS[s.id];else LIDAS[s.id]=Date.now();try{localStorage.setItem(LS("lidas"),JSON.stringify(LIDAS))}catch(e){}
     $("lida").setAttribute("aria-pressed",!!LIDAS[s.id]);$("lida").textContent=LIDAS[s.id]?"✓ Lida":"Marcar a aula como lida"};
-  window.scrollTo(0,0)}
+  window.scrollTo(0,0);ladoApply()}
 
 async function fontes(cid,bi){document.body.classList.remove("bookmode");onkey=null;onresize=null;const c=CAT(cid);if(!c)return home();const D=await need(c);const s=D.sections[bi];if(!s)return home();
   const seen=new Set(),R=[];const add=(t,u)=>{if(!u||seen.has(u))return;seen.add(u);R.push([t,u])};
@@ -535,7 +620,7 @@ async function guia(cid){const c=CAT(cid);if(!c)return home();const D=await need
   app.innerHTML=h+`</article>`;window.scrollTo(0,0)}
 
 /* rotas: as do 8º (#ds/resumos/bloco/página/id) e as do 6º (#/a/id/página a partir de 1, #/a/id/artigos) */
-function route(){const h=decodeURIComponent(location.hash.slice(1));
+function route(){const h=decodeURIComponent(location.hash.slice(1));CUR={deck:null,tot:0};document.body.classList.remove("ld-on");
   let m=/^\/a\/([^/]+)(?:\/([^/]+))?/.exec(h);
   if(m){for(const c of P.cat){const i=c.secs.findIndex(s=>s.id===m[1]);if(i>=0)return m[2]==="artigos"?fontes(c.id,i):aula(c.id,i,m[2]?Math.max(0,+m[2]-1):(VISTO[m[1]]||{}).last||0)}return home()}
   m=/^([\w-]+)\/(resumos|fontes|guia)(?:\/(\d+))?(?:\/(\d+))?/.exec(h);
@@ -552,6 +637,8 @@ p();document.body.appendChild(b)})();</script>
 (function(){
 const KEY="medasp-grifos",SPA=true,BLK="p,li,td,th,h2,h3,h4,blockquote,dd,dt,figcaption";
 let G=[];try{G=JSON.parse(localStorage.getItem(KEY)||"[]")}catch(e){}
+const CORES=[["y","Importante"],["r","Cai na prova"],["b","Não entendi"]],CN={y:"Importante",r:"Cai na prova",b:"Não entendi"};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(G))}catch(e){}fab()};
 const root=()=>document.querySelector("main")||document.body;
 const pagina=()=>SPA?((document.querySelector("#app h1")||{}).textContent||location.hash).trim():(location.pathname.split("/").pop()||"index.html");
@@ -561,13 +648,14 @@ function titulo(b){const a=b.closest("article[id]");const h=(a&&a.querySelector(
 function envolver(b,t,id,k){k=k||0;const w=document.createTreeWalker(b,NodeFilter.SHOW_TEXT);let s="",ns=[];while(w.nextNode()){if(w.currentNode.parentElement.closest("mark.gf"))continue;ns.push([w.currentNode,s.length]);s+=w.currentNode.nodeValue}
   let i=s.indexOf(t);for(let q=0;q<k&&i>=0;q++)i=s.indexOf(t,i+1);if(i<0)i=s.indexOf(t);if(i<0)return false;const j=i+t.length,r=document.createRange();
   for(const [n,o] of ns){const L=n.nodeValue.length;if(i>=o&&i<=o+L&&!r._s){r.setStart(n,i-o);r._s=1}if(j>=o&&j<=o+L){r.setEnd(n,j-o);break}}
-  const m=document.createElement("mark");m.className="gf";m.dataset.gf=id;try{m.appendChild(r.extractContents());r.insertNode(m)}catch(e){return false}return true}
+  const m=document.createElement("mark");m.className="gf";m.dataset.gf=id;try{m.appendChild(r.extractContents());r.insertNode(m)}catch(e){return false}pinta(m);return true}
+function pinta(m){const g=G.find(x=>x.id===m.dataset.gf);if(!g)return;m.classList.remove("gf-y","gf-r","gf-b");m.classList.add("gf-"+(g.c||"y"));if(g.n)m.dataset.nota=1;else delete m.dataset.nota;m.title=g.n||""}
 function aplicar(){const pg=pagina();G.filter(g=>g.pg===pg&&!document.querySelector(`mark.gf[data-gf="${g.id}"]`)).forEach(g=>{
   const c=(g.an&&document.getElementById(g.an))||root(),bs=[...c.querySelectorAll(BLK)];const b=bs[g.bi];
   if(!(b&&envolver(b,g.t,g.id,g.k)))bs.some(x=>x.textContent.includes(g.t)&&envolver(x,g.t,g.id))});
   const go=sessionStorage.getItem("gf-go");if(go){const m=document.querySelector(`mark.gf[data-gf="${go}"]`);if(m){sessionStorage.removeItem("gf-go");const a=m.closest("article[hidden]");if(a)a.hidden=false;setTimeout(()=>m.scrollIntoView({block:"center"}),60)}}}
 const bar=document.createElement("div");bar.className="gf-bar";document.body.appendChild(bar);
-["pointerdown","mousedown","touchstart"].forEach(t=>bar.addEventListener(t,e=>{if(e.cancelable&&t!=="touchstart")e.preventDefault()},{passive:false}));
+["pointerdown","mousedown","touchstart"].forEach(t=>bar.addEventListener(t,e=>{if(e.target.closest("textarea"))return;if(e.cancelable&&t!=="touchstart")e.preventDefault()},{passive:false}));
 const fb=document.createElement("button");fb.className="gf-fab";fb.type="button";document.body.appendChild(fb);
 function fab(){fb.textContent="Destaques · "+G.length;fb.hidden=false}
 let alvo=null;
@@ -576,7 +664,7 @@ function esconder(){bar.classList.remove("on");alvo=null}
 document.addEventListener("selectionchange",()=>{const s=getSelection();if(!s||s.isCollapsed||!s.toString().trim()){if(alvo&&alvo.sel){clearTimeout(esconder._t);esconder._t=setTimeout(esconder,350)}return}
   const r=s.getRangeAt(0),a=r.startContainer.parentElement,b=a&&a.closest(BLK),e=r.endContainer.parentElement&&r.endContainer.parentElement.closest(BLK);
   if(!b||b!==e||b.closest("nav,header,button,.gf-pan,.gf-bar")||!root().contains(b)){if(alvo&&alvo.sel)esconder();return}
-  clearTimeout(esconder._t);alvo={sel:1,b,r:r.cloneRange()};mostrar('<button class="gf-pri" type="button" data-gf-a="grifar" aria-label="Destacar"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15.5 3.5l5 5-8.5 8.5H7v-5z" fill="#ffe14d" stroke="#000" stroke-width="1.4" stroke-linejoin="round"/><path d="M7 12l5 5" stroke="#000" stroke-width="1.4"/><path d="M7 17l-3 3h6" fill="#ffe14d" stroke="#000" stroke-width="1.2" stroke-linejoin="round"/><path d="M3 21.5h18" stroke="#ffe14d" stroke-width="2"/></svg><span>Destacar</span></button>')});
+  clearTimeout(esconder._t);alvo={sel:1,b,r:r.cloneRange()};mostrar(CORES.map(([c,n])=>`<button class="gf-c gf-pri" type="button" data-gf-a="grifar" data-c="${c}"><i class="gf-dot ${c}"></i><span>${n}</span></button>`).join(""))});
 document.addEventListener("click",ev=>{const x=ev.target.closest("[data-gf-a]");
   if(x)ev.preventDefault();
   if(x&&x.dataset.gfA==="grifar"&&alvo&&alvo.sel){const b=alvo.b,r=alvo.r,id=Date.now().toString(36);
@@ -586,22 +674,29 @@ document.addEventListener("click",ev=>{const x=ev.target.closest("[data-gf-a]");
     getSelection().removeAllRanges();
     const m=document.createElement("mark");m.className="gf";m.dataset.gf=id;
     try{m.appendChild(r.extractContents());r.insertNode(m)}catch(e){esconder();return}
-    G.push({id,pg:pagina(),url:location.pathname.split("/").pop()+location.hash,an:c,bi:bs.indexOf(b),k,t:m.textContent,ti:titulo(b),se:secao(b),d:Date.now()});save();
+    G.push({id,pg:pagina(),url:location.pathname.split("/").pop()+location.hash,an:c,bi:bs.indexOf(b),k,t:m.textContent,ti:titulo(b),se:secao(b),d:Date.now(),c:x.dataset.c||"y"});save();pinta(m);
     esconder();return}
   if(x&&x.dataset.gfA==="tirar"&&alvo){const m=document.querySelector(`mark.gf[data-gf="${alvo.id}"]`);if(m){m.replaceWith(...m.childNodes)}G=G.filter(g=>g.id!==alvo.id);save();esconder();return}
-  const m=ev.target.closest("mark.gf");if(m){alvo={id:m.dataset.gf};mostrar('<button type="button" data-gf-a="tirar">Remover destaque</button>');return}
+  if(x&&x.dataset.gfA==="cor"&&alvo){const g=G.find(z=>z.id===alvo.id);if(g){g.c=x.dataset.c;save();const m=document.querySelector(`mark.gf[data-gf="${g.id}"]`);if(m)pinta(m)}esconder();return}
+  if(x&&x.dataset.gfA==="nota"&&alvo){const g=G.find(z=>z.id===alvo.id);mostrar(`<textarea placeholder="Sua nota sobre este trecho">${esc((g&&g.n)||"")}</textarea><button class="gf-pri" type="button" data-gf-a="salvar">Salvar nota</button>`);const ta=bar.querySelector("textarea");if(ta)ta.focus();return}
+  if(x&&x.dataset.gfA==="salvar"&&alvo){const g=G.find(z=>z.id===alvo.id),ta=bar.querySelector("textarea");if(g&&ta){g.n=ta.value.trim();save();const m=document.querySelector(`mark.gf[data-gf="${g.id}"]`);if(m)pinta(m)}esconder();return}
+  const m=ev.target.closest("mark.gf");if(m){alvo={id:m.dataset.gf};const g=G.find(z=>z.id===m.dataset.gf)||{};mostrar(CORES.filter(([c])=>c!==(g.c||"y")).map(([c,n])=>`<button class="gf-c" type="button" data-gf-a="cor" data-c="${c}"><i class="gf-dot ${c}"></i><span>${n}</span></button>`).join("")+`<button type="button" data-gf-a="nota">${g.n?"Editar nota":"Escrever nota"}</button><button type="button" data-gf-a="tirar">Remover destaque</button>`);return}
   if(alvo&&!alvo.sel&&!ev.target.closest(".gf-bar"))esconder()});
+bar.addEventListener("pointerdown",e=>{if(e.target.closest("textarea"))e.stopPropagation()},true);
 const pan=document.createElement("div");pan.className="gf-pan";pan.setAttribute("role","dialog");pan.setAttribute("aria-label","Destaques");document.body.appendChild(pan);
-const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 function painel(){let h='<div class="gf-in"><div class="gf-hd"><h2>Destaques</h2><button type="button" data-gf-x>Fechar</button></div><p class="gf-sub">Revisão rápida dos trechos que você destacou</p>';
+  const F=painel.f||"";h+='<div class="gf-fil">'+[["","Todos"]].concat(CORES).map(([c,n])=>`<button type="button" data-gf-f="${c}" aria-pressed="${c===F}">${c?`<i class="gf-dot ${c}" style="width:10px;height:10px;border-radius:50%;display:inline-block"></i>`:""}${n} · ${c?G.filter(g=>(g.c||"y")===c).length:G.length}</button>`).join("")+'<button type="button" data-gf-cp>Copiar</button></div>';
   if(!G.length)h+='<p class="gf-vz">Nenhum destaque ainda. Selecione um trecho da apostila e toque em Destacar.</p>';
-  const por={};G.forEach(g=>{(por[g.ti]=por[g.ti]||[]).push(g)});
+  const por={};G.filter(g=>!F||(g.c||"y")===F).forEach(g=>{(por[g.ti]=por[g.ti]||[]).push(g)});
   for(const ti in por){h+=`<div class="gf-ap">${esc(ti)}</div>`;let se=null;por[ti].sort((a,b)=>(a.bi-b.bi)||(a.d-b.d)).forEach(g=>{if(g.se!==se){se=g.se;if(se)h+=`<div class="gf-sec">${esc(se)}</div>`}
-    h+=`<div class="gf-it"><a href="${esc(g.url)}" data-gf-ir="${g.id}">${esc(g.t)}</a><button type="button" data-gf-del="${g.id}" aria-label="Apagar destaque">×</button></div>`})}
+    h+=`<div class="gf-it"><a class="${g.c||"y"}" href="${esc(g.url)}" data-gf-ir="${g.id}">${esc(g.t)}${g.n?`<small>✎ ${esc(g.n)}</small>`:""}</a><button type="button" data-gf-del="${g.id}" aria-label="Apagar destaque">×</button></div>`})}
   pan.innerHTML=h+'</div>';pan.classList.add("on");document.documentElement.style.overflow="hidden"}
 function fechar(){pan.classList.remove("on");document.documentElement.style.overflow=""}
 fb.onclick=painel;
 pan.addEventListener("click",ev=>{if(ev.target.closest("[data-gf-x]"))return fechar();
+  const fl=ev.target.closest("[data-gf-f]");if(fl){painel.f=fl.dataset.gfF;return painel()}
+  if(ev.target.closest("[data-gf-cp]")){const F=painel.f||"";let t="",ti=null;G.filter(g=>!F||(g.c||"y")===F).forEach(g=>{if(g.ti!==ti){ti=g.ti;t+="\n"+ti+"\n"}t+="• ["+CN[g.c||"y"]+"] "+g.t+(g.n?"\n   Nota: "+g.n:"")+"\n"});
+    const b=ev.target.closest("[data-gf-cp]");(navigator.clipboard?navigator.clipboard.writeText(t.trim()):Promise.reject()).then(()=>{b.textContent="Copiado"},()=>{b.textContent="Não deu para copiar"});return}
   const d=ev.target.closest("[data-gf-del]");if(d){G=G.filter(g=>g.id!==d.dataset.gfDel);const m=document.querySelector(`mark.gf[data-gf="${d.dataset.gfDel}"]`);if(m)m.replaceWith(...m.childNodes);save();return painel()}
   const a=ev.target.closest("[data-gf-ir]");if(a){sessionStorage.setItem("gf-go",a.dataset.gfIr);fechar();if(a.getAttribute("href")===location.pathname.split("/").pop()+location.hash){ev.preventDefault();aplicar()}}});
 new MutationObserver(()=>{clearTimeout(aplicar._t);aplicar._t=setTimeout(aplicar,120)}).observe(root(),{childList:true,subtree:true});
