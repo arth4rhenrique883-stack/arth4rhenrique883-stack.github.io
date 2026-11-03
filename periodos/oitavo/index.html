@@ -403,6 +403,17 @@ body.xm-rolando .tm-bt,body.xm-rolando .nv-bt,body.xm-rolando .xm-canto{transfor
 .xm-cont span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .xm-cont b{opacity:.65;font-weight:700;margin-right:4px;letter-spacing:.04em}
 /*/as:ux*/
+/*q:css*/
+.qf{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 4px}
+.qf button{font:600 13px/1 var(--head);color:var(--muted);background:transparent;border:1px solid var(--line);border-radius:999px;padding:10px 14px;min-height:40px}
+.qf button[aria-pressed="true"]{color:var(--fg);border-color:var(--red)}
+.qf button span{font:500 11px var(--mono);margin-left:6px;opacity:.75}
+.qg{margin-top:26px}.qg>h2{margin-bottom:6px}
+.qit{display:flex;flex-direction:column;gap:6px;margin:16px 0}
+.qmeta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font:500 12px var(--mono);color:var(--muted)}
+.qmeta a{color:var(--muted)}
+.qpa{border:1px solid var(--red);color:var(--red-ink);border-radius:999px;padding:3px 9px;font:600 11px var(--mono)}
+/*/q:css*/
 </style>
 <link data-as-fonte rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Nabla&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap">
 </head>
@@ -657,7 +668,33 @@ async function guia(cid){const c=CAT(cid);if(!c)return home();const D=await need
   app.innerHTML=h+`</article>`;window.scrollTo(0,0)}
 
 /* rotas: as do 8º (#ds/resumos/bloco/página/id) e as do 6º (#/a/id/página a partir de 1, #/a/id/artigos) */
+/*q:js*/
+const QPA=(b,sid)=>b.t==="prova"||/^(pa6-|ci-prova)/.test(sid)||/j[áa] caiu|prova antiga/i.test(b.src||"");
+let QF=(()=>{try{return localStorage.getItem("xm-qf")||"todas"}catch(e){return "todas"}})(),QE="";
+async function questoes(av,mat,gs){document.body.classList.remove("bookmode");onkey=null;onresize=null;CUR={deck:null,tot:0};
+  const G=(gs||"").split(";").filter(Boolean).map(x=>{const i=x.lastIndexOf(":");return {esp:i>0?x.slice(0,i):"",ids:(i>=0?x.slice(i+1):x).split(",").filter(Boolean)}});
+  const Q=[];
+  for(const g of G)for(const id of g.ids)for(const c of P.cat){const bi=c.secs.findIndex(s=>s.id===id);if(bi<0)continue;
+    const D=await need(c),s=D.sections[bi];if(!s)continue;
+    pages(s.blocks).forEach((p,pi)=>p.blocks.forEach(b=>{if(b.t==="mcq"||b.t==="prova")Q.push({b,esp:g.esp,cid:c.id,bi,pi,sid:s.id,aula:strip(s.title),pg:p.title,pa:QPA(b,s.id)})}))}
+  document.title="Questões · "+mat+" · xequemate med";
+  const esps=[...new Set(G.map(g=>g.esp).filter(Boolean))];if(!esps.includes(QE))QE="";
+  const draw=()=>{const L1=Q.filter(q=>!QE||q.esp===QE),L=L1.filter(q=>QF!=="pa"||q.pa),npa=L1.filter(q=>q.pa).length;
+    let h=`<header class="head"><span class="kick">${esc(mat)} · ${esc(av)} · questões</span><h1>Questões</h1><p class="sub">${Q.length?`${Q.length} ${Q.length===1?"questão":"questões"} das apostilas desta matéria, com comentário. As de provas antigas levam o selo.`:"As questões desta matéria entram aqui junto com as apostilas."}</p>`;
+    if(esps.length>1)h+=`<div class="qf" role="group" aria-label="Especialidade"><button type="button" data-qe="" aria-pressed="${!QE}">Todas as áreas<span>${Q.length}</span></button>${esps.map(e=>`<button type="button" data-qe="${esc(e)}" aria-pressed="${QE===e}">${esc(e)}<span>${Q.filter(q=>q.esp===e).length}</span></button>`).join("")}</div>`;
+    h+=`<div class="qf" role="group" aria-label="Filtro"><button type="button" data-qf="todas" aria-pressed="${QF!=="pa"}">Todas<span>${L1.length}</span></button><button type="button" data-qf="pa" aria-pressed="${QF==="pa"}">Provas antigas<span>${npa}</span></button></div></header><article>`;
+    if(!L.length)h+=`<p class="note">${!L1.length?"Ainda não há questões aqui. Elas aparecem assim que as apostilas desta matéria ganharem questões.":"Ainda não há questões de provas antigas aqui."}</p>`;
+    let ult=null;
+    for(const q of L){const k=q.cid+"/"+q.bi;if(k!==ult){if(ult)h+=`</section>`;h+=`<section class="qg"><h2>${esc(q.aula)}</h2>`;ult=k}
+      h+=`<div class="qit"><div class="qmeta">${q.pa?`<span class="qpa">Baseado em provas antigas</span>`:""}<a href="#${q.cid}/resumos/${q.bi}/${q.pi}">${esc(q.pg||"Ler na apostila")} ↗</a></div>${block(q.b)}</div>`}
+    if(ult)h+=`</section>`;
+    app.innerHTML=h+`</article>`;wire(app);slRefs(app);
+    app.querySelectorAll("[data-qf]").forEach(b=>b.onclick=()=>{QF=b.dataset.qf;try{localStorage.setItem("xm-qf",QF)}catch(e){}draw()});
+    app.querySelectorAll("[data-qe]").forEach(b=>b.onclick=()=>{QE=b.dataset.qe;draw()})};
+  draw();window.scrollTo(0,0)}
+/*/q:js*/
 function route(){const h=decodeURIComponent(location.hash.slice(1));CUR={deck:null,tot:0};document.body.classList.remove("ld-on");
+  {const q=/^questoes\/([^/]+)\/([^/]+)\/?(.*)$/.exec(h);if(q)return questoes(q[1],q[2],q[3])}   /*q:rota*/
   let m=/^\/a\/([^/]+)(?:\/([^/]+))?/.exec(h);
   if(m){for(const c of P.cat){const i=c.secs.findIndex(s=>s.id===m[1]);if(i>=0)return m[2]==="artigos"?fontes(c.id,i):aula(c.id,i,m[2]?Math.max(0,+m[2]-1):(VISTO[m[1]]||{}).last||0)}return home()}
   m=/^([\w-]+)\/(resumos|fontes|guia)(?:\/(\d+))?(?:\/(\d+))?/.exec(h);
