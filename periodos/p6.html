@@ -358,6 +358,59 @@ body.xm-rolando .tm-bt,body.xm-rolando .nv-bt,body.xm-rolando .xm-canto{transfor
 .qbox::after{content:"›";font:400 20px/1 var(--display);color:var(--red-ink)}
 .qbox.off{opacity:.55}.qbox.off::after{content:none}
 /*/q:hcss*/</style>
+<style data-foco>/*foco*/
+html:root{--bg:#14161D!important;--surface:#1A1D26;--surface-2:#20242F;--raise:#1A1D26;--line:#272B37;--line-2:#363B49;
+--fg:#E6E6EA;--ink:#E6E6EA;--muted:#A4A8B4;--dim:#7E8290;--red:hsl(346 40% 58%);--red-ink:hsl(346 54% 80%);--red-soft:hsl(346 24% 15%);--red-deep:hsl(346 26% 26%);--accent:hsl(346 54% 80%);--accent-soft:hsl(346 24% 15%);
+--xm-acc:#D6A24A;--xm-acc-ink:#E9C27A;--xm-acc-soft:rgba(214,162,74,.14);
+--amber:#D6A24A;--amber-soft:#1E1A12;--bad:#E5484D;--bad-soft:#2A1416;--ok:#5FA88A;--ok-soft:#14211C;--good:#8EA3C6;--easy:#5FA88A;--hard:#B9BCC6;
+--blue:#8EA3C6;--upd-bg:#161B26;--upd-line:#3E4E6C;--upd-ink:#CDD3DE;scrollbar-color:#363B49 #14161D}
+html{background:#14161D linear-gradient(rgba(150,170,215,.05) 1px,transparent 1px) 0 0/40px 40px,#14161D linear-gradient(90deg,rgba(150,170,215,.05) 1px,transparent 1px) 0 0/40px 40px!important;background-color:#14161D!important}
+html::before{background:linear-gradient(rgba(150,170,215,.022) 1px,transparent 1px) 0 0/8px 8px,linear-gradient(90deg,rgba(150,170,215,.022) 1px,transparent 1px) 0 0/8px 8px!important}
+html body{color:#E6E6EA}
+html :is(h1,h2){color:#E6E6EA;-webkit-text-stroke:0;text-shadow:none}
+html :is(b,strong),html .lance .q,html .vw .vt b{color:#F1F1F4}
+html :is(i,em){color:#D9DAE0}
+html ::selection{background:hsl(346 26% 26%);color:#F1F1F4}
+html .word{color:#E6E6EA}
+html :is(.pages button[aria-current],.toc li button[aria-current],.vw .mine button[aria-pressed="true"],.modo button[aria-pressed="true"],.pers a[aria-current],nav.pers a:hover,.tabs a[aria-current="page"],.gf-fil button[aria-pressed=true]){color:#F1F1F4}
+html :is(.vw .nv,.bk-foot button,.calc input){color:#E6E6EA}
+html .tabs a[aria-current="page"],html .chip[aria-pressed="true"]{background:#20242F}
+html .pers a[data-per="p1"]{--c:hsl(14 42% 60%)}html .pers a[data-per="p2"]{--c:hsl(318 34% 62%)}html .pers a[data-per="p3"]{--c:hsl(38 46% 58%)}html .pers a[data-per="p4"]{--c:hsl(128 30% 56%)}html .pers a[data-per="p5"]{--c:hsl(218 42% 64%)}html .pers a[data-per="p6"]{--c:hsl(346 40% 58%)}html .pers a[data-per="p7"]{--c:hsl(187 42% 52%)}html .pers a[data-per="p8"]{--c:hsl(262 40% 66%)}html .pers a[data-per="res"]{--c:hsl(357 38% 56%)}
+/* nome e botões do topo (a animação do ECG fica igual) */
+html .asmed .t,html .asmed-p .t{color:#E6E6EA}html .asmed-p .t b{color:hsl(346 54% 80%)}
+html :is(.tm-bt,.nv-bt){background:#1A1D26;border-color:#363B49;color:#C4C7D0}
+html .xm-mini{background:#1A1D26;border-color:#272B37}
+html .nv-beta{background:#1A1D26;color:#D6A24A;border-color:#4A3D22}
+html .nv-box{background:#1A1D26;border-color:#363B49;color:#E6E6EA}html .nv-box :is(input[type=email],input[type=password]){background:#14161D;color:#E6E6EA;border-color:#363B49}
+html .nv-box button{background:#20242F;border-color:#363B49;color:#E6E6EA}html .nv-box button.pr{background:#D6A24A;border-color:#D6A24A;color:#1A1408}html .nv-box a{color:#E9C27A}
+html .nv-bk{background:rgba(10,11,15,.74)}
+/* acento âmbar único: progresso, botões principais, conclusão */
+html .bar i{background:#D6A24A}
+html .item.lida .n::after{color:#D6A24A}
+html .ini-bt{color:#E6E6EA;background:#1A1D26;border-color:#D6A24A}html .ini-bt:hover{background:rgba(214,162,74,.14)}
+html .xm-cont{border-color:color-mix(in srgb,#D6A24A 45%,#272B37);background:rgba(214,162,74,.14)}html .xm-cont b{color:#E9C27A;opacity:1}
+html .lida[aria-pressed="true"]{color:#E9C27A;border-color:#D6A24A;background:rgba(214,162,74,.14)}
+html .gf-fab,html .gf-bar button{background:#20242F;border-color:#363B49;color:#E6E6EA}
+html .gf-bar button.gf-pri{background:#D6A24A;border-color:#D6A24A;color:#1A1408}
+html .gf-pan{background:#14161D}html .gf-hd h2,html .gf-sec{color:#E6E6EA}html .gf-it a{color:#E6E6EA}
+html .gf-bar textarea{background:#14161D;color:#E6E6EA;border-color:#363B49}
+/* marca-texto: 3 cores menos saturadas, texto off-white por cima com contraste AA */
+html mark.gf.gf-y{background:rgba(230,190,72,.30);border-bottom-color:rgba(230,190,72,.85)}
+html mark.gf.gf-r{background:rgba(229,72,77,.30);border-bottom-color:rgba(229,72,77,.9)}
+html mark.gf.gf-b{background:rgba(96,150,228,.30);border-bottom-color:rgba(96,150,228,.9)}
+html .gf-dot.y{background:#E6BE48}html .gf-dot.r{background:#E5484D}html .gf-dot.b{background:#6096E4}
+/* recompensa: barra por matéria, selo de conclusão e sequência de dias */
+details.mat>summary{position:relative}
+.xm-pg{position:absolute;left:16px;right:16px;bottom:6px;height:2px;border-radius:2px;background:#272B37;overflow:hidden}
+.xm-pg i{display:block;height:100%;width:var(--pg,0%);background:#D6A24A;border-radius:3px;transition:width .4s ease}
+.xm-selo{display:inline-flex;align-items:center;gap:4px;font:700 10.5px/1 Lato,system-ui,sans-serif!important;letter-spacing:.08em;text-transform:uppercase;color:#1A1408;background:#D6A24A;border-radius:999px;padding:4px 8px;margin-left:8px;font-style:normal;white-space:nowrap}
+details.mat.xm-fim>summary{border-color:color-mix(in srgb,#D6A24A 55%,#272B37)}
+.xm-seq{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:10px 0 2px}
+.xm-seq span{display:inline-flex;align-items:center;gap:6px;font:600 12px/1 Lato,system-ui,sans-serif!important;color:#A4A8B4;border:1px solid #272B37;border-radius:999px;padding:7px 11px;background:#1A1D26}
+.xm-seq span b{color:#E9C27A;font-weight:700}
+.xm-seq span.on{border-color:color-mix(in srgb,#D6A24A 50%,#272B37)}
+.xm-seq svg{width:12px;height:12px;fill:#D6A24A}
+/*/foco*/</style>
 </head>
 <body>
 
@@ -807,5 +860,26 @@ a.onclick=function(){try{if(c.y)sessionStorage.setItem("xm-y",c.y)}catch(e){}};
 var ref=document.querySelector(".tabs")||document.querySelector("h1");if(ref&&ref.parentNode)ref.parentNode.insertBefore(a,ref.nextSibling)}
 setTimeout(mk,400)}
 })()</script>
+<script data-foco>(function(){function xmD(t){var d=t?new Date(t):new Date();return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)};
+function dias(){var s={};try{var o=JSON.parse(localStorage.getItem('medaj-xm-dias')||'{}');for(var k in o)s[k]=1}catch(e){}
+for(var i=0;i<localStorage.length;i++){var n=localStorage.key(i);if(!/^medaj-p\d-lidas$/.test(n))continue;try{var l=JSON.parse(localStorage.getItem(n)||'{}');for(var a in l)if(typeof l[a]==='number')s[xmD(l[a])]=1}catch(e){}}return s}
+function seq(){var s=dias(),d=new Date(),n=0;if(!s[xmD(d)])d.setDate(d.getDate()-1);while(s[xmD(d)]){n++;d.setDate(d.getDate()-1)}return n}
+var busy=false;
+function pinta(){if(busy)return;busy=true;try{
+var tot=0;document.querySelectorAll('details.mat>summary').forEach(function(sm){var sp=sm.querySelector('span:not(.xm-selo)');if(!sp)return;var m=/(\d+) de (\d+) lidas/.exec(sp.textContent);
+var pg=sm.querySelector('.xm-pg'),se=sm.querySelector('.xm-selo'),d=sm.parentNode;
+if(!m){if(pg)pg.remove();if(se)se.remove();d.classList.remove('xm-fim');return}
+var a=+m[1],b=+m[2],p=b?Math.round(100*a/b):0;tot+=a;
+if(!pg){pg=document.createElement('i');pg.className='xm-pg';pg.innerHTML='<i></i>';sm.appendChild(pg)}
+if(pg.style.getPropertyValue('--pg')!==p+'%')pg.style.setProperty('--pg',p+'%');
+var fim=b>0&&a===b;d.classList.toggle('xm-fim',fim);
+if(fim&&!se){se=document.createElement('em');se.className='xm-selo';se.textContent='✓ Concluída';sp.after(se)}else if(!fim&&se)se.remove()});
+var bar=document.querySelector('.avbar');if(bar){var q=document.querySelector('.xm-seq');if(!q){q=document.createElement('div');q.className='xm-seq';bar.after(q)}
+var n=seq(),h='<span class="'+(n?'on':'')+'"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 0C7 3 10 4 10 7.5A4 4 0 0 1 2 7.5C2 5.5 3.5 4.5 4 3C5 4 5 5 5.5 5.5C6.5 4 6.5 2 6 0Z"/></svg>Sequência <b>'+n+'</b> '+(n===1?'dia':'dias')+'</span><span class="'+(tot?'on':'')+'">Lidas <b>'+tot+'</b></span>';
+if(q.innerHTML!==h)q.innerHTML=h}
+}finally{busy=false}}
+var t=0;new MutationObserver(function(){clearTimeout(t);t=setTimeout(pinta,30)}).observe(document.body,{childList:true,subtree:true,characterData:true});
+document.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('button[data-lida]'))setTimeout(function(){try{if(typeof renderApostilas==='function'){var y=scrollY;renderApostilas();scrollTo(0,y)}}catch(x){}pinta()},30)});
+pinta()})();</script>
 </body>
 </html>
