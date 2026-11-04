@@ -14,9 +14,6 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Archivo:wght@500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@500;600&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
 <style>
 /* Layout: app de uma tela, bem simples: o nome no centro do preto, o baralho, o resumo e o cartão. */
 /* xequemate med (28/10): preto predominante, branco, vermelho sutil e mínimos detalhes de azul; só a chama do nome muda de cor. */
@@ -332,7 +329,6 @@ html[data-tema=claro] :is(img,video,picture,canvas,[style*="background-image"]){
 .nv-msg{min-height:18px;font-size:13px;color:#e0a030}.nv-box details{font-size:12px;color:#9a9a9a;margin-top:8px}.nv-box a{color:#d8b36a}
 /*/nv:css*/
 </style>
-<link data-as-fonte rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Nabla&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap">
 <style>/*pers:vert*/nav.pers{flex-direction:column;flex-wrap:nowrap;align-items:stretch;width:min(300px,100%);margin:-10px auto 0;gap:6px}nav.pers a{justify-content:flex-start;padding:12px 16px;font-size:11.5px;letter-spacing:.08em;border-radius:12px;transition:border-color .2s,background .2s,color .2s}nav.pers a::after{content:"\203A";margin-left:auto;font-size:16px;line-height:1;opacity:.45}nav.pers a:hover{color:#fff;border-color:var(--c)}nav.pers a[aria-current]::after{opacity:1;color:var(--c)}</style><style data-q>/*q:hcss*/
 .qbox{display:flex;align-items:center;gap:12px;margin-top:12px;padding:13px 14px;border:1px solid var(--line-2);border-radius:10px;text-decoration:none;color:var(--fg);background:transparent}
 .qbox b{font:600 15px var(--display);flex:1}.qbox span{font:500 12px var(--mono);color:var(--muted);text-align:right}
@@ -438,6 +434,43 @@ html[data-tema=claro] body.bookmode .top{border-bottom:0}
 html[data-tema=claro] details.mat[open]>summary{border-bottom-color:#EDEFF0}
 html[data-tema=claro] body::after{background:radial-gradient(110% 55% at 50% -8%,hsla(190,75%,78%,.42),transparent 70%),radial-gradient(70% 45% at 100% 105%,hsla(190,70%,80%,.36),transparent 70%)}
 /*/foco*/</style>
+<style data-limpo>@font-face{font-family:Lato;font-style:normal;font-weight:400;font-display:swap;src:url(/periodos/fonts/lato-400.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Lato;font-style:italic;font-weight:400;font-display:swap;src:url(/periodos/fonts/lato-400i.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Lato;font-style:normal;font-weight:600 900;font-display:swap;src:url(/periodos/fonts/lato-700.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Lato;font-style:normal;font-weight:300;font-display:swap;src:url(/periodos/fonts/lato-400.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Merriweather;font-style:normal;font-weight:300 900;font-display:swap;src:url(/periodos/fonts/merriweather-400.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Merriweather;font-style:italic;font-weight:300 900;font-display:swap;src:url(/periodos/fonts/merriweather-400i.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+/* ritmo e respiro */
+html body{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+.kick,.crumb,.tag-top,.app-name{font-family:Lato,system-ui,sans-serif!important;letter-spacing:.12em}
+.app-name{opacity:.75}
+header.bar{padding:clamp(22px,5vh,48px) 0 clamp(6px,2vh,16px)!important}
+/* sequência e lidas: uma linha discreta, sem pílulas */
+.xm-seq{gap:14px!important;margin:6px 0 4px!important}
+html body .xm-seq span{border:0!important;background:none!important;padding:2px 0!important;font-size:11.5px!important;color:#8E93A0!important;letter-spacing:.02em}
+html body .xm-seq span b{color:#C9A35F!important}
+/* seletor de períodos recolhido nas telas de período */
+nav.pers.xm-fecha a:not([aria-current]){display:none!important}
+nav.pers.xm-fecha a[aria-current]::after,nav.pers.xm-abre a[aria-current]::after{content:"trocar ▾";margin-left:auto;font-size:10.5px;letter-spacing:.08em;opacity:.55;text-transform:none}
+nav.pers.xm-abre a[aria-current]::after{content:"fechar ▴"}
+nav.pers.xm-fecha a[aria-current]{display:flex!important;align-items:center}
+/* cartões: menos contorno competindo */
+.mat summary{padding-top:14px;padding-bottom:14px}
+.bfoot{opacity:.8}
+/* leitor: paginação e modo de leitura compactos */
+.pages{gap:5px!important}
+html body .pages button{min-width:28px!important;height:28px!important;font-size:11px!important;border-color:transparent!important}
+html body .pages button.seen:not([aria-current]){border-color:transparent!important;opacity:.85}
+html body .pages button[aria-current]{border-color:currentColor!important}
+.modo.ask{flex-direction:row!important;flex-wrap:wrap!important;align-items:center!important;gap:6px!important;padding:10px 12px!important;border-radius:10px!important}
+.modo.ask .kick{width:100%;margin:0 0 2px!important;font-size:10.5px!important;opacity:.7}
+html body .modo.ask button{padding:6px 11px!important;font-size:12.5px!important;text-align:center!important}
+details.toc>summary{padding-top:8px;padding-bottom:8px}
+.head{padding-bottom:6px}
+/* resíduo de fonte antiga */
+.q{font-family:Merriweather,Georgia,serif!important;font-style:italic}
+/* tema claro: contorno suave em vez de traço preto */
+html[data-tema=claro] :is(.mat,.go,.bitem,.item,.sl,figure,.lance,.law,.grade,.reveal,.bubble,.pers a:not([aria-current]),.nv-box,.gf-pan){box-shadow:0 0 0 1px #34383C inset,0 10px 24px -16px hsla(190,60%,72%,.6)}
+html[data-tema=claro] .top{border-bottom:1px solid #383C40}
+/* BETA mais apagado */
+.xm-canto,.xm-beta,[data-beta]{opacity:.55}
+@media (max-width:520px){.pages button{min-width:26px!important;height:26px!important}}
+</style>
 </head>
 <body>
 
@@ -920,5 +953,8 @@ if(q.innerHTML!==h)q.innerHTML=h}
 var t=0;new MutationObserver(function(){clearTimeout(t);t=setTimeout(pinta,30)}).observe(document.body,{childList:true,subtree:true,characterData:true});
 document.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('button[data-lida]'))setTimeout(function(){try{if(typeof renderApostilas==='function'){var y=scrollY;renderApostilas();scrollTo(0,y)}}catch(x){}pinta()},30)});
 pinta()})();</script>
-</body>
+<script data-limpo>(function(){var n=document.querySelector("nav.pers");if(!n||!n.querySelector("a[aria-current]"))return;
+if(!/\/p\d+\.html$/.test(location.pathname))return;n.classList.add("xm-fecha");
+n.addEventListener("click",function(e){var a=e.target.closest("a");if(!a||!a.hasAttribute("aria-current"))return;e.preventDefault();
+var f=n.classList.toggle("xm-fecha");n.classList.toggle("xm-abre",!f)})})()</script></body>
 </html>

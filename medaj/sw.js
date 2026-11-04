@@ -1,8 +1,8 @@
 // xmR: guarda o app inteiro (páginas, apostilas, dados e imagens dos slides) para funcionar sem internet.
 // Gerado por app/offline.py. Ao publicar uma versão nova, troque o número abaixo.
-const V = "medaj-v34";
+const V = "medaj-v35";
 const MIDIA = "medasr-midia";
-const CORE = ["./", "bloco1.html", "bloco2.html", "icon-180.png", "icon-192.png", "icon-512.png", "index.html", "manifest.webmanifest", "marca6-180.png", "marca6-192.png", "marca6-512.png"];
+const CORE = ["./", "bloco1.html", "bloco2.html", "fonts/lato-400.woff2", "fonts/lato-400i.woff2", "fonts/lato-700.woff2", "fonts/merriweather-400.woff2", "fonts/merriweather-400i.woff2", "icon-180.png", "icon-192.png", "icon-512.png", "index.html", "manifest.webmanifest", "marca6-180.png", "marca6-192.png", "marca6-512.png"];
 const IMGS = [];
 
 self.addEventListener("install", e => {
