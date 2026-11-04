@@ -812,7 +812,6 @@ function renderApostilas(){
       h+=L.length?`<div class="blist">${L.map(item).join("")}</div>`:`<p class="soon">Em breve</p>`}
     {/*q:hub*/const QA=PER.aulas.filter(a=>a.mat===mat&&inAV(a)),nq=QA.reduce((t,a)=>t+(a.nq||0),0),npa=QA.reduce((t,a)=>t+(a.npa||0),0);const gs=[...new Set(QA.map(a=>a.sub||""))].map(sb=>(sb?sb+":":"")+QA.filter(a=>(a.sub||"")===sb).map(a=>a.id).join(",")).join(";");h+=nq?`<a class="qbox" href="${e_(site("questoes/"+(AV==="TO"?(QA[0]||{}).av||"A1":AV)+"/"+encodeURIComponent(mat)+"/"+encodeURIComponent(gs)))}"><b>Questões</b><span>${nq} · ${npa} de provas antigas</span></a>`:`<div class="qbox off"><b>Questões</b><span>em breve</span></div>`}
     h+=`</details>`}
-  if(AV==="TO")h+=`<a class="qbox ubs" href="https://claude.ai/artifact/CswXqjM295zXJha6hAQ5Q3" target="_blank" rel="noopener"><b>Respostas da UBS simulada</b><span>documento ↗</span></a>`;
   el.innerHTML=h;renderLidas();
 }
 const EKEY="medaj-"+PER.id+"-esp";let ESP={};try{ESP=JSON.parse(localStorage.getItem(EKEY)||"{}")}catch(e){}
