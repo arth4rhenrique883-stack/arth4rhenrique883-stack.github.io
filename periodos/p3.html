@@ -801,7 +801,7 @@ function renderHoje(){
 }
 const AKEY="medaj-"+PER.id+"-av";let ABERTA={};
 document.addEventListener("toggle",ev=>{const d=ev.target;if(d.matches&&d.matches("details.mat"))ABERTA[d.dataset.mat]=d.open},true);
-let AV=(()=>{let v=null;try{v=sessionStorage.getItem(AKEY)}catch(e){}return v})();
+let AV=(()=>{let v=null;return v})();
 function renderApostilas(){
   const el=document.getElementById("v-apostilas");
   if(!PER.grade.length){el.innerHTML=`<p class="soon">${e_(PER.soon)}</p>`;return}
@@ -824,7 +824,7 @@ function renderApostilas(){
 }
 const EKEY="medaj-"+PER.id+"-esp";let ESP={};try{ESP=JSON.parse(localStorage.getItem(EKEY)||"{}")}catch(e){}
 document.addEventListener("click",ev=>{const b=ev.target.closest("[data-esp]");if(!b)return;ESP[b.dataset.espmat]=b.dataset.esp;try{localStorage.setItem(EKEY,JSON.stringify(ESP))}catch(e){}renderApostilas()});
-document.addEventListener("click",ev=>{const b=ev.target.closest("[data-av]");if(!b)return;AV=b.dataset.av;try{sessionStorage.setItem(AKEY,AV)}catch(e){}renderApostilas()});
+document.addEventListener("click",ev=>{const b=ev.target.closest("[data-av]");if(!b)return;AV=b.dataset.av;renderApostilas()});
 function renderLidas(){document.querySelectorAll("[data-lida]").forEach(b=>{const on=!!LIDAS[b.dataset.lida];b.setAttribute("aria-pressed",on);b.textContent=on?"Lida":"Marcar como lida"})}
 document.addEventListener("click",ev=>{const b=ev.target.closest("[data-lida]");if(!b)return;const k=b.dataset.lida;if(LIDAS[k])delete LIDAS[k];else LIDAS[k]=Date.now();try{localStorage.setItem(LKEY,JSON.stringify(LIDAS))}catch(e){}renderLidas()});
 renderApostilas();
@@ -977,5 +977,5 @@ function poe(){var el=document.getElementById("v-apostilas");if(!el)return;var v
 var _r=renderApostilas;renderApostilas=function(){_r();poe()};poe();
 })();
 </script>
-</body>
+<script data-volta>addEventListener("pageshow",function(e){if(e.persisted&&typeof AV!=="undefined"&&AV){AV=null;renderApostilas()}})</script></body>
 </html>
