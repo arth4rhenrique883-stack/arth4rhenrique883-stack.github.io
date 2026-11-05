@@ -166,6 +166,18 @@ html[data-tema=claro] .top{border-bottom:1px solid #383C40}
 .xm-canto,.xm-beta,[data-beta]{opacity:.55}
 @media (max-width:520px){.pages button{min-width:26px!important;height:26px!important}}
 </style>
+<style data-aprende>
+html{--ap-fs:1}
+html body main{font-size:calc(1em*var(--ap-fs))}
+.ap-ctl{display:flex;gap:6px;justify-content:flex-end;margin:6px 0 10px}
+.ap-ctl button{font:600 12px/1 Lato,system-ui,sans-serif!important;color:#b9bcc4;background:#07080A;border:1px solid #2a2d35;border-radius:999px;padding:8px 11px;min-height:34px;cursor:pointer;opacity:.82}
+.ap-ctl button[aria-pressed="true"]{color:#F0CC76;border-color:#E0AC3C;opacity:1}
+.ap-ctl button:disabled{opacity:.35}
+body.ap-rapido main article :is(p,ul,ol):not(:is(.box,.pearl,.cur,aside,blockquote,table,details,figure,.q,.qz,.card) *){display:none}
+.ap-cur>:first-child{cursor:pointer}
+.ap-cur:not(.ap-open)>:not(:first-child){display:none!important}
+.ap-cur>:first-child::after{content:" ▸ abrir";font-size:.8em;opacity:.7}.ap-cur.ap-open>:first-child::after{content:" ▾ fechar"}
+</style>
 </head>
 <body>
 <title>xequemate med · Ginecologia e Obstetrícia</title>
@@ -946,5 +958,17 @@ addEventListener("hashchange",function(){setTimeout(mk,950)});setTimeout(mk,400)
 <script data-limpo>(function(){var n=document.querySelector("nav.pers");if(!n||!n.querySelector("a[aria-current]"))return;
 if(!/\/p\d+\.html$/.test(location.pathname))return;n.classList.add("xm-fecha");
 n.addEventListener("click",function(e){var a=e.target.closest("a");if(!a||!a.hasAttribute("aria-current"))return;e.preventDefault();
-var f=n.classList.toggle("xm-fecha");n.classList.toggle("xm-abre",!f)})})()</script></body>
+var f=n.classList.toggle("xm-fecha");n.classList.toggle("xm-abre",!f)})})()</script><script data-aprende>
+(function(){
+var FS=[.9,1,1.1,1.2,1.32];function ld(k,d){try{var v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}function sv(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+function fs(){var v=ld("medaj-xm-fonte",1);return FS.indexOf(v)>=0?v:1}function rap(){return ld("medaj-xm-rapido",0)===1}
+function ap(){document.documentElement.style.setProperty("--ap-fs",fs());document.body.classList.toggle("ap-rapido",rap());
+  c.querySelectorAll("[data-f]").forEach(function(b){var i=FS.indexOf(fs());b.disabled=b.getAttribute("data-f")==="-1"?i===0:i===FS.length-1});c.querySelector("[data-r]").setAttribute("aria-pressed",rap())}
+var c=document.createElement("div");c.className="ap-ctl";c.innerHTML='<button type="button" data-f="-1" aria-label="Diminuir a letra">A−</button><button type="button" data-f="1" aria-label="Aumentar a letra">A+</button><button type="button" data-r>Rápida</button>';
+c.onclick=function(e){var b=e.target.closest("button");if(!b)return;if(b.hasAttribute("data-f")){var i=Math.max(0,Math.min(FS.length-1,FS.indexOf(fs())+(+b.getAttribute("data-f"))));sv("medaj-xm-fonte",FS[i])}else sv("medaj-xm-rapido",rap()?0:1);ap()};
+var hd=document.querySelector("main>header"),mn=document.querySelector("main")||document.body;if(hd)hd.after(c);else mn.insertBefore(c,mn.firstChild);ap();
+document.querySelectorAll(".cur").forEach(function(B){var t=B.firstElementChild;if(!t)return;B.classList.add("ap-cur");t.setAttribute("role","button");t.tabIndex=0;var tg=function(){B.classList.toggle("ap-open")};t.addEventListener("click",tg);t.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();tg()}})});
+})();
+</script>
+</body>
 </html>
