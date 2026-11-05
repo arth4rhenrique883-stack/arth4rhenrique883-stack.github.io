@@ -824,7 +824,7 @@ function renderApostilas(){
 }
 const EKEY="medaj-"+PER.id+"-esp";let ESP={};try{ESP=JSON.parse(localStorage.getItem(EKEY)||"{}")}catch(e){}
 document.addEventListener("click",ev=>{const b=ev.target.closest("[data-esp]");if(!b)return;ESP[b.dataset.espmat]=b.dataset.esp;try{localStorage.setItem(EKEY,JSON.stringify(ESP))}catch(e){}renderApostilas()});
-document.addEventListener("click",ev=>{const b=ev.target.closest("[data-av]");if(!b)return;AV=b.dataset.av;renderApostilas()});
+document.addEventListener("click",ev=>{const b=ev.target.closest("[data-av]");if(!b)return;AV=AV===b.dataset.av?null:b.dataset.av;renderApostilas()});
 function renderLidas(){document.querySelectorAll("[data-lida]").forEach(b=>{const on=!!LIDAS[b.dataset.lida];b.setAttribute("aria-pressed",on);b.textContent=on?"Lida":"Marcar como lida"})}
 document.addEventListener("click",ev=>{const b=ev.target.closest("[data-lida]");if(!b)return;const k=b.dataset.lida;if(LIDAS[k])delete LIDAS[k];else LIDAS[k]=Date.now();try{localStorage.setItem(LKEY,JSON.stringify(LIDAS))}catch(e){}renderLidas()});
 renderApostilas();
