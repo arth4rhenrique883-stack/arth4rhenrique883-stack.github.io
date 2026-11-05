@@ -178,6 +178,20 @@ body.ap-rapido main article :is(p,ul,ol):not(:is(.box,.pearl,.cur,aside,blockquo
 .ap-cur:not(.ap-open)>:not(:first-child){display:none!important}
 .ap-cur>:first-child::after{content:" ▸ abrir";font-size:.8em;opacity:.7}.ap-cur.ap-open>:first-child::after{content:" ▾ fechar"}
 </style>
+<style data-tipo>
+html{--tx:Merriweather,Georgia,serif}
+html.xm-sans{--tx:Lato,system-ui,-apple-system,"Segoe UI",sans-serif}
+html main{max-width:660px!important}
+html main section{gap:22px!important}
+html main :is(p,li){font-family:var(--tx)!important;font-size:calc(19px*var(--ap-fs,1));line-height:1.6}
+html main :is(p,li) :is(b,strong){font-family:inherit!important;font-weight:700}
+html main h1{font:700 clamp(30px,6.4vw,38px)/1.18 Lato,system-ui,-apple-system,"Segoe UI",sans-serif!important;-webkit-text-stroke:0!important;text-shadow:none!important}
+html main h2{font:700 clamp(24px,5.2vw,27px)/1.22 Lato,system-ui,-apple-system,"Segoe UI",sans-serif!important;-webkit-text-stroke:0!important;text-shadow:none!important;margin-top:26px!important}
+html main h3{font:700 20px/1.25 Lato,system-ui,-apple-system,"Segoe UI",sans-serif!important}
+html main .box{font-size:calc(17px*var(--ap-fs,1))!important;line-height:1.58}
+html main .box :is(p,li){font-size:inherit!important}
+html main :is(td,th){font-family:Lato,system-ui,-apple-system,"Segoe UI",sans-serif!important}
+</style>
 </head>
 <body>
 <title>xequemate med · Ginecologia e Obstetrícia</title>
@@ -968,6 +982,16 @@ var c=document.createElement("div");c.className="ap-ctl";c.innerHTML='<button ty
 c.onclick=function(e){var b=e.target.closest("button");if(!b)return;if(b.hasAttribute("data-f")){var i=Math.max(0,Math.min(FS.length-1,FS.indexOf(fs())+(+b.getAttribute("data-f"))));sv("medaj-xm-fonte",FS[i])}else sv("medaj-xm-rapido",rap()?0:1);ap()};
 var hd=document.querySelector("main>header"),mn=document.querySelector("main")||document.body;if(hd)hd.after(c);else mn.insertBefore(c,mn.firstChild);ap();
 document.querySelectorAll(".cur").forEach(function(B){var t=B.firstElementChild;if(!t)return;B.classList.add("ap-cur");t.setAttribute("role","button");t.tabIndex=0;var tg=function(){B.classList.toggle("ap-open")};t.addEventListener("click",tg);t.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();tg()}})});
+})();
+</script>
+<script data-tipo>
+(function(){
+function on(){try{return localStorage.getItem("medaj-xm-sans")==="1"}catch(e){return false}}
+function ap(){document.documentElement.classList.toggle("xm-sans",on());document.querySelectorAll(".tp-sans").forEach(function(b){b.setAttribute("aria-pressed",on())});
+  if(document.body.classList.contains("bookmode")&&typeof onresize==="function"&&onresize)setTimeout(function(){try{onresize()}catch(e){}},0)}
+function poe(){document.querySelectorAll("[data-ap-ctl],.ap-ctl").forEach(function(c){if(c.querySelector(".tp-sans"))return;var b=document.createElement("button");b.type="button";b.className="tp-sans";b.textContent="Sem serifa";b.title="Troca o texto para uma fonte sem serifa";
+  b.onclick=function(){try{localStorage.setItem("medaj-xm-sans",on()?"0":"1")}catch(e){}ap()};c.appendChild(b)});ap()}
+ap();var t=0;new MutationObserver(function(){clearTimeout(t);t=setTimeout(poe,25)}).observe(document.body,{childList:true,subtree:true});poe();
 })();
 </script>
 </body>
