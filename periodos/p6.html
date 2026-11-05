@@ -486,7 +486,7 @@ html[data-tema=claro] .top{border-bottom:1px solid #383C40}
 .ap-rev{display:flex;justify-content:space-between;align-items:center;gap:12px;text-decoration:none;color:var(--fg,#eee);border:1px solid color-mix(in srgb,var(--xm-acc,#E0AC3C) 55%,var(--line,#222));border-left:3px solid var(--xm-acc,#E0AC3C);border-radius:10px;padding:13px 16px;margin:10px 0 12px;background:var(--xm-acc-soft,rgba(224,172,60,.19))}
 .ap-rev b{font:700 15px/1.3 Lato,system-ui,sans-serif!important}.ap-rev span{font:500 13px/1.3 Lato,system-ui,sans-serif!important;color:var(--xm-acc-ink,#F0CC76);white-space:nowrap}
 </style>
-</head>
+<style data-centro>body.xm-vc .wrap{min-height:100svh;justify-content:center;padding-block:64px 48px;box-sizing:border-box}.avhint{text-align:center;color:var(--muted);margin:6px auto 0;max-width:34ch;font-size:15px;line-height:1.5}@media (max-width:640px){footer{justify-content:center;text-align:center}}</style></head>
 <body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -807,12 +807,13 @@ function renderHoje(){
 }
 const AKEY="medaj-"+PER.id+"-av";let ABERTA={};
 document.addEventListener("toggle",ev=>{const d=ev.target;if(d.matches&&d.matches("details.mat"))ABERTA[d.dataset.mat]=d.open},true);
-let AV=(()=>{let v=null;try{v=localStorage.getItem(AKEY)}catch(e){}return v||(PER.aulas.some(a=>a.av==="A2")?"A2":"A1")})();
+let AV=(()=>{let v=null;try{v=sessionStorage.getItem(AKEY)}catch(e){}return v})();
 function renderApostilas(){
   const el=document.getElementById("v-apostilas");
   if(!PER.grade.length){el.innerHTML=`<p class="soon">${e_(PER.soon)}</p>`;return}
-  /*to:botao*/const TOP=a=>a.pv==="to",AVS=["A1","A2"].concat(PER.aulas.some(TOP)?["TO"]:[]);if(!AVS.includes(AV))AV="A1";const inAV=a=>AV==="TO"?TOP(a):a.av===AV&&!TOP(a);
+  /*to:botao*/const TOP=a=>a.pv==="to",AVS=["A1","A2"].concat(PER.aulas.some(TOP)?["TO"]:[]);if(AV&&!AVS.includes(AV))AV=null;const inAV=a=>AV==="TO"?TOP(a):a.av===AV&&!TOP(a);
   let h=`<div class="deckbar avbar">${AVS.map(av=>`<button class="chip" type="button" data-av="${av}" aria-pressed="${AV===av}"${av==="TO"?` title="Técnica operatória: tudo junto, sem A1/A2"`:""}>${av}<span class="n">${PER.aulas.filter(a=>av==="TO"?TOP(a):a.av===av&&!TOP(a)).length}</span></button>`).join("")}</div>`;
+  document.body.classList.toggle("xm-vc",!AV);if(!AV){el.innerHTML=h+`<p class="avhint">Escolha a prova acima para ver as matérias.</p>`;return}
   const item=a=>`<div class="bwrap"><a class="bitem${a.pa?" pa":""}" href="${e_(site(a.u))}"><b>${e_(a.t)}</b>${a.s?`<span>${e_(a.s)}</span>`:""}</a><div class="bfoot"><button class="lida" type="button" data-lida="${e_(a.id)}" aria-pressed="false">Marcar como lida</button>${a.refs?`<a class="lida refs" href="${e_(site(a.refs))}">Artigos ↗</a>`:""}</div></div>`;
   for(const [mat,subs] of PER.grade){if((AV==="TO")!==PER.aulas.some(a=>a.mat===mat&&TOP(a)))continue;
     const n=PER.aulas.filter(a=>a.mat===mat&&inAV(a)).length,lid=PER.aulas.filter(a=>a.mat===mat&&inAV(a)&&LIDAS[a.id]).length;
@@ -831,7 +832,7 @@ function renderApostilas(){
 }
 const EKEY="medaj-"+PER.id+"-esp";let ESP={};try{ESP=JSON.parse(localStorage.getItem(EKEY)||"{}")}catch(e){}
 document.addEventListener("click",ev=>{const b=ev.target.closest("[data-esp]");if(!b)return;ESP[b.dataset.espmat]=b.dataset.esp;try{localStorage.setItem(EKEY,JSON.stringify(ESP))}catch(e){}renderApostilas()});
-document.addEventListener("click",ev=>{const b=ev.target.closest("[data-av]");if(!b)return;AV=b.dataset.av;try{localStorage.setItem(AKEY,AV)}catch(e){}renderApostilas()});
+document.addEventListener("click",ev=>{const b=ev.target.closest("[data-av]");if(!b)return;AV=b.dataset.av;try{sessionStorage.setItem(AKEY,AV)}catch(e){}renderApostilas()});
 function renderLidas(){document.querySelectorAll("[data-lida]").forEach(b=>{const on=!!LIDAS[b.dataset.lida];b.setAttribute("aria-pressed",on);b.textContent=on?"Lida":"Marcar como lida"})}
 document.addEventListener("click",ev=>{const b=ev.target.closest("[data-lida]");if(!b)return;const k=b.dataset.lida;if(LIDAS[k])delete LIDAS[k];else LIDAS[k]=Date.now();try{localStorage.setItem(LKEY,JSON.stringify(LIDAS))}catch(e){}renderLidas()});
 renderApostilas();
