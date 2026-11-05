@@ -611,18 +611,7 @@ html #app .opt span{font-family:var(--tx)}
 /* controle Sem serifa (junto do A−/A+) */
 .tp-sans[aria-pressed="true"]{color:var(--fg,#eee)!important;border-color:var(--xm-acc,#E0AC3C)!important}
 </style>
-<style data-volta>.top .back{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 14px 0 10px;margin-left:-4px;border:1px solid var(--line,#3a3a3a);border-radius:999px;color:var(--fg);font:700 13px Lato,system-ui,sans-serif;letter-spacing:.02em;text-transform:none;text-decoration:none;background:color-mix(in srgb,var(--fg) 6%,transparent);transition:background .2s,border-color .2s,transform .2s;-webkit-tap-highlight-color:transparent}.top .back svg{width:18px;height:18px;flex:none}.top .back:hover,.top .back:focus-visible{background:color-mix(in srgb,var(--fg) 14%,transparent);border-color:var(--fg);color:var(--fg)}.top .back:active{transform:scale(.97)}</style><style data-volta2>.top .back,.top .back span{font-family:Lato,system-ui,sans-serif!important;font-size:13px;font-weight:700;white-space:nowrap}</style><style data-folha>
-:root{--fp:28px;--fh:905px}
-@media (max-width:640px){:root{--fp:12px}}
-body:not(.bookmode) #app>article{position:relative;isolation:isolate}
-body:not(.bookmode) #app>article::before{content:"";position:absolute;z-index:-1;pointer-events:none;
- inset:-14px calc(var(--fp)*-1) -14px;
- background:linear-gradient(to bottom,rgba(255,255,255,.07) 0,rgba(255,255,255,.07) calc(100% - 18px),transparent calc(100% - 18px)) 0 0/100% var(--fh) repeat-y;
- filter:drop-shadow(0 0 .6px rgba(255,255,255,.55)) drop-shadow(0 3px 7px rgba(0,0,0,.85));border-radius:3px}
-html[data-tema=claro] body:not(.bookmode) #app>article::before{
- background:linear-gradient(to bottom,rgba(0,0,0,.97) 0,rgba(0,0,0,.97) calc(100% - 18px),transparent calc(100% - 18px)) 0 0/100% var(--fh) repeat-y;
- filter:drop-shadow(0 0 .6px rgba(255,255,255,.35)) drop-shadow(0 2px 6px rgba(255,255,255,.22))}
-@media print{
+<style data-volta>.top .back{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 14px 0 10px;margin-left:-4px;border:1px solid var(--line,#3a3a3a);border-radius:999px;color:var(--fg);font:700 13px Lato,system-ui,sans-serif;letter-spacing:.02em;text-transform:none;text-decoration:none;background:color-mix(in srgb,var(--fg) 6%,transparent);transition:background .2s,border-color .2s,transform .2s;-webkit-tap-highlight-color:transparent}.top .back svg{width:18px;height:18px;flex:none}.top .back:hover,.top .back:focus-visible{background:color-mix(in srgb,var(--fg) 14%,transparent);border-color:var(--fg);color:var(--fg)}.top .back:active{transform:scale(.97)}</style><style data-volta2>.top .back,.top .back span{font-family:Lato,system-ui,sans-serif!important;font-size:13px;font-weight:700;white-space:nowrap}</style><style data-impressao>@media print{
  @page{size:A4;margin:16mm}
  :root,html{color-scheme:light!important}
  html[data-tema=claro] :is(img,video,picture,canvas,[style*="background-image"]),#app img{filter:none!important}
@@ -1243,8 +1232,5 @@ function poe(){document.querySelectorAll("[data-ap-ctl],.ap-ctl").forEach(functi
 ap();var t=0;new MutationObserver(function(){clearTimeout(t);t=setTimeout(poe,25)}).observe(document.body,{childList:true,subtree:true});poe();
 })();
 </script>
-<script data-folha>(function(){function f(){var a=document.querySelector("#app>article");if(!a)return;var cs=getComputedStyle(document.documentElement),p=parseFloat(cs.getPropertyValue("--fp"))||28;
-document.documentElement.style.setProperty("--fh",Math.round((a.offsetWidth+2*p)*1.4142)+"px")}
-addEventListener("resize",f);addEventListener("hashchange",function(){setTimeout(f,50)});
-var app=document.getElementById("app");if(app)new MutationObserver(f).observe(app,{childList:true});f()})()</script></body>
+</body>
 </html>
