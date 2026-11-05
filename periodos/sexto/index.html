@@ -659,6 +659,12 @@ html:not([data-tema=claro]) body::after{background:radial-gradient(110% 55% at 5
 @media screen{html[data-tema=claro][data-calor="1"]::after{content:"";position:fixed;inset:0;background:#1D1000;mix-blend-mode:screen;pointer-events:none;z-index:2147483000}}
 html:not([data-tema=claro]) .xm-calor{display:none!important}
 .xm-calor[aria-checked="true"]{color:var(--fg,#eee)!important;border-color:var(--xm-acc,#F0B429)!important}
+.xm-calor-bt{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);right:max(56px,calc(env(safe-area-inset-right,0px) + 56px));z-index:9997;width:40px;height:40px;border-radius:50%;border:1px solid #2a2a2a;background:#0b0b0b;color:#bdbdbd;font:17px/1 Georgia,serif;display:none;place-items:center;cursor:pointer;padding:0;transition:transform .25s ease,opacity .25s ease}
+html[data-tema=claro] .xm-calor-bt{display:grid}
+.xm-calor-bt[aria-checked="true"]{border-color:#F0B429;color:#F0B429}
+html[data-tema=claro] .nv-bt{right:max(102px,calc(env(safe-area-inset-right,0px) + 102px))!important}
+body.xm-rolando .xm-calor-bt{transform:translateY(-64px);opacity:0;pointer-events:none}
+@media print{.xm-calor-bt{display:none!important}}
 @media print{html::after{display:none!important}}
 </style></head>
 <body>
@@ -1272,10 +1278,12 @@ addEventListener("afterprint",limpa)})()</script><script data-calor>
 (function(){
 function on(){try{return localStorage.getItem("medaj-xm-calor")==="1"}catch(e){return false}}
 function ap(){var o=on();if(o)document.documentElement.dataset.calor="1";else delete document.documentElement.dataset.calor;
- document.querySelectorAll(".xm-calor").forEach(function(b){b.setAttribute("aria-checked",o);b.textContent="Cores quentes: "+(o?"ligadas":"desligadas")})}
+ document.querySelectorAll(".xm-calor,.xm-calor-bt").forEach(function(b){b.setAttribute("aria-checked",o);if(b.classList.contains("xm-calor"))b.textContent="Cores quentes: "+(o?"ligadas":"desligadas");else b.title="Cores quentes: "+(o?"ligadas":"desligadas")})}
 function poe(){document.querySelectorAll("[data-ap-ctl],.ap-ctl").forEach(function(c){if(c.querySelector(".xm-calor"))return;var b=document.createElement("button");b.type="button";b.className="xm-calor";b.setAttribute("role","switch");b.title="No tema claro, troca o branco frio por um tom de papel creme";
  b.onclick=function(){try{localStorage.setItem("medaj-xm-calor",on()?"0":"1")}catch(e){}ap()};c.appendChild(b)});ap()}
-var t=0;new MutationObserver(function(){if(t)return;t=setTimeout(function(){t=0;poe()},60)}).observe(document.body,{childList:true,subtree:true});poe();
+function fab(){if(document.querySelector(".xm-calor-bt"))return;var b=document.createElement("button");b.type="button";b.className="xm-calor-bt";b.setAttribute("role","switch");b.setAttribute("aria-label","Cores quentes (tema claro)");b.textContent="☀";
+ b.onclick=function(){try{localStorage.setItem("medaj-xm-calor",on()?"0":"1")}catch(e){}ap()};document.body.appendChild(b);ap()}
+fab();var t=0;new MutationObserver(function(){if(t)return;t=setTimeout(function(){t=0;poe()},60)}).observe(document.body,{childList:true,subtree:true});poe();
 })();
 </script></body>
 </html>
