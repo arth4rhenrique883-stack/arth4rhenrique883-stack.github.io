@@ -771,12 +771,12 @@ function home(){document.body.classList.remove("bookmode");onkey=null;onresize=n
 
 
 /* modo de leitura (pedido de 28/10): no início de cada apostila, passar para o lado (livro) ou rolar; a escolha fica no aparelho */
-const MODO=()=>{try{return localStorage.getItem(LS("modo"))||""}catch(e){return""}};
+const MODO=()=>"rolar";
 const setModo=m=>{try{localStorage.setItem(LS("modo"),m)}catch(e){}};
 const ldBt=ask=>(CUR.deck||CUR.multi)?`<button type="button" class="ld" data-lado aria-pressed="${LADO()}">${ask?"▣ Mostrar o slide ao lado do texto (liga e desliga quando quiser)":"▣ Slide ao lado"}</button>`:"";
 function modoHtml(cur,ask){return ask
   ?`<div class="modo ask" role="group" aria-label="Como ler esta apostila"><span class="kick">Como prefere ler?</span><button type="button" data-modo="livro">⇆ Passar para o lado, como um livro</button><button type="button" data-modo="rolar">⇅ Rolar para cima e para baixo</button>${ldBt(1)}</div>`
-  :`<div class="modo" role="group" aria-label="Modo de leitura"><button type="button" data-modo="livro" aria-pressed="${cur==="livro"}">⇆ Livro</button><button type="button" data-modo="rolar" aria-pressed="${cur!=="livro"}">⇅ Rolar</button>${ldBt(0)}</div>`}
+  :`<div class="modo" role="group" aria-label="Modo de leitura">${ldBt(0)}</div>`}
 /* slide ao lado: liga/desliga a qualquer momento (fica guardado no aparelho); mostra o slide citado no trecho que está sendo lido */
 let CUR={deck:null,tot:0},LDK="";
 const LADO=()=>{try{return localStorage.getItem(LS("lado"))==="1"}catch(e){return false}};
@@ -1233,9 +1233,9 @@ liga(app);poeCtl();poeHoje();poeMix();poeGf();
 <script data-tipo>
 (function(){
 function on(){try{return localStorage.getItem("medaj-xm-sans")==="1"}catch(e){return false}}
-function ap(){document.documentElement.classList.toggle("xm-sans",on());document.querySelectorAll(".tp-sans").forEach(function(b){b.setAttribute("aria-pressed",on())});
+function ap(){document.documentElement.classList.toggle("xm-sans",on());document.querySelectorAll(".tp-sans").forEach(function(b){b.setAttribute("aria-checked",!on());b.setAttribute("aria-pressed",!on());b.textContent="Serifa: "+(on()?"desligada":"ligada")});
   if(document.body.classList.contains("bookmode")&&typeof onresize==="function"&&onresize)setTimeout(function(){try{onresize()}catch(e){}},0)}
-function poe(){document.querySelectorAll("[data-ap-ctl],.ap-ctl").forEach(function(c){if(c.querySelector(".tp-sans"))return;var b=document.createElement("button");b.type="button";b.className="tp-sans";b.textContent="Sem serifa";b.title="Troca o texto para uma fonte sem serifa";
+function poe(){document.querySelectorAll("[data-ap-ctl],.ap-ctl").forEach(function(c){if(c.querySelector(".tp-sans"))return;var b=document.createElement("button");b.type="button";b.className="tp-sans";b.setAttribute("role","switch");b.title="Liga ou desliga a serifa (Merriweather) no texto";
   b.onclick=function(){try{localStorage.setItem("medaj-xm-sans",on()?"0":"1")}catch(e){}ap()};c.appendChild(b)});ap()}
 ap();var t=0;new MutationObserver(function(){clearTimeout(t);t=setTimeout(poe,25)}).observe(document.body,{childList:true,subtree:true});poe();
 })();
