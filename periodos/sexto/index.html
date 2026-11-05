@@ -582,7 +582,14 @@ function pages(blocks){const out=[];let pre=[];
     else if(b.t==="lance"){if(out.length)out[out.length-1].lance=b}
     else (out.length?out[out.length-1].blocks:pre).push(b)}
   if(!out.length)out.push({title:"",blocks:pre,lance:null});else if(pre.length)out[out.length-1].blocks.push(...pre);
-  out.forEach(p=>{const n=[];p.blocks.forEach(b=>{if(b.t==="slides")n.push(...b.n)});p.sl=rng(n)});return out}
+  out.forEach((p,i)=>{p.i=i;p.raw=[i];p.titles=[p.title];p.parts=[{blocks:p.blocks,lance:p.lance}];p.n=p.blocks.reduce((n,b)=>n+pgPeso(b),0)});
+  const G=[];for(const p of out){const L=G[G.length-1];
+    if(L&&L.n<PG_MIN&&L.n+p.n<=PG_MAX){L.blocks=L.blocks.concat(p.blocks);L.parts.push(p.parts[0]);L.raw.push(p.i);L.titles.push(p.title);L.n+=p.n;L.lance=null}else G.push(p)}
+  G.forEach(p=>{const n=[];p.blocks.forEach(b=>{if(b.t==="slides")n.push(...b.n)});p.sl=rng(n)});return G}
+/* páginas longas: junta "##" seguidos até ~PG_MIN caracteres; a URL guarda o índice do "##" original (p.i) */
+const PG_MIN=7000,PG_MAX=13000,pgPeso=b=>b.t==="slides"?120*(b.n||[]).length:JSON.stringify(b).replace(/<[^>]+>/g,"").length;
+const pgHtml=pg=>pg.parts.map(x=>x.blocks.map(b=>block(b)).join("")+(x.lance?lance(x.lance):"")).join("");
+const pgAt=(PG,r)=>{const k=PG.findIndex(p=>p.raw.includes(r));return k>=0?k:(r>0?PG.length-1:0)};
 function rng(ns){ns=[...new Set(ns)].sort((a,b)=>a-b);const o=[];ns.forEach(n=>{if(o.length&&n===o[o.length-1][1]+1)o[o.length-1][1]=n;else o.push([n,n])});
   return o.length?(ns.length>1?"slides ":"slide ")+o.map(r=>r[0]===r[1]?r[0]:r[0]+"–"+r[1]).join(", "):""}
 
@@ -717,7 +724,7 @@ async function livro(cid,bi,pi,c,D,s,PG){
   h+=`<section class="cover"><span class="kick">${esc(c.nome)} · ${esc(c.av)}</span><h1>${strip(s.title)}</h1>${s.sub?`<p class="sub" style="color:var(--muted);margin:0">${strip(s.sub)}</p>`:""}`;
   if(PG.length>1)h+=`<span class="kick" style="margin-top:8px">Sumário</span><ol class="sumario">${PG.map((p,i)=>`<li><button type="button" data-go="${i}">${esc(p.title||"Início")}</button></li>`).join("")}</ol>`;
   h+=`</section>`;
-  PG.forEach((pg,i)=>{h+=`<article class="ch" data-ch="${i}">${pg.blocks.map(b=>block(b)).join("")}${pg.lance?lance(pg.lance):""}</article>`});
+  PG.forEach((pg,i)=>{h+=`<article class="ch" data-ch="${i}">${pgHtml(pg)}</article>`});
   h+=`<section class="fim"><span class="kick">Fim da aula</span><h2>${strip(s.title)}</h2><button type="button" class="btn2" id="lida" aria-pressed="${!!LIDAS[s.id]}">${LIDAS[s.id]?"✓ Lida":"Marcar a aula como lida"}</button><a class="btn2" style="text-decoration:none" href="#${cid}/fontes/${bi}">Fontes e artigos</a>${nb?`<a class="btn2" style="text-decoration:none" href="#${cid}/resumos/${bi+1}">Próxima aula: ${strip(nb.title)} →</a>`:""}</section>`;
   h+=`</div></div><div class="bk-foot"><button type="button" id="bkP" aria-label="Página anterior">‹</button><div class="where"><b id="bkN"></b><span id="bkT"></span></div><button type="button" id="bkF" aria-label="Próxima página">›</button><div class="prog"><i id="bkG"></i></div></div>`;
   app.innerHTML=h;wire(app);slRefs(app);
@@ -727,8 +734,8 @@ async function livro(cid,bi,pi,c,D,s,PG){
   function show(n,anim){k=Math.max(0,Math.min(N-1,n));cols.style.transition=anim===false?"none":"";cols.style.transform=`translateX(${-k*(W+G)}px)`;
     const ch=chOf(k);$("bkN").textContent=`${k+1} / ${N}`;$("bkT").textContent=ch<0?"Capa e sumário":(PG[ch].title||strip(s.title));
     $("bkG").style.width=((k+1)/N*100).toFixed(1)+"%";$("bkP").disabled=k===0;$("bkF").disabled=k===N-1;
-    VISTO[s.id]=VISTO[s.id]||{};if(ch>=0){VISTO[s.id][ch]=1;VISTO[s.id].last=ch}save("vistas",VISTO);
-    history.replaceState(null,"",`#${cid}/resumos/${bi}/${Math.max(0,ch)}`);setTimeout(ladoPick,anim===false?0:360)}
+    VISTO[s.id]=VISTO[s.id]||{};if(ch>=0){VISTO[s.id][PG[ch].i]=1;VISTO[s.id].last=PG[ch].i}save("vistas",VISTO);
+    history.replaceState(null,"",`#${cid}/resumos/${bi}/${ch>0?PG[ch].i:0}`);setTimeout(ladoPick,anim===false?0:360)}
   function layout(keep){const ch=keep!=null?keep:null;W=bk.clientWidth;cols.style.width=W+"px";cols.style.columnWidth=W+"px";
     N=Math.max(1,Math.round((cols.scrollWidth+G)/(W+G)));
     if(ch!=null){const el=cols.querySelector(`[data-ch="${ch}"]`);show(el?pageOf(el):0,false)}else show(Math.min(k,N-1),false)}
@@ -749,21 +756,21 @@ document.addEventListener("keydown",e=>{if(onkey)onkey(e)});
 addEventListener("resize",()=>{if(onresize)onresize()});
 
 async function aula(cid,bi,pi){const c=CAT(cid);if(!c)return home();const D=await need(c);const s=D.sections[bi];if(!s)return home();
-  const PG=pages(s.blocks);pi=Math.max(0,Math.min(PG.length-1,pi||0));const pg=PG[pi];
+  const PG=pages(s.blocks);pi=pgAt(PG,pi||0);const pg=PG[pi];
   onkey=null;onresize=null;CUR={deck:s.deck||null,tot:s.nsl||deckTot(s.deck),multi:!s.deck&&JSON.stringify(s.blocks).includes('class=\\"slx')};if(MODO()==="livro")return livro(cid,bi,pi,c,D,s,PG);
   document.body.classList.remove("bookmode");
   DOC={tot:{}};if(s.deck&&s.nsl)DOC.tot[s.deck]=s.nsl;
-  VISTO[s.id]=VISTO[s.id]||{};VISTO[s.id][pi]=1;VISTO[s.id].last=pi;save("vistas",VISTO);
+  VISTO[s.id]=VISTO[s.id]||{};VISTO[s.id][pg.i]=1;VISTO[s.id].last=pg.i;save("vistas",VISTO);
   document.title=strip(s.title)+" · xequemate med";
   const sub=[c.nome+" · "+c.av,pg.sl].filter(Boolean).join(" · ");
   let h=`<div class="bar"><i style="width:${((pi+1)/PG.length*100).toFixed(1)}%"></i></div><header class="head"><span class="kick">${esc(sub)}</span><h1>${strip(s.title)}</h1>${s.sub?`<p class="sub">${strip(s.sub)}</p>`:""}`;
-  if(PG.length>1){h+=`<div class="pages" role="navigation" aria-label="Páginas">${PG.map((p,i)=>`<button type="button" data-pg="${i}"${i===pi?' aria-current="page"':""}${VISTO[s.id][i]?' class="seen"':""} aria-label="Página ${i+1}: ${esc(p.title)}">${i+1}</button>`).join("")}</div>`;
-    h+=`<details class="toc"><summary><span class="kick">Página ${pi+1} de ${PG.length} · sumário</span></summary><ol>${PG.map((p,i)=>`<li><button type="button" data-pg="${i}"${i===pi?' aria-current="true"':""}><span>${esc(p.title||"Início")}${p.sl?`<small>${p.sl}</small>`:""}</span></button></li>`).join("")}</ol></details>`}
+  if(PG.length>1){h+=`<div class="pages" role="navigation" aria-label="Páginas">${PG.map((p,i)=>`<button type="button" data-pg="${p.i}"${i===pi?' aria-current="page"':""}${p.raw.some(r=>VISTO[s.id][r])?' class="seen"':""} aria-label="Página ${i+1}: ${esc(p.title)}">${i+1}</button>`).join("")}</div>`;
+    h+=`<details class="toc"><summary><span class="kick">Página ${pi+1} de ${PG.length} · sumário</span></summary><ol>${PG.map((p,i)=>`<li><button type="button" data-pg="${p.i}"${i===pi?' aria-current="true"':""}><span>${esc(p.titles.filter(Boolean).join(" · ")||"Início")}${p.sl?`<small>${p.sl}</small>`:""}</span></button></li>`).join("")}</ol></details>`}
   h+=modoHtml("rolar",!MODO());
-  h+=`</header><article>${pg.blocks.map(b=>block(b)).join("")}${pg.lance?lance(pg.lance):""}</article>`;
+  h+=`</header><article>${pgHtml(pg)}</article>`;
   const prev=pi>0?PG[pi-1]:null,next=pi<PG.length-1?PG[pi+1]:null,nb=bi<D.sections.length-1?D.sections[bi+1]:null;
-  h+=`<nav class="pager">${prev?`<a href="#${cid}/resumos/${bi}/${pi-1}"><span class="k">← Anterior</span><span>${esc(prev.title)}</span></a>`:""}`;
-  h+=next?`<a class="nx" href="#${cid}/resumos/${bi}/${pi+1}"><span class="k">Próxima →</span><span>${esc(next.title)}</span></a>`
+  h+=`<nav class="pager">${prev?`<a href="#${cid}/resumos/${bi}/${prev.i}"><span class="k">← Anterior</span><span>${esc(prev.title)}</span></a>`:""}`;
+  h+=next?`<a class="nx" href="#${cid}/resumos/${bi}/${next.i}"><span class="k">Próxima →</span><span>${esc(next.title)}</span></a>`
          :nb?`<a class="nx" href="#${cid}/resumos/${bi+1}"><span class="k">Próxima aula →</span><span>${strip(nb.title)}</span></a>`:"";
   h+=`</nav><div class="endbar"><button type="button" class="btn2" id="lida" aria-pressed="${!!LIDAS[s.id]}">${LIDAS[s.id]?"✓ Lida":"Marcar a aula como lida"}</button><a class="btn2" style="text-decoration:none" href="#${cid}/fontes/${bi}">Fontes e artigos</a></div>`;
   app.innerHTML=h;wire(app);
@@ -797,7 +804,7 @@ async function questoes(av,mat,gs){document.body.classList.remove("bookmode");on
   const Q=[];
   for(const g of G)for(const id of g.ids)for(const c of P.cat){const bi=c.secs.findIndex(s=>s.id===id);if(bi<0)continue;
     const D=await need(c),s=D.sections[bi];if(!s)continue;
-    pages(s.blocks).forEach((p,pi)=>p.blocks.forEach(b=>{if(b.t==="mcq"||b.t==="prova")Q.push({b,esp:g.esp,cid:c.id,bi,pi,sid:s.id,aula:strip(s.title),pg:p.title,pa:QPA(b,s.id)})}))}
+    pages(s.blocks).forEach((p,pi)=>p.blocks.forEach(b=>{if(b.t==="mcq"||b.t==="prova")Q.push({b,esp:g.esp,cid:c.id,bi,pi:p.i,sid:s.id,aula:strip(s.title),pg:p.title,pa:QPA(b,s.id)})}))}
   document.title="Questões · "+mat+" · xequemate med";
   const esps=[...new Set(G.map(g=>g.esp).filter(Boolean))];if(!esps.includes(QE))QE="";
   const draw=()=>{const L1=Q.filter(q=>!QE||q.esp===QE),L=L1.filter(q=>QF!=="pa"||q.pa),npa=L1.filter(q=>q.pa).length;
