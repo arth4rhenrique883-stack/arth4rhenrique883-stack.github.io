@@ -565,7 +565,35 @@ body.sp-lendo .gf-fab{opacity:.5;transform:scale(.88);transform-origin:right bot
 .gf-fab{transition:opacity .3s}.gf-fab:hover{opacity:1}
 @media print{.box{border-left:1px solid #999!important}.box.sp-fold>:not(b.t){display:block!important}}
 </style>
-</head>
+<script data-v96-ini>try{if(!("CSSViewTransitionRule" in window)&&!matchMedia("(prefers-reduced-motion:reduce)").matches)document.documentElement.classList.add("xm-fb")}catch(e){}</script><style data-v96>
+@font-face{font-family:"XM Reto";font-style:normal;font-weight:100 900;font-display:block;src:url(data:font/woff2;base64,d09GMgABAAAAAAJkAAoAAAAABKwAAAIbAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAAgSQKgyiCOQE2AiQDKAsWAAQgBWAHNht0AyAehXHDXUob2hBTDGUoBz4fDz33/e7M/GVrX/ADpWkUZ5040XwnTfgFGgUUz0/rvrfrP7OHdpcERZmJc0IToxPzx6VztaN4/m+mf4CUWC9NJNQ1KPsYjk1tkozCboxFJ3AcnW5T3SHlYyjMI+hujCr9qEGckeQHePsDAK7Vl1O7gXrxD5A/eYRrgERhHyOwj/UGnNPEWLnmL1iICDHiZchRokKN+m4IOAhH42xUXejfpndCKOi1XqAne5LbiwLH+BDv4938TJoaeQIL4iMbeAJeARiBQMBKX6NGkoQkkRF5XmTZNDVWkiysLC3gY484Jg7HJ6DYaJSUxmIOs9FSLJeGE5Iwi5j4RBql4RQUixg2jp11FyPEIXNi6GhpE9/ygR7Xi2OXZOEYlIkZZDrMH82D1SAnfuP/5H/cj8iDLNRdHNSCPE9t+mBnCLoMIsVZWVZhFLMIGdQCgxyRnUH93h0Cf8O0XDVpOHVomckHy0y7dVr2k2wEkaCNxmnu6JDbQHNv725dft0uWD1nZfmJJa6v+mrX9x7X+1697rwCCAR3386daRpe/2Ixt/C376nj+5n1YlbQRygJgldj5xcBvHUAJVcv4tM6rEDeg3WOsobawniQ+R8UFrYxIBlr5AYlClMUpOCgWiMZhE2bCrN1/hCiF5lTXfaN1wyIF0JPpBzVyspR5KlRLEMlWlqLq09b8+TGjhFXppwA) format("woff2")}
+.asmed .t,.asmed .t *{font-family:"XM Reto","Big Shoulders Display",Impact,sans-serif!important;font-weight:400!important;font-synthesis:none;letter-spacing:.1em}
+/* 1) seletor de período */
+nav.pers a{transition:border-color .2s,background .2s,color .2s,transform .18s cubic-bezier(.2,.7,.2,1),box-shadow .18s ease;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+@media (hover:hover){nav.pers a:hover{transform:scale(1.035);box-shadow:0 8px 22px -12px color-mix(in srgb,var(--c,#888) 70%,transparent)}}
+nav.pers a:active,nav.pers a:focus-visible{transform:scale(1.035)}
+@media (prefers-reduced-motion:reduce){nav.pers a{transition:border-color .2s,background .2s,color .2s}}
+/* 2) caneta e tablet: alvos de 44 px e sem atraso de toque */
+:is(button,[role=button],a,summary,label,select,input,textarea){touch-action:manipulation}
+@media (pointer:coarse) and (min-width:700px){
+ :is(.gf-bar button,.gf-fab,.pages button,.toc li button,.modo button,.tabs a,.reveal,.grade,.ghost,.chip,.vw button,.pager a,.xm-calor-bt,.nv-bt){min-height:44px;min-width:44px}
+ .gf-bar button{padding-inline:14px}
+}
+html[data-caneta] :is(.gf-bar button,.gf-fab,.pages button,.toc li button,.modo button,.tabs a,.reveal,.grade,.ghost,.chip,.vw button,.pager a){min-height:44px;min-width:44px}
+html[data-caneta] :is(article,.art,.ap-art,main p,main li){-webkit-user-select:text;user-select:text;-webkit-touch-callout:default}
+html[data-caneta] .gf-bar{gap:8px}
+/* 5) transições */
+@media (prefers-reduced-motion:no-preference){
+ @view-transition{navigation:auto}
+ ::view-transition-old(root){animation:xm-out .16s ease both}
+ ::view-transition-new(root){animation:xm-in .3s cubic-bezier(.2,.7,.2,1) both}
+ html.xm-fb body{animation:xm-fade .32s ease both}
+ html.xm-rota :is(main#app>*,.view:not([hidden])){animation:xm-in .3s cubic-bezier(.2,.7,.2,1) both}
+}
+@keyframes xm-out{to{opacity:0;transform:translateY(-5px)}}
+@keyframes xm-in{from{opacity:0;transform:translateY(9px)}}
+@keyframes xm-fade{from{opacity:0}}
+</style></head>
 <body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -1085,5 +1113,21 @@ function dobra(root){root.querySelectorAll(".box.law:not([data-sp])").forEach(fu
  var tg=function(){B.classList.toggle("sp-open")};t.addEventListener("click",tg);t.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();tg()}})})}
 var app=document.getElementById("app");if(app){dobra(app);new MutationObserver(function(){dobra(app)}).observe(app,{childList:true,subtree:true})}
 })();</script>
-</body>
+<script data-v96>
+(function(){
+var R=document.documentElement,pen=0,fim=0;
+function usa(){pen=Date.now()}
+function viu(e){if(e.pointerType==="pen"){usa();if(!R.dataset.caneta)R.dataset.caneta="1"}}
+addEventListener("pointerdown",viu,true);addEventListener("pointerover",viu,true);
+addEventListener("pointermove",function(e){if(e.pointerType==="pen")usa()},true);
+addEventListener("pointerup",function(e){if(e.pointerType==="pen")usa()},true);
+/* rejeição de palma: com a caneta em uso (ou pairando há menos de 650 ms), toques de dedo/palma não disparam toques nem gestos */
+function palma(e){if(!R.dataset.caneta)return;var t=e.pointerType||(e.type.indexOf("touch")===0?"touch":"");if(t==="touch"&&Date.now()-pen<650){e.stopImmediatePropagation();if(e.cancelable&&e.type!=="touchmove")e.preventDefault()}}
+["touchstart","touchend","pointerdown","pointerup","click"].forEach(function(n){addEventListener(n,palma,{capture:true,passive:false})});
+/* animação ao trocar de aba/rota dentro da página */
+var tm=0;function rota(){if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;R.classList.remove("xm-rota");void R.offsetWidth;R.classList.add("xm-rota");clearTimeout(tm);tm=setTimeout(function(){R.classList.remove("xm-rota")},420)}
+addEventListener("hashchange",rota);
+addEventListener("pageshow",function(e){if(e.persisted)R.classList.remove("xm-fb")});
+})();
+</script></body>
 </html>
