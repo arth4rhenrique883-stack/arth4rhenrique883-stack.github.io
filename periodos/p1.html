@@ -513,7 +513,59 @@ html[data-tema=claro] .nv-bt{right:max(102px,calc(env(safe-area-inset-right,0px)
 body.xm-rolando .xm-calor-bt{transform:translateY(-64px);opacity:0;pointer-events:none}
 @media print{.xm-calor-bt{display:none!important}}
 @media print{html::after{display:none!important}}
-</style></head>
+</style><style data-simples>
+/* ===== simples (07/11): menos poluição ===== */
+[hidden]{display:none!important}
+html:root{--bg:#000!important;--surface:#080808!important;--surface-2:#0d0d0d!important;--raise:#080808!important;--line:#1a1a1a!important;--line-2:#262626!important;--upd-bg:transparent!important;--upd-line:#3b4f70!important}
+html,html[data-tema=claro]{background:#000!important;background-color:#000!important}
+html:not([data-tema=claro]) body::after{background:radial-gradient(90% 40% at 50% -10%,rgba(28,70,130,.07),transparent 70%)!important}
+body{background:#000!important}
+html :is(.sl,figure,.lance,.law,.box),html[data-tema=claro] :is(.sl,figure,.lance,.law,.box){background:transparent!important;box-shadow:none!important}
+html #app article>:is(.box,.sl,figure,.tw,.mcq,.case,.qz,.calc,.lance){margin:6px 0 18px!important}
+.box{padding-right:2px!important}
+/* quadros: sem caixa, sem ícone; só um fio fino à esquerda e rótulo pequeno */
+.box{background:transparent!important;border:0!important;border-left:2px solid var(--line-2)!important;border-radius:0!important;padding:2px 0 2px 14px!important;font-size:15.5px!important;gap:4px!important}
+.box b.t{font:700 10.5px/1.3 Lato,system-ui,sans-serif!important;letter-spacing:.12em!important;color:var(--muted)!important;gap:0!important}
+.box b.t::before{display:none!important}
+.box.upd{border-left-color:#3b4f70!important}.box.upd b.t{color:#7f97bd!important}
+.box.dv{border-left-color:#8a6d2b!important}.box.dv b.t{color:#c9a24a!important}
+.box.trap{border-left-color:#6e2a2f!important}.box.trap b.t{color:#c4676d!important}
+.box.lance{border-left-color:#F0B429!important}.box.lance b.t{color:#F0B429!important}
+.box.law{border-left-color:var(--line-2)!important}
+.src a{border-color:transparent!important;padding:2px 0!important;margin-right:10px}
+/* recolhidos: Curiosidade e Para ler por fora viram uma linha */
+.box.ap-cur,.box.sp-fold{border-left-color:transparent!important;padding:0!important;border-top:1px solid var(--line)!important;padding-top:10px!important}
+.box.sp-fold>b.t{cursor:pointer;display:flex!important;width:100%;opacity:.8}
+.box.sp-fold>b.t::after{content:"+";margin-left:auto;font-size:15px;font-weight:400;letter-spacing:0}
+.box.sp-fold.sp-open>b.t::after{content:"–"}
+.box.sp-fold:not(.sp-open)>:not(b.t){display:none!important}
+.box.ap-cur>b.t::after{content:"+"!important;font-size:15px!important;font-weight:400!important;letter-spacing:0!important;opacity:1!important}
+.box.ap-cur.ap-open>b.t::after{content:"–"!important}
+/* faixa de slides e figuras sem cartão */
+.sl{border:0!important;background:transparent!important;padding:0!important}
+.sl .k{font:600 10.5px/1.4 Lato,system-ui,sans-serif!important;letter-spacing:.1em;color:var(--muted)!important}
+figure{background:transparent!important;border:0!important}
+figcaption{font-size:12.5px!important;color:var(--muted)!important}
+/* provas, casos, questões: sem cartão pesado */
+.case,.mcq,.qit>.case{background:transparent!important;border:0!important;border-top:1px solid var(--line)!important;border-radius:0!important;padding:14px 0 4px!important}
+.mcq .opt{background:transparent!important;border:1px solid var(--line-2)!important;border-radius:10px}
+.mcq .opt.ok{border-color:#5aa883!important;background:rgba(90,168,131,.08)!important}
+.mcq .opt.no{border-color:#c2414a!important;background:rgba(194,65,74,.08)!important}
+.qit{border:0!important;background:transparent!important;padding:0!important;margin-top:6px}
+.qmeta{font:600 10.5px Lato,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;display:flex;justify-content:space-between;gap:10px;color:var(--muted)}
+.qmeta a{color:var(--muted)!important;text-decoration:none}.qpa{color:#F0B429}
+.qg>h2{margin-top:22px}
+.case .out,.lance .a,.qi .a,.mcq .exp{margin-top:8px}
+.pv .kick,.case .kick{color:#F0B429!important}
+.btn2.rv{background:transparent}
+/* logo some depois que a leitura começa */
+.top .brand{transition:opacity .35s ease}
+body.sp-lendo .top .brand,body.sp-lendo .xm-beta,body.sp-lendo .nv-beta,body.sp-lendo .xm-canto{opacity:0!important;pointer-events:none!important}
+body.sp-lendo .gf-fab{opacity:.5;transform:scale(.88);transform-origin:right bottom}
+.gf-fab{transition:opacity .3s}.gf-fab:hover{opacity:1}
+@media print{.box{border-left:1px solid #999!important}.box.sp-fold>:not(b.t){display:block!important}}
+</style>
+</head>
 <body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -622,6 +674,7 @@ body.xm-rolando .xm-calor-bt{transform:translateY(-64px);opacity:0;pointer-event
 <script>
 const APOSTILA="bloco1.html";
 const CHAPTERS={};
+CHAPTERS.pa="Cai em prova";
 const FILE={"obs1": "bloco2.html"};
 const SECS={};
 /* Cartões das apostilas xequemate med Para acrescentar: [id único, capítulo, seção (âncora da apostila), pergunta, resposta]. */
@@ -663,7 +716,7 @@ const today=()=>{const d=new Date();return Math.floor((d-d.getTimezoneOffset()*6
 let S={cards:{},days:{},t:0};
 try{const raw=localStorage.getItem(KEY);if(raw)S=Object.assign(S,JSON.parse(raw))}catch(e){}
 const st=id=>S.cards[id]||{r:0,i:0,e:2.5,due:0,l:0,last:0,seen:0};
-function plan(c,q){
+/*sp-cards*/function plan(c,q,pa){
   let {r,i,e,l}=c;
   if(q===0) return {r:0,i:0,e:Math.max(1.3,e-.2),l:l+1,again:true};
   const e2=Math.max(1.3,e+(.1-(5-q)*(.08+(5-q)*.02)));
@@ -671,12 +724,12 @@ function plan(c,q){
   if(r===0) i2=q===5?4:1;
   else if(r===1) i2=q===3?3:q===4?6:8;
   else i2=Math.max(i+1,Math.round(i*(q===3?1.2:q===4?e2:e2*1.3)));
-  return {r:r+1,i:i2,e:e2,l};
+  if(pa)i2=Math.max(1,Math.round(i2*.6));return {r:r+1,i:i2,e:e2,l};
 }
 const fmt=p=>p.again?"agora":p.i===1?"amanhã":p.i<14?p.i+" dias":p.i<60?Math.round(p.i/7)+" sem":Math.round(p.i/30)+" meses";
 
 let deck="all",queue=[],cur=null,shown=false,sess={n:0,ok:0,total:0,streak:0};
-const inDeck=c=>deck==="all"||c.ch===deck||c.av===deck;
+const inDeck=c=>deck==="all"||c.ch===deck||c.av===deck||(deck==="pa"&&c.pa);
 const isNew=c=>!S.cards[c.id];
 const newToday=()=>(S.days[today()]||{}).nw||0;
 function counts(filter){
@@ -687,8 +740,8 @@ function counts(filter){
 }
 function build(){
   const t=today(),list=CARDS.filter(inDeck);
-  const rev=list.filter(c=>!isNew(c)&&st(c.id).due<=t).sort((a,b)=>st(a.id).due-st(b.id).due);
-  const nw=list.filter(isNew).slice(0,Math.max(0,NEW_PER_DAY-newToday()));
+  const rev=list.filter(c=>!isNew(c)&&st(c.id).due<=t).sort((a,b)=>(b.pa||0)-(a.pa||0)||st(a.id).due-st(b.id).due);
+  const cap=Math.max(0,NEW_PER_DAY-newToday()),nwAll=list.filter(isNew).sort((a,b)=>(b.pa||0)-(a.pa||0)),paN=nwAll.filter(c=>c.pa).length,nw=nwAll.slice(0,cap+Math.min(10,Math.max(0,paN-cap)));
   queue=[];while(rev.length||nw.length){if(rev.length)queue.push(rev.shift());if(rev.length)queue.push(rev.shift());if(nw.length)queue.push(nw.shift())}
   sess={n:0,ok:0,total:queue.length,streak:0};
 }
@@ -700,7 +753,7 @@ function say(text,story){const b=$("bubble");b.classList.toggle("story",!!story)
 function mood(m){const a=$("avatar");a.classList.remove("raise","smug","tap");void a.getBoundingClientRect();if(m)m.split(" ").forEach(x=>a.classList.add(x))}
 function renderDecks(){
   const opts=[["all","Tudo"],...Object.entries(CHAPTERS)];
-  $("decks").innerHTML=opts.map(([k,l])=>{const c=counts(x=>k==="all"||x.ch===k||x.av===k);return `<button class="chip" type="button" data-deck="${k}" aria-pressed="${deck===k}">${esc(l)}<span class="n">${c.avail}</span></button>`}).join("");
+  $("decks").innerHTML=opts.map(([k,l])=>{const c=counts(x=>k==="all"||x.ch===k||x.av===k||(k==="pa"&&x.pa));return `<button class="chip" type="button" data-deck="${k}" aria-pressed="${deck===k}">${esc(l)}<span class="n">${c.avail}</span></button>`}).join("");
 }
 function renderStats(){
   const c=counts(inDeck),d=S.days[today()]||{n:0,ok:0};
@@ -726,19 +779,19 @@ function renderCard(){
   }
   const s=st(cur.id),fresh=isNew(cur),pos=sess.total-queue.length;
   const pct=sess.total?Math.round(100*(pos-1)/sess.total):0;
-  let html=`<div class="meta"><span class="tag">${esc(CHAPTERS[cur.ch])}</span>${fresh?'<span class="tag new">novo</span>':""}<span class="pos">${pos} de ${sess.total}</span></div><div class="progress"><i style="width:${pct}%"></i></div><p class="q">${esc(cur.q)}</p>`;
+  let html=`<div class="meta"><span class="tag">${esc(CHAPTERS[cur.ch])}</span>${fresh?'<span class="tag new">novo</span>':""}${cur.pa?'<span class="tag new">cai em prova</span>':""}<span class="pos">${pos} de ${sess.total}</span></div><div class="progress"><i style="width:${pct}%"></i></div><p class="q">${esc(cur.q)}</p>`;
   if(!shown){
     html+=`<div class="spacer"></div><button class="reveal" type="button" data-act="reveal">Mostrar resposta<kbd>espaço</kbd></button>`;
   }else{
     const g=[[0,"Errei"],[3,"Difícil"],[4,"Bom"],[5,"Fácil"]];
-    html+=`<div class="ans"><span class="lbl">Resposta</span><p>${esc(cur.a)}</p><a class="read" href="${FILE[cur.ch]||APOSTILA}#${cur.sec}">Ler na apostila: ${esc(cur.w||"")} ↗</a></div><div class="spacer"></div><div class="grades">${g.map(([q,l],k)=>`<button class="grade g${q}" type="button" data-q="${q}"><b>${l}</b><small>${fmt(plan(s,q))} · ${k+1}</small></button>`).join("")}</div>`;
+    html+=`<div class="ans"><span class="lbl">Resposta</span><p>${esc(cur.a)}</p><a class="read" href="${FILE[cur.ch]||APOSTILA}#${cur.sec}">Ler na apostila: ${esc(cur.w||"")} ↗</a></div><div class="spacer"></div><div class="grades">${g.map(([q,l],k)=>`<button class="grade g${q}" type="button" data-q="${q}"><b>${l}</b><small>${fmt(plan(s,q,cur.pa))} · ${k+1}</small></button>`).join("")}</div>`;
   }
   el.innerHTML=html;renderStats();
 }
 function next(){cur=queue.shift()||null;shown=false;renderCard();if(cur&&sess.n>0&&Math.random()<.5)say(pick(SAY.ask));}
 function grade(q){
   if(!cur||!shown)return;
-  const p=plan(st(cur.id),q),t=today(),was=isNew(cur);
+  const p=plan(st(cur.id),q,cur.pa),t=today(),was=isNew(cur);
   S.cards[cur.id]={r:p.r,i:p.i,e:+p.e.toFixed(2),due:p.again?t:t+p.i,l:p.l,last:Date.now(),seen:(st(cur.id).seen||0)+1};
   const d=S.days[t]||(S.days[t]={n:0,ok:0,nw:0});d.n++;if(q>=3)d.ok++;if(was)d.nw=(d.nw||0)+1;
   sess.n++;if(q>=3){sess.ok++;sess.streak++}else sess.streak=0;
@@ -1022,5 +1075,15 @@ function fab(){if(document.querySelector(".xm-calor-bt"))return;var b=document.c
  b.onclick=function(){try{localStorage.setItem("medaj-xm-calor",on()?"0":"1")}catch(e){}ap()};document.body.appendChild(b);ap()}
 fab();var t=0;new MutationObserver(function(){if(t)return;t=setTimeout(function(){t=0;poe()},60)}).observe(document.body,{childList:true,subtree:true});poe();
 })();
-</script></body>
+</script><script data-simples>(function(){
+var b=document.body;
+function lendo(){var y=window.scrollY||0;var h=location.hash||"";var leitor=/\/(oitavo|sexto|primeiro|segundo|terceiro|quarto|quinto|setimo)\/(index\.html)?$/.test(location.pathname)&&/\/resumos\/|\/a\//.test(h);
+ if(y>60||leitor&&y>20)b.classList.add("sp-lendo");else b.classList.remove("sp-lendo")}
+addEventListener("scroll",lendo,{passive:true});addEventListener("hashchange",function(){setTimeout(lendo,50)});lendo();
+function dobra(root){root.querySelectorAll(".box.law:not([data-sp])").forEach(function(B){B.setAttribute("data-sp","1");var t=B.querySelector("b.t");if(!t)return;
+ if(!/^para ler por fora/i.test(t.textContent.trim()))return;B.classList.add("sp-fold");t.setAttribute("role","button");t.tabIndex=0;
+ var tg=function(){B.classList.toggle("sp-open")};t.addEventListener("click",tg);t.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();tg()}})})}
+var app=document.getElementById("app");if(app){dobra(app);new MutationObserver(function(){dobra(app)}).observe(app,{childList:true,subtree:true})}
+})();</script>
+</body>
 </html>
