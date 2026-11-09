@@ -570,8 +570,6 @@ body.ap-rapido #app article>:is(p,ul,ol),body.ap-rapido #app .cols article>:is(p
 .ap-rate.feito button{opacity:.45}.ap-rate.feito button[aria-pressed="true"]{opacity:1}
 .ap-nota{font:500 12.5px/1.4 Lato,system-ui,sans-serif!important;color:var(--muted,#9aa)}
 /* início e fila */
-.ap-hoje{display:flex;justify-content:space-between;align-items:center;gap:12px;text-decoration:none;color:var(--fg,#eee);border:1px solid color-mix(in srgb,var(--xm-acc,#E0AC3C) 55%,var(--line,#222));border-left:3px solid var(--xm-acc,#E0AC3C);border-radius:10px;padding:14px 16px;margin:16px 0 4px;background:var(--xm-acc-soft,rgba(224,172,60,.19))}
-.ap-hoje b{font:700 15px/1.3 Lato,system-ui,sans-serif!important}.ap-hoje span{font:500 13px/1.3 Lato,system-ui,sans-serif!important;color:var(--xm-acc-ink,#F0CC76);white-space:nowrap}
 .ap-fila{display:flex;flex-direction:column;gap:16px;padding-top:18px}
 .ap-meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font:600 12px/1.3 Lato,system-ui,sans-serif!important;color:var(--muted,#9aa)}
 .ap-meta a{color:var(--xm-acc-ink,#F0CC76);text-decoration:none}
@@ -1263,12 +1261,12 @@ function liga(root){
     r.addEventListener("click",function(e){var b=e.target.closest("button[data-v]");if(!b||r.classList.contains("feito"))return;var ok=b.getAttribute("data-v")==="1";
       marca(id,ok,{k:"l",q:q.innerHTML,a:a.innerHTML,h:location.hash,pg:pagina()});
       r.classList.add("feito");b.setAttribute("aria-pressed","true");
-      var n=document.createElement("span");n.className="ap-nota";n.textContent=ok?(R().it[id]?"Boa. Volta em alguns dias para fixar.":"Boa."):"Entrou na fila de revisão: volta amanhã.";r.appendChild(n);relayout()})});
+      var n=document.createElement("span");n.className="ap-nota";n.textContent=ok?"Boa.":"Vale reler este trecho.";r.appendChild(n);relayout()})});
   root.querySelectorAll(".mcq:not([data-ap])").forEach(function(m){m.setAttribute("data-ap","1");
     var html=m.outerHTML.replace(/ data-ap="1"/,""),st=m.querySelector(".stem"),id="m"+hs(st?st.innerHTML:html);
     m.querySelectorAll(".opt").forEach(function(o){o.addEventListener("click",function(){if(m.getAttribute("data-ap-feito"))return;m.setAttribute("data-ap-feito","1");
       var ok=+o.dataset.i===+m.dataset.ok;marca(id,ok,{k:"m",html:html,h:location.hash,pg:pagina()});
-      if(!ok){var n=document.createElement("p");n.className="ap-nota";n.textContent="Entrou na fila de revisão: volta amanhã.";var ex=m.querySelector(".exp");(ex||m).appendChild(n);relayout()}})})});
+      })})});
   /* curiosidade recolhida (fora do modo livro, que pagina em colunas) */
   if(!document.body.classList.contains("bookmode"))root.querySelectorAll(".box.law:not([data-ap])").forEach(function(B){B.setAttribute("data-ap","1");
     var t=B.querySelector("b.t");if(!t||!/^curiosidade/i.test(t.textContent.trim()))return;B.classList.add("ap-cur");t.setAttribute("role","button");t.tabIndex=0;
@@ -1277,11 +1275,6 @@ function liga(root){
 
 /* controles no cabeçalho da apostila */
 function poeCtl(){var m=app.querySelector(".head .modo, .bk-head .modo");if(m&&!m.parentNode.querySelector("[data-ap-ctl]")){m.insertAdjacentHTML("afterend",ctl());pintaCtl()}avisoRap()}
-
-/* início: linha "Revisar hoje" */
-function poeHoje(){var h=app.querySelector("section.home");if(!h||h.querySelector(".ap-hoje"))return;var n=devidos().length,tot=Object.keys(R().it).filter(function(k){return !R().it[k].fim}).length;if(!tot)return;
-  var a=document.createElement("a");a.className="ap-hoje";a.href="#revisar";a.innerHTML="<b>Revisar hoje</b><span>"+(n?n+(n===1?" pergunta":" perguntas"):"nada para hoje")+"</span>";
-  var lede=h.querySelector(".lede");(lede||h.firstChild).after(a)}
 
 /* questões: misturar (intercalar temas) */
 var MIX=false;try{MIX=sessionStorage.getItem("ap-mix")==="1"}catch(e){}
@@ -1333,8 +1326,8 @@ function poeGf(){document.querySelectorAll(".gf-it:not([data-ap])").forEach(func
     sv(KEY,r);b.textContent="Na revisão";b.disabled=true};
   it.appendChild(b)})}
 
-var tm=0;new MutationObserver(function(){clearTimeout(tm);tm=setTimeout(function(){liga(app);poeCtl();poeHoje();poeMix();poeGf()},20)}).observe(document.body,{childList:true,subtree:true});
-liga(app);poeCtl();poeHoje();poeMix();poeGf();
+var tm=0;new MutationObserver(function(){clearTimeout(tm);tm=setTimeout(function(){liga(app);poeCtl();poeMix();poeGf()},20)}).observe(document.body,{childList:true,subtree:true});
+liga(app);poeCtl();poeMix();poeGf();
 })();
 </script>
 <script data-tipo>

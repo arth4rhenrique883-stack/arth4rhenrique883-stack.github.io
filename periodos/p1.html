@@ -483,8 +483,6 @@ html[data-tema=claro] .top{border-bottom:1px solid #383C40}
 .qbox.off{opacity:.55}.qbox.off::after{content:none}
 /*/q:hcss*/</style>
 <style data-aprende>
-.ap-rev{display:flex;justify-content:space-between;align-items:center;gap:12px;text-decoration:none;color:var(--fg,#eee);border:1px solid color-mix(in srgb,var(--xm-acc,#E0AC3C) 55%,var(--line,#222));border-left:3px solid var(--xm-acc,#E0AC3C);border-radius:10px;padding:13px 16px;margin:10px 0 12px;background:var(--xm-acc-soft,rgba(224,172,60,.19))}
-.ap-rev b{font:700 15px/1.3 Lato,system-ui,sans-serif!important}.ap-rev span{font:500 13px/1.3 Lato,system-ui,sans-serif!important;color:var(--xm-acc-ink,#F0CC76);white-space:nowrap}
 </style>
 <style data-centro>body.xm-vc .wrap{min-height:100svh;justify-content:center;padding-block:64px 48px;box-sizing:border-box}.avhint{text-align:center;color:var(--muted);margin:6px auto 0;max-width:34ch;font-size:15px;line-height:1.5}@media (max-width:640px){footer{justify-content:center;text-align:center}}</style><style data-preto>
 html,html[data-tema=claro]{background:#02040A!important;background-image:none!important;background-color:#02040A!important}
@@ -1078,21 +1076,9 @@ var t=0;new MutationObserver(function(){clearTimeout(t);t=setTimeout(pinta,30)})
 document.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('button[data-lida]'))setTimeout(function(){try{if(typeof renderApostilas==='function'){var y=scrollY;renderApostilas();scrollTo(0,y)}}catch(x){}pinta()},30)});
 pinta()})();</script>
 <script data-limpo>(function(){var n=document.querySelector("nav.pers");if(!n||!n.querySelector("a[aria-current]"))return;
-if(!/\/p\d+\.html$/.test(location.pathname))return;n.classList.add("xm-fecha");
+if(!/\/p\d+\.html$/.test(location.pathname))return;n.classList.add("xm-fecha");var st=document.createElement("style");st.textContent="nav.pers.xm-abre~*{display:none!important}";document.head.appendChild(st);
 n.addEventListener("click",function(e){var a=e.target.closest("a");if(!a||!a.hasAttribute("aria-current"))return;e.preventDefault();
-var f=n.classList.toggle("xm-fecha");n.classList.toggle("xm-abre",!f)})})()</script><script data-aprende>
-(function(){
-if(typeof PER==="undefined"||typeof renderApostilas!=="function")return;
-var KEY="medaj-"+PER.id+"-rev",DAY=864e5;
-function n(){try{var r=JSON.parse(localStorage.getItem(KEY)||"{}"),d=new Date(),t=Math.floor((d-d.getTimezoneOffset()*6e4)/DAY),c=0,tot=0;
-  for(var k in (r.it||{})){var x=r.it[k];if(x.fim)continue;tot++;if(x.due<=t)c++}return [c,tot]}catch(e){return [0,0]}}
-function poe(){var el=document.getElementById("v-apostilas");if(!el)return;var v=n(),a=el.querySelector(".ap-rev");if(!v[1]){if(a)a.remove();return}
-  if(!a){a=document.createElement("a");a.className="ap-rev";a.href=PER.site+"#revisar";var m=el.querySelector("details.mat");if(m)m.before(a);else el.appendChild(a)}
-  a.innerHTML="<b>Revisar perguntas</b><span>"+(v[0]?v[0]+" para hoje":"nada para hoje · "+v[1]+" na fila")+"</span>"}
-var _r=renderApostilas;renderApostilas=function(){_r();poe()};poe();
-})();
-</script>
-<script data-volta>addEventListener("pageshow",function(e){if(e.persisted&&typeof AV!=="undefined"&&AV){AV=null;renderApostilas()}})</script><script data-calor>
+var f=n.classList.toggle("xm-fecha");n.classList.toggle("xm-abre",!f)})})()</script><script data-volta>addEventListener("pageshow",function(e){if(e.persisted&&typeof AV!=="undefined"&&AV){AV=null;renderApostilas()}})</script><script data-calor>
 (function(){
 function on(){try{return localStorage.getItem("medaj-xm-calor")==="1"}catch(e){return false}}
 function ap(){var o=on();if(o)document.documentElement.dataset.calor="1";else delete document.documentElement.dataset.calor;
