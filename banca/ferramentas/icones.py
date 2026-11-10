@@ -38,6 +38,7 @@ def icone(letra, rotulo, tam, maskable):
     d.text(((S - (rb[2] - rb[0])) / 2 - rb[0], y0 + lh + 30 - rb[1]), rotulo, font=fr, fill=TINTA)
     return im.resize((tam, tam), Image.LANCZOS)
 
+PUBS[""] = ("B", "BANCA")  # o ícone do aplicativo único, na raiz da banca/
 for pasta, (letra, rotulo) in PUBS.items():
     out = os.path.join(BANCA, pasta); os.makedirs(out, exist_ok=True)
     for t in (180, 192, 512):

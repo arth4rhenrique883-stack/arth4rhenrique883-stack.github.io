@@ -8,10 +8,10 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Jornal">
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" type="image/png" sizes="192x192" href="icone-192.png">
-<link rel="apple-touch-icon" href="icone-180.png">
+<meta name="apple-mobile-web-app-title" content="Banca">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="../icone-192.png">
+<link rel="apple-touch-icon" href="../icone-180.png">
 <title>Jornal de Cada Dia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -152,6 +152,19 @@ select{max-width:100%}
 }
 </style>
 
+
+<style>
+.banca-volta{position:sticky;top:0;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:12px;
+  background:#3A2D2B;color:#ECE3D4;padding:8px max(14px, env(safe-area-inset-right, 0px)) 8px max(14px, env(safe-area-inset-left, 0px));
+  padding-top:max(8px, env(safe-area-inset-top, 0px));font:600 15px/1.2 "Archivo","Archivo Narrow","Helvetica Neue",Arial,sans-serif;
+  letter-spacing:.08em;text-transform:uppercase}
+.banca-volta a{color:inherit;text-decoration:none;display:inline-flex;align-items:center;gap:8px;padding:8px 14px 8px 10px;
+  border:1.5px solid #ECE3D4;min-height:44px}
+.banca-volta a:hover,.banca-volta a:focus-visible{background:#ECE3D4;color:#3A2D2B;outline:none}
+.banca-volta span{opacity:.85;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media print{.banca-volta{display:none}}
+</style>
+<nav class="banca-volta" aria-label="Banca"><a href="../">&#8249;&nbsp;Todos os jornais</a><span>Jornal de Cada Dia</span></nav>
 <div class="folha" lang="pt-BR">
   <div class="controles">
     <div class="grupo"><label for="edicao">Edição</label><select id="edicao"></select></div>
@@ -249,13 +262,12 @@ fetch("edicoes.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
 </script>
 
 <script>
-/* PWA: guarda a página para ler sem internet e avisa quando chega edição nova */
+/* Banca: guarda os jornais para ler sem internet e recarrega quando chega edição nova */
 if ("serviceWorker" in navigator) {
   addEventListener("load", function () {
-    navigator.serviceWorker.register("sw.js").then(function (r) {
+    navigator.serviceWorker.register("../sw.js", {scope: "../"}).then(function (r) {
       r.addEventListener("updatefound", function () {
-        var w = r.installing;
-        if (!w) return;
+        var w = r.installing; if (!w) return;
         w.addEventListener("statechange", function () {
           if (w.state === "activated" && navigator.serviceWorker.controller) location.reload();
         });

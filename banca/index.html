@@ -2,41 +2,97 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Banca</title>
-<meta name="description" content="As publicações: Jornal de Cada Dia, Observatório Diário, Anamnese e O Carijó.">
+<meta name="description" content="Os jornais do dia num só lugar: Jornal de Cada Dia, O Carijó, Observatório Diário e Anamnese.">
 <meta name="theme-color" content="#3A2D2B">
-<link rel="icon" type="image/png" href="jornal/icone-192.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Banca">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icone-192.png">
+<link rel="apple-touch-icon" href="icone-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:wght@600;700&family=Newsreader:ital,opsz,wght@1,6..72,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400;1,6..72,500&family=Archivo:wght@600;800&display=swap">
 <style>
-:root{--papel:#ECE3D4;--tinta:#3A2D2B;--suave:#5E4E48}
+/* Layout: capa de jornal antigo; nome enorme condensado entre filetes duplos, linha de edição com asteriscos, e um cartão grande por jornal */
+:root{--papel:#ECE3D4;--tinta:#3A2D2B;--suave:#5E4E48;--fio:#B9A993}
 *{box-sizing:border-box}
-body{margin:0;background:var(--papel);color:var(--tinta);font-family:"Newsreader",Georgia,serif}
-.wrap{max-width:760px;margin:0 auto;padding:28px 16px 48px}
-.duplo{border-top:6px solid var(--tinta);border-bottom:2px solid var(--tinta);height:12px}
-h1{font-family:"Anton",Impact,"Arial Narrow",sans-serif;font-weight:400;font-size:clamp(64px,18vw,140px);line-height:1;text-align:center;margin:14px 0;letter-spacing:.01em;text-transform:uppercase}
-.linha{display:flex;justify-content:space-between;font-family:"Anton",Impact,sans-serif;letter-spacing:.12em;font-size:14px;text-transform:uppercase;border-bottom:1px solid var(--tinta);padding:10px 0;margin-bottom:22px}
-a.pub{display:flex;gap:18px;align-items:center;text-decoration:none;color:inherit;border:2px solid var(--tinta);padding:16px;margin:0 0 16px;background:rgba(255,255,255,.18)}
-a.pub:hover{background:rgba(255,255,255,.4)}
-a.pub img{width:76px;height:76px;flex:none;border:1px solid var(--tinta)}
-a.pub b{display:block;font-family:"Playfair Display",Georgia,serif;font-size:24px;text-transform:uppercase;line-height:1.1}
-a.pub span{font-style:italic;font-size:18px;color:var(--suave)}
-p.nota{font-style:italic;font-size:17px;text-align:justify;margin-top:26px}
+body{margin:0;background:var(--papel);color:var(--tinta);font-family:"Newsreader",Georgia,"Times New Roman",serif;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .35  0 0 0 0 .27  0 0 0 0 .2  0 0 0 .10 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.wrap{max-width:780px;margin:0 auto;padding:max(22px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) 48px max(16px, env(safe-area-inset-left, 0px))}
+.duplo{border-top:6px solid var(--tinta);border-bottom:2px solid var(--tinta);height:11px}
+.duplo.inv{border-top-width:2px;border-bottom-width:6px}
+h1{font-family:"Anton",Impact,"Arial Narrow",sans-serif;font-weight:400;font-size:clamp(76px,24vw,168px);line-height:.95;text-align:center;margin:12px 0 8px;text-transform:uppercase;letter-spacing:.01em}
+.linha{display:flex;justify-content:space-between;align-items:center;gap:8px;font-family:"Archivo",Arial,sans-serif;font-weight:800;letter-spacing:.1em;font-size:13px;text-transform:uppercase;padding:12px 2px;border-bottom:1px solid var(--tinta)}
+h2{font-family:"Playfair Display",Georgia,serif;font-weight:600;text-transform:uppercase;text-align:center;font-size:clamp(26px,6.5vw,40px);margin:18px 0 6px;letter-spacing:.02em}
+.sub{text-align:center;font-style:italic;font-size:19px;color:var(--suave);margin:0 0 22px}
+a.pub{display:flex;gap:16px;align-items:center;text-decoration:none;color:inherit;border:2px solid var(--tinta);outline:1px solid var(--tinta);outline-offset:3px;padding:16px;margin:0 4px 22px;background:rgba(255,255,255,.22);min-height:120px}
+a.pub:hover,a.pub:focus-visible{background:rgba(255,255,255,.5)}
+a.pub:focus-visible{outline-width:3px}
+a.pub img{width:84px;height:84px;flex:none;border:1px solid var(--tinta)}
+.txt{flex:1;min-width:0}
+.txt small{display:block;font-family:"Archivo",Arial,sans-serif;font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--suave);margin-bottom:2px}
+.txt b{display:block;font-family:"Anton",Impact,"Arial Narrow",sans-serif;font-weight:400;font-size:clamp(28px,7vw,38px);line-height:1.05;text-transform:uppercase;letter-spacing:.01em}
+.txt span{display:block;font-style:italic;font-size:18px;line-height:1.35;color:var(--suave);margin-top:4px}
+.txt q{display:block;font-family:"Playfair Display",Georgia,serif;font-weight:600;font-size:17px;line-height:1.3;margin-top:10px;padding-top:8px;border-top:1px solid var(--fio)}
+.txt q::before{content:"Manchete: ";font-family:"Archivo",Arial,sans-serif;font-weight:800;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.txt q::after{content:""}
+a.pub i{font-style:normal;font-family:"Anton",Impact,sans-serif;font-size:46px;line-height:1;flex:none}
+.caixa{border:2px solid var(--tinta);padding:14px 16px;margin:30px 4px 0;text-align:center;font-family:"Playfair Display",Georgia,serif;text-transform:uppercase;font-weight:600;font-size:17px;line-height:1.35}
+p.nota{font-style:italic;font-size:17px;line-height:1.5;text-align:justify;margin:22px 4px 0}
+.linha span{white-space:nowrap}
+@media (max-width:420px){.linha .larga{display:none} a.pub{padding:14px 12px;gap:12px} a.pub img{width:64px;height:64px} a.pub i{display:none}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="duplo"></div>
   <h1>Banca</h1>
-  <div class="duplo" style="transform:scaleY(-1)"></div>
-  <div class="linha"><span>Quatro jornais</span><span>✱</span><span>Edição todo dia</span></div>
-  <a class="pub" href="jornal/"><img src="jornal/icone-192.png" alt=""><div><b>Jornal de Cada Dia</b><span>As notícias do dia em linguagem simples: política, saúde e tecnologia.</span></div></a>
-  <a class="pub" href="observatorio/"><img src="observatorio/icone-192.png" alt=""><div><b>Observatório Diário</b><span>Geopolítica, ciência, inteligência artificial e medicina.</span></div></a>
-  <a class="pub" href="anamnese/"><img src="anamnese/icone-192.png" alt=""><div><b>Anamnese</b><span>Medicina: estudos, ensaios clínicos e saúde pública.</span></div></a>
-  <a class="pub" href="lafaiete/"><img src="lafaiete/icone-192.png" alt=""><div><b>O Carijó</b><span>O jornal de Conselheiro Lafaiete: prefeitura, saúde, empregos e agenda da cidade.</span></div></a>
-  <p class="nota">Para ter um jornal como aplicativo no celular, abra-o e escolha "Adicionar à tela inicial" (Android) ou Compartilhar → "Adicionar à Tela de Início" (iPhone). Textos escritos com a ajuda do Claude, IA da Anthropic; não substituem orientação médica.</p>
+  <div class="duplo inv"></div>
+  <div class="linha"><span>4 jornais</span><span>✱</span><span class="larga">Edição todo dia</span><span class="larga">✱</span><span>10/11/2026</span></div>
+  <h2>Escolha o seu jornal</h2>
+  <p class="sub">Toque num jornal para ler a edição de hoje.</p>
+  <a class="pub" href="jornal/">
+    <img src="jornal/icone-192.png" alt="" width="84" height="84">
+    <div class="txt"><small>Edição de 10 de novembro</small><b>Jornal de Cada Dia</b><span>As notícias do dia em linguagem simples: política, saúde e tecnologia.</span><q>Eleição decidida, agora o país volta ao trabalho</q></div>
+    <i aria-hidden="true">&#8250;</i>
+  </a>
+  <a class="pub" href="lafaiete/">
+    <img src="lafaiete/icone-192.png" alt="" width="84" height="84">
+    <div class="txt"><small>Edição de 10 de novembro</small><b>O Carijó</b><span>O jornal de Conselheiro Lafaiete: prefeitura, saúde, empregos e agenda da cidade.</span><q>Buracos nas ruas, UPA sem atestado e conta de luz: semana agitada em Lafaiete</q></div>
+    <i aria-hidden="true">&#8250;</i>
+  </a>
+  <a class="pub" href="observatorio/">
+    <img src="observatorio/icone-192.png" alt="" width="84" height="84">
+    <div class="txt"><small>Edição de 9 de novembro</small><b>Observatório Diário</b><span>Geopolítica, guerras, energia, inteligência artificial e ciência.</span><q>Trump leva o Irã à mesa de Xi e Putin</q></div>
+    <i aria-hidden="true">&#8250;</i>
+  </a>
+  <a class="pub" href="anamnese/">
+    <img src="anamnese/icone-192.png" alt="" width="84" height="84">
+    <div class="txt"><small>Edição de 10 de novembro</small><b>Anamnese</b><span>Medicina para estudantes: estudos, ensaios clínicos e saúde pública.</span><q>O biomarcador caiu. O infarto, não.</q></div>
+    <i aria-hidden="true">&#8250;</i>
+  </a>
+  <div class="caixa">"Cada página impressa aproximava o mundo"</div>
+  <p class="nota">Para ter a Banca como aplicativo no celular: no Android, abra no Chrome, toque nos três pontinhos e em "Instalar app" ou "Adicionar à tela inicial"; no iPhone, abra no Safari, toque em Compartilhar e em "Adicionar à Tela de Início". Depois da primeira visita, os jornais abrem até sem internet. Textos escritos com a ajuda do Claude, IA da Anthropic; não substituem orientação médica.</p>
 </div>
+
+<script>
+/* Banca: guarda os jornais para ler sem internet e recarrega quando chega edição nova */
+if ("serviceWorker" in navigator) {
+  addEventListener("load", function () {
+    navigator.serviceWorker.register("./sw.js", {scope: "./"}).then(function (r) {
+      r.addEventListener("updatefound", function () {
+        var w = r.installing; if (!w) return;
+        w.addEventListener("statechange", function () {
+          if (w.state === "activated" && navigator.serviceWorker.controller) location.reload();
+        });
+      });
+    }).catch(function () {});
+  });
+}
+</script>
+
 </body>
 </html>

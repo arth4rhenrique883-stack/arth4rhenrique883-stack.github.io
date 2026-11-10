@@ -1,32 +1,9 @@
-/* Service worker da Banca: Jornal de Cada Dia. Versão gerada automaticamente. */
-const V = "ebb853aacb";
-const CACHE = "banca-jornal-" + V;
-const BASE = ["./", "index.html", "edicoes.json", "manifest.webmanifest",
-  "icone-180.png", "icone-192.png", "icone-512.png", "icone-maskable-512.png"];
-
-self.addEventListener("install", e => {
-  e.waitUntil(caches.open(CACHE).then(c => c.addAll(BASE)).then(() => self.skipWaiting()));
-});
+/* Substituído pelo service worker único da Banca (../sw.js). Este se remove sozinho. */
+self.addEventListener("install", () => self.skipWaiting());
 self.addEventListener("activate", e => {
-  e.waitUntil(caches.keys().then(ks => Promise.all(
-    ks.filter(k => k.startsWith("banca-jornal-") && k !== CACHE).map(k => caches.delete(k))
-  )).then(() => self.clients.claim()));
-});
-self.addEventListener("fetch", e => {
-  const req = e.request;
-  if (req.method !== "GET") return;
-  const url = new URL(req.url);
-  // Fontes do Google: guarda a primeira vez e reaproveita (funciona sem internet).
-  if (url.hostname.endsWith("fonts.googleapis.com") || url.hostname.endsWith("fonts.gstatic.com")) {
-    e.respondWith(caches.match(req).then(r => r || fetch(req).then(res => {
-      const c = res.clone(); caches.open(CACHE).then(k => k.put(req, c)); return res;
-    })));
-    return;
-  }
-  if (url.origin !== location.origin) return;
-  // Página e edições: tenta a internet primeiro (edição do dia); sem rede, usa a cópia guardada.
-  e.respondWith(fetch(req, {cache: "no-store"}).then(res => {
-    if (res.ok) { const c = res.clone(); caches.open(CACHE).then(k => k.put(req, c)); }
-    return res;
-  }).catch(() => caches.match(req, {ignoreSearch: true}).then(r => r || caches.match("index.html"))));
+  e.waitUntil(caches.keys()
+    .then(ks => Promise.all(ks.filter(k => /^banca-[a-z]+-/.test(k)).map(k => caches.delete(k))))
+    .then(() => self.registration.unregister())
+    .then(() => self.clients.matchAll())
+    .then(cs => cs.forEach(c => c.navigate(c.url))));
 });

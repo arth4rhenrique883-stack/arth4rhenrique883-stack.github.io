@@ -1,0 +1,73 @@
+{
+  "name": "Banca",
+  "short_name": "Banca",
+  "description": "Os jornais do dia num só lugar: Jornal de Cada Dia, O Carijó, Observatório Diário e Anamnese.",
+  "lang": "pt-BR",
+  "id": "/banca/",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ECE3D4",
+  "theme_color": "#3A2D2B",
+  "icons": [
+    {
+      "src": "icone-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icone-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icone-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Jornal de Cada Dia",
+      "url": "jornal/",
+      "icons": [
+        {
+          "src": "jornal/icone-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "O Carijó",
+      "url": "lafaiete/",
+      "icons": [
+        {
+          "src": "lafaiete/icone-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Observatório Diário",
+      "url": "observatorio/",
+      "icons": [
+        {
+          "src": "observatorio/icone-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Anamnese",
+      "url": "anamnese/",
+      "icons": [
+        {
+          "src": "anamnese/icone-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
