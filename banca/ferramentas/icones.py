@@ -1,10 +1,10 @@
-"""Gera os ícones das três publicações no estilo de jornal antigo (papel bege, tinta marrom, filetes duplos, letra condensada)."""
+"""Gera os ícones das publicações no estilo de jornal antigo (papel bege, tinta marrom, filetes duplos, letra condensada)."""
 import os
 from PIL import Image, ImageDraw, ImageFont
 AQUI = os.path.dirname(os.path.abspath(__file__))
 BANCA = os.path.dirname(AQUI)
 PAPEL = (236, 227, 212); TINTA = (58, 45, 43)
-PUBS = {"jornal": ("J", "CADA DIA"), "observatorio": ("O", "DIÁRIO"), "anamnese": ("A", "MEDICINA")}
+PUBS = {"jornal": ("J", "CADA DIA"), "observatorio": ("O", "DIÁRIO"), "anamnese": ("A", "MEDICINA"), "lafaiete": ("C", "LAFAIETE")}
 FONTE = os.path.join(AQUI, "Anton.ttf")
 
 def icone(letra, rotulo, tam, maskable):

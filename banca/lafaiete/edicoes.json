@@ -1,0 +1,501 @@
+{
+ "edicoes": [
+  {
+   "numero": 1,
+   "data": "2026-11-10",
+   "tempoLeitura": 12,
+   "capa": {
+    "chapeu": "Primeira edição",
+    "titulo": "Buracos nas ruas, UPA sem atestado e conta de luz: semana agitada em Lafaiete",
+    "linhaFina": "A Prefeitura parou o tapa-buracos, a UPA passou a dar atestado só em casos graves, e um projeto que mexia na taxa de iluminação saiu de pauta na Câmara depois de muita reclamação. Enquanto isso, a chuva derrubou um muro no Novo Horizonte e uma carreta do SUS faz exames no Carijós até 6 de dezembro."
+   },
+   "citacao": "Uma cidade se conhece pelas suas ruas, e as ruas se conhecem pelas pessoas que passam nelas.",
+   "recado": "Bem-vindo ao O Carijó, o jornal só de Conselheiro Lafaiete. O nome lembra o primeiro nome da cidade, Campo Alegre dos Carijós. Aqui cada notícia traz a fonte e a data. Quando faltar informação confiável, a gente avisa, em vez de inventar.",
+   "resumo": [
+    {
+     "tema": "Prefeitura",
+     "texto": "Tapa-buracos está parado por falta de dinheiro, diz a Secretaria de Obras. A promessa é voltar com força em 2027."
+    },
+    {
+     "tema": "Câmara",
+     "texto": "Projeto que mudava a taxa de iluminação pública (que vem na conta de luz) saiu de pauta. Ainda pode voltar."
+    },
+    {
+     "tema": "Saúde",
+     "texto": "A UPA vai dar atestado só em casos graves, num teste de 45 dias. Carreta do SUS faz tomografia e ultrassom até 6/12."
+    },
+    {
+     "tema": "Chuva",
+     "texto": "Muro de arrimo caiu no Novo Horizonte no sábado (7/11). A semana segue chuvosa."
+    },
+    {
+     "tema": "Escola",
+     "texto": "Cadastro para creche e pré-escola de 2027 vai até sexta (13/11), pelo aplicativo Lafaiete Digital."
+    },
+    {
+     "tema": "Feriado",
+     "texto": "Sexta, 20 de novembro, é feriado nacional da Consciência Negra."
+    }
+   ],
+   "numeros": [
+    {
+     "rotulo": "Moradores",
+     "valor": "131.621",
+     "nota": "pessoas no Censo de 2022",
+     "fonte": "IBGE, Censo 2022"
+    },
+    {
+     "rotulo": "Exames na carreta",
+     "valor": "1.300+",
+     "nota": "tomografias e ultrassons até 6/12",
+     "fonte": "Correio de Minas, 05/11/2026"
+    },
+    {
+     "rotulo": "Asfalto novo",
+     "valor": "30 km",
+     "nota": "de recapeamento, segundo a Prefeitura",
+     "fonte": "Sec. de Obras, 06/11/2026"
+    },
+    {
+     "rotulo": "Hospital Regional",
+     "valor": "117",
+     "nota": "leitos previstos, 20 de UTI",
+     "fonte": "Agência Minas, 26/06/2026"
+    }
+   ],
+   "cadernos": [
+    {
+     "id": "politica",
+     "titulo": "Prefeitura e Câmara",
+     "abertura": "O que os nossos governantes decidiram, e o que isso muda na sua vida",
+     "itens": [
+      {
+       "titulo": "Projeto que mexia na taxa de iluminação sai de pauta",
+       "selo": "Confirmado",
+       "texto": "A Prefeitura mandou à Câmara o Projeto de Lei 116/2026, que mudava a Contribuição de Iluminação Pública, a CIP. É aquela taxa que vem junto da conta de luz e paga os postes acesos nas ruas. A proposta criava uma tabela de 5% a 19%, conforme o consumo de cada casa, e também cobrava de terrenos vagos. O vereador Erivelton Jayme falou contra na tribuna e nas redes sociais, onde o vídeo passou de 130 mil visualizações. Depois das reclamações, o projeto foi retirado de pauta. Atenção: retirar de pauta não é arquivar. Ele pode voltar.",
+       "fontes": [
+        {
+         "nome": "Lafaiete Agora, 05/11/2026",
+         "url": "https://lafaieteagora.com.br/2026/11/05/erivelton-reage-a-projeto-de-lei-que-preve-aumento-na-conta-de-luz-em-lafaiete-e-proposta-sai-de-pauta-na-camara/"
+        }
+       ]
+      },
+      {
+       "titulo": "Buracos: protesto na porta da Prefeitura e tapa-buracos parado",
+       "selo": "Confirmado",
+       "texto": "Moradores marcaram um protesto contra os buracos nas ruas para a sexta (6/11), às 17h, em frente à Prefeitura. O secretário de Obras, Guilherme Albuquerque, respondeu em nota: a operação tapa-buracos está parada por causa da queda de dinheiro que atinge as prefeituras do país. Ele lembrou que a cidade ganhou mais de 30 km de asfalto novo, como na Rua Dr. Moreira e no Novo Horizonte. A usina de asfalto da Prefeitura também parou, e a ideia é passá-la para uma empresa privada, depois de uma consulta pública de 30 dias. O programa Asfalta Lafaiete deve voltar em 2027.",
+       "fontes": [
+        {
+         "nome": "Lafaiete Agora, 06/11/2026",
+         "url": "https://lafaieteagora.com.br/2026/11/06/apos-convocacao-de-protesto-contra-buracos-nas-ruas-de-lafaiete-secretaria-de-obras-se-manifesta/"
+        },
+        {
+         "nome": "Lafaiete Agora, 05/11/2026",
+         "url": "https://lafaieteagora.com.br/2026/11/05/moradores-convocam-manifestacao-em-lafaiete-contra-quantidade-de-buracos-nas-ruas/"
+        }
+       ]
+      },
+      {
+       "titulo": "Por que as prefeituras dizem que falta dinheiro",
+       "selo": "Explicação",
+       "texto": "Boa parte do dinheiro de uma cidade como Lafaiete vem de repasses do governo federal e do estadual, ligados ao que se arrecada em impostos. Quando essa arrecadação cai ou cresce menos que os gastos, obras de manutenção, como tapar buracos, costumam ser as primeiras a parar. O jornal ainda não encontrou números oficiais de quanto caiu a receita de Lafaiete em 2026. Quando a Prefeitura publicar, a gente mostra.",
+       "fontes": []
+      }
+     ],
+     "caixa": {
+      "titulo": "Quem manda na cidade",
+      "texto": "O prefeito é Leandro Chagas, no mandato de 2025 a 2028. A Câmara Municipal reúne os vereadores eleitos em 2024: eles votam as leis da cidade e fiscalizam a Prefeitura. As sessões são abertas ao público e qualquer pessoa pode assistir."
+     }
+    },
+    {
+     "id": "saude",
+     "titulo": "Saúde",
+     "abertura": "UPA, exames do SUS e o hospital que a região espera",
+     "aviso": "Estas notícias informam, mas não substituem o médico. Em emergência, ligue 192 (SAMU).",
+     "itens": [
+      {
+       "titulo": "UPA vai dar atestado só em casos graves",
+       "selo": "Confirmado",
+       "texto": "Um decreto publicado na sexta (6/11) começou um teste de 45 dias na UPA 24 horas. Nesse período, o atestado médico será dado só em casos graves. O prefeito Leandro Chagas disse que a UPA não deve mais ser usada só para conseguir atestado, e o secretário de Saúde, Rodrigo Souza, explicou que a ideia é desafogar a unidade para quem está em urgência de verdade. O médico continua com liberdade para decidir. Para consultas comuns, o caminho é o posto de saúde do seu bairro.",
+       "fontes": [
+        {
+         "nome": "Lafaiete Agora, 06/11/2026",
+         "url": "https://lafaieteagora.com.br/2026/11/06/upa-de-lafaiete-inicia-testes-para-reduzir-atendimentos-de-pessoas-que-procuram-a-unidade-apenas-para-obter-atestado-medico/"
+        }
+       ]
+      },
+      {
+       "titulo": "Carreta do SUS faz tomografia e ultrassom no Carijós",
+       "selo": "Confirmado",
+       "texto": "De 6 de novembro a 6 de dezembro, uma carreta do programa federal Agora Tem Especialistas atende no Ginásio Agostinho Campos Neto, na Rua Jurupis, bairro Carijós. São mais de 1.300 exames previstos de tomografia (sem contraste) e ultrassom. Importante: não adianta ir direto lá. A Secretaria de Saúde chama quem já está na fila do SUS. Se você for chamado e não puder ir, avise antes, para a vaga passar a outra pessoa.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, 05/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/05/carreta-agora-tem-especialista-chega-em-lafaiete/"
+        }
+       ]
+      },
+      {
+       "titulo": "Hospital Regional: obra prometida para o fim de 2026",
+       "selo": "Previsão",
+       "texto": "Em junho, o Governo de Minas assinou a concessão do Hospital Regional de Conselheiro Lafaiete com o Instituto de Saúde HSVP, por 25 anos. O hospital terá 117 leitos (77 de internação, 20 de observação e 20 de UTI), quatro salas de cirurgia e pronto-atendimento, para 51 cidades da região. O governo disse que a obra fica pronta até o fim de 2026, mas não deu data de abertura. Em março, o estado falava em 97 leitos, porque não contava os 20 de observação. Até hoje, o jornal não achou anúncio de inauguração.",
+       "fontes": [
+        {
+         "nome": "Agência Minas, 26/06/2026",
+         "url": "https://www.agenciaminas.mg.gov.br/noticia/governo-de-minas-da-novo-passo-para-abertura-do-hospital-regional-de-conselheiro-lafaiete"
+        },
+        {
+         "nome": "Correio da Cidade, 29/06/2026",
+         "url": "https://www.jornalcorreiodacidade.com.br/noticias/49230-hospital-regional-de-lafaiete-avanca-com-assinatura-da-concessao-e-preve-abertura-em-2026"
+        }
+       ]
+      },
+      {
+       "titulo": "Projeto Sangue Nosso homenageia quem leva doadores",
+       "selo": "Confirmado",
+       "texto": "O projeto Sangue Nosso – Mais Vida, que leva moradores para doar sangue, homenageou a empresa Sem Fronteira, que ajuda no transporte dos doadores. Doar sangue é seguro, leva cerca de uma hora e uma doação pode ajudar várias pessoas.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, 09/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/09/projeto-sangue-nosso-mais-vida-presta-homenagem-a-empresa-sem-fronteira-pelo-apoio-ao-transporte-de-doadores/"
+        }
+       ]
+      }
+     ],
+     "caixa": {
+      "titulo": "UPA ou posto de saúde?",
+      "texto": "UPA é para urgência: falta de ar, dor forte no peito, febre muito alta, corte fundo, desmaio, sinais de AVC (boca torta, braço fraco, fala enrolada). Gripe leve, renovação de receita, exames de rotina e pressão controlada são casos para o posto de saúde do bairro. Na dúvida grave, ligue 192."
+     }
+    },
+    {
+     "id": "educacao",
+     "titulo": "Educação",
+     "abertura": "Prazos que não podem passar",
+     "itens": [
+      {
+       "titulo": "Vaga em creche para 2027: cadastro vai até sexta (13/11)",
+       "selo": "Confirmado",
+       "texto": "Quem precisa de creche ou pré-escola municipal em 2027 tem até 13 de novembro para cadastrar a criança, pelo aplicativo Lafaiete Digital. O resultado sai em 2 de dezembro, e as matrículas devem acontecer entre 9 e 15 de dezembro. O jornal Correio de Minas lembra que a Prefeitura ainda não divulgou quantas crianças estão na fila. Há um terreno no bairro Novo Horizonte separado para uma nova creche, ainda sem prazo de entrega.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, 04/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/04/lafaiete-abre-cadastro-para-creches-em-2027-mas-numero-de-criancas-na-fila-continua-sem-atualizacao-publica-identificada/"
+        }
+       ]
+      },
+      {
+       "titulo": "Bolsas no CET, em Congonhas: inscrição termina hoje",
+       "selo": "Confirmado",
+       "texto": "O Centro de Educação Tecnológica, da Fundação CSN, tem bolsas de 50% e 100% para ensino fundamental II, ensino médio e cursos técnicos em 2027. As inscrições pela internet vão só até hoje, 10 de novembro. A prova é no sábado (14/11), das 8h às 11h, e o resultado sai em 23 de novembro, às 15h.",
+       "fontes": [
+        {
+         "nome": "Lafaiete Agora, 03/11/2026",
+         "url": "https://lafaieteagora.com.br/2026/11/03/cet-esta-com-processo-de-bolsas-de-estudo-para-2027-aberto/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "emprego",
+     "titulo": "Emprego e economia",
+     "abertura": "Vagas do dia e o que movimenta a cidade",
+     "itens": [
+      {
+       "titulo": "Sine tem vagas no comércio, na indústria e em serviços",
+       "selo": "Confirmado",
+       "texto": "Na segunda (9/11), o Sine de Lafaiete divulgou vagas como operador de caixa, repositor, balconista, atendente de padaria, auxiliar de limpeza, auxiliar de mecânico, auxiliar de caldeiraria, auxiliar de linha de produção, entregador de gás e água e vigilante. A lista muda todo dia. O Sine fica na Rua Marechal Floriano, 135 A, no Centro, abre de segunda a sexta, das 7h às 16h, e o telefone é (31) 3764-9807. Ligue antes para saber quais documentos levar.",
+       "fontes": [
+        {
+         "nome": "Jornal Voz Ativa, 09/11/2026",
+         "url": "https://jornalvozativa.com/emprego/vagas-emprego-sine-conselheiro-lafaiete-9-11-26/"
+        }
+       ]
+      },
+      {
+       "titulo": "Área rural vai abrigar um complexo ligado à Gerdau",
+       "selo": "Confirmado",
+       "texto": "Em 2025, a Prefeitura publicou o Decreto 236, que declara de utilidade pública uma área na zona rural para um 'Complexo de Desenvolvimento Econômico Gerdau'. Isso permite à Prefeitura desapropriar a terra, pagando indenização. O jornal ainda não encontrou informação oficial sobre quantos empregos o projeto vai gerar nem quando fica pronto, por isso não damos números.",
+       "fontes": [
+        {
+         "nome": "Prefeitura, Decreto 236/2025",
+         "url": "https://conselheirolafaiete.mg.gov.br/v1/wp-content/uploads/2025/09/Decreto-236-2025-Utilidade-Publica-Desapropriacao-Zona-Rural-Complexo-de-Desenvolvimento-Economico-Gerdau.pdf"
+        }
+       ]
+      },
+      {
+       "titulo": "Mineração na região sente o frete caro",
+       "selo": "Confirmado",
+       "texto": "Cerca de 500 trabalhadores da mina da Cedro, em Mariana, entraram em férias coletivas em 9 de novembro porque o frete de navio para exportar minério ficou mais caro. Lafaiete vive cercada por mineradoras e siderúrgicas, então o que acontece com o preço do minério lá fora chega aos empregos daqui.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, 09/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/09/cerca-de-500-trabalhadores-da-mina-da-cedro-em-mariana-mg-saem-de-ferias-coletivas-em-9-de-novembro-porque-o-frete-do-navio-encareceu-dois-meses-depois-de-a-mineradora-ganhar-a-licenca-para-a-expan/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "seguranca",
+     "titulo": "Segurança",
+     "abertura": "Ocorrências da semana, sem exagero",
+     "itens": [
+      {
+       "titulo": "PM prende dois e apreende drogas no Carijós",
+       "selo": "Confirmado",
+       "texto": "No domingo (8/11), a Polícia Militar prendeu dois homens no bairro Carijós depois de investigar um imóvel suspeito. Foram apreendidas mais de 250 porções de crack, maconha e cocaína e R$ 2.622 em dinheiro. Um cão farejador achou o crack escondido numa jaqueta. Na quinta (5/11), outra ação já tinha apreendido quase 500 porções e prendido um suspeito.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, 09/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/09/cerco-fechado-pm-usa-inteligencia-e-cao-policial-para-prender-dois-e-apreender-mais-de-250-porcoes-de-drogas-em-lafaiete/"
+        },
+        {
+         "nome": "Lafaiete Agora, 06/11/2026",
+         "url": "https://lafaieteagora.com.br/2026/11/06/pm-apreende-quase-500-porcoes-de-droga-em-lafaiete-e-prende-suspeito-de-trafico/"
+        }
+       ]
+      },
+      {
+       "titulo": "Inventar crime também é crime",
+       "selo": "Confirmado",
+       "texto": "A PM registrou em Lafaiete um caso de falsa comunicação de roubo: um homem disse ter sido roubado, mas a história não se confirmou, e ele vai responder por isso. Comunicar um crime que não aconteceu está no Código Penal e tira viatura de quem precisa.",
+       "fontes": [
+        {
+         "nome": "Lafaiete Agora, 06/11/2026",
+         "url": "https://lafaieteagora.com.br/2026/11/06/policia-militar-em-lafaiete-registra-falsa-comunicacao-de-roubo/"
+        }
+       ]
+      }
+     ],
+     "caixa": {
+      "titulo": "Telefones que salvam",
+      "texto": "Polícia Militar: 190. SAMU: 192. Bombeiros: 193. Defesa Civil: 199. Disque-denúncia anônimo: 181."
+     }
+    },
+    {
+     "id": "cidade",
+     "titulo": "Cidade, chuva e trânsito",
+     "abertura": "Ruas, rodovia e o tempo lá fora",
+     "itens": [
+      {
+       "titulo": "Muro desaba na chuva e família deixa a casa no Novo Horizonte",
+       "selo": "Confirmado",
+       "texto": "Na noite de sábado (7/11), durante a chuva forte, caiu um muro de arrimo (o muro que segura barranco) no bairro Novo Horizonte. Segundo a reportagem, uma escavação no lote vizinho tinha enfraquecido o muro, e a água acumulada fez o resto. A reportagem não cita feridos. Os moradores foram para a casa de parentes até um engenheiro avaliar o imóvel. O dono do terreno vizinho assumiu a culpa e prometeu refazer o muro. A Defesa Civil segue acompanhando.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, 09/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/09/muro-de-arrimo-desaba-durante-temporal-em-lafaiete-e-deixa-desalojados/"
+        }
+       ]
+      },
+      {
+       "titulo": "BR-040 fecha por uma hora em Congonhas no sábado",
+       "selo": "Confirmado",
+       "texto": "No sábado (14/11), das 15h às 16h, a BR-040 fica fechada nos dois sentidos perto do bairro Jardim Profeta, em Congonhas (km 612), para explosão controlada de rocha na obra de duplicação. Quem vai a BH ou a Juiz de Fora nesse horário deve sair mais cedo ou mais tarde. Informações: 0800 003 1040, da concessionária EPR Via Mineira.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, 09/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/09/epr-via-mineira-programa-desmonte-controlado-de-rocha-em-congonhas-para-avanco-das-obras-de-duplicacao-da-br-040/"
+        }
+       ]
+      }
+     ],
+     "caixa": {
+      "titulo": "Sinais de perigo em muros e barrancos",
+      "texto": "Rachaduras novas na parede ou no chão, muro 'barrigudo' ou inclinado, água minando do barranco, portas e janelas que começam a emperrar e estalos à noite. Se notar algum desses sinais, saia do local e ligue para a Defesa Civil (199) ou os Bombeiros (193)."
+     }
+    },
+    {
+     "id": "esporte",
+     "titulo": "Esporte, cultura e fé",
+     "abertura": "O que acontece além das manchetes",
+     "itens": [
+      {
+       "titulo": "Liga de Desportos pode ter a primeira presidente mulher",
+       "selo": "Confirmado",
+       "texto": "A Liga de Desportos de Lafaiete e região, que organiza o futebol amador, elege a nova diretoria na segunda (16/11), às 19h, na sede da Rua Carijós, 103, no Rosário. Há uma só chapa, a Chapa Renovação, com Thalita Salles Fernandes para presidente e Rafael Bastos Garcia para vice. Se eleita, Thalita será a primeira mulher a comandar a Liga.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, 09/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/09/liga-de-desportos-de-lafaiete-e-regiao-elege-nova-diretoria-na-proxima-segunda-feira/"
+        }
+       ]
+      },
+      {
+       "titulo": "Capela restaurada no Alto Maranhão, aqui do lado",
+       "selo": "Confirmado",
+       "texto": "A capela de Nossa Senhora da Ajuda, no distrito de Alto Maranhão, em Congonhas, foi entregue restaurada à comunidade. As capelas antigas da região guardam a memória do tempo do ouro e dos tropeiros do Caminho Novo.",
+       "fontes": [
+        {
+         "nome": "Lafaiete Agora, 05/11/2026",
+         "url": "https://lafaieteagora.com.br/2026/11/05/capela-de-nossa-senhora-da-ajuda-no-alto-maranhao-tem-obras-de-restauracao-entregues-a-comunidade/"
+        }
+       ]
+      },
+      {
+       "titulo": "Feriado de 20 de novembro cai numa sexta",
+       "selo": "Confirmado",
+       "texto": "O Dia de Zumbi e da Consciência Negra é feriado nacional desde 2024, pela Lei 14.759/2023. Em 2026 cai na sexta (20/11). Não é folga para todo mundo: hospitais, farmácias, transporte e segurança funcionam. A quinta (19/11) é dia normal. Quem trabalhar no feriado sem folga compensatória tem direito a receber em dobro.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, 09/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/09/novo-feriado-nacional-e-decretado-para-sexta-feira-com-folga-prolongada-em-todo-o-brasil/"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "tempo": {
+    "texto": "Semana de chuva quase todo dia e frio fora de época no começo. A partir do fim de semana, esquenta um pouco, mas a chuva continua. Previsão muda: confira de novo antes de sair.",
+    "dias": [
+     {
+      "dia": "Ter 10",
+      "min": 12,
+      "max": 16,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Qua 11",
+      "min": 13,
+      "max": 18,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Qui 12",
+      "min": 14,
+      "max": 21,
+      "ceu": "Pancadas"
+     },
+     {
+      "dia": "Sex 13",
+      "min": 16,
+      "max": 23,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Sáb 14",
+      "min": 16,
+      "max": 24,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Dom 15",
+      "min": 16,
+      "max": 25,
+      "ceu": "Pancadas"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "HG Brasil, consulta em 10/11/2026",
+      "url": "https://hgbrasil.com/weather/places/brazil/mg/conselheiro-lafaiete"
+     },
+     {
+      "nome": "Climatempo, consulta em 10/11/2026",
+      "url": "https://www.climatempo.com.br/previsao-do-tempo/15-dias/cidade/129/conselheirolafaiete-mg"
+     }
+    ]
+   },
+   "historia": {
+    "titulo": "De Carijós a Lafaiete: os nomes da nossa cidade",
+    "texto": "Antes de ser Conselheiro Lafaiete, a cidade foi Campo Alegre dos Carijós, depois Carijós e, por quase 150 anos, Queluz. Ficava no Caminho Novo, a estrada por onde o ouro de Minas descia até o porto do Rio de Janeiro, e servia de parada para tropeiros e bandeirantes. Em 1934, no centenário de nascimento do jurista Lafayette Rodrigues Pereira, nascido aqui e ministro do Império, a cidade ganhou o nome atual.",
+    "linha": [
+     {
+      "ano": "1709",
+      "fato": "Criada a freguesia de Nossa Senhora da Conceição do Campo Alegre dos Carijós"
+     },
+     {
+      "ano": "1752",
+      "fato": "Vira distrito de Carijós"
+     },
+     {
+      "ano": "1790",
+      "fato": "Em 19 de setembro, é elevada a Vila Real de Queluz"
+     },
+     {
+      "ano": "1866",
+      "fato": "Queluz ganha o título de cidade"
+     },
+     {
+      "ano": "1934",
+      "fato": "Em 27 de março, passa a se chamar Conselheiro Lafaiete"
+     },
+     {
+      "ano": "2022",
+      "fato": "O Censo do IBGE conta 131.621 moradores"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "Wikipédia (verbete da cidade)",
+      "url": "https://pt.wikipedia.org/wiki/Conselheiro_Lafaiete"
+     },
+     {
+      "nome": "IBGE Cidades",
+      "url": "https://www.ibge.gov.br/cidades-e-estados/mg/3118304.html"
+     }
+    ]
+   },
+   "palavrinhas": [
+    {
+     "termo": "CIP",
+     "def": "Contribuição de Iluminação Pública. Taxa cobrada junto da conta de luz para pagar a iluminação das ruas."
+    },
+    {
+     "termo": "Retirar de pauta",
+     "def": "Tirar um projeto da lista de votação do dia. Não é o mesmo que arquivar: ele pode voltar depois."
+    },
+    {
+     "termo": "Muro de arrimo",
+     "def": "Muro que segura um barranco ou um aterro para a terra não descer."
+    },
+    {
+     "termo": "Concessão",
+     "def": "Quando o governo entrega a gestão de um serviço a uma entidade por um tempo, com regras e fiscalização."
+    },
+    {
+     "termo": "Utilidade pública",
+     "def": "Declaração que permite ao governo desapropriar um terreno, pagando indenização ao dono, para uma obra de interesse da cidade."
+    }
+   ],
+   "agenda": [
+    {
+     "quando": "Hoje, 10/11",
+     "oque": "Último dia de inscrição nas bolsas do CET (Congonhas)"
+    },
+    {
+     "quando": "Até 13/11",
+     "oque": "Cadastro de creche e pré-escola 2027 no app Lafaiete Digital"
+    },
+    {
+     "quando": "Sáb, 14/11",
+     "oque": "BR-040 fechada das 15h às 16h em Congonhas; prova do CET, das 8h às 11h"
+    },
+    {
+     "quando": "Seg, 16/11",
+     "oque": "Eleição da Liga de Desportos, às 19h, no Rosário"
+    },
+    {
+     "quando": "Sex, 20/11",
+     "oque": "Feriado nacional da Consciência Negra"
+    },
+    {
+     "quando": "Até 06/12",
+     "oque": "Carreta de exames do SUS no Ginásio do Carijós (só para quem for chamado)"
+    },
+    {
+     "quando": "Fim de 2026",
+     "oque": "Prazo do governo para concluir a obra do Hospital Regional"
+    }
+   ],
+   "conversa": [
+    "A taxa de iluminação deve ser igual para todos ou maior para quem gasta mais luz?",
+    "Você já viu alguém ir à UPA só por atestado? A regra nova é justa?",
+    "Qual rua do seu bairro mais precisa de asfalto?"
+   ],
+   "fechamento": "Ainda faltam boas fontes sobre os números da Câmara e das contas da Prefeitura; nas próximas edições a gente vai atrás."
+  }
+ ]
+}

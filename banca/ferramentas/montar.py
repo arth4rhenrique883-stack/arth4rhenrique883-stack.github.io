@@ -19,6 +19,8 @@ PUBS = [
      "Revista diária de geopolítica, ciência, IA e medicina."),
     ("anamnese", "medicina", "Anamnese", "Anamnese",
      "Jornal diário de medicina: estudos, ensaios clínicos e saúde pública."),
+    ("lafaiete", "jornal-lafaiete", "O Carijó", "O Carijó",
+     "O jornal de Conselheiro Lafaiete (MG) em linguagem simples: prefeitura, saúde, empregos, segurança e agenda."),
 ]
 
 CABECA = """<!doctype html>
