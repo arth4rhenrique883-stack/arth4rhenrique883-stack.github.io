@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Painel da redação</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@600;800&family=Newsreader:ital,wght@0,400;1,400&family=UnifrakturMaguntia&display=swap">
+<style>
+:root{--papel:#EFE8DA;--tinta:#111;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--papel);color:var(--tinta);font:18px/1.45 "Newsreader",Georgia,serif}
+.folha{max-width:980px;margin:0 auto;padding:18px 16px 60px}
+h1{font:400 clamp(36px,8vw,64px)/1 "UnifrakturMaguntia",Georgia,serif;text-align:center;margin:8px 0 4px}
+.tarja{background:#111;color:var(--papel);font:800 13px/1.2 "Archivo",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:9px}
+.duplo{border:0;border-top:5px solid #111;border-bottom:1.5px solid #111;height:9px;margin:10px 0}
+.btn{font:600 15px "Archivo",Arial,sans-serif;background:transparent;color:#111;border:1.5px solid #111;padding:8px 12px;min-height:44px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
+.btn.cheio{background:#111;color:var(--papel)}
+.barra{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;justify-content:space-between;margin:14px 0;font:600 14px "Archivo",Arial,sans-serif}
+.barra .f{display:flex;gap:6px;flex-wrap:wrap}
+.barra .f button[aria-pressed=true]{background:#111;color:var(--papel)}
+ul{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+li{border:1.5px solid #111;padding:12px 14px;display:grid;gap:6px;background:rgba(255,255,255,.3)}
+.r{font:800 11.5px/1.3 "Archivo",Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase}
+.t{font-style:italic;white-space:pre-wrap;overflow-wrap:anywhere}
+.st{justify-self:start;font:800 11px "Archivo",Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;border:1px solid #111;padding:2px 7px}
+.st.respondida{background:#111;color:var(--papel)}
+.acoes{display:flex;gap:8px;flex-wrap:wrap}
+.msg{border:1.5px dashed #111;padding:12px 14px}
+</style></head><body><div class="folha">
+<div class="tarja">Uso interno ✱ só a redação tem acesso</div>
+<h1>Terra Brasilis</h1>
+<div class="tarja">Painel das sugestões dos leitores</div>
+<hr class="duplo">
+<div id="area"><p class="msg">Abrindo…</p></div>
+</div>
+<script src="config.js"></script>
+<script type="module">
+const cfg=window.BANCA_FIREBASE, area=document.getElementById("area");
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const TIPOS={tema:"Tema",melhoria:"Melhoria",correcao:"Correção",outro:"Outro"};
+const CADS={brasil:"Brasil",lafaiete:"Lafaiete",os_dois:"Os dois"};
+if(!cfg){ area.innerHTML='<p class="msg">O Firebase ainda não foi configurado (banca/sugestoes/config.js).</p>'; }
+else{
+  const V="10.12.2", b=`https://www.gstatic.com/firebasejs/${V}/`;
+  const [{initializeApp},A,F]=await Promise.all([import(b+"firebase-app.js"),import(b+"firebase-auth.js"),import(b+"firebase-firestore.js")]);
+  const app=initializeApp(cfg), auth=A.getAuth(app), db=F.getFirestore(app);
+  let filtro="nova", itens=[];
+  const entrar=()=>{area.innerHTML='<p class="msg">Entre com a conta Google da redação.</p><p><button class="btn cheio" id="g">Entrar com o Google</button></p>';
+    document.getElementById("g").onclick=()=>A.signInWithPopup(auth,new A.GoogleAuthProvider()).catch(e=>alertar(e));};
+  const alertar=e=>{area.insertAdjacentHTML("afterbegin",`<p class="msg">Erro: ${esc(e.code||e.message)}</p>`);};
+  async function carrega(u){
+    try{
+      const snap=await F.getDocs(F.query(F.collection(db,"sugestoes"),F.orderBy("criadoEm","desc"),F.limit(500)));
+      itens=snap.docs.map(d=>({id:d.id,...d.data()})); desenha(u);
+    }catch(e){ area.innerHTML=`<p class="msg">Esta conta (${esc(u.email)}) não tem acesso ao painel. Confira o e-mail nas regras do Firestore.</p><p><button class="btn" id="sair">Sair</button></p>`; document.getElementById("sair").onclick=()=>A.signOut(auth); }
+  }
+  function desenha(u){
+    const vis=itens.filter(s=>filtro==="todas"||s.status===filtro);
+    const cont=k=>itens.filter(s=>k==="todas"||s.status===k).length;
+    area.innerHTML=`<div class="barra"><span>Redação: ${esc(u.email)} <button class="btn" id="sair">Sair</button></span>
+      <span class="f">${["nova","respondida","todas"].map(k=>`<button class="btn" data-f="${k}" aria-pressed="${filtro===k}">${k==="nova"?"Novas":k==="respondida"?"Respondidas":"Todas"} (${cont(k)})</button>`).join("")}</span></div>
+      ${vis.length?`<ul>${vis.map(s=>{const d=s.criadoEm?.toDate?.(); const dt=d?d.toLocaleString("pt-BR"):"";
+        const assunto=encodeURIComponent("Sua sugestão ao Terra Brasilis");
+        const corpo=encodeURIComponent(`Olá, ${s.nome||""}!\n\nObrigado pela sua sugestão ao Terra Brasilis.\n\n\n\n---\nVocê escreveu em ${dt}:\n${s.texto}`);
+        return `<li><span class="r">${esc(TIPOS[s.tipo]||s.tipo)} ✱ ${esc(CADS[s.caderno]||s.caderno)} ✱ ${esc(dt)}</span>
+        <span class="r">${esc(s.nome)} &lt;${esc(s.email)}&gt;</span><span class="t">${esc(s.texto)}</span>
+        <span class="st ${s.status==="respondida"?"respondida":""}">${s.status==="respondida"?"Respondida":"Nova"}</span>
+        <span class="acoes"><a class="btn cheio" href="mailto:${esc(s.email)}?subject=${assunto}&body=${corpo}">Responder por e-mail</a>
+        <button class="btn" data-id="${esc(s.id)}" data-st="${s.status==="respondida"?"nova":"respondida"}">${s.status==="respondida"?"Voltar para novas":"Marcar como respondida"}</button></span></li>`;}).join("")}</ul>`:'<p class="msg">Nada aqui.</p>'}`;
+    document.getElementById("sair").onclick=()=>A.signOut(auth);
+    area.querySelectorAll("[data-f]").forEach(b=>b.onclick=()=>{filtro=b.dataset.f;desenha(u);});
+    area.querySelectorAll("[data-id]").forEach(b=>b.onclick=async()=>{
+      try{ await F.updateDoc(F.doc(db,"sugestoes",b.dataset.id),{status:b.dataset.st,respondidaEm:F.serverTimestamp()});
+        const s=itens.find(x=>x.id===b.dataset.id); s.status=b.dataset.st; desenha(u);}catch(e){alertar(e);} });
+  }
+  A.onAuthStateChanged(auth,u=>u?carrega(u):entrar());
+}
+</script>
+</body></html>

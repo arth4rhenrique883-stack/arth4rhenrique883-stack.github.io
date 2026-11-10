@@ -15,8 +15,9 @@
 <title>Terra Brasilis</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Libre+Caslon+Display&family=Libre+Caslon+Text:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,500&family=Archivo:wght@600;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Libre+Caslon+Display&family=Libre+Caslon+Text:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,500&family=Archivo:wght@600;800&family=UnifrakturMaguntia&display=swap">
 <style>
+/* Edição em preto e aba "Sugestões" com cadastro (10/11/2026): ver blocos no fim do estilo e o segundo <script>. */
 /* Terra Brasilis, jornal do Brasil e de Conselheiro Lafaiete (fundido com O Carijó em 10/11/2026): tela de escolha do caderno ao abrir. Layout: jornal antigo impresso — papel bege com textura, manchete condensada entre filetes duplos, linha de edição com asteriscos, seções em serifa maiúscula, texto em itálico justificado, gravura em P&B e citações em caixa com borda. Visual único (sempre papel claro), por escolha. */
 :root{
   --papel:#EEE5D6;
@@ -188,6 +189,154 @@ select{max-width:100%}
 .oculto{display:none!important}
 @media (max-width:760px){.opcoes{grid-template-columns:1fr}}
 @media (max-width:480px){.impacto dl{grid-template-columns:1fr;gap:0}.impacto dd{margin-bottom:8px}}
+
+/* ===== Edição em preto (pedido de Arthur, 10/11/2026): tinta preta de jornal impresso de verdade ===== */
+/* Mantém o papel bege texturizado e a manchete condensada; muda a tinta para preto, põe o título em letra gótica
+   (como os grandes jornais), orelhas ao lado do título, tarjas pretas nas seções, filete entre colunas,
+   capitular na abertura e gravura em preto e branco. */
+:root{
+  --papel:#EFE8DA;
+  --papel-escuro:#E3D9C6;
+  --tinta:#111111;
+  --tinta-suave:#3B3834;
+  --fio:#111111;
+  --realce:#E2D8C5;
+  --gotica:"UnifrakturMaguntia","UnifrakturCook","Old English Text MT",Georgia,serif;
+}
+body{color:var(--tinta)}
+::selection{background:#111;color:var(--papel)}
+
+/* cabeçalho: orelhas + título gótico */
+.cabeca{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:14px;padding-block:6px 4px}
+.orelha{border:1.5px solid var(--tinta);padding:8px 10px;font-family:var(--rotulo);font-weight:800;font-size:11px;line-height:1.3;letter-spacing:.1em;text-transform:uppercase;text-align:center;max-width:170px;display:grid;gap:3px}
+.orelha.dir{justify-self:end}
+.orelha b{font-family:var(--manchete);font-weight:400;font-size:20px;letter-spacing:.02em;line-height:1}
+.orelha i{font-family:var(--texto);font-style:italic;font-weight:400;text-transform:none;letter-spacing:0;font-size:13px}
+.orelha a{text-decoration:none}
+.orelha a:hover{text-decoration:underline}
+.nome{font-family:var(--gotica);text-transform:none;font-weight:400;letter-spacing:0;line-height:1;font-size:clamp(46px,10.5vw,118px);padding-block:10px 6px;color:#0A0A0A}
+.lema{font-family:var(--titulo);font-style:italic;text-align:center;font-size:clamp(13px,1.6vw,16px);margin:0 0 8px;color:var(--tinta-suave)}
+@media (max-width:760px){.cabeca{grid-template-columns:1fr}.orelha{display:none}}
+
+/* linha de edição: tarja preta */
+.linha-edicao{background:#111;color:var(--papel);padding:9px 14px;margin-block:0}
+.linha-edicao .ast{color:var(--papel)}
+.duplo{border-top-width:5px}
+.duplo.inv{border-bottom-width:5px}
+.chamada{font-family:var(--manchete);text-transform:uppercase;letter-spacing:.005em;line-height:.98;font-size:clamp(36px,8vw,92px)}
+
+/* índice */
+.indice a.sug{background:#111;color:var(--papel);padding:10px 12px;margin-left:4px}
+.indice a.sug:hover{text-decoration:none;background:#333}
+
+/* botões */
+select,.btn{border-color:#111;color:#111}
+.btn:hover,select:hover{background:#111;color:var(--papel)}
+.btn.cheio{background:#111;color:var(--papel)}
+.btn.cheio:hover{background:#333}
+
+/* capa: manchete grande, capitular, gravura P&B */
+.capa .chapeu{display:inline-block;justify-self:start;background:#111;color:var(--papel);padding:4px 9px}
+.capa h2{font-family:var(--manchete);font-size:clamp(36px,5.6vw,66px);line-height:.98;letter-spacing:.004em}
+.capa .esq > .it::first-letter{float:left;font-family:var(--manchete);font-style:normal;font-size:4.1em;line-height:.82;padding:.06em .1em 0 0;color:#0A0A0A}
+.capa{background-image:linear-gradient(#111,#111);background-size:1px calc(100% - 44px);background-position:calc(47% + 0px) 22px;background-repeat:no-repeat}
+.citacao{border:0;border-top:4px solid #111;border-bottom:4px solid #111;padding:12px 6px;font-size:clamp(18px,2vw,23px)}
+.gravura{border:3px double #111;background:#F5F1E8}
+.gravura img{filter:grayscale(1) contrast(1.25) brightness(1.02)}
+.legenda-grav{color:var(--tinta-suave)}
+@media (max-width:760px){.capa{background-image:none}}
+
+/* tarjas pretas das seções (como as "bandeiras" de caderno dos jornais) */
+.secao-cab{background:#111;color:var(--papel);padding:12px 14px 12px}
+.secao-cab h2{font-family:var(--manchete);letter-spacing:.02em;font-size:clamp(28px,5vw,50px);line-height:1}
+.secao-cab p{color:#D9D1C2}
+.frente{letter-spacing:.2em}
+.frente::before,.frente::after{border-top-width:3px}
+
+/* colunas com filete vertical entre elas */
+.colunas{background-image:linear-gradient(#111,#111);background-size:1px 100%;background-position:center top;background-repeat:no-repeat}
+@media (max-width:760px){.colunas{background-image:none}}
+.item{border-bottom:1px solid #111}
+.item h3{font-family:var(--titulo);font-weight:700;text-transform:none;font-size:clamp(22px,2.7vw,28px);line-height:1.1}
+.selo{border-color:#111}
+.selo.Confirmado{background:#111;color:var(--papel)}
+.fontes{color:var(--tinta-suave)}
+.caixa{border:2px solid #111;outline-color:#111;padding-top:0}
+.caixa h4{background:#111;color:var(--papel);margin:0 -22px 4px;padding:9px 14px;font-family:var(--rotulo);font-weight:800;font-size:13px;letter-spacing:.16em}
+.aviso{border:2px solid #111;background:rgba(255,255,255,.25)}
+
+/* como isso afeta você */
+.impacto{border:1.5px solid #111;background:rgba(255,255,255,.3);padding:0 12px 12px}
+.impacto h4{background:#111;color:var(--papel);margin:0 -12px 8px;padding:6px 10px}
+.impacto h4 small{color:#D9D1C2}
+
+/* números, tempo e fim */
+.num{border-right:1px solid #111;padding:14px 12px}
+.num:last-child{border-right:0}
+.num .v{color:#0A0A0A;font-size:44px}
+.dia{border-right-color:#111}
+.fim h2,.conversa h2{border-bottom:4px double #111}
+.conversa li{border:2px solid #111}
+.linha-tempo li,.poucas li{border-top-color:#111}
+.poucas li{border-top-width:2px}
+
+/* tela de escolha */
+.opcao{border-color:#111;outline-color:#111;background:rgba(255,255,255,.28)}
+.opcao:hover{background:rgba(255,255,255,.55)}
+.opcao .k{background:#111;color:var(--papel);justify-self:start;padding:3px 8px}
+.opcao .ir{background:#111;color:var(--papel);border-color:#111}
+.explica-impacto{border:2px solid #111}
+.chama-sug{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 18px;border-top:5px solid #111;border-bottom:1.5px solid #111;margin:26px 4px 6px;padding:14px 4px}
+.chama-sug p{margin:0;font-family:var(--titulo);font-size:1em;max-width:52ch}
+.chama-sug p b{font-family:var(--manchete);font-weight:400;text-transform:uppercase;font-size:1.3em;letter-spacing:.01em;display:block}
+
+/* aba de sugestões */
+.sug{padding-block:8px 20px}
+.sug-grade{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:28px;padding-top:20px;background-image:linear-gradient(#111,#111);background-size:1px 100%;background-position:55.5% top;background-repeat:no-repeat}
+.sug-grade > *{min-width:0}
+@media (max-width:760px){.sug-grade{grid-template-columns:1fr;background-image:none}}
+.sug h3{font-family:var(--rotulo);font-weight:800;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 10px;padding:6px 0;border-top:4px solid #111;border-bottom:1px solid #111}
+.sug form{display:grid;gap:12px}
+.sug label{font-family:var(--rotulo);font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;display:grid;gap:5px}
+.sug input[type=text],.sug input[type=email],.sug input[type=password],.sug textarea,.sug select{font-family:var(--texto);font-size:18px;letter-spacing:0;text-transform:none;font-weight:400;color:#111;background:rgba(255,255,255,.55);border:1.5px solid #111;border-radius:0;padding:9px 11px;min-height:44px;width:100%}
+.sug textarea{min-height:150px;resize:vertical;line-height:1.45}
+.sug .marca{display:flex;gap:10px;align-items:flex-start;font-family:var(--texto);font-weight:400;font-size:15px;letter-spacing:0;text-transform:none;line-height:1.4}
+.sug .marca input{width:22px;height:22px;margin:2px 0 0;flex:none;accent-color:#111}
+.sug .linha-bt{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.sug .google{display:inline-flex;align-items:center;gap:10px;justify-content:center;width:100%;background:#111;color:var(--papel);border:1.5px solid #111;font-family:var(--rotulo);font-weight:800;font-size:15px;letter-spacing:.04em;min-height:48px;padding:8px 14px;cursor:pointer}
+.sug .google:hover{background:#333}
+.sug .google svg{width:20px;height:20px;background:#fff;border-radius:50%;padding:2px}
+.sug .ou{display:flex;align-items:center;gap:12px;font-family:var(--rotulo);font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin:16px 0 4px}
+.sug .ou::before,.sug .ou::after{content:"";flex:1;border-top:1.5px solid #111}
+.sug .abas{display:flex;gap:0;border:1.5px solid #111}
+.sug .abas button{flex:1;font-family:var(--rotulo);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;background:transparent;color:#111;border:0;min-height:44px;cursor:pointer}
+.sug .abas button[aria-pressed=true]{background:#111;color:var(--papel)}
+.sug .msg{border:1.5px solid #111;padding:10px 12px;font-size:.92em;margin:0}
+.sug .msg.erro{border-style:dashed;padding:10px 12px;text-align:left;font-style:normal}
+.sug .msg.ok{background:#111;color:var(--papel)}
+.sug .aviso-priv{font-size:.86em;line-height:1.45;border:1.5px dashed #111;padding:12px 14px;margin:0}
+.sug .aviso-priv p{margin:0 0 6px}
+.sug .aviso-priv p:last-child{margin:0}
+.sug .quem{font-family:var(--rotulo);font-weight:600;font-size:13px;letter-spacing:.04em;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;justify-content:space-between;border:1.5px solid #111;padding:8px 10px}
+.sug .lista{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.sug .lista li{border-top:1px solid #111;padding-top:8px;display:grid;gap:3px}
+.sug .lista .r{font-family:var(--rotulo);font-weight:800;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.sug .lista .t{font-style:italic;font-size:.95em;white-space:pre-wrap;overflow-wrap:anywhere}
+.sug .lista .st{justify-self:start;font-family:var(--rotulo);font-weight:800;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;border:1px solid #111;padding:1px 6px}
+.sug .lista .st.respondida{background:#111;color:var(--papel)}
+.sug .linkbt{background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;text-underline-offset:3px;cursor:pointer;min-height:32px}
+.sug .conta{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:.92em}
+.sug .conta li::before{content:"✱ ";font-weight:800}
+
+/* expediente e logo em tinta preta neste jornal */
+html body .compromisso-editorial{color:#111}
+html body .compromisso-editorial .ce-caixa{border-color:#111;outline-color:#111}
+html body .compromisso-editorial .ce-chapeu{border-color:#111;background:#111;color:var(--papel)}
+html body .compromisso-editorial h2.ce-titulo,html body .compromisso-editorial h3,html body .compromisso-editorial a{color:#111;border-color:#111}
+html body .compromisso-editorial details{border-color:#111}
+html body .compromisso-editorial .ce-selos span,html body .compromisso-editorial .ce-limite{border-color:#111}
+html body .rainha-canto{border-color:#111;outline-color:#111;background:#EFE8DA}
+html body .rainha-canto svg g{stroke:#111}
 </style>
 
 <style>
@@ -207,6 +356,7 @@ select{max-width:100%}
 <div class="folha" lang="pt-BR">
   <div class="controles">
     <div class="grupo"><button class="btn oculto" id="trocar" type="button">&#8249; Trocar caderno</button><label for="edicao" class="oculto" id="rotEdicao">Edição</label><select id="edicao" class="oculto"></select></div>
+    <div class="grupo"><a class="btn" href="#sugestoes" style="display:inline-flex;align-items:center;text-decoration:none">&#9993; Sugestões</a></div>
     <div class="grupo" role="group" aria-label="Tamanho da letra"><span>Letra</span>
       <button class="btn" id="menor" type="button" aria-label="Diminuir a letra">A−</button>
       <button class="btn" id="maior" type="button" aria-label="Aumentar a letra">A+</button>
@@ -214,7 +364,8 @@ select{max-width:100%}
   </div>
   <header>
     <hr class="duplo">
-    <h1 class="nome">Terra Brasilis</h1>
+    <div class="cabeca"><div class="orelha esq"><b>Grátis</b>Edição digital<i>Brasil e Conselheiro Lafaiete</i></div><h1 class="nome">Terra Brasilis</h1><div class="orelha dir"><b>Cartas</b><a href="#sugestoes">Mande a sua sugestão &#8250;</a><i>A redação responde por e-mail</i></div></div>
+    <p class="lema">O país e a nossa cidade, com fonte, data e sem partido</p>
     <hr class="duplo inv">
     <div class="linha-edicao"><span id="vol">Vol. 1</span><span class="ast meio" aria-hidden="true">✱</span><span class="meio" id="meio">Brasil e Conselheiro Lafaiete</span><span class="ast" aria-hidden="true">✱</span><span id="dataCurta"></span></div>
     <hr class="simples">
@@ -295,6 +446,7 @@ function mostraEscolha(){
     <h2 class="pergunta">O que você quer ler hoje?</h2>
     <p class="sub">Escolha um caderno. Dá para trocar a qualquer momento no botão “Trocar caderno”, lá em cima.</p>
     <div class="opcoes">${op("brasil")}${op("lafaiete")}</div>
+    <div class="chama-sug"><p><b>Cartas dos leitores</b>Que tema você quer ver nas próximas edições? O que podemos melhorar? Mande a sua sugestão e a redação responde por e-mail.</p><a class="btn cheio" href="#sugestoes" style="display:inline-flex;align-items:center;text-decoration:none">Mandar sugestão &#8250;</a></div>
     <div class="explica-impacto">Em toda notícia, o quadro “Como isso afeta você” explica o efeito na vida do trabalhador e do operário, da classe baixa, da classe média e da classe alta. É uma explicação do jornal, sem tomar partido.</div>
   </section>`;
   document.querySelectorAll(".opcao").forEach(b=>b.onclick=()=>{location.hash=b.dataset.qual;});
@@ -310,8 +462,8 @@ function render(qual, e){
   if(e.tempo) links.push(["tempo","Tempo"]);
   if(e.historia) links.push(["historia","História"]);
   if(e.agenda?.length) links.push(["agenda","Agenda"]);
-  $("indice").innerHTML = links.map(([id,t])=>`<a href="#${esc(id)}" data-alvo="${esc(id)}">${esc(t)}</a>`).join(`<span class="ast" aria-hidden="true">✱</span>`);
-  $("indice").querySelectorAll("a").forEach(a=>a.onclick=ev=>{ev.preventDefault();document.getElementById(a.dataset.alvo)?.scrollIntoView();});
+  $("indice").innerHTML = links.map(([id,t])=>`<a href="#${esc(id)}" data-alvo="${esc(id)}">${esc(t)}</a>`).join(`<span class="ast" aria-hidden="true">✱</span>`) + `<span class="ast" aria-hidden="true">✱</span><a href="#sugestoes" class="sug">Sugestões</a>`;
+  $("indice").querySelectorAll("a[data-alvo]").forEach(a=>a.onclick=ev=>{ev.preventDefault();document.getElementById(a.dataset.alvo)?.scrollIntoView();});
   const c=e.capa||{};
   const citacao = e.citacao || "";
   let h = `<section class="capa" aria-label="Capa">
@@ -359,7 +511,7 @@ function abre(qual){
 
 function rota(){
   const q = location.hash.replace("#","");
-  if(CADERNOS[q]) abre(q); else mostraEscolha();
+  if(q==="sugestoes") abreSugestoes(); else if(CADERNOS[q]) abre(q); else mostraEscolha();
 }
 $("trocar").onclick=()=>{ history.pushState(null,"",location.pathname+location.search); mostraEscolha(); window.scrollTo({top:0}); };
 addEventListener("hashchange", rota);
@@ -371,6 +523,257 @@ Promise.all(Object.entries(CADERNOS).map(([k,c]) =>
   if(!dados.brasil && !dados.lafaiete){ $("conteudo").innerHTML='<p class="erro">Não foi possível abrir o jornal agora. Tente recarregar a página.</p>'; return; }
   rota();
 });
+</script>
+<script>
+/* Aba "Sugestões" (pedido de Arthur, 10/11/2026): o leitor entra com Google ou com e-mail e senha
+   e manda temas ou melhorias; a redação responde por e-mail. A LEITURA do jornal continua aberta;
+   o cadastro só é pedido para enviar. Login e banco de dados: Google Firebase (Auth + Firestore).
+   A configuração pública do Firebase fica em /banca/sugestoes/config.js (fora desta página, para
+   as rotinas diárias não mexerem). Enquanto ela não existir, a aba avisa que abre em breve. */
+const SUG_SITE = "https://arth4rhenrique883-stack.github.io/banca/brasil/#sugestoes";
+const SUG_CONFIG = "../sugestoes/config.js";
+const FB_VER = "10.12.2";
+const AVISO_VERSAO = "2026-11-10";
+let SUG = {estado:"inicio", fb:null, user:null, aba:"criar", lista:null, msg:null};
+
+const SUG_ERROS = {
+  "auth/email-already-in-use":"Este e-mail já tem cadastro. Use “Já tenho cadastro”.",
+  "auth/invalid-email":"Confira o e-mail: parece que falta alguma parte.",
+  "auth/invalid-credential":"E-mail ou senha não conferem.",
+  "auth/wrong-password":"E-mail ou senha não conferem.",
+  "auth/user-not-found":"Não achamos cadastro com este e-mail.",
+  "auth/weak-password":"A senha precisa ter pelo menos 8 letras ou números.",
+  "auth/too-many-requests":"Muitas tentativas seguidas. Espere alguns minutos e tente de novo.",
+  "auth/network-request-failed":"Sem internet agora. Confira a conexão e tente de novo.",
+  "auth/popup-closed-by-user":"A janela do Google foi fechada antes de terminar.",
+  "auth/cancelled-popup-request":"A janela do Google foi fechada antes de terminar.",
+  "auth/unauthorized-domain":"O login ainda não foi liberado para este endereço. Avise a redação.",
+  "auth/operation-not-allowed":"Esta forma de entrar ainda não foi ligada. Avise a redação.",
+  "auth/requires-recent-login":"Por segurança, saia, entre de novo e repita o pedido.",
+  "permission-denied":"O envio não foi aceito. Confira se o e-mail já foi confirmado e se o texto tem entre 10 e 2.000 letras."
+};
+const sugErro = e => SUG_ERROS[e?.code] || "Não deu certo agora. Tente de novo em instantes.";
+
+function sugCarregaConfig(){
+  return new Promise(res=>{
+    if(window.BANCA_FIREBASE!==undefined) return res(window.BANCA_FIREBASE);
+    const s=document.createElement("script");
+    s.src=SUG_CONFIG+"?v="+Math.floor(Date.now()/3600000);
+    s.onload=()=>res(window.BANCA_FIREBASE||null);
+    s.onerror=()=>res(null);
+    document.head.appendChild(s);
+  });
+}
+
+async function sugIniciaFirebase(){
+  if(SUG.fb) return SUG.fb;
+  const cfg = await sugCarregaConfig();
+  if(!cfg || !cfg.apiKey) return null;
+  const base=`https://www.gstatic.com/firebasejs/${FB_VER}/`;
+  const [App,A,F] = await Promise.all([import(base+"firebase-app.js"),import(base+"firebase-auth.js"),import(base+"firebase-firestore.js")]);
+  const app=App.initializeApp(cfg);
+  const auth=A.getAuth(app); auth.languageCode="pt-BR";
+  const db=F.getFirestore(app);
+  SUG.fb={A,F,auth,db};
+  try{ await A.getRedirectResult(auth); }catch(e){ SUG.msg={erro:sugErro(e)}; }
+  A.onAuthStateChanged(auth,u=>{ SUG.user=u; SUG.lista=null; if(location.hash==="#sugestoes") sugDesenha(); });
+  return SUG.fb;
+}
+
+function sugCab(){
+  return cab("Sugestões dos leitores","Que tema você quer ver nas próximas edições? O que podemos melhorar? Respondemos por e-mail.");
+}
+
+function abreSugestoes(){
+  cabecalho(null);
+  $("vol").textContent="Vol. 1"; $("dataCurta").textContent="";
+  $("meio").textContent="Carta dos leitores"; $("chamada").textContent="A palavra é sua";
+  ["edicao","rotEdicao","indice","fioIndice"].forEach(id=>$(id).classList.add("oculto"));
+  $("trocar").classList.remove("oculto");
+  $("notaFim").textContent="Terra Brasilis ✱ as sugestões são lidas pela redação; os dados de quem escreve servem só para responder ✱ feito com a ajuda do Claude, uma inteligência artificial";
+  const naBanca = /github\.io$/.test(location.hostname) || location.hostname==="localhost" || location.hostname==="127.0.0.1";
+  if(!naBanca){
+    $("conteudo").innerHTML=`<section class="sug">${sugCab()}<div class="sug-grade"><div><p class="it">A caixa de sugestões funciona no endereço público do jornal, onde dá para entrar com a conta do Google ou com e-mail.</p><p class="linha-bt" style="margin-top:14px"><a class="btn cheio" href="${SUG_SITE}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;text-decoration:none">Abrir a caixa de sugestões &#8250;</a></p></div><div>${sugAvisoPriv()}</div></div></section>`;
+    window.scrollTo({top:0}); return;
+  }
+  $("conteudo").innerHTML=`<section class="sug">${sugCab()}<div id="sugArea"><p class="erro">Abrindo a caixa de sugestões…</p></div></section>`;
+  window.scrollTo({top:0});
+  sugIniciaFirebase().then(fb=>{
+    if(!fb){ $("sugArea").innerHTML=`<div class="sug-grade"><div><p class="it">A caixa de sugestões está sendo instalada e abre em breve. Volte daqui a alguns dias: aqui você vai poder mandar temas para as próximas edições e ideias para melhorar o jornal, e receber a resposta por e-mail.</p></div><div>${sugAvisoPriv()}</div></div>`; return; }
+    sugDesenha();
+  }).catch(()=>{ $("sugArea").innerHTML=`<p class="msg erro">Não foi possível abrir a caixa de sugestões agora. Confira a internet e recarregue a página.</p>`; });
+}
+
+function sugAvisoPriv(){
+  return `<div class="aviso-priv" id="aviso-privacidade"><p><b>Aviso de privacidade.</b> Para enviar uma sugestão pedimos cadastro com nome e e-mail. Usamos esses dados só para ler a sua mensagem e responder a você por e-mail. Não vendemos, não emprestamos e não usamos para propaganda.</p><p>Os dados ficam guardados no Google Firebase (serviço do Google que faz o login e guarda as mensagens). Ler o jornal continua livre, sem cadastro.</p><p>Você pode ver as suas sugestões aqui e, quando quiser, apagar todas elas e o cadastro no botão “Apagar meus dados” (direitos da Lei Geral de Proteção de Dados, LGPD, Lei 13.709/2018).</p></div>`;
+}
+
+const GOOGLE_G = `<svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.2C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.2C1 16.5 0 20.1 0 24s1 7.5 2.6 10.8l7.9-6.2z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.9l-7.9 6.2C6.6 42.6 14.6 48 24 48z"/></svg>`;
+
+function sugMsg(){
+  const m=SUG.msg; SUG.msg=null;
+  if(!m) return "";
+  return m.erro ? `<p class="msg erro" role="alert">${esc(m.erro)}</p>` : `<p class="msg ok" role="status">${esc(m.ok)}</p>`;
+}
+
+function sugDesenha(){
+  const area=$("sugArea"); if(!area) return;
+  const u=SUG.user;
+  if(!u) return sugDesenhaEntrada(area);
+  const porSenha = u.providerData.some(p=>p.providerId==="password") && !u.providerData.some(p=>p.providerId==="google.com");
+  if(porSenha && !u.emailVerified) return sugDesenhaConfirma(area,u);
+  sugDesenhaFormulario(area,u);
+}
+
+function sugDesenhaEntrada(area){
+  const criar = SUG.aba==="criar";
+  area.innerHTML=`<div class="sug-grade">
+    <div>
+      <h3>Entre para enviar a sua sugestão</h3>
+      ${sugMsg()}
+      <label class="marca" style="margin-bottom:14px"><input type="checkbox" id="sugAceite"> <span>Li o <a href="#aviso-privacidade">aviso de privacidade</a> e aceito que o meu nome e o meu e-mail sejam usados para responder às minhas sugestões.</span></label>
+      <button class="google" type="button" id="sugGoogle">${GOOGLE_G} Entrar com o Google</button>
+      <div class="ou">ou com e-mail</div>
+      <div class="abas" role="group" aria-label="Cadastro"><button type="button" id="abaCriar" aria-pressed="${criar}">Criar cadastro</button><button type="button" id="abaEntrar" aria-pressed="${!criar}">Já tenho cadastro</button></div>
+      <form id="sugFormConta" style="margin-top:12px" novalidate>
+        ${criar?`<label>Seu nome<input type="text" id="sugNome" autocomplete="name" maxlength="80" required></label>`:""}
+        <label>E-mail<input type="email" id="sugEmail" autocomplete="email" maxlength="120" required></label>
+        <label>Senha${criar?" (pelo menos 8 letras ou números)":""}<input type="password" id="sugSenha" autocomplete="${criar?"new-password":"current-password"}" minlength="8" required></label>
+        <div class="linha-bt"><button class="btn cheio" type="submit">${criar?"Criar cadastro":"Entrar"}</button>${criar?"":`<button class="linkbt" type="button" id="sugEsqueci">Esqueci a senha</button>`}</div>
+      </form>
+    </div>
+    <div>
+      <h3>Por que pedimos cadastro</h3>
+      <ul class="conta"><li>Para saber quem escreveu e responder por e-mail.</li><li>Para evitar mensagens falsas ou automáticas.</li><li>Só para enviar sugestões: ler o jornal não exige cadastro.</li></ul>
+      <div style="margin-top:14px">${sugAvisoPriv()}</div>
+    </div>
+  </div>`;
+  const {A,auth}=SUG.fb;
+  const aceitou=()=>{ if($("sugAceite").checked) return true; SUG.msg={erro:"Para continuar, marque que leu e aceita o aviso de privacidade."}; sugDesenha(); return false; };
+  try{ if(sessionStorage.getItem("sug-aceite")==="1") $("sugAceite").checked=true; }catch(e){}
+  $("sugAceite").onchange=ev=>{ try{ sessionStorage.setItem("sug-aceite",ev.target.checked?"1":"0"); }catch(e){} };
+  $("abaCriar").onclick=()=>{SUG.aba="criar";sugDesenha();};
+  $("abaEntrar").onclick=()=>{SUG.aba="entrar";sugDesenha();};
+  $("sugGoogle").onclick=async()=>{
+    if(!aceitou()) return;
+    const prov=new A.GoogleAuthProvider(); prov.setCustomParameters({prompt:"select_account"});
+    try{ await A.signInWithPopup(auth,prov); }
+    catch(e){
+      if(e.code==="auth/popup-blocked"||e.code==="auth/operation-not-supported-in-this-environment"){ try{ await A.signInWithRedirect(auth,prov); return; }catch(e2){ e=e2; } }
+      SUG.msg={erro:sugErro(e)}; sugDesenha();
+    }
+  };
+  if($("sugEsqueci")) $("sugEsqueci").onclick=async()=>{
+    const em=$("sugEmail").value.trim();
+    if(!em){ SUG.msg={erro:"Escreva o seu e-mail acima e toque de novo em “Esqueci a senha”."}; return sugDesenha(); }
+    try{ await A.sendPasswordResetEmail(auth,em); SUG.msg={ok:"Se houver cadastro com este e-mail, mandamos um link para criar uma senha nova. Olhe também a caixa de spam."}; }
+    catch(e){ SUG.msg={erro:sugErro(e)}; }
+    sugDesenha();
+  };
+  $("sugFormConta").onsubmit=async ev=>{
+    ev.preventDefault();
+    if(!aceitou()) return;
+    const em=$("sugEmail").value.trim(), se=$("sugSenha").value;
+    try{
+      if(criar){
+        const nome=$("sugNome").value.trim();
+        if(nome.length<2){ SUG.msg={erro:"Escreva o seu nome."}; return sugDesenha(); }
+        if(se.length<8){ SUG.msg={erro:SUG_ERROS["auth/weak-password"]}; return sugDesenha(); }
+        const cred=await A.createUserWithEmailAndPassword(auth,em,se);
+        await A.updateProfile(cred.user,{displayName:nome});
+        await A.sendEmailVerification(cred.user);
+        SUG.user=auth.currentUser; sugDesenha();
+      }else{
+        await A.signInWithEmailAndPassword(auth,em,se);
+      }
+    }catch(e){ SUG.msg={erro:sugErro(e)}; sugDesenha(); }
+  };
+}
+
+function sugDesenhaConfirma(area,u){
+  area.innerHTML=`<div class="sug-grade"><div>
+    <h3>Falta confirmar o seu e-mail</h3>
+    ${sugMsg()}
+    <p class="it">Mandamos um link para <b>${esc(u.email)}</b>. Abra o e-mail (olhe também o spam), toque no link e depois volte aqui e toque em “Já confirmei”. Assim temos certeza de que a resposta chega a você.</p>
+    <div class="linha-bt" style="margin-top:14px"><button class="btn cheio" type="button" id="sugJa">Já confirmei</button><button class="btn" type="button" id="sugReenviar">Mandar o link de novo</button><button class="linkbt" type="button" id="sugSair">Sair</button></div>
+  </div><div>${sugAvisoPriv()}</div></div>`;
+  const {A,auth}=SUG.fb;
+  $("sugJa").onclick=async()=>{
+    try{ await u.reload(); await u.getIdToken(true); SUG.user=auth.currentUser;
+      if(!SUG.user.emailVerified) SUG.msg={erro:"Ainda não aparece como confirmado. Toque no link do e-mail e tente de novo."};
+    }catch(e){ SUG.msg={erro:sugErro(e)}; }
+    sugDesenha();
+  };
+  $("sugReenviar").onclick=async()=>{ try{ await A.sendEmailVerification(u); SUG.msg={ok:"Link enviado de novo."}; }catch(e){ SUG.msg={erro:sugErro(e)}; } sugDesenha(); };
+  $("sugSair").onclick=()=>A.signOut(auth);
+}
+
+async function sugCarregaLista(u){
+  const {F,db}=SUG.fb;
+  try{
+    const q=F.query(F.collection(db,"sugestoes"),F.where("uid","==",u.uid));
+    const snap=await F.getDocs(q);
+    SUG.lista=snap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>(b.criadoEm?.seconds||0)-(a.criadoEm?.seconds||0));
+  }catch(e){ SUG.lista=[]; }
+}
+
+function sugDesenhaFormulario(area,u){
+  const nome=u.displayName||"";
+  const lista=SUG.lista;
+  const TIPOS={tema:"Tema para uma próxima edição",melhoria:"Melhoria no jornal",correcao:"Correção de um erro",outro:"Outro assunto"};
+  const CADS={brasil:"Caderno Brasil",lafaiete:"Caderno Conselheiro Lafaiete",os_dois:"Os dois cadernos"};
+  const dt=s=>{ if(!s?.seconds) return "agora"; const d=new Date(s.seconds*1000); return d.toLocaleDateString("pt-BR"); };
+  area.innerHTML=`<div class="sug-grade"><div>
+    <div class="quem"><span>Você entrou como <b>${esc(nome||u.email)}</b> (${esc(u.email)})</span><button class="linkbt" type="button" id="sugSair">Sair</button></div>
+    <h3 style="margin-top:16px">Escreva a sua sugestão</h3>
+    ${sugMsg()}
+    <form id="sugForm" novalidate>
+      ${nome?"":`<label>Seu nome<input type="text" id="sugNome2" autocomplete="name" maxlength="80" required></label>`}
+      <label>É sobre<select id="sugTipo">${Object.entries(TIPOS).map(([k,v])=>`<option value="${k}">${esc(v)}</option>`).join("")}</select></label>
+      <label>Caderno<select id="sugCad">${Object.entries(CADS).map(([k,v])=>`<option value="${k}">${esc(v)}</option>`).join("")}</select></label>
+      <label>Sua mensagem<textarea id="sugTexto" maxlength="2000" required placeholder="Ex.: queria entender melhor como funciona a tarifa da Cemig; ou: a letra podia ser maior no celular."></textarea></label>
+      <div class="linha-bt"><button class="btn cheio" type="submit" id="sugEnviar">Enviar sugestão</button><span class="legenda-grav" id="sugConta">0 / 2.000</span></div>
+    </form>
+  </div><div>
+    <h3>Suas sugestões</h3>
+    ${lista===null?`<p class="it">Carregando…</p>`:lista.length?`<ul class="lista">${lista.map(s=>`<li><span class="r">${esc(TIPOS[s.tipo]||"Sugestão")} ✱ ${esc(CADS[s.caderno]||"")} ✱ ${esc(dt(s.criadoEm))}</span><span class="t">${esc(s.texto)}</span><span class="st ${s.status==="respondida"?"respondida":""}">${s.status==="respondida"?"Respondida por e-mail":"Recebida, em leitura"}</span></li>`).join("")}</ul>`:`<p class="it">Você ainda não mandou nenhuma. A resposta chega no seu e-mail.</p>`}
+    <h3 style="margin-top:20px">Seus dados</h3>
+    <p class="it" style="font-size:.92em">Guardamos só o seu nome, o seu e-mail e as mensagens que você mandou. Para apagar tudo, inclusive o cadastro:</p>
+    <p class="linha-bt" style="margin-top:8px"><button class="btn" type="button" id="sugApagar">Apagar meus dados</button></p>
+  </div></div>`;
+  const {A,F,auth,db}=SUG.fb;
+  $("sugSair").onclick=()=>A.signOut(auth);
+  $("sugTexto").oninput=ev=>{ $("sugConta").textContent=`${ev.target.value.length.toLocaleString("pt-BR")} / 2.000`; };
+  $("sugForm").onsubmit=async ev=>{
+    ev.preventDefault();
+    const texto=$("sugTexto").value.trim();
+    const nm=nome||($("sugNome2")?.value.trim()||"");
+    if(nm.length<2){ SUG.msg={erro:"Escreva o seu nome."}; return sugDesenha(); }
+    if(texto.length<10){ SUG.msg={erro:"Escreva um pouco mais (pelo menos 10 letras)."}; return sugDesenha(); }
+    $("sugEnviar").disabled=true;
+    try{
+      if(!nome) await A.updateProfile(u,{displayName:nm});
+      await F.addDoc(F.collection(db,"sugestoes"),{
+        uid:u.uid, nome:nm.slice(0,80), email:u.email, tipo:$("sugTipo").value, caderno:$("sugCad").value,
+        texto:texto.slice(0,2000), jornal:"terra-brasilis", status:"nova", aviso:AVISO_VERSAO, criadoEm:F.serverTimestamp()
+      });
+      SUG.msg={ok:"Recebemos a sua sugestão. Obrigado! A resposta vai para o seu e-mail."};
+      await sugCarregaLista(u);
+    }catch(e){ SUG.msg={erro:sugErro(e)}; }
+    sugDesenha();
+  };
+  $("sugApagar").onclick=async()=>{
+    if(!$("sugApagar").dataset.certeza){ $("sugApagar").dataset.certeza="1"; $("sugApagar").textContent="Toque de novo para apagar tudo"; return; }
+    try{
+      const snap=await F.getDocs(F.query(F.collection(db,"sugestoes"),F.where("uid","==",u.uid)));
+      await Promise.all(snap.docs.map(d=>F.deleteDoc(d.ref)));
+      await A.deleteUser(u);
+      SUG.msg={ok:"Pronto: as suas sugestões e o seu cadastro foram apagados."};
+    }catch(e){ SUG.msg={erro:sugErro(e)}; }
+    sugDesenha();
+  };
+  if(lista===null) sugCarregaLista(u).then(()=>sugDesenha());
+}
 </script>
 <!--compromisso:inicio-->
 <style>
