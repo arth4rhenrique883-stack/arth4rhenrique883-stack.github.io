@@ -1,0 +1,14 @@
+{
+ "versao": "60b25e98d75d",
+ "arquivos": {
+  "fonts/ibm-plex-mono-latin-400-normal.woff2": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+  "fonts/ibm-plex-mono-latin-500-normal.woff2": "01d285447409c8a588692162439a038b8cbd7871309ee20267b0d2d91c6e8e22",
+  "fonts/inter-latin-400-normal.woff2": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc",
+  "fonts/inter-latin-500-normal.woff2": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f",
+  "fonts/inter-latin-600-normal.woff2": "f9a06e79cd3a2a20951c0f0e28f66dd0e6d3fda73911d640a2125c8fcb78f21a",
+  "fonts/inter-latin-700-normal.woff2": "6f56409fd3d64bb85f7d070bce20749db2d66b6d63cec586cc22d1c761be2491",
+  "icone.png": "64d3b76832c90a29a6cb29809eb7e5b06f9da7688b5aac276792554dc9223196",
+  "index.html": "8eebe5b725dcea62424987d9369602e5bf38da3d53b5e6d796ca298e07e64a29",
+  "manifest.webmanifest": "b4ba43232516eb5637452805c1e647368999625c6ff98178cfb49f9a87ee8cd3"
+ }
+}
