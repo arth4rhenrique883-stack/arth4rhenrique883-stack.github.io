@@ -1,0 +1,462 @@
+{
+ "edicoes": [
+  {
+   "numero": 1,
+   "data": "2026-11-10",
+   "tempoLeitura": 11,
+   "capa": {
+    "chapeu": "Primeira edição",
+    "titulo": "Juros, jornada e maioridade penal: o Brasil depois da eleição",
+    "linhaFina": "Em Brasília, o fim da escala 6x1 já tem data para começar, os juros pararam de cair e a Câmara quer votar a redução da maioridade penal até o fim do mês. Em Minas, o governador eleito Cleitinho começa a mostrar o que pretende. E em Conselheiro Lafaiete a semana é de chuva todos os dias, tapa-buracos parado e mais de 70 vagas no Sine."
+   },
+   "citacao": "Um país se faz com homens e livros, escreveu Monteiro Lobato.",
+   "recado": "Bem-vindo ao Terra Brasilis, o jornal que olha só para o Brasil, para Minas e para Conselheiro Lafaiete. O nome vem dos mapas antigos: “Terra Brasilis” é como os cartógrafos chamavam a nossa terra no começo do século XVI. As notícias do mundo ficam com o Jornal de Cada Dia e o Observatório; aqui, o assunto é a nossa casa. Cada notícia traz a fonte e a data.",
+   "resumo": [
+    {
+     "tema": "Trabalho",
+     "texto": "O fim da escala 6x1 começa em meados de dezembro: no máximo 42 horas por semana e duas folgas, sem cortar salário. Falta o decreto com os detalhes."
+    },
+    {
+     "tema": "Juros",
+     "texto": "O Banco Central parou de cortar juros: a Selic ficou em 13,75% ao ano. Crédito e prestações não devem baratear tão cedo."
+    },
+    {
+     "tema": "Congresso",
+     "texto": "O relator da redução da maioridade penal quer apresentar o texto até o fim de novembro. O Orçamento de 2027 é apresentado nesta quarta (11/11)."
+    },
+    {
+     "tema": "Escola",
+     "texto": "Segunda prova do Enem no domingo (15/11), com mais de 5 milhões de inscritos."
+    },
+    {
+     "tema": "Minas",
+     "texto": "O governador eleito Cleitinho quer proibir dinheiro do Estado para shows nas cidades. Ele toma posse em janeiro."
+    },
+    {
+     "tema": "Lafaiete",
+     "texto": "Chuva todos os dias até sábado. Tapa-buracos parado, UPA com atestado só em casos graves e 73 vagas no Sine."
+    }
+   ],
+   "numeros": [
+    {
+     "rotulo": "Juros básicos",
+     "valor": "13,75%",
+     "nota": "ao ano; Copom parou os cortes em 4/11",
+     "fonte": "Banco Central, via Seu Dinheiro (4/11)"
+    },
+    {
+     "rotulo": "Inflação",
+     "valor": "4,62%",
+     "nota": "em 12 meses na prévia de outubro, acima do teto da meta (4,5%)",
+     "fonte": "IBGE, IPCA-15 (23/10)"
+    },
+    {
+     "rotulo": "Nova jornada",
+     "valor": "42 horas",
+     "nota": "máximo semanal a partir de dezembro de 2026",
+     "fonte": "Emenda promulgada em 16/10"
+    },
+    {
+     "rotulo": "Vagas no Sine",
+     "valor": "73",
+     "nota": "em Conselheiro Lafaiete nesta segunda (9/11)",
+     "fonte": "Lafaiete Agora (9/11)"
+    }
+   ],
+   "cadernos": [
+    {
+     "id": "brasilia",
+     "titulo": "Brasília",
+     "abertura": "O que o governo e o Congresso decidem, e como isso chega na vida da gente",
+     "itens": [
+      {
+       "titulo": "Lula reeleito e um Congresso dividido",
+       "selo": "Confirmado",
+       "texto": "O TSE confirmou: Lula (PT) teve 51,79% dos votos válidos e Flávio Bolsonaro (PL), 48,21%, no segundo turno de 25 de outubro. O novo mandato começa em janeiro de 2027. O PL elegeu a maior bancada da Câmara, com 121 dos 513 deputados. Ou seja: o presidente vai precisar negociar muito para aprovar o que quer.",
+       "fontes": [
+        {
+         "nome": "TSE, resultado do 2º turno (25/10)",
+         "url": "https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/presidente-do-tse-anuncia-reeleicao-de-lula-e-faz-balanco-do-2o-turno-das-eleicoes-2026"
+        }
+       ]
+      },
+      {
+       "titulo": "Fim da escala 6x1: o que muda e quando",
+       "selo": "Confirmado",
+       "texto": "A mudança na Constituição foi promulgada em 16 de outubro. A partir de meados de dezembro, quem trabalha com carteira assinada passa a ter no máximo 42 horas por semana e duas folgas, de preferência com o domingo. Em dezembro de 2027 o limite cai para 40 horas. O salário não pode diminuir. O decreto com os detalhes, como a contagem das folgas em quem trabalha por escala, era esperado para 9/11, mas foi adiado para depois de 16/11.",
+       "fontes": [
+        {
+         "nome": "Brasil de Fato, emenda promulgada (16/10)",
+         "url": "https://www.brasildefato.com.br/2026/10/16/promulgada-escala-5x2-passa-a-valer-na-semana-anterior-ao-natal/"
+        },
+        {
+         "nome": "O Tempo/Folhapress, decreto adiado (9/11)",
+         "url": "https://www.otempo.com.br/economia/2026/11/9/decreto-que-regulamenta-fim-da-6x1-tem-publicacao-adiada-e-so-deve-sair-apos-retorno-de-lula"
+        }
+       ]
+      },
+      {
+       "titulo": "Maioridade penal: Câmara quer votar até o fim do mês",
+       "selo": "Confirmado",
+       "texto": "A proposta que reduz a maioridade penal, a idade a partir da qual alguém responde a um crime como adulto (hoje, 18 anos), já passou pela CCJ e está numa comissão especial. O relator, deputado Mendonça Filho (PL-PE), defende 16 anos e quer apresentar o texto até o fim de novembro; o PL quer 14 anos para crimes hediondos. Nesta terça e quarta (10 e 11/11), os deputados ouvem especialistas. A ideia é mandar ao Senado na primeira semana de dezembro. Por ser mudança na Constituição, precisa de 3/5 dos votos, em dois turnos, em cada Casa.",
+       "fontes": [
+        {
+         "nome": "Diário de Pernambuco, relator quer texto no fim de novembro (4/11)",
+         "url": "https://www.diariodepernambuco.com.br/politica/2026/11/11728374-reducao-da-maioridade-penal-relator-na-camara-quer-apresentar-texto-no-fim-de-novembro.html"
+        },
+        {
+         "nome": "ND Mais, a pauta do Congresso na semana (9/11)",
+         "url": "https://ndmais.com.br/politica/maioridade-penal-congresso-debate-reducao-nesta-semana/"
+        }
+       ]
+      },
+      {
+       "titulo": "Apostas on-line e Orçamento de 2027",
+       "selo": "Confirmado",
+       "texto": "Em setembro, Lula assinou uma medida provisória que proíbe as “bets” e jogos como o “tigrinho”. Ela vale na hora, mas perde a validade se o Congresso não votar a tempo; nesta semana o governo tenta montar a comissão que vai analisá-la. Na quarta (11/11), o ministro do Planejamento, Bruno Moretti, apresenta o Orçamento de 2027, que diz quanto o governo pode gastar em cada área. A votação final está marcada para 16 e 17 de dezembro.",
+       "fontes": [
+        {
+         "nome": "ND Mais, a pauta do Congresso na semana (9/11)",
+         "url": "https://ndmais.com.br/politica/maioridade-penal-congresso-debate-reducao-nesta-semana/"
+        }
+       ]
+      }
+     ],
+     "caixa": {
+      "titulo": "Lula fora do país",
+      "texto": "Lula está na Turquia para a COP31, a conferência do clima da ONU (9 a 20/11), e discursa na quarta (11/11), levando o menor desmatamento da Amazônia desde 1988, segundo o Inpe. Depois segue para as Filipinas. Por isso, decisões como o decreto da 6x1 ficam para a volta dele."
+     }
+    },
+    {
+     "id": "bolso",
+     "titulo": "Bolso, emprego e preços",
+     "abertura": "Juros, inflação e o que pesa no orçamento da família",
+     "itens": [
+      {
+       "titulo": "Banco Central para de cortar os juros",
+       "selo": "Confirmado",
+       "texto": "Em 4 de novembro, o Copom, o grupo do Banco Central que decide os juros, manteve a Selic em 13,75% ao ano. Foi a primeira pausa depois de cinco cortes seguidos, que desde março tinham baixado a taxa de 15%. Os motivos: o petróleo caro por causa da guerra no Oriente Médio, o dólar perto de R$ 5,50 e a inflação acima da meta. A próxima reunião é em 8 e 9 de dezembro.",
+       "fontes": [
+        {
+         "nome": "Seu Dinheiro, Copom segura a Selic (4/11)",
+         "url": "https://www.seudinheiro.com/2026/economia/copom-segura-selic-em-1375-e-interrompe-ciclo-de-cortes-nos-juros-mlim/"
+        }
+       ]
+      },
+      {
+       "titulo": "O que a Selic tem a ver com a sua conta",
+       "selo": "Explicação",
+       "texto": "A Selic é o juro “de referência” do país. Quando ela fica alta, o banco cobra mais caro no cartão, no cheque especial e no financiamento, e a poupança e outros investimentos rendem mais. O Banco Central usa os juros como um freio: segura as compras para os preços subirem menos. Com a pausa, empréstimos e prestações não devem ficar mais baratos tão cedo.",
+       "fontes": []
+      },
+      {
+       "titulo": "Comida subiu, luz baixou",
+       "selo": "Confirmado",
+       "texto": "Na prévia da inflação de outubro (o IPCA-15), os preços subiram 0,32% no mês e 4,62% em 12 meses, acima do teto da meta do governo, que é 4,5%. O que mais subiu foi a comida: tomate (+24,5%), cebola (+13,6%), batata (+11%) e arroz (+5,8%). Os combustíveis também subiram (+1,2%). Já a conta de luz caiu um pouco, porque a bandeira tarifária passou de amarela para verde, e as passagens de avião ficaram mais baratas. O número completo de outubro sai nos próximos dias.",
+       "fontes": [
+        {
+         "nome": "BP Money, IPCA-15 de outubro (23/10)",
+         "url": "https://bpmoney.com.br/economia/ipca-15-desacelera-para-032-em-outubro-mas-inflacao-em-12-meses-sobe-a-462/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "saude",
+     "titulo": "Saúde no Brasil",
+     "abertura": "O que muda no SUS e nas farmácias",
+     "aviso": "Estas notícias servem para informar e levar perguntas à consulta. Nunca comece, pare ou troque um remédio sem falar com o seu médico.",
+     "itens": [
+      {
+       "titulo": "Anvisa aprova remédio para obesidade em comprimido",
+       "selo": "Confirmado",
+       "texto": "A Anvisa aprovou em 4/11 a semaglutida em comprimido (nome comercial Wegovy) para tratar obesidade em adultos. É a mesma substância do Ozempic, que é injetável. A previsão é chegar às farmácias no primeiro semestre de 2027, com receita. O preço ainda não foi definido.",
+       "fontes": [
+        {
+         "nome": "Agência GBC, semaglutida oral aprovada (8/11)",
+         "url": "https://agenciagbc.com/2026/11/08/ozempic-em-comprimido-e-aprovado-no-brasil-veja-quanto-pode-custar-e-quando-chega-as-farmacias/"
+        }
+       ]
+      },
+      {
+       "titulo": "Novembro Azul: a saúde do homem",
+       "selo": "Confirmado",
+       "texto": "O Inca estima cerca de 78 mil casos novos de câncer de próstata por ano no Brasil entre 2026 e 2028. Descoberto cedo, ele tem muito mais chance de cura. A recomendação é que o homem converse com o médico sobre os exames, principalmente a partir dos 50 anos, ou antes, se houver casos na família.",
+       "fontes": [
+        {
+         "nome": "Inca, estimativa 2026–2028",
+         "url": "https://www.gov.br/inca/pt-br"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "escola",
+     "titulo": "Escola e Enem",
+     "abertura": "Datas que a família precisa saber",
+     "itens": [
+      {
+       "titulo": "Segundo dia do Enem é no domingo",
+       "selo": "Confirmado",
+       "texto": "O primeiro dia de provas foi no domingo (8/11). O segundo, com matemática e ciências da natureza, é no domingo, 15 de novembro. São mais de 5 milhões de inscritos. Não esqueça documento com foto e caneta de tinta preta em tubo transparente, e chegue cedo: os portões fecham pontualmente. O gabarito oficial sai em até 10 dias úteis depois da prova, no site do Inep.",
+       "fontes": [
+        {
+         "nome": "Muita Informação, regras do Enem 2026 (1/11)",
+         "url": "https://muitainformacao.com.br/noticias/falta-uma-semana-para-o-enem-2026-confira-horarios-documentos-e-regras-do-inep/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "minas",
+     "titulo": "Minas Gerais",
+     "abertura": "O que se decide em Belo Horizonte e chega até nós",
+     "itens": [
+      {
+       "titulo": "Cleitinho quer cortar dinheiro do Estado para shows",
+       "selo": "Confirmado",
+       "texto": "O governador eleito de Minas, Cleitinho Azevedo (Republicanos), anunciou em vídeo, no sábado (7/11), um projeto que proíbe o Estado de repassar dinheiro às prefeituras para pagar shows e festas. As cidades poderiam continuar fazendo festas e feiras, mas com dinheiro próprio. A ideia ainda precisa ser enviada e votada pelos deputados estaduais. Cleitinho toma posse em 6 de janeiro.",
+       "fontes": [
+        {
+         "nome": "Lafaiete Agora (7/11)",
+         "url": "https://lafaieteagora.com.br/2026/11/07/cleitinho-anuncia-projeto-que-proibe-uso-de-recursos-estaduais-para-financiar-shows-e-festas-nos-municipios-mineiros/"
+        },
+        {
+         "nome": "Congresso em Foco, Cleitinho eleito governador",
+         "url": "https://www.congressoemfoco.com.br/noticia/122678/cleitinho-e-eleito-governador-de-minas-gerais"
+        }
+       ]
+      },
+      {
+       "titulo": "Frente fria e El Niño a caminho",
+       "selo": "Confirmado",
+       "texto": "Uma frente fria forte para novembro deixou o tempo frio e chuvoso no Sudeste. E vem aí o El Niño, o aquecimento das águas do Pacífico que bagunça as chuvas: em outubro, a NOAA, agência americana, dava mais de 83% de chance de ele ser forte. No Brasil, costuma trazer seca no Norte e no Nordeste e chuva demais no Sul. Para Minas, o efeito é menos previsível. Novo boletim sai na quinta (12/11).",
+       "fontes": [
+        {
+         "nome": "Climatempo, frente fria de novembro",
+         "url": "https://www.climatempo.com.br/noticia/frio/grande-e-forte-frente-fria-avanca-sobre-o-brasil-entre-7-e-9-de-novembro-de-2026"
+        },
+        {
+         "nome": "NOAA, boletim do El Niño",
+         "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml"
+        }
+       ]
+      },
+      {
+       "titulo": "Clássico mineiro foi do Cruzeiro",
+       "selo": "Confirmado",
+       "texto": "No último clássico do Brasileirão, em 29 de outubro, o Cruzeiro venceu o Atlético na Arena MRV, com gol de Kaio Jorge logo no início do jogo.",
+       "fontes": [
+        {
+         "nome": "O Liberal, Cruzeiro vence o Atlético (29/10)",
+         "url": "https://www.oliberal.com/esportes/com-gol-no-inicio-de-kaio-jorge-cruzeiro-derrota-o-atletico-mg-na-arena-mrv-pelo-brasileirao-1.1188689"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "lafaiete",
+     "titulo": "Lafaiete, a nossa cidade",
+     "abertura": "O essencial da cidade nesta semana. A cobertura completa está no jornal O Carijó",
+     "itens": [
+      {
+       "titulo": "Tapa-buracos parado e protesto na Prefeitura",
+       "selo": "Confirmado",
+       "texto": "Moradores protestaram na sexta (6/11) contra os buracos nas ruas. A Secretaria de Obras disse que a operação tapa-buracos está parada por falta de dinheiro e que a usina de asfalto da Prefeitura também parou; a ideia é passá-la para uma empresa privada. O programa Asfalta Lafaiete deve voltar em 2027.",
+       "fontes": [
+        {
+         "nome": "Lafaiete Agora (6/11)",
+         "url": "https://lafaieteagora.com.br/2026/11/06/apos-convocacao-de-protesto-contra-buracos-nas-ruas-de-lafaiete-secretaria-de-obras-se-manifesta/"
+        }
+       ]
+      },
+      {
+       "titulo": "Taxa de iluminação: projeto saiu de pauta, mas pode voltar",
+       "selo": "Confirmado",
+       "texto": "O projeto da Prefeitura que mudava a taxa de iluminação pública, que vem na conta de luz, foi retirado de pauta na Câmara depois de muitas reclamações. Retirar de pauta não é arquivar: ele pode voltar.",
+       "fontes": [
+        {
+         "nome": "Lafaiete Agora (5/11)",
+         "url": "https://lafaieteagora.com.br/2026/11/05/erivelton-reage-a-projeto-de-lei-que-preve-aumento-na-conta-de-luz-em-lafaiete-e-proposta-sai-de-pauta-na-camara/"
+        }
+       ]
+      },
+      {
+       "titulo": "73 vagas no Sine nesta semana",
+       "selo": "Confirmado",
+       "texto": "O Sine Lafaiete divulgou cerca de 73 vagas na segunda (9/11): 25 para quem não tem experiência (ajudante de obras, auxiliar de limpeza, operador de caixa, auxiliar de cozinha) e 48 para quem tem (pedreiro, carpinteiro, motorista de caminhão, eletricista, soldador, mecânico). O Sine fica na Rua Marechal Floriano, 135 A, no Centro. Leve documento e carteira de trabalho; as vagas valem enquanto houver encaminhamentos.",
+       "fontes": [
+        {
+         "nome": "Lafaiete Agora (9/11)",
+         "url": "https://lafaieteagora.com.br/2026/11/09/procurando-emprego-veja-as-oportunidades-do-sine-lafaiete-desta-segunda-9-11/"
+        }
+       ]
+      },
+      {
+       "titulo": "Prazos da semana na cidade",
+       "selo": "Confirmado",
+       "texto": "O cadastro para creche e pré-escola de 2027 vai até sexta (13/11), pelo aplicativo Lafaiete Digital. Na saúde, a UPA passou a dar atestado só em casos graves, num teste de 45 dias, e uma carreta do SUS faz tomografias e ultrassons até 6 de dezembro.",
+       "fontes": [
+        {
+         "nome": "O Carijó, edição de 10/11 (com as fontes de cada nota)",
+         "url": "https://arth4rhenrique883-stack.github.io/banca/lafaiete/"
+        }
+       ]
+      }
+     ],
+     "caixa": {
+      "titulo": "Quer mais da cidade?",
+      "texto": "O Carijó é o jornal só de Conselheiro Lafaiete, com Prefeitura, Câmara, saúde, escolas, segurança e esporte. Na Banca, é o cartão logo abaixo do Terra Brasilis."
+     }
+    }
+   ],
+   "tempo": {
+    "texto": "Semana chuvosa e fria para novembro: guarda-chuva todos os dias e atenção a encostas e muros.",
+    "dias": [
+     {
+      "dia": "Ter 10",
+      "min": 12,
+      "max": 13,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Qua 11",
+      "min": 13,
+      "max": 18,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Qui 12",
+      "min": 14,
+      "max": 21,
+      "ceu": "Pancadas"
+     },
+     {
+      "dia": "Sex 13",
+      "min": 16,
+      "max": 23,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Sáb 14",
+      "min": 16,
+      "max": 24,
+      "ceu": "Chuva"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "HG Brasil, previsão atualizada em 9/11",
+      "url": "https://hgbrasil.com/weather/places/brazil/mg/conselheiro-lafaiete"
+     }
+    ]
+   },
+   "historia": {
+    "titulo": "15 de novembro: a República e o Conselheiro que deu nome à cidade",
+    "texto": "No domingo, o Brasil lembra os 137 anos da Proclamação da República, em 15 de novembro de 1889, quando o Império de Dom Pedro II acabou. A nossa cidade guarda uma ligação curiosa com essa história. O nome dela homenageia Lafayette Rodrigues Pereira, jurista nascido em Queluz (o nome antigo de Lafaiete) e conselheiro do Império, que chegou a chefiar o governo de Dom Pedro II. O título de “Conselheiro” era uma honraria da monarquia. Em 1934, já na República, Queluz passou a se chamar Conselheiro Lafaiete.",
+    "linha": [
+     {
+      "ano": "1500s",
+      "fato": "Mapas portugueses chamam a nossa terra de “Terra Brasilis”"
+     },
+     {
+      "ano": "1834",
+      "fato": "Nasce em Queluz (MG) Lafayette Rodrigues Pereira"
+     },
+     {
+      "ano": "1883",
+      "fato": "Lafayette assume a chefia do governo do Império"
+     },
+     {
+      "ano": "1889",
+      "fato": "Proclamação da República, em 15 de novembro"
+     },
+     {
+      "ano": "1934",
+      "fato": "Queluz passa a se chamar Conselheiro Lafaiete"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "Wikipédia, Conselheiro Lafaiete",
+      "url": "https://en.wikipedia.org/wiki/Conselheiro_Lafaiete"
+     },
+     {
+      "nome": "Wikipédia, Lafayette Rodrigues Pereira",
+      "url": "https://pt.wikipedia.org/wiki/Lafayette_Rodrigues_Pereira"
+     },
+     {
+      "nome": "Wikipédia, Proclamação da República",
+      "url": "https://pt.wikipedia.org/wiki/Proclama%C3%A7%C3%A3o_da_Rep%C3%BAblica_do_Brasil"
+     }
+    ]
+   },
+   "palavrinhas": [
+    {
+     "termo": "Selic",
+     "def": "A taxa básica de juros do país, decidida pelo Banco Central. Serve de base para os juros dos bancos."
+    },
+    {
+     "termo": "Copom",
+     "def": "Comitê do Banco Central que se reúne a cada 45 dias para decidir a Selic."
+    },
+    {
+     "termo": "IPCA-15",
+     "def": "A prévia da inflação oficial, medida pelo IBGE na metade de cada mês."
+    },
+    {
+     "termo": "PEC",
+     "def": "Proposta de Emenda à Constituição. Precisa de 3/5 dos votos, em dois turnos, na Câmara e no Senado."
+    },
+    {
+     "termo": "Medida provisória",
+     "def": "Regra que o presidente assina e vale na hora, mas que o Congresso precisa confirmar em até 120 dias."
+    }
+   ],
+   "agenda": [
+    {
+     "quando": "10 e 11/11",
+     "oque": "Câmara ouve especialistas sobre a maioridade penal"
+    },
+    {
+     "quando": "11/11",
+     "oque": "Orçamento de 2027 é apresentado no Congresso; Lula discursa na COP31"
+    },
+    {
+     "quando": "12/11",
+     "oque": "Novo boletim do El Niño (NOAA)"
+    },
+    {
+     "quando": "13/11",
+     "oque": "Último dia do cadastro de creche e pré-escola em Lafaiete (app Lafaiete Digital)"
+    },
+    {
+     "quando": "15/11",
+     "oque": "Segundo dia do Enem; feriado da Proclamação da República"
+    },
+    {
+     "quando": "20/11",
+     "oque": "Feriado nacional da Consciência Negra"
+    },
+    {
+     "quando": "8 e 9/12",
+     "oque": "Próxima reunião do Copom sobre os juros"
+    },
+    {
+     "quando": "Meados de dezembro",
+     "oque": "Começa a jornada de 42 horas e as duas folgas semanais"
+    }
+   ],
+   "conversa": [
+    "Se você pudesse escolher, preferiria folgar no sábado ou no domingo? Por quê?",
+    "Dinheiro do Estado deveria pagar shows nas cidades, ou só obras e serviços? O que a festa traz de bom para uma cidade?",
+    "Você sabia que Lafaiete já se chamou Queluz? Que outro nome você daria à cidade?"
+   ],
+   "fechamento": "Terra Brasilis, edição nº 1, fechada na madrugada de 10/11/2026."
+  }
+ ]
+}

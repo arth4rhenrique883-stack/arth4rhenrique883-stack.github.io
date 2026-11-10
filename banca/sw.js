@@ -1,7 +1,7 @@
 /* Service worker único da Banca. Versão gerada automaticamente pelo montar.py. */
-const V = "d27379e985";
+const V = "96c5b743ec";
 const CACHE = "banca-" + V;
-const BASE = ["./", "index.html", "manifest.webmanifest", "icone-180.png", "icone-192.png", "icone-512.png", "icone-maskable-512.png", "jornal/", "jornal/index.html", "jornal/edicoes.json", "jornal/icone-192.png", "lafaiete/", "lafaiete/index.html", "lafaiete/edicoes.json", "lafaiete/icone-192.png", "observatorio/", "observatorio/index.html", "observatorio/edicoes.json", "observatorio/icone-192.png", "anamnese/", "anamnese/index.html", "anamnese/edicoes.json", "anamnese/icone-192.png"];
+const BASE = ["./", "index.html", "manifest.webmanifest", "icone-180.png", "icone-192.png", "icone-512.png", "icone-maskable-512.png", "jornal/", "jornal/index.html", "jornal/edicoes.json", "jornal/icone-192.png", "brasil/", "brasil/index.html", "brasil/edicoes.json", "brasil/icone-192.png", "lafaiete/", "lafaiete/index.html", "lafaiete/edicoes.json", "lafaiete/icone-192.png", "observatorio/", "observatorio/index.html", "observatorio/edicoes.json", "observatorio/icone-192.png", "anamnese/", "anamnese/index.html", "anamnese/edicoes.json", "anamnese/icone-192.png"];
 
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(BASE)).then(() => self.skipWaiting()));

@@ -1,7 +1,7 @@
 {
   "name": "Banca",
   "short_name": "Banca",
-  "description": "Os jornais do dia num só lugar: Jornal de Cada Dia, O Carijó, Observatório Diário e Anamnese.",
+  "description": "Os jornais do dia num só lugar: Jornal de Cada Dia, Terra Brasilis, O Carijó, Observatório Diário e Anamnese.",
   "lang": "pt-BR",
   "id": "/banca/",
   "start_url": "./",
@@ -35,6 +35,16 @@
       "icons": [
         {
           "src": "jornal/icone-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Terra Brasilis",
+      "url": "brasil/",
+      "icons": [
+        {
+          "src": "brasil/icone-192.png",
           "sizes": "192x192"
         }
       ]

@@ -20,11 +20,13 @@ ICONES = ["icone-180.png", "icone-192.png", "icone-512.png", "icone-maskable-512
 PUBS = [
     # pasta no site, pasta de origem, nome, para quem / do que trata
     ("jornal", "revista-leiga", "Jornal de Cada Dia",
-     "As notícias do dia em linguagem simples: política, saúde e tecnologia."),
+     "Leitura fácil para a família: o Brasil e o mundo em linguagem simples, com muita saúde e dicas contra golpes."),
+    ("brasil", "jornal-brasil", "Terra Brasilis",
+     "Só o Brasil, Minas e Conselheiro Lafaiete: Brasília, bolso, saúde, escola e a cidade, em linguagem simples."),
     ("lafaiete", "jornal-lafaiete", "O Carijó",
      "O jornal de Conselheiro Lafaiete: prefeitura, saúde, empregos e agenda da cidade."),
     ("observatorio", "revista", "Observatório Diário",
-     "Geopolítica, guerras, energia, inteligência artificial e ciência."),
+     "Para estudar o mundo: geopolítica completa, guerras, energia, clima, IA e espaço, com história e filosofia."),
     ("anamnese", "medicina", "Anamnese",
      "Medicina para estudantes: estudos, ensaios clínicos e saúde pública."),
 ]
@@ -187,7 +189,7 @@ def tela_inicial(cards):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Banca</title>
-<meta name="description" content="Os jornais do dia num só lugar: Jornal de Cada Dia, O Carijó, Observatório Diário e Anamnese.">
+<meta name="description" content="Os jornais do dia num só lugar: Jornal de Cada Dia, Terra Brasilis, O Carijó, Observatório Diário e Anamnese.">
 <meta name="theme-color" content="{TINTA}">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -255,7 +257,7 @@ open(os.path.join(BANCA, "index.html"), "w", encoding="utf-8").write(tela_inicia
 
 manifest = {
     "name": "Banca", "short_name": "Banca",
-    "description": "Os jornais do dia num só lugar: Jornal de Cada Dia, O Carijó, Observatório Diário e Anamnese.",
+    "description": "Os jornais do dia num só lugar: Jornal de Cada Dia, Terra Brasilis, O Carijó, Observatório Diário e Anamnese.",
     "lang": "pt-BR", "id": "/banca/", "start_url": "./", "scope": "./",
     "display": "standalone", "orientation": "portrait",
     "background_color": PAPEL, "theme_color": TINTA,
