@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Dossiê de estudo: por que um ministro do STF citado no caso Banco Master continua no cargo.">
+<meta name="theme-color" content="#3A2D2B">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="O Caso Moraes–Vorcaro">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icone-192.png">
+<link rel="apple-touch-icon" href="icone-180.png">
+<title>O Caso Moraes–Vorcaro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: dossiê de estudo impresso — cabeça de jornal, índice fixo, seções numeradas na ordem de leitura, papel bege único (sem tema escuro, por escolha) */
+:root{
+  --papel:#ECE3D4; --papel2:#E3D7C3; --tinta:#3A2D2B; --tinta2:#5E4E48; --filete:#8A7668;
+  --fato:#2F4A3A; --alega:#8A5A1E; --analise:#3D4A6B; --cenario:#6B3D55;
+  --display:"Anton","Impact","Arial Narrow",sans-serif;
+  --titulo:"Playfair Display","Georgia",serif;
+  --texto:"Source Serif 4","Georgia","Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,"Courier New",monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  background:var(--papel);
+  background-image:
+    radial-gradient(rgba(58,45,43,.05) 1px,transparent 1px),
+    radial-gradient(rgba(58,45,43,.035) 1px,transparent 1px);
+  background-size:7px 7px,13px 13px;background-position:0 0,3px 5px;
+  color:var(--tinta);font-family:var(--texto);font-size:17px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  padding-block:0 48px;
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--papel)}
+.folha{max-width:1080px;margin:0 auto}
+a{color:var(--tinta);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--tinta);outline-offset:3px}
+
+/* Cabeça */
+.cabeca{padding-block:28px 0;text-align:center}
+.cabeca .sobre{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta2)}
+.cabeca h1{font-family:var(--display);font-weight:400;font-size:clamp(46px,11vw,128px);line-height:.92;margin:10px 0 6px;letter-spacing:.01em;text-transform:uppercase;text-wrap:balance}
+.duplo{border:0;border-top:3px double var(--tinta);margin:0}
+.fino{border:0;border-top:1px solid var(--filete);margin:0}
+.edicao{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 16px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding-block:7px}
+.chapeu{font-family:var(--titulo);font-weight:900;font-size:clamp(26px,5.2vw,50px);line-height:1.08;text-align:center;margin:26px auto 14px;max-width:900px;text-wrap:balance}
+.linha-fina{font-style:italic;text-align:center;max-width:720px;margin:0 auto 24px;color:var(--tinta2);font-size:18px}
+
+/* Índice */
+.indice{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--papel);border-block:1px solid var(--tinta);margin-bottom:28px}
+.indice ol{list-style:none;display:flex;gap:4px 18px;margin:0;padding:8px 0;overflow-x:auto;white-space:nowrap;font-family:var(--mono);font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;scrollbar-width:thin}
+.indice a{text-decoration:none}
+.indice a:hover{text-decoration:underline}
+.indice b{font-weight:600;margin-right:4px}
+
+/* Resposta curta */
+.resposta{display:grid;grid-template-columns:1fr;gap:20px;border:2px solid var(--tinta);padding:20px 22px;background:var(--papel2);margin-bottom:34px}
+.resposta h2{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:28px;margin:0;letter-spacing:.02em}
+.resposta p{margin:0;text-align:justify;hyphens:auto}
+.tres{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tres div{border-top:3px double var(--tinta);padding-top:8px;min-width:0}
+.tres h3{font-family:var(--titulo);font-size:19px;margin:0 0 4px}
+.tres p{font-size:15.5px;text-align:left}
+.selo{display:inline-block;font-family:var(--mono);font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:1px 7px;border:1.5px solid currentColor;border-radius:2px;white-space:nowrap}
+.selo.travado{color:var(--alega)}
+
+/* Seções */
+section{padding-block:10px 30px;scroll-margin-top:60px}
+.sec-cab{display:flex;align-items:baseline;gap:14px;border-bottom:3px double var(--tinta);margin-bottom:18px;padding-bottom:6px}
+.sec-cab .num{font-family:var(--display);font-size:46px;line-height:1}
+.sec-cab h2{font-family:var(--titulo);font-weight:900;font-size:clamp(24px,4vw,34px);margin:0;line-height:1.15;text-wrap:balance}
+.colunas{column-count:2;column-gap:34px;column-rule:1px solid var(--filete)}
+.colunas p{margin:0 0 12px;text-align:justify;hyphens:auto}
+.colunas h3{font-family:var(--titulo);font-size:20px;margin:6px 0 6px;break-after:avoid}
+.colunas > *{break-inside:avoid-column}
+p.lede::first-letter{font-family:var(--display);float:left;font-size:68px;line-height:.85;padding:6px 8px 0 0}
+
+/* Legenda das camadas */
+.legenda{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:14px;margin:0 0 18px;padding:10px 12px;border:1px dashed var(--filete)}
+.legenda span{display:flex;align-items:center;gap:6px}
+.t-fato{color:var(--fato)}.t-alega{color:var(--alega)}.t-analise{color:var(--analise)}.t-cenario{color:var(--cenario)}
+
+/* Linha do tempo */
+.filtros{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.filtros button{font-family:var(--mono);font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;background:transparent;color:var(--tinta);border:1.5px solid var(--tinta);padding:5px 11px;cursor:pointer;border-radius:2px}
+.filtros button[aria-pressed="true"]{background:var(--tinta);color:var(--papel)}
+.tempo{list-style:none;margin:0;padding:0;border-left:2px solid var(--tinta);margin-left:8px}
+.tempo li{position:relative;padding:0 0 18px 22px}
+.tempo li::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;background:var(--papel);border:2px solid var(--tinta);border-radius:50%}
+.tempo .data{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.04em}
+.tempo .ev{margin:2px 0 4px}
+.tempo .meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:13px;color:var(--tinta2)}
+
+/* Quadros fato x alegação */
+.quadros{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.quadro{border:1.5px solid currentColor;padding:14px 16px;min-width:0}
+.quadro h3{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:.03em;font-size:21px;margin:0 0 8px}
+.quadro ul{margin:0;padding-left:18px;color:var(--tinta)}
+.quadro li{margin-bottom:8px;font-size:15.5px}
+.citacao{border-block:3px double var(--tinta);margin:24px auto;padding:16px 10px;max-width:760px;text-align:center}
+.citacao p{font-family:var(--titulo);font-style:italic;font-size:clamp(20px,3vw,26px);line-height:1.35;margin:0 0 6px}
+.citacao cite{font-family:var(--mono);font-size:12px;font-style:normal;letter-spacing:.08em;text-transform:uppercase}
+
+/* Defesa */
+.defesa{display:grid;grid-template-columns:repeat(2,1fr);gap:0 30px}
+.defesa div{border-top:1px solid var(--filete);padding:10px 0;min-width:0}
+.defesa b{font-family:var(--titulo)}
+
+/* Caminhos de remoção */
+.caminhos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.caminho{border:2px solid var(--tinta);display:flex;flex-direction:column;min-width:0}
+.caminho header{background:var(--tinta);color:var(--papel);padding:10px 14px}
+.caminho header h3{font-family:var(--display);font-weight:400;font-size:24px;text-transform:uppercase;margin:0;letter-spacing:.03em}
+.caminho header p{margin:0;font-size:13.5px;font-family:var(--mono);opacity:.9}
+.passos{list-style:none;margin:0;padding:12px 14px;display:flex;flex-direction:column;gap:0;flex:1}
+.passos li{padding:8px 0 8px 26px;position:relative;border-bottom:1px dotted var(--filete);font-size:15px}
+.passos li:last-child{border-bottom:0}
+.passos li::before{content:attr(data-n);position:absolute;left:0;top:8px;font-family:var(--mono);font-size:12px;font-weight:600;width:18px;height:18px;border:1.5px solid var(--tinta);border-radius:50%;display:grid;place-items:center}
+.passos li.trava{background:repeating-linear-gradient(-45deg,transparent 0 6px,rgba(138,90,30,.12) 6px 8px)}
+.passos li.trava::after{content:"TRAVADO AQUI";display:block;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.1em;color:var(--alega);margin-top:3px}
+.caminho footer{border-top:1px solid var(--tinta);padding:10px 14px;font-size:14px;font-style:italic}
+
+.lei{margin-top:22px}
+details{border-top:1px solid var(--tinta);padding:10px 0}
+details:last-child{border-bottom:1px solid var(--tinta)}
+summary{cursor:pointer;font-family:var(--titulo);font-weight:700;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--mono);font-weight:600}
+details[open] summary::after{content:"−"}
+details p{margin:8px 0 0;text-align:justify;hyphens:auto}
+
+/* Tabelas */
+.tabela{overflow-x:auto;margin:6px 0}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:15px}
+th{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.07em;text-align:left;border-bottom:2px solid var(--tinta);padding:8px 10px 6px}
+td{border-bottom:1px solid var(--filete);padding:9px 10px;vertical-align:top}
+td:first-child{font-family:var(--titulo);font-weight:700;white-space:nowrap}
+
+/* Cenários */
+.cenarios{display:flex;flex-direction:column;gap:14px}
+.cen{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:6px 22px;align-items:center;border-bottom:1px solid var(--filete);padding-bottom:12px}
+.cen h3{font-family:var(--titulo);font-size:19px;margin:0}
+.cen p{margin:2px 0 0;font-size:15px}
+.barra{height:20px;border:1.5px solid var(--tinta);position:relative;background:var(--papel)}
+.barra i{position:absolute;inset:0 auto 0 0;background:repeating-linear-gradient(90deg,var(--cenario) 0 3px,transparent 3px 5px)}
+.barra span{position:absolute;right:-1px;top:-24px;font-family:var(--mono);font-weight:600;font-size:14px;font-variant-numeric:tabular-nums}
+.nota{font-size:14px;font-style:italic;color:var(--tinta2);margin-top:10px}
+
+/* Paralelos */
+.paralelos{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.paralelo{border-top:3px double var(--tinta);padding-top:8px;min-width:0}
+.paralelo .ano{font-family:var(--display);font-size:30px;line-height:1}
+.paralelo h3{font-family:var(--titulo);font-size:19px;margin:2px 0 6px}
+.paralelo p{margin:0 0 6px;font-size:15.5px;text-align:justify;hyphens:auto}
+.paralelo .falha{font-style:italic;color:var(--tinta2)}
+
+/* Quiz */
+.quiz{display:flex;flex-direction:column;gap:18px}
+.q{border:1.5px solid var(--tinta);padding:14px 16px;background:var(--papel2)}
+.q h3{font-family:var(--titulo);font-size:18px;margin:0 0 10px}
+.q .ops{display:flex;flex-direction:column;gap:6px}
+.q button{text-align:left;font-family:var(--texto);font-size:15.5px;background:var(--papel);color:var(--tinta);border:1px solid var(--filete);padding:8px 12px;cursor:pointer;border-radius:2px}
+.q button:hover{border-color:var(--tinta)}
+.q button.certo{border:2px solid var(--fato);color:var(--fato);font-weight:600}
+.q button.errado{border:2px solid var(--alega);color:var(--alega);text-decoration:line-through}
+.q .exp{margin:10px 0 0;font-size:15px}
+.placar{font-family:var(--mono);font-size:14px;letter-spacing:.05em;text-transform:uppercase}
+
+/* Glossário e leituras */
+dl.glos{display:grid;grid-template-columns:repeat(2,1fr);gap:4px 30px;margin:0}
+dl.glos div{border-top:1px solid var(--filete);padding:8px 0;min-width:0}
+dl.glos dt{font-family:var(--titulo);font-weight:700}
+dl.glos dd{margin:2px 0 0;font-size:15.5px}
+.leituras{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.livro{border:1.5px solid var(--tinta);padding:14px;min-width:0}
+.livro h3{font-family:var(--titulo);font-size:18px;margin:0 0 2px;font-style:italic}
+.livro .autor{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.livro p{font-size:15px;margin:8px 0 0}
+.pensar{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:20px}
+.pensar blockquote{margin:0;border-left:4px double var(--tinta);padding:4px 0 4px 14px;font-family:var(--titulo);font-style:italic;font-size:18px;line-height:1.4}
+
+.fontes ol{columns:2;column-gap:30px;font-size:14px;padding-left:20px;margin:0}
+.fontes li{margin-bottom:6px;break-inside:avoid;overflow-wrap:anywhere}
+.rodape{border-top:3px double var(--tinta);margin-top:30px;padding-top:10px;font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--tinta2);text-align:center}
+
+@media (max-width:820px){
+  .tres,.quadros,.caminhos,.leituras{grid-template-columns:1fr}
+  .colunas{column-count:1}
+  .defesa,.paralelos,dl.glos,.pensar{grid-template-columns:1fr}
+  .cen{grid-template-columns:1fr}
+  .cen .barra{margin-top:22px}
+  .fontes ol{columns:1}
+  body{font-size:16.5px}
+}
+</style>
+
+
+<style>.banca-mini{font:600 13px/1.2 "IBM Plex Mono","Courier New",monospace;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:12px 0 0}
+.banca-mini a{color:#3A2D2B}</style>
+<div class="banca-mini"><a href="../">&#8249; Ver também os jornais da Banca</a></div>
+<div class="folha">
+<header class="cabeca">
+  <div class="sobre">Observatório Geopolítico · Dossiê de estudo</div>
+  <h1>O Caso Moraes–Vorcaro</h1>
+  <hr class="duplo">
+  <div class="edicao"><span>Dossiê Nº 1</span><span>✱ Atualizado em 10 de novembro de 2026 ✱</span><span>Dados até 9/11/2026</span></div>
+  <hr class="duplo">
+  <p class="chapeu">Por que um ministro do Supremo citado no escândalo do Banco Master continua no cargo?</p>
+  <p class="linha-fina">Um guia neutro para estudar o caso: o que está provado, o que é alegação, como a Constituição protege e responsabiliza juízes, e o que pode acontecer.</p>
+</header>
+
+<nav class="indice" aria-label="Índice">
+  <ol>
+    <li><a href="#resposta"><b>0</b>Resposta curta</a></li>
+    <li><a href="#tempo"><b>1</b>Linha do tempo</a></li>
+    <li><a href="#provas"><b>2</b>Fato e alegação</a></li>
+    <li><a href="#remocao"><b>3</b>Como se remove</a></li>
+    <li><a href="#atores"><b>4</b>Atores</a></li>
+    <li><a href="#ideias"><b>5</b>Ideias e história</a></li>
+    <li><a href="#cenarios"><b>6</b>Cenários</a></li>
+    <li><a href="#quiz"><b>7</b>Teste</a></li>
+    <li><a href="#estudar"><b>8</b>Para estudar</a></li>
+  </ol>
+</nav>
+
+<main>
+<section id="resposta" aria-labelledby="h-resposta">
+  <div class="resposta">
+    <h2 id="h-resposta">A resposta curta</h2>
+    <p>No Brasil, só há três portas institucionais para responsabilizar um ministro do Supremo Tribunal Federal. Em novembro de 2026, as três estão fechadas ou paradas. Isso <strong>não diz se Moraes é culpado ou inocente</strong>. Diz apenas que nenhuma instância com poder de decidir chegou a decidir.</p>
+    <div class="tres">
+      <div>
+        <h3>Impeachment no Senado</h3>
+        <p><span class="selo travado">Parado</span> O presidente do Senado decide sozinho se um pedido anda. Davi Alcolumbre segura cerca de 109 pedidos e disse que vai esperar o STF. E uma liminar de Gilmar Mendes exige 54 votos (2/3) já para abrir o processo.</p>
+      </div>
+      <div>
+        <h3>Processo criminal</h3>
+        <p><span class="selo travado">Parado</span> Quem julga um ministro é o próprio STF, e quem acusa é a Procuradoria-Geral da República. A PGR pediu para <em>anular</em> a investigação. O plenário parou em 15/9 com um pedido de vista e só deve voltar em fevereiro de 2027.</p>
+      </div>
+      <div>
+        <h3>Conselho Nacional de Justiça</h3>
+        <p><span class="selo travado">Sem poder</span> O CNJ fiscaliza juízes de todo o país, mas o STF decidiu em 2005 (ADI 3.367) que o Conselho não tem poder disciplinar sobre os ministros do próprio Supremo.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="legenda" role="note" aria-label="Como ler este dossiê">
+    <strong>Como ler:</strong>
+    <span class="t-fato"><span class="selo">Fato</span> confirmado por fontes confiáveis</span>
+    <span class="t-alega"><span class="selo">Alegação</span> afirmada, sem prova pública</span>
+    <span class="t-analise"><span class="selo">Análise</span> interpretação fundamentada</span>
+    <span class="t-cenario"><span class="selo">Cenário</span> possibilidade futura</span>
+  </div>
+</section>
+
+<section id="tempo" aria-labelledby="h-tempo">
+  <div class="sec-cab"><span class="num">1</span><h2 id="h-tempo">Linha do tempo</h2></div>
+  <p>Daniel Vorcaro é o ex-controlador do <strong>Banco Master</strong>, liquidado pelo Banco Central em novembro de 2025. A Polícia Federal investiga se o banco inflou artificialmente seu valor para atrair investidores (operação Compliance Zero). Filtre os acontecimentos pelo tipo de informação:</p>
+  <div class="filtros" role="group" aria-label="Filtrar linha do tempo">
+    <button type="button" id="f-todos" data-f="todos" aria-pressed="true">Tudo</button>
+    <button type="button" id="f-fato" data-f="fato" aria-pressed="false">Só fatos</button>
+    <button type="button" id="f-alega" data-f="alega" aria-pressed="false">Alegações</button>
+    <button type="button" id="f-inst" data-f="inst" aria-pressed="false">Reação das instituições</button>
+  </div>
+  <ol class="tempo" id="linha"></ol>
+</section>
+
+<section id="provas" aria-labelledby="h-provas">
+  <div class="sec-cab"><span class="num">2</span><h2 id="h-provas">O que é fato, o que é leitura da polícia, o que falta</h2></div>
+  <div class="colunas">
+    <p class="lede">Em 1º de setembro de 2026, o ministro André Mendonça retirou o sigilo de um relatório da Polícia Federal sobre o celular de Vorcaro. Um relatório policial é uma peça de investigação, não uma sentença: ele reúne dados (mensagens, metadados, registros de encontros) e a interpretação que a polícia faz deles. Separar uma coisa da outra é o primeiro exercício de quem estuda o caso.</p>
+    <p>O núcleo documental mais sólido é anterior ao relatório: em dezembro de 2025, o jornal <em>O Globo</em> revelou o contrato entre o escritório de Viviane Barci de Moraes, esposa do ministro, e o Banco Master. Dados da Receita, publicados em abril de 2026 por CNN, G1 e Folha, mostraram cerca de R$ 80 milhões efetivamente pagos.</p>
+  </div>
+  <div class="quadros">
+    <div class="quadro t-fato">
+      <h3>Documentado</h3>
+      <ul>
+        <li>Contrato de cerca de <strong>R$ 129 milhões</strong> (R$ 3,6 mi por mês, 2024–2027) entre o escritório da esposa de Moraes e o Master.</li>
+        <li>Cerca de <strong>R$ 80 milhões</strong> recebidos em 2024–2025, segundo dados da Receita.</li>
+        <li>Moraes <strong>editou a minuta</strong> do contrato. O escritório confirma e diz que o compliance pediu que ele checasse impedimentos.</li>
+        <li>Mensagens <strong>enviadas por Vorcaro</strong> a um número atribuído a Moraes, como a de 14/11/2025: "dívida de vida".</li>
+        <li>Proposta de contrato de R$ 50 milhões com a Viking (empresa de Vorcaro), com pagamento parcial em cotas de jato e helicóptero.</li>
+      </ul>
+    </div>
+    <div class="quadro t-analise">
+      <h3>Leitura da PF</h3>
+      <ul>
+        <li>Que a mensagem de 15/11/2025, "Acha que segunda já tenho que estar fora?", trataria de uma operação policial iminente, ou seja, de um <strong>vazamento</strong>. Vorcaro foi preso dois dias depois.</li>
+        <li>Que Vorcaro tentou usar Moraes, o PGR e o diretor da PF para atrasar medidas contra o banco.</li>
+        <li>Que "Alex", em mensagens sobre eventos em Campos do Jordão e Londres, seria Moraes.</li>
+        <li>Entre seis e nove encontros entre 2024 e 2025, conforme a contagem.</li>
+      </ul>
+    </div>
+    <div class="quadro t-alega">
+      <h3>O que não se sabe</h3>
+      <ul>
+        <li>Não há <strong>respostas de Moraes</strong> no material divulgado. As mensagens publicadas são de Vorcaro para o número atribuído a ele.</li>
+        <li>Não foi apontada <strong>decisão judicial</strong> de Moraes que tenha favorecido o Master.</li>
+        <li>Quais serviços o escritório prestou por esses valores.</li>
+        <li>Se a investigação de Mendonça será considerada válida ou nula pelo plenário.</li>
+      </ul>
+    </div>
+  </div>
+
+  <figure class="citacao">
+    <p>“Os homens, em geral, julgam mais pelos olhos do que pelas mãos.”</p>
+    <cite>Maquiavel, O Príncipe, cap. XVIII (1513)</cite>
+  </figure>
+
+  <h3 style="font-family:var(--titulo);font-size:22px;margin:0 0 8px">A defesa de Moraes (manifestação de 44 páginas ao STF, 15/9/2026)</h3>
+  <div class="defesa">
+    <div><b>Mensagens.</b> Diz que não há nenhuma mensagem escrita por ele e chama as conversas de "diálogos fantasiosos". Afirma que, de 52 anotações da PF, 47 não aparecem diretamente no WhatsApp.</div>
+    <div><b>Relatório.</b> Chama-o de "farsa", diz que não é laudo pericial e que reúne 228 recortes sem os dados brutos, o que impediria auditoria.</div>
+    <div><b>Contrato.</b> O escritório prestou serviços reais, com notas fiscais. Ele nunca julgou processos do Master ou de Vorcaro. O contrato de R$ 50 milhões foi só uma proposta, nunca assinada.</div>
+    <div><b>Mendonça.</b> Acusa o colega de agir por "vingança" e motivação político-eleitoral, ligadas às condenações da trama golpista. Nega ter vazado a operação.</div>
+  </div>
+  <p class="nota">Outras respostas: a PGR (Paulo Gonet, que também aparece no relatório) pede a anulação por "dupla nulidade": a apuração foi aberta sem pedido do Ministério Público ou da PF e atingiu um ministro sem aval do plenário. Mendonça defende a legalidade do que fez e quer o caso no plenário.</p>
+</section>
+
+<section id="remocao" aria-labelledby="h-remocao">
+  <div class="sec-cab"><span class="num">3</span><h2 id="h-remocao">Como se tira um ministro do STF</h2></div>
+  <div class="colunas">
+    <p class="lede">A Constituição dá aos juízes <strong>vitaliciedade</strong> (art. 95, I): só perdem o cargo por sentença definitiva ou, no caso dos ministros do STF, por impeachment no Senado (art. 52, II). A aposentadoria é obrigatória aos 75 anos. Moraes nasceu em 1968, o que o levaria a 2043.</p>
+    <p>A lógica vem de Montesquieu e de Alexander Hamilton: o Judiciário não tem "nem a espada nem a bolsa", e sua única força é a independência. Se políticos pudessem demitir juízes que os contrariam, os juízes julgariam para agradar. O preço desse desenho é que o controle depende de instituições que, na prática, raramente se movem.</p>
+  </div>
+
+  <div class="caminhos">
+    <article class="caminho">
+      <header><h3>Impeachment</h3><p>Lei 1.079/1950 · Senado</p></header>
+      <ol class="passos">
+        <li data-n="1">Qualquer cidadão protocola uma denúncia por crime de responsabilidade (art. 39: por exemplo, conduta "incompatível com a honra, dignidade e decoro").</li>
+        <li data-n="2" class="trava">O presidente do Senado decide, sozinho e sem prazo, se lê a denúncia. Alcolumbre está esperando o STF.</li>
+        <li data-n="3" class="trava">Admissão: pela liminar de Gilmar Mendes (dez/2025), precisa de 2/3 do Senado, ou 54 votos. Antes bastava maioria simples.</li>
+        <li data-n="4">Instrução, defesa e julgamento no plenário do Senado.</li>
+        <li data-n="5">Condenação com 54 votos: perda do cargo e 8 anos de inabilitação.</li>
+      </ol>
+      <footer>Nenhum ministro do STF jamais sofreu impeachment no Brasil.</footer>
+    </article>
+    <article class="caminho">
+      <header><h3>Via criminal</h3><p>CF, art. 102, I, b · STF</p></header>
+      <ol class="passos">
+        <li data-n="1">Indícios de crime comum (corrupção, violação de sigilo etc.).</li>
+        <li data-n="2" class="trava">O plenário do STF decide se autoriza investigar um de seus membros. Nunca fez isso. Parado desde 15/9 por pedido de vista.</li>
+        <li data-n="3" class="trava">A PGR precisa oferecer denúncia. Hoje ela pede para anular a investigação.</li>
+        <li data-n="4">Julgamento pelo próprio STF.</li>
+        <li data-n="5">Condenação definitiva pode levar à perda do cargo.</li>
+      </ol>
+      <footer>O tribunal julga a si mesmo, sem instância acima dele.</footer>
+    </article>
+    <article class="caminho">
+      <header><h3>Disciplinar</h3><p>CNJ · ADI 3.367 (2005)</p></header>
+      <ol class="passos">
+        <li data-n="1">O CNJ recebe reclamações contra juízes e pode afastar e aposentar compulsoriamente.</li>
+        <li data-n="2" class="trava">Mas o STF decidiu que o CNJ está abaixo dele e não alcança seus ministros.</li>
+        <li data-n="3">Resta a autocontenção: o ministro pode se declarar impedido ou suspeito, ou deixar o cargo por vontade própria.</li>
+      </ol>
+      <footer>Não existe corregedoria acima do Supremo.</footer>
+    </article>
+  </div>
+
+  <div class="lei">
+    <details>
+      <summary>Impedimento e suspeição afastam do processo, não do cargo</summary>
+      <p>O impedimento é objetivo (parentesco, interesse direto na causa) e a suspeição é subjetiva (amizade íntima, inimizade). Estão no CPC (arts. 144 e 145), no CPP (arts. 252 e 254) e no Regimento Interno do STF (arts. 277 a 287). Ambos tiram o juiz de um processo específico, mas não do tribunal. Moraes afirma nunca ter julgado causa do Master. Se isso se confirmar, o debate não é sobre impedimento, e sim sobre decoro e conflito de interesse.</p>
+    </details>
+    <details>
+      <summary>A regra do escritório do cônjuge que o STF derrubou em 2023</summary>
+      <p>O art. 144, VIII do CPC impedia o juiz de julgar causa em que a parte fosse cliente do escritório do cônjuge, mesmo representada por outro escritório. Em agosto de 2023, o STF declarou esse inciso inconstitucional na ADI 5.953, por 7 a 4. Críticos lembram essa decisão agora. Defensores dizem que ela não autoriza conflito de interesse, apenas evita um impedimento automático e amplo demais.</p>
+    </details>
+    <details>
+      <summary>A liminar de Gilmar Mendes sobre a Lei do Impeachment</summary>
+      <p>Em 3/12/2025, nas ADPFs 1.259 e 1.260, Gilmar decidiu que só a PGR poderia pedir impeachment de ministros. Recuou desse ponto em 10/12/2025, após reação do Senado, mas manteve três coisas: quórum de 2/3 já para abrir o processo, proibição de impeachment pelo mérito de decisões judiciais e fim do afastamento automático. A liminar ainda não foi confirmada pelo plenário. O Senado discute uma nova Lei do Impeachment, e a nova maioria eleita em 2026 quer prazos para o presidente da Casa e afastamento por maioria simples.</p>
+    </details>
+    <details>
+      <summary>Por que este caso é juridicamente diferente dos pedidos anteriores</summary>
+      <p>A maioria dos cerca de 109 pedidos anteriores mirava decisões de Moraes (inquérito das fake news, 8 de janeiro, trama golpista), e a liminar de Gilmar veda isso como fundamento. O caso Master trata de conduta pessoal fora dos autos, que a Lei 1.079 alcança. Por isso juristas que sempre rejeitaram os pedidos anteriores consideram este mais consistente. O filtro político, porém, continua o mesmo. <span class="selo t-analise">Análise · confiança média</span></p>
+    </details>
+  </div>
+</section>
+
+<section id="atores" aria-labelledby="h-atores">
+  <div class="sec-cab"><span class="num">4</span><h2 id="h-atores">Quem é quem</h2></div>
+  <div class="tabela">
+    <table>
+      <thead><tr><th>Ator</th><th>Posição declarada</th><th>Interesse provável <span class="t-analise">(análise)</span></th></tr></thead>
+      <tbody>
+        <tr><td>Alexandre de Moraes</td><td>Nega tudo, ataca a legalidade da investigação e acusa Mendonça.</td><td>Preservar o cargo e a autoridade dos processos que conduziu.</td></tr>
+        <tr><td>André Mendonça</td><td>Retirou o sigilo e quer o caso no plenário.</td><td>Sustentar a legalidade de sua decisão; é acusado de motivação política.</td></tr>
+        <tr><td>Edson Fachin</td><td>Presidente do STF. Pediu manifestações e tirou Moraes do inquérito das fake news.</td><td>Proteger a instituição sem criar precedente desordenado.</td></tr>
+        <tr><td>Gilmar, Zanin, Dino</td><td>Votaram pelo julgamento conjunto dos casos Moraes e Mendonça. Dino pediu vista.</td><td>Para uns, proteção institucional; para outros, adiamento.</td></tr>
+        <tr><td>Fux, Cármen Lúcia</td><td>Votaram, com Fachin e Mendonça, para separar os casos.</td><td>Tratar a suspeita contra Moraes por si só.</td></tr>
+        <tr><td>Paulo Gonet (PGR)</td><td>Pede anulação. Também é citado no relatório.</td><td>Defender a exclusividade da PGR; críticos veem conflito.</td></tr>
+        <tr><td>Davi Alcolumbre</td><td>Segura os pedidos de impeachment e espera o STF.</td><td>Evitar crise entre Poderes e manter margem de negociação.</td></tr>
+        <tr><td>Oposição (PL, Novo)</td><td>Pede impeachment, CPI e anulação da vista de Dino.</td><td>Afastar o relator dos processos contra Bolsonaro; o caso dá um argumento novo, de conduta.</td></tr>
+        <tr><td>Governo e base</td><td>Discrição; posições divididas.</td><td>Evitar que o caso desmonte o julgamento do 8 de janeiro; há aliados também citados no caso Master.</td></tr>
+        <tr><td>13 ex-ministros do STF</td><td>Pediram apuração pública e imediata (7/9/2026).</td><td>A credibilidade da Corte, na que chamaram de sua "crise mais aguda".</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="ideias" aria-labelledby="h-ideias">
+  <div class="sec-cab"><span class="num">5</span><h2 id="h-ideias">Ideias e paralelos históricos</h2></div>
+  <div class="colunas">
+    <h3>Quem vigia os vigilantes?</h3>
+    <p>A pergunta é do poeta romano Juvenal (<em>Quis custodiet ipsos custodes?</em>) e resume o caso. O desenho brasileiro dá ao STF a última palavra, inclusive sobre investigar seus próprios membros. Quando o vigiado é o vigia, o controle depende de autocontenção.</p>
+    <h3>Autoridade não é poder</h3>
+    <p>Hannah Arendt distinguia as duas coisas: autoridade é obediência sem coerção, baseada em reconhecimento. Um tribunal que parece se blindar pode manter o poder formal e perder a autoridade. A carta dos 13 ex-ministros é um sinal dessa preocupação.</p>
+    <h3>Três lentes</h3>
+    <p>O <strong>realismo</strong> lê o impasse como cálculo de poder: o Senado guarda o impeachment como moeda de troca. O <strong>constitucionalismo liberal</strong> insiste em freios, contrapesos e devido processo, mesmo quando lentos. O <strong>construtivismo</strong> olha para as normas: escritórios de parentes de ministros atuando para grandes clientes foram tolerados por décadas, e o caso pode mudar o que se considera aceitável.</p>
+  </div>
+  <div class="paralelos" style="margin-top:16px">
+    <div class="paralelo">
+      <div class="ano">1969</div>
+      <h3>Abe Fortas, Suprema Corte dos EUA</h3>
+      <p>Aceitou um contrato de US$ 20 mil por ano de uma fundação ligada a um financista investigado. Sob ameaça de impeachment, renunciou.</p>
+      <p class="falha">Onde a analogia falha: a pressão veio de um consenso bipartidário. Aqui, cada lado lê o caso pela lente do 8 de janeiro.</p>
+    </div>
+    <div class="paralelo">
+      <div class="ano">1805</div>
+      <h3>Samuel Chase, Suprema Corte dos EUA</h3>
+      <p>Único ministro da Suprema Corte americana a sofrer impeachment na Câmara; foi absolvido no Senado. O caso fixou a ideia de que juiz não se remove por discordância política.</p>
+      <p class="falha">Onde falha: Chase era acusado por condutas em julgamentos; Moraes, por conduta fora dos autos.</p>
+    </div>
+    <div class="paralelo">
+      <div class="ano">1894</div>
+      <h3>Barata Ribeiro, STF</h3>
+      <p>O Senado rejeitou a nomeação do médico Barata Ribeiro ao STF por falta de "notável saber jurídico". É o raro exemplo do Senado exercendo controle sobre a Corte.</p>
+      <p class="falha">Onde falha: foi um veto na entrada, não uma remoção.</p>
+    </div>
+    <div class="paralelo">
+      <div class="ano">2000</div>
+      <h3>Juiz Nicolau dos Santos Neto, TRT-SP</h3>
+      <p>Perdeu o cargo e foi condenado pelo desvio na obra do fórum trabalhista de São Paulo. Mostra que juízes podem ser removidos no Brasil pela via criminal.</p>
+      <p class="falha">Onde falha: ele foi julgado por instâncias superiores. Acima do STF não há nenhuma.</p>
+    </div>
+  </div>
+</section>
+
+<section id="cenarios" aria-labelledby="h-cenarios">
+  <div class="sec-cab"><span class="num">6</span><h2 id="h-cenarios">Cenários para os próximos 6 a 12 meses</h2></div>
+  <div class="cenarios">
+    <div class="cen"><div><h3>Impasse prolongado</h3><p>O STF retoma em 2027 e decide algo processual (unificar, anular parcialmente ou abrir apuração limitada). Ninguém é afastado em 2027.</p></div><div class="barra" role="img" aria-label="55 por cento"><i style="width:55%"></i><span>~55%</span></div></div>
+    <div class="cen"><div><h3>Investigação formal no STF</h3><p>O plenário autoriza investigar Moraes. O caso vira inquérito com PF e PGR e pode durar anos.</p></div><div class="barra" role="img" aria-label="30 por cento"><i style="width:30%"></i><span>~30%</span></div></div>
+    <div class="cen"><div><h3>Impeachment admitido</h3><p>Uma nova presidência do Senado, em 2027, lê uma denúncia e consegue 54 votos para abrir. Seria inédito.</p></div><div class="barra" role="img" aria-label="10 por cento"><i style="width:10%"></i><span>~10%</span></div></div>
+    <div class="cen"><div><h3>Saída voluntária</h3><p>Renúncia ou aposentadoria antecipada, no modelo Abe Fortas. Até aqui, Moraes reage com ataque, não com recuo.</p></div><div class="barra" role="img" aria-label="5 por cento"><i style="width:5%"></i><span>~5%</span></div></div>
+  </div>
+  <p class="nota">Estimativas qualitativas do Observatório, com confiança baixa a média. Não são modelos estatísticos.</p>
+  <h3 style="font-family:var(--titulo);font-size:20px;margin:18px 0 6px">O que acompanhar</h3>
+  <div class="colunas">
+    <p><strong>Até 15/12/2026:</strong> prazo para Flávio Dino devolver o voto-vista.</p>
+    <p><strong>Plenário do STF:</strong> se confirma ou derruba a liminar de Gilmar sobre o quórum de 2/3.</p>
+    <p><strong>Fevereiro de 2027:</strong> eleição da presidência do Senado, com a nova bancada eleita em 2026.</p>
+    <p><strong>Nova Lei do Impeachment:</strong> prazos para o presidente do Senado e regra de afastamento.</p>
+    <p><strong>Delação de Vorcaro:</strong> as duas propostas de 2026 foram rejeitadas pela PF e pela PGR.</p>
+    <p><strong>Perícia independente:</strong> sobre o número atribuído a Moraes e sobre os dados brutos do celular.</p>
+  </div>
+</section>
+
+<section id="quiz" aria-labelledby="h-quiz">
+  <div class="sec-cab"><span class="num">7</span><h2 id="h-quiz">Teste o que você aprendeu</h2></div>
+  <p class="placar" id="placar" aria-live="polite">0 de 6 respondidas</p>
+  <div class="quiz" id="quizbox"></div>
+</section>
+
+<section id="estudar" aria-labelledby="h-estudar">
+  <div class="sec-cab"><span class="num">8</span><h2 id="h-estudar">Para estudar mais</h2></div>
+  <div class="leituras">
+    <div class="livro"><h3>A batalha dos poderes</h3><div class="autor">Oscar Vilhena Vieira · 2018</div><p>Explica como o STF virou ator central da política brasileira, a "supremocracia", e por que isso o expôs.</p></div>
+    <div class="livro"><h3>Os onze</h3><div class="autor">Felipe Recondo e Luiz Weber · 2019</div><p>Bastidores do Supremo: como decisões individuais e relações pessoais pesam na Corte.</p></div>
+    <div class="livro"><h3>O Federalista nº 78</h3><div class="autor">Alexander Hamilton · 1788</div><p>Texto curto, a defesa clássica da vitaliciedade. Leia procurando qual contrapeso Hamilton imagina.</p></div>
+  </div>
+  <div class="pensar">
+    <blockquote>Se só o STF pode investigar ministros do STF, e só o Senado pode removê-los por razões políticas, qual controle é mais perigoso: o que não funciona ou o que funciona por cálculo de maioria?</blockquote>
+    <blockquote>Mandato fixo, como os 12 anos sem reeleição do Tribunal Constitucional alemão, resolveria o problema ou criaria outro?</blockquote>
+  </div>
+
+  <h3 style="font-family:var(--titulo);font-size:20px;margin:26px 0 6px">Glossário</h3>
+  <dl class="glos">
+    <div><dt>Crime de responsabilidade</dt><dd>Infração político-administrativa de autoridades. Não é crime penal; a pena é a perda do cargo, decidida pelo Senado.</dd></div>
+    <div><dt>Vitaliciedade</dt><dd>Garantia de que o juiz só perde o cargo por sentença definitiva ou impeachment.</dd></div>
+    <div><dt>Pedido de vista</dt><dd>Um ministro pede mais tempo para estudar o processo e suspende o julgamento.</dd></div>
+    <div><dt>Impedimento e suspeição</dt><dd>Motivos que afastam o juiz de um processo específico: objetivos no primeiro caso, subjetivos no segundo.</dd></div>
+    <div><dt>ADPF</dt><dd>Ação no STF contra normas anteriores à Constituição de 1988, como a Lei do Impeachment de 1950.</dd></div>
+    <div><dt>Liminar</dt><dd>Decisão provisória, em geral de um só ministro, que precisa ser confirmada pelo plenário.</dd></div>
+  </dl>
+</section>
+
+<section class="fontes" aria-labelledby="h-fontes">
+  <div class="sec-cab"><span class="num">§</span><h2 id="h-fontes">Fontes</h2></div>
+  <ol>
+    <li><a href="https://www12.senado.leg.br/noticias/materias/2026/09/04/caso-master-viana-pede-providencias-em-relacao-a-denuncias-contra-moraes" target="_blank" rel="noopener">Senado Notícias, Caso Master: Viana pede providências, 04/09/2026</a></li>
+    <li><a href="https://www.cnnbrasil.com.br/politica/mulher-de-moraes-manteve-contrato-de-r-129-milhoes-com-master-diz-jornal/" target="_blank" rel="noopener">CNN Brasil (cita O Globo), contrato de R$ 129 milhões, 12/12/2025</a></li>
+    <li><a href="https://www.correiodamanha.com.br/politica/2026/09/316127-divida-de-vida-contratos-milionarios-e-alerta-antes-da-prisao-o-que-a-pf-revelou-sobre-moraes-e-vorcaro.html" target="_blank" rel="noopener">Correio da Manhã, o que a PF revelou, 02/09/2026</a></li>
+    <li><a href="https://www.aosfatos.org/noticias/explicamos-novas-revelacoes-caso-master/" target="_blank" rel="noopener">Aos Fatos, novas revelações do caso Master, set/2026</a></li>
+    <li><a href="https://jornalgrandebahia.com.br/2026/09/ministro-alexandre-de-moraes-qualifica-relatorio-da-pf-no-caso-master-de-farsa-acusa-andre-mendonca-de-vinganca-e-nega-dialogos-com-daniel-vorcaro/" target="_blank" rel="noopener">Jornal Grande Bahia, defesa de Moraes, 15/09/2026</a></li>
+    <li><a href="https://www.migalhas.com.br/quentes/464476/ao-vivo-stf-julga-crise-que-opos-moraes-e-mendonca-no-caso-master" target="_blank" rel="noopener">Migalhas, sessão do STF de 15/09/2026</a></li>
+    <li><a href="https://www.diariodepernambuco.com.br/politica/2026/11/11728670-stf-deixa-para-2027-discussao-sobre-ministros-e-caso-banco-master.html" target="_blank" rel="noopener">Diario de Pernambuco, STF deixa para 2027, 09/11/2026</a></li>
+    <li><a href="https://timesbrasil.com.br/brasil/alcolumbre-segura-mais-um-pedido-de-impeachment-contra-moraes-e-stf-fica-sozinho-para-investigar-envolvimento-de-ministro-em-escandalo-do-banco-master/" target="_blank" rel="noopener">Times Brasil (cita Folha), Alcolumbre segura pedidos, 02/09/2026</a></li>
+    <li><a href="https://www.metropoles.com/brasil/alcolumbre-sinaliza-que-nao-deve-avancar-com-impeachment-de-moraes" target="_blank" rel="noopener">Metrópoles, Alcolumbre e os 109 pedidos</a></li>
+    <li><a href="https://conjur.com.br/2025-dez-03/gilmar-suspende-trechos-da-lei-de-impeachment-sobre-ministros-da-corte/" target="_blank" rel="noopener">Conjur, liminar de Gilmar (ADPFs 1.259/1.260), 03/12/2025</a></li>
+    <li><a href="https://www.cnnbrasil.com.br/politica/gilmar-recua-e-suspende-prerrogativa-da-pgr-sobre-impeachment/" target="_blank" rel="noopener">CNN Brasil, Gilmar recua, 10/12/2025</a></li>
+    <li><a href="https://www.gazetadopovo.com.br/republica/senadores-articulam-mudanca-na-lei-para-destravar-impeachment-de-ministros-do-stf/" target="_blank" rel="noopener">Gazeta do Povo, novas regras de impeachment em 2027, 09/10/2026</a></li>
+    <li><a href="https://www.dizerodireito.com.br/2023/11/e-inconstitucional-o-inciso-viii-do-art.html" target="_blank" rel="noopener">Dizer o Direito, ADI 5.953 e o art. 144, VIII do CPC</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Banco_Master_scandal" target="_blank" rel="noopener">Wikipedia, Banco Master scandal (cronologia com fontes)</a></li>
+    <li>Constituição Federal, arts. 52, II; 95, I; 102, I, b. Lei 1.079/1950, arts. 39 a 73. CPC, arts. 144 e 145. CPP, arts. 252 e 254. STF, ADI 3.367 (2005).</li>
+  </ol>
+  <p class="nota">Nota de método: boa parte do conteúdo do relatório da PF chegou por reportagens, não pelo documento original. Números de encontros (6 ou 9) e do contrato (R$ 129 a 131 milhões) variam entre veículos; usamos as faixas reportadas. Este dossiê é neutro: descreve posições e não afirma culpa de ninguém.</p>
+</section>
+</main>
+
+<footer class="rodape">Observatório Geopolítico · Dossiê de estudo · Pesquisa feita em 10/11/2026</footer>
+</div>
+
+<script>
+(function(){
+  var eventos=[
+    {d:"17/11/2025",t:"Vorcaro é preso ao tentar embarcar para Malta. É solto em 29/11 e preso de novo em 04/03/2026.",c:"fato",tag:"Fato"},
+    {d:"11–12/12/2025",t:"O Globo revela o contrato de cerca de R$ 129 milhões entre o escritório da esposa de Moraes e o Banco Master.",c:"fato",tag:"Fato"},
+    {d:"22–24/12/2025",t:"Imprensa relata encontros e ligações de Moraes com o presidente do Banco Central, Gabriel Galípolo. Os dois confirmam os encontros, mas dizem que o assunto eram as sanções dos EUA a Moraes.",c:"alega",tag:"Fato + alegação"},
+    {d:"28/12/2025",t:"Relato de um jantar de Moraes, com outras autoridades, na mansão de Vorcaro em Brasília no fim de 2024.",c:"alega",tag:"Alegação"},
+    {d:"08/04/2026",t:"Dados da Receita, citados por CNN, G1 e Folha: o escritório recebeu cerca de R$ 80 milhões do Master em 2024–2025.",c:"fato",tag:"Fato"},
+    {d:"14/04/2026",t:"Na CPI do Crime Organizado do Senado, o relator propõe indiciar Moraes, Toffoli, Gilmar e Gonet. O relatório é rejeitado por 6 a 4.",c:"inst",tag:"Instituições"},
+    {d:"01/09/2026",t:"André Mendonça retira o sigilo do relatório da PF com mensagens de Vorcaro a um número atribuído a Moraes.",c:"fato",tag:"Fato"},
+    {d:"02/09/2026",t:"Alcolumbre diz que não dará andamento, por ora, aos novos pedidos de impeachment e vai esperar o STF.",c:"inst",tag:"Instituições"},
+    {d:"03/09/2026",t:"Moraes pede ao presidente do STF que investigue Mendonça por abuso de autoridade.",c:"inst",tag:"Instituições"},
+    {d:"07/09/2026",t:"Treze ministros aposentados do STF pedem apuração pública e imediata, falando na \"crise mais aguda\" da história da Corte.",c:"inst",tag:"Instituições"},
+    {d:"09/09/2026",t:"Fachin tira Moraes da relatoria do inquérito das fake news e assume o caso, mantendo os atos anteriores.",c:"inst",tag:"Instituições"},
+    {d:"15/09/2026",t:"Moraes entrega defesa de 44 páginas. No plenário, placar de 4 a 3 para separar os casos Moraes e Mendonça. Flávio Dino pede vista e suspende tudo.",c:"inst",tag:"Instituições"},
+    {d:"09/11/2026",t:"Imprensa informa que o prazo de Dino vai até 15/12 e que o caso deve voltar só em fevereiro de 2027.",c:"inst",tag:"Instituições"}
+  ];
+  var cls={fato:"t-fato",alega:"t-alega",inst:"t-analise"};
+  var ol=document.getElementById("linha");
+  function render(f){
+    ol.innerHTML="";
+    eventos.forEach(function(e){
+      if(f!=="todos"&&e.c!==f)return;
+      var li=document.createElement("li");
+      li.innerHTML='<div class="data">'+e.d+'</div><p class="ev">'+e.t+'</p><div class="meta"><span class="selo '+cls[e.c]+'">'+e.tag+'</span></div>';
+      ol.appendChild(li);
+    });
+  }
+  render("todos");
+  document.querySelectorAll(".filtros button").forEach(function(b){
+    b.addEventListener("click",function(){
+      document.querySelectorAll(".filtros button").forEach(function(x){x.setAttribute("aria-pressed","false")});
+      b.setAttribute("aria-pressed","true");
+      render(b.dataset.f);
+    });
+  });
+
+  var perguntas=[
+    {q:"Quem decide, sozinho, se um pedido de impeachment de ministro do STF começa a andar?",o:["O presidente do STF","O presidente do Senado","O Procurador-Geral da República","O presidente da Câmara"],c:1,e:"É o presidente do Senado, que lê ou não a denúncia, e a lei não fixa prazo. Por isso cerca de 109 pedidos estão parados."},
+    {q:"Por que o CNJ não pode punir um ministro do STF?",o:["Porque ministros têm foro no TSE","Porque o CNJ só cuida de juízes eleitorais","Porque o STF decidiu em 2005 que o CNJ não tem poder disciplinar sobre ele","Porque a Lei 1.079 proíbe"],c:2,e:"Na ADI 3.367 (2005), o STF decidiu que o CNJ está abaixo dele e não alcança seus ministros."},
+    {q:"Qual destes pontos é FATO documentado, e não interpretação da PF?",o:["Que Moraes vazou a operação contra Vorcaro","Que Moraes editou a minuta do contrato do escritório da esposa","Que \"Alex\" nas mensagens é Moraes","Que Moraes respondeu às mensagens de Vorcaro"],c:1,e:"O próprio escritório confirmou a edição. O vazamento e o apelido são leituras da PF, e não há respostas de Moraes no material divulgado."},
+    {q:"Pela liminar de Gilmar Mendes de dezembro de 2025, quantos votos são necessários para ABRIR um impeachment de ministro do STF?",o:["Maioria simples dos presentes","41 votos","54 votos (2/3)","Unanimidade"],c:2,e:"A liminar elevou a exigência para 2/3 do Senado já na abertura. Antes bastava maioria simples. Ela ainda não foi confirmada pelo plenário."},
+    {q:"Por que o caso Master é juridicamente diferente da maioria dos pedidos anteriores contra Moraes?",o:["Porque envolve dinheiro público","Porque trata de conduta pessoal, e não do mérito de decisões judiciais","Porque foi apresentado pela PGR","Porque a Constituição mudou em 2026"],c:1,e:"Impeachment por discordar de decisões é vedado pela liminar. Conduta incompatível com o decoro (art. 39 da Lei 1.079) é outra coisa."},
+    {q:"O que impedimento e suspeição fazem?",o:["Tiram o ministro do cargo","Suspendem o salário do ministro","Afastam o ministro de um processo específico","Transferem o ministro para outro tribunal"],c:2,e:"Eles afastam o juiz de uma causa determinada, mas não do tribunal."}
+  ];
+  var box=document.getElementById("quizbox"),placar=document.getElementById("placar"),resp=0,acertos=0;
+  perguntas.forEach(function(p,i){
+    var d=document.createElement("div");d.className="q";
+    var h=document.createElement("h3");h.textContent=(i+1)+". "+p.q;d.appendChild(h);
+    var ops=document.createElement("div");ops.className="ops";
+    var exp=document.createElement("p");exp.className="exp";exp.hidden=true;
+    p.o.forEach(function(t,j){
+      var b=document.createElement("button");b.type="button";b.id="q"+i+"o"+j;b.textContent=t;
+      b.addEventListener("click",function(){
+        if(d.dataset.feito)return;d.dataset.feito="1";resp++;
+        if(j===p.c)acertos++;
+        ops.querySelectorAll("button").forEach(function(x,k){x.disabled=true;if(k===p.c)x.classList.add("certo");else if(k===j)x.classList.add("errado")});
+        exp.textContent=(j===p.c?"Certo. ":"Não exatamente. ")+p.e;exp.hidden=false;
+        placar.textContent=resp+" de "+perguntas.length+" respondidas · "+acertos+" acerto"+(acertos===1?"":"s");
+      });
+      ops.appendChild(b);
+    });
+    d.appendChild(ops);d.appendChild(exp);box.appendChild(d);
+  });
+})();
+</script>
+
+<script>
+/* Banca: guarda os jornais para ler sem internet e recarrega quando chega edição nova */
+if ("serviceWorker" in navigator) {
+  addEventListener("load", function () {
+    navigator.serviceWorker.register("../sw.js", {scope: "../"}).then(function (r) {
+      r.addEventListener("updatefound", function () {
+        var w = r.installing; if (!w) return;
+        w.addEventListener("statechange", function () {
+          if (w.state === "activated" && navigator.serviceWorker.controller) location.reload();
+        });
+      });
+    }).catch(function () {});
+  });
+}
+</script>
+</body>
+</html>

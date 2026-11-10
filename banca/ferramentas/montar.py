@@ -40,6 +40,14 @@ PUBS = [
      "Só Conselheiro Lafaiete, com a cobertura completa da cidade.", {}),
 ]
 
+# Dossiês de estudo: páginas avulsas (sem edicoes.json), cada uma com seu próprio
+# manifest, para poder ser instalada sozinha como aplicativo e enviada por link.
+DOSSIES = [
+    # pasta no site, pasta de origem, nome, descrição
+    ("caso-master", "caso-master-stf", "O Caso Moraes–Vorcaro",
+     "Dossiê de estudo: por que um ministro do STF citado no caso Banco Master continua no cargo."),
+]
+
 ENCARTE = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "encarte-lafaiete.js"), encoding="utf-8").read()
 
 def sem_medicina(dados):
@@ -196,6 +204,38 @@ def montar(pasta, origem, nome, desc, opts):
     except Exception:
         return "", ""
 
+VOLTA_DOSSIE = """
+<style>.banca-mini{font:600 13px/1.2 "IBM Plex Mono","Courier New",monospace;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:12px 0 0}
+.banca-mini a{color:#3A2D2B}</style>
+<div class="banca-mini"><a href="../">&#8249; Ver também os jornais da Banca</a></div>
+"""
+
+def montar_dossie(pasta, origem, nome, desc):
+    """Copia um dossiê e o transforma em aplicativo próprio (manifest e ícones da pasta)."""
+    d = os.path.join(BANCA, pasta)
+    o = os.path.join(ORIGEM, origem, "index.html")
+    if not os.path.exists(o):
+        print(f"{pasta}: origem ausente, mantida a versão anterior")
+        return
+    html = open(o, encoding="utf-8").read()
+    html = re.sub(r'<meta name="claude:[^>]*>\s*', "", html)
+    m = re.search(r"<(div|header|main|nav|section|article)\b", html)
+    html = html[:m.start()] + VOLTA_DOSSIE + html[m.start():] if m else VOLTA_DOSSIE + html
+    cab = (CABECA.format(desc=H.escape(desc), tinta=TINTA, raiz="")
+           .replace('content="Banca"', f'content="{H.escape(nome)}"'))
+    os.makedirs(d, exist_ok=True)
+    open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(
+        cab + html + REGISTRO.replace("{raiz}", "../") + "</body>\n</html>\n")
+    man = {"name": nome, "short_name": "Caso Master" if pasta == "caso-master" else nome,
+           "description": desc, "lang": "pt-BR", "id": f"/banca/{pasta}/", "start_url": "./", "scope": "./",
+           "display": "standalone", "background_color": PAPEL, "theme_color": TINTA,
+           "icons": [{"src": "icone-192.png", "sizes": "192x192", "type": "image/png"},
+                     {"src": "icone-512.png", "sizes": "512x512", "type": "image/png"},
+                     {"src": "icone-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}]}
+    open(os.path.join(d, "manifest.webmanifest"), "w", encoding="utf-8").write(
+        json.dumps(man, ensure_ascii=False, indent=2) + "\n")
+    print(f"{pasta}: dossiê atualizado")
+
 def tela_inicial(cards):
     hoje = date.today()
     itens, outros = [], []
@@ -274,6 +314,7 @@ a.outro:hover,a.outro:focus-visible{{background:rgba(255,255,255,.4)}}
   <p class="sub">Toque num jornal para ler a edição de hoje.</p>
 {chr(10).join(itens)}
   {('<h3 class="tamb">Também na Banca</h3>' + chr(10) + chr(10).join(outros)) if outros else ""}
+  {('<h3 class="tamb">Dossiês de estudo</h3>' + chr(10) + chr(10).join(f'  <a class="outro" href="{p}/"><img src="{p}/icone-192.png" alt="" width="44" height="44"><span><b>{H.escape(n)}</b> {H.escape(ds)}</span></a>' for p, _, n, ds in DOSSIES)) if DOSSIES else ""}
   <div class="caixa">"Cada página impressa aproximava o mundo"</div>
   <p class="nota">Para ter a Banca como aplicativo no celular: no Android, abra no Chrome, toque nos três pontinhos e em "Instalar app" ou "Adicionar à tela inicial"; no iPhone, abra no Safari, toque em Compartilhar e em "Adicionar à Tela de Início". Depois da primeira visita, os jornais abrem até sem internet. Textos escritos com a ajuda do Claude, IA da Anthropic; não substituem orientação médica.</p>
 </div>
@@ -286,6 +327,9 @@ cards = []
 for pasta, origem, nome, desc, opts in PUBS:
     manchete, dt = montar(pasta, origem, nome, desc, opts)
     cards.append((pasta, nome, desc, manchete, dt, opts.get("destaque", False)))
+
+for args in DOSSIES:
+    montar_dossie(*args)
 
 open(os.path.join(BANCA, "index.html"), "w", encoding="utf-8").write(tela_inicial(cards))
 
@@ -325,6 +369,8 @@ open(os.path.join(BANCA, "manifest.webmanifest"), "w", encoding="utf-8").write(
 base = ["./", "index.html", "manifest.webmanifest"] + ICONES
 for pasta, *_ in PUBS:
     base += [f"{pasta}/", f"{pasta}/index.html", f"{pasta}/edicoes.json", f"{pasta}/icone-192.png"]
+for pasta, *_ in DOSSIES:
+    base += [f"{pasta}/", f"{pasta}/index.html", f"{pasta}/icone-192.png"]
 h = hashlib.sha256()
 for rel in base:
     p = os.path.join(BANCA, rel if not rel.endswith("/") else rel + "index.html")
