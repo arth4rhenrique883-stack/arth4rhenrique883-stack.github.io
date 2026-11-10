@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Para estudar o mundo: geopolítica completa, guerras, energia, clima, IA e espaço, com história e filosofia.">
+<meta name="description" content="Só o mundo, para estudar: geopolítica, guerras, energia, clima, IA e espaço, com história e filosofia.">
 <meta name="theme-color" content="#3A2D2B">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -440,6 +440,7 @@ main [id]{scroll-margin-top:12px}
   }
 
   function render(ed){
+    { const tk = $("#ticker"), ed0 = $("#edition"); if (tk && ed0 && ed0.contains(tk)) ed0.before(tk); }
     renderTicker(ed);
     engN = 0;
     const yr = ed.data.slice(0,4);

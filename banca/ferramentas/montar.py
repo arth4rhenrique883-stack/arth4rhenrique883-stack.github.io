@@ -18,18 +18,38 @@ PAPEL, TINTA = "#ECE3D4", "#3A2D2B"
 ICONES = ["icone-180.png", "icone-192.png", "icone-512.png", "icone-maskable-512.png"]
 
 PUBS = [
-    # pasta no site, pasta de origem, nome, para quem / do que trata
+    # pasta no site, pasta de origem, nome, para quem / do que trata, opções
+    #   destaque: cartão grande na tela inicial (os outros vão para "Também na Banca")
+    #   semMedicina: tira o caderno de medicina (que agora vive no Xeque-Mate)
+    #   encarte: junta o caderno de Conselheiro Lafaiete do O Carijó ("jornal" ou "obs")
     ("jornal", "revista-leiga", "Jornal de Cada Dia",
-     "Leitura fácil para a família: o Brasil e o mundo em linguagem simples, com muita saúde e dicas contra golpes."),
-    ("brasil", "jornal-brasil", "Terra Brasilis",
-     "Só o Brasil, Minas e Conselheiro Lafaiete: Brasília, bolso, saúde, escola e a cidade, em linguagem simples."),
-    ("lafaiete", "jornal-lafaiete", "O Carijó",
-     "O jornal de Conselheiro Lafaiete: prefeitura, saúde, empregos e agenda da cidade."),
+     "Leitura fácil para a família: o Brasil e o mundo em linguagem simples, mais o caderno de Conselheiro Lafaiete.",
+     {"destaque": True, "encarte": "jornal"}),
+    ("mundo-lafaiete", "revista", "Do Mundo a Lafaiete",
+     "O Observatório completo, com geopolítica, guerras, energia, IA e espaço, mais o caderno de Conselheiro Lafaiete.",
+     {"destaque": True, "semMedicina": True, "encarte": "obs"}),
     ("observatorio", "revista", "Observatório Diário",
-     "Para estudar o mundo: geopolítica completa, guerras, energia, clima, IA e espaço, com história e filosofia."),
+     "Só o mundo, para estudar: geopolítica, guerras, energia, clima, IA e espaço, com história e filosofia.",
+     {"destaque": True, "semMedicina": True}),
     ("xequemate", "medicina", "Xeque-Mate",
-     "Medicina para estudantes: estudos, ensaios clínicos e saúde pública."),
+     "Só medicina, para estudantes: estudos, ensaios clínicos, aprovações e saúde pública.",
+     {"destaque": True}),
+    ("brasil", "jornal-brasil", "Terra Brasilis",
+     "Só o Brasil, Minas e Lafaiete, em linguagem simples.", {}),
+    ("lafaiete", "jornal-lafaiete", "O Carijó",
+     "Só Conselheiro Lafaiete, com a cobertura completa da cidade.", {}),
 ]
+
+ENCARTE = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "encarte-lafaiete.js"), encoding="utf-8").read()
+
+def sem_medicina(dados):
+    """O Observatório não traz mais medicina (pedido de Arthur, 10/11/2026): ela fica no Xeque-Mate."""
+    d = json.loads(dados)
+    for e in d.get("edicoes", []):
+        e.pop("medicina", None)
+        if isinstance(e.get("chamadas"), list):
+            e["chamadas"] = [c for c in e["chamadas"] if c.get("secao") != "medicina"]
+    return json.dumps(d, ensure_ascii=False, indent=1)
 
 CABECA = """<!doctype html>
 <html lang="pt-BR">
@@ -136,7 +156,7 @@ def data_bonita(iso):
     except Exception:
         return ""
 
-def montar(pasta, origem, nome, desc):
+def montar(pasta, origem, nome, desc, opts):
     """Prepara um jornal; devolve (manchete, data) da edição mais recente."""
     d = os.path.join(BANCA, pasta)
     o = os.path.join(ORIGEM, origem)
@@ -144,6 +164,8 @@ def montar(pasta, origem, nome, desc):
         html = open(os.path.join(o, "index.html"), encoding="utf-8").read()
         dados = open(os.path.join(o, "edicoes.json"), encoding="utf-8").read()
         json.loads(dados)  # aborta se o JSON estiver quebrado
+        if opts.get("semMedicina"):
+            dados = sem_medicina(dados)
         html = re.sub(r'<meta name="claude:[^>]*>\s*', "", html)
         html = re.sub(r'<meta charset="[^"]*">\s*', "", html, count=1)
         html = re.sub(r'<!doctype html>\s*', "", html, flags=re.I)
@@ -156,6 +178,8 @@ def montar(pasta, origem, nome, desc):
             html = html[:m.start()] + barra + html[m.start():] if m else barra + html
         pagina = (CABECA.format(desc=H.escape(desc), tinta=TINTA, raiz="../")
                   + html + REGISTRO.replace("{raiz}", "../"))
+        if opts.get("encarte"):
+            pagina += "\n<script>\n" + ENCARTE.replace("{modo}", opts["encarte"]) + "</script>\n"
         os.makedirs(d, exist_ok=True)
         open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(pagina)
         open(os.path.join(d, "edicoes.json"), "w", encoding="utf-8").write(dados)
@@ -174,8 +198,11 @@ def montar(pasta, origem, nome, desc):
 
 def tela_inicial(cards):
     hoje = date.today()
-    itens = []
-    for pasta, nome, desc, manchete, dt in cards:
+    itens, outros = [], []
+    for pasta, nome, desc, manchete, dt, destaque in cards:
+        if not destaque:
+            outros.append(f'  <a class="outro" href="{pasta}/"><img src="{pasta}/icone-192.png" alt="" width="44" height="44"><span><b>{H.escape(nome)}</b> {H.escape(desc)}</span></a>')
+            continue
         quando = f"Edição de {data_bonita(dt)}" if dt else "Edição do dia"
         m = f'<q>{H.escape(manchete)}</q>' if manchete else ""
         itens.append(f"""  <a class="pub" href="{pasta}/">
@@ -189,7 +216,7 @@ def tela_inicial(cards):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Banca</title>
-<meta name="description" content="Os jornais do dia num só lugar: Jornal de Cada Dia, Terra Brasilis, O Carijó, Observatório Diário e Xeque-Mate.">
+<meta name="description" content="Os jornais do dia num só lugar: Jornal de Cada Dia, Do Mundo a Lafaiete, Observatório Diário e Xeque-Mate, mais Terra Brasilis e O Carijó.">
 <meta name="theme-color" content="{TINTA}">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -228,6 +255,12 @@ a.pub i{{font-style:normal;font-family:"Anton",Impact,sans-serif;font-size:46px;
 .caixa{{border:2px solid var(--tinta);padding:14px 16px;margin:30px 4px 0;text-align:center;font-family:"Playfair Display",Georgia,serif;text-transform:uppercase;font-weight:600;font-size:17px;line-height:1.35}}
 p.nota{{font-style:italic;font-size:17px;line-height:1.5;text-align:justify;margin:22px 4px 0}}
 .linha span{{white-space:nowrap}}
+h3.tamb{{font-family:"Archivo",Arial,sans-serif;font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-align:center;margin:8px 4px 10px;padding:8px 0;border-top:2px solid var(--tinta);border-bottom:1px solid var(--tinta)}}
+a.outro{{display:flex;gap:12px;align-items:center;text-decoration:none;color:inherit;padding:10px 6px;margin:0 4px;border-bottom:1px solid var(--fio);min-height:56px}}
+a.outro img{{width:44px;height:44px;flex:none;border:1px solid var(--tinta)}}
+a.outro span{{font-style:italic;font-size:17px;line-height:1.3;color:var(--suave)}}
+a.outro b{{font-family:"Playfair Display",Georgia,serif;font-style:normal;font-weight:700;color:var(--tinta);text-transform:uppercase;margin-right:4px}}
+a.outro:hover,a.outro:focus-visible{{background:rgba(255,255,255,.4)}}
 @media (max-width:420px){{.linha .larga{{display:none}} a.pub{{padding:14px 12px;gap:12px}} a.pub img{{width:64px;height:64px}} a.pub i{{display:none}}}}
 </style>
 </head>
@@ -240,6 +273,7 @@ p.nota{{font-style:italic;font-size:17px;line-height:1.5;text-align:justify;marg
   <h2>Escolha o seu jornal</h2>
   <p class="sub">Toque num jornal para ler a edição de hoje.</p>
 {chr(10).join(itens)}
+  {('<h3 class="tamb">Também na Banca</h3>' + chr(10) + chr(10).join(outros)) if outros else ""}
   <div class="caixa">"Cada página impressa aproximava o mundo"</div>
   <p class="nota">Para ter a Banca como aplicativo no celular: no Android, abra no Chrome, toque nos três pontinhos e em "Instalar app" ou "Adicionar à tela inicial"; no iPhone, abra no Safari, toque em Compartilhar e em "Adicionar à Tela de Início". Depois da primeira visita, os jornais abrem até sem internet. Textos escritos com a ajuda do Claude, IA da Anthropic; não substituem orientação médica.</p>
 </div>
@@ -249,9 +283,9 @@ p.nota{{font-style:italic;font-size:17px;line-height:1.5;text-align:justify;marg
 """
 
 cards = []
-for pasta, origem, nome, desc in PUBS:
-    manchete, dt = montar(pasta, origem, nome, desc)
-    cards.append((pasta, nome, desc, manchete, dt))
+for pasta, origem, nome, desc, opts in PUBS:
+    manchete, dt = montar(pasta, origem, nome, desc, opts)
+    cards.append((pasta, nome, desc, manchete, dt, opts.get("destaque", False)))
 
 open(os.path.join(BANCA, "index.html"), "w", encoding="utf-8").write(tela_inicial(cards))
 
@@ -273,7 +307,7 @@ for velho, novo in REDIRECIONA.items():
 
 manifest = {
     "name": "Banca", "short_name": "Banca",
-    "description": "Os jornais do dia num só lugar: Jornal de Cada Dia, Terra Brasilis, O Carijó, Observatório Diário e Xeque-Mate.",
+    "description": "Os jornais do dia num só lugar: Jornal de Cada Dia, Do Mundo a Lafaiete, Observatório Diário e Xeque-Mate, mais Terra Brasilis e O Carijó.",
     "lang": "pt-BR", "id": "/banca/", "start_url": "./", "scope": "./",
     "display": "standalone", "orientation": "portrait",
     "background_color": PAPEL, "theme_color": TINTA,
@@ -283,7 +317,7 @@ manifest = {
         {"src": "icone-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
     ],
     "shortcuts": [{"name": nome, "url": f"{pasta}/", "icons": [{"src": f"{pasta}/icone-192.png", "sizes": "192x192"}]}
-                  for pasta, _, nome, _ in PUBS],
+                  for pasta, _, nome, _, opts in PUBS if opts.get("destaque")],
 }
 open(os.path.join(BANCA, "manifest.webmanifest"), "w", encoding="utf-8").write(
     json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")

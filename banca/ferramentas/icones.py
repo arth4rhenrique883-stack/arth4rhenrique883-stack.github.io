@@ -4,7 +4,7 @@ from PIL import Image, ImageDraw, ImageFont
 AQUI = os.path.dirname(os.path.abspath(__file__))
 BANCA = os.path.dirname(AQUI)
 PAPEL = (236, 227, 212); TINTA = (58, 45, 43)
-PUBS = {"jornal": ("J", "CADA DIA"), "observatorio": ("O", "DIÁRIO"), "xequemate": ("X", "MEDICINA"), "lafaiete": ("C", "LAFAIETE"), "brasil": ("T", "BRASIL")}
+PUBS = {"jornal": ("J", "CADA DIA"), "observatorio": ("O", "DIÁRIO"), "xequemate": ("X", "MEDICINA"), "lafaiete": ("C", "LAFAIETE"), "brasil": ("T", "BRASIL"), "mundo-lafaiete": ("M", "MUNDO")}
 FONTE = os.path.join(AQUI, "Anton.ttf")
 
 def icone(letra, rotulo, tam, maskable):

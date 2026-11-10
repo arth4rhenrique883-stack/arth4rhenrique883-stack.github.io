@@ -1,7 +1,7 @@
 {
   "name": "Banca",
   "short_name": "Banca",
-  "description": "Os jornais do dia num só lugar: Jornal de Cada Dia, Terra Brasilis, O Carijó, Observatório Diário e Xeque-Mate.",
+  "description": "Os jornais do dia num só lugar: Jornal de Cada Dia, Do Mundo a Lafaiete, Observatório Diário e Xeque-Mate, mais Terra Brasilis e O Carijó.",
   "lang": "pt-BR",
   "id": "/banca/",
   "start_url": "./",
@@ -40,21 +40,11 @@
       ]
     },
     {
-      "name": "Terra Brasilis",
-      "url": "brasil/",
+      "name": "Do Mundo a Lafaiete",
+      "url": "mundo-lafaiete/",
       "icons": [
         {
-          "src": "brasil/icone-192.png",
-          "sizes": "192x192"
-        }
-      ]
-    },
-    {
-      "name": "O Carijó",
-      "url": "lafaiete/",
-      "icons": [
-        {
-          "src": "lafaiete/icone-192.png",
+          "src": "mundo-lafaiete/icone-192.png",
           "sizes": "192x192"
         }
       ]
