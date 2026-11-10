@@ -1,6 +1,984 @@
 {
- "atualizadoEm": "2026-11-09T14:20:00-03:00",
+ "atualizadoEm": "2026-11-10T07:10:00-03:00",
  "edicoes": [
+  {
+   "id": "2026-11-10",
+   "numero": 6,
+   "data": "2026-11-10",
+   "tempoLeitura": 14,
+   "fechamento": "Fechamento: terça-feira, 10/11, 7h (Brasília).",
+   "ticker": [
+    {
+     "regiao": "Mundo",
+     "texto": "Trump diz que a guerra com o Irã está \"efetivamente encerrada\", mas mantém o bloqueio",
+     "url": "https://www.aljazeera.com/news/2026/11/9/trump-calls-iran-war-effectively-over-after-talks-with-qatar-pm"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Catar leva a Washington proposta iraniana de dois dias para reabrir Ormuz",
+     "url": "https://oilprice.com/Latest-Energy-News/World-News/Oil-Sinks-to-94-as-Irans-8-Billion-Hormuz-Deal-Heads-to-Trump.html"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Brent cai a US$ 90,99, menor nível desde agosto",
+     "url": "https://grafa.com/en/news/united-states/oil-prices-fall-as-brent-drops-to-90-99-on-iran-tensions"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Começa em Abu Dhabi a rodada EUA–Rússia–Ucrânia, sem os europeus",
+     "url": "https://www.clickondetroit.com/news/politics/2026/11/10/g7-attention-in-paris-turns-to-ukraine-while-us-mediated-talks-get-underway-in-abu-dhabi/"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Rússia lança 162 drones e um Iskander-M; Dnipro fica sem luz",
+     "url": "https://euromaidanpress.com/2026/11/10/russia-aims-to-split-ukraine-along-the-dnipro-ukraine-says-moscows-strikes-cut-power-in-dnipro-and-kamianske/"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "França acusa a Guarda Revolucionária do Irã de hackear geladeiras de 700 supermercados",
+     "url": "https://www.pbs.org/newshour/world/france-blames-iran-for-last-months-cyberattack-on-supermarket-fridges"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Apelo de Paris pela segurança da IA reúne governos e laboratórios",
+     "url": "https://www.elysee.fr/en/emmanuel-macron/2026/11/09/paris-call-for-ai-safety-and-security"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "EUA e China divergem sobre o formato da cúpula com Putin em Shenzhen",
+     "url": "https://www.yahoo.com/news/politics/articles/us-china-clash-over-trump-002617931.html"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Kim Yo Jong chama Guterres de \"parcial\" e rejeita diálogo com Seul",
+     "url": "https://koreajoongangdaily.com/korea/pyongyang-rejects-un-chiefs-call-for-interkorean-dialogue-in-wake-of-dmz-mine-blast/12965400"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Índia se oferece para mediar corredores de alimentos no Mar Negro",
+     "url": "https://www.kyivpost.com/post/89602"
+    },
+    {
+     "regiao": "Brasil",
+     "texto": "Ata do Copom sai hoje; Selic segue em 13,75%",
+     "url": "https://brasilemfolhas.com.br/2026/11/banco-central-divulga-ata-do-copom-sobre-taxa-de-juros/"
+    },
+    {
+     "regiao": "Brasil",
+     "texto": "PF deve trocar delegados que investigam ligações de Vorcaro com o STF",
+     "url": "https://www.gazetadopovo.com.br/republica/policia-federal-troca-delegados-que-investigam-ligacoes-entre-vorcaro-e-o-stf/"
+    },
+    {
+     "regiao": "Brasil",
+     "texto": "Lula discursa amanhã na cúpula de líderes da COP31, em Antália",
+     "url": "https://www.gov.br/mre/pt-br/canais_atendimento/imprensa/notas-a-imprensa/participacao-do-presidente-luiz-inacio-lula-da-silva-na-cop-31-na-turquia"
+    },
+    {
+     "regiao": "Brasil",
+     "texto": "INMET e INPE preveem El Niño muito forte até janeiro",
+     "url": "https://agenciagbc.com/2026/11/09/super-el-nino-pode-atingir-forca-historica-em-dezembro-e-acende-alerta-para-o-clima-no-brasil/"
+    }
+   ],
+   "capa": {
+    "chapeu": "Nem guerra, nem paz",
+    "titulo": "Trump dá a guerra por encerrada e mantém o cerco",
+    "linhaFina": "Depois de receber o premiê do Catar, que levou a proposta iraniana de dois dias para reabrir Ormuz, Trump disse que o Irã está \"militarmente acabado\" e que os EUA ficam no \"status quo\": bloqueio naval e terrestre. Teerã fala em \"negociações imaginárias\". O Brent cai abaixo de US$ 91.",
+    "camada": "FATO",
+    "confianca": "Alta"
+   },
+   "chamadas": [
+    {
+     "secao": "potencias",
+     "rotulo": "Grandes potências",
+     "texto": "Abu Dhabi começa sem a Europa; Pequim e Washington brigam pelo formato de Shenzhen"
+    },
+    {
+     "secao": "ia",
+     "rotulo": "Evolução das IAs",
+     "texto": "Apelo de Paris: governos e laboratórios prometem avaliar riscos e avisar incidentes"
+    },
+    {
+     "secao": "russia-ira",
+     "rotulo": "Rússia–Irã",
+     "texto": "Documento vazado mostra o plano de redundância financeira e nuclear da parceria"
+    },
+    {
+     "secao": "coreia",
+     "rotulo": "Coreia do Norte",
+     "texto": "Kim Yo Jong ataca Guterres e defende fortificar a fronteira"
+    }
+   ],
+   "numeros": [
+    {
+     "rotulo": "Brent",
+     "valor": "US$ 90,99",
+     "nota": "7h59 GMT de 10/11, queda de 1,7%; −22% desde 30/10",
+     "fonte": "Grafa (dados de mercado)"
+    },
+    {
+     "rotulo": "WTI",
+     "valor": "US$ 85,20",
+     "nota": "7h59 GMT de 10/11, queda de 1,8%",
+     "fonte": "Grafa (dados de mercado)"
+    },
+    {
+     "rotulo": "Drones russos",
+     "valor": "162",
+     "nota": "noite de 9 para 10/11; 135 abatidos ou bloqueados (alegação de Kiev)",
+     "fonte": "Força Aérea da Ucrânia"
+    },
+    {
+     "rotulo": "Selic",
+     "valor": "13,75%",
+     "nota": "mantida em 4/11; ata publicada em 10/11",
+     "fonte": "Banco Central"
+    },
+    {
+     "rotulo": "IPCA 2026",
+     "valor": "5,6%",
+     "nota": "projeção do Copom, acima do teto de 4,5%",
+     "fonte": "Copom via Brasil em Folhas"
+    },
+    {
+     "rotulo": "Supermercados",
+     "valor": "700",
+     "nota": "atingidos na França em 12/10; Paris culpa o Irã (9/11)",
+     "fonte": "Governo francês via AP"
+    }
+   ],
+   "potencias": [
+    {
+     "pais": "EUA",
+     "sigla": "US",
+     "titulo": "Guerra \"acabada\", bloqueio mantido",
+     "texto": "Após receber o premiê do Catar, Trump disse que o Irã \"militarmente está efetivamente acabado\" e que os EUA mantêm o \"status quo\": bloqueio naval e a Força-Tarefa Iron Gate nas rotas terrestres e no Cáspio. Segundo a OilPrice, Rubio e Hegseth resistem a liberar US$ 8 bilhões iranianos.",
+     "camada": "FATO",
+     "confianca": "Alta",
+     "fontes": [
+      {
+       "nome": "Al Jazeera, Trump chama a guerra de \"efetivamente encerrada\" após encontro com o premiê do Catar (9/11)",
+       "url": "https://www.aljazeera.com/news/2026/11/9/trump-calls-iran-war-effectively-over-after-talks-with-qatar-pm"
+      },
+      {
+       "nome": "OilPrice.com, proposta iraniana de US$ 8 bi via Catar (9/11)",
+       "url": "https://oilprice.com/Latest-Energy-News/World-News/Oil-Sinks-to-94-as-Irans-8-Billion-Hormuz-Deal-Heads-to-Trump.html"
+      }
+     ]
+    },
+    {
+     "pais": "China",
+     "sigla": "CN",
+     "titulo": "Pequim quer roteiro fechado em Shenzhen",
+     "texto": "Segundo o Wall Street Journal, a China quer uma cúpula tripla com declarações prontas, enquanto Washington prefere conversa aberta sobre Irã e armas nucleares. O porta-voz Guo Jiakun disse em 10/11 que Pequim \"está em comunicação\" com as partes, sem confirmar o encontro (versão oficial).",
+     "camada": "FATO",
+     "confianca": "Média",
+     "fontes": [
+      {
+       "nome": "Newsmax via Yahoo (relato do WSJ), choque EUA–China sobre a cúpula tripla (10/11)",
+       "url": "https://www.yahoo.com/news/politics/articles/us-china-clash-over-trump-002617931.html"
+      },
+      {
+       "nome": "Chancelaria da China, coletiva de Guo Jiakun (10/11, versão oficial)",
+       "url": "https://www.fmprc.gov.cn/mfa_eng/xw/fyrbt/202611/t20261110_12056810.html"
+      }
+     ]
+    },
+    {
+     "pais": "Rússia",
+     "sigla": "RU",
+     "titulo": "Delegação graduada, drones na véspera",
+     "texto": "Moscou mandou a Abu Dhabi Vladimir Medinsky, dois vice-chanceleres e o chefe da inteligência militar, Igor Kostyukov. Na noite anterior, segundo Kiev, lançou 162 drones e um míssil balístico Iskander-M. O Kremlin insiste no formato só com EUA e Ucrânia, sem europeus.",
+     "camada": "FATO",
+     "confianca": "Média",
+     "fontes": [
+      {
+       "nome": "Bloomberg via News Tribune, Rússia eleva o nível da delegação (8/11)",
+       "url": "https://www.newstribune.com/news/2026/nov/08/russia-upgrades-its-delegation-for-us-led-ukraine/"
+      },
+      {
+       "nome": "AP via ClickOnDetroit, G7 em Paris e início das conversas em Abu Dhabi (10/11)",
+       "url": "https://www.clickondetroit.com/news/politics/2026/11/10/g7-attention-in-paris-turns-to-ukraine-while-us-mediated-talks-get-underway-in-abu-dhabi/"
+      },
+      {
+       "nome": "Euromaidan Press, ataques cortam luz em Dnipro e Kamianske (10/11)",
+       "url": "https://euromaidanpress.com/2026/11/10/russia-aims-to-split-ukraine-along-the-dnipro-ukraine-says-moscows-strikes-cut-power-in-dnipro-and-kamianske/"
+      }
+     ]
+    },
+    {
+     "pais": "União Europeia",
+     "sigla": "EU",
+     "titulo": "Fora da sala, com a conta",
+     "texto": "Os europeus não entram nas conversas principais em Abu Dhabi. O chanceler alemão Johann Wadephul disse no G7 que \"não pode haver solução sem a Europa\". Kaja Kallas, chefe da diplomacia da UE, não descartou sanções ao Irã pelos ciberataques; chanceleres do bloco se reúnem em 16/11.",
+     "camada": "FATO",
+     "confianca": "Alta",
+     "fontes": [
+      {
+       "nome": "AP via ClickOnDetroit, G7 em Paris e início das conversas em Abu Dhabi (10/11)",
+       "url": "https://www.clickondetroit.com/news/politics/2026/11/10/g7-attention-in-paris-turns-to-ukraine-while-us-mediated-talks-get-underway-in-abu-dhabi/"
+      },
+      {
+       "nome": "El Demócrata, Kallas não descarta sanções ao Irã (9/11)",
+       "url": "https://www.democrata.es/en/international/kallas-proposes-new-sanctions-against-iran-for-cyberattacks-on-european-supermarkets/"
+      }
+     ]
+    },
+    {
+     "pais": "França",
+     "sigla": "FR",
+     "titulo": "Paris culpa Teerã pelas geladeiras",
+     "texto": "Promotores franceses atribuíram à unidade Shahid Kaveh, ligada à Guarda Revolucionária, o ataque de 12/10 que desligou a refrigeração de cerca de 700 supermercados. O chanceler Jean-Noël Barrot falou em escala \"sem precedentes\". A França convocou o embaixador e pediu sanções europeias. O Irã não comentou.",
+     "camada": "FATO",
+     "confianca": "Alta",
+     "fontes": [
+      {
+       "nome": "PBS NewsHour (AP), França culpa o Irã por ataque a geladeiras de supermercados (9/11)",
+       "url": "https://www.pbs.org/newshour/world/france-blames-iran-for-last-months-cyberattack-on-supermarket-fridges"
+      },
+      {
+       "nome": "Axios, França liga hackers militares iranianos aos ataques (10/11)",
+       "url": "https://axios.com/2026/11/10/france-iran-supermarket-refridgerator-hacks"
+      }
+     ]
+    },
+    {
+     "pais": "Índia",
+     "sigla": "IN",
+     "titulo": "Nova Délhi oferece corredor de grãos",
+     "texto": "Em telefonema com Modi em 9/11, Zelensky disse que a Índia \"está pronta para mediar\" corredores de alimentos no Mar Negro, onde ataques a portos levaram o trigo à máxima de três anos. Grande compradora de petróleo russo, a Índia é vista por Kiev como canal de pressão sobre Moscou.",
+     "camada": "FATO",
+     "confianca": "Média",
+     "fontes": [
+      {
+       "nome": "Kyiv Post, Zelensky e Modi discutem corredores alimentares (9/11)",
+       "url": "https://www.kyivpost.com/post/89602"
+      }
+     ]
+    },
+    {
+     "pais": "Japão",
+     "sigla": "JP",
+     "titulo": "Takaichi quer cúpula de IA",
+     "texto": "Na reunião online sobre segurança da IA organizada pela França, Sanae Takaichi pediu cooperação contra ciberataques e perda de controle de sistemas avançados e propôs sediar uma cúpula de IA no Indo-Pacífico. Tóquio também negocia, diz a Bloomberg, garantia de que Xi a cumprimentará na APEC.",
+     "camada": "FATO",
+     "confianca": "Média",
+     "fontes": [
+      {
+       "nome": "Nippon.com (Jiji), Takaichi pede cooperação em segurança da IA (10/11)",
+       "url": "https://www.nippon.com/en/articles/-/57166"
+      },
+      {
+       "nome": "Bloomberg, Japão busca garantia de que Xi cumprimentará Takaichi na APEC (8/11)",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-08/japan-works-to-shield-takaichi-from-any-xi-snub-at-china-summit"
+      }
+     ]
+    },
+    {
+     "pais": "Reino Unido",
+     "sigla": "UK",
+     "titulo": "Burnham reabre a porta europeia",
+     "texto": "O primeiro-ministro Andy Burnham, no cargo desde julho, viajou a Dublin em meio ao debate sobre aproximar o país da UE, segundo a Bloomberg. Em outubro, ele disse querer discutir a volta da livre circulação de pessoas, o que reacendeu as divisões do Brexit dentro do governo.",
+     "camada": "FATO",
+     "confianca": "Média",
+     "fontes": [
+      {
+       "nome": "Bloomberg, Burnham vai a Dublin e reacende o debate do Brexit (9/11)",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-09/burnham-goes-to-europe-as-his-eu-plan-reignites-brexit-divisions"
+      },
+      {
+       "nome": "Al Jazeera, Burnham quer discutir livre circulação com a UE (25/10)",
+       "url": "https://www.aljazeera.com/news/2026/10/25/uk-pm-burnham-says-he-wants-to-discuss-a-return-to-eu-freedom-of-movement"
+      }
+     ]
+    }
+   ],
+   "ia": {
+    "abertura": "A IA em quatro frentes. Aviso de transparência: esta revista é escrita com o Claude, modelo da Anthropic, e a Anthropic está entre as empresas que assinaram o Apelo de Paris citado abaixo; por isso usamos o texto oficial do Eliseu e a cobertura da imprensa, não comunicados da empresa.",
+    "frentes": [
+     {
+      "area": "Científica",
+      "itens": [
+       {
+        "titulo": "Um laboratório que se opera sozinho",
+        "texto": "Pesquisadores de Xangai descrevem na Nature o AutoDNA: agentes de IA planejam, programam e controlam mais de 20 tipos de instrumentos. Num teste, o sistema achou a mutação KRAS G13D em tecido de câncer colorretal em 137 horas e 9.551 operações. Os números vêm de resumo de divulgação; o artigo original não foi lido por nós.",
+        "camada": "FATO",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "Lifeboat News, resumo do AutoDNA (6/11)",
+          "url": "https://lifeboat.com/blog/2026/11/an-ai-native-experimental-laboratory-for-autonomous-biomolecular-operations"
+         },
+         {
+          "nome": "Nature, laboratório experimental nativo de IA",
+          "url": "https://www.nature.com/articles/s41586-026-11228-6"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Militar",
+      "itens": [
+       {
+        "titulo": "O Apelo de Paris",
+        "texto": "Seis governos (França, Canadá, Finlândia, Noruega, Países Baixos e Bahrein) e dez empresas, entre elas OpenAI, Microsoft, Mistral e Anthropic, assinaram em 9/11 compromissos para avaliar riscos de modelos de fronteira, ter mecanismos para desligá-los e avisar rapidamente incidentes cibernéticos e de perda de controle. EUA e China não aparecem entre os signatários.",
+        "camada": "FATO",
+        "confianca": "Alta",
+        "fontes": [
+         {
+          "nome": "Eliseu, Apelo de Paris pela segurança da IA (9/11)",
+          "url": "https://www.elysee.fr/en/emmanuel-macron/2026/11/09/paris-call-for-ai-safety-and-security"
+         },
+         {
+          "nome": "ANI, as três prioridades de Macron para a IA (10/11)",
+          "url": "https://www.aninews.in/news/world/europe/ai-poses-real-risks-to-collective-security-french-president-emmanuel-macron-outlines-3-key-priorities20261110031353/"
+         }
+        ]
+       },
+       {
+        "titulo": "Por que agora",
+        "texto": "Macron reuniu os líderes logo depois de acusar o Irã pelo ataque às geladeiras. O caso mostra o que preocupa: sistemas conectados viram alvo de guerra, e a IA barateia a invasão. Mas um apelo voluntário, sem as duas maiores potências da IA, tem alcance limitado.",
+        "camada": "ANÁLISE",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "ANI, as três prioridades de Macron para a IA (10/11)",
+          "url": "https://www.aninews.in/news/world/europe/ai-poses-real-risks-to-collective-security-french-president-emmanuel-macron-outlines-3-key-priorities20261110031353/"
+         },
+         {
+          "nome": "PBS NewsHour (AP), França culpa o Irã por ataque a geladeiras de supermercados (9/11)",
+          "url": "https://www.pbs.org/newshour/world/france-blames-iran-for-last-months-cyberattack-on-supermarket-fridges"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Médica",
+      "itens": [
+       {
+        "titulo": "Aprovado não é o mesmo que testado",
+        "texto": "Revisão na PLOS Digital Health (agosto) analisou 1.357 dispositivos de IA autorizados pela FDA até dezembro de 2025: só 34 (2,5%) tinham ensaio prospectivo registrado e apenas 3 (0,2%) mediram desfechos que importam ao paciente, como morte ou internação. Radiologia responde por 78% dos aparelhos.",
+        "camada": "FATO",
+        "confianca": "Alta",
+        "fontes": [
+         {
+          "nome": "PLOS Digital Health (via PubMed), 1.357 dispositivos de IA, DOI 10.1371/journal.pdig.0001597",
+          "url": "https://doi.org/10.1371/journal.pdig.0001597"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Acadêmica",
+      "itens": [
+       {
+        "titulo": "Professores superestimam a cola",
+        "texto": "Estudo na Frontiers in Education com 45 docentes e 86 alunos de ciências sociais de uma universidade britânica: os professores estimaram o uso de IA pelos alunos em 5,23 numa escala de 1 a 7; os alunos disseram 3,11. Amostra pequena, de uma só instituição, e coleta em 2024.",
+        "camada": "FATO",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "Universidade de Manchester, docentes e alunos veem a IA de modo diferente (4/11)",
+          "url": "https://www.manchester.ac.uk/about/news/lecturers-and-students-see-ai-use-very-differently/"
+         }
+        ]
+       },
+       {
+        "titulo": "Desconfiança custa caro",
+        "texto": "Os autores alertam que presumir trapaça gera desconfiança e defendem rever o ensino e a avaliação. A lição vale para o Brasil: proibir é mais fácil que redesenhar provas, mas é a segunda opção que forma.",
+        "camada": "ANÁLISE",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "Universidade de Manchester, docentes e alunos veem a IA de modo diferente (4/11)",
+          "url": "https://www.manchester.ac.uk/about/news/lecturers-and-students-see-ai-use-very-differently/"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "glossario": [
+     {
+      "termo": "Modelo de fronteira",
+      "def": "Os sistemas de IA mais avançados de cada momento, com capacidades que ainda não foram bem medidas."
+     },
+     {
+      "termo": "Agente de IA",
+      "def": "Programa que não só responde, mas planeja e executa tarefas em sequência, usando ferramentas ou máquinas."
+     },
+     {
+      "termo": "Via 510(k)",
+      "def": "Caminho de autorização da FDA em que basta mostrar que o aparelho é parecido com outro já no mercado."
+     },
+     {
+      "termo": "Alerta precoce",
+      "def": "Sistema para avisar outros países e empresas assim que um incidente grave com IA é detectado."
+     }
+    ]
+   },
+   "russiaIra": {
+    "titulo": "O plano B de Moscou e Teerã",
+    "linhaFina": "Um documento vazado e o tráfego no Cáspio mostram uma parceria montada para sobreviver a bloqueios.",
+    "itens": [
+     {
+      "titulo": "Um roteiro até 2026",
+      "texto": "A Fox News publicou um plano de cooperação russo-iraniano de 44 páginas, aprovado em setembro de 2024: Rosatom em Bushehr, pagamentos em moedas nacionais (meta de 71% do comércio), moedas digitais de bancos centrais e fabricação de peças de aviões russos no Irã. Parte já avançou; outra parte não foi verificada.",
+      "camada": "FATO",
+      "confianca": "Média",
+      "fontes": [
+       {
+        "nome": "Fox News, documento russo detalha roteiro com o Irã (nov.)",
+        "url": "https://www.foxnews.com/world/exclusive-russian-document-reveals-sweeping-iran-plan-spanning-nuclear-finance-aviation"
+       }
+      ]
+     },
+     {
+      "titulo": "O Cáspio em números",
+      "texto": "Segundo a Lloyd's List Intelligence, citada pelo Jerusalem Post, os navios russos e iranianos ativos no Cáspio cresceram 21% em agosto, e a capacidade de carga, 36%. É esse corredor que a Força-Tarefa americana Iron Gate, criada em 7/11, diz querer vigiar.",
+      "camada": "FATO",
+      "confianca": "Média",
+      "fontes": [
+       {
+        "nome": "Jerusalem Post (Seth Frantzman), a rota do Cáspio (8/11)",
+        "url": "https://jpost.com/middle-east/iran-news/article-914229"
+       },
+       {
+        "nome": "Al Jazeera, Trump chama a guerra de \"efetivamente encerrada\" após encontro com o premiê do Catar (9/11)",
+        "url": "https://www.aljazeera.com/news/2026/11/9/trump-calls-iran-war-effectively-over-after-talks-with-qatar-pm"
+       }
+      ]
+     },
+     {
+      "titulo": "Redundância, não aliança",
+      "texto": "A palavra-chave é redundância: Moscou e Teerã constroem canais paralelos ao dólar, ao SWIFT e ao Golfo. Não é um pacto de defesa, já que o S-400 pedido em novembro segue sem resposta. Washington evita apertar o Cáspio para não estragar a reaproximação com a Rússia.",
+      "camada": "ANÁLISE",
+      "confianca": "Média",
+      "fontes": [
+       {
+        "nome": "Fox News, documento russo detalha roteiro com o Irã (nov.)",
+        "url": "https://www.foxnews.com/world/exclusive-russian-document-reveals-sweeping-iran-plan-spanning-nuclear-finance-aviation"
+       },
+       {
+        "nome": "Jerusalem Post (Seth Frantzman), a rota do Cáspio (8/11)",
+        "url": "https://jpost.com/middle-east/iran-news/article-914229"
+       },
+       {
+        "nome": "Iran International, Rezaei foi a Moscou pedir o S-400 (6/11)",
+        "url": "https://www.iranintl.com/en/202611067881"
+       }
+      ]
+     },
+     {
+      "titulo": "Até Shenzhen",
+      "texto": "Estimativa do Observatório: 35% de chance de os EUA abordarem navios ou portos russos no Cáspio até o fim do ano; 15% de anúncio de entrega do S-400 ao Irã no mesmo prazo. A Rússia ganha mais como mediadora em Shenzhen do que como fornecedora de armas.",
+      "camada": "CENÁRIO",
+      "confianca": "Baixa",
+      "fontes": [
+       {
+        "nome": "Jerusalem Post (Seth Frantzman), a rota do Cáspio (8/11)",
+        "url": "https://jpost.com/middle-east/iran-news/article-914229"
+       },
+       {
+        "nome": "Newsmax via Yahoo (relato do WSJ), choque EUA–China sobre a cúpula tripla (10/11)",
+        "url": "https://www.yahoo.com/news/politics/articles/us-china-clash-over-trump-002617931.html"
+       }
+      ]
+     }
+    ],
+    "box": {
+     "titulo": "Placar da parceria",
+     "linhas": [
+      {
+       "area": "Armas",
+       "texto": "Pedido de S-400 (6/11), sem resposta pública de Moscou."
+      },
+      {
+       "area": "Energia",
+       "texto": "Gasoduto de até 110 bi m³/ano em negociação; troca de gás via Azerbaijão."
+      },
+      {
+       "area": "Nuclear",
+       "texto": "Rosatom responde por Bushehr 1 e pelas obras das unidades 2 e 3."
+      },
+      {
+       "area": "Finanças",
+       "texto": "Pagamentos quase todos em rublo e rial; ligação Mir–Shetab em fase inicial."
+      },
+      {
+       "area": "Rotas",
+       "texto": "Cáspio: +21% de navios e +36% de carga em agosto; Iron Gate desde 7/11."
+      }
+     ]
+    }
+   },
+   "coreiaNorte": {
+    "titulo": "Kim Yo Jong contra a ONU",
+    "linhaFina": "A irmã do líder rejeita o apelo de Guterres por diálogo e defende fortificar a fronteira.",
+    "itens": [
+     {
+      "titulo": "\"Parcial e irresponsável\"",
+      "texto": "Em nota da agência estatal KCNA (versão oficial) de 10/11, Kim Yo Jong acusou António Guterres de repetir a versão de Seul e disse que reforçar a fronteira sul é \"o mais justo\" exercício de autodefesa. Guterres havia pedido na semana passada a volta dos canais entre as duas Coreias.",
+      "camada": "FATO",
+      "confianca": "Alta",
+      "fontes": [
+       {
+        "nome": "Korea JoongAng Daily, Pyongyang rejeita apelo de Guterres (10/11)",
+        "url": "https://koreajoongangdaily.com/korea/pyongyang-rejects-un-chiefs-call-for-interkorean-dialogue-in-wake-of-dmz-mine-blast/12965400"
+       },
+       {
+        "nome": "Anadolu via aNews, Kim Yo Jong critica o chefe da ONU (10/11)",
+        "url": "https://www.anews.com.tr/world/2026/11/10/north-korea-slams-un-chief-over-border-tensions-rejects-call-for-dialogue"
+       }
+      ]
+     },
+     {
+      "titulo": "A mina da discórdia",
+      "texto": "Em 21/9, uma mina feriu três soldados sul-coreanos na Zona Desmilitarizada. Investigação de Seul com o Comando da ONU concluiu que minas norte-coreanas foram plantadas ao sul da linha de demarcação; Pyongyang chama as conclusões de \"fabricadas\". Em 22/10, Seul pediu desculpas formais na ONU.",
+      "camada": "FATO",
+      "confianca": "Alta",
+      "fontes": [
+       {
+        "nome": "Korea JoongAng Daily, Pyongyang rejeita apelo de Guterres (10/11)",
+        "url": "https://koreajoongangdaily.com/korea/pyongyang-rejects-un-chiefs-call-for-interkorean-dialogue-in-wake-of-dmz-mine-blast/12965400"
+       }
+      ]
+     },
+     {
+      "titulo": "Endurecer antes de negociar",
+      "texto": "Com Trump querendo levar \"desnuclearização\" e cortes de armas nucleares a Shenzhen, Pyongyang endurece para não ser tratada como item da pauta. A vitória democrata nas eleições americanas, lê o SCMP, também esfria a ideia de uma nova cúpula Trump–Kim.",
+      "camada": "ANÁLISE",
+      "confianca": "Média",
+      "fontes": [
+       {
+        "nome": "South China Morning Post, Coreia do Norte endurece e vitória democrata esfria cúpula (manchete, nov.)",
+        "url": "https://scmp.com/week-asia/politics/article/3373364/north-korea-digs-us-stand-democratic-midterm-wins-dim-summit-hopes"
+       },
+       {
+        "nome": "Newsmax via Yahoo (relato do WSJ), choque EUA–China sobre a cúpula tripla (10/11)",
+        "url": "https://www.yahoo.com/news/politics/articles/us-china-clash-over-trump-002617931.html"
+       }
+      ]
+     },
+     {
+      "titulo": "O que vem",
+      "texto": "Estimativa do Observatório: 55% de chance de novo lançamento de míssil até a APEC (19/11); 15% de um incidente armado na fronteira até o fim do ano. Testes recentes (4/11) e a retórica sobre a fronteira sustentam a primeira cifra.",
+      "camada": "CENÁRIO",
+      "confianca": "Baixa",
+      "fontes": [
+       {
+        "nome": "Stars and Stripes, Coreia do Norte alega nova tecnologia de mísseis (5/11)",
+        "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-05/north-korea-missile-technology-diplomacy-23369224.html"
+       },
+       {
+        "nome": "Korea JoongAng Daily, Pyongyang rejeita apelo de Guterres (10/11)",
+        "url": "https://koreajoongangdaily.com/korea/pyongyang-rejects-un-chiefs-call-for-interkorean-dialogue-in-wake-of-dmz-mine-blast/12965400"
+       }
+      ]
+     }
+    ],
+    "box": {
+     "titulo": "Termômetro da península",
+     "linhas": [
+      {
+       "area": "ONU",
+       "texto": "Kim Yo Jong rejeita o apelo de Guterres por diálogo (10/11)."
+      },
+      {
+       "area": "Fronteira",
+       "texto": "Mina na DMZ (21/9) feriu três soldados; Pyongyang nega autoria."
+      },
+      {
+       "area": "Mísseis",
+       "texto": "Lançamentos de Sondok em 4/11; KCNA alega míssil antiaéreo novo."
+      },
+      {
+       "area": "China",
+       "texto": "Kim Song Nam esteve em Pequim de 3 a 7/11."
+      },
+      {
+       "area": "EUA",
+       "texto": "Trump quer armas nucleares na pauta de Shenzhen; cúpula com Kim incerta."
+      }
+     ]
+    }
+   },
+   "secoes": [
+    {
+     "eixo": "Guerras",
+     "itens": [
+      {
+       "titulo": "Abu Dhabi começa sob ataque",
+       "texto": "Na véspera, segundo a Força Aérea ucraniana, a Rússia lançou 162 drones (96 a jato) e um Iskander-M; 135 foram abatidos ou bloqueados, houve impactos em 19 locais e 14 feridos. Dnipro e Kamianske ficaram sem luz. Zelensky diz que Moscou quer \"dividir a Ucrânia ao longo do Dnipro\". Moscou não comentou os números.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "Euromaidan Press, ataques cortam luz em Dnipro e Kamianske (10/11)",
+         "url": "https://euromaidanpress.com/2026/11/10/russia-aims-to-split-ukraine-along-the-dnipro-ukraine-says-moscows-strikes-cut-power-in-dnipro-and-kamianske/"
+        },
+        {
+         "nome": "Ukrainska Pravda, 162 drones e um Iskander-M (10/11)",
+         "url": "https://www.pravda.com.ua/eng/news/2026/11/10/8062064/"
+        }
+       ]
+      },
+      {
+       "titulo": "Quem negocia",
+       "texto": "Witkoff e Kushner mediam a primeira rodada trilateral desde fevereiro. A Ucrânia mandou Rustem Umerov, Kyrylo Budanov e David Arakhamia. Nenhum lado sinaliza ceder nas exigências principais.",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "AP via ClickOnDetroit, G7 em Paris e início das conversas em Abu Dhabi (10/11)",
+         "url": "https://www.clickondetroit.com/news/politics/2026/11/10/g7-attention-in-paris-turns-to-ukraine-while-us-mediated-talks-get-underway-in-abu-dhabi/"
+        },
+        {
+         "nome": "Bloomberg via News Tribune, Rússia eleva o nível da delegação (8/11)",
+         "url": "https://www.newstribune.com/news/2026/nov/08/russia-upgrades-its-delegation-for-us-led-ukraine/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Energia",
+     "itens": [
+      {
+       "titulo": "O petróleo aposta no fim da guerra",
+       "texto": "O Brent caiu a US$ 90,99 (−1,7%) na manhã de 10/11, depois de perder 5,85% na segunda, e acumula queda de 22% desde o pico de US$ 118 em 30/10. A produção da OPEP subiu em outubro. Gregory Brew, da Eurasia Group, acha difícil furar US$ 90 sem acordo EUA–Irã.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "Grafa, Brent a US$ 90,99 (10/11)",
+         "url": "https://grafa.com/en/news/united-states/oil-prices-fall-as-brent-drops-to-90-99-on-iran-tensions"
+        },
+        {
+         "nome": "Irish Times (Reuters), petróleo abaixo de US$ 90 (10/11)",
+         "url": "https://www.irishtimes.com/business/2026/11/10/oil-prices-dip-below-90-on-hopes-of-military-de-escalation-in-us-iran-war/"
+        },
+        {
+         "nome": "National Herald (PTI), petróleo estende perdas (10/11)",
+         "url": "https://www.nationalheraldindia.com/business/oil-extends-losses-as-hopes-of-easing-west-asia-tensions-grow"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Brasil",
+     "itens": [
+      {
+       "titulo": "Copom: pausa e cautela",
+       "texto": "A ata da reunião que manteve a Selic em 13,75% sai hoje. O comitê vê inflação de 5,6% em 2026, acima do teto de 4,5%, e de 4,7% em 2027, com dólar alto e petróleo instável. O IPCA de outubro sai na quinta (12/11).",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "Brasil em Folhas, BC divulga a ata do Copom (10/11)",
+         "url": "https://brasilemfolhas.com.br/2026/11/banco-central-divulga-ata-do-copom-sobre-taxa-de-juros/"
+        }
+       ]
+      },
+      {
+       "titulo": "Caso Master: troca na PF",
+       "texto": "Segundo a Gazeta do Povo, a PF deve afastar nesta semana os dois delegados que coordenavam os relatórios sobre ministros do STF no caso Master, sem justificativa oficial. Moraes e os demais citados negam irregularidades; o julgamento no STF só deve voltar em fevereiro de 2027.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "Gazeta do Povo, PF troca delegados do caso Master (9/11)",
+         "url": "https://www.gazetadopovo.com.br/republica/policia-federal-troca-delegados-que-investigam-ligacoes-entre-vorcaro-e-o-stf/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Clima",
+     "itens": [
+      {
+       "titulo": "O El Niño perto do pico",
+       "texto": "O 5º Painel El Niño do INMET e do INPE prevê fase muito forte até janeiro: chuva acima da média no Sul e seca e queimadas no Norte. A OMM projetava anomalia de cerca de 3,7 °C para outubro a dezembro, acima dos 2,6 °C de 2015–16. A NOAA publica novo boletim em 12/11.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "Agência GBC, super El Niño pode atingir pico em dezembro (9/11)",
+         "url": "https://agenciagbc.com/2026/11/09/super-el-nino-pode-atingir-forca-historica-em-dezembro-e-acende-alerta-para-o-clima-no-brasil/"
+        },
+        {
+         "nome": "NOAA/CPC, discussão diagnóstica do ENSO",
+         "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml"
+        },
+        {
+         "nome": "CPTEC/INPE, El Niño e La Niña",
+         "url": "https://clima.cptec.inpe.br/enos"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Espaço",
+     "itens": [
+      {
+       "titulo": "Semana de foguetes e de defesa planetária",
+       "texto": "Um Falcon 9 com a missão secreta USSF-627 estava previsto para as 3h03 UTC de hoje, em Vandenberg; o resultado não estava confirmado no fechamento. Vulcan com satélites Amazon Leo e o voo 15 da Starship estão marcados para 13/11. A sonda europeia Hera deve chegar este mês ao asteroide Didymos para medir o efeito do impacto da DART.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "Space Launch Schedule, Falcon 9 USSF-627",
+         "url": "https://www.spacelaunchschedule.com/launch/falcon-9-block-5-ussf-627"
+        },
+        {
+         "nome": "Orbital Radar, briefing de 8/11",
+         "url": "https://orbitalradar.com/blog/orbital-briefing-2026-11-08"
+        },
+        {
+         "nome": "Space.com, Hera mantém rota para o encontro de novembro (25/3)",
+         "url": "https://www.space.com/astronomy/asteroids/like-accelerating-from-stationary-to-supersonic-flight-europes-hera-probe-boosts-speed-stays-on-course-for-november-asteroid-rendezvous"
+        },
+        {
+         "nome": "ESA, Hera mira chegada antecipada a Didymos",
+         "url": "https://www.esa.int/Space_Safety/Hera/ESA_s_Hera_targets_early_arrival_at_Didymos_asteroids"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "analise": {
+    "titulo": "Nem guerra, nem paz: a fórmula de Brest-Litovsk",
+    "texto": [
+     "Em fevereiro de 1918, em Brest-Litovsk, Leon Trotsky anunciou que a Rússia bolchevique não assinaria a paz com a Alemanha, mas também não lutaria mais: \"nem guerra, nem paz\". Ontem, o presidente iraniano Pezeshkian usou a mesma expressão para descrever o impasse, e Trump respondeu com o seu \"status quo\": a guerra estaria acabada, mas o bloqueio continua. Clausewitz ajuda a ler o momento: a guerra é a continuação da política por outros meios, e o bloqueio é a política continuando a guerra por meios mais baratos.",
+     "A analogia falha num ponto central. Em 1918, quem dizia \"nem guerra, nem paz\" era o lado fraco, tentando ganhar tempo; a Alemanha retomou a ofensiva em dias e impôs termos piores em março. Hoje, quem prefere o impasse é o lado forte, e o fraco controla Ormuz. Por isso o tempo não corre só contra Teerã: o petróleo barato e a pressão do Golfo também cobram de Washington. Um impasse confortável para os dois raramente dura."
+    ]
+   },
+   "ler": [
+    {
+     "tipo": "Livro",
+     "titulo": "Da Guerra",
+     "autor": "Carl von Clausewitz",
+     "nivel": "★★★",
+     "porque": "Leia o capítulo 1 do livro I, sobre guerra e política. Ajuda a ver o bloqueio como guerra que não diz seu nome."
+    },
+    {
+     "tipo": "Livro",
+     "titulo": "A Próxima Onda",
+     "autor": "Mustafa Suleyman",
+     "nivel": "★★",
+     "porque": "Discute por que é tão difícil \"conter\" a IA. Procure o trecho sobre acordos voluntários e compare com o Apelo de Paris."
+    },
+    {
+     "tipo": "Livro",
+     "titulo": "O Petróleo",
+     "autor": "Daniel Yergin",
+     "nivel": "★",
+     "porque": "Os capítulos sobre os choques de 1973 e 1979 mostram como o preço reage à guerra e à diplomacia no Golfo."
+    }
+   ],
+   "pensar": [
+    "Se o lado mais forte prefere \"nem guerra, nem paz\", quem tem pressa de acabar com o impasse?",
+    "Um compromisso voluntário sobre IA, sem EUA e China, é um primeiro passo ou um álibi?"
+   ],
+   "acompanhar": [
+    {
+     "quando": "10–11/11",
+     "oque": "Rodada EUA–Rússia–Ucrânia em Abu Dhabi; fim do G7 de chanceleres em Paris"
+    },
+    {
+     "quando": "11/11",
+     "oque": "Lula na cúpula de líderes da COP31; relatório mensal da OPEP"
+    },
+    {
+     "quando": "12/11",
+     "oque": "Boletim do ENSO da NOAA; IPCA de outubro no Brasil"
+    },
+    {
+     "quando": "16/11",
+     "oque": "Chanceleres da UE discutem sanções ao Irã por ciberataques"
+    },
+    {
+     "quando": "18–19/11",
+     "oque": "APEC em Shenzhen e possível encontro Xi–Trump–Putin"
+    }
+   ],
+   "fontes": [
+    {
+     "nome": "Al Jazeera, Trump chama a guerra de \"efetivamente encerrada\" após encontro com o premiê do Catar (9/11)",
+     "url": "https://www.aljazeera.com/news/2026/11/9/trump-calls-iran-war-effectively-over-after-talks-with-qatar-pm"
+    },
+    {
+     "nome": "OilPrice.com, proposta iraniana de US$ 8 bi via Catar (9/11)",
+     "url": "https://oilprice.com/Latest-Energy-News/World-News/Oil-Sinks-to-94-as-Irans-8-Billion-Hormuz-Deal-Heads-to-Trump.html"
+    },
+    {
+     "nome": "Newsmax via Yahoo (relato do WSJ), choque EUA–China sobre a cúpula tripla (10/11)",
+     "url": "https://www.yahoo.com/news/politics/articles/us-china-clash-over-trump-002617931.html"
+    },
+    {
+     "nome": "Chancelaria da China, coletiva de Guo Jiakun (10/11, versão oficial)",
+     "url": "https://www.fmprc.gov.cn/mfa_eng/xw/fyrbt/202611/t20261110_12056810.html"
+    },
+    {
+     "nome": "Bloomberg via News Tribune, Rússia eleva o nível da delegação (8/11)",
+     "url": "https://www.newstribune.com/news/2026/nov/08/russia-upgrades-its-delegation-for-us-led-ukraine/"
+    },
+    {
+     "nome": "AP via ClickOnDetroit, G7 em Paris e início das conversas em Abu Dhabi (10/11)",
+     "url": "https://www.clickondetroit.com/news/politics/2026/11/10/g7-attention-in-paris-turns-to-ukraine-while-us-mediated-talks-get-underway-in-abu-dhabi/"
+    },
+    {
+     "nome": "Euromaidan Press, ataques cortam luz em Dnipro e Kamianske (10/11)",
+     "url": "https://euromaidanpress.com/2026/11/10/russia-aims-to-split-ukraine-along-the-dnipro-ukraine-says-moscows-strikes-cut-power-in-dnipro-and-kamianske/"
+    },
+    {
+     "nome": "El Demócrata, Kallas não descarta sanções ao Irã (9/11)",
+     "url": "https://www.democrata.es/en/international/kallas-proposes-new-sanctions-against-iran-for-cyberattacks-on-european-supermarkets/"
+    },
+    {
+     "nome": "PBS NewsHour (AP), França culpa o Irã por ataque a geladeiras de supermercados (9/11)",
+     "url": "https://www.pbs.org/newshour/world/france-blames-iran-for-last-months-cyberattack-on-supermarket-fridges"
+    },
+    {
+     "nome": "Axios, França liga hackers militares iranianos aos ataques (10/11)",
+     "url": "https://axios.com/2026/11/10/france-iran-supermarket-refridgerator-hacks"
+    },
+    {
+     "nome": "Kyiv Post, Zelensky e Modi discutem corredores alimentares (9/11)",
+     "url": "https://www.kyivpost.com/post/89602"
+    },
+    {
+     "nome": "Nippon.com (Jiji), Takaichi pede cooperação em segurança da IA (10/11)",
+     "url": "https://www.nippon.com/en/articles/-/57166"
+    },
+    {
+     "nome": "Bloomberg, Japão busca garantia de que Xi cumprimentará Takaichi na APEC (8/11)",
+     "url": "https://www.bloomberg.com/news/articles/2026-11-08/japan-works-to-shield-takaichi-from-any-xi-snub-at-china-summit"
+    },
+    {
+     "nome": "Bloomberg, Burnham vai a Dublin e reacende o debate do Brexit (9/11)",
+     "url": "https://www.bloomberg.com/news/articles/2026-11-09/burnham-goes-to-europe-as-his-eu-plan-reignites-brexit-divisions"
+    },
+    {
+     "nome": "Al Jazeera, Burnham quer discutir livre circulação com a UE (25/10)",
+     "url": "https://www.aljazeera.com/news/2026/10/25/uk-pm-burnham-says-he-wants-to-discuss-a-return-to-eu-freedom-of-movement"
+    },
+    {
+     "nome": "Lifeboat News, resumo do AutoDNA (6/11)",
+     "url": "https://lifeboat.com/blog/2026/11/an-ai-native-experimental-laboratory-for-autonomous-biomolecular-operations"
+    },
+    {
+     "nome": "Nature, laboratório experimental nativo de IA",
+     "url": "https://www.nature.com/articles/s41586-026-11228-6"
+    },
+    {
+     "nome": "Eliseu, Apelo de Paris pela segurança da IA (9/11)",
+     "url": "https://www.elysee.fr/en/emmanuel-macron/2026/11/09/paris-call-for-ai-safety-and-security"
+    },
+    {
+     "nome": "ANI, as três prioridades de Macron para a IA (10/11)",
+     "url": "https://www.aninews.in/news/world/europe/ai-poses-real-risks-to-collective-security-french-president-emmanuel-macron-outlines-3-key-priorities20261110031353/"
+    },
+    {
+     "nome": "PLOS Digital Health (via PubMed), 1.357 dispositivos de IA, DOI 10.1371/journal.pdig.0001597",
+     "url": "https://doi.org/10.1371/journal.pdig.0001597"
+    },
+    {
+     "nome": "Universidade de Manchester, docentes e alunos veem a IA de modo diferente (4/11)",
+     "url": "https://www.manchester.ac.uk/about/news/lecturers-and-students-see-ai-use-very-differently/"
+    },
+    {
+     "nome": "Fox News, documento russo detalha roteiro com o Irã (nov.)",
+     "url": "https://www.foxnews.com/world/exclusive-russian-document-reveals-sweeping-iran-plan-spanning-nuclear-finance-aviation"
+    },
+    {
+     "nome": "Jerusalem Post (Seth Frantzman), a rota do Cáspio (8/11)",
+     "url": "https://jpost.com/middle-east/iran-news/article-914229"
+    },
+    {
+     "nome": "Iran International, Rezaei foi a Moscou pedir o S-400 (6/11)",
+     "url": "https://www.iranintl.com/en/202611067881"
+    },
+    {
+     "nome": "Korea JoongAng Daily, Pyongyang rejeita apelo de Guterres (10/11)",
+     "url": "https://koreajoongangdaily.com/korea/pyongyang-rejects-un-chiefs-call-for-interkorean-dialogue-in-wake-of-dmz-mine-blast/12965400"
+    },
+    {
+     "nome": "Anadolu via aNews, Kim Yo Jong critica o chefe da ONU (10/11)",
+     "url": "https://www.anews.com.tr/world/2026/11/10/north-korea-slams-un-chief-over-border-tensions-rejects-call-for-dialogue"
+    },
+    {
+     "nome": "South China Morning Post, Coreia do Norte endurece e vitória democrata esfria cúpula (manchete, nov.)",
+     "url": "https://scmp.com/week-asia/politics/article/3373364/north-korea-digs-us-stand-democratic-midterm-wins-dim-summit-hopes"
+    },
+    {
+     "nome": "Stars and Stripes, Coreia do Norte alega nova tecnologia de mísseis (5/11)",
+     "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-05/north-korea-missile-technology-diplomacy-23369224.html"
+    },
+    {
+     "nome": "Ukrainska Pravda, 162 drones e um Iskander-M (10/11)",
+     "url": "https://www.pravda.com.ua/eng/news/2026/11/10/8062064/"
+    },
+    {
+     "nome": "Grafa, Brent a US$ 90,99 (10/11)",
+     "url": "https://grafa.com/en/news/united-states/oil-prices-fall-as-brent-drops-to-90-99-on-iran-tensions"
+    },
+    {
+     "nome": "Irish Times (Reuters), petróleo abaixo de US$ 90 (10/11)",
+     "url": "https://www.irishtimes.com/business/2026/11/10/oil-prices-dip-below-90-on-hopes-of-military-de-escalation-in-us-iran-war/"
+    },
+    {
+     "nome": "National Herald (PTI), petróleo estende perdas (10/11)",
+     "url": "https://www.nationalheraldindia.com/business/oil-extends-losses-as-hopes-of-easing-west-asia-tensions-grow"
+    },
+    {
+     "nome": "Brasil em Folhas, BC divulga a ata do Copom (10/11)",
+     "url": "https://brasilemfolhas.com.br/2026/11/banco-central-divulga-ata-do-copom-sobre-taxa-de-juros/"
+    },
+    {
+     "nome": "Gazeta do Povo, PF troca delegados do caso Master (9/11)",
+     "url": "https://www.gazetadopovo.com.br/republica/policia-federal-troca-delegados-que-investigam-ligacoes-entre-vorcaro-e-o-stf/"
+    },
+    {
+     "nome": "Agência GBC, super El Niño pode atingir pico em dezembro (9/11)",
+     "url": "https://agenciagbc.com/2026/11/09/super-el-nino-pode-atingir-forca-historica-em-dezembro-e-acende-alerta-para-o-clima-no-brasil/"
+    },
+    {
+     "nome": "NOAA/CPC, discussão diagnóstica do ENSO",
+     "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml"
+    },
+    {
+     "nome": "CPTEC/INPE, El Niño e La Niña",
+     "url": "https://clima.cptec.inpe.br/enos"
+    },
+    {
+     "nome": "Space Launch Schedule, Falcon 9 USSF-627",
+     "url": "https://www.spacelaunchschedule.com/launch/falcon-9-block-5-ussf-627"
+    },
+    {
+     "nome": "Orbital Radar, briefing de 8/11",
+     "url": "https://orbitalradar.com/blog/orbital-briefing-2026-11-08"
+    },
+    {
+     "nome": "Space.com, Hera mantém rota para o encontro de novembro (25/3)",
+     "url": "https://www.space.com/astronomy/asteroids/like-accelerating-from-stationary-to-supersonic-flight-europes-hera-probe-boosts-speed-stays-on-course-for-november-asteroid-rendezvous"
+    },
+    {
+     "nome": "ESA, Hera mira chegada antecipada a Didymos",
+     "url": "https://www.esa.int/Space_Safety/Hera/ESA_s_Hera_targets_early_arrival_at_Didymos_asteroids"
+    },
+    {
+     "nome": "Itamaraty, Lula na COP31",
+     "url": "https://www.gov.br/mre/pt-br/canais_atendimento/imprensa/notas-a-imprensa/participacao-do-presidente-luiz-inacio-lula-da-silva-na-cop-31-na-turquia"
+    }
+   ]
+  },
   {
    "id": "2026-11-09",
    "numero": 5,

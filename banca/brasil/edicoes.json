@@ -1,6 +1,413 @@
 {
  "edicoes": [
   {
+   "numero": 2,
+   "data": "2026-11-10",
+   "tempoLeitura": 10,
+   "capa": {
+    "chapeu": "Seu dinheiro",
+    "titulo": "Bolsa Família cai mais cedo: entre 16 e 18 de novembro",
+    "linhaFina": "O governo antecipou o pagamento de novembro e o benefício mínimo agora é de R$ 691. Em Brasília, o STF deixou para fevereiro de 2027 a discussão sobre ministros citados no caso do Banco Master. Em Minas, o frio fora de época segue até quarta. E em Lafaiete, o Hospital Regional deve ficar para 2027."
+   },
+   "citacao": "“Minas são muitas.” (Guimarães Rosa)",
+   "recado": "Esta é a primeira edição da manhã, feita para sair cedo todos os dias. As notícias que já estavam na edição nº 1 (fim da escala 6x1, juros parados, maioridade penal, Enem) aparecem aqui só quando houve novidade. E uma correção: na edição nº 1 dissemos que Cleitinho toma posse em 6 de janeiro. Está certo: desde a Emenda Constitucional 111, governadores eleitos em 2026 assumem em 6 de janeiro, e não mais no dia 1º.",
+   "resumo": [
+    {
+     "tema": "Bolsa Família",
+     "texto": "Pagamento de novembro adiantado para 16, 17 e 18/11, conforme o final do NIS. Benefício mínimo subiu para R$ 691."
+    },
+    {
+     "tema": "STF",
+     "texto": "A discussão sobre ministros citados no caso do Banco Master só volta em fevereiro de 2027."
+    },
+    {
+     "tema": "Lula",
+     "texto": "Na COP31, na Turquia, discursa nesta quarta (11/11) e volta ao Brasil no dia 16. O decreto da 6x1 espera a volta dele."
+    },
+    {
+     "tema": "Minas",
+     "texto": "Promotores escolhem hoje (10/11) os três nomes para chefiar o Ministério Público. Frio fora de época até quarta."
+    },
+    {
+     "tema": "Saúde",
+     "texto": "Sábado (14/11) é o Dia Mundial do Diabetes, com teste de glicose grátis na Praça do Cristo, em Lafaiete."
+    },
+    {
+     "tema": "Lafaiete",
+     "texto": "Hospital Regional deve abrir só em 2027. Furtos não caíram na cidade, ao contrário do resto de Minas."
+    }
+   ],
+   "numeros": [
+    {
+     "rotulo": "Bolsa Família mínimo",
+     "valor": "R$ 691",
+     "nota": "era R$ 600; reajuste de 15,04% desde outubro",
+     "fonte": "Correio de Minas (8/11), com dados do MDS"
+    },
+    {
+     "rotulo": "Juros básicos",
+     "valor": "13,75%",
+     "nota": "ao ano; próxima decisão em 8 e 9/12",
+     "fonte": "Banco Central, via Seu Dinheiro (4/11)"
+    },
+    {
+     "rotulo": "Furtos em Lafaiete",
+     "valor": "643",
+     "nota": "de janeiro a julho de 2026 (637 em 2025)",
+     "fonte": "Correio de Minas (9/11)"
+    },
+    {
+     "rotulo": "Máxima de hoje",
+     "valor": "13 °C",
+     "nota": "em Lafaiete, com chuva",
+     "fonte": "HG Brasil (9/11)"
+    }
+   ],
+   "cadernos": [
+    {
+     "id": "brasilia",
+     "titulo": "Brasília",
+     "abertura": "O que o governo, o Congresso e o STF decidem, e como isso chega na vida da gente",
+     "itens": [
+      {
+       "titulo": "Caso Banco Master: STF deixa para 2027",
+       "selo": "Confirmado",
+       "texto": "O Supremo Tribunal Federal (STF) só deve voltar a discutir, em fevereiro de 2027, se abre ou não investigação sobre ministros citados em mensagens do celular de Daniel Vorcaro, ex-dono do Banco Master, banco fechado pelo Banco Central em 2025. O ministro Flávio Dino pediu mais tempo para estudar o caso (o chamado “pedido de vista”) em 15 de setembro e tem até 15 de dezembro para devolvê-lo. Como o Judiciário entra em recesso e só volta em fevereiro, o assunto fica para o ano que vem. Os ministros Alexandre de Moraes e André Mendonça pediram, um contra o outro, investigações. Importante: nesta fase não se discute punição, só se haverá investigação. Ninguém foi condenado.",
+       "fontes": [
+        {
+         "nome": "Diario de Pernambuco/Correio Braziliense, STF deixa caso Master para 2027 (9/11)",
+         "url": "https://www.diariodepernambuco.com.br/politica/2026/11/11728670-stf-deixa-para-2027-discussao-sobre-ministros-e-caso-banco-master.html"
+        }
+       ]
+      },
+      {
+       "titulo": "Lula na COP31 e a espera pelo novo ministro da Fazenda",
+       "selo": "Confirmado",
+       "texto": "Lula embarcou na segunda (9/11) para a COP31, a conferência do clima da ONU, em Antália, na Turquia. A cúpula com os chefes de governo é nesta quarta e quinta (11 e 12/11). Depois ele vai às Filipinas e volta ao Brasil no dia 16. Enquanto isso, o mercado financeiro espera o anúncio de quem será o ministro da Fazenda no novo mandato, que começa em janeiro. Por causa da viagem, o decreto com os detalhes do fim da escala 6x1 só deve sair depois da volta do presidente.",
+       "fontes": [
+        {
+         "nome": "NeoFeed, agenda de Lula e espera pelo ministro da Fazenda (6/11)",
+         "url": "https://neofeed.com.br/experts/lula-parte-para-a-turquia-e-deixa-o-mercado-em-modo-de-espera-pelo-titular-da-fazenda/"
+        },
+        {
+         "nome": "O Tempo/Folhapress, decreto da 6x1 adiado (9/11)",
+         "url": "https://www.otempo.com.br/economia/2026/11/9/decreto-que-regulamenta-fim-da-6x1-tem-publicacao-adiada-e-so-deve-sair-apos-retorno-de-lula"
+        }
+       ]
+      },
+      {
+       "titulo": "Por que um pedido de vista atrasa tanto",
+       "selo": "Explicação",
+       "texto": "No STF, qualquer ministro pode pedir para levar o processo e estudá-lo melhor antes de votar. Enquanto isso, o julgamento fica parado. Há prazo para devolver, mas, se ele cai perto das férias da Justiça, o caso só volta no ano seguinte. É uma regra comum nos tribunais, mas muitas vezes é criticada por deixar decisões importantes esperando.",
+       "fontes": []
+      }
+     ]
+    },
+    {
+     "id": "bolso",
+     "titulo": "Bolso, emprego e preços",
+     "abertura": "O que entra e o que sai do orçamento da família",
+     "itens": [
+      {
+       "titulo": "Bolsa Família de novembro sai antes, e com valor maior",
+       "selo": "Confirmado",
+       "texto": "O pagamento de novembro foi antecipado e será feito em só três dias: NIS terminado em 1 recebe em 16/11; terminado em 2, em 17/11; de 3 a 0, em 18/11. Antes, ia até o dia 30. Não precisa pedir nada: cai sozinho para quem já recebe. Desde outubro o programa teve reajuste de 15,04%, o primeiro desde 2023: o mínimo por família passou de R$ 600 para R$ 691, e o adicional por criança de até 6 anos é de R$ 173. O governo diz que a antecipação, que também vale para dezembro, é uma prevenção contra os efeitos do El Niño forte que vem aí. O NIS é o número que aparece no cartão do Bolsa Família.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, Bolsa Família antecipado (8/11)",
+         "url": "https://correiodeminas.com.br/2026/11/08/bolsa-familia-de-novembro-chega-a-r-1-100-apos-novo-reajuste-e-sera-pago-antes-da-data/"
+        }
+       ]
+      },
+      {
+       "titulo": "Juros parados e inflação de outubro a caminho",
+       "selo": "Previsão",
+       "texto": "A Selic segue em 13,75% ao ano até, pelo menos, a reunião de 8 e 9 de dezembro. O próximo número importante é a inflação oficial de outubro (o IPCA), que o IBGE divulga nos próximos dias. A prévia (IPCA-15) mostrou 4,62% em 12 meses, acima do teto da meta (4,5%), com comida mais cara e conta de luz mais barata. Se a inflação vier alta, fica mais difícil os juros voltarem a cair logo.",
+       "fontes": [
+        {
+         "nome": "BP Money, IPCA-15 de outubro (23/10)",
+         "url": "https://bpmoney.com.br/economia/ipca-15-desacelera-para-032-em-outubro-mas-inflacao-em-12-meses-sobe-a-462/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "saude",
+     "titulo": "Saúde no Brasil",
+     "abertura": "Cuidados da semana",
+     "aviso": "Estas notícias informam, mas não substituem o médico. Nunca comece, pare ou troque um remédio por conta própria. Em emergência, ligue 192 (SAMU).",
+     "itens": [
+      {
+       "titulo": "Sábado é o Dia Mundial do Diabetes",
+       "selo": "Confirmado",
+       "texto": "O 14 de novembro é o Dia Mundial do Diabetes. O diabetes é quando o açúcar no sangue fica alto demais, e muita gente tem sem saber, porque no começo quase não dá sinal. O exame de glicose é simples e o SUS faz nos postos de saúde. Em Lafaiete, no sábado (14/11), das 9h às 16h, a Praça do Cristo tem ação gratuita com teste de glicose, medida de pressão e orientação sobre alimentação e cuidado com os pés.",
+       "fontes": [
+        {
+         "nome": "Correio da Cidade, ação sobre diabetes em Lafaiete",
+         "url": "https://www.jornalcorreiodacidade.com.br/noticias/51639-lafaiete-tera-acao-gratuita-de-prevencao-e-orientacao-sobre-diabetes"
+        }
+       ]
+      },
+      {
+       "titulo": "Frio fora de época: atenção com idosos e crianças",
+       "selo": "Explicação",
+       "texto": "Com o frio e a chuva desta semana, aumentam as gripes e resfriados. Agasalhe bem os mais velhos e as crianças, mantenha a casa arejada mesmo no frio e procure o posto de saúde se houver febre alta, falta de ar ou cansaço fora do comum.",
+       "fontes": []
+      }
+     ]
+    },
+    {
+     "id": "escola",
+     "titulo": "Escola e Enem",
+     "abertura": "Data que a família precisa saber",
+     "itens": [
+      {
+       "titulo": "Faltam cinco dias para a segunda prova do Enem",
+       "selo": "Confirmado",
+       "texto": "No domingo (15/11), feriado da República, é o segundo dia do Enem, com matemática e ciências da natureza. Leve documento oficial com foto e caneta preta de tubo transparente, e chegue cedo: os portões fecham na hora certa. Se o tempo estiver chuvoso, saia com mais folga.",
+       "fontes": [
+        {
+         "nome": "Muita Informação, regras do Enem 2026 (1/11)",
+         "url": "https://muitainformacao.com.br/noticias/falta-uma-semana-para-o-enem-2026-confira-horarios-documentos-e-regras-do-inep/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "minas",
+     "titulo": "Minas Gerais",
+     "abertura": "O que se decide em Belo Horizonte e chega até nós",
+     "itens": [
+      {
+       "titulo": "Ministério Público escolhe hoje os três nomes para seu chefe",
+       "selo": "Confirmado",
+       "texto": "Nesta terça (10/11), das 8h às 17h, promotores e procuradores de Minas votam pela internet para formar a lista tríplice, os três mais votados para procurador-geral de Justiça, o chefe do Ministério Público estadual, em 2027 e 2028. São quatro candidatos: Carlos Eduardo Ferreira Pinto, José Carlos Fernandes Júnior, Larissa Rodrigues Amaral e o atual procurador-geral, Paulo de Tarso Morais Filho, que tenta mais um mandato. Depois, o governador tem 15 dias para escolher um dos três. O Ministério Público é quem acusa nos processos e fiscaliza prefeituras e governo.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, eleição no MPMG (9/11)",
+         "url": "https://correiodeminas.com.br/2026/11/09/membros-do-mpmg-elegem-amanha-10-lista-triplice-para-escolha-do-procurador-geral-de-justica-entrerriano-concorre-a-segundo-mandato/"
+        }
+       ]
+      },
+      {
+       "titulo": "Frio de inverno em novembro, até quarta",
+       "selo": "Confirmado",
+       "texto": "Uma massa de ar frio derrubou as temperaturas em Minas. O Inmet avisou sobre queda de 5 °C ou mais, e mais de 500 cidades mineiras ficaram sob aviso de chuva forte, vento e possível granizo. Em Belo Horizonte, seis regiões tiveram alerta de risco geológico (deslizamento). O frio deve continuar pelo menos até quarta (11/11). A Defesa Civil pede cuidado com árvores que podem cair e com banhos de cachoeira, onde a água pode subir de repente.",
+       "fontes": [
+        {
+         "nome": "Correio da Cidade, frente fria e alerta de tempestades (9/11)",
+         "url": "https://www.jornalcorreiodacidade.com.br/noticias/51671-frente-fria-derruba-temperaturas-em-lafaiete-e-traz-alerta-de-tempestades"
+        },
+        {
+         "nome": "Correio de Minas, alerta da Defesa Civil (8/11)",
+         "url": "https://correiodeminas.com.br/2026/11/08/defesa-civil-divulga-previsao-do-tempo-e-alerta-populacao-para-riscos-de-queda-de-arvores-e-de-banho-em-cachoeiras/"
+        }
+       ]
+      },
+      {
+       "titulo": "Cleitinho visita Lafaiete",
+       "selo": "Confirmado",
+       "texto": "O governador eleito Cleitinho Azevedo (Republicanos) esteve na segunda (9/11) com o prefeito Leandro Chagas, em Lafaiete. Os dois falaram de investimentos para a cidade, e o Hospital Regional foi citado como uma das primeiras grandes entregas do próximo governo. Não foram anunciados valores nem datas.",
+       "fontes": [
+        {
+         "nome": "Correio da Cidade (9/11)",
+         "url": "https://www.jornalcorreiodacidade.com.br/noticias/51674-leandro-chagas-recebe-cleitinho-e-discute-novos-investimentos-para-lafaiete"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "lafaiete",
+     "titulo": "Lafaiete, a nossa cidade",
+     "abertura": "O essencial da cidade hoje. A cobertura completa está no jornal O Carijó",
+     "itens": [
+      {
+       "titulo": "Hospital Regional deve ficar para 2027",
+       "selo": "Previsão",
+       "texto": "A obra entrou na reta final e ainda contrata pedreiros e serventes, mas não há data oficial para atender pacientes. O Governo de Minas falava em terminar em dezembro de 2026; a Prefeitura fala em maio de 2027 e documentos do acordo de Brumadinho, que pagam R$ 33 milhões em equipamentos, apontam o primeiro semestre de 2027.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas (4/11)",
+         "url": "https://correiodeminas.com.br/2026/11/04/hospital-regional-de-lafaiete-ainda-contrata-trabalhadores-e-entra-na-reta-final-com-previsao-de-funcionamento-no-1o-semestre-de-2027/"
+        }
+       ]
+      },
+      {
+       "titulo": "Furtos não caíram na cidade",
+       "selo": "Confirmado",
+       "texto": "De janeiro a julho, Lafaiete teve 643 furtos, quase o mesmo que em 2025 (637). Em Minas, os furtos caíram 15%. Das 36 cidades mineiras com mais de 100 mil moradores, só 4 não tiveram queda, e Lafaiete é uma delas.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas (9/11)",
+         "url": "https://correiodeminas.com.br/2026/11/09/conselheiro-lafaiete-tem-643-furtos-em-sete-meses-de-2026-e-nao-acompanha-a-queda-de-minas/"
+        }
+       ]
+      },
+      {
+       "titulo": "PM prende dois por tráfico no bairro Carijós",
+       "selo": "Confirmado",
+       "texto": "No domingo (8/11), a Polícia Militar prendeu dois homens no bairro Carijós e apreendeu mais de 250 porções de drogas, balanças e R$ 2.622 em dinheiro.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas (9/11)",
+         "url": "https://correiodeminas.com.br/2026/11/09/cerco-fechado-pm-usa-inteligencia-e-cao-policial-para-prender-dois-e-apreender-mais-de-250-porcoes-de-drogas-em-lafaiete/"
+        }
+       ]
+      },
+      {
+       "titulo": "BR-040 fecha por uma hora no sábado",
+       "selo": "Confirmado",
+       "texto": "No sábado (14/11), das 15h às 16h, a BR-040 para nos dois sentidos no km 612, em Congonhas, para uma detonação de rocha das obras de duplicação. Quem for viajar deve se programar.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas (9/11)",
+         "url": "https://correiodeminas.com.br/2026/11/09/epr-via-mineira-programa-desmonte-controlado-de-rocha-em-congonhas-para-avanco-das-obras-de-duplicacao-da-br-040/"
+        }
+       ]
+      }
+     ],
+     "caixa": {
+      "titulo": "Quer mais da cidade?",
+      "texto": "O Carijó é o jornal só de Conselheiro Lafaiete, com Prefeitura, Câmara, saúde, escolas, vagas do Sine, segurança e esporte. Na Banca, é o cartão logo abaixo do Terra Brasilis."
+     }
+    }
+   ],
+   "tempo": {
+    "texto": "Hoje e quarta seguem frios e chuvosos. A partir de quinta esquenta aos poucos, mas a chuva continua até o fim de semana. Guarda-chuva e agasalho.",
+    "dias": [
+     {
+      "dia": "Ter 10",
+      "min": 12,
+      "max": 13,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Qua 11",
+      "min": 13,
+      "max": 18,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Qui 12",
+      "min": 14,
+      "max": 21,
+      "ceu": "Pancadas"
+     },
+     {
+      "dia": "Sex 13",
+      "min": 16,
+      "max": 23,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Sáb 14",
+      "min": 16,
+      "max": 24,
+      "ceu": "Chuva"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "HG Brasil, previsão atualizada em 9/11",
+      "url": "https://hgbrasil.com/weather/places/brazil/mg/conselheiro-lafaiete"
+     }
+    ]
+   },
+   "historia": {
+    "titulo": "A bandeira que nasceu quatro dias depois da República",
+    "texto": "Na semana do 15 de novembro, vale lembrar que a bandeira verde-amarela com o círculo azul e as estrelas é filha da República. Ela foi criada pelo Decreto nº 4, de 19 de novembro de 1889, apenas quatro dias depois da queda do Império. O desenho foi idealizado por Raimundo Teixeira Mendes e Miguel Lemos, com o astrônomo Manuel Pereira Reis, e pintado por Décio Villares. O lema “Ordem e Progresso” vem das ideias do filósofo francês Auguste Comte, o positivismo, muito forte entre os militares republicanos. As estrelas mostram o céu do Rio de Janeiro na manhã de 15 de novembro de 1889, e cada uma representa um estado. Por isso, o 19 de novembro é o Dia da Bandeira.",
+    "linha": [
+     {
+      "ano": "1822",
+      "fato": "Brasil independente adota a bandeira do Império, com a coroa"
+     },
+     {
+      "ano": "1889",
+      "fato": "15/11: Proclamação da República; 19/11: nova bandeira"
+     },
+     {
+      "ano": "1971",
+      "fato": "Lei nº 5.700 define as regras de uso da bandeira e dos símbolos nacionais"
+     },
+     {
+      "ano": "1992",
+      "fato": "Lei atualiza a bandeira para 27 estrelas"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "Wikipédia, Bandeira do Brasil",
+      "url": "https://pt.wikipedia.org/wiki/Bandeira_do_Brasil"
+     }
+    ]
+   },
+   "palavrinhas": [
+    {
+     "termo": "NIS",
+     "def": "Número de Identificação Social. É o número de quem está no Cadastro Único e define o dia do pagamento do Bolsa Família."
+    },
+    {
+     "termo": "Pedido de vista",
+     "def": "Quando um juiz pede mais tempo para estudar um processo antes de votar. O julgamento fica parado enquanto isso."
+    },
+    {
+     "termo": "Lista tríplice",
+     "def": "Lista com os três nomes mais votados por uma categoria, da qual o governante escolhe um para o cargo."
+    },
+    {
+     "termo": "Ministério Público",
+     "def": "Órgão que acusa nos processos criminais e defende os interesses da sociedade, fiscalizando governos e empresas."
+    },
+    {
+     "termo": "Positivismo",
+     "def": "Corrente de ideias do francês Auguste Comte, que pregava ordem social e progresso pela ciência. Inspirou o lema da bandeira."
+    }
+   ],
+   "agenda": [
+    {
+     "quando": "Hoje (10/11)",
+     "oque": "Eleição da lista tríplice do Ministério Público de Minas; Câmara ouve especialistas sobre maioridade penal"
+    },
+    {
+     "quando": "11 e 12/11",
+     "oque": "Cúpula de líderes da COP31, com Lula; Orçamento de 2027 apresentado no Congresso (11/11)"
+    },
+    {
+     "quando": "13/11",
+     "oque": "Último dia do cadastro de creche e pré-escola em Lafaiete (app Lafaiete Digital)"
+    },
+    {
+     "quando": "14/11",
+     "oque": "Dia Mundial do Diabetes: ação na Praça do Cristo (9h às 16h); BR-040 fecha das 15h às 16h em Congonhas"
+    },
+    {
+     "quando": "15/11",
+     "oque": "Segundo dia do Enem; feriado da Proclamação da República"
+    },
+    {
+     "quando": "16 a 18/11",
+     "oque": "Pagamento antecipado do Bolsa Família de novembro"
+    },
+    {
+     "quando": "19/11",
+     "oque": "Dia da Bandeira"
+    },
+    {
+     "quando": "20/11",
+     "oque": "Feriado nacional da Consciência Negra"
+    }
+   ],
+   "conversa": [
+    "Quem você conhece que recebe o Bolsa Família? Receber mais cedo ajuda a família a se organizar?",
+    "Você acha certo um juiz poder segurar um processo por meses para estudar melhor? Qual seria um prazo justo?",
+    "Se você fosse desenhar uma bandeira para Lafaiete, o que colocaria nela?"
+   ],
+   "fechamento": "Terra Brasilis, edição nº 2, fechada na manhã de 10/11/2026."
+  },
+  {
    "numero": 1,
    "data": "2026-11-10",
    "tempoLeitura": 11,

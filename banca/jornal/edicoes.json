@@ -1,521 +1,541 @@
 {
-  "atualizadoEm": "2026-11-09T23:40:00-03:00",
-  "edicoes": [
+ "atualizadoEm": "2026-11-10T08:05:00-03:00",
+ "edicoes": [
+  {
+   "id": "2026-11-10",
+   "numero": 1,
+   "data": "2026-11-10",
+   "tempoLeitura": 13,
+   "fechamento": "Edição de terça-feira, 10/11, atualizada na manhã de 10/11 (horário de Brasília).",
+   "recado": "Bom dia! Hoje a notícia principal é de saúde e foi feita aqui no Brasil: um grande estudo mostrou que, para quem já teve derrame, manter a pressão mais baixa protege o coração e o cérebro. Também tem a semana de Lula na conferência do clima, o 13º de quem se aposentou este ano, um alerta sobre remédios para emagrecer e dicas para não cair em golpe na Black Friday.",
+   "citacao": "Pressão mais baixa, menos risco de novo derrame",
+   "capa": {
+    "chapeu": "Saúde feita no Brasil",
+    "titulo": "Estudo brasileiro: pressão mais baixa protege quem já teve derrame",
+    "linhaFina": "Mais de 4 mil pacientes de 30 hospitais e centros brasileiros participaram. Quem manteve o “número de cima” da pressão abaixo de 12 teve 21% menos infartos, derrames e internações do que quem ficou abaixo de 14. O trabalho saiu numa das revistas de medicina mais importantes do mundo. Mas atenção: a meta de cada pessoa é decidida com o médico.",
+    "selo": "Confirmado"
+   },
+   "resumo": [
     {
-      "id": "2026-11-10",
-      "numero": 1,
-      "data": "2026-11-10",
-      "tempoLeitura": 12,
-      "fechamento": "Edição de terça-feira, 10/11, fechada na noite de 9/11 (horário de Brasília).",
-      "recado": "Bom dia! Este é o seu jornal de cada dia, feito para ler com calma, com café. Aqui as notícias vêm explicadas sem palavrão técnico: quando uma palavra difícil aparecer, ela vem traduzida logo ao lado ou no cantinho “Palavrinhas”, no fim. Hoje: o que muda na sua semana de trabalho, um remédio para emagrecer em comprimido, um alerta sobre golpes com voz falsa e um pouquinho do mundo.",
-      "citacao": "Duas folgas por semana, sem cortar o salário",
-      "capa": {
-        "chapeu": "Política no Brasil",
-        "titulo": "Eleição decidida, agora o país volta ao trabalho",
-        "linhaFina": "Lula foi reeleito em 25 de outubro com 51,79% dos votos e começa o novo mandato em janeiro. Nesta semana, ele está na Turquia para a conferência do clima, enquanto em Brasília o Congresso discute a idade para um jovem ser preso, a proibição das apostas on-line e o Orçamento do ano que vem. E a mudança mais sentida no bolso do trabalhador, o fim da escala 6x1, já tem data para começar.",
-        "selo": "Confirmado"
-      },
-      "resumo": [
-        {
-          "tema": "Brasil",
-          "texto": "O fim da escala 6x1 começa a valer em meados de dezembro: no máximo 42 horas por semana e duas folgas, sem cortar salário."
-        },
-        {
-          "tema": "Brasil",
-          "texto": "Lula discursa na quarta (11/11) na conferência do clima da ONU, na Turquia, levando o menor desmatamento da Amazônia desde 1988."
-        },
-        {
-          "tema": "Saúde",
-          "texto": "A Anvisa aprovou a versão em comprimido do remédio para obesidade semaglutida (Wegovy). Deve chegar às farmácias no 1º semestre de 2027."
-        },
-        {
-          "tema": "Saúde",
-          "texto": "Novembro Azul: o Brasil deve ter cerca de 78 mil casos novos de câncer de próstata por ano. Conversar com o médico é o primeiro passo."
-        },
-        {
-          "tema": "Tecnologia",
-          "texto": "Golpes com voz clonada por inteligência artificial seguem crescendo. Combine uma “senha da família” para se proteger."
-        },
-        {
-          "tema": "Mundo",
-          "texto": "O petróleo ficou mais barato depois que Trump disse ser “muito improvável” voltar a bombardear o Irã."
-        }
-      ],
-      "numeros": [
-        {
-          "rotulo": "Lula no 2º turno",
-          "valor": "51,79%",
-          "nota": "contra 48,21% de Flávio Bolsonaro, em 25/10",
-          "fonte": "TSE"
-        },
-        {
-          "rotulo": "Nova jornada",
-          "valor": "42 horas",
-          "nota": "máximo por semana a partir de dezembro de 2026; 40 horas em dezembro de 2027",
-          "fonte": "Emenda à Constituição promulgada em 16/10"
-        },
-        {
-          "rotulo": "Desmatamento",
-          "valor": "3.335 km²",
-          "nota": "na Amazônia entre ago./2025 e jul./2026, o menor desde 1988",
-          "fonte": "Inpe"
-        },
-        {
-          "rotulo": "Câncer de próstata",
-          "valor": "77.920",
-          "nota": "casos novos esperados por ano no Brasil (2026 a 2028)",
-          "fonte": "Inca"
-        },
-        {
-          "rotulo": "Golpes digitais",
-          "valor": "24%",
-          "nota": "dos brasileiros com mais de 16 anos já caíram em algum golpe digital",
-          "fonte": "DataSenado, citado pelo Diário do Pará (18/7)"
-        }
-      ],
-      "politica": {
-        "abertura": "O que acontece em Brasília e como isso chega na vida da gente.",
-        "itens": [
-          {
-            "titulo": "Lula reeleito: o que vem agora",
-            "texto": "O Tribunal Superior Eleitoral (TSE), que organiza as eleições, confirmou: Lula (PT) teve 64,3 milhões de votos (51,79%) e Flávio Bolsonaro (PL), 59,8 milhões (48,21%), no segundo turno de 25 de outubro. Foi uma disputa apertada: no primeiro turno, em 4 de outubro, Flávio tinha ficado na frente. O novo mandato começa em janeiro de 2027. Outro detalhe importante: o partido de Flávio, o PL, elegeu a maior bancada de deputados (121 dos 513). Ou seja, o presidente vai precisar negociar muito com o Congresso para aprovar seus projetos.",
-            "selo": "Confirmado",
-            "fontes": [
-              {
-                "nome": "TSE, resultado do 2º turno (25/10)",
-                "url": "https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/presidente-do-tse-anuncia-reeleicao-de-lula-e-faz-balanco-do-2o-turno-das-eleicoes-2026"
-              },
-              {
-                "nome": "Wikipédia, eleições gerais de 2026 (composição da Câmara)",
-                "url": "https://en.wikipedia.org/wiki/2026_Brazilian_general_election"
-              }
-            ]
-          },
-          {
-            "titulo": "Fim da escala 6x1: quando muda e o que muda",
-            "texto": "A mudança na Constituição foi aprovada pelo Congresso e promulgada em 16 de outubro. Na prática: a partir de meados de dezembro, quem trabalha com carteira assinada passa a ter no máximo 42 horas por semana e duas folgas semanais, de preferência com o domingo. Em dezembro de 2027 o limite cai para 40 horas. O salário não pode diminuir. Falta um decreto do governo com os detalhes (por exemplo, como contar as folgas em quem trabalha em escala). Ele era esperado para 9/11, mas foi adiado e deve sair depois de 16/11, quando Lula voltar de viagem.",
-            "selo": "Confirmado",
-            "fontes": [
-              {
-                "nome": "Brasil de Fato, emenda promulgada (16/10)",
-                "url": "https://www.brasildefato.com.br/2026/10/16/promulgada-escala-5x2-passa-a-valer-na-semana-anterior-ao-natal/"
-              },
-              {
-                "nome": "O Tempo/Folhapress, decreto adiado (9/11)",
-                "url": "https://www.otempo.com.br/economia/2026/11/9/decreto-que-regulamenta-fim-da-6x1-tem-publicacao-adiada-e-so-deve-sair-apos-retorno-de-lula"
-              }
-            ]
-          },
-          {
-            "titulo": "Lula leva a floresta para a Turquia",
-            "texto": "A COP31, a grande reunião anual da ONU sobre o clima, começou em 9/11 em Antália, na Turquia, e vai até 20/11. Lula discursa na quarta-feira (11/11). Ele chega com uma boa notícia: o desmatamento da Amazônia foi o menor desde 1988, segundo o Inpe, o instituto que mede a floresta por satélite. Ele também tenta juntar dinheiro para um fundo que paga países por manterem suas florestas em pé. Depois, segue para uma reunião de países asiáticos nas Filipinas.",
-            "selo": "Confirmado",
-            "fontes": [
-              {
-                "nome": "Revista Amazônia, agenda de Lula na COP31 (7/11)",
-                "url": "https://revistaamazonia.com.br/lula-cop31-cupula-de-lideres-antalia-agenda-tfff-desmatamento-asean"
-              },
-              {
-                "nome": "Jornal do Comércio, Lula sobre a COP31 (6/11)",
-                "url": "https://www.jornaldocomercio.com/economia/2026/11/1269553-lula-vamos-a-cop31-com-proposta-para-que-mundo-leve-a-serio-reducao-de-dependencia-de-petroleo.html"
-              }
-            ]
-          },
-          {
-            "titulo": "Congresso discute a idade para ser preso",
-            "texto": "Nesta terça (10/11) e quarta (11/11), deputados ouvem especialistas sobre uma proposta antiga, de 2015, que reduz a maioridade penal, ou seja, a idade a partir da qual uma pessoa responde a crimes como adulto (hoje, 18 anos). O relator, deputado Mendonça Filho, quer apresentar seu parecer até o fim de novembro. Ainda não há data para votação, e o Senado só vai olhar o assunto depois da Câmara.",
-            "selo": "Confirmado",
-            "fontes": [
-              {
-                "nome": "ND Mais, a pauta do Congresso na semana (9/11)",
-                "url": "https://ndmais.com.br/politica/maioridade-penal-congresso-debate-reducao-nesta-semana/"
-              }
-            ]
-          },
-          {
-            "titulo": "Apostas on-line proibidas, mas falta o Congresso",
-            "texto": "Em setembro, Lula assinou uma medida provisória, um tipo de regra que vale na hora mas precisa ser confirmada pelo Congresso em alguns meses, que proíbe as “bets” (sites de apostas esportivas) e jogos como o “tigrinho”. O governo agora tenta montar, nesta semana, a comissão de deputados e senadores que vai analisar a medida. Se o Congresso não votar a tempo, ela perde a validade.",
-            "selo": "Confirmado",
-            "fontes": [
-              {
-                "nome": "ND Mais, a pauta do Congresso na semana (9/11)",
-                "url": "https://ndmais.com.br/politica/maioridade-penal-congresso-debate-reducao-nesta-semana/"
-              },
-              {
-                "nome": "Diário do Pará, o que a medida das bets muda (25/9)",
-                "url": "https://diariodopara.com.br/seu-bolso/governo-anuncia-mp-para-proibir-bets-e-cassinos-on-line-no-brasil-veja-o-que-muda/"
-              }
-            ]
-          },
-          {
-            "titulo": "O dinheiro do país para 2027",
-            "texto": "Na quarta (11/11), o ministro do Planejamento, Bruno Moretti, apresenta aos parlamentares o Orçamento de 2027, que é a lista de quanto o governo pode gastar em cada área, como saúde e educação. A votação final está marcada para 16 e 17 de dezembro.",
-            "selo": "Confirmado",
-            "fontes": [
-              {
-                "nome": "ND Mais, a pauta do Congresso na semana (9/11)",
-                "url": "https://ndmais.com.br/politica/maioridade-penal-congresso-debate-reducao-nesta-semana/"
-              }
-            ]
-          }
-        ],
-        "explica": {
-          "titulo": "Entenda: por que um país dividido ao meio importa",
-          "texto": "Lula venceu por pouco mais de 4 milhões de votos, e o partido do adversário terá mais deputados que qualquer outro. Isso quer dizer que, nos próximos anos, quase nada passa no Congresso sem conversa e acordo. Para quem acompanha as notícias, a dica é observar não só o que o presidente promete, mas o que os deputados e senadores aceitam votar."
-        }
-      },
-      "saude": {
-        "abertura": "O caderno mais recheado da casa: remédios novos, estudos importantes e o que muda no SUS.",
-        "aviso": "Importante: estas notícias servem para informar e para levar perguntas à consulta. Nunca comece, pare ou troque um remédio sem conversar com o seu médico.",
-        "frentes": [
-          {
-            "area": "Remédios novos",
-            "itens": [
-              {
-                "titulo": "Remédio para emagrecer agora em comprimido",
-                "texto": "A Anvisa, a agência que libera remédios no Brasil, aprovou em 4/11 a semaglutida em comprimido (nome comercial Wegovy) para tratar obesidade em adultos. É a mesma substância do famoso Ozempic, que é injetável. No estudo principal, quem tomou a dose mais alta perdeu em média cerca de 13,6% do peso em pouco mais de um ano. O preço ainda não foi definido, e a previsão é chegar às farmácias no primeiro semestre de 2027. Vai precisar de receita.",
-                "selo": "Confirmado",
-                "fontes": [
-                  {
-                    "nome": "Agência GBC, Anvisa aprova semaglutida oral (8/11)",
-                    "url": "https://agenciagbc.com/2026/11/08/ozempic-em-comprimido-e-aprovado-no-brasil-veja-quanto-pode-custar-e-quando-chega-as-farmacias/"
-                  }
-                ]
-              },
-              {
-                "titulo": "Um remédio novo para evitar um segundo derrame",
-                "texto": "Quem já teve um AVC (o derrame causado por um coágulo que entope uma artéria do cérebro) corre risco de ter outro. Um grande estudo com mais de 12 mil pacientes em 37 países testou um remédio novo, o asundexiane, junto com a aspirina. O resultado: o número de novos AVCs caiu de 8,4% para 6,2%, sem aumentar de forma importante os sangramentos graves, que é o grande medo com esse tipo de remédio. Ele ainda não está aprovado nos EUA nem no Brasil.",
-                "selo": "Confirmado",
-                "fontes": [
-                  {
-                    "nome": "American Heart Association, resultado do OCEANIC-STROKE",
-                    "url": "https://newsroom.heart.org/news/new-medication-may-reduce-chances-of-a-second-clot-caused-stroke-without-bleeding-risk"
-                  },
-                  {
-                    "nome": "TCTMD, análise apresentada em 7/11",
-                    "url": "https://www.tctmd.com/news/oceanic-stroke-asundexian-benefits-seen-across-vascular-risk-strata"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "area": "Coração e longevidade",
-            "itens": [
-              {
-                "titulo": "Remédio de colesterol depois dos 70: parar ou continuar?",
-                "texto": "Muitos idosos tomam estatina (como sinvastatina ou atorvastatina) para baixar o colesterol, mesmo sem nunca ter tido problema no coração. Um estudo suíço com cerca de 1.900 idosos, com idade média de 77 anos, testou o que acontece quando eles param. Nos primeiros dois anos, parar pareceu não fazer diferença. Mas, acompanhando por até quatro anos, quem parou teve mais infartos (1,6% contra 0,6%), mais derrames (2,2% contra 0,8%) e mais mortes (9,8% contra 8%). Os especialistas dizem que a decisão deve ser feita caso a caso, com o médico.",
-                "selo": "Confirmado",
-                "fontes": [
-                  {
-                    "nome": "Healio, estudo STREAM no congresso da AHA (8/11)",
-                    "url": "https://www.healio.com/news/cardiology/20261108/new-study-informs-statin-discontinuation-in-older-adults-without-cvd"
-                  }
-                ]
-              },
-              {
-                "titulo": "Quando o exame melhora, mas a pessoa não",
-                "texto": "Dois estudos grandes apresentados no maior congresso de cardiologia dos EUA, em Chicago (6 a 9/11), trouxeram uma lição curiosa. Um remédio derrubou em 78% uma gordura do sangue ligada a infartos, a lipoproteína(a). Outro baixou bastante uma inflamação do sangue. Mas, nos dois casos, o número de infartos e derrames não diminuiu. Moral da história: um exame de sangue “bonito” não garante, sozinho, um coração protegido. Por isso os remédios só são aprovados quando mostram que evitam doença de verdade.",
-                "selo": "Explicação",
-                "fontes": [
-                  {
-                    "nome": "American Heart Association, estudo Lp(a) HORIZON (7/11)",
-                    "url": "https://newsroom.heart.org/news/lp-a-horizon-trial-lp-a-fell-by-78-but-cardiovascular-outcomes-unexpectedly-neutral"
-                  },
-                  {
-                    "nome": "Healio, estudo ZEUS (7/11)",
-                    "url": "https://www.healio.com/news/cardiology/20261107/ziltivekimab-cuts-inflammation-but-not-cv-events-in-atherosclerosis-kidney-disease"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "area": "Câncer",
-            "itens": [
-              {
-                "titulo": "Novembro Azul: o recado sobre a próstata",
-                "texto": "Novembro é o mês de lembrar da saúde do homem. Segundo o Inca, o instituto nacional do câncer, o Brasil deve ter cerca de 78 mil casos novos de câncer de próstata por ano até 2028. É o tumor mais comum nos homens, tirando o de pele. Um ponto que confunde muita gente: o Ministério da Saúde não recomenda exame de rotina para todo homem sem sintomas, porque ele pode dar falso alarme e levar a tratamentos desnecessários. O certo é cada homem conversar com o médico, levando em conta idade e casos na família. Quem tem sintomas (como dificuldade para urinar) deve procurar atendimento.",
-                "selo": "Confirmado",
-                "fontes": [
-                  {
-                    "nome": "Diário do Grande ABC, Novembro Azul e números do Inca (29/10)",
-                    "url": "https://www.dgabc.com.br/Noticia/4365819/novembro-azul-brasil-deve-ter-77-9-mil-casos-de-cancer-de-prostata"
-                  }
-                ]
-              },
-              {
-                "titulo": "Próstata avançada: mais tempo de vida",
-                "texto": "Um estudo europeu com 1.173 homens com câncer de próstata já espalhado mostrou que somar um remédio, a abiraterona, ao tratamento padrão aumentou o tempo de vida típico de 4,4 para 6,2 anos. Em troca, pressão alta forte ficou mais comum. O estudo foi apresentado num congresso em outubro e ainda não saiu publicado por completo.",
-                "selo": "Confirmado",
-                "fontes": [
-                  {
-                    "nome": "CURE, resultados de próstata no congresso ESMO 2026",
-                    "url": "https://www.curetoday.com/view/3-prostate-cancer-results-from-esmo-2026-patients-should-know"
-                  }
-                ]
-              },
-              {
-                "titulo": "Mamografia pelo SUS a partir dos 40",
-                "texto": "Vale lembrar: desde 2025, o SUS oferece a mamografia de rotina para mulheres de 40 a 74 anos (antes era de 50 a 69). Com pedido médico, mulheres de qualquer idade podem fazer o exame. O Ministério da Saúde também promete oferecer 23 remédios novos contra o câncer, de graça, até dezembro de 2026.",
-                "selo": "Confirmado",
-                "fontes": [
-                  {
-                    "nome": "Sanar, balanço do Ministério da Saúde (1/11)",
-                    "url": "https://sanarmed.com/noticias/sus-amplia-mamografia-faixa-40-74-23-medicamentos-oncologicos/"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "area": "Vacinas e doenças",
-            "itens": [
-              {
-                "titulo": "Sarampo aparece na fronteira do Amazonas",
-                "texto": "O Amazonas confirmou 21 casos de sarampo neste ano, quase todos em cidades na fronteira com Peru e Colômbia, como Tabatinga. O Ministério da Saúde liberou R$ 524 mil em 9/11 para vacinar e conter a doença. Os casos vieram de fora: o vírus não circula de forma permanente no Brasil desde 2024. Nos EUA, a situação é bem pior, com mais de 5 mil casos em 2026, o maior número em 35 anos, depois que a vacinação de crianças caiu. A vacina tríplice viral é gratuita no posto de saúde; vale conferir a carteirinha de filhos e netos.",
-                "selo": "Confirmado",
-                "fontes": [
-                  {
-                    "nome": "Gazeta da Amazônia, sarampo no Amazonas (9/11)",
-                    "url": "https://gazetadaamazonia.com.br/09/11/2026/vacinacao-sarampo-no-amazonas/"
-                  },
-                  {
-                    "nome": "Al Jazeera, sarampo nos EUA (7/11)",
-                    "url": "https://aljazeera.com/news/2026/11/7/cdc-reports-more-than-5000-measles-cases-highest-number-in-35-years"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "area": "SUS mais perto de você",
-            "itens": [
-              {
-                "titulo": "Seu histórico médico vai te acompanhar no SUS",
-                "texto": "O Ministério da Saúde criou em outubro uma nova política de saúde digital. A ideia é que suas informações de saúde (exames, consultas, vacinas) fiquem juntas e sigam você em qualquer posto ou hospital do SUS, usando o CPF como identificação principal. O aplicativo Meu SUS Digital ganhou mais de 30 funções novas, e as consultas a distância já passaram de 12 milhões desde 2025. O plano detalhado de como tudo vai funcionar deve ficar pronto em até seis meses.",
-                "selo": "Confirmado",
-                "fontes": [
-                  {
-                    "nome": "Brasil 61, SUS terá histórico clínico integrado (4/11)",
-                    "url": "https://brasil61.com/n/sus-tera-historico-clinico-integrado-e-ampliacao-de-servicos-digitais-bras2617421.amp"
-                  }
-                ]
-              },
-              {
-                "titulo": "Remédio feito no Brasil",
-                "texto": "Quase toda a matéria-prima dos remédios vendidos aqui vem de fora, principalmente da China e da Índia. Na pandemia, isso causou falta de medicamentos. Agora a Anvisa vai dar prioridade, em 2027, à análise de até oito pedidos de fabricantes que produzem essa matéria-prima no Brasil.",
-                "selo": "Confirmado",
-                "fontes": [
-                  {
-                    "nome": "Agência Brasil via Diario de Pernambuco, Anvisa e insumos nacionais (7/11)",
-                    "url": "https://www.diariodepernambuco.com.br/amp/dp-/dp-saude/2026/11/11728603-anvisa-vai-selecionar-dossies-para-incentivar-a-producao-nacional-de-insumos-farmaceuticos.html"
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        "explica": {
-          "titulo": "Como ler uma notícia de saúde sem cair em armadilha",
-          "texto": "Três perguntas ajudam: 1) Foi testado em pessoas ou só em laboratório? 2) Quantas pessoas participaram? Estudos com milhares de pessoas, como os desta edição, valem muito mais que um relato isolado. 3) O remédio evitou a doença ou só melhorou um exame? Como vimos no caderno, as duas coisas nem sempre andam juntas."
-        }
-      },
-      "tecnologia": {
-        "abertura": "A inteligência artificial (IA) são programas de computador que conversam, escrevem e analisam imagens quase como uma pessoa. Ela já está no celular, no banco e no consultório. Aviso de transparência: este jornal é escrito com a ajuda do Claude, uma IA da empresa Anthropic.",
-        "itens": [
-          {
-            "titulo": "A IA já ajuda o médico a acertar o diagnóstico",
-            "texto": "Um estudo publicado na revista científica Science comparou médicos e IA resolvendo casos difíceis passo a passo, pedindo exames como na vida real. A IA acertou mais vezes. Mas há ressalvas: eram casos raros, numa simulação, e os médicos não puderam consultar colegas. A IA ainda é uma ajudante, e não substitui a consulta.",
-            "selo": "Confirmado",
-            "fontes": [
-              {
-                "nome": "ACSH, a IA diagnostica melhor? (3/11)",
-                "url": "https://www.acsh.org/news/2026/11/03/does-ai-diagnose-better-or-take-different-test-50427"
-              }
-            ]
-          },
-          {
-            "titulo": "Em conversa longa, a IA pode “esquecer” as regras",
-            "texto": "Pesquisadores testaram assistentes de IA em conversas compridas. Quando a conversa ficava longa demais e a IA precisava “resumir” o que veio antes, ela desrespeitou uma instrução combinada em 38% das vezes, contra 10% em conversas curtas. É um estudo pequeno e ainda não revisado por outros cientistas, mas o recado é útil: confira o que a IA responde, principalmente em assuntos de saúde e dinheiro.",
-            "selo": "Confirmado",
-            "fontes": [
-              {
-                "nome": "arXiv, estudo ARCBench (nov.)",
-                "url": "https://arxiv.org/abs/2611.03223"
-              }
-            ]
-          },
-          {
-            "titulo": "IA de graça já invade computadores tão bem quanto a paga",
-            "texto": "Num teste de segurança feito por uma empresa americana, uma IA chinesa gratuita conseguiu invadir uma rede de computadores de mentirinha tão bem quanto uma IA de acesso restrito da OpenAI (a dona do ChatGPT). Para nós, isso significa que ferramentas poderosas estão cada vez mais nas mãos de qualquer um, inclusive de golpistas. Por isso o cuidado com senhas e mensagens suspeitas só aumenta.",
-            "selo": "Confirmado",
-            "fontes": [
-              {
-                "nome": "Vals AI, teste de ataque cibernético",
-                "url": "https://www.vals.ai/benchmarks/cyber_offense"
-              }
-            ]
-          },
-          {
-            "titulo": "Quase todo estudante já usa IA",
-            "texto": "Uma pesquisa com mais de 27 mil estudantes em 35 países, divulgada em julho, mostrou que 88% deles usam IA nos estudos. Só 28% acham que as provas medem bem o que o trabalho vai exigir. As escolas e faculdades estão repensando como avaliar os alunos.",
-            "selo": "Confirmado",
-            "fontes": [
-              {
-                "nome": "ETIH, pesquisa do Digital Education Council (jul.)",
-                "url": "https://www.edtechinnovationhub.com/news/q6zw9wco2mttajdbd1jyeonjnpiovu"
-              }
-            ]
-          },
-          {
-            "titulo": "A lei brasileira da IA continua parada",
-            "texto": "O projeto que cria regras para a IA no Brasil (PL 2.338) foi aprovado pelo Senado em dezembro de 2024 e está na Câmara desde março de 2025. Em outubro, ainda esperava o parecer do relator, deputado Aguinaldo Ribeiro. A proposta prevê, por exemplo, que a pessoa prejudicada por uma decisão tomada por IA tenha direito a explicação e a revisão feita por um ser humano.",
-            "selo": "Confirmado",
-            "fontes": [
-              {
-                "nome": "Merovian, situação do PL 2.338 (out.)",
-                "url": "https://merovian.app/blog/pl-2338-marco-legal-da-inteligencia-artificial"
-              }
-            ]
-          }
-        ],
-        "protejase": {
-          "titulo": "Proteja-se: golpe da voz clonada",
-          "intro": "Com poucos segundos de áudio, tirado de um vídeo ou de uma ligação, a IA consegue imitar a voz de um filho ou neto pedindo dinheiro com urgência. Segundo o DataSenado, 24% dos brasileiros acima de 16 anos já sofreram algum golpe digital.",
-          "dicas": [
-            "Combine com a família uma “senha” ou pergunta que só vocês sabem responder.",
-            "Pedido de dinheiro com pressa? Desligue e ligue de volta para o número que você já tem salvo.",
-            "Antes de qualquer Pix, confira o nome de quem vai receber.",
-            "Nunca passe senhas ou códigos que chegam por mensagem, nem para quem diz ser do banco.",
-            "Salve os contatos com nome e sobrenome, e não só como “filho” ou “mãe”.",
-            "Desconfie de vídeo ou áudio com boca fora de sincronia, voz metálica ou pele “lisa demais”."
-          ],
-          "fontes": [
-            {
-              "nome": "Diário do Pará, como proteger idosos dos golpes com IA (18/7)",
-              "url": "https://diariodopara.com.br/cotidiano/clonagem-de-voz-e-videos-falsos-veja-como-proteger-os-idosos-dos-golpes-com-ia/"
-            }
-          ]
-        }
-      },
-      "mundo": {
-        "abertura": "Só o essencial do que acontece lá fora, e por que pode chegar até aqui.",
-        "itens": [
-          {
-            "titulo": "Petróleo mais barato",
-            "texto": "Os EUA entraram em guerra com o Irã, país do Oriente Médio, e o Irã fechou parte da passagem marítima por onde sai muito do petróleo do mundo. Agora Trump disse que voltar a bombardear é “muito improvável” se houver acordo, e o preço do petróleo caiu. Se continuar assim, pode aliviar o preço dos combustíveis com o tempo.",
-            "selo": "Confirmado",
-            "fontes": [
-              {
-                "nome": "The New Arab, Trump minimiza volta à guerra (9/11)",
-                "url": "https://www.newarab.com/news/trump-plays-down-return-war-chinese-diplomats-tehran"
-              }
-            ]
-          },
-          {
-            "titulo": "Rússia e Ucrânia conversam de novo",
-            "texto": "Nesta terça e quarta (10 e 11/11), representantes da Rússia, da Ucrânia e dos EUA se reúnem em Abu Dhabi, nos Emirados Árabes, para negociar o fim da guerra. Na noite anterior, a Rússia lançou mais de 300 drones (aviõezinhos sem piloto) contra a Ucrânia, segundo o governo ucraniano.",
-            "selo": "Confirmado",
-            "fontes": [
-              {
-                "nome": "Anadolu via aNews, ataques da noite de 8 para 9/11",
-                "url": "https://www.anews.com.tr/world/2026/11/09/russia-ukraine-trade-accusations-about-overnight-strikes-that-kill-1-injure-7"
-              }
-            ]
-          },
-          {
-            "titulo": "Tempo: frio fora de época e El Niño a caminho",
-            "texto": "Uma frente fria forte para novembro chegou até a Bahia e deve ficar no litoral até quarta (11/11), enquanto o interior do Nordeste tem calor de até 41 °C. E vem aí o El Niño, o aquecimento das águas do Oceano Pacífico que muda as chuvas no mundo todo: em outubro, a agência americana de oceanos dava mais de 83% de chance de ele ser forte. No Brasil, costuma trazer seca no Norte e no Nordeste e chuva demais no Sul. Novo boletim sai na quinta (12/11).",
-            "selo": "Confirmado",
-            "fontes": [
-              {
-                "nome": "Climatempo, frente fria de novembro",
-                "url": "https://www.climatempo.com.br/noticia/frio/grande-e-forte-frente-fria-avanca-sobre-o-brasil-entre-7-e-9-de-novembro-de-2026"
-              },
-              {
-                "nome": "NOAA, boletim do El Niño",
-                "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml"
-              }
-            ]
-          },
-          {
-            "titulo": "Uma pedrinha espacial passou, sem perigo",
-            "texto": "Um asteroide pequeno, de 4 a 9 metros, passou pela Terra em 8/11, mais perto que a Lua. Se aparecer manchete assustadora, pode ficar tranquila: ele não tinha nenhuma chance de bater aqui, e objetos desse tamanho queimam no céu antes de chegar ao chão.",
-            "selo": "Confirmado",
-            "fontes": [
-              {
-                "nome": "Fanpage.it, asteroide 2026 VR5 (8/11)",
-                "url": "https://www.fanpage.it/innovazione/scienze/la-nasa-comunica-che-un-asteroide-sta-passando-vicinissimo-alla-terra-in-questi-minuti/"
-              }
-            ]
-          }
-        ]
-      },
-      "palavrinhas": [
-        {
-          "termo": "Emenda constitucional",
-          "def": "Mudança no texto da Constituição. Precisa de muitos votos no Congresso e, depois de promulgada, vale sem precisar da assinatura do presidente."
-        },
-        {
-          "termo": "Medida provisória",
-          "def": "Regra que o presidente cria e que vale na hora, mas que precisa ser aprovada pelo Congresso em alguns meses para não perder a validade."
-        },
-        {
-          "termo": "Maioridade penal",
-          "def": "Idade a partir da qual a pessoa responde por crimes como adulto. Hoje, no Brasil, é 18 anos."
-        },
-        {
-          "termo": "Anvisa",
-          "def": "Agência do governo que autoriza a venda de remédios, vacinas e alimentos no Brasil."
-        },
-        {
-          "termo": "AVC",
-          "def": "Acidente vascular cerebral, o “derrame”: quando o sangue deixa de chegar a uma parte do cérebro."
-        },
-        {
-          "termo": "Estatina",
-          "def": "Remédio para baixar o colesterol, como sinvastatina e atorvastatina."
-        },
-        {
-          "termo": "Inteligência artificial (IA)",
-          "def": "Programas de computador que aprendem com muitos exemplos e conseguem conversar, escrever ou reconhecer imagens."
-        },
-        {
-          "termo": "El Niño",
-          "def": "Aquecimento das águas do Oceano Pacífico que muda o padrão de chuva e de calor em várias partes do mundo."
-        }
-      ],
-      "conversa": [
-        "Na sua família, alguém trabalha na escala 6x1? O que vai mudar na rotina com duas folgas por semana?",
-        "Você usaria uma IA para tirar dúvidas de saúde antes de ir ao médico? Até onde confiaria nela?"
-      ],
-      "agenda": [
-        {
-          "quando": "10 e 11/11",
-          "oque": "Deputados debatem a maioridade penal; Rússia, Ucrânia e EUA negociam em Abu Dhabi"
-        },
-        {
-          "quando": "11/11",
-          "oque": "Lula discursa na conferência do clima, na Turquia; Orçamento de 2027 é apresentado no Congresso"
-        },
-        {
-          "quando": "12/11",
-          "oque": "Novo boletim sobre o El Niño, da agência americana NOAA"
-        },
-        {
-          "quando": "A partir de 16/11",
-          "oque": "Previsão do decreto com os detalhes do fim da escala 6x1"
-        },
-        {
-          "quando": "Meados de dezembro",
-          "oque": "Começa a valer a jornada máxima de 42 horas e as duas folgas"
-        },
-        {
-          "quando": "Até dezembro",
-          "oque": "Promessa do governo de oferecer 23 remédios novos contra o câncer no SUS"
-        }
-      ]
+     "tema": "Saúde",
+     "texto": "Estudo feito em 30 centros brasileiros: depois de um derrame, pressão abaixo de 12 reduziu em 21% os problemas graves no coração e no cérebro."
+    },
+    {
+     "tema": "Brasil",
+     "texto": "Lula discursa amanhã (11/11) na conferência do clima da ONU, na Turquia, levando a queda do desmatamento na Amazônia."
+    },
+    {
+     "tema": "Brasil",
+     "texto": "Quem se aposentou pelo INSS a partir de maio recebe o 13º de uma vez só, entre 24/11 e 7/12. E a conta de luz segue sem taxa extra em novembro."
+    },
+    {
+     "tema": "Saúde",
+     "texto": "Os EUA mandaram colocar na bula dos remédios tipo Ozempic um alerta sobre um problema raro na visão. Não pare o remédio por conta própria."
+    },
+    {
+     "tema": "Saúde",
+     "texto": "Especialistas preveem mais dengue em 2027, com Minas entre os estados de alta. A hora de limpar o quintal é agora, antes do verão."
+    },
+    {
+     "tema": "Tecnologia",
+     "texto": "A Black Friday é em 27/11. Sites falsos e QR Code adulterado são os golpes mais comuns: confira sempre o nome de quem recebe o Pix."
+    },
+    {
+     "tema": "Mundo",
+     "texto": "O petróleo caiu para perto de US$ 91 o barril, o menor preço desde agosto, com a esperança de fim da guerra com o Irã."
     }
-  ]
+   ],
+   "numeros": [
+    {
+     "rotulo": "Pacientes no estudo",
+     "valor": "4.368",
+     "nota": "brasileiros que já tinham tido derrame, acompanhados por quase 4 anos",
+     "fonte": "OPTIMAL-STROKE, NEJM (7/11)"
+    },
+    {
+     "rotulo": "Menos problemas graves",
+     "valor": "21%",
+     "nota": "com o “número de cima” da pressão abaixo de 12, em vez de 14",
+     "fonte": "Healio (7/11)"
+    },
+    {
+     "rotulo": "Juros básicos",
+     "valor": "13,75%",
+     "nota": "ao ano; o Banco Central parou de baixar em 4/11",
+     "fonte": "Copom/Times Brasil"
+    },
+    {
+     "rotulo": "Dengue em 2027",
+     "valor": "860 mil",
+     "nota": "casos prováveis previstos por especialistas (podem ser de 560 mil a 1,6 milhão)",
+     "fonte": "InfoDengue/Agência Brasil (6/11)"
+    },
+    {
+     "rotulo": "Golpes na Black Friday",
+     "valor": "53%",
+     "nota": "são feitos com sites falsos; o Pix aparece em 42%",
+     "fonte": "Serasa, citada pela Forbes (28/10)"
+    },
+    {
+     "rotulo": "Energia limpa",
+     "valor": "49,5%",
+     "nota": "da energia usada no Brasil em 2025 veio de fontes renováveis",
+     "fonte": "Governo federal, via Acessa (nov.)"
+    }
+   ],
+   "politica": {
+    "abertura": "O que acontece em Brasília e como isso chega na vida da gente.",
+    "itens": [
+     {
+      "titulo": "Lula fala ao mundo sobre a floresta amanhã",
+      "texto": "Lula está desde esta terça (10/11) em Antália, na Turquia, onde acontece a COP31, a reunião anual da ONU sobre o clima. Amanhã (11/11), ao meio-dia, ele discursa na abertura da cúpula de líderes. Vai mostrar a queda do desmatamento na Amazônia e no Cerrado e que quase metade (49,5%) da energia usada no Brasil vem de fontes renováveis, como água, sol e vento. Ele também participa de um encontro sobre o fundo que paga países por manterem suas florestas em pé; a Holanda deve anunciar US$ 500 milhões. Depois, segue para as Filipinas.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "Acessa, agenda de Lula na COP31 (nov.)",
+        "url": "https://www.acessa.com/noticias/2026/11/343801-lula-apresentara-avancos-ambientais-na-cop31-na-turquia.html"
+       },
+       {
+        "nome": "Itamaraty, participação de Lula na COP31",
+        "url": "https://www.gov.br/mre/pt-br/canais_atendimento/imprensa/notas-a-imprensa/participacao-do-presidente-luiz-inacio-lula-da-silva-na-cop-31-na-turquia"
+       }
+      ]
+     },
+     {
+      "titulo": "Juros parados: o que diz o Banco Central",
+      "texto": "Na semana passada (4/11), o Copom, o grupo do Banco Central que decide a taxa básica de juros, a Selic, manteve a taxa em 13,75% ao ano, interrompendo uma série de cinco quedas seguidas. O motivo: a inflação (a alta dos preços) está acima do limite da meta, e a guerra no Oriente Médio deixa o petróleo instável. Hoje (10/11) sai a ata, o documento que explica a decisão em detalhes. Na quinta (12/11), o IBGE divulga a inflação de outubro.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "Times Brasil, Copom mantém a Selic (4/11)",
+        "url": "https://timesbrasil.com.br/brasil/no-primeiro-copom-apos-eleicao-selic-e-mantida-em-1375-ao-ano-e-interrompe-ciclo-de-cortes/"
+       },
+       {
+        "nome": "Brasil em Folhas, BC divulga a ata do Copom (10/11)",
+        "url": "https://brasilemfolhas.com.br/2026/11/banco-central-divulga-ata-do-copom-sobre-taxa-de-juros/"
+       }
+      ]
+     },
+     {
+      "titulo": "Fim da escala 6x1: quando muda e o que muda",
+      "texto": "A mudança na Constituição foi aprovada pelo Congresso e promulgada em 16 de outubro. Na prática: a partir de meados de dezembro, quem trabalha com carteira assinada passa a ter no máximo 42 horas por semana e duas folgas semanais, de preferência com o domingo. Em dezembro de 2027 o limite cai para 40 horas. O salário não pode diminuir. Falta um decreto do governo com os detalhes (por exemplo, como contar as folgas em quem trabalha em escala). Ele era esperado para 9/11, mas foi adiado e deve sair depois de 16/11, quando Lula voltar de viagem.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "Brasil de Fato, emenda promulgada (16/10)",
+        "url": "https://www.brasildefato.com.br/2026/10/16/promulgada-escala-5x2-passa-a-valer-na-semana-anterior-ao-natal/"
+       },
+       {
+        "nome": "O Tempo/Folhapress, decreto adiado (9/11)",
+        "url": "https://www.otempo.com.br/economia/2026/11/9/decreto-que-regulamenta-fim-da-6x1-tem-publicacao-adiada-e-so-deve-sair-apos-retorno-de-lula"
+       }
+      ]
+     },
+     {
+      "titulo": "Semana cheia no Congresso",
+      "texto": "Nesta terça e quarta (10 e 11/11), deputados ouvem especialistas sobre a proposta que reduz a maioridade penal, a idade em que a pessoa responde a crimes como adulto (hoje, 18 anos); ainda não há data para votar. Na quarta, o ministro do Planejamento, Bruno Moretti, apresenta o Orçamento de 2027, a lista de quanto o governo pode gastar em cada área; a votação final está marcada para 16 e 17 de dezembro. E o governo tenta montar a comissão que vai analisar a medida provisória que proíbe as “bets”, os sites de apostas. Se o Congresso não votar a tempo, a proibição perde a validade.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "ND Mais, a pauta do Congresso na semana (9/11)",
+        "url": "https://ndmais.com.br/politica/maioridade-penal-congresso-debate-reducao-nesta-semana/"
+       }
+      ]
+     },
+     {
+      "titulo": "Caso Master: troca na equipe da Polícia Federal",
+      "texto": "O caso do Banco Master, do banqueiro Daniel Vorcaro, investiga suspeitas de fraude e as ligações dele com autoridades. Segundo o jornal Gazeta do Povo (9/11), a Polícia Federal deve trocar nesta semana os dois delegados que coordenavam os relatórios sobre ministros do Supremo Tribunal Federal (STF) citados no caso. Não houve explicação oficial. O ministro Alexandre de Moraes e os demais citados negam qualquer irregularidade. O julgamento no STF só deve voltar em fevereiro de 2027.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "Gazeta do Povo, PF troca delegados do caso Master (9/11)",
+        "url": "https://www.gazetadopovo.com.br/republica/policia-federal-troca-delegados-que-investigam-ligacoes-entre-vorcaro-e-o-stf/"
+       }
+      ]
+     },
+     {
+      "titulo": "No bolso: 13º de novos aposentados e luz sem taxa extra",
+      "texto": "Quem começou a receber aposentadoria, pensão ou outro benefício do INSS a partir de maio de 2026 ficou de fora do 13º antecipado. Essas pessoas recebem agora, em parcela única e proporcional aos meses, junto com o pagamento de novembro: de 24/11 a 7/12, conforme o final do número do benefício. O valor aparece no aplicativo Meu INSS. Quem recebe o BPC não tem direito ao 13º. Outra boa notícia: a Aneel, agência que cuida da energia, manteve a bandeira verde em novembro. Ou seja, a conta de luz vem sem a cobrança extra, graças às chuvas que encheram as represas.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "Jornal de Brasília, calendário do 13º dos novos aposentados (9/7)",
+        "url": "https://jornaldebrasilia.com.br/noticias/economia/inss-paga-em-novembro-13o-para-novos-aposentados-veja-calendario-e-quem-tem-direito/"
+       },
+       {
+        "nome": "IstoÉ, bandeira verde em novembro (30/10)",
+        "url": "https://istoe.com.br/conta-luz-sem-cobranca-extra-novembro-2026-aneel"
+       }
+      ]
+     }
+    ],
+    "explica": {
+     "titulo": "Entenda: o que a Selic tem a ver com a sua vida",
+     "texto": "A Selic é a taxa de juros que serve de base para todas as outras. Quando ela sobe, o crediário, o cartão e o empréstimo ficam mais caros, e as pessoas compram menos, o que ajuda a segurar os preços. Quando ela cai, o crédito fica mais barato. Por isso o Banco Central só baixa os juros quando acha que a inflação está sob controle. Hoje, com 13,75%, os juros no Brasil continuam entre os mais altos do mundo."
+    }
+   },
+   "saude": {
+    "abertura": "O caderno mais recheado da casa: estudos importantes, remédios novos e o que muda no SUS.",
+    "aviso": "Importante: estas notícias servem para informar e para levar perguntas à consulta. Nunca comece, pare ou troque um remédio sem conversar com o seu médico.",
+    "frentes": [
+     {
+      "area": "Coração e longevidade",
+      "itens": [
+       {
+        "titulo": "Pressão bem controlada depois do derrame",
+        "texto": "O estudo OPTIMAL-STROKE acompanhou 4.368 brasileiros com pressão alta que já tinham tido um derrame (AVC) ou um “aviso” de derrame, em 30 centros do país. Metade teve como meta deixar o número de cima da pressão abaixo de 12 (120); a outra metade, abaixo de 14. Em quase 4 anos, o grupo da meta mais baixa teve menos infartos, novos derrames e internações: 10,9% contra 13,5%. Em troca, a função dos rins piorou um pouco mais vezes (3,9% contra 2,2%), sem aumento de diálise. O resultado saiu na revista New England Journal of Medicine.",
+        "selo": "Confirmado",
+        "fontes": [
+         {
+          "nome": "Healio, resultado do OPTIMAL-STROKE (7/11)",
+          "url": "https://www.healio.com/news/cardiology/20261107/lower-blood-pressure-target-after-stroke-reduces-risk-for-major-cardiovascular-events"
+         },
+         {
+          "nome": "TCTMD, análise do estudo",
+          "url": "https://www.tctmd.com/news/optimal-stroke-tight-bp-control-pays-dividends-after-ischemic-stroke-or-tia"
+         }
+        ]
+       },
+       {
+        "titulo": "Remédio novo contra segundo derrame é aprovado nos EUA",
+        "texto": "O asundexiane é um remédio que, junto com a aspirina, reduziu novos derrames de 8,4% para 6,2% num estudo com mais de 12 mil pacientes. Em 9/11, a agência de remédios dos EUA, a FDA, aprovou o remédio, com o nome comercial Sunharbo. Ele já tinha sido aprovado na China. No Brasil, ainda não está aprovado.",
+        "selo": "Confirmado",
+        "fontes": [
+         {
+          "nome": "HCPLive, aprovação do asundexiane (9/11)",
+          "url": "https://www.hcplive.com/view/asundexian-sunharbo-receives-fda-approval-for-secondary-stroke-prevention"
+         },
+         {
+          "nome": "Pharmaphorum, aprovação na China",
+          "url": "https://pharmaphorum.com/news/bayer-gets-first-approval-stroke-drug-asundexian"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Remédios novos",
+      "itens": [
+       {
+        "titulo": "Remédios tipo Ozempic terão alerta sobre a visão",
+        "texto": "Em 9/11, a FDA mandou que a bula de todos os remédios da família do Ozempic (como semaglutida, liraglutida e tirzepatida, o Mounjaro) avise sobre um risco raro: a NAION, uma perda de visão causada por falta de sangue no nervo do olho. As pesquisas não concordam entre si sobre o tamanho do risco; num grande levantamento, foram cerca de 6 casos a cada 100 mil pessoas por ano com o remédio, contra 4 sem ele. Até agora a Anvisa não se manifestou. Se a visão piorar de repente, procure o médico. Não pare o remédio sozinha.",
+        "selo": "Confirmado",
+        "fontes": [
+         {
+          "nome": "CNN, alerta da FDA sobre a visão (9/11)",
+          "url": "https://www.cnn.com/2026/11/09/health/glp1-vision-loss-fda-warning"
+         },
+         {
+          "nome": "Pharmacy Times, mudança nas bulas (9/11)",
+          "url": "https://www.pharmacytimes.com/view/fda-requires-class-wide-glp-1-ra-labeling-changes-for-potential-naion-risk"
+         }
+        ]
+       },
+       {
+        "titulo": "Anvisa proíbe o emagrecedor “Ultra Shape”",
+        "texto": "Uma decisão publicada no Diário Oficial em 9/11 proibiu a fabricação, a venda, a propaganda e o uso do produto Ultra Shape, vendido como emagrecedor, e mandou recolher todos os lotes. O produto não tem nenhum registro na Anvisa e nem se sabe quem fabrica. Moral: emagrecedor “milagroso” vendido pela internet, sem registro, pode ter qualquer coisa dentro. Antes de comprar, dá para consultar o registro no site da Anvisa.",
+        "selo": "Confirmado",
+        "fontes": [
+         {
+          "nome": "Correio Braziliense, Anvisa manda recolher emagrecedor (9/11)",
+          "url": "https://www.correiobraziliense.com.br/brasil/2026/11/7535499-anvisa-determina-recolhimento-de-emagrecedor-sem-registro-sanitario.html"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Vacinas e doenças",
+      "itens": [
+       {
+        "titulo": "Dengue deve crescer em 2027, e Minas está na lista",
+        "texto": "Especialistas que reúnem 22 modelos de previsão estimam cerca de 860 mil casos prováveis de dengue no Brasil em 2027, com o pico em abril. É mais que em 2026 (cerca de 489 mil casos até agora), mas bem menos que o recorde de 2024. Minas Gerais aparece entre os estados com alta prevista. A vacina de dose única do Butantan está suspensa desde junho, por precaução, e ainda não tem data para voltar. A melhor defesa segue sendo não deixar água parada.",
+        "selo": "Confirmado",
+        "fontes": [
+         {
+          "nome": "Agência Brasil via Diario de Pernambuco, previsão para 2027 (nov.)",
+          "url": "https://www.diariodepernambuco.com.br/brasil/2026/11/11728512-dengue-pais-pode-chegar-a-860-mil-casos-provaveis-da-doenca-em-2027.html"
+         },
+         {
+          "nome": "Estado de Minas/Folhapress, Ministério projeta alta (nov.)",
+          "url": "https://www.em.com.br/bem-viver/2026/11/7533219-ministerio-da-saude-projeta-alta-da-dengue-em-2027.html"
+         }
+        ]
+       },
+       {
+        "titulo": "Mpox: casos sobem e falta vacina",
+        "texto": "O Brasil confirmou 665 casos de mpox em 2026 até 3/11, com uma morte. Outubro foi o pior mês do ano. A doença causa febre e feridas na pele e passa por contato próximo. O Distrito Federal suspendeu a vacinação por falta de doses, e o Ministério da Saúde autorizou a compra de até 20 mil. Em 9/11, o Ministério Público Federal abriu uma investigação para entender a falta de vacinas. Hoje a vacina é só para grupos de maior risco.",
+        "selo": "Confirmado",
+        "fontes": [
+         {
+          "nome": "ND+, casos e vacinas de mpox (nov.)",
+          "url": "https://ndmais.com.br/politica/mpox-brasil-casos-vacinas-governo-federal"
+         },
+         {
+          "nome": "Afya, 665 casos em 2026",
+          "url": "https://portal.afya.com.br/infectologia/casos-de-mpox-somam-665-no-brasil-em-2026"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Mulher",
+      "itens": [
+       {
+        "titulo": "Vacina na gravidez protege o bebê contra o vírus do pulmão",
+        "texto": "O VSR é um vírus que causa bronquiolite, uma das maiores causas de internação de bebês. Uma revisão de 7 estudos, com mais de 7 mil bebês da Argentina, do Reino Unido e dos EUA, mostrou que a vacina dada à mãe na gestação evitou 78% das internações do bebê por esse vírus até os 6 meses de vida. A vacina entrou no calendário do SUS para gestantes em 2025. Os autores lembram que os estudos têm limitações, como olhar quase só a primeira temporada de uso.",
+        "selo": "Confirmado",
+        "fontes": [
+         {
+          "nome": "Contemporary Pediatrics, vacina materna contra o VSR (nov.)",
+          "url": "https://contemporarypediatrics.com/view/maternal-rsvpref-78-effective-against-infant-rsv-hospitalization"
+         }
+        ]
+       },
+       {
+        "titulo": "A injeção de vitamina K no recém-nascido importa",
+        "texto": "Todo bebê recebe, ao nascer, uma injeção de vitamina K, que ajuda o sangue a coagular. Nos EUA, mais famílias passaram a recusar a dose: de 3,1% para 6,8% dos bebês entre 2017 e 2025. Um estudo com 5,24 milhões de bebês mostrou que, sem a injeção, houve 47% mais sangramentos nos primeiros 6 meses e mais que o dobro de sangramento na cabeça. No Brasil, a dose é rotina nas maternidades. Vale contar isso às futuras mamães da família.",
+        "selo": "Confirmado",
+        "fontes": [
+         {
+          "nome": "Contemporary Pediatrics, recusa da vitamina K (nov.)",
+          "url": "https://www.contemporarypediatrics.com/view/skipping-newborn-vitamin-k-tied-to-47-higher-infant-bleeding-risk"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Câncer",
+      "itens": [
+       {
+        "titulo": "Novembro Azul: o recado sobre a próstata",
+        "texto": "Novembro é o mês de lembrar da saúde do homem. Segundo o Inca, o instituto nacional do câncer, o Brasil deve ter cerca de 78 mil casos novos de câncer de próstata por ano até 2028. É o tumor mais comum nos homens, tirando o de pele. Um ponto que confunde muita gente: o Ministério da Saúde não recomenda exame de rotina para todo homem sem sintomas, porque ele pode dar falso alarme e levar a tratamentos desnecessários. O certo é cada homem conversar com o médico, levando em conta idade e casos na família. Quem tem sintomas (como dificuldade para urinar) deve procurar atendimento.",
+        "selo": "Confirmado",
+        "fontes": [
+         {
+          "nome": "Diário do Grande ABC, Novembro Azul e números do Inca (29/10)",
+          "url": "https://www.dgabc.com.br/Noticia/4365819/novembro-azul-brasil-deve-ter-77-9-mil-casos-de-cancer-de-prostata"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "explica": {
+     "titulo": "Como ler os números de um estudo: o “21% a menos”",
+     "texto": "Quando a notícia diz “21% menos problemas”, é uma comparação entre grupos: no estudo da capa, os problemas caíram de 13,5 para 10,9 em cada 100 pessoas. Ou seja, cerca de 3 pessoas a menos em cada 100 tiveram um problema grave. Os médicos fazem a conta de outro jeito também: foi preciso tratar umas 38 pessoas com a meta mais baixa para evitar um problema. E sempre vale perguntar o que se perde em troca; aqui, um pouco mais de alterações nos rins."
+    }
+   },
+   "tecnologia": {
+    "abertura": "A inteligência artificial (IA) são programas de computador que conversam, escrevem e analisam imagens quase como uma pessoa. Ela já está no celular, no banco e no consultório. Aviso de transparência: este jornal é escrito com a ajuda do Claude, uma IA da empresa Anthropic.",
+    "itens": [
+     {
+      "titulo": "Países e empresas prometem cuidar da segurança da IA",
+      "texto": "Em 9/11, o presidente da França, Emmanuel Macron, reuniu governos e empresas no chamado Apelo de Paris. Seis países (França, Canadá, Finlândia, Noruega, Países Baixos e Bahrein) e dez empresas, entre elas OpenAI, Microsoft, Mistral e a Anthropic (a mesma empresa do Claude, que ajuda a escrever este jornal), prometeram testar os riscos das IAs mais poderosas, ter como desligá-las e avisar rápido quando houver ataques ou falhas graves. EUA e China, as duas maiores potências da IA, não assinaram. A promessa é voluntária: ninguém é obrigado a cumprir.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "ANI, as prioridades de Macron para a IA (10/11)",
+        "url": "https://www.aninews.in/news/world/europe/ai-poses-real-risks-to-collective-security-french-president-emmanuel-macron-outlines-3-key-priorities20261110031353/"
+       },
+       {
+        "nome": "Palácio do Eliseu, texto do Apelo de Paris (9/11, fonte oficial)",
+        "url": "https://www.elysee.fr/en/emmanuel-macron/2026/11/09/paris-call-for-ai-safety-and-security"
+       }
+      ]
+     },
+     {
+      "titulo": "Hackers desligaram geladeiras de 700 supermercados",
+      "texto": "A Justiça francesa acusou um grupo ligado às forças armadas do Irã de um ataque, em 12/10, que desligou a refrigeração de cerca de 700 supermercados na França. Hoje, muitas geladeiras, câmeras e até lâmpadas ficam ligadas à internet, e por isso podem ser invadidas. O Irã não comentou. A lição para casa: aparelhos “inteligentes” (TV, câmera, babá eletrônica) precisam de senha forte e atualização em dia.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "PBS NewsHour (AP), França culpa o Irã (9/11)",
+        "url": "https://www.pbs.org/newshour/world/france-blames-iran-for-last-months-cyberattack-on-supermarket-fridges"
+       },
+       {
+        "nome": "Axios, hackers ligados ao Irã (10/11)",
+        "url": "https://axios.com/2026/11/10/france-iran-supermarket-refridgerator-hacks"
+       }
+      ]
+     },
+     {
+      "titulo": "IAs comuns responderam melhor que as feitas para médicos",
+      "texto": "Pesquisadores de uma universidade de Nova York compararam três IAs de uso geral (do ChatGPT, do Google Gemini e o Claude) com duas ferramentas feitas especialmente para médicos. Usaram mil perguntas de prova e 100 dúvidas reais de médicos, avaliadas por 12 especialistas sem saber qual IA respondeu. As IAs gerais tiveram notas melhores, e nenhuma errou mais que as outras. O estudo saiu na revista Nature Medicine. Ressalva: é um teste de perguntas, não de pacientes de verdade.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "Nature Medicine, comparação de IAs em perguntas médicas",
+        "url": "https://www.nature.com/articles/s41591-026-04431-5"
+       }
+      ]
+     },
+     {
+      "titulo": "Aparelho médico com IA: aprovado nem sempre é testado",
+      "texto": "Uma revisão olhou 1.357 aparelhos e programas médicos com IA liberados nos EUA até 2025, a maioria para ler exames de imagem, como raio-X e tomografia. Só 34 (2,5%) tinham passado por um estudo planejado com pacientes, e só 3 mediram se a pessoa de fato vivia mais ou era menos internada. Ou seja: a IA pode ajudar, mas muita coisa chega ao hospital sem prova de que melhora a saúde.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "PLOS Digital Health, 1.357 aparelhos com IA (ago.)",
+        "url": "https://doi.org/10.1371/journal.pdig.0001597"
+       }
+      ]
+     }
+    ],
+    "protejase": {
+     "titulo": "Proteja-se: golpes da Black Friday e QR Code falso",
+     "intro": "A Black Friday deste ano é em 27/11, e os golpistas já estão de olho. Segundo a Serasa, 53% dos golpes nessa época usam sites falsos e 42% envolvem Pix. A Febraban, que reúne os bancos, alerta também para o QR Code falso: um código trocado num site, num boleto ou até um adesivo colado por cima do verdadeiro numa feira ou estacionamento.",
+     "dicas": [
+      "Antes de confirmar o Pix, leia no aplicativo do banco o nome de quem vai receber e o valor. Se não bater, não pague.",
+      "Desconfie de desconto de 80% ou 90%: isso quase não existe no Brasil.",
+      "Digite você mesma o endereço da loja, em vez de clicar em link de mensagem, e-mail ou rede social.",
+      "O cadeadinho no site não garante que a loja é de verdade; consulte a reputação no Reclame Aqui.",
+      "Em lugar físico, repare se o QR Code parece um adesivo colado por cima de outro.",
+      "Caiu em golpe com Pix? Ligue para o banco na hora, peça a devolução pelo MED e registre boletim de ocorrência."
+     ],
+     "fontes": [
+      {
+       "nome": "Let's Money, Febraban alerta para QR Code falso (20/10)",
+       "url": "https://www.letsmoney.com.br/noticias/febraban-golpe-qr-code-falso-quishing/"
+      },
+      {
+       "nome": "Forbes Brasil, como se proteger na Black Friday (28/10)",
+       "url": "https://forbes.com.br/forbes-tech/2026/10/black-friday-como-se-proteger-de-golpes-digitais-e-evitar-prejuizos/"
+      },
+      {
+       "nome": "Paraíba Business, Black Friday em 27/11",
+       "url": "https://paraibabusiness.com.br/black-friday-sera-em-27-de-novembro-veja-como-evitar-golpes-nas-compras/"
+      }
+     ]
+    }
+   },
+   "mundo": {
+    "abertura": "Só o essencial do que acontece lá fora, e por que pode chegar até aqui.",
+    "itens": [
+     {
+      "titulo": "Petróleo no menor preço desde agosto",
+      "texto": "Trump disse que a guerra com o Irã está “efetivamente encerrada”, mas manteve o bloqueio de navios. Com a esperança de paz, o barril de petróleo caiu para cerca de US$ 91 na manhã de hoje (10/11), quase 22% abaixo do pico de 30/10. Se o preço continuar baixo, a gasolina e o diesel podem ficar mais baratos aqui com o tempo, mas isso depende da Petrobras e do dólar.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "Irish Times (Reuters), petróleo perto de US$ 90 (10/11)",
+        "url": "https://www.irishtimes.com/business/2026/11/10/oil-prices-dip-below-90-on-hopes-of-military-de-escalation-in-us-iran-war/"
+       },
+       {
+        "nome": "Grafa, Brent a US$ 90,99 (10/11)",
+        "url": "https://grafa.com/en/news/united-states/oil-prices-fall-as-brent-drops-to-90-99-on-iran-tensions"
+       }
+      ]
+     },
+     {
+      "titulo": "Rússia e Ucrânia voltam a negociar",
+      "texto": "Começou hoje (10/11) em Abu Dhabi, nos Emirados Árabes, uma rodada de conversas entre Rússia, Ucrânia e EUA para tentar acabar com a guerra, a primeira desde fevereiro. Os países europeus ficaram de fora. Na véspera, segundo a Ucrânia, a Rússia lançou 162 drones (aviõezinhos sem piloto) e um míssil, e duas cidades ficaram sem luz.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "AP via ClickOnDetroit, início das conversas (10/11)",
+        "url": "https://www.clickondetroit.com/news/politics/2026/11/10/g7-attention-in-paris-turns-to-ukraine-while-us-mediated-talks-get-underway-in-abu-dhabi/"
+       },
+       {
+        "nome": "Ukrainska Pravda, 162 drones e um míssil (10/11)",
+        "url": "https://www.pravda.com.ua/eng/news/2026/11/10/8062064/"
+       }
+      ]
+     },
+     {
+      "titulo": "El Niño muito forte até janeiro",
+      "texto": "O El Niño é o aquecimento das águas do Oceano Pacífico que bagunça as chuvas no mundo. Os institutos brasileiros de meteorologia (Inmet e Inpe) preveem que ele fique muito forte até janeiro: chuva acima do normal no Sul e seca e queimadas no Norte. A agência americana NOAA solta um novo boletim na quinta (12/11).",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "Agência GBC, super El Niño (9/11)",
+        "url": "https://agenciagbc.com/2026/11/09/super-el-nino-pode-atingir-forca-historica-em-dezembro-e-acende-alerta-para-o-clima-no-brasil/"
+       },
+       {
+        "nome": "CPTEC/Inpe, El Niño e La Niña",
+        "url": "https://clima.cptec.inpe.br/enos"
+       }
+      ]
+     },
+     {
+      "titulo": "Uma sonda visita o asteroide que foi “empurrado”",
+      "texto": "Em 2022, a NASA bateu de propósito uma nave num pequeno asteroide para ver se dava para desviar uma pedra espacial perigosa no futuro. Deu certo. Agora, a sonda europeia Hera deve chegar este mês até ele, chamado Dimorphos (que gira em volta de outro, o Didymos), para medir o estrago. Ele não oferece nenhum risco à Terra: é um teste de proteção do planeta.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "ESA, Hera mira chegada antecipada a Didymos",
+        "url": "https://www.esa.int/Space_Safety/Hera/ESA_s_Hera_targets_early_arrival_at_Didymos_asteroids"
+       }
+      ]
+     }
+    ]
+   },
+   "palavrinhas": [
+    {
+     "termo": "AVC",
+     "def": "Acidente vascular cerebral, o “derrame”: quando o sangue deixa de chegar a uma parte do cérebro."
+    },
+    {
+     "termo": "Pressão “12 por 8”",
+     "def": "O 12 é o número de cima (pressão sistólica, 120), quando o coração bate; o 8 é o de baixo (80), quando ele relaxa."
+    },
+    {
+     "termo": "Selic",
+     "def": "A taxa básica de juros do país, decidida pelo Banco Central. Serve de base para os juros de empréstimos e do cartão."
+    },
+    {
+     "termo": "Ata do Copom",
+     "def": "O documento que o Banco Central publica alguns dias depois de decidir os juros, explicando os motivos."
+    },
+    {
+     "termo": "COP",
+     "def": "Sigla em inglês para a conferência anual da ONU sobre o clima, onde os países negociam como frear o aquecimento global."
+    },
+    {
+     "termo": "VSR",
+     "def": "Vírus sincicial respiratório, que causa bronquiolite em bebês e pode levar à internação."
+    },
+    {
+     "termo": "QR Code",
+     "def": "Aquele quadradinho de pontinhos que o celular lê com a câmera para abrir um site ou pagar um Pix."
+    },
+    {
+     "termo": "FDA",
+     "def": "A agência dos EUA que aprova remédios e alimentos, parecida com a nossa Anvisa."
+    }
+   ],
+   "conversa": [
+    "Você sabe qual é a sua meta de pressão? Já conversou com o médico sobre isso, ou sobre a de alguém da família?",
+    "Você costuma comprar na Black Friday? Já recebeu alguma oferta que parecia boa demais para ser verdade?"
+   ],
+   "agenda": [
+    {
+     "quando": "Hoje, 10/11",
+     "oque": "Sai a ata do Copom; deputados debatem a maioridade penal; começam as conversas de paz em Abu Dhabi"
+    },
+    {
+     "quando": "11/11",
+     "oque": "Lula discursa na conferência do clima, na Turquia; Orçamento de 2027 é apresentado no Congresso"
+    },
+    {
+     "quando": "12/11",
+     "oque": "IBGE divulga a inflação de outubro; novo boletim do El Niño, da NOAA"
+    },
+    {
+     "quando": "A partir de 16/11",
+     "oque": "Previsão do decreto com os detalhes do fim da escala 6x1"
+    },
+    {
+     "quando": "24/11 a 7/12",
+     "oque": "INSS paga o 13º de quem se aposentou a partir de maio"
+    },
+    {
+     "quando": "27/11",
+     "oque": "Black Friday: atenção redobrada com sites falsos e QR Code"
+    }
+   ]
+  }
+ ]
 }

@@ -1,6 +1,428 @@
 {
  "edicoes": [
   {
+   "numero": 2,
+   "data": "2026-11-10",
+   "tempoLeitura": 11,
+   "capa": {
+    "chapeu": "Saúde da região",
+    "titulo": "Hospital Regional deve ficar para 2027",
+    "linhaFina": "A obra entrou na reta final e ainda contrata pedreiros, mas não há data oficial para atender o primeiro paciente: os prazos falam em maio ou no primeiro semestre de 2027. O prefeito recebeu o governador eleito Cleitinho para tratar do hospital. Na segurança, Lafaiete não acompanhou a queda dos furtos em Minas, e o frio com chuva segue até quarta."
+   },
+   "citacao": "Quem tem paciência terá o que deseja.",
+   "recado": "Corrigindo a nossa primeira edição: ali dissemos que o Hospital Regional ficaria pronto no fim de 2026, como prometia o Governo de Minas. Novas informações mostram que a abertura deve ficar para 2027. Quando uma notícia muda, o jornal avisa.",
+   "resumo": [
+    {
+     "tema": "Hospital",
+     "texto": "Prazos agora apontam para 2027. Ainda não há data oficial de abertura."
+    },
+    {
+     "tema": "Prefeitura",
+     "texto": "Leandro Chagas recebeu o governador eleito, Cleitinho, para falar de investimentos e do hospital."
+    },
+    {
+     "tema": "Segurança",
+     "texto": "643 furtos de janeiro a julho, um pouco mais que em 2025, enquanto Minas teve queda de 15%."
+    },
+    {
+     "tema": "Saúde",
+     "texto": "Sábado (14/11) tem ação gratuita sobre diabetes na Praça do Cristo, das 9h às 16h."
+    },
+    {
+     "tema": "Emprego",
+     "texto": "Sine com cerca de 73 vagas, várias na duplicação da BR-040 e na obra do hospital."
+    },
+    {
+     "tema": "Tempo",
+     "texto": "Frio fora de época e chuva até quarta. Esquenta no fim de semana, mas a chuva continua."
+    }
+   ],
+   "numeros": [
+    {
+     "rotulo": "Furtos em 2026",
+     "valor": "643",
+     "nota": "de janeiro a julho (637 em 2025)",
+     "fonte": "Correio de Minas, 09/11/2026, com dados do CrimeBrasil"
+    },
+    {
+     "rotulo": "Vagas no Sine",
+     "valor": "73",
+     "nota": "25 sem exigir experiência",
+     "fonte": "Lafaiete Agora, 09/11/2026"
+    },
+    {
+     "rotulo": "Equipamentos do hospital",
+     "valor": "R$ 33 mi",
+     "nota": "do acordo da Vale por Brumadinho",
+     "fonte": "Correio de Minas, 04/11/2026"
+    },
+    {
+     "rotulo": "Máxima de hoje",
+     "valor": "13 °C",
+     "nota": "mínima de 12 °C, com chuva",
+     "fonte": "HG Brasil, 10/11/2026"
+    }
+   ],
+   "cadernos": [
+    {
+     "id": "politica",
+     "titulo": "Prefeitura e Câmara",
+     "abertura": "Quem conversa com quem, e o que pode chegar à cidade",
+     "itens": [
+      {
+       "titulo": "Prefeito recebe o governador eleito Cleitinho",
+       "selo": "Confirmado",
+       "texto": "Na segunda (9/11), o prefeito Leandro Chagas recebeu em casa Cleitinho Azevedo (Republicanos), eleito governador de Minas no primeiro turno, em 4 de outubro. Ele toma posse em 6 de janeiro de 2027, a nova data criada pela Emenda Constitucional 111. Segundo o jornal Correio da Cidade, os dois falaram de projetos e investimentos para Lafaiete, e o Hospital Regional apareceu entre as primeiras grandes entregas do próximo governo. A reportagem não cita valores nem prazos. Por enquanto é conversa: promessa só vira fato quando sai no Diário Oficial ou no orçamento.",
+       "fontes": [
+        {
+         "nome": "Correio da Cidade, 09/11/2026",
+         "url": "https://www.jornalcorreiodacidade.com.br/noticias/51674-leandro-chagas-recebe-cleitinho-e-discute-novos-investimentos-para-lafaiete"
+        },
+        {
+         "nome": "TSE, outubro de 2026",
+         "url": "https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/cleitinho-azevedo-republicanos-e-eleito-governador-de-minas-gerais"
+        }
+       ]
+      },
+      {
+       "titulo": "Taxa de iluminação e tapa-buracos: nada de novo",
+       "selo": "Confirmado",
+       "texto": "Até a manhã de hoje, o jornal não encontrou notícia nova sobre o projeto da taxa de iluminação (CIP), que saiu de pauta na Câmara, nem sobre a volta do tapa-buracos. Seguimos acompanhando.",
+       "fontes": [
+        {
+         "nome": "Lafaiete Agora, 05/11/2026",
+         "url": "https://lafaieteagora.com.br/2026/11/05/erivelton-reage-a-projeto-de-lei-que-preve-aumento-na-conta-de-luz-em-lafaiete-e-proposta-sai-de-pauta-na-camara/"
+        }
+       ]
+      },
+      {
+       "titulo": "Governador eleito quer proibir dinheiro do estado em shows",
+       "selo": "Explicação",
+       "texto": "No sábado (7/11), Cleitinho anunciou um projeto para proibir que dinheiro do Governo de Minas pague shows e festas nas cidades. Se virar lei, festas municipais dependeriam mais do caixa da própria prefeitura ou de patrocínio. Ainda é anúncio, não lei: precisa passar pela Assembleia Legislativa.",
+       "fontes": [
+        {
+         "nome": "Lafaiete Agora, 07/11/2026",
+         "url": "https://lafaieteagora.com.br/2026/11/07/cleitinho-anuncia-projeto-que-proibe-uso-de-recursos-estaduais-para-financiar-shows-e-festas-nos-municipios-mineiros/"
+        }
+       ]
+      }
+     ],
+     "caixa": {
+      "titulo": "Prefeito, governador, quem faz o quê",
+      "texto": "A Prefeitura cuida de postos de saúde, UPA, creches, escolas municipais e ruas. O Governo de Minas cuida das escolas estaduais, da Polícia Militar e Civil e de hospitais regionais como o de Lafaiete. Por isso o hospital depende tanto do estado."
+     }
+    },
+    {
+     "id": "saude",
+     "titulo": "Saúde",
+     "abertura": "O hospital que a região espera e um sábado de cuidado com o diabetes",
+     "aviso": "Estas notícias informam, mas não substituem o médico. Em emergência, ligue 192 (SAMU).",
+     "itens": [
+      {
+       "titulo": "Hospital Regional: reta final, mas sem data de abertura",
+       "selo": "Previsão",
+       "texto": "A obra do Hospital Regional, que começou há 16 anos, entrou na reta final e o Sine ainda anuncia vagas de servente, pedreiro de acabamento e sinaleiro para ela. Mas os prazos não batem: o Governo de Minas falou em concluir em dezembro de 2026, a Prefeitura deu maio de 2027 para terminar a estrutura, e documentos do acordo de Brumadinho apontam o primeiro semestre de 2027. Não há data oficial para receber pacientes. Os equipamentos (R$ 33 milhões) vêm do acordo que a Vale fez pela tragédia de Brumadinho. Sobre os leitos, o estado divulgou 117 em junho (contando 20 de observação); a reportagem fala em 97, dos quais 20 de UTI.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, 04/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/04/hospital-regional-de-lafaiete-ainda-contrata-trabalhadores-e-entra-na-reta-final-com-previsao-de-funcionamento-no-1o-semestre-de-2027/"
+        },
+        {
+         "nome": "Agência Minas, 26/06/2026",
+         "url": "https://www.agenciaminas.mg.gov.br/noticia/governo-de-minas-da-novo-passo-para-abertura-do-hospital-regional-de-conselheiro-lafaiete"
+        }
+       ]
+      },
+      {
+       "titulo": "Sábado tem exame de glicose grátis na Praça do Cristo",
+       "selo": "Confirmado",
+       "texto": "Pelo Dia Mundial do Diabetes, no sábado (14/11), das 9h às 16h, a Praça do Cristo recebe uma ação gratuita: teste de glicose (o açúcar no sangue), medida de pressão, conversa sobre alimentação e exercício, cuidados com os pés e, se preciso, avaliação médica e encaminhamento. Também tem caminhada, corrida e atividades culturais. A organização é da Prefeitura com o Centro de Diabetes e Doenças Metabólicas.",
+       "fontes": [
+        {
+         "nome": "Correio da Cidade, 07/11/2026",
+         "url": "https://www.jornalcorreiodacidade.com.br/noticias/51639-lafaiete-tera-acao-gratuita-de-prevencao-e-orientacao-sobre-diabetes"
+        }
+       ]
+      },
+      {
+       "titulo": "Mal súbito depois do futebol em Santana dos Montes",
+       "selo": "Confirmado",
+       "texto": "No domingo (8/11), o professor Reinaldo Nogueira passou mal horas depois de jogar uma partida de veteranos na reinauguração do poliesportivo de Santana dos Montes, aqui na região, e morreu, apesar do socorro. Os outros jogos foram cancelados. Nossos sentimentos à família.",
+       "fontes": [
+        {
+         "nome": "Lafaiete Agora, 09/11/2026",
+         "url": "https://lafaieteagora.com.br/2026/11/09/professor-morre-apos-partida-de-futebol/"
+        }
+       ]
+      }
+     ],
+     "caixa": {
+      "titulo": "Esporte depois dos 40: cuidados simples",
+      "texto": "Antes de voltar a jogar bola ou correr, vale uma consulta no posto de saúde, principalmente para quem tem pressão alta, diabetes, colesterol alto, fuma ou tem parentes com problema de coração. Durante o jogo, beba água. Dor ou aperto no peito, falta de ar fora do normal, tontura ou suor frio são sinais para parar na hora e ligar 192."
+     }
+    },
+    {
+     "id": "emprego",
+     "titulo": "Emprego e economia",
+     "abertura": "As obras da região puxam as vagas",
+     "itens": [
+      {
+       "titulo": "Sine tem cerca de 73 vagas, 25 sem exigir experiência",
+       "selo": "Confirmado",
+       "texto": "A lista de segunda (9/11) traz muitas vagas de obra: ajudante, pedreiro, carpinteiro, sinaleiro e motorista de caminhão na duplicação da BR-040, e servente e pedreiro de acabamento no Hospital Regional. Também há auxiliar de limpeza, repositor, atendente de loja, operador de caixa, frentista, açougueiro, cozinheiro, roçador e duas vagas de instrutor de musculação (pede faculdade de Educação Física). Muitas vagas com experiência pedem 6 meses registrados na carteira. O Sine fica na Rua Marechal Floriano, 135 A, Centro, telefone (31) 3764-9807. Também dá para buscar vagas no site Emprega Brasil. Ligue antes: as vagas acabam rápido.",
+       "fontes": [
+        {
+         "nome": "Lafaiete Agora, 09/11/2026",
+         "url": "https://lafaieteagora.com.br/2026/11/09/procurando-emprego-veja-as-oportunidades-do-sine-lafaiete-desta-segunda-9-11/"
+        },
+        {
+         "nome": "Correio da Cidade, 09/11/2026",
+         "url": "https://www.jornalcorreiodacidade.com.br/noticias/51666-sine-lafaiete-confira-as-75-vagas-de-trabalho-desta-segundafeira-para-comercio-construcao-servicos-e-outros-setores"
+        }
+       ]
+      }
+     ],
+     "caixa": {
+      "titulo": "O que é CTPS?",
+      "texto": "É a Carteira de Trabalho e Previdência Social, hoje quase toda digital, no aplicativo Carteira de Trabalho Digital. Quando a vaga pede '6 meses em CTPS', quer dizer seis meses de serviço registrado na carteira naquela função."
+     }
+    },
+    {
+     "id": "seguranca",
+     "titulo": "Segurança",
+     "abertura": "Os números do ano e as ocorrências da semana",
+     "itens": [
+      {
+       "titulo": "Furtos não caíram em Lafaiete, ao contrário de Minas",
+       "selo": "Confirmado",
+       "texto": "De janeiro a julho de 2026, Lafaiete teve 643 furtos, contra 637 no mesmo período de 2025: praticamente o mesmo número. Em Minas, os furtos caíram 15%. Entre as 36 cidades mineiras com mais de 100 mil moradores, só 4 não tiveram queda, e Lafaiete é uma delas. Março foi o pior mês, com 127 casos. A boa notícia: roubos caíram 20% e lesões corporais, 17%. Os dados são do site CrimeBrasil, citado pelo Correio de Minas.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, 09/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/09/conselheiro-lafaiete-tem-643-furtos-em-sete-meses-de-2026-e-nao-acompanha-a-queda-de-minas/"
+        }
+       ]
+      },
+      {
+       "titulo": "Furto de cobre na CSN leva dois à prisão em Congonhas",
+       "selo": "Confirmado",
+       "texto": "Na quinta (5/11), a Polícia Civil prendeu um funcionário da CSN Mineração, que confessou o furto, e o dono de um ferro-velho. Foram recuperados 109 quilos de cobre e 38 quilos de outros materiais. Quem compra material furtado também comete crime (receptação).",
+       "fontes": [
+        {
+         "nome": "Lafaiete Agora, 06/11/2026",
+         "url": "https://lafaieteagora.com.br/2026/11/06/funcionario-de-mineradora-e-dono-de-ferro-velho-sao-presos-apos-furto-de-cobre-na-csn/"
+        }
+       ]
+      }
+     ],
+     "caixa": {
+      "titulo": "Furto ou roubo?",
+      "texto": "Furto é quando levam algo sem violência nem ameaça, por exemplo um celular esquecido ou uma bicicleta sem cadeado. Roubo é com ameaça ou violência. Para se proteger do furto: não deixe objetos à vista no carro, tranque portões e use cadeado. Registre sempre a ocorrência (190 ou delegacia virtual da Polícia Civil de MG): é o registro que vira estatística e orienta o policiamento."
+     }
+    },
+    {
+     "id": "cidade",
+     "titulo": "Cidade, chuva e trânsito",
+     "abertura": "Frio de inverno em pleno novembro",
+     "itens": [
+      {
+       "titulo": "Massa de ar polar traz frio e alerta de temporal",
+       "selo": "Confirmado",
+       "texto": "Uma massa de ar polar, coisa rara em novembro, derrubou as temperaturas: na segunda a máxima foi de 16 °C e a sensação, de 11 °C. Há alerta de temporal com chuva forte, vento e possível granizo para mais de 500 cidades mineiras, e o Inmet avisou sobre queda de 5 °C ou mais. O frio deve durar pelo menos até quarta (11/11).",
+       "fontes": [
+        {
+         "nome": "Correio da Cidade, 09/11/2026",
+         "url": "https://www.jornalcorreiodacidade.com.br/noticias/51671-frente-fria-derruba-temperaturas-em-lafaiete-e-traz-alerta-de-tempestades"
+        }
+       ]
+      },
+      {
+       "titulo": "Lembrete: BR-040 fecha por uma hora no sábado",
+       "selo": "Confirmado",
+       "texto": "No sábado (14/11), das 15h às 16h, a BR-040 para nos dois sentidos no km 612, em Congonhas, para detonação de rocha da duplicação. Programe a viagem.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, 09/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/09/epr-via-mineira-programa-desmonte-controlado-de-rocha-em-congonhas-para-avanco-das-obras-de-duplicacao-da-br-040/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "esporte",
+     "titulo": "Esporte, cultura e fé",
+     "abertura": "Os pequenos craques da cidade",
+     "itens": [
+      {
+       "titulo": "Garotos da TJ Sports Centroluz jogam hoje na Cidade do Galo",
+       "selo": "Confirmado",
+       "texto": "Hoje (10/11), atletas das categorias sub-7 a sub-11 da TJ Sports Centroluz, escolinha de base de Lafaiete, fazem um amistoso de avaliação contra times do Atlético Mineiro no centro de treinamento do clube, em Belo Horizonte. Boa sorte, meninos!",
+       "fontes": [
+        {
+         "nome": "Correio da Cidade, 09/11/2026",
+         "url": "https://www.jornalcorreiodacidade.com.br/noticias/51677-lafaiete-tj-sports-centroluz-leva-atletas-para-amistoso-na-cidade-do-galo"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "tempo": {
+    "texto": "Hoje e quarta seguem frios e chuvosos, com máxima de 13 °C hoje. A partir de quinta esquenta aos poucos, chegando a 25 °C no domingo, mas a chuva não vai embora. Leve guarda-chuva e um agasalho.",
+    "dias": [
+     {
+      "dia": "Ter 10",
+      "min": 12,
+      "max": 13,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Qua 11",
+      "min": 13,
+      "max": 18,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Qui 12",
+      "min": 14,
+      "max": 21,
+      "ceu": "Pancadas"
+     },
+     {
+      "dia": "Sex 13",
+      "min": 16,
+      "max": 23,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Sáb 14",
+      "min": 16,
+      "max": 24,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Dom 15",
+      "min": 16,
+      "max": 25,
+      "ceu": "Pancadas"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "HG Brasil, consulta em 10/11/2026",
+      "url": "https://hgbrasil.com/weather/places/brazil/mg/conselheiro-lafaiete"
+     }
+    ]
+   },
+   "historia": {
+    "titulo": "Quem foi o Conselheiro que deu nome à cidade",
+    "texto": "Lafayette Rodrigues Pereira nasceu em Queluz, a nossa cidade, em 28 de março de 1834. Foi advogado e um dos maiores juristas do Império: seus livros sobre direito de família e direito das coisas (as regras sobre propriedade) foram estudados por gerações. Governou as províncias do Ceará e do Maranhão, foi ministro da Justiça, senador e chegou a presidente do Conselho de Ministros, o cargo de primeiro-ministro do Império. 'Conselheiro' era um título de honra concedido pelo Império. Em 1909 ocupou na Academia Brasileira de Letras a cadeira que fora de Machado de Assis. Morreu no Rio em 1917, e em 1934, no centenário do seu nascimento, Queluz passou a se chamar Conselheiro Lafaiete.",
+    "linha": [
+     {
+      "ano": "1834",
+      "fato": "Nasce em Queluz, em 28 de março"
+     },
+     {
+      "ano": "1864",
+      "fato": "Assume a presidência da província do Ceará"
+     },
+     {
+      "ano": "1870",
+      "fato": "Seu nome aparece no Manifesto Republicano (depois ele disse não ter assinado)"
+     },
+     {
+      "ano": "1879",
+      "fato": "É nomeado senador do Império"
+     },
+     {
+      "ano": "1883",
+      "fato": "Vira presidente do Conselho de Ministros, até 1884"
+     },
+     {
+      "ano": "1909",
+      "fato": "Toma posse na cadeira 23 da Academia Brasileira de Letras"
+     },
+     {
+      "ano": "1917",
+      "fato": "Morre no Rio de Janeiro, em 29 de janeiro"
+     },
+     {
+      "ano": "1934",
+      "fato": "Queluz ganha o nome de Conselheiro Lafaiete"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "Wikipédia, verbete Lafayette Rodrigues Pereira",
+      "url": "https://pt.wikipedia.org/wiki/Lafayette_Rodrigues_Pereira"
+     },
+     {
+      "nome": "Wikipédia, verbete da cidade",
+      "url": "https://pt.wikipedia.org/wiki/Conselheiro_Lafaiete"
+     }
+    ]
+   },
+   "palavrinhas": [
+    {
+     "termo": "Governador eleito",
+     "def": "Quem ganhou a eleição mas ainda não tomou posse. Cleitinho assume em 6 de janeiro de 2027."
+    },
+    {
+     "termo": "Massa de ar polar",
+     "def": "Ar frio que sobe do sul do continente e derruba a temperatura por alguns dias."
+    },
+    {
+     "termo": "Receptação",
+     "def": "Crime de comprar, guardar ou vender algo sabendo (ou devendo saber) que foi furtado ou roubado."
+    },
+    {
+     "termo": "Glicemia",
+     "def": "Quantidade de açúcar no sangue. Medida alta pode indicar diabetes."
+    },
+    {
+     "termo": "Acordo de Brumadinho",
+     "def": "Acordo de 2021 em que a Vale se comprometeu a pagar por danos do rompimento da barragem em 2019; parte do dinheiro vai para obras e saúde em Minas."
+    }
+   ],
+   "agenda": [
+    {
+     "quando": "Hoje, 10/11",
+     "oque": "Último dia de inscrição nas bolsas do CET (Congonhas); amistoso da TJ Sports na Cidade do Galo"
+    },
+    {
+     "quando": "Até 13/11",
+     "oque": "Cadastro de creche e pré-escola 2027 no app Lafaiete Digital"
+    },
+    {
+     "quando": "Sáb, 14/11",
+     "oque": "Ação sobre diabetes na Praça do Cristo (9h às 16h); BR-040 fechada das 15h às 16h em Congonhas; prova do CET"
+    },
+    {
+     "quando": "Seg, 16/11",
+     "oque": "Eleição da Liga de Desportos, às 19h, no Rosário"
+    },
+    {
+     "quando": "Sex, 20/11",
+     "oque": "Feriado nacional da Consciência Negra"
+    },
+    {
+     "quando": "Até 06/12",
+     "oque": "Carreta de exames do SUS no Ginásio do Carijós (só para quem for chamado)"
+    },
+    {
+     "quando": "06/01/2027",
+     "oque": "Posse do novo governador de Minas"
+    }
+   ],
+   "conversa": [
+    "O Hospital Regional está em obra há 16 anos. Por que você acha que obras públicas grandes demoram tanto?",
+    "Você já deixou de registrar um furto por achar que não ia dar em nada?",
+    "Qual cuidado com a saúde você vem adiando e pode resolver no sábado, na Praça do Cristo?"
+   ],
+   "fechamento": "Amanhã a gente volta. Se o frio apertar, agasalhe os mais velhos e as crianças, e não deixe de tomar água mesmo sem calor."
+  },
+  {
    "numero": 1,
    "data": "2026-11-10",
    "tempoLeitura": 12,

@@ -1,6 +1,942 @@
 {
- "atualizadoEm": "2026-11-10T02:30:00-03:00",
+ "atualizadoEm": "2026-11-10T06:55:00-03:00",
  "edicoes": [
+  {
+   "id": "2026-11-10-2",
+   "numero": 2,
+   "data": "2026-11-10",
+   "tempoLeitura": 24,
+   "fechamento": "Fechamento: terça-feira, 10/11/2026, 6h30 (Brasília). Edição diária; a nº 1 saiu na madrugada do mesmo dia, como edição de lançamento. Dados conferidos nas fontes de cada nota.",
+   "ticker": [
+    {
+     "area": "FDA",
+     "texto": "Asundexian (Sunharbo) aprovado: primeiro inibidor do fator XIa, para prevenção secundária de AVC (9/11)",
+     "url": "https://www.hcplive.com/view/asundexian-sunharbo-receives-fda-approval-for-secondary-stroke-prevention"
+    },
+    {
+     "area": "FDA",
+     "texto": "Alerta de classe: todos os agonistas de GLP-1 terão aviso de NAION na bula (9/11)",
+     "url": "https://www.pharmacytimes.com/view/fda-requires-class-wide-glp-1-ra-labeling-changes-for-potential-naion-risk"
+    },
+    {
+     "area": "Cardio",
+     "texto": "OptimPacing: estimulação do ramo esquerdo reduz desfecho composto vs VD (HR 0,41)",
+     "url": "https://www.tctmd.com/news/better-outcomes-lbb-vs-rv-pacing-atrioventricular-block"
+    },
+    {
+     "area": "Pediatria",
+     "texto": "FDA investiga tumores após Zolgensma: integração do vetor AAV perto do GLI1",
+     "url": "https://www.pharmanow.live/latest-news/fda-investigates-insertional-oncogenesis-zolgensma-aav-gene-therapy"
+    },
+    {
+     "area": "Onco",
+     "texto": "Amivantamabe SC ganha aprovação acelerada em cabeça e pescoço (ORR 42%)",
+     "url": "https://www.cancernetwork.com/view/fda-approves-sc-amivantamab-for-recurrent-metastatic-hnscc"
+    },
+    {
+     "area": "Infecto",
+     "texto": "Ebola Bundibugyo passa de 10,5 mil casos; OMS inclui duas vacinas no ensaio Tumaini",
+     "url": "https://www.managedhealthcareexecutive.com/view/who-adds-two-bundibugyo-vaccines-ebola-trial-drc"
+    }
+   ],
+   "capa": {
+    "kicker": "FDA · segunda-feira, 9 de novembro",
+    "titulo": "Chegou o fator XI.",
+    "linhaFina": "O asundexian é o primeiro anticoagulante de uma nova classe aprovado nos EUA. Reduziu AVC isquêmico em 26% sem aumentar sangramento maior, mas só depois de um AVC não cardioembólico, e não na fibrilação atrial.",
+    "texto": [
+     "Na segunda-feira (9/11), o FDA aprovou o asundexian (Sunharbo, Bayer), 50 mg por via oral uma vez ao dia, associado à antiagregação simples ou dupla, para reduzir o risco de AVC em adultos após AVC isquêmico não cardioembólico leve a moderado recente ou AIT de alto risco. É o primeiro inibidor do fator XIa aprovado no país. A China (NMPA) já tinha aprovado em outubro, e a EMA analisa o pedido.",
+     "A base é o OCEANIC-STROKE (NEJM, abril/2026): 12.327 pacientes em 702 centros de 37 países, randomizados até 72 horas após o evento (NIHSS ≤ 15 ou AIT de alto risco). AVC isquêmico ocorreu em 6,2% com asundexian contra 8,4% com placebo (HR 0,74; IC 95% 0,65–0,84), uma redução absoluta de cerca de 2,2 pontos percentuais em duração mediana de tratamento de 14,2 meses (NNT bruto ≈ 45). Sangramento maior pela ISTH: 1,9% contra 1,7% (HR 1,10; IC 0,85–1,44). Na AHA (7/11), uma análise exploratória mostrou efeito relativo semelhante nos estratos de risco vascular de Framingham (interação P = 0,58).",
+     "A bula traz os pontos de atenção: mais sangramento maior acima dos 75 anos e nos primeiros 90 dias, mais sangramento gastrointestinal, diarreia como efeito adverso mais comum, não usar com indutores fortes de CYP3A4 e de P-gp (como carbamazepina) nem na insuficiência hepática moderada ou grave, e suspender 24 horas antes de procedimentos e por 24 horas após trombólise. O desfecho secundário de AVC em 90 dias não foi significativo (HR 0,84; IC 0,69–1,02), o que interrompeu a hierarquia de testes. Para a fibrilação atrial, a história é outra: o OCEANIC-AF foi interrompido em 2023 porque o asundexian foi inferior ao apixabana."
+    ],
+    "camada": "FATO",
+    "evidencia": "ECR fase 3 + decisão regulatória",
+    "confianca": "Alta",
+    "confiancaMotivo": "ECR grande, duplo-cego, com desfecho clínico, publicado no NEJM, e aprovação listada na página oficial do FDA em 9/11/2026.",
+    "citacao": "\"Um anticoagulante que não sangra mais do que o placebo é a promessa; o que se viu foi isso, num cenário clínico específico.\"",
+    "fontes": [
+     {
+      "nome": "FDA: Novel Drug Approvals 2026",
+      "url": "https://www.fda.gov/drugs/novel-drug-approvals-fda/novel-drug-approvals-2026"
+     },
+     {
+      "nome": "HCPLive: aprovação e bula",
+      "url": "https://www.hcplive.com/view/asundexian-sunharbo-receives-fda-approval-for-secondary-stroke-prevention"
+     },
+     {
+      "nome": "TCTMD: análise por risco vascular",
+      "url": "https://www.tctmd.com/news/oceanic-stroke-asundexian-benefits-seen-across-vascular-risk-strata"
+     },
+     {
+      "nome": "Pharmaphorum: aprovação na China",
+      "url": "https://pharmaphorum.com/news/bayer-gets-first-approval-stroke-drug-asundexian"
+     }
+    ]
+   },
+   "numeros": [
+    {
+     "val": "HR 0,74",
+     "lab": "Asundexian · AVC isquêmico",
+     "nota": "6,2% vs 8,4%; sangramento maior sem diferença",
+     "src": {
+      "nome": "HCPLive",
+      "url": "https://www.hcplive.com/view/asundexian-sunharbo-receives-fda-approval-for-secondary-stroke-prevention"
+     }
+    },
+    {
+     "val": "HR 0,41",
+     "lab": "OptimPacing · ramo esquerdo",
+     "nota": "8,5% vs 19,2% em 35 meses",
+     "src": {
+      "nome": "TCTMD",
+      "url": "https://www.tctmd.com/news/better-outcomes-lbb-vs-rv-pacing-atrioventricular-block"
+     }
+    },
+    {
+     "val": "6,4 vs 3,8",
+     "lab": "NAION por 100 mil pessoas-ano",
+     "nota": "GLP-1 vs placebo em 126 ECRs",
+     "src": {
+      "nome": "Pharmacy Times",
+      "url": "https://www.pharmacytimes.com/view/fda-requires-class-wide-glp-1-ra-labeling-changes-for-potential-naion-risk"
+     }
+    },
+    {
+     "val": "1 em 114",
+     "lab": "Recém-nascidos sem vitamina K",
+     "nota": "um sangramento a mais (JAMA)",
+     "src": {
+      "nome": "Devdiscourse/Reuters",
+      "url": "https://www.devdiscourse.com/article/international/4002297-us-infant-bleeding-episodes-jump-as-vitamin-k-refusals-rise-two-studies-find"
+     }
+    },
+    {
+     "val": "10.532",
+     "lab": "Ebola Bundibugyo na RDC",
+     "nota": "casos confirmados até 1/11; 5.126 mortes",
+     "src": {
+      "nome": "UKHSA",
+      "url": "https://www.gov.uk/government/publications/outbreaks-under-monitoring-in-2026/outbreaks-under-monitoring-week-44-week-ending-1-november-2026"
+     }
+    }
+   ],
+   "cadernos": [
+    {
+     "id": "cardio",
+     "nome": "Cardiologia: o último dia da AHA",
+     "itens": [
+      {
+       "titulo": "OptimPacing: estimular o ramo esquerdo é melhor do que o ventrículo direito no BAV",
+       "camada": "FATO",
+       "evidencia": "ECR aberto",
+       "confianca": "Média",
+       "data": "9/11/2026",
+       "texto": "685 pacientes com bloqueio atrioventricular, em 17 centros (China, Hong Kong, Reino Unido, Polônia e EUA), foram randomizados para estimulação do ramo esquerdo (LBB) ou estimulação convencional do ventrículo direito. O comitê de monitoramento parou o estudo por superioridade numa análise interina. Em 35,1 meses de seguimento mediano, o composto de morte, internação por insuficiência cardíaca ou cardiomiopatia induzida por marca-passo ocorreu em 8,5% contra 19,2% (HR 0,41; IC 95% 0,23–0,75). Publicado no NEJM (Qian et al.). Limitações: estudo aberto, interrupção precoce (que tende a superestimar o efeito) e um componente do desfecho, a cardiomiopatia induzida, que depende de exame e pode ser influenciado pelo conhecimento do braço.",
+       "prova": "Saiba por que a estimulação crônica do VD causa dissincronia (QRS largo com padrão de BRE) e cardiomiopatia. A estimulação fisiológica (His ou ramo esquerdo) é a resposta. E lembre: estudo interrompido cedo por benefício costuma exagerar o tamanho do efeito.",
+       "fontes": [
+        {
+         "nome": "TCTMD",
+         "url": "https://www.tctmd.com/news/better-outcomes-lbb-vs-rv-pacing-atrioventricular-block"
+        }
+       ]
+      },
+      {
+       "titulo": "TYDAL-TIMI 78: anticorpo anti-ANGPTL4 derruba triglicerídeos em até 72%",
+       "camada": "FATO",
+       "evidencia": "ECR fase 2a",
+       "confianca": "Média",
+       "data": "9/11/2026",
+       "texto": "O MAR001 (Marea Therapeutics) inibe a ANGPTL4, que freia a lipase lipoproteica. Em 236 adultos com triglicerídeos elevados, doses SC de 300, 450 ou 900 mg a cada 4 semanas reduziram os TG de jejum, já descontado o placebo, em 39% a 46% na semana 12 e em até 72% em quem começou com TG ≥ 500 mg/dL. O colesterol remanescente caiu cerca de 40%; o LDL subiu um pouco. Não houve pancreatite nem piora glicêmica. Publicado no NEJM (O'Donoghue et al.). É fase 2: não há desfecho clínico, e redução de TG e de remanescente não é substituto validado de doença aterosclerótica.",
+       "prova": "Revise as hipertrigliceridemias: acima de 500 mg/dL, a prioridade é prevenir pancreatite (fibrato, dieta, controle glicêmico, álcool zero); entre 150 e 499, o foco é o risco cardiovascular global. E ligue à capa da edição nº 1: biomarcador que cai não garante evento que cai.",
+       "fontes": [
+        {
+         "nome": "TCTMD",
+         "url": "https://www.tctmd.com/news/angptl4-targeting-drug-high-triglycerides-moves-ahead-tydal-timi-78"
+        }
+       ]
+      },
+      {
+       "titulo": "Fibrilação atrial: ablação de áreas de baixa voltagem não ajuda todos (COAST-AF)",
+       "camada": "FATO",
+       "evidencia": "ECR",
+       "confianca": "Média",
+       "data": "8/11/2026",
+       "texto": "No COAST-AF (14 centros do Canadá, cerca de 500 pacientes com FA persistente há mais de 3 meses), somar ablação de áreas atriais de baixa voltagem ao isolamento das veias pulmonares não reduziu a recorrência de arritmia atrial na população geral, em 21 meses de seguimento médio. No subgrupo pré-especificado que de fato tinha áreas de baixa voltagem (268 pacientes), a recorrência foi de 49,3% contra 69,2%, mas resultado de subgrupo em estudo neutro gera hipótese, não conduta. Publicado no JAMA. Na mesma sessão, o SUPERIOR (China, 320 hipertensos com 55 anos ou mais após ablação) mostrou recorrência de 18% com sacubitril/valsartana contra 28% com valsartana, com queda de PA semelhante; a fonte não informa publicação em revista.",
+       "prova": "Isolamento das veias pulmonares é a pedra angular da ablação de FA. Na prova, desconfie de \"benefício no subgrupo\" quando o desfecho primário foi negativo.",
+       "fontes": [
+        {
+         "nome": "ACC: sessão de FA da AHA 2026",
+         "url": "https://www.acc.org/latest-in-cardiology/articles/2026/11/06/14/37/sun-5pm-afib-aha-2026"
+        }
+       ]
+      }
+     ],
+     "box": {
+      "titulo": "Brasil na AHA",
+      "texto": "O estudo de prevenção secundária mais importante do congresso, o OPTIMAL-STROKE, foi feito em 30 centros brasileiros e saiu no NEJM. Ele é a capa da aba Brasil desta edição."
+     }
+    },
+    {
+     "id": "endo",
+     "nome": "Metabolismo e obesidade",
+     "itens": [
+      {
+       "titulo": "FDA manda pôr alerta de NAION na bula de todos os agonistas de GLP-1",
+       "camada": "FATO",
+       "evidencia": "Regulatório + observacional + metanálise",
+       "confianca": "Média",
+       "data": "9/11/2026",
+       "texto": "Em comunicado de segurança de 9/11, o FDA exigiu que todas as bulas da classe (exenatida, liraglutida, dulaglutida, lixisenatida, semaglutida, tirzepatida e orforglipron) incluam, em Advertências e Precauções, o risco potencial de neuropatia óptica isquêmica anterior não arterítica (NAION). As evidências são heterogêneas: uma coorte de centro único (JAMA Ophthalmology, 2024) com HR de 4,28 no diabetes e 7,64 na obesidade; uma metanálise de 126 ECRs (134.253 pacientes) com 6,4 contra 3,8 eventos por 100 mil pessoas-ano, mas com apenas 15 eventos no total; e uma coorte do Sentinel com HR 1,19 (IC 0,91–1,54) contra iSGLT2 e 1,43 (IC 1,02–2,01) contra iDPP-4. O risco absoluto é baixo. O FDA orienta a procurar atendimento em caso de perda visual súbita e indolor em um olho e a considerar suspender o fármaco se houver NAION.",
+       "prova": "NAION: perda visual súbita, indolor, monocular, geralmente ao acordar, com edema de disco e defeito altitudinal no campo visual. Diferencie da arterítica (arterite de células gigantes: idoso, cefaleia, claudicação mandibular, VHS e PCR altas, corticoide imediato).",
+       "fontes": [
+        {
+         "nome": "Pharmacy Times",
+         "url": "https://www.pharmacytimes.com/view/fda-requires-class-wide-glp-1-ra-labeling-changes-for-potential-naion-risk"
+        },
+        {
+         "nome": "CNN",
+         "url": "https://www.cnn.com/2026/11/09/health/glp1-vision-loss-fda-warning"
+        }
+       ]
+      },
+      {
+       "titulo": "ATTAIN-OSA: o GLP-1 em comprimido reduz apneia do sono",
+       "camada": "FATO",
+       "evidencia": "2 ECRs fase 3",
+       "confianca": "Alta",
+       "data": "9/11/2026",
+       "texto": "Dois ensaios paralelos de 52 semanas (712 adultos com apneia obstrutiva moderada a grave e IMC ≥ 27, sem diabetes) testaram o orforglipron (Foundayo, Lilly) oral diário. O índice de apneia-hipopneia (IAH) caiu 17,8 eventos/h contra 4,5 com placebo em quem não usava CPAP e 17,3 contra 5,3 em quem usava (P < 0,001 nos dois). A perda de peso foi de 10% a 11%. Houve mais náusea, diarreia e constipação, e a suspensão por evento adverso foi maior do que a vista com tirzepatida no SURMOUNT-OSA, segundo a debatedora. Publicado no JAMA, financiado pela Lilly. Ainda não há aprovação para apneia.",
+       "prova": "A tirzepatida já é aprovada nos EUA para AOS com obesidade. Lembre que a polissonografia classifica a AOS pelo IAH: leve 5 a 14, moderada 15 a 29, grave ≥ 30 eventos/h.",
+       "fontes": [
+        {
+         "nome": "TCTMD",
+         "url": "https://www.tctmd.com/news/attain-osa-oral-glp-1-linked-fewer-breathing-interruptions"
+        }
+       ]
+      }
+     ],
+     "box": {
+      "titulo": "E o Brasil?",
+      "texto": "Semaglutida, liraglutida, dulaglutida e tirzepatida são vendidas no Brasil. Até o fechamento não encontramos comunicado da Anvisa sobre o alerta do FDA. A Agência Europeia já havia levado a NAION às bulas europeias de semaglutida."
+     }
+    },
+    {
+     "id": "onco",
+     "nome": "Oncologia e terapia intensiva",
+     "itens": [
+      {
+       "titulo": "Amivantamabe subcutâneo ganha aprovação acelerada em cabeça e pescoço",
+       "camada": "FATO",
+       "evidencia": "Fase 1b/2, braço único",
+       "confianca": "Média",
+       "data": "5/11/2026",
+       "texto": "O FDA aprovou o Rybrevant Faspro (amivantamabe com hialuronidase, anticorpo biespecífico EGFR-MET) para carcinoma espinocelular de cabeça e pescoço recorrente ou metastático após progressão com platina e anti-PD-(L)1. No OrigAMI-4 (coorte 1, 102 adultos), a taxa de resposta objetiva foi de 42% (IC 95% 32%–52%), com 15% de respostas completas, e 56% dos respondedores mantiveram a resposta por mais de 6 meses. O estudo excluiu o carcinoma de orofaringe HPV-positivo. Efeitos mais comuns: rash (79%), fadiga, alteração ungueal e estomatite. A aprovação definitiva depende do confirmatório OrigAMI-5.",
+       "prova": "Aprovação acelerada é baseada em desfecho intermediário (aqui, resposta) e exige estudo confirmatório. Revise o tratamento de 1ª linha do CEC de cabeça e pescoço metastático (pembrolizumabe conforme CPS) e por que o HPV+ de orofaringe tem prognóstico melhor.",
+       "fontes": [
+        {
+         "nome": "CancerNetwork",
+         "url": "https://www.cancernetwork.com/view/fda-approves-sc-amivantamab-for-recurrent-metastatic-hnscc"
+        },
+        {
+         "nome": "ASCO Post",
+         "url": "https://ascopost.com/news/november-2026/fda-grants-accelerated-approval-to-amivantamab-and-hyaluronidase-for-previously-treated-hnscc/"
+        }
+       ]
+      },
+      {
+       "titulo": "SAVE-ICU: sedação inalatória com isoflurano não reduz mortalidade na insuficiência respiratória",
+       "camada": "FATO",
+       "evidencia": "ECR pragmático aberto",
+       "confianca": "Alta",
+       "data": "14/10/2026",
+       "texto": "786 adultos em ventilação mecânica por insuficiência respiratória hipoxêmica aguda, em 14 UTIs do Canadá, receberam sedação inalatória (sobretudo isoflurano) ou sedação venosa usual. Mortalidade hospitalar: 42,5% contra 43,8% (RR 0,98; IC 95% 0,84–1,14). Os dias livres de UTI e de ventilação foram semelhantes. O grupo inalatório precisou mais de terapias de resgate para hipoxemia refratária (63,9% contra 55,0%) e teve menos dias livres de delirium e coma. Publicado no JAMA. Cerca de metade do grupo inalatório também recebeu sedativo venoso em algum dia.",
+       "prova": "Sedação na UTI: alvo de sedação leve (RASS 0 a −2), interrupção diária e prevenção de delirium (pacote ABCDEF). O SAVE-ICU não muda essa base.",
+       "fontes": [
+        {
+         "nome": "JAMA",
+         "url": "https://jamanetwork.com/journals/jama/fullarticle/10.1001/jama.2026.18471"
+        }
+       ]
+      }
+     ],
+     "box": {
+      "titulo": "Na fila do FDA",
+      "texto": "Ivonescimabe (14/11), neladalquibe (27/11) e giredestranto e povetacicept (30/11) seguem com decisão prevista para este mês."
+     }
+    },
+    {
+     "id": "infecto",
+     "nome": "Infectologia e saúde global",
+     "itens": [
+      {
+       "titulo": "Ebola Bundibugyo: 10,5 mil casos e duas novas vacinas no ensaio Tumaini",
+       "camada": "FATO",
+       "evidencia": "Vigilância + ensaio em curso",
+       "confianca": "Alta",
+       "data": "1/11 e 5/11/2026",
+       "texto": "Até 1/11, a República Democrática do Congo confirmou 10.532 casos e 5.126 mortes (letalidade entre confirmados perto de 49%), em 67 zonas de saúde de 8 províncias. A zona mais recente, Yakoma, faz divisa com a República Centro-Africana. Quênia tem 9 casos e Nigéria, 1 importado; Uganda encerrou o surto em agosto. O rastreamento de contatos está em 84%. É o maior surto da espécie Bundibugyo e o segundo maior de Ebola da história. No ensaio Tumaini (fase 2/3, vacinação em anel, iniciado no fim de outubro em Bunia, Ituri), a OMS recomendou incluir a ChAdOx1 BDBV (Oxford/Serum Institute) e a mRNA-1469 (Moderna). Resultados são esperados no início de 2027. Ainda não existe vacina licenciada contra Bundibugyo; a Ervebo é contra a espécie Zaire.",
+       "prova": "Vacinação em anel: vacinar contatos e contatos de contatos de um caso confirmado. Foi assim que a Ervebo provou eficácia na Guiné em 2015 e que a varíola foi erradicada.",
+       "fontes": [
+        {
+         "nome": "UKHSA: semana 44",
+         "url": "https://www.gov.uk/government/publications/outbreaks-under-monitoring-in-2026/outbreaks-under-monitoring-week-44-week-ending-1-november-2026"
+        },
+        {
+         "nome": "Managed Healthcare Executive",
+         "url": "https://www.managedhealthcareexecutive.com/view/who-adds-two-bundibugyo-vaccines-ebola-trial-drc"
+        }
+       ]
+      }
+     ],
+     "box": null
+    },
+    {
+     "id": "ped",
+     "nome": "Pediatria e gestação",
+     "itens": [
+      {
+       "titulo": "Zolgensma: FDA investiga tumores ligados à integração do vetor no genoma",
+       "camada": "FATO",
+       "evidencia": "Farmacovigilância (relatos)",
+       "confianca": "Média",
+       "data": "6/11/2026",
+       "texto": "O FDA abriu investigação sobre risco grave de neoplasia após a terapia gênica onasemnogene abeparvovec (Zolgensma, Novartis) para atrofia muscular espinhal. Há tumores do sistema nervoso central e periférico, da região espinhal e paraespinhal e do rim. Em três casos o oncogene GLI1 está envolvido, e em dois a análise molecular encontrou DNA do vetor AAV integrado ao genoma, com o promotor inserido antes ou dentro do GLI1. Segundo carta da Novartis citada pela SMA Europe, há nove relatos de tumor em mais de 6.000 pacientes tratados desde 2019. O FDA não suspendeu o produto e considera o balanço benefício-risco favorável; o alerta foi estendido ao Itvisma, a versão intratecal.",
+       "prova": "O AAV é considerado vetor predominantemente epissomal, ou seja, que quase não se integra. Este caso lembra a mutagênese insercional dos vetores retrovirais na terapia gênica de SCID-X1 nos anos 2000. Na AME, o diagnóstico precoce pelo teste do pezinho é o que muda prognóstico.",
+       "fontes": [
+        {
+         "nome": "PharmaNow",
+         "url": "https://www.pharmanow.live/latest-news/fda-investigates-insertional-oncogenesis-zolgensma-aav-gene-therapy"
+        },
+        {
+         "nome": "Blue News (SMA Europe)",
+         "url": "https://www.bluewin.ch/en/lifestyle/novartis-reports-nine-cases-of-tumors-caused-by-gene-therapy-li.3665192"
+        }
+       ]
+      },
+      {
+       "titulo": "Recusa da vitamina K ao nascer: dois estudos mostram mais sangramento em bebês",
+       "camada": "FATO",
+       "evidencia": "Coortes retrospectivas",
+       "confianca": "Média",
+       "data": "5/11/2026",
+       "texto": "No JAMA (Scott et al., CHOP), entre 5,24 milhões de bebês nascidos nos EUA de 2017 a 2025, a proporção sem vitamina K subiu de 3,1% para 6,8%. Quem não recebeu teve 47% mais sangramento até 6 meses (288 contra 186 por 10 mil; RR ajustado 1,47), mais que o dobro de sangramento intracraniano (RR 2,43) e um sangramento a mais a cada 114 recém-nascidos sem a dose. No JAMA Pediatrics (Woolf et al.), em cerca de 11 milhões de lactentes, a doença hemorrágica por deficiência de vitamina K quase quadruplicou no período. São estudos observacionais.",
+       "prova": "Doença hemorrágica do recém-nascido: precoce (24 h, drogas maternas), clássica (2 a 7 dias) e tardia (2 a 12 semanas, aleitamento exclusivo, colestase; é a que causa hemorragia intracraniana). Profilaxia: vitamina K1 1 mg IM ao nascer.",
+       "fontes": [
+        {
+         "nome": "Contemporary Pediatrics",
+         "url": "https://www.contemporarypediatrics.com/view/skipping-newborn-vitamin-k-tied-to-47-higher-infant-bleeding-risk"
+        },
+        {
+         "nome": "Devdiscourse/Reuters",
+         "url": "https://www.devdiscourse.com/article/international/4002297-us-infant-bleeding-episodes-jump-as-vitamin-k-refusals-rise-two-studies-find"
+        }
+       ]
+      },
+      {
+       "titulo": "Vacina materna contra VSR: 78% de efetividade contra internação do bebê",
+       "camada": "FATO",
+       "evidencia": "Metanálise de estudos observacionais",
+       "confianca": "Média",
+       "data": "6/11/2026",
+       "texto": "Metanálise de 7 estudos caso-controle (a maioria com desenho teste-negativo), com 7.112 lactentes da Argentina, Reino Unido e EUA, avaliou a RSVpreF (Abrysvo) aplicada na gestação. Com vacina pelo menos 14 dias antes do parto, a efetividade contra internação por infecção respiratória baixa por VSR foi de 82% até 3 meses e 78% (IC 95% 70%–84%) até 6 meses. Limitações: risco de viés moderado a sério, quase só a primeira temporada, sem dados de UTI, morte ou prematuros. Publicado no JAMA Pediatrics.",
+       "prova": "Duas estratégias para proteger o lactente contra VSR: vacina materna (32 a 36 semanas) ou anticorpo monoclonal no bebê (nirsevimabe). Saiba a janela gestacional e por que não se somam as duas, em regra.",
+       "fontes": [
+        {
+         "nome": "Contemporary Pediatrics",
+         "url": "https://contemporarypediatrics.com/view/maternal-rsvpref-78-effective-against-infant-rsv-hospitalization"
+        }
+       ]
+      }
+     ],
+     "box": {
+      "titulo": "E o Brasil?",
+      "texto": "O Zolgensma tem registro na Anvisa e é usado no país, inclusive por decisão judicial. A notícia não muda indicações, mas reforça o seguimento de longo prazo previsto na bula. A vacina materna contra VSR entrou no PNI em 2025, e a vitamina K ao nascer é rotina nas maternidades brasileiras."
+     }
+    },
+    {
+     "id": "mental",
+     "nome": "Saúde mental e IA",
+     "itens": [
+      {
+       "titulo": "Mebufotenina (5-MeO-DMT) nasal reduz depressão resistente em ensaio no JAMA",
+       "camada": "FATO",
+       "evidencia": "ECR",
+       "confianca": "Baixa",
+       "data": "28/10/2026",
+       "texto": "193 adultos com depressão moderada a grave sem resposta a 2 a 5 antidepressivos, em 38 centros da Austrália, Europa e EUA, receberam spray nasal de 12 mg, 8 mg ou uma dose mínima de 0,3 mg como comparador. No dia 29, a escala de 60 pontos caiu 11,1 e 12,5 pontos com as doses ativas contra 5,5 com o comparador; cerca de um terço respondeu (queda ≥ 50%), contra 12%. O efeito apareceu no dia seguinte e durou até 8 semanas. A fonte consultada não informa fase, cegamento nem tamanho dos braços, e psicodélicos têm problema clássico de cegamento: o paciente percebe o efeito agudo. Confiança baixa até lermos o artigo completo.",
+       "prova": "Depressão resistente = falha de pelo menos duas tentativas adequadas. Opções com evidência hoje: troca ou potencialização (lítio, antipsicótico atípico), escetamina, ECT e EMT.",
+       "fontes": [
+        {
+         "nome": "RTTNews (resumo do JAMA)",
+         "url": "https://www.rttnews.com/3704556/single-dose-of-psychedelic-drug-reduces-depression-symptoms-study-finds.aspx?type=hnr"
+        }
+       ]
+      },
+      {
+       "titulo": "Modelos gerais de IA superaram ferramentas clínicas especializadas em teste com perguntas reais",
+       "camada": "FATO",
+       "evidencia": "Estudo de avaliação comparativa",
+       "confianca": "Média",
+       "data": "12/6/2026",
+       "texto": "Leitura de fundo para a discussão de IA da AHA. No Nature Medicine, a equipe da NYU comparou três modelos de uso geral (GPT-5.2, Gemini 3.1 Pro e Claude Opus 4.6) com OpenEvidence e UpToDate Expert AI em 500 questões de MedQA, 500 itens do HealthBench e 100 perguntas reais de médicos avaliadas às cegas por 12 clínicos. Os modelos gerais formaram o grupo de cima em todas as avaliações (MedQA 90% a 97%, contra 88% a 90%); não houve diferença em alucinação ou conteúdo nocivo. Limitações: as ferramentas clínicas foram consultadas manualmente, o HealthBench é da OpenAI, a concordância entre avaliadores foi baixa e o campo muda a cada mês.",
+       "prova": "Para a prova e para a prática: acurácia em questões de múltipla escolha não é desempenho clínico. A Resolução CFM 2.454/2026 mantém a responsabilidade com o médico.",
+       "fontes": [
+        {
+         "nome": "Nature Medicine",
+         "url": "https://www.nature.com/articles/s41591-026-04431-5"
+        }
+       ]
+      }
+     ],
+     "box": null
+    }
+   ],
+   "leituraCritica": [
+    {
+     "titulo": "NNT 38, NNH 59: como pesar o OPTIMAL-STROKE",
+     "texto": [
+      "1. Os números absolutos: 13,5% − 10,9% = 2,6 pontos em 3,9 anos, o que dá NNT perto de 38. O composto renal: 3,9% − 2,2% = 1,7 ponto, NNH perto de 59.",
+      "2. Os desfechos não pesam igual. Um AVC ou um infarto evitado costuma valer mais do que uma queda de TFG, que em parte é hemodinâmica e reversível. Mas seis pacientes foram para diálise crônica, e isso pesa.",
+      "3. Quem estava no estudo? Pacientes cerca de 1 ano após o AVC, estáveis, com PAS inicial de 147. O resultado não vale para a fase aguda nem para quem tem estenose carotídea grave sintomática ou hipotensão ortostática.",
+      "4. Coerência externa: SPRINT (2015) e ESPRIT (2024) apontam na mesma direção. Quando estudos de países e populações diferentes concordam, a confiança sobe."
+     ]
+    },
+    {
+     "titulo": "Do sinal à bula: o caminho da NAION com os GLP-1",
+     "texto": [
+      "Uma coorte pequena de centro único levantou o sinal em 2024 com HR acima de 4. Estudos maiores encontraram efeito bem menor, e o comparador mudou o resultado: contra iSGLT2 não houve diferença significativa; contra iDPP-4, sim. Isso sugere confusão por indicação e mostra que a escolha do comparador ativo importa.",
+      "Mesmo assim o FDA colocou o alerta na bula. Farmacovigilância não espera certeza: avisa quando o dano possível é grave (cegueira), o sinal é consistente e a orientação é simples (procurar atendimento se houver perda visual súbita). Avisar não é o mesmo que proibir."
+     ]
+    }
+   ],
+   "aprovacoes": {
+    "fda": [
+     {
+      "farmaco": "Asundexian (Sunharbo)",
+      "indicacao": "Prevenção de AVC após AVC isquêmico não cardioembólico ou AIT de alto risco",
+      "data": "9/11/2026",
+      "status": "Aprovado"
+     },
+     {
+      "farmaco": "Amivantamabe SC (Rybrevant Faspro)",
+      "indicacao": "CEC de cabeça e pescoço recorrente/metastático pós-platina e anti-PD-(L)1",
+      "data": "5/11/2026",
+      "status": "Aprovado (acelerada)"
+     },
+     {
+      "farmaco": "Agonistas de GLP-1 (classe)",
+      "indicacao": "Novo alerta de NAION na bula",
+      "data": "9/11/2026",
+      "status": "Alerta de segurança"
+     },
+     {
+      "farmaco": "Onasemnogene abeparvovec (Zolgensma, Itvisma)",
+      "indicacao": "Risco de neoplasia por integração do vetor",
+      "data": "6/11/2026",
+      "status": "Em investigação"
+     },
+     {
+      "farmaco": "Ivonescimabe",
+      "indicacao": "NSCLC não escamoso EGFR+ pós-TKI, com quimio",
+      "data": "14/11/2026",
+      "status": "Em análise"
+     },
+     {
+      "farmaco": "Neladalquibe",
+      "indicacao": "NSCLC ALK+ pré-tratado",
+      "data": "27/11/2026",
+      "status": "Em análise"
+     },
+     {
+      "farmaco": "Povetacicept",
+      "indicacao": "Nefropatia por IgA (acelerada)",
+      "data": "30/11/2026",
+      "status": "Em análise"
+     },
+     {
+      "farmaco": "Giredestranto",
+      "indicacao": "Adjuvante, mama inicial RE+/HER2−",
+      "data": "30/11/2026",
+      "status": "Em análise"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "FDA: Novel Drug Approvals 2026",
+      "url": "https://www.fda.gov/drugs/novel-drug-approvals-fda/novel-drug-approvals-2026"
+     },
+     {
+      "nome": "CancerNetwork",
+      "url": "https://www.cancernetwork.com/view/fda-approves-sc-amivantamab-for-recurrent-metastatic-hnscc"
+     },
+     {
+      "nome": "Pharmacy Times",
+      "url": "https://www.pharmacytimes.com/view/fda-requires-class-wide-glp-1-ra-labeling-changes-for-potential-naion-risk"
+     },
+     {
+      "nome": "PharmaNow",
+      "url": "https://www.pharmanow.live/latest-news/fda-investigates-insertional-oncogenesis-zolgensma-aav-gene-therapy"
+     },
+     {
+      "nome": "Prime Therapeutics",
+      "url": "https://www.primetherapeutics.com/fda-decisions-expected-november-2026"
+     }
+    ]
+   },
+   "historia": [
+    {
+     "titulo": "1953: a hemofilia que não era A nem B",
+     "texto": "Em 1953, Robert Rosenthal e colegas, em Nova York, descreveram uma família com sangramento leve após cirurgias e extrações dentárias em que faltava um terceiro fator, diferente dos fatores VIII e IX. Era o fator XI, e a doença ficou conhecida como hemofilia C, comum entre judeus asquenazes. A observação de que quem nasce sem fator XI sangra pouco e parece ter menos trombose é a ideia por trás do asundexian, aprovado 73 anos depois."
+    },
+    {
+     "titulo": "Koagulation: por que a vitamina se chama K",
+     "texto": "Entre 1929 e 1935, o dinamarquês Henrik Dam viu que pintos alimentados com dieta sem gordura sangravam. Chamou o fator que faltava de vitamina K, de \"Koagulation\". Edward Doisy, nos EUA, determinou sua estrutura. Os dois dividiram o Nobel de Medicina de 1943. A injeção ao nascer virou rotina nos EUA em 1961, por recomendação da Academia Americana de Pediatria."
+    }
+   ],
+   "fronteiras": [
+    {
+     "pergunta": "Por que o fator XIa funcionou no AVC e falhou na fibrilação atrial?",
+     "texto": "O OCEANIC-AF parou em 2023 porque o asundexian foi inferior ao apixabana. Hipóteses: inibição incompleta do fator XIa na dose usada, trombo da aurícula esquerda mais dependente da via extrínseca, ou um comparador muito eficaz. Os anticorpos anti-fator XI (abelacimabe) e o milvexian vão responder."
+    },
+    {
+     "pergunta": "O AAV se integra mais do que se pensava?",
+     "texto": "Dois casos com DNA do vetor dentro ou perto do GLI1 desafiam a ideia de vetor puramente epissomal. Não se sabe a frequência real, se depende da dose (o Zolgensma usa doses muito altas por quilo) ou se vale para outras terapias com AAV."
+    },
+    {
+     "pergunta": "Qual é o alvo de pressão certo para cada paciente pós-AVC?",
+     "texto": "O OPTIMAL-STROKE apoia menos de 120 para a média. Ainda não se sabe quem tem mais a perder: idosos frágeis, pacientes com DRC avançada, doença de pequenos vasos extensa ou estenose intracraniana."
+    }
+   ],
+   "estudo": {
+    "temas": [
+     {
+      "tema": "Prevenção secundária do AVC isquêmico",
+      "porque": "Antiagregação (simples ou dupla por 21 a 90 dias), alvo pressórico, estatina e agora o fator XIa. Cai em clínica médica e neurologia."
+     },
+     {
+      "tema": "Anticoagulantes: mecanismos e reversão",
+      "porque": "Varfarina, heparinas, DOACs e inibidores de fator XI: onde cada um age na cascata e como se reverte."
+     },
+     {
+      "tema": "Distúrbios de condução e marca-passo",
+      "porque": "BAV de 1º, 2º (Mobitz I e II) e 3º grau, indicações de marca-passo e estimulação fisiológica."
+     },
+     {
+      "tema": "Neonatologia: cuidados na sala de parto",
+      "porque": "Vitamina K, profilaxia ocular, teste do pezinho e vacina de hepatite B nas primeiras 12 horas."
+     },
+     {
+      "tema": "Arboviroses: classificação e manejo da dengue",
+      "porque": "Grupos A a D, sinais de alarme e hidratação. Tema garantido no Revalida e no ENAMED."
+     }
+    ],
+    "leituras": [
+     {
+      "titulo": "Ensaio OPTIMAL-STROKE (NEJM, 2026)",
+      "autor": "Sampaio Silva G et al.",
+      "porque": "Um ECR brasileiro no NEJM. Leia as tabelas de desfecho e de eventos adversos e treine o cálculo de NNT e NNH."
+     },
+     {
+      "titulo": "Ensaio OCEANIC-STROKE (NEJM, 2026)",
+      "autor": "Investigadores do OCEANIC-STROKE",
+      "porque": "Bom para estudar desenho orientado por eventos e testagem hierárquica de desfechos secundários."
+     },
+     {
+      "titulo": "O Gene: uma história íntima",
+      "autor": "Siddhartha Mukherjee",
+      "porque": "Conta a história da terapia gênica, incluindo os casos de leucemia por vetor retroviral que ajudam a entender o alerta do Zolgensma."
+     }
+    ],
+    "diretrizes": [
+     {
+      "titulo": "Guideline for the Prevention of Stroke in Patients With Stroke and TIA (AHA/ASA, 2021)",
+      "nota": "Referência para antiagregação, alvo pressórico e estatina após AVC. O OPTIMAL-STROKE deve entrar na próxima revisão."
+     },
+     {
+      "titulo": "Dengue: diagnóstico e manejo clínico (Ministério da Saúde)",
+      "nota": "Classificação de risco em grupos A a D e hidratação. Use a edição mais recente no portal do Ministério."
+     },
+     {
+      "titulo": "Diretriz Brasileira de Hipertensão Arterial (SBC, SBH e SBN)",
+      "nota": "Metas pressóricas e escolha de fármacos no Brasil. Confira a versão mais recente no portal da SBC."
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "HCPLive: OPTIMAL-STROKE",
+      "url": "https://www.hcplive.com/view/aha-2026-intensive-blood-pressure-control-reduces-events-after-ischemic-stroke"
+     },
+     {
+      "nome": "HCPLive: asundexian",
+      "url": "https://www.hcplive.com/view/asundexian-sunharbo-receives-fda-approval-for-secondary-stroke-prevention"
+     }
+    ]
+   },
+   "agenda": [
+    {
+     "data": "11/11",
+     "evento": "I Encontro do CFM com Estudantes de Medicina (Brasília e online)"
+    },
+    {
+     "data": "14/11",
+     "evento": "Dia Mundial do Diabetes · decisão do FDA sobre ivonescimabe"
+    },
+    {
+     "data": "22/11",
+     "evento": "FDA: deramiocel (Duchenne) e molgramostim (proteinose alveolar)"
+    },
+    {
+     "data": "27/11",
+     "evento": "FDA: neladalquibe (NSCLC ALK+) e saroglitazar (colangite biliar primária)"
+    },
+    {
+     "data": "30/11",
+     "evento": "FDA: povetacicept, giredestranto e bezuclastinibe"
+    },
+    {
+     "data": "início/27",
+     "evento": "Primeiros resultados das vacinas contra Bundibugyo no ensaio Tumaini"
+    }
+   ],
+   "quiz": [
+    {
+     "p": "No OPTIMAL-STROKE, o desfecho primário foi 10,9% vs 13,5% em 3,9 anos. Qual é o NNT aproximado?",
+     "r": "Cerca de 38 (1 / 0,026). Ou seja, tratar 38 pacientes com alvo < 120 mmHg por cerca de 4 anos evita um evento do desfecho primário."
+    },
+    {
+     "p": "Para qual cenário o asundexian foi aprovado, e para qual não deve ser usado?",
+     "r": "Aprovado com antiagregação após AVC isquêmico não cardioembólico leve a moderado recente ou AIT de alto risco. Não é para fibrilação atrial: no OCEANIC-AF foi inferior ao apixabana."
+    },
+    {
+     "p": "Paciente de 58 anos em uso de semaglutida acorda com perda visual indolor no olho direito e edema de disco. Qual a hipótese e o diagnóstico diferencial que não pode faltar?",
+     "r": "NAION. Excluir a forma arterítica (arterite de células gigantes) com VHS e PCR, sobretudo em idosos com cefaleia ou claudicação mandibular, porque exige corticoide imediato."
+    },
+    {
+     "p": "Quais são as três formas da doença hemorrágica do recém-nascido e qual delas causa hemorragia intracraniana?",
+     "r": "Precoce (primeiras 24 h, ligada a drogas maternas), clássica (2 a 7 dias) e tardia (2 a 12 semanas). A tardia, associada a aleitamento exclusivo e colestase, é a que mais causa hemorragia intracraniana."
+    },
+    {
+     "p": "Por que um estudo interrompido precocemente por benefício, como o OptimPacing, merece cautela?",
+     "r": "Porque a interrupção ocorre quando o efeito observado está alto por acaso, o que tende a superestimar o tamanho real do benefício."
+    }
+   ],
+   "glossario": [
+    {
+     "termo": "Fator XIa",
+     "def": "Forma ativada do fator XI, que amplifica a geração de trombina na via intrínseca. Contribui mais para a trombose do que para a hemostasia."
+    },
+    {
+     "termo": "NAION",
+     "def": "Neuropatia óptica isquêmica anterior não arterítica: infarto da cabeça do nervo óptico, com perda visual súbita e indolor."
+    },
+    {
+     "termo": "Estimulação do ramo esquerdo (LBBAP)",
+     "def": "Marca-passo com eletrodo no septo que captura o sistema de condução, gerando ativação ventricular mais fisiológica."
+    },
+    {
+     "termo": "Mutagênese insercional",
+     "def": "Mutação causada quando DNA de um vetor se integra ao genoma e ativa ou desativa um gene, como um oncogene."
+    },
+    {
+     "termo": "Desenho teste-negativo",
+     "def": "Estudo caso-controle em que casos e controles são pessoas testadas pelo mesmo motivo; os controles são os de teste negativo."
+    },
+    {
+     "termo": "Vacinação em anel",
+     "def": "Estratégia de vacinar contatos e contatos de contatos de cada caso confirmado."
+    },
+    {
+     "termo": "Aprovação acelerada",
+     "def": "Via do FDA que aprova com base em desfecho intermediário, com obrigação de estudo confirmatório."
+    }
+   ],
+   "brasil": {
+    "ticker": [
+     {
+      "area": "Brasil",
+      "texto": "OPTIMAL-STROKE, feito em 30 centros brasileiros: PAS < 120 após AVC reduz eventos (HR 0,79; NEJM)",
+      "url": "https://www.hcplive.com/view/aha-2026-intensive-blood-pressure-control-reduces-events-after-ischemic-stroke"
+     },
+     {
+      "area": "Brasil",
+      "texto": "Tema da redação do ENEM 2026: a valorização do SUS como direito universal (8/11)",
+      "url": "https://correiobraziliense.com.br/euestudante/enem/2026/11/7535123-padilha-celebra-tema-do-enem-sobre-sus-e-patrimonio-do-povo-brasileiro.html"
+     },
+     {
+      "area": "Brasil",
+      "texto": "MPF abre inquérito sobre falta de vacina contra mpox; país soma 665 casos em 2026",
+      "url": "https://ndmais.com.br/politica/mpox-brasil-casos-vacinas-governo-federal"
+     },
+     {
+      "area": "Brasil",
+      "texto": "Modelos projetam cerca de 860 mil casos de dengue em 2027; Minas entre os estados com alta",
+      "url": "https://www.diariodepernambuco.com.br/brasil/2026/11/11728512-dengue-pais-pode-chegar-a-860-mil-casos-provaveis-da-doenca-em-2027.html"
+     },
+     {
+      "area": "Brasil",
+      "texto": "Anvisa proíbe e manda apreender o emagrecedor Ultra Shape (9/11)",
+      "url": "https://www.correiobraziliense.com.br/brasil/2026/11/7535499-anvisa-determina-recolhimento-de-emagrecedor-sem-registro-sanitario.html"
+     }
+    ],
+    "capa": {
+     "kicker": "Pesquisa brasileira · AHA 2026 e NEJM",
+     "titulo": "Menos de 12 por 8? Menos de 120.",
+     "linhaFina": "Um ensaio feito inteiramente no Brasil, com 4.368 pacientes, mostrou que baixar a pressão sistólica para menos de 120 mmHg depois de um AVC isquêmico reduz eventos cardiovasculares, ao custo de mais alterações renais.",
+     "texto": [
+      "O OPTIMAL-STROKE (NCT04036409) randomizou, em 30 centros brasileiros entre 2019 e 2022, adultos com AVC isquêmico (92%) ou AIT (8%) para alvo de pressão sistólica abaixo de 120 mmHg ou abaixo de 140 mmHg, cerca de 1 ano após o evento. A investigadora principal é a neurologista Gisele Sampaio Silva (Unifesp e Hospital Israelita Albert Einstein), e o comitê diretivo é presidido por Otavio Berwanger (George Institute e Imperial College). O estudo é de iniciativa dos investigadores. Os resultados foram apresentados na AHA em 7/11 e publicados no NEJM.",
+      "A PAS média em seguimento foi de 122,0 contra 135,2 mmHg, com cerca de três classes de anti-hipertensivo no braço intensivo contra duas. Em 3,9 anos, o desfecho primário (morte cardiovascular, IAM não fatal, AVC não fatal ou internação por angina instável ou IC) ocorreu em 10,9% contra 13,5% (HR 0,79; IC 95% 0,67–0,94; P = 0,007). Morte por qualquer causa somada aos eventos: 17,4% contra 20,2% (HR 0,84). O debatedor Daichi Shimbo calculou NNT de 38.",
+      "O preço: o composto renal (sobretudo queda sustentada de 50% ou mais da TFG) foi de 3,9% contra 2,2% (HR 1,76; NNH de 59), e hiponatremia abaixo de 130 foi de 3,3% contra 2,2%. Eventos adversos graves foram iguais (15,1% contra 15,3%) e quedas com lesão foram até menos frequentes no braço intensivo (1,0% contra 1,7%). No subgrupo de AIT, pequeno, não houve sinal de benefício. A própria investigadora lembra que o alvo baixo exige acompanhamento médico e monitoramento da função renal."
+     ],
+     "camada": "FATO",
+     "evidencia": "ECR multicêntrico",
+     "confianca": "Alta",
+     "confiancaMotivo": "ECR grande com desfecho clínico, publicado no NEJM; aberto quanto ao alvo (inevitável em estudo de estratégia), com adjudicação de eventos.",
+     "citacao": "\"Controlar a pressão depois de um AVC é especialmente importante porque pode ajudar a prevenir outro AVC.\" (Otavio Berwanger)",
+     "fontes": [
+      {
+       "nome": "HCPLive",
+       "url": "https://www.hcplive.com/view/aha-2026-intensive-blood-pressure-control-reduces-events-after-ischemic-stroke"
+      },
+      {
+       "nome": "TCTMD",
+       "url": "https://www.tctmd.com/news/optimal-stroke-tight-bp-control-pays-dividends-after-ischemic-stroke-or-tia"
+      },
+      {
+       "nome": "ClinicalTrials.gov",
+       "url": "https://clinicaltrials.gov/study/NCT04036409"
+      }
+     ]
+    },
+    "numeros": [
+     {
+      "val": "HR 0,79",
+      "lab": "OPTIMAL-STROKE",
+      "nota": "10,9% vs 13,5%; NNT ≈ 38",
+      "src": {
+       "nome": "HCPLive",
+       "url": "https://www.hcplive.com/view/aha-2026-intensive-blood-pressure-control-reduces-events-after-ischemic-stroke"
+      }
+     },
+     {
+      "val": "665",
+      "lab": "Casos de mpox no Brasil em 2026",
+      "nota": "119 só em outubro",
+      "src": {
+       "nome": "Afya",
+       "url": "https://portal.afya.com.br/infectologia/casos-de-mpox-somam-665-no-brasil-em-2026"
+      }
+     },
+     {
+      "val": "860 mil",
+      "lab": "Dengue projetada para 2027",
+      "nota": "faixa de 560 mil a 1,6 milhão",
+      "src": {
+       "nome": "Agência Brasil via Diario de Pernambuco",
+       "url": "https://www.diariodepernambuco.com.br/brasil/2026/11/11728512-dengue-pais-pode-chegar-a-860-mil-casos-provaveis-da-doenca-em-2027.html"
+      }
+     },
+     {
+      "val": "489.197",
+      "lab": "Casos prováveis de dengue em 2026",
+      "nota": "368 mortes confirmadas",
+      "src": {
+       "nome": "Estado de Minas/Folhapress",
+       "url": "https://www.em.com.br/bem-viver/2026/11/7533219-ministerio-da-saude-projeta-alta-da-dengue-em-2027.html"
+      }
+     }
+    ],
+    "cadernos": [
+     {
+      "id": "br-sus",
+      "nome": "SUS e Ministério da Saúde",
+      "itens": [
+       {
+        "titulo": "O SUS vira tema da redação do ENEM",
+        "camada": "FATO",
+        "evidencia": "Fato institucional",
+        "confianca": "Alta",
+        "data": "8/11/2026",
+        "texto": "O primeiro dia do ENEM 2026, domingo (8/11), teve como tema de redação \"A valorização do Sistema Único de Saúde (SUS) como direito universal\". O ministro Alexandre Padilha, que estava na COP31, na Turquia, comemorou em vídeo: \"É um patrimônio do povo brasileiro o SUS.\"",
+        "prova": "Para Revalida e ENAMED, saiba de cor os princípios doutrinários (universalidade, integralidade, equidade) e organizativos (descentralização, regionalização, hierarquização, participação social) da Lei 8.080/1990, e o que a Lei 8.142/1990 criou (conselhos e conferências).",
+        "fontes": [
+         {
+          "nome": "Correio Braziliense",
+          "url": "https://correiobraziliense.com.br/euestudante/enem/2026/11/7535123-padilha-celebra-tema-do-enem-sobre-sus-e-patrimonio-do-povo-brasileiro.html"
+         }
+        ]
+       },
+       {
+        "titulo": "Dengue em 2027: maior que 2026, longe de 2024",
+        "camada": "CENÁRIO",
+        "evidencia": "Modelagem (ensemble de 22 modelos)",
+        "confianca": "Média",
+        "data": "4/11 e 6/11/2026",
+        "texto": "No webinar de preparação para 2027 (6/11), o desafio InfoDengue–Mosqlimate, que reúne 22 modelos de 27 equipes, projetou cerca de 860 mil casos prováveis de dengue em 2027 (faixa de 80% de 560 mil a 1,6 milhão), com pico perto de 40 mil casos em abril, e mais de 90 mil casos de chikungunya. Minas Gerais aparece entre os estados com alta prevista, ao lado de Paraná, Rio de Janeiro, Mato Grosso do Sul, Sergipe e Acre. Em 2026 o país soma 489.197 casos prováveis e 368 mortes confirmadas. O Ministério fala em alta de 20% a 40%, e um relatório da Fiocruz de outubro chega a 1,5 milhão. Os modelos divergem sobre o peso do El Niño, que deve ser tratado como gatilho de contingência. \"As projeções não apontam uma epidemia como a de 2024\", disse Claudia Codeço (Fiocruz).",
+        "prova": "Revise a classificação da dengue (sem sinais de alarme, com sinais de alarme, grave) e os grupos A, B, C e D do manejo do Ministério. Sinais de alarme caem em toda prova: dor abdominal intensa, vômitos persistentes, acúmulo de líquido, sangramento de mucosa, letargia, hepatomegalia > 2 cm e aumento progressivo do hematócrito.",
+        "fontes": [
+         {
+          "nome": "Agência Brasil via Diario de Pernambuco",
+          "url": "https://www.diariodepernambuco.com.br/brasil/2026/11/11728512-dengue-pais-pode-chegar-a-860-mil-casos-provaveis-da-doenca-em-2027.html"
+         },
+         {
+          "nome": "Estado de Minas/Folhapress",
+          "url": "https://www.em.com.br/bem-viver/2026/11/7533219-ministerio-da-saude-projeta-alta-da-dengue-em-2027.html"
+         }
+        ]
+       }
+      ],
+      "box": {
+       "titulo": "Correção",
+       "texto": "A edição nº 1 disse que a vacina da dengue do Butantan estava em uso no SUS. Faltou informar que o Ministério suspendeu a aplicação em 8/6/2026, por precaução, após 42 eventos adversos em cerca de 500 mil doses, três graves e dois óbitos ainda em investigação. Não há data para retomar. A Qdenga segue para 10 a 14 anos. Detalhes no caderno de vigilância."
+      }
+     },
+     {
+      "id": "br-vig",
+      "nome": "Vigilância e vacinação",
+      "itens": [
+       {
+        "titulo": "Mpox: casos sobem, vacina falta e o MPF abre inquérito",
+        "camada": "FATO",
+        "evidencia": "Vigilância + ato do MPF",
+        "confianca": "Alta",
+        "data": "4/11 a 9/11/2026",
+        "texto": "O Brasil confirmou 665 casos de mpox em 2026 até 3/11, com 119 em outubro, o maior mês do ano, e uma morte. O estado do Rio tem 269 casos, contra 108 no mesmo período de 2025. O Distrito Federal suspendeu a vacinação em 3/11 por falta de estoque, e o Ministério autorizou em 5/11 a compra de até 20 mil doses. Em 9/11, o Ministério Público Federal abriu inquérito civil para apurar compra e distribuição das vacinas e perguntou se o público pode ser ampliado para usuários de PrEP. Hoje a prioridade inclui pessoas vivendo com HIV com CD4 abaixo de 100. A vacina pós-exposição deve ser dada de preferência em até 4 dias, com limite de 14.",
+        "prova": "Mpox é de notificação compulsória imediata (24 h). Saiba o quadro (lesões que evoluem de mácula a crosta no mesmo estágio, linfadenopatia, proctite) e o diagnóstico por PCR de lesão.",
+        "fontes": [
+         {
+          "nome": "ND+",
+          "url": "https://ndmais.com.br/politica/mpox-brasil-casos-vacinas-governo-federal"
+         },
+         {
+          "nome": "Afya",
+          "url": "https://portal.afya.com.br/infectologia/casos-de-mpox-somam-665-no-brasil-em-2026"
+         }
+        ]
+       },
+       {
+        "titulo": "Vacina da dengue do Butantan: suspensa desde junho",
+        "camada": "FATO",
+        "evidencia": "Farmacovigilância",
+        "confianca": "Alta",
+        "data": "8/6/2026 (atualizado em 4/11)",
+        "texto": "O Ministério da Saúde suspendeu em 8/6/2026, por precaução, a Butantan-DV, de dose única, depois que a farmacovigilância identificou 42 eventos adversos em cerca de 501 mil doses (0,008%), três graves e dois fatais, cuja relação causal ainda era investigada. As doses foram mantidas em rede de frio e a Anvisa reuniu especialistas. Em 4/11, Padilha disse esperar a vacina \"pelo menos no ano que vem\", sem data. A Qdenga (Takeda, duas doses) segue no SUS para 10 a 14 anos, e o Ministério diz que não discute ampliar esse público.",
+        "prova": "Sinal de segurança não é prova de causalidade. Saiba o que a farmacovigilância faz depois do registro (fase 4) e por que eventos raros, de 1 em 10 mil ou menos, só aparecem com centenas de milhares de doses.",
+        "fontes": [
+         {
+          "nome": "Diario de Pernambuco",
+          "url": "https://www.diariodepernambuco.com.br/dp-/dp-saude/2026/06/11716115-veja-o-que-se-sabe-sobre-a-suspensao-temporaria-da-vacina-contra-a-dengue-do-butantan.html"
+         },
+         {
+          "nome": "O Povo",
+          "url": "https://www.opovo.com.br/noticias/saude/2026/06/08/amp/ministerio-da-saude-suspende-vacina-contra-a-dengue-do-butantan.html"
+         },
+         {
+          "nome": "Estado de Minas/Folhapress",
+          "url": "https://www.em.com.br/bem-viver/2026/11/7533219-ministerio-da-saude-projeta-alta-da-dengue-em-2027.html"
+         }
+        ]
+       }
+      ],
+      "box": null
+     },
+     {
+      "id": "br-reg",
+      "nome": "Anvisa, CFM e formação médica",
+      "itens": [
+       {
+        "titulo": "Anvisa proíbe e manda apreender o emagrecedor Ultra Shape",
+        "camada": "FATO",
+        "evidencia": "Ato regulatório",
+        "confianca": "Alta",
+        "data": "9/11/2026",
+        "texto": "Resolução publicada no Diário Oficial em 9/11 proibiu fabricação, venda, distribuição, propaganda e uso do Ultra Shape e determinou a apreensão de todos os lotes. O produto não tem registro, notificação ou cadastro na Anvisa, e o fabricante não foi identificado. A nota não cita análise química do conteúdo.",
+        "prova": "Produtos para emagrecer vendidos sem registro já foram flagrados com sibutramina e outros fármacos não declarados. Pergunte ao paciente sobre suplementos e \"naturais\": entram na anamnese medicamentosa.",
+        "fontes": [
+         {
+          "nome": "Correio Braziliense",
+          "url": "https://www.correiobraziliense.com.br/brasil/2026/11/7535499-anvisa-determina-recolhimento-de-emagrecedor-sem-registro-sanitario.html"
+         },
+         {
+          "nome": "Diário do Grande ABC",
+          "url": "https://www.dgabc.com.br/Noticia/4367713/anvisa-determina-recolhimento-de-emagrecedor-sem-registro-sanitario-e-manda-apreender-lotes"
+         }
+        ]
+       },
+       {
+        "titulo": "CFM faz amanhã o primeiro encontro com estudantes de medicina",
+        "camada": "FATO",
+        "evidencia": "Evento institucional",
+        "confianca": "Alta",
+        "data": "11/11/2026",
+        "texto": "O I Encontro do CFM com Estudantes de Medicina acontece em 11/11, das 8h às 17h, na sede do conselho em Brasília e também pelo Zoom. O programa tem painéis sobre formação por competências e o papel do internato, residência ou pós-graduação, dilemas éticos do estudante (limites da prática, objeção de consciência) e conduta em redes sociais, além de oficinas de ECG e de julgamento simulado em urgência. Quem assistir a pelo menos 70% online recebe certificado. A plenária do CFM se reúne de 24 a 27/11.",
+        "prova": "O Código de Ética Médica vale para o médico, mas o estudante responde à instituição e à supervisão. No internato, todo ato é supervisionado, e prescrição e atestado são do médico responsável.",
+        "fontes": [
+         {
+          "nome": "CFM: programação",
+          "url": "https://portal.cfm.org.br/eventos/i-encontro-do-cfm-estudantes-de-medicina/"
+         },
+         {
+          "nome": "CFM: plenária de novembro",
+          "url": "https://portal.cfm.org.br/sessoes-plenarias/convocacao-11a-sessao-plenaria-ordinaria-do-cfm-gestao-2024-2029-24-25-26-e-27-de-novembro-de-2026/"
+         }
+        ]
+       }
+      ],
+      "box": {
+       "titulo": "Minas e Lafaiete",
+       "texto": "Sem notícia nova de saúde de Conselheiro Lafaiete nas últimas 72 horas. O Hospital Regional segue com previsão de abrir até o fim de 2026. Minas está entre os estados com alta de dengue projetada para 2027."
+      }
+     }
+    ],
+    "aprovacoes": {
+     "anvisa": [
+      {
+       "farmaco": "Ultra Shape (emagrecedor)",
+       "indicacao": "Produto sem registro; fabricante desconhecido",
+       "data": "9/11/2026",
+       "status": "Proibido e apreendido"
+      },
+      {
+       "farmaco": "Semaglutida oral 25 mg (Wegovy)",
+       "indicacao": "Obesidade e sobrepeso com comorbidade",
+       "data": "4/11/2026",
+       "status": "Registrado"
+      }
+     ],
+     "fontes": [
+      {
+       "nome": "Correio Braziliense",
+       "url": "https://www.correiobraziliense.com.br/brasil/2026/11/7535499-anvisa-determina-recolhimento-de-emagrecedor-sem-registro-sanitario.html"
+      }
+     ]
+    },
+    "agenda": [
+     {
+      "data": "11/11",
+      "evento": "I Encontro do CFM com Estudantes de Medicina"
+     },
+     {
+      "data": "14/11",
+      "evento": "Dia Mundial do Diabetes"
+     },
+     {
+      "data": "24–27/11",
+      "evento": "Sessão plenária do CFM"
+     },
+     {
+      "data": "dez",
+      "evento": "Prazo do Ministério para os 23 oncológicos no SUS"
+     },
+     {
+      "data": "fim/26",
+      "evento": "Previsão de abertura do Hospital Regional de Conselheiro Lafaiete"
+     },
+     {
+      "data": "abr/27",
+      "evento": "Pico projetado da dengue (cerca de 40 mil casos na semana)"
+     }
+    ]
+   }
+  },
   {
    "id": "2026-11-10",
    "numero": 1,
