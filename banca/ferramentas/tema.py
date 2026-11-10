@@ -24,12 +24,11 @@ def _preto(css):
     return re.sub(r"([{;]\s*[\w-]+)\s*:([^;{}]*)", decl, css)
 
 def aplicar(html):
-    if "<!--tema:inicio-->" in html:
+    if "<!--tema:inicio-->" in html:  # tira o bloco antigo e põe o atual no lugar certo
         i, j = html.find("<!--tema:inicio-->"), html.find("<!--tema:fim-->") + len("<!--tema:fim-->")
-        html = html[:i] + TEMA + html[j:]
-    else:
-        m = re.search(r"<head[^>]*>", html, re.I) or re.search(r'<meta charset="[^"]*">', html, re.I)
-        html = html[:m.end()] + "\n" + TEMA + "\n" + html[m.end():] if m else TEMA + "\n" + html
+        html = html[:i] + html[j:].lstrip("\n")
+    m = re.search(r"<head(\s[^>]*)?>", html, re.I) or re.match(r"\s*<!doctype html>", html, re.I)
+    html = html[:m.end()] + "\n" + TEMA + "\n" + html[m.end():] if m else TEMA + "\n" + html
     if "UnifrakturMaguntia" in html or "--tinta:#111" in html:
         html = re.sub(r"(<style(?![^>]*tema-xeque)[^>]*>)(.*?)(</style>)",
                       lambda m: m.group(1) + _preto(m.group(2)) + m.group(3), html, flags=re.S)
