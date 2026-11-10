@@ -1,0 +1,4017 @@
+{
+ "atualizadoEm": "2026-11-09T14:20:00-03:00",
+ "edicoes": [
+  {
+   "id": "2026-11-09",
+   "numero": 5,
+   "data": "2026-11-09",
+   "tempoLeitura": 16,
+   "fechamento": "Fechamento: segunda-feira, 9/11, 7h (Brasília).",
+   "ticker": [
+    {
+     "regiao": "Mundo",
+     "texto": "Trump diz que falará com Xi e Putin sobre o Irã e \"desnuclearização\" na APEC",
+     "url": "https://aljazeera.com/news/liveblog/2026/11/9/iran-war-live-trump-says-land-blockade-in-effect-drone-cuts-power-in-iraq"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Bloqueio americano às rotas terrestres do Irã já está em vigor, diz Trump",
+     "url": "https://aljazeera.com/news/liveblog/2026/11/9/iran-war-live-trump-says-land-blockade-in-effect-drone-cuts-power-in-iraq"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Araghchi: proposta de dois dias para reabrir Ormuz \"continua de pé\"",
+     "url": "https://www.yahoo.com/news/politics/articles/iran-warns-u-accept-war-054826410.html"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Rubio no G7 de Paris: \"não estamos perto de uma virada\" com o Irã",
+     "url": "https://www.wsls.com/news/politics/2026/11/09/rubio-will-discuss-iran-ukraine-ai-and-more-with-g7-allies-in-france/"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Pequim confirma contatos para cúpula Xi–Trump–Putin em Shenzhen",
+     "url": "https://www.globaltimes.cn/page/202611/1373947.shtml"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Rússia lança 317 drones; Kiev diz ter abatido 271. Refinaria de Kirishi é atingida",
+     "url": "https://www.anews.com.tr/world/2026/11/09/russia-ukraine-trade-accusations-about-overnight-strikes-that-kill-1-injure-7"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "UE aciona mecanismo de emergência para luz, água e calefação na Ucrânia",
+     "url": "https://unn.ua/en/news/the-eu-will-launch-a-special-assistance-mechanism-for-ukraine-following-russian-strikes-zelenskyy"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Brent cai abaixo de US$ 97 na abertura da semana",
+     "url": "https://ukrmedia.news/en/economics/tsiny-na-naftu-brent-padinnya-lystopad/"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Remédio derruba lipoproteína(a) em 78%, mas não evita infartos, mostra NEJM",
+     "url": "https://newsroom.heart.org/news/lp-a-horizon-trial-lp-a-fell-by-78-but-cardiovascular-outcomes-unexpectedly-neutral"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Terremoto de magnitude 5,7 fere mais de 20 no centro do Japão",
+     "url": "https://journalarta.com/en/2026/11/09/kyodo-news-digest-nov-9-quake-central-japan-takaichi-abductions/"
+    },
+    {
+     "regiao": "Brasil",
+     "texto": "COP31 abre hoje em Antália; Lula discursa na quarta (11/11)",
+     "url": "https://revistaamazonia.com.br/lula-cop31-cupula-de-lideres-antalia-agenda-tfff-desmatamento-asean"
+    },
+    {
+     "regiao": "Brasil",
+     "texto": "Brasil é convidado a sessões do G7 de chanceleres em Paris",
+     "url": "https://www.wsls.com/news/politics/2026/11/09/rubio-will-discuss-iran-ukraine-ai-and-more-with-g7-allies-in-france/"
+    },
+    {
+     "regiao": "Brasil",
+     "texto": "Anvisa aprova semaglutida em comprimido para obesidade",
+     "url": "https://agenciagbc.com/2026/11/08/ozempic-em-comprimido-e-aprovado-no-brasil-veja-quanto-pode-custar-e-quando-chega-as-farmacias/"
+    },
+    {
+     "regiao": "Brasil",
+     "texto": "Frente fria atípica chega à Bahia e fica no litoral até quarta",
+     "url": "https://www.climatempo.com.br/noticia/frio/grande-e-forte-frente-fria-avanca-sobre-o-brasil-entre-7-e-9-de-novembro-de-2026"
+    }
+   ],
+   "capa": {
+    "chapeu": "Diplomacia das potências",
+    "titulo": "Trump leva o Irã à mesa de Xi e Putin",
+    "linhaFina": "O presidente americano diz que discutirá a guerra e a \"desnuclearização\" com os líderes da China e da Rússia na APEC de Shenzhen (18 e 19/11), e chama de \"muito improvável\" a volta dos bombardeios. Teerã responde que sua proposta de dois dias para Ormuz segue de pé. O petróleo cai.",
+    "camada": "FATO",
+    "confianca": "Alta"
+   },
+   "chamadas": [
+    {
+     "secao": "potencias",
+     "rotulo": "Grandes potências",
+     "texto": "G7 em Paris: França descarta comunicado; Brasil entre os convidados"
+    },
+    {
+     "secao": "ia",
+     "rotulo": "Evolução das IAs",
+     "texto": "Modelo chinês gratuito rivaliza com IA restrita da OpenAI em ataques cibernéticos"
+    },
+    {
+     "secao": "medicina",
+     "rotulo": "Medicina",
+     "texto": "Caderno ampliado: o congresso da AHA, um anticoagulante contra o AVC e o sarampo de volta"
+    },
+    {
+     "secao": "russia-ira",
+     "rotulo": "Rússia–Irã",
+     "texto": "Gás, reatores e trilhos: a parceria que o bloqueio não alcança"
+    },
+    {
+     "secao": "coreia",
+     "rotulo": "Coreia do Norte",
+     "texto": "Seul vê laço \"estratégico\" com Pequim às vésperas de Shenzhen"
+    }
+   ],
+   "numeros": [
+    {
+     "rotulo": "Brent",
+     "valor": "US$ 96,91",
+     "nota": "manhã de 9/11, queda de 1,5%",
+     "fonte": "UkrMedia (dados de mercado)"
+    },
+    {
+     "rotulo": "WTI",
+     "valor": "US$ 89,85",
+     "nota": "manhã de 9/11, queda de 1%",
+     "fonte": "UkrMedia (dados de mercado)"
+    },
+    {
+     "rotulo": "Drones russos",
+     "valor": "317",
+     "nota": "noite de 8 para 9/11; 271 abatidos (alegação de Kiev)",
+     "fonte": "Força Aérea da Ucrânia"
+    },
+    {
+     "rotulo": "Ebola na RDC",
+     "valor": "10.668",
+     "nota": "casos confirmados e 5.198 mortes até 3/11",
+     "fonte": "OMS (DON625)"
+    },
+    {
+     "rotulo": "Desmatamento",
+     "valor": "3.335 km²",
+     "nota": "Amazônia, ago./2025 a jul./2026, menor desde 1988",
+     "fonte": "Inpe via Revista Amazônia"
+    },
+    {
+     "rotulo": "Lp(a)",
+     "valor": "−78%",
+     "nota": "queda com pelacarsen, sem efeito nos infartos (7/11)",
+     "fonte": "NEJM / AHA"
+    }
+   ],
+   "potencias": [
+    {
+     "pais": "EUA",
+     "sigla": "US",
+     "titulo": "Cerco por terra, aceno à diplomacia",
+     "texto": "Trump disse à CNN que novos ataques ao Irã são \"muito improváveis\" se houver \"um acordo muito forte\", e que o bloqueio às rotas terrestres já vale. Em Paris, Rubio afirmou que as exigências iranianas são inaceitáveis. Stephen Miller assumiu a chefia de gabinete da Casa Branca.",
+     "camada": "FATO",
+     "confianca": "Alta",
+     "fontes": [
+      {
+       "nome": "The New Arab, Trump minimiza volta à guerra; enviado chinês em Teerã (9/11)",
+       "url": "https://www.newarab.com/news/trump-plays-down-return-war-chinese-diplomats-tehran"
+      },
+      {
+       "nome": "Al Jazeera, ao vivo de 9/11 sobre a guerra do Irã",
+       "url": "https://aljazeera.com/news/liveblog/2026/11/9/iran-war-live-trump-says-land-blockade-in-effect-drone-cuts-power-in-iraq"
+      },
+      {
+       "nome": "Times of Israel, ao vivo de 9/11",
+       "url": "https://www.timesofisrael.com/liveblog-november-9-2026/"
+      }
+     ]
+    },
+    {
+     "pais": "China",
+     "sigla": "CN",
+     "titulo": "Enviado em Teerã, cúpula em Shenzhen",
+     "texto": "O enviado especial Zhai Jun reuniu-se em Teerã com Ali Bagheri Kani e disse que o conflito \"não tem solução militar\"; ele segue para Omã e Arábia Saudita. O porta-voz Guo Jiakun confirmou contatos para um encontro Xi–Trump–Putin, segundo o Global Times, jornal estatal.",
+     "camada": "FATO",
+     "confianca": "Média",
+     "fontes": [
+      {
+       "nome": "The New Arab, Trump minimiza volta à guerra; enviado chinês em Teerã (9/11)",
+       "url": "https://www.newarab.com/news/trump-plays-down-return-war-chinese-diplomats-tehran"
+      },
+      {
+       "nome": "Global Times (mídia estatal chinesa), chancelaria sobre a cúpula tripla (9/11)",
+       "url": "https://www.globaltimes.cn/page/202611/1373947.shtml"
+      }
+     ]
+    },
+    {
+     "pais": "Rússia",
+     "sigla": "RU",
+     "titulo": "Drones na véspera de Abu Dhabi",
+     "texto": "Na noite anterior à rodada com Ucrânia e EUA (10 e 11/11), a Rússia lançou 317 drones, segundo Kiev. Moscou diz ter atacado alvos militares e abatido 430 drones ucranianos; um deles atingiu a refinaria de Kirishi, segundo o governador de Leningrado. Os números não têm verificação independente.",
+     "camada": "FATO",
+     "confianca": "Média",
+     "fontes": [
+      {
+       "nome": "Anadolu via aNews, ataques da noite de 8 para 9/11",
+       "url": "https://www.anews.com.tr/world/2026/11/09/russia-ukraine-trade-accusations-about-overnight-strikes-that-kill-1-injure-7"
+      },
+      {
+       "nome": "Ukraine desk note, 9/11 (dados oficiais ucranianos)",
+       "url": "https://oskarhallgrimsson.substack.com/p/ukraine-desk-note-9-november-2026"
+      }
+     ]
+    },
+    {
+     "pais": "União Europeia",
+     "sigla": "EU",
+     "titulo": "Dinheiro rápido para o inverno ucraniano",
+     "texto": "Zelensky disse, após falar com Ursula von der Leyen, que a UE usará um mecanismo especial de emergência para pagar energia, água e calefação nas regiões mais atingidas. Os dois combinaram posições antes de Abu Dhabi, rodada da qual a UE não participa.",
+     "camada": "FATO",
+     "confianca": "Média",
+     "fontes": [
+      {
+       "nome": "UNN, mecanismo de emergência da UE para a Ucrânia (9/11)",
+       "url": "https://unn.ua/en/news/the-eu-will-launch-a-special-assistance-mechanism-for-ukraine-following-russian-strikes-zelenskyy"
+      }
+     ]
+    },
+    {
+     "pais": "Índia",
+     "sigla": "IN",
+     "titulo": "Petróleo mais barato, conta mais leve",
+     "texto": "Sem novidade verificada em 24 horas. O mais recente: Jaishankar defendeu na cúpula da Commonwealth (1 a 4/11) o modelo indiano de infraestrutura digital pública. A queda do Brent ajuda o país, que gastou 47% a mais com petróleo no semestre fiscal (dado de 6/11).",
+     "camada": "FATO",
+     "confianca": "Média",
+     "fontes": [
+      {
+       "nome": "Indian Defence News, Jaishankar na CHOGM (nov.)",
+       "url": "https://www.indiandefensenews.in/2026/11/eam-jaishankar-showcases-indias-digital.html"
+      },
+      {
+       "nome": "Business Standard, petróleo e a conta da Índia (6/11)",
+       "url": "https://www.business-standard.com/amp/industry/news/oil-set-for-biggest-weekly-drop-may-bring-relief-for-india-s-oil-bill-126110601681_1.html"
+      }
+     ]
+    },
+    {
+     "pais": "Japão",
+     "sigla": "JP",
+     "titulo": "Terremoto e a ferida dos sequestros",
+     "texto": "Um tremor de magnitude 5,7 feriu mais de 20 pessoas em Aichi e Shizuoka, sem alerta de tsunami. Sanae Takaichi admitiu que não houve avanço sobre japoneses sequestrados pela Coreia do Norte e prometeu \"uma virada a qualquer custo\".",
+     "camada": "FATO",
+     "confianca": "Alta",
+     "fontes": [
+      {
+       "nome": "Kyodo via JournalArta, resumo de 9/11",
+       "url": "https://journalarta.com/en/2026/11/09/kyodo-news-digest-nov-9-quake-central-japan-takaichi-abductions/"
+      }
+     ]
+    },
+    {
+     "pais": "Reino Unido",
+     "sigla": "UK",
+     "titulo": "Londres no G7 sem comunicado",
+     "texto": "O Reino Unido está entre os sete chanceleres reunidos em Paris em 9 e 10/11. A França já sinalizou que não haverá comunicado conjunto, sinal das divisões com Washington sobre Ucrânia, OTAN e o Tribunal Penal Internacional.",
+     "camada": "FATO",
+     "confianca": "Alta",
+     "fontes": [
+      {
+       "nome": "AP via WSLS, Rubio leva Irã, Ucrânia e IA ao G7 em Paris (9/11)",
+       "url": "https://www.wsls.com/news/politics/2026/11/09/rubio-will-discuss-iran-ukraine-ai-and-more-with-g7-allies-in-france/"
+      }
+     ]
+    },
+    {
+     "pais": "Irã",
+     "sigla": "IR",
+     "titulo": "\"Cumpram os requisitos e verão resultados\"",
+     "texto": "O chanceler Abbas Araghchi disse que a proposta de dois dias segue válida: no primeiro, os EUA suspendem sanções, reduzem tropas e liberam ativos; no segundo, o Irã reabre Ormuz. Também ameaçou \"fazer chover o inferno\" se os ataques voltarem.",
+     "camada": "FATO",
+     "confianca": "Alta",
+     "fontes": [
+      {
+       "nome": "UPI via Yahoo, Irã insiste na proposta de dois dias (9/11)",
+       "url": "https://www.yahoo.com/news/politics/articles/iran-warns-u-accept-war-054826410.html"
+      },
+      {
+       "nome": "The New Arab, Trump minimiza volta à guerra; enviado chinês em Teerã (9/11)",
+       "url": "https://www.newarab.com/news/trump-plays-down-return-war-chinese-diplomats-tehran"
+      }
+     ]
+    }
+   ],
+   "ia": {
+    "abertura": "A IA em quatro frentes. Aviso de transparência: esta revista é escrita com o Claude, modelo da Anthropic; hoje um modelo da Anthropic aparece só como ferramenta de teste citada por terceiros.",
+    "frentes": [
+     {
+      "area": "Científica",
+      "itens": [
+       {
+        "titulo": "IA que obedece até perder a memória",
+        "texto": "Um preprint publicado no arXiv em novembro (ARCBench) testou quatro modelos em 17 cenários: depois de \"compactar\" o histórico da conversa, eles violaram uma regra em 37,8% dos casos, contra 9,6% com o histórico completo. É estudo pequeno e ainda sem revisão por pares.",
+        "camada": "FATO",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "arXiv 2611.03223, ARCBench",
+          "url": "https://arxiv.org/abs/2611.03223"
+         },
+         {
+          "nome": "Sam on AI, AI Brief de 8/11",
+          "url": "https://samonai.substack.com/p/ai-brief-november-8-2026"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Militar",
+      "itens": [
+       {
+        "titulo": "Hackers gratuitos, feitos na China",
+        "texto": "Segundo a WIRED (6/11), no teste da empresa Vals o modelo chinês aberto DeepSeek V4.1 Flash cumpriu em média 16,3 de 21 objetivos de invasão numa rede simulada, contra 15,7 do modelo restrito da OpenAI. Na outra rede, o americano venceu por 27 a 21.",
+        "camada": "FATO",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "Sam on AI, AI Brief de 8/11",
+          "url": "https://samonai.substack.com/p/ai-brief-november-8-2026"
+         },
+         {
+          "nome": "Vals AI, benchmark de ataque cibernético",
+          "url": "https://www.vals.ai/benchmarks/cyber_offense"
+         }
+        ]
+       },
+       {
+        "titulo": "Um comando só para robôs",
+        "texto": "O Pentágono quer criar o Comando de Guerra Autônoma, anunciado por Pete Hegseth em 30/9, mas depende do Congresso, agora sob controle democrata. O pedido inclui US$ 53,6 bilhões para sistemas autônomos. A virada nas urnas torna a aprovação mais incerta.",
+        "camada": "ANÁLISE",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "Arms Control Association, Pentágono quer Comando de Guerra Autônoma (nov.)",
+          "url": "https://www.armscontrol.org/act/2026-11/news/dod-seeks-autonomous-warfare-command"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Médica",
+      "itens": [
+       {
+        "titulo": "Diagnóstico passo a passo",
+        "texto": "Estudo na revista Science testou IA e médicos resolvendo casos aos poucos, pedindo exames como na vida real. A IA acertou mais e, em versão econômica, manteve 80,9% de acerto em casos do NEJM. Limites: casos raros, simulação sem ruído real e médicos sem consultar colegas.",
+        "camada": "FATO",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "ACSH, a IA diagnostica melhor? (3/11)",
+          "url": "https://www.acsh.org/news/2026/11/03/does-ai-diagnose-better-or-take-different-test-50427"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Acadêmica",
+      "itens": [
+       {
+        "titulo": "88% dos alunos já usam IA",
+        "texto": "Sem novidade verificada nesta semana, vale o maior levantamento recente, divulgado em julho pelo Digital Education Council: 27.284 estudantes e 18.114 professores em 35 países. 88% dos alunos usam IA, mas só 28% acham que as provas medem o que o mercado vai exigir.",
+        "camada": "FATO",
+        "confianca": "Alta",
+        "fontes": [
+         {
+          "nome": "ETIH, pesquisa global do Digital Education Council (jul.)",
+          "url": "https://www.edtechinnovationhub.com/news/q6zw9wco2mttajdbd1jyeonjnpiovu"
+         }
+        ]
+       },
+       {
+        "titulo": "A prova ficou para trás",
+        "texto": "O dado do ARCBench conversa com a sala de aula: se a IA esquece regras em conversas longas, o estudante que delega o raciocínio herda os erros. Avaliações orais e por etapas tendem a ganhar espaço nas universidades.",
+        "camada": "ANÁLISE",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "ETIH, pesquisa global do Digital Education Council (jul.)",
+          "url": "https://www.edtechinnovationhub.com/news/q6zw9wco2mttajdbd1jyeonjnpiovu"
+         },
+         {
+          "nome": "arXiv 2611.03223, ARCBench",
+          "url": "https://arxiv.org/abs/2611.03223"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "glossario": [
+     {
+      "termo": "Preprint",
+      "def": "Artigo científico divulgado antes da revisão por pares, ou seja, antes de outros especialistas o checarem."
+     },
+     {
+      "termo": "Compactação de contexto",
+      "def": "Resumo automático do histórico de uma conversa longa para caber na memória de trabalho da IA."
+     },
+     {
+      "termo": "Modelo aberto",
+      "def": "IA cujos pesos (os parâmetros aprendidos) são publicados e podem ser baixados e modificados por qualquer um."
+     },
+     {
+      "termo": "Comando combatente",
+      "def": "Grande estrutura militar dos EUA, chefiada por um general de quatro estrelas, que reúne forças de vários ramos."
+     }
+    ]
+   },
+   "medicina": {
+    "abertura": "Caderno ampliado de saúde, com sete frentes e destaque para o congresso da American Heart Association (AHA), em Chicago, de 6 a 9/11. Para cada estudo aparecem o desenho, o tamanho e os limites. Nada aqui é orientação médica individual: decisões de tratamento são com o seu médico.",
+    "frentes": [
+     {
+      "area": "Cardiologia e metabolismo",
+      "itens": [
+       {
+        "titulo": "Baixar o número não bastou",
+        "texto": "O ensaio Lp(a) HORIZON, de fase 3, randomizado e com 8.323 pacientes em 42 países, publicado no NEJM em 7/11, mostrou que o pelacarsen reduz a lipoproteína(a) em 78%, mas não diminui infartos, AVCs nem mortes. Limitações: 78% dos voluntários eram brancos, e parte dos eventos coincidiu com a covid-19.",
+        "camada": "FATO",
+        "confianca": "Alta",
+        "fontes": [
+         {
+          "nome": "American Heart Association, Lp(a) HORIZON (7/11)",
+          "url": "https://newsroom.heart.org/news/lp-a-horizon-trial-lp-a-fell-by-78-but-cardiovascular-outcomes-unexpectedly-neutral"
+         },
+         {
+          "nome": "NEJM, pelacarsen e desfechos cardiovasculares",
+          "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2610159"
+         }
+        ]
+       },
+       {
+        "titulo": "Menos inflamação, o mesmo número de infartos",
+        "texto": "No ensaio ZEUS, de fase 3 e randomizado, com 6.376 pacientes com aterosclerose, doença renal crônica e inflamação, o ziltivekimabe (anticorpo contra a interleucina-6) cortou a PCR ultrassensível em 64%. Mas eventos cardiovasculares graves ocorreram em 17,6% contra 17,7% no placebo, e infecções graves foram mais comuns (20,4% contra 17,9%). Publicado no NEJM em 6/11.",
+        "camada": "FATO",
+        "confianca": "Alta",
+        "fontes": [
+         {
+          "nome": "Healio, ZEUS no AHA 2026 (7/11)",
+          "url": "https://www.healio.com/news/cardiology/20261107/ziltivekimab-cuts-inflammation-but-not-cv-events-in-atherosclerosis-kidney-disease"
+         }
+        ]
+       },
+       {
+        "titulo": "Lição da semana: o exame melhora, o paciente não",
+        "texto": "Lp(a) HORIZON e ZEUS repetem um velho alerta: mexer num marcador de laboratório não garante proteger o paciente. Em 1989, o estudo CAST mostrou que remédios que suprimiam arritmias no eletrocardiograma aumentavam a mortalidade. Por isso a aprovação exige desfecho clínico, não só exame bonito.",
+        "camada": "ANÁLISE",
+        "confianca": "Alta",
+        "fontes": [
+         {
+          "nome": "Healio, ZEUS no AHA 2026 (7/11)",
+          "url": "https://www.healio.com/news/cardiology/20261107/ziltivekimab-cuts-inflammation-but-not-cv-events-in-atherosclerosis-kidney-disease"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Neurologia",
+      "itens": [
+       {
+        "titulo": "Um anticoagulante novo para evitar o segundo AVC",
+        "texto": "No OCEANIC-STROKE (fase 3, 12.327 pacientes em 37 países), o asundexiane, que bloqueia o fator XIa da coagulação, somado aos antiplaquetários (como a aspirina) reduziu o AVC isquêmico de 8,4% para 6,2% (redução relativa de 26%), sem aumento significativo de sangramento grave (1,9% contra 1,7%). No AHA, em 7/11, uma análise exploratória mostrou benefício parecido em todos os níveis de risco. A FDA ainda não decidiu.",
+        "camada": "FATO",
+        "confianca": "Alta",
+        "fontes": [
+         {
+          "nome": "TCTMD, OCEANIC-STROKE no AHA 2026 (8/11)",
+          "url": "https://www.tctmd.com/news/oceanic-stroke-asundexian-benefits-seen-across-vascular-risk-strata"
+         },
+         {
+          "nome": "AHA, resultado principal do OCEANIC-STROKE",
+          "url": "https://newsroom.heart.org/news/new-medication-may-reduce-chances-of-a-second-clot-caused-stroke-without-bleeding-risk"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Prevenção e geriatria",
+      "itens": [
+       {
+        "titulo": "Parar a estatina depois dos 70 anos?",
+        "texto": "O STREAM, ensaio suíço aberto com cerca de 1.900 idosos (média de 77 anos) sem doença cardiovascular, testou suspender a estatina usada só para prevenção. Em 2 anos, parar foi \"não inferior\". Mas em até 4 anos houve mais infartos (1,6% contra 0,6%), AVCs (2,2% contra 0,8%) e mortes (9,8% contra 8%). Publicado no NEJM em 8/11.",
+        "camada": "FATO",
+        "confianca": "Alta",
+        "fontes": [
+         {
+          "nome": "Healio, STREAM no AHA 2026 (8/11)",
+          "url": "https://www.healio.com/news/cardiology/20261108/new-study-informs-statin-discontinuation-in-older-adults-without-cvd"
+         }
+        ]
+       },
+       {
+        "titulo": "O que \"não inferior\" quer dizer",
+        "texto": "Um estudo de não inferioridade não pergunta se A é melhor que B. Pergunta se A não é pior além de uma margem fixada antes. O STREAM passou nesse teste, mas os números absolutos sugerem cerca de um evento a mais a cada 40 idosos que param. Os autores e comentaristas defendem decisão caso a caso.",
+        "camada": "ANÁLISE",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "Healio, STREAM no AHA 2026 (8/11)",
+          "url": "https://www.healio.com/news/cardiology/20261108/new-study-informs-statin-discontinuation-in-older-adults-without-cvd"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Oncologia",
+      "itens": [
+       {
+        "titulo": "Câncer de mama com mutação PIK3CA: FDA analisa novo uso",
+        "texto": "A FDA aceitou em 9/11 analisar o gedatolisibe, que bloqueia as vias PI3K e mTOR, para câncer de mama HR+/HER2- metastático com mutação no gene PIK3CA. O pedido usa o ensaio de fase 3 VIKTORIA-1, e a decisão está marcada para 25/6/2027. A empresa não divulgou os números do grupo com mutação. O remédio já foi aprovado em julho para tumores sem a mutação.",
+        "camada": "FATO",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "Celcuity via Manila Times, FDA aceita pedido do gedatolisibe (9/11)",
+          "url": "https://www.manilatimes.net/2026/11/09/tmt-newswire/globenewswire/celcuity-announces-fda-acceptance-of-snda-for-revtorpyk-gedatolisib-for-hrher2-pik3ca-mutant-locally-advanced-or-metastatic-breast-cancer/2465312"
+         }
+        ]
+       },
+       {
+        "titulo": "Próstata: abiraterona prolonga a vida",
+        "texto": "No PEACE-1 (fase 3, 1.173 homens com câncer de próstata metastático sensível a hormônio), apresentado no congresso europeu ESMO em outubro, somar abiraterona ao tratamento padrão com docetaxel elevou a sobrevida mediana de 4,4 para 6,2 anos. Hipertensão grave foi mais comum (21% contra 14%). O artigo completo ainda não saiu.",
+        "camada": "FATO",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "CURE, próstata no ESMO 2026",
+          "url": "https://www.curetoday.com/view/3-prostate-cancer-results-from-esmo-2026-patients-should-know"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Remédios e aprovações",
+      "itens": [
+       {
+        "titulo": "Semaglutida em comprimido",
+        "texto": "A Anvisa aprovou em 4/11 a semaglutida oral (Wegovy, da Novo Nordisk) para obesidade em adultos. No ensaio de fase 3 OASIS 4, a dose de 25 mg levou a perda média de cerca de 13,6% do peso em 64 semanas. Preço ainda indefinido; venda prevista para o 1º semestre de 2027.",
+        "camada": "FATO",
+        "confianca": "Alta",
+        "fontes": [
+         {
+          "nome": "Agência GBC, Anvisa aprova semaglutida oral (8/11)",
+          "url": "https://agenciagbc.com/2026/11/08/ozempic-em-comprimido-e-aprovado-no-brasil-veja-quanto-pode-custar-e-quando-chega-as-farmacias/"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Infecções e saúde global",
+      "itens": [
+       {
+        "titulo": "O ebola fora da RDC",
+        "texto": "Boletim da OMS de 6/11: o Quênia soma 9 casos e 2 mortes, sem caso novo desde 19/10, e encerra o monitoramento de contatos em 11/11. A Nigéria teve um caso importado, levado a Genebra. Na RDC, 1.463 casos novos em 21 dias.",
+        "camada": "FATO",
+        "confianca": "Alta",
+        "fontes": [
+         {
+          "nome": "OMS, boletim DON625 sobre ebola Bundibugyo (6/11)",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON625"
+         }
+        ]
+       },
+       {
+        "titulo": "Sarampo nos EUA tem o pior ano desde 1991",
+        "texto": "O CDC confirmou 5.182 casos em 2026, mais que o dobro de 2025, e 4 mortes. A Pensilvânia, estado mais atingido, conta 6. Seis em cada dez doentes são crianças e adolescentes. A vacinação no jardim de infância caiu de 95,2% para 92,4% desde 2019. A conta federal retirou duas mortes depois que o secretário de Saúde as questionou.",
+        "camada": "FATO",
+        "confianca": "Alta",
+        "fontes": [
+         {
+          "nome": "Al Jazeera, sarampo nos EUA (7/11)",
+          "url": "https://aljazeera.com/news/2026/11/7/cdc-reports-more-than-5000-measles-cases-highest-number-in-35-years"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Brasil e SUS",
+      "itens": [
+       {
+        "titulo": "Remédio feito em casa",
+        "texto": "A Anvisa vai escolher até oito dossiês de insumos farmacêuticos ativos fabricados no Brasil para análise prioritária em 2027. O objetivo declarado é reduzir a dependência de fornecedores estrangeiros, lição da pandemia.",
+        "camada": "FATO",
+        "confianca": "Alta",
+        "fontes": [
+         {
+          "nome": "Agência Brasil via Diario de Pernambuco, Anvisa e insumos nacionais (7/11)",
+          "url": "https://www.diariodepernambuco.com.br/amp/dp-/dp-saude/2026/11/11728603-anvisa-vai-selecionar-dossies-para-incentivar-a-producao-nacional-de-insumos-farmaceuticos.html"
+         }
+        ]
+       },
+       {
+        "titulo": "Por que isso importa",
+        "texto": "O SUS compra em escala, mas a matéria-prima vem de fora. Em crises como a da covid-19 ou a atual alta do frete pelo Golfo, quem fabrica o insumo decide quem recebe primeiro.",
+        "camada": "ANÁLISE",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "Agência Brasil via Diario de Pernambuco, Anvisa e insumos nacionais (7/11)",
+          "url": "https://www.diariodepernambuco.com.br/amp/dp-/dp-saude/2026/11/11728603-anvisa-vai-selecionar-dossies-para-incentivar-a-producao-nacional-de-insumos-farmaceuticos.html"
+         }
+        ]
+       },
+       {
+        "titulo": "Sarampo na tríplice fronteira",
+        "texto": "O Amazonas confirmou 21 casos de sarampo em 2026, quase todos em municípios na fronteira com Peru e Colômbia, como Tabatinga (9). Em 9/11, o ministério liberou R$ 524 mil para vacinação e bloqueio. O Brasil soma 65 casos importados no ano e não tem circulação endêmica do vírus desde 2024.",
+        "camada": "FATO",
+        "confianca": "Alta",
+        "fontes": [
+         {
+          "nome": "Gazeta da Amazônia, sarampo no Amazonas (9/11)",
+          "url": "https://gazetadaamazonia.com.br/09/11/2026/vacinacao-sarampo-no-amazonas/"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "glossario": [
+     {
+      "termo": "Lipoproteína(a)",
+      "def": "Partícula de gordura no sangue, definida em boa parte pela genética, associada a maior risco cardiovascular."
+     },
+     {
+      "termo": "Desfecho clínico",
+      "def": "Resultado que importa ao paciente, como infarto ou morte, em contraste com um exame de laboratório."
+     },
+     {
+      "termo": "Ensaio de fase 3",
+      "def": "Teste em milhares de pessoas, com sorteio entre remédio e controle, que embasa a aprovação."
+     },
+     {
+      "termo": "Insumo farmacêutico ativo",
+      "def": "A substância que produz o efeito do remédio, antes de virar comprimido ou injeção."
+     },
+     {
+      "termo": "Desfecho substituto",
+      "def": "Marcador de laboratório ou de imagem usado no lugar do desfecho clínico. Pode melhorar sem que o paciente se beneficie."
+     },
+     {
+      "termo": "Razão de riscos (HR)",
+      "def": "Compara o risco ao longo do tempo entre dois grupos. HR de 0,74 significa 26% menos risco relativo; 1,0 significa nenhuma diferença."
+     },
+     {
+      "termo": "Não inferioridade",
+      "def": "Desenho que testa se um tratamento não é pior que outro além de uma margem combinada antes do estudo."
+     },
+     {
+      "termo": "Prevenção primária",
+      "def": "Tratar quem ainda não teve a doença, como estatina em quem nunca infartou."
+     }
+    ]
+   },
+   "russiaIra": {
+    "titulo": "A parceria que passa por baixo do bloqueio",
+    "linhaFina": "Gasoduto, reatores e ferrovia: o que Moscou e Teerã negociam enquanto Washington fecha rotas.",
+    "itens": [
+     {
+      "titulo": "Um gasoduto de até 110 bilhões de m³",
+      "texto": "Conversas em Moscou trataram de um gasoduto Rússia–Irã de até 110 bilhões de metros cúbicos por ano, com troca imediata de gás via Azerbaijão. O Irã enfrenta falta de gás no inverno após danos da guerra. Rotas e financiamento seguem em aberto (relato de 8/11).",
+      "camada": "FATO",
+      "confianca": "Média",
+      "fontes": [
+       {
+        "nome": "Russia's Pivot to Asia, relações Rússia–Irã em novembro (8/11)",
+        "url": "https://russiaspivottoasia.com/russia-iran-bilateral-relations-november-2026-update/"
+       }
+      ]
+     },
+     {
+      "titulo": "Reatores e comércio",
+      "texto": "A Rosatom apoia um plano de US$ 25 bilhões para reatores, incluindo quatro perto de Sirik, no Golfo de Omã. Putin diz que o comércio bilateral cresceu 10,4% nos oito primeiros meses de 2026. O pedido iraniano do S-400 (6/11) segue sem resposta pública.",
+      "camada": "FATO",
+      "confianca": "Média",
+      "fontes": [
+       {
+        "nome": "Russia's Pivot to Asia, relações Rússia–Irã em novembro (8/11)",
+        "url": "https://russiaspivottoasia.com/russia-iran-bilateral-relations-november-2026-update/"
+       },
+       {
+        "nome": "Iran International, Rezaei foi a Moscou pedir o S-400 (6/11)",
+        "url": "https://www.iranintl.com/en/202611067881"
+       }
+      ]
+     },
+     {
+      "titulo": "O Cáspio como pulmão",
+      "texto": "Gás via Azerbaijão, a ferrovia Rasht–Astara e o porto de Astracã mostram por que a Força-Tarefa Iron Gate mira o Cáspio. A Rússia oferece ao Irã o que o mar aberto não dá: rotas fora do alcance da marinha americana.",
+      "camada": "ANÁLISE",
+      "confianca": "Média",
+      "fontes": [
+       {
+        "nome": "Russia's Pivot to Asia, relações Rússia–Irã em novembro (8/11)",
+        "url": "https://russiaspivottoasia.com/russia-iran-bilateral-relations-november-2026-update/"
+       },
+       {
+        "nome": "CBS News, ao vivo sobre a guerra do Irã",
+        "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-strait-hormuz-persian-gulf/"
+       }
+      ]
+     },
+     {
+      "titulo": "Shenzhen como teste",
+      "texto": "Estimativa do Observatório: 55% de chance de Putin aceitar discutir o Irã com Trump e Xi em Shenzhen; 20% de que Moscou anuncie a entrega de S-400 até o fim do ano. Moscou ganha mais como mediadora do que como fornecedora de armas.",
+      "camada": "CENÁRIO",
+      "confianca": "Baixa",
+      "fontes": [
+       {
+        "nome": "Global Times (mídia estatal chinesa), chancelaria sobre a cúpula tripla (9/11)",
+        "url": "https://www.globaltimes.cn/page/202611/1373947.shtml"
+       },
+       {
+        "nome": "Iran International, Rezaei foi a Moscou pedir o S-400 (6/11)",
+        "url": "https://www.iranintl.com/en/202611067881"
+       }
+      ]
+     }
+    ],
+    "box": {
+     "titulo": "Placar da parceria",
+     "linhas": [
+      {
+       "area": "Armas",
+       "texto": "Pedido de S-400 (Telegraph, 6/11), sem resposta russa pública."
+      },
+      {
+       "area": "Energia",
+       "texto": "Gasoduto de até 110 bi m³/ano em negociação; swap via Azerbaijão (8/11)."
+      },
+      {
+       "area": "Nuclear",
+       "texto": "Bushehr 2 e 3 em obras; Bushehr 2 previsto para cerca de 2029."
+      },
+      {
+       "area": "Comércio",
+       "texto": "+10,4% de janeiro a agosto; Irã é o maior comprador de grão russo na safra 2026–27."
+      },
+      {
+       "area": "Diplomacia",
+       "texto": "Trump quer o Irã na pauta com Putin e Xi na APEC (18 e 19/11)."
+      }
+     ]
+    }
+   },
+   "coreiaNorte": {
+    "titulo": "Pequim, a ponte de Pyongyang",
+    "linhaFina": "Seul lê a visita de Kim Song Nam como prova de um laço \"estratégico\" com a China.",
+    "itens": [
+     {
+      "titulo": "Seul interpreta a visita",
+      "texto": "O Ministério da Unificação disse em 9/11 que a viagem de Kim Song Nam a Pequim (3 a 7/11) serviu para conhecer o resultado do plenário do Partido Comunista Chinês e manter contatos de alto nível. Não confirmou ligação com uma retomada do diálogo com os EUA.",
+      "camada": "FATO",
+      "confianca": "Alta",
+      "fontes": [
+       {
+        "nome": "Korea Times, Seul sobre a visita de Kim Song Nam a Pequim (9/11)",
+        "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261109/nk-officials-beijing-visit-meant-to-share-chinese-party-meeting-results-maintain-high-level-exchanges-seoul"
+       }
+      ]
+     },
+     {
+      "titulo": "Mísseis em série",
+      "texto": "Em 4/11, Seul detectou vários mísseis lançados de Sondok rumo ao mar do Leste. A agência estatal KCNA (versão oficial) falou em teste de míssil antiaéreo com novos materiais e orientação. Os EUA e a UE impuseram sanções por trabalhadores no exterior e ciberataques.",
+      "camada": "FATO",
+      "confianca": "Alta",
+      "fontes": [
+       {
+        "nome": "Stars and Stripes, Coreia do Norte alega nova tecnologia de mísseis (5/11)",
+        "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-05/north-korea-missile-technology-diplomacy-23369224.html"
+       },
+       {
+        "nome": "US News (Reuters), teste de míssil antiaéreo (4/11)",
+        "url": "https://www.usnews.com/news/world/articles/2026-11-04/north-korea-test-fires-new-air-defence-missile-system-kcna-reports"
+       }
+      ]
+     },
+     {
+      "titulo": "Dois tabuleiros",
+      "texto": "Com Trump falando em \"desnuclearização\" com Xi e Putin, Pyongyang fortalece a ponte com Pequim para não ser negociada sem estar presente. O sequestro de japoneses, lembrado por Takaichi, mostra que Tóquio também quer lugar.",
+      "camada": "ANÁLISE",
+      "confianca": "Média",
+      "fontes": [
+       {
+        "nome": "Korea Times, Seul sobre a visita de Kim Song Nam a Pequim (9/11)",
+        "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261109/nk-officials-beijing-visit-meant-to-share-chinese-party-meeting-results-maintain-high-level-exchanges-seoul"
+       },
+       {
+        "nome": "Al Jazeera, ao vivo de 9/11 sobre a guerra do Irã",
+        "url": "https://aljazeera.com/news/liveblog/2026/11/9/iran-war-live-trump-says-land-blockade-in-effect-drone-cuts-power-in-iraq"
+       },
+       {
+        "nome": "Kyodo via JournalArta, resumo de 9/11",
+        "url": "https://journalarta.com/en/2026/11/09/kyodo-news-digest-nov-9-quake-central-japan-takaichi-abductions/"
+       }
+      ]
+     },
+     {
+      "titulo": "Antes e depois da APEC",
+      "texto": "Estimativa do Observatório: 60% de chance de novo lançamento até 19/11; 10% de um encontro Trump–Kim anunciado ainda em 2026. Pyongyang costuma testar antes de cúpulas para elevar o preço da conversa.",
+      "camada": "CENÁRIO",
+      "confianca": "Baixa",
+      "fontes": [
+       {
+        "nome": "Stars and Stripes, Coreia do Norte alega nova tecnologia de mísseis (5/11)",
+        "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-05/north-korea-missile-technology-diplomacy-23369224.html"
+       },
+       {
+        "nome": "Korea Times, Seul sobre a visita de Kim Song Nam a Pequim (9/11)",
+        "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261109/nk-officials-beijing-visit-meant-to-share-chinese-party-meeting-results-maintain-high-level-exchanges-seoul"
+       }
+      ]
+     }
+    ],
+    "box": {
+     "titulo": "Termômetro da península",
+     "linhas": [
+      {
+       "area": "Mísseis",
+       "texto": "Lançamentos de Sondok em 4/11; KCNA alega míssil antiaéreo novo."
+      },
+      {
+       "area": "China",
+       "texto": "Kim Song Nam em Pequim de 3 a 7/11; Seul fala em laços \"estratégicos\"."
+      },
+      {
+       "area": "EUA",
+       "texto": "FBI acusa Pyongyang de roubar mais de US$ 6 bi em cripto da Binance; o país nega."
+      },
+      {
+       "area": "Japão",
+       "texto": "Takaichi admite falta de avanço sobre os sequestrados (9/11)."
+      },
+      {
+       "area": "Política interna",
+       "texto": "Seul monitora relato de destituição do vice-presidente da Assembleia, Ri Son-kwon."
+      }
+     ]
+    }
+   },
+   "secoes": [
+    {
+     "eixo": "Guerras",
+     "itens": [
+      {
+       "titulo": "A noite antes de Abu Dhabi",
+       "texto": "Kiev diz que a Rússia lançou 317 drones, 105 deles a jato, e que abateu 271. Em Kremenchuk, um prédio de 16 andares e um hotel foram atingidos, com 7 feridos. Moscou diz ter abatido 430 drones; um morto em Vsevolozhsk. A rodada mediada pelos EUA começa amanhã.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "Anadolu via aNews, ataques da noite de 8 para 9/11",
+         "url": "https://www.anews.com.tr/world/2026/11/09/russia-ukraine-trade-accusations-about-overnight-strikes-that-kill-1-injure-7"
+        },
+        {
+         "nome": "Ukraine desk note, 9/11 (dados oficiais ucranianos)",
+         "url": "https://oskarhallgrimsson.substack.com/p/ukraine-desk-note-9-november-2026"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Energia",
+     "itens": [
+      {
+       "titulo": "O petróleo aposta na paz",
+       "texto": "O Brent caiu 1,5%, a US$ 96,91, na manhã de 9/11, depois de perder 16% na semana passada. Pesaram a fala de Trump sobre ataques \"improváveis\" e o excesso de oferta estimado pelo JPMorgan em 1,4 milhão de barris por dia em outubro. Ormuz segue restrito.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "UkrMedia, Brent abaixo de US$ 97 (9/11)",
+         "url": "https://ukrmedia.news/en/economics/tsiny-na-naftu-brent-padinnya-lystopad/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Brasil",
+     "itens": [
+      {
+       "titulo": "Lula leva a floresta a Antália",
+       "texto": "A COP31 abre hoje na Turquia. Lula discursa na cúpula de líderes em 11/11 com o menor desmatamento amazônico desde 1988 (3.335 km², Inpe) e tenta fechar a meta de US$ 10 bilhões do fundo TFFF, que tem cerca de US$ 7,8 bilhões. Depois vai à cúpula da Asean, em Manila.",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "Revista Amazônia, agenda de Lula na COP31 (7/11)",
+         "url": "https://revistaamazonia.com.br/lula-cop31-cupula-de-lideres-antalia-agenda-tfff-desmatamento-asean"
+        },
+        {
+         "nome": "Itamaraty, Lula na COP31",
+         "url": "https://www.gov.br/mre/pt-br/canais_atendimento/imprensa/notas-a-imprensa/participacao-do-presidente-luiz-inacio-lula-da-silva-na-cop-31-na-turquia"
+        }
+       ]
+      },
+      {
+       "titulo": "Brasil convidado ao G7",
+       "texto": "A França convidou Brasil, Egito, Arábia Saudita e Ucrânia para parte das discussões dos chanceleres do G7 em Paris (9 e 10/11), que tratam de Irã, Ucrânia, energia e IA.",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "AP via WSLS, Rubio leva Irã, Ucrânia e IA ao G7 em Paris (9/11)",
+         "url": "https://www.wsls.com/news/politics/2026/11/09/rubio-will-discuss-iran-ukraine-ai-and-more-with-g7-allies-in-france/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Clima",
+     "itens": [
+      {
+       "titulo": "Frio atípico, calor no Nordeste",
+       "texto": "Uma frente fria polar, forte para novembro, chegou à Bahia e deve ficar no litoral até 11/11, segundo a Climatempo, enquanto o interior do Nordeste tem 36 °C a 41 °C. O boletim mensal do ENSO da NOAA sai em 12/11; em outubro, dava mais de 83% de chance de El Niño forte.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "Climatempo, frente fria de 7 a 9/11",
+         "url": "https://www.climatempo.com.br/noticia/frio/grande-e-forte-frente-fria-avanca-sobre-o-brasil-entre-7-e-9-de-novembro-de-2026"
+        },
+        {
+         "nome": "NOAA/CPC, discussão diagnóstica do ENSO",
+         "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Espaço",
+     "itens": [
+      {
+       "titulo": "Pedrinha de passagem",
+       "texto": "O asteroide 2026 VR5, de 4 a 9 metros, passou a cerca de 278 mil km da Terra em 8/11, mais perto que a Lua. Sem chance de impacto, fica no nível 0 da escala de Turim. Objetos assim queimam na atmosfera. Agenda: Falcon 9 militar USSF-627 em 10/11 e Vulcan com satélites Amazon Leo em 13/11.",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "Fanpage.it, asteroide 2026 VR5 passa perto da Terra (8/11)",
+         "url": "https://www.fanpage.it/innovazione/scienze/la-nasa-comunica-che-un-asteroide-sta-passando-vicinissimo-alla-terra-in-questi-minuti/"
+        },
+        {
+         "nome": "Orbital Radar, briefing de 8/11",
+         "url": "https://orbitalradar.com/blog/orbital-briefing-2026-11-08"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "analise": {
+    "titulo": "Três à mesa, um no cardápio",
+    "texto": [
+     "Em fevereiro de 1945, Roosevelt, Churchill e Stalin se sentaram em Ialta e decidiram o destino da Polônia sem nenhum polonês na sala. A proposta de Trump de discutir o Irã com Xi e Putin em Shenzhen evoca essa velha diplomacia das grandes potências, que Tucídides retratou no Diálogo de Melos, em 416 a.C.: \"os fortes fazem o que podem, e os fracos sofrem o que devem\". O Irã, ausente da mesa, seria o assunto, não o interlocutor, assim como a Coreia do Norte no tema da \"desnuclearização\".",
+     "A analogia falha em dois pontos. Primeiro, o Irã não é Melos: controla Ormuz, por onde passava cerca de um quinto do petróleo do mundo, e mostrou que pode fechar o estreito por meses. Segundo, os três de Ialta tinham acabado de vencer juntos uma guerra; os três de Shenzhen são rivais, e Rússia e China ganham com o desgaste americano. Por isso a mesa pode render mais um concerto de interesses do que um acordo imposto. Os fracos sofrem, mas quem segura um gargalo também negocia."
+    ]
+   },
+   "ler": [
+    {
+     "tipo": "Livro",
+     "titulo": "História da Guerra do Peloponeso",
+     "autor": "Tucídides",
+     "nivel": "★★",
+     "porque": "Leia o Diálogo de Melos (livro V). Poucas páginas sobre a lógica da força e o direito dos fracos, ótimas para pensar Shenzhen e o Irã."
+    },
+    {
+     "tipo": "Livro",
+     "titulo": "Ordem Mundial",
+     "autor": "Henry Kissinger",
+     "nivel": "★★",
+     "porque": "Explica o Congresso de Viena e o equilíbrio entre grandes potências. Procure por que esses arranjos duram mais quando as potências partilham valores."
+    },
+    {
+     "tipo": "Livro",
+     "titulo": "O Coração do Mundo",
+     "autor": "Peter Frankopan",
+     "nivel": "★",
+     "porque": "Mostra como as rotas entre Pérsia, Rússia e China moldaram a história. Ajuda a entender o Cáspio e o gasoduto Rússia–Irã."
+    }
+   ],
+   "pensar": [
+    "Tucídides escreveu que \"os fortes fazem o que podem\". Um país que controla um estreito vital ainda é \"fraco\"?",
+    "Se a IA de um modelo gratuito invade redes tão bem quanto a de um modelo restrito, o controle de exportação de tecnologia ainda faz sentido?"
+   ],
+   "acompanhar": [
+    {
+     "quando": "9–10/11",
+     "oque": "Chanceleres do G7 em Paris, com convidados como o Brasil"
+    },
+    {
+     "quando": "10–11/11",
+     "oque": "Rodada Rússia–Ucrânia–EUA em Abu Dhabi; inflação dos EUA e ata do Copom (10/11)"
+    },
+    {
+     "quando": "11/11",
+     "oque": "Lula discursa na cúpula de líderes da COP31; relatório mensal da OPEP"
+    },
+    {
+     "quando": "12/11",
+     "oque": "Boletim do ENSO da NOAA; webinar da OMS sobre o ebola"
+    },
+    {
+     "quando": "18–19/11",
+     "oque": "APEC em Shenzhen e possível encontro Xi–Trump–Putin"
+    }
+   ],
+   "fontes": [
+    {
+     "nome": "The New Arab, Trump minimiza volta à guerra; enviado chinês em Teerã (9/11)",
+     "url": "https://www.newarab.com/news/trump-plays-down-return-war-chinese-diplomats-tehran"
+    },
+    {
+     "nome": "Al Jazeera, ao vivo de 9/11 sobre a guerra do Irã",
+     "url": "https://aljazeera.com/news/liveblog/2026/11/9/iran-war-live-trump-says-land-blockade-in-effect-drone-cuts-power-in-iraq"
+    },
+    {
+     "nome": "Times of Israel, ao vivo de 9/11",
+     "url": "https://www.timesofisrael.com/liveblog-november-9-2026/"
+    },
+    {
+     "nome": "Global Times (mídia estatal chinesa), chancelaria sobre a cúpula tripla (9/11)",
+     "url": "https://www.globaltimes.cn/page/202611/1373947.shtml"
+    },
+    {
+     "nome": "Anadolu via aNews, ataques da noite de 8 para 9/11",
+     "url": "https://www.anews.com.tr/world/2026/11/09/russia-ukraine-trade-accusations-about-overnight-strikes-that-kill-1-injure-7"
+    },
+    {
+     "nome": "Ukraine desk note, 9/11 (dados oficiais ucranianos)",
+     "url": "https://oskarhallgrimsson.substack.com/p/ukraine-desk-note-9-november-2026"
+    },
+    {
+     "nome": "UNN, mecanismo de emergência da UE para a Ucrânia (9/11)",
+     "url": "https://unn.ua/en/news/the-eu-will-launch-a-special-assistance-mechanism-for-ukraine-following-russian-strikes-zelenskyy"
+    },
+    {
+     "nome": "Indian Defence News, Jaishankar na CHOGM (nov.)",
+     "url": "https://www.indiandefensenews.in/2026/11/eam-jaishankar-showcases-indias-digital.html"
+    },
+    {
+     "nome": "Business Standard, petróleo e a conta da Índia (6/11)",
+     "url": "https://www.business-standard.com/amp/industry/news/oil-set-for-biggest-weekly-drop-may-bring-relief-for-india-s-oil-bill-126110601681_1.html"
+    },
+    {
+     "nome": "Kyodo via JournalArta, resumo de 9/11",
+     "url": "https://journalarta.com/en/2026/11/09/kyodo-news-digest-nov-9-quake-central-japan-takaichi-abductions/"
+    },
+    {
+     "nome": "AP via WSLS, Rubio leva Irã, Ucrânia e IA ao G7 em Paris (9/11)",
+     "url": "https://www.wsls.com/news/politics/2026/11/09/rubio-will-discuss-iran-ukraine-ai-and-more-with-g7-allies-in-france/"
+    },
+    {
+     "nome": "UPI via Yahoo, Irã insiste na proposta de dois dias (9/11)",
+     "url": "https://www.yahoo.com/news/politics/articles/iran-warns-u-accept-war-054826410.html"
+    },
+    {
+     "nome": "arXiv 2611.03223, ARCBench",
+     "url": "https://arxiv.org/abs/2611.03223"
+    },
+    {
+     "nome": "Sam on AI, AI Brief de 8/11",
+     "url": "https://samonai.substack.com/p/ai-brief-november-8-2026"
+    },
+    {
+     "nome": "Vals AI, benchmark de ataque cibernético",
+     "url": "https://www.vals.ai/benchmarks/cyber_offense"
+    },
+    {
+     "nome": "Arms Control Association, Pentágono quer Comando de Guerra Autônoma (nov.)",
+     "url": "https://www.armscontrol.org/act/2026-11/news/dod-seeks-autonomous-warfare-command"
+    },
+    {
+     "nome": "ACSH, a IA diagnostica melhor? (3/11)",
+     "url": "https://www.acsh.org/news/2026/11/03/does-ai-diagnose-better-or-take-different-test-50427"
+    },
+    {
+     "nome": "ETIH, pesquisa global do Digital Education Council (jul.)",
+     "url": "https://www.edtechinnovationhub.com/news/q6zw9wco2mttajdbd1jyeonjnpiovu"
+    },
+    {
+     "nome": "American Heart Association, Lp(a) HORIZON (7/11)",
+     "url": "https://newsroom.heart.org/news/lp-a-horizon-trial-lp-a-fell-by-78-but-cardiovascular-outcomes-unexpectedly-neutral"
+    },
+    {
+     "nome": "NEJM, pelacarsen e desfechos cardiovasculares",
+     "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2610159"
+    },
+    {
+     "nome": "Agência GBC, Anvisa aprova semaglutida oral (8/11)",
+     "url": "https://agenciagbc.com/2026/11/08/ozempic-em-comprimido-e-aprovado-no-brasil-veja-quanto-pode-custar-e-quando-chega-as-farmacias/"
+    },
+    {
+     "nome": "OMS, boletim DON625 sobre ebola Bundibugyo (6/11)",
+     "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON625"
+    },
+    {
+     "nome": "Agência Brasil via Diario de Pernambuco, Anvisa e insumos nacionais (7/11)",
+     "url": "https://www.diariodepernambuco.com.br/amp/dp-/dp-saude/2026/11/11728603-anvisa-vai-selecionar-dossies-para-incentivar-a-producao-nacional-de-insumos-farmaceuticos.html"
+    },
+    {
+     "nome": "Russia's Pivot to Asia, relações Rússia–Irã em novembro (8/11)",
+     "url": "https://russiaspivottoasia.com/russia-iran-bilateral-relations-november-2026-update/"
+    },
+    {
+     "nome": "Iran International, Rezaei foi a Moscou pedir o S-400 (6/11)",
+     "url": "https://www.iranintl.com/en/202611067881"
+    },
+    {
+     "nome": "CBS News, ao vivo sobre a guerra do Irã",
+     "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-strait-hormuz-persian-gulf/"
+    },
+    {
+     "nome": "Korea Times, Seul sobre a visita de Kim Song Nam a Pequim (9/11)",
+     "url": "https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261109/nk-officials-beijing-visit-meant-to-share-chinese-party-meeting-results-maintain-high-level-exchanges-seoul"
+    },
+    {
+     "nome": "Stars and Stripes, Coreia do Norte alega nova tecnologia de mísseis (5/11)",
+     "url": "https://www.stripes.com/theaters/asia_pacific/2026-11-05/north-korea-missile-technology-diplomacy-23369224.html"
+    },
+    {
+     "nome": "US News (Reuters), teste de míssil antiaéreo (4/11)",
+     "url": "https://www.usnews.com/news/world/articles/2026-11-04/north-korea-test-fires-new-air-defence-missile-system-kcna-reports"
+    },
+    {
+     "nome": "UkrMedia, Brent abaixo de US$ 97 (9/11)",
+     "url": "https://ukrmedia.news/en/economics/tsiny-na-naftu-brent-padinnya-lystopad/"
+    },
+    {
+     "nome": "Revista Amazônia, agenda de Lula na COP31 (7/11)",
+     "url": "https://revistaamazonia.com.br/lula-cop31-cupula-de-lideres-antalia-agenda-tfff-desmatamento-asean"
+    },
+    {
+     "nome": "Itamaraty, Lula na COP31",
+     "url": "https://www.gov.br/mre/pt-br/canais_atendimento/imprensa/notas-a-imprensa/participacao-do-presidente-luiz-inacio-lula-da-silva-na-cop-31-na-turquia"
+    },
+    {
+     "nome": "Climatempo, frente fria de 7 a 9/11",
+     "url": "https://www.climatempo.com.br/noticia/frio/grande-e-forte-frente-fria-avanca-sobre-o-brasil-entre-7-e-9-de-novembro-de-2026"
+    },
+    {
+     "nome": "NOAA/CPC, discussão diagnóstica do ENSO",
+     "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml"
+    },
+    {
+     "nome": "Fanpage.it, asteroide 2026 VR5 passa perto da Terra (8/11)",
+     "url": "https://www.fanpage.it/innovazione/scienze/la-nasa-comunica-che-un-asteroide-sta-passando-vicinissimo-alla-terra-in-questi-minuti/"
+    },
+    {
+     "nome": "Orbital Radar, briefing de 8/11",
+     "url": "https://orbitalradar.com/blog/orbital-briefing-2026-11-08"
+    },
+    {
+     "nome": "Healio, ZEUS no AHA 2026 (7/11)",
+     "url": "https://www.healio.com/news/cardiology/20261107/ziltivekimab-cuts-inflammation-but-not-cv-events-in-atherosclerosis-kidney-disease"
+    },
+    {
+     "nome": "Healio, STREAM no AHA 2026 (8/11)",
+     "url": "https://www.healio.com/news/cardiology/20261108/new-study-informs-statin-discontinuation-in-older-adults-without-cvd"
+    },
+    {
+     "nome": "TCTMD, OCEANIC-STROKE no AHA 2026 (8/11)",
+     "url": "https://www.tctmd.com/news/oceanic-stroke-asundexian-benefits-seen-across-vascular-risk-strata"
+    },
+    {
+     "nome": "AHA, resultado principal do OCEANIC-STROKE",
+     "url": "https://newsroom.heart.org/news/new-medication-may-reduce-chances-of-a-second-clot-caused-stroke-without-bleeding-risk"
+    },
+    {
+     "nome": "TCTMD, o que esperar do AHA 2026",
+     "url": "https://www.tctmd.com/news/whats-going-be-hot-aha-2026"
+    },
+    {
+     "nome": "Celcuity via Manila Times, FDA aceita pedido do gedatolisibe (9/11)",
+     "url": "https://www.manilatimes.net/2026/11/09/tmt-newswire/globenewswire/celcuity-announces-fda-acceptance-of-snda-for-revtorpyk-gedatolisib-for-hrher2-pik3ca-mutant-locally-advanced-or-metastatic-breast-cancer/2465312"
+    },
+    {
+     "nome": "CURE, próstata no ESMO 2026",
+     "url": "https://www.curetoday.com/view/3-prostate-cancer-results-from-esmo-2026-patients-should-know"
+    },
+    {
+     "nome": "Al Jazeera, sarampo nos EUA (7/11)",
+     "url": "https://aljazeera.com/news/2026/11/7/cdc-reports-more-than-5000-measles-cases-highest-number-in-35-years"
+    },
+    {
+     "nome": "Gazeta da Amazônia, sarampo no Amazonas (9/11)",
+     "url": "https://gazetadaamazonia.com.br/09/11/2026/vacinacao-sarampo-no-amazonas/"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-08",
+   "numero": 4,
+   "data": "2026-11-08",
+   "tempoLeitura": 14,
+   "fechamento": "Fechamento: domingo, 8/11, 7h (Brasília).",
+   "ticker": [
+    {
+     "regiao": "Mundo",
+     "texto": "Projétil danifica a torre da Aramco no distrito financeiro de Riad",
+     "url": "https://www.freemalaysiatoday.com/category/world/2026/11/08/riyadh-financial-district-targeted-aramco-tower-damaged"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "EUA criam a Força-Tarefa Iron Gate para fechar as rotas terrestres e o Cáspio ao Irã",
+     "url": "https://www.iranintl.com/en/liveblog/202611077068"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Forças americanas desabilitam cargueiro que tentava furar o bloqueio no Golfo de Omã",
+     "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-strait-hormuz-persian-gulf/"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Mídia estatal iraniana relata explosões em Qeshm, Jask, Sirik e Bandar Abbas",
+     "url": "https://www.aljazeera.com/news/liveblog/2026/11/8/iran-war-live-explosions-hit-qeshm-us-moves-to-block-land-supply-routes"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Houthis dizem que ataques sauditas mataram 33 perto de Sanaa; Riad investiga",
+     "url": "https://www.brecorder.com/news/40447990/houthi-run-health-ministry-says-airstrikes-kill-33-near-yemen-capital"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Washington Post: EUA pediram à China que ajude a encerrar a guerra do Irã",
+     "url": "https://www.iranintl.com/en/202611079372"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Rússia lança 164 drones e 3 mísseis; 600 mil clientes sem luz em Dnipropetrovsk",
+     "url": "https://thechrissampson.substack.com/p/ukraine-daily-november-8-2026-six"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Moscou manda chefe da inteligência militar à rodada de Abu Dhabi (10 e 11/11)",
+     "url": "https://www.kyivpost.com/post/89466"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "China confirma conversas sobre encontro Xi–Trump–Putin em Shenzhen",
+     "url": "https://newstodaynet.com/2026/11/07/china-weighs-historic-trump-xi-putin-summit/"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Sonda europeia Hera chega ao asteroide Didymos, alvo do teste DART",
+     "url": "https://www.techtimes.com/articles/330121/20261105/esa-hera-reaches-asteroid-didymos-first-close-image-shows-side-dart-never-photographed.htm"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "OMS aprova ensaios de duas vacinas contra o ebola Bundibugyo",
+     "url": "https://pmnewsnigeria.com/2026/11/07/who-approves-trials-for-two-ebola-vacccines/"
+    },
+    {
+     "regiao": "Brasil",
+     "texto": "Copom divulga na terça (10/11) a ata da decisão que manteve a Selic em 13,75%",
+     "url": "https://www.riotimesonline.com/the-big-read-brazil-8-november-2026/"
+    },
+    {
+     "regiao": "Brasil",
+     "texto": "Petroleiro com diesel russo que ia aos EUA muda o rumo para o Brasil",
+     "url": "https://www.news4jax.com/business/2026/11/05/tankers-carrying-russian-diesel-change-course-raising-doubts-about-shipments-to-us/"
+    },
+    {
+     "regiao": "Brasil",
+     "texto": "Lula vai à COP31, que abre nesta segunda (9/11) em Antália",
+     "url": "https://www.turkishminute.com/2026/10/31/brazils-lula-to-attend-cop31-climate-summit-in-turkey/"
+    }
+   ],
+   "capa": {
+    "chapeu": "Guerra no Golfo",
+    "titulo": "Riad sob mísseis, Irã sob cerco",
+    "linhaFina": "Na manhã de 8/11, um projétil danificou a torre da Aramco no coração financeiro da capital saudita, segundo testemunhas ouvidas pela AFP. Na véspera, os EUA estenderam o bloqueio ao Irã para terra e para o mar Cáspio. A guerra se espalha pelas bordas enquanto a diplomacia tenta chegar ao centro.",
+    "camada": "FATO",
+    "confianca": "Média"
+   },
+   "chamadas": [
+    {
+     "secao": "potencias",
+     "rotulo": "Grandes potências",
+     "texto": "Washington pede ajuda a Pequim; Pequim fala em cúpula com Putin"
+    },
+    {
+     "secao": "ia",
+     "rotulo": "Evolução das IAs",
+     "texto": "Agentes da DeepMind acham falhas no velho RSA; robôs terrestres chegam ao Pentágono"
+    },
+    {
+     "secao": "medicina",
+     "rotulo": "Medicina",
+     "texto": "Treze anos depois, o stent não prolonga a vida na doença coronária estável"
+    },
+    {
+     "secao": "russia-ira",
+     "rotulo": "Rússia–Irã",
+     "texto": "O Cáspio, quintal russo, entra na mira do bloqueio americano"
+    },
+    {
+     "secao": "coreia",
+     "rotulo": "Coreia do Norte",
+     "texto": "Três reuniões em Pequim e uma ogiva nova antes de Shenzhen"
+    }
+   ],
+   "numeros": [
+    {
+     "rotulo": "Brent",
+     "valor": "US$ 98,32",
+     "nota": "fechamento de 6/11; mercado reabre na segunda",
+     "fonte": "CNBC via FinanceFeeds"
+    },
+    {
+     "rotulo": "WTI",
+     "valor": "US$ 90,83",
+     "nota": "fechamento de 6/11",
+     "fonte": "CNBC via FinanceFeeds"
+    },
+    {
+     "rotulo": "Selic",
+     "valor": "13,75%",
+     "nota": "mantida em 4/11; ata sai em 10/11",
+     "fonte": "Copom via Rio Times"
+    },
+    {
+     "rotulo": "Ataque russo",
+     "valor": "164 + 3",
+     "nota": "drones e mísseis na noite de 7 para 8/11 (alegação de Kiev)",
+     "fonte": "Força Aérea da Ucrânia"
+    },
+    {
+     "rotulo": "Ebola na RDC",
+     "valor": "10.668",
+     "nota": "casos confirmados e 5.198 mortes até 3/11",
+     "fonte": "OMS"
+    },
+    {
+     "rotulo": "Hera–Didymos",
+     "valor": "60 km",
+     "nota": "distância da primeira imagem de perto (5/11)",
+     "fonte": "ESA via Tech Times"
+    }
+   ],
+   "potencias": [
+    {
+     "pais": "EUA",
+     "sigla": "US",
+     "titulo": "O bloqueio chega à terra firme",
+     "texto": "O Comando Central criou em 7/11 a Força-Tarefa Iron Gate, com cerca de 20 pessoas em Tampa, para cortar envios de armas e comércio ilegal do Irã por terra e pelo Cáspio. No mesmo dia, desabilitou o cargueiro M/V Huda no Golfo de Omã, sem feridos, segundo o CENTCOM.",
+     "camada": "FATO",
+     "confianca": "Alta",
+     "fontes": [
+      {
+       "nome": "Iran International, ao vivo de 7 e 8/11",
+       "url": "https://www.iranintl.com/en/liveblog/202611077068"
+      },
+      {
+       "nome": "CBS News, ao vivo sobre a guerra do Irã",
+       "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-strait-hormuz-persian-gulf/"
+      }
+     ]
+    },
+    {
+     "pais": "China",
+     "sigla": "CN",
+     "titulo": "Pequim, a mensageira e a anfitriã",
+     "texto": "Segundo o Washington Post, o secretário do Tesouro Scott Bessent pediu à China que use sua influência sobre Teerã, e Pequim repassou o recado. A porta-voz Mao Ning confirmou contatos para um encontro Xi–Trump–Putin à margem da APEC em Shenzhen (18 e 19/11).",
+     "camada": "FATO",
+     "confianca": "Média",
+     "fontes": [
+      {
+       "nome": "Iran International (Washington Post), EUA pedem ajuda à China (7/11)",
+       "url": "https://www.iranintl.com/en/202611079372"
+      },
+      {
+       "nome": "News Today, China confirma conversas sobre cúpula tripla (7/11)",
+       "url": "https://newstodaynet.com/2026/11/07/china-weighs-historic-trump-xi-putin-summit/"
+      }
+     ]
+    },
+    {
+     "pais": "Rússia",
+     "sigla": "RU",
+     "titulo": "Espiões e diplomatas a Abu Dhabi",
+     "texto": "Vladimir Medinsky chefia de novo a delegação russa na rodada com Ucrânia e EUA (10 e 11/11), agora com o vice-chanceler Sergei Ryabkov e o almirante Igor Kostyukov, chefe da inteligência militar (GRU). Na noite anterior, ataques russos deixaram 600 mil clientes sem luz em Dnipropetrovsk, segundo Kiev.",
+     "camada": "FATO",
+     "confianca": "Média",
+     "fontes": [
+      {
+       "nome": "Kyiv Post, delegação russa para Abu Dhabi",
+       "url": "https://www.kyivpost.com/post/89466"
+      },
+      {
+       "nome": "Ukraine Daily, 8/11 (dados oficiais ucranianos)",
+       "url": "https://thechrissampson.substack.com/p/ukraine-daily-november-8-2026-six"
+      }
+     ]
+    },
+    {
+     "pais": "União Europeia",
+     "sigla": "EU",
+     "titulo": "Fora da mesa de Abu Dhabi",
+     "texto": "Sem novidade verificada nas últimas 24 horas. O fato mais recente é de 6/11: Kaja Kallas disse que a UE não aplicará acordo de paz do qual não participe. A rodada de 10/11 é só entre Rússia, Ucrânia e EUA, o que testa essa ameaça.",
+     "camada": "ANÁLISE",
+     "confianca": "Média",
+     "fontes": [
+      {
+       "nome": "Anadolu via aNews, Kallas sobre a paz na Ucrânia (6/11)",
+       "url": "https://www.anews.com.tr/europe/2026/11/06/eu-must-be-part-of-any-ukraine-peace-deal-for-it-to-be-implemented-kallas"
+      },
+      {
+       "nome": "Kyiv Post, delegação russa para Abu Dhabi",
+       "url": "https://www.kyivpost.com/post/89466"
+      }
+     ]
+    },
+    {
+     "pais": "Índia",
+     "sigla": "IN",
+     "titulo": "Alívio na conta do petróleo",
+     "texto": "A queda de 16% do Brent na semana ajuda a Índia, que gastou US$ 90,6 bilhões com petróleo no primeiro semestre do ano fiscal, 47% a mais que um ano antes, para o mesmo volume. Em outubro, as distribuidoras perdiam 12 rúpias por litro de diesel vendido.",
+     "camada": "FATO",
+     "confianca": "Alta",
+     "fontes": [
+      {
+       "nome": "Business Standard, petróleo e a conta da Índia (6/11)",
+       "url": "https://www.business-standard.com/amp/industry/news/oil-set-for-biggest-weekly-drop-may-bring-relief-for-india-s-oil-bill-126110601681_1.html"
+      }
+     ]
+    },
+    {
+     "pais": "Japão",
+     "sigla": "JP",
+     "titulo": "Fiel a Trump, distante de Pequim",
+     "texto": "Sanae Takaichi disse em 5/11 que não comenta as midterms e que a aliança com os EUA é \"um pilar muito importante\" da diplomacia e da segurança japonesas. Um ano depois de sua fala sobre Taiwan, a relação com a China segue congelada.",
+     "camada": "FATO",
+     "confianca": "Alta",
+     "fontes": [
+      {
+       "nome": "Nippon.com (Jiji), Takaichi após as midterms (6/11)",
+       "url": "https://www.nippon.com/en/articles/-/56989"
+      },
+      {
+       "nome": "Seoul Economic Daily, laços China–Japão congelados (6/11)",
+       "url": "https://en.sedaily.com/international/2026/11/06/a-year-after-takaichis-taiwan-remark-china-japan-ties-stay"
+      }
+     ]
+    },
+    {
+     "pais": "Reino Unido",
+     "sigla": "UK",
+     "titulo": "\"Finalmente, um pouco de esperança\"",
+     "texto": "Um funcionário britânico disse ao Guardian, em 7/11, que a derrota republicana abre uma janela para a paz com o Irã. O primeiro-ministro Andy Burnham liga o fim da guerra à queda do custo de vida e diz que pedirá desescalada a outros líderes.",
+     "camada": "FATO",
+     "confianca": "Média",
+     "fontes": [
+      {
+       "nome": "IBTimes UK (The Guardian), Londres vê esperança de paz (7/11)",
+       "url": "https://www.ibtimes.co.uk/uk-officials-see-iran-peace-opening-after-us-midterms-1830797"
+      }
+     ]
+    },
+    {
+     "pais": "Arábia Saudita",
+     "sigla": "SA",
+     "titulo": "A guerra bate em Riad",
+     "texto": "A coalizão saudita disse ter derrubado dois mísseis balísticos houthis lançados contra Riad em 8/11. Testemunhas relataram à AFP andares danificados na torre da Aramco. O governo saudita não comentou a origem do projétil até o fechamento.",
+     "camada": "FATO",
+     "confianca": "Média",
+     "fontes": [
+      {
+       "nome": "FMT (AFP), torre da Aramco atingida em Riad (8/11)",
+       "url": "https://www.freemalaysiatoday.com/category/world/2026/11/08/riyadh-financial-district-targeted-aramco-tower-damaged"
+      },
+      {
+       "nome": "MarketScreener (Reuters), torre de Riad danificada (8/11)",
+       "url": "https://www.marketscreener.com/news/tower-in-riyadh-damaged-by-projectile-four-people-say-ce785fd2d08df224"
+      }
+     ]
+    }
+   ],
+   "ia": {
+    "abertura": "A IA em quatro frentes. Aviso de transparência: esta revista é escrita com o Claude, modelo da Anthropic; hoje a Anthropic não é citada.",
+    "frentes": [
+     {
+      "area": "Científica",
+      "itens": [
+       {
+        "titulo": "Agentes de IA testam um cofre aposentado",
+        "texto": "O Google DeepMind relatou em 6/11 que agentes de IA, supervisionados por criptógrafos, acharam duas fraquezas no RSA de 1024 bits, padrão de criptografia já aposentado. Uma delas seria cerca de 1.600 vezes melhor que o método anterior, mas é estimativa teórica. As chaves atuais, de 2048 bits ou mais, não são afetadas.",
+        "camada": "FATO",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "OfficeChai, DeepMind e o RSA-1024 (6/11)",
+          "url": "https://officechai.com/ai/google-deepmind-says-it-has-used-ai-agents-to-break-legacy-rsa-1024-encryption-faster-than-anyone-thought-possible/"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Militar",
+      "itens": [
+       {
+        "titulo": "Robôs de chão, à moda ucraniana",
+        "texto": "A Ucrânia encomendou mais de 22 mil veículos terrestres não tripulados de janeiro a julho, e o Pentágono comprometeu mais de US$ 115 milhões com eles em 2026, diz a Defense One. A diferença: Kiev quer robôs baratos e descartáveis; Washington busca sistemas mais autônomos e caros.",
+        "camada": "FATO",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "Defense One, Pentágono segue a Ucrânia nos robôs terrestres (3/11)",
+          "url": "https://www.defenseone.com/defense-systems/2026/11/pentagon-ukraine-ground-robots/417011/"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Médica",
+      "itens": [
+       {
+        "titulo": "A Mayo Clinic leva IA ao consultório",
+        "texto": "A Mayo Clinic Platform lançou em 4/11 um assistente de decisão clínica com chat por modelo de linguagem em mais de 35 especialidades e 22 calculadoras clínicas. Não foram publicados dados de acerto ou de erro. A Mayo diz que a ferramenta \"não substitui o julgamento clínico\".",
+        "camada": "FATO",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "News-Medical, ferramenta de IA da Mayo Clinic (4/11)",
+          "url": "https://news-medical.net/news/20261104/AI-enabled-Mayo-Clinic-tool-supports-individualized-patient-care-decisions.aspx"
+         }
+        ]
+       },
+       {
+        "titulo": "Prêmio para triagem automática de retina",
+        "texto": "O AEYE-DS, que detecta retinopatia diabética sem médico na leitura, ganhou o Prix Galien USA 2026 de saúde digital. A empresa cita três ensaios de fase 3 com mais de 1.200 pacientes e sensibilidade de 92% a 93%, números da própria fabricante.",
+        "camada": "FATO",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "Eyewire, AEYE-DS ganha o Prix Galien (4/11)",
+          "url": "https://eyewire.news/news/aeye-health-wins-2026-prix-galien-usa-award-for-autonomous-ai-diabetic-retinopathy-screening-technology"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Acadêmica",
+      "itens": [
+       {
+        "titulo": "82% usam IA, 58% desconfiam dela",
+        "texto": "Pesquisa da consultoria HelloCollege com universitários americanos, divulgada em 5/11, indica que 82% usam IA nos trabalhos, 66% temem pela carreira e 50% mudaram a visão sobre o valor do diploma. O tamanho da amostra não foi informado, o que limita a confiança.",
+        "camada": "FATO",
+        "confianca": "Baixa",
+        "fontes": [
+         {
+          "nome": "IT Brief, pesquisa HelloCollege com universitários (5/11)",
+          "url": "https://itbrief.news/story/students-worry-ai-is-reshaping-degree-value-careers"
+         }
+        ]
+       },
+       {
+        "titulo": "Usar sem confiar",
+        "texto": "O dado revela um paradoxo: estudantes adotam a ferramenta que acham ruim para a sociedade. Para quem estuda, o caminho é tratar a IA como ponto de partida, nunca como fonte final, e conferir tudo nos textos originais.",
+        "camada": "ANÁLISE",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "IT Brief, pesquisa HelloCollege com universitários (5/11)",
+          "url": "https://itbrief.news/story/students-worry-ai-is-reshaping-degree-value-careers"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "glossario": [
+     {
+      "termo": "RSA",
+      "def": "Sistema de criptografia que protege dados usando a dificuldade de fatorar números enormes."
+     },
+     {
+      "termo": "Agente de IA",
+      "def": "Programa de IA que executa tarefas em vários passos, testando e ajustando sozinho, sob supervisão."
+     },
+     {
+      "termo": "Veículo terrestre não tripulado",
+      "def": "Robô de chão, remoto ou autônomo, usado para carga, resgate ou combate."
+     },
+     {
+      "termo": "Sensibilidade",
+      "def": "Proporção de doentes que um teste consegue identificar corretamente."
+     }
+    ]
+   },
+   "medicina": {
+    "abertura": "Saúde em quatro frentes. Nada aqui é orientação médica individual: decisões de tratamento são com o seu médico.",
+    "frentes": [
+     {
+      "area": "Pesquisa clínica",
+      "itens": [
+       {
+        "titulo": "Treze anos depois, o stent não muda a sobrevida",
+        "texto": "O ISCHEMIA-EXTEND, publicado no JAMA em 7/11, acompanhou por até 13 anos pacientes do ensaio randomizado ISCHEMIA (mais de 5 mil, em 37 países) com doença coronária estável. A chance de morte foi de 26% com cateterismo e stent precoces e 27% só com remédios. Limitações: a extensão é observacional e não mediu infartos nem qualidade de vida.",
+        "camada": "FATO",
+        "confianca": "Alta",
+        "fontes": [
+         {
+          "nome": "EurekAlert!, ISCHEMIA-EXTEND no JAMA (7/11)",
+          "url": "https://www.eurekalert.org/news-releases/1150605"
+         },
+         {
+          "nome": "JAMA, artigos novos on-line",
+          "url": "https://jamanetwork.com/journals/jama/newonline"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Aprovações",
+      "itens": [
+       {
+        "titulo": "Câncer de pâncreas: aval europeu em tempo recorde",
+        "texto": "Sem nova aprovação verificada em 24 horas, o destaque mais recente é de 15/10: o comitê da EMA recomendou o daraxonrasib (Rasonque) para câncer de pâncreas metastático já tratado. Foi o primeiro remédio avaliado em fases, em menos de 150 dias. Falta a decisão final da Comissão Europeia.",
+        "camada": "FATO",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "Pharmavibes, notícias regulatórias (6/11)",
+          "url": "https://www.pharmavibes.co.uk/2026/11/06/international-regulatory-news-in-brief/"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Surtos e saúde global",
+      "itens": [
+       {
+        "titulo": "Duas vacinas contra o ebola Bundibugyo em teste",
+        "texto": "A OMS aprovou ensaios de duas vacinas desenhadas para o Bundibugyo, a ChAdOx1 BDBV (Oxford e Serum Institute) e a mRNA-1469 (Moderna), na RDC, com resultados esperados para o início de 2027. Até 3/11 eram 10.668 casos confirmados e 5.198 mortes, com letalidade de 48,7%.",
+        "camada": "FATO",
+        "confianca": "Alta",
+        "fontes": [
+         {
+          "nome": "P.M. News, OMS aprova ensaios de duas vacinas (7/11)",
+          "url": "https://pmnewsnigeria.com/2026/11/07/who-approves-trials-for-two-ebola-vacccines/"
+         },
+         {
+          "nome": "Parrot Nigeria, boletim da OMS sobre ebola (8/11)",
+          "url": "https://parrotnigeria.com/2026/11/08/ebola-drc-records-10668-cases-5198-deaths-says-who/"
+         },
+         {
+          "nome": "OMS, ebola Bundibugyo na RDC",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON619"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Brasil e SUS",
+      "itens": [
+       {
+        "titulo": "A vacina do Butantan segue em pausa",
+        "texto": "A Butantan-DV, vacina de dose única contra a dengue, está suspensa no SUS desde 8/6, após 42 eventos adversos graves e duas mortes em investigação. O ministro Alexandre Padilha disse em 4/11 que quer retomá-la, mas depende de um painel de especialistas, sem prazo. Hoje o SUS usa só a Qdenga, de 10 a 14 anos.",
+        "camada": "FATO",
+        "confianca": "Alta",
+        "fontes": [
+         {
+          "nome": "Jornal de Brasília, dengue e vacina do Butantan (4/11)",
+          "url": "https://jornaldebrasilia.com.br/noticias/saude/ministerio-da-saude-projeta-alta-da-dengue-em-2027-e-quer-voltar-a-usar-vacina-do-butantan/"
+         },
+         {
+          "nome": "Anvisa, painel sobre a Butantan-DV (8/6)",
+          "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-tera-painel-de-especialistas-para-aprofundar-investigacao-epidemiologica-sobre-vacina-butantan-dv"
+         }
+        ]
+       },
+       {
+        "titulo": "Onde o El Niño pesa mais na dengue",
+        "texto": "Num cenário de El Niño forte, a Fiocruz projeta alta de 138% dos casos no Sul, 98% no Centro-Oeste e 85% no Sudeste em 2027. É uma simulação, não uma previsão fechada, e serve para planejar estoques e equipes.",
+        "camada": "CENÁRIO",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "Jornal de Brasília, dengue e vacina do Butantan (4/11)",
+          "url": "https://jornaldebrasilia.com.br/noticias/saude/ministerio-da-saude-projeta-alta-da-dengue-em-2027-e-quer-voltar-a-usar-vacina-do-butantan/"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "glossario": [
+     {
+      "termo": "Doença coronária estável",
+      "def": "Estreitamento das artérias do coração que causa sintomas previsíveis, sem infarto em curso."
+     },
+     {
+      "termo": "Estudo observacional",
+      "def": "Pesquisa que acompanha pessoas sem sortear tratamentos; mostra associações, não causas."
+     },
+     {
+      "termo": "Letalidade",
+      "def": "Proporção de pessoas doentes que morrem da doença."
+     },
+     {
+      "termo": "Evento adverso grave",
+      "def": "Problema de saúde sério que surge após uma vacina ou remédio e precisa ser investigado."
+     }
+    ]
+   },
+   "russiaIra": {
+    "titulo": "O Cáspio entra no mapa",
+    "linhaFina": "O bloqueio americano agora mira o mar interior que liga o Irã à Rússia.",
+    "itens": [
+     {
+      "titulo": "Iron Gate inclui o mar Cáspio",
+      "texto": "A nova força-tarefa do CENTCOM, anunciada em 7/11, mira o comércio ilegal do Irã por terra e pelo Cáspio, mar fechado que o Irã divide com a Rússia, o Cazaquistão, o Turcomenistão e o Azerbaijão. A Guarda Revolucionária respondeu que o plano \"ficará só no papel\".",
+      "camada": "FATO",
+      "confianca": "Alta",
+      "fontes": [
+       {
+        "nome": "Iran International, ao vivo de 7 e 8/11",
+        "url": "https://www.iranintl.com/en/liveblog/202611077068"
+       },
+       {
+        "nome": "CBS News, ao vivo sobre a guerra do Irã",
+        "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-strait-hormuz-persian-gulf/"
+       }
+      ]
+     },
+     {
+      "titulo": "O S-400 ainda sem resposta",
+      "texto": "Três dias depois de o Irã pedir o sistema antiaéreo S-400 por carta de Mojtaba Khamenei, entregue por Mohsen Rezaei em Moscou, segundo o Telegraph, o Kremlin segue calado. Nenhuma das partes confirmou a negociação.",
+      "camada": "FATO",
+      "confianca": "Baixa",
+      "fontes": [
+       {
+        "nome": "Iran International, Rezaei foi a Moscou pedir o S-400 (6/11)",
+        "url": "https://www.iranintl.com/en/202611067881"
+       }
+      ]
+     },
+     {
+      "titulo": "Por que o Cáspio importa",
+      "texto": "O Cáspio é a rota mais curta entre portos russos, como Astracã, e o norte iraniano, longe da marinha americana. Fechá-lo exigiria pressão sobre a própria Rússia. Uma força de 20 pessoas na Flórida indica, por ora, sanções e inteligência, não navios no Cáspio.",
+      "camada": "ANÁLISE",
+      "confianca": "Média",
+      "fontes": [
+       {
+        "nome": "Iran International, ao vivo de 7 e 8/11",
+        "url": "https://www.iranintl.com/en/liveblog/202611077068"
+       },
+       {
+        "nome": "Chatham House, A guerra aproxima o Irã da Rússia",
+        "url": "https://www.chathamhouse.org/2026/11/war-pushing-iran-closer-russia"
+       }
+      ]
+     },
+     {
+      "titulo": "Três meses à frente",
+      "texto": "Estimativa do Observatório: 10% de chance de ação militar americana no Cáspio nos próximos três meses; 70% de a Iron Gate se limitar a sanções e apreensões fora do Cáspio. O mar é cercado por países onde os EUA não têm bases navais.",
+      "camada": "CENÁRIO",
+      "confianca": "Baixa",
+      "fontes": [
+       {
+        "nome": "Iran International, ao vivo de 7 e 8/11",
+        "url": "https://www.iranintl.com/en/liveblog/202611077068"
+       }
+      ]
+     }
+    ],
+    "box": {
+     "titulo": "Placar da parceria",
+     "linhas": [
+      {
+       "area": "Armas",
+       "texto": "Pedido de S-400 (Telegraph, 6/11), sem resposta russa. Lançadores para helicópteros (FT, 5/11)."
+      },
+      {
+       "area": "Rotas",
+       "texto": "O Cáspio entra na mira da Força-Tarefa Iron Gate (7/11)."
+      },
+      {
+       "area": "Energia",
+       "texto": "Diesel russo: dois petroleiros que iam aos EUA mudaram de rota, um rumo ao Brasil (AP, 5/11)."
+      },
+      {
+       "area": "Diplomacia",
+       "texto": "Os EUA pedem ajuda à China, não à Rússia, para falar com Teerã (Washington Post, 6/11)."
+      }
+     ]
+    }
+   },
+   "coreiaNorte": {
+    "titulo": "Três portas em Pequim",
+    "linhaFina": "O emissário de Kim percorre a cúpula chinesa enquanto Pyongyang exibe uma ogiva nova.",
+    "itens": [
+     {
+      "titulo": "Wang Yi, Cai Qi e Liu Haixing",
+      "texto": "Kim Song Nam, secretário do Partido dos Trabalhadores, reuniu-se com o chanceler chinês Wang Yi em 5/11 e com Cai Qi, do topo do Politburo, e Liu Haixing, chefe de relações internacionais do partido chinês, em 6/11, segundo a Yonhap, citando a KCNA. Cai disse que a amizade não mudará \"não importa a situação internacional\".",
+      "camada": "FATO",
+      "confianca": "Alta",
+      "fontes": [
+       {
+        "nome": "Bytes Europe (Yonhap), Kim Song Nam em Pequim (7/11)",
+        "url": "https://www.byteseu.com/2503701/"
+       },
+       {
+        "nome": "NK News, Kim Song Nam em Pequim (4/11)",
+        "url": "https://www.nknews.org/2026/11/senior-north-korean-party-official-visits-china-on-heels-of-kim-jong-un-trip/"
+       }
+      ]
+     },
+     {
+      "titulo": "Ogiva de fragmentação, segundo a KCNA",
+      "texto": "A agência estatal KCNA (versão oficial) disse que o país testou em 31/10 uma ogiva de fragmentação para mísseis balísticos táticos, capaz de \"reduzir a cinzas\" de 12 a 13 hectares, e que unidades militares terão quatro tipos dessas armas até o fim de 2026. Não há confirmação independente do desempenho.",
+      "camada": "FATO",
+      "confianca": "Média",
+      "fontes": [
+       {
+        "nome": "NK News, ogiva de fragmentação (1/11)",
+        "url": "https://www.nknews.org/2026/11/north-korea-tests-cluster-warhead-plans-military-use-by-end-of-2026/"
+       }
+      ]
+     },
+     {
+      "titulo": "A China como seguro",
+      "texto": "Com os EUA pedindo ajuda chinesa no Irã e Xi recebendo Trump e talvez Putin em Shenzhen, Pyongyang garante seu lugar antes. Três reuniões em dois dias sinalizam que Pequim quer a Coreia do Norte perto, não isolada.",
+      "camada": "ANÁLISE",
+      "confianca": "Média",
+      "fontes": [
+       {
+        "nome": "Bytes Europe (Yonhap), Kim Song Nam em Pequim (7/11)",
+        "url": "https://www.byteseu.com/2503701/"
+       },
+       {
+        "nome": "Iran International (Washington Post), EUA pedem ajuda à China (7/11)",
+        "url": "https://www.iranintl.com/en/202611079372"
+       }
+      ]
+     },
+     {
+      "titulo": "Antes de Shenzhen",
+      "texto": "Estimativa do Observatório: 65% de chance de novo lançamento de míssil antes da APEC (18 e 19/11); 15% de a Coreia do Norte ser tema público do encontro Xi–Trump. O ritmo de testes e a anunciada entrega de ogivas até dezembro pesam na estimativa.",
+      "camada": "CENÁRIO",
+      "confianca": "Baixa",
+      "fontes": [
+       {
+        "nome": "NK News, ogiva de fragmentação (1/11)",
+        "url": "https://www.nknews.org/2026/11/north-korea-tests-cluster-warhead-plans-military-use-by-end-of-2026/"
+       },
+       {
+        "nome": "News Today, China confirma conversas sobre cúpula tripla (7/11)",
+        "url": "https://newstodaynet.com/2026/11/07/china-weighs-historic-trump-xi-putin-summit/"
+       }
+      ]
+     }
+    ],
+    "box": {
+     "titulo": "Termômetro da península",
+     "linhas": [
+      {
+       "area": "Mísseis",
+       "texto": "17 lançamentos de mísseis balísticos de curto alcance em 2026 até 29/10, segundo Seul, Washington e Tóquio."
+      },
+      {
+       "area": "Armas",
+       "texto": "Ogiva de fragmentação testada em 31/10 (KCNA); entrega às tropas até o fim de 2026."
+      },
+      {
+       "area": "China",
+       "texto": "Kim Song Nam com Wang Yi (5/11), Cai Qi e Liu Haixing (6/11)."
+      },
+      {
+       "area": "Rússia",
+       "texto": "O tratado de 2024 tem cláusula de assistência mútua. Soldados norte-coreanos lutaram por Moscou em Kursk."
+      }
+     ]
+    }
+   },
+   "secoes": [
+    {
+     "eixo": "Guerras",
+     "itens": [
+      {
+       "titulo": "A frente saudita esquenta",
+       "texto": "Desde que a trégua de 2022 ruiu em julho, houthis e Arábia Saudita trocam ataques diários. Em 7/11, a mídia houthi disse que ataques sauditas mataram 33 pessoas, a maioria mulheres e crianças, perto de Sanaa; a Reuters não confirmou, e Riad diz investigar. A ONU fala em mais de 1.600 mortos desde julho.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "Business Recorder (Reuters), 33 mortos perto de Sanaa (8/11)",
+         "url": "https://www.brecorder.com/news/40447990/houthi-run-health-ministry-says-airstrikes-kill-33-near-yemen-capital"
+        },
+        {
+         "nome": "FMT (AFP), torre da Aramco atingida em Riad (8/11)",
+         "url": "https://www.freemalaysiatoday.com/category/world/2026/11/08/riyadh-financial-district-targeted-aramco-tower-damaged"
+        }
+       ]
+      },
+      {
+       "titulo": "A guerra da energia na Ucrânia",
+       "texto": "Na noite de 7 para 8/11, a Rússia lançou 164 drones e três mísseis Kh-59/69, e Kiev diz ter abatido 137 drones. Mais de 600 mil clientes ficaram sem luz em Dnipropetrovsk e hospitais passaram a geradores. Os números são da Força Aérea e de governos regionais ucranianos; Moscou não comentou.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "Ukraine Daily, 8/11 (dados oficiais ucranianos)",
+         "url": "https://thechrissampson.substack.com/p/ukraine-daily-november-8-2026-six"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Energia",
+     "itens": [
+      {
+       "titulo": "Semana decisiva para o petróleo",
+       "texto": "O Brent fechou a semana a US$ 98,32, depois de cair de US$ 118 em 30/10. O ataque em Riad, perto da sede da maior petroleira do mundo, chega com o mercado fechado e deve pesar na abertura de segunda. Na agenda: inflação dos EUA em 10/11 e relatório da OPEP em 11/11.",
+       "camada": "ANÁLISE",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "FinanceFeeds (CNBC), fechamento do petróleo em 6/11",
+         "url": "https://financefeeds.com/brent-crude-oil-price-98-32-saturday-week-ahead-us-iran-deal-bets-cpi-10-november-bull-105-bear-93/"
+        },
+        {
+         "nome": "Business Standard, petróleo e a conta da Índia (6/11)",
+         "url": "https://www.business-standard.com/amp/industry/news/oil-set-for-biggest-weekly-drop-may-bring-relief-for-india-s-oil-bill-126110601681_1.html"
+        },
+        {
+         "nome": "FMT (AFP), torre da Aramco atingida em Riad (8/11)",
+         "url": "https://www.freemalaysiatoday.com/category/world/2026/11/08/riyadh-financial-district-targeted-aramco-tower-damaged"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Brasil",
+     "itens": [
+      {
+       "titulo": "Diesel russo a caminho do Brasil",
+       "texto": "Um dos dois petroleiros com diesel russo que declararam destino aos EUA mudou de rota para o Brasil, segundo a AP, com dados da Kpler. Nos EUA, governadores e senadores ameaçaram portos e bancos que recebessem a carga, apesar da licença do Tesouro até 7/4.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "News4Jax (AP), petroleiros de diesel russo mudam de rota (5/11)",
+         "url": "https://www.news4jax.com/business/2026/11/05/tankers-carrying-russian-diesel-change-course-raising-doubts-about-shipments-to-us/"
+        }
+       ]
+      },
+      {
+       "titulo": "Juros parados, ata na terça",
+       "texto": "O Copom manteve a Selic em 13,75% em 4/11, depois de cinco cortes seguidos de 0,25 ponto. A ata sai em 10/11. Os juros da dívida pública somam R$ 1,205 trilhão em 12 meses, 8,99% do PIB.",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "Rio Times, Big Read Brasil (8/11)",
+         "url": "https://www.riotimesonline.com/the-big-read-brazil-8-november-2026/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Clima",
+     "itens": [
+      {
+       "titulo": "El Niño: o boletim de quinta",
+       "texto": "A NOAA publica em 12/11 o boletim mensal do ENSO. No anterior (8/10), dava mais de 83% de chance de El Niño forte a muito forte. Em agosto, o modelo do BoM australiano previa pico perto de +3,5 °C em novembro, o que superaria o recorde mensal de 1902. A COP31 abre em 9/11, em Antália, com Lula.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "NOAA/CPC, discussão diagnóstica do ENSO",
+         "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml"
+        },
+        {
+         "nome": "Weatherzone, índice do BoM passa de +2 °C (3/8)",
+         "url": "https://www.weatherzone.com/au/news/very-strong-el-nino-threshold-reached-for-first-time-in-over-10-years/1891487"
+        },
+        {
+         "nome": "Turkish Minute, Lula na COP31 (31/10)",
+         "url": "https://www.turkishminute.com/2026/10/31/brazils-lula-to-attend-cop31-climate-summit-in-turkey/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Espaço",
+     "itens": [
+      {
+       "titulo": "Hera chega ao asteroide atingido pelo DART",
+       "texto": "A sonda europeia Hera chegou ao sistema Didymos em 5/11 e enviou a primeira imagem de perto, a 60 km. Vai medir o efeito do impacto da sonda DART, que em 2022 desviou a lua Dimorphos, primeiro teste de defesa planetária. Didymos não tem risco conhecido de colisão com a Terra. Imagens detalhadas saem em 25/11.",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "Tech Times, Hera chega a Didymos (5/11)",
+         "url": "https://www.techtimes.com/articles/330121/20261105/esa-hera-reaches-asteroid-didymos-first-close-image-shows-side-dart-never-photographed.htm"
+        },
+        {
+         "nome": "ESA, Hera antecipa chegada a Didymos",
+         "url": "https://www.esa.int/Space_Safety/Hera/ESA_s_Hera_targets_early_arrival_at_Didymos_asteroids"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "analise": {
+    "titulo": "O mar não fecha a terra",
+    "texto": [
+     "Em 1904, o geógrafo britânico Halford Mackinder alertou que o poder marítimo, que fez a grandeza do Império Britânico, perderia força diante de potências terrestres ligadas por ferrovias no coração da Eurásia. Mais de um século depois, a Força-Tarefa Iron Gate reconhece o problema: meses de bloqueio naval não bastaram, porque o Irã respira por terra e pelo Cáspio, um mar interior que nenhuma marinha oceânica alcança. Napoleão viveu o drama inverso: seu Bloqueio Continental de 1806 tentou estrangular a Grã-Bretanha pelo comércio e naufragou no contrabando.",
+     "A analogia tem limites. Hoje satélites, dados financeiros e sanções secundárias permitem vigiar rotas que no tempo de Napoleão eram invisíveis; o cerco do século XXI é feito mais de bancos do que de soldados. Mas a lição de Mackinder segue de pé: os vizinhos terrestres do Irã incluem a Rússia e, por trás dela, a China. Um bloqueio só fecha quando os vizinhos aceitam fechá-lo, e é por isso que Washington, segundo o Washington Post, foi pedir ajuda a Pequim."
+    ]
+   },
+   "ler": [
+    {
+     "tipo": "Artigo",
+     "titulo": "The Geographical Pivot of History",
+     "autor": "Halford Mackinder (1904)",
+     "nivel": "★★",
+     "porque": "Texto curto que fundou a geopolítica clássica. Procure a ideia de \"área pivô\" e pense no Cáspio e no Irã."
+    },
+    {
+     "tipo": "Livro",
+     "titulo": "Prisioneiros da Geografia",
+     "autor": "Tim Marshall",
+     "nivel": "★",
+     "porque": "Os capítulos sobre a Rússia e o Oriente Médio explicam por que mares, montanhas e desertos limitam o que as potências conseguem fazer."
+    },
+    {
+     "tipo": "Livro",
+     "titulo": "Army of None",
+     "autor": "Paul Scharre",
+     "nivel": "★★",
+     "porque": "Ajuda a entender a corrida por robôs e drones autônomos que a Ucrânia acelerou e o Pentágono agora copia."
+    }
+   ],
+   "pensar": [
+    "Mackinder achava que quem domina o coração da Eurásia domina o mundo. O cerco ao Irã por terra confirma ou desmente essa ideia?",
+    "Se a China ajuda os EUA a pressionar o Irã, o que ela pede em troca, e o que isso diz sobre quem tem poder hoje?"
+   ],
+   "acompanhar": [
+    {
+     "quando": "9–20/11",
+     "oque": "COP31 em Antália; reunião de chefes de Estado em 11 e 12/11, com Lula"
+    },
+    {
+     "quando": "10/11",
+     "oque": "Rodada Rússia–Ucrânia–EUA em Abu Dhabi (até 11/11); inflação dos EUA; ata do Copom"
+    },
+    {
+     "quando": "11/11",
+     "oque": "Relatório mensal da OPEP"
+    },
+    {
+     "quando": "12/11",
+     "oque": "Boletim mensal do ENSO da NOAA"
+    },
+    {
+     "quando": "18–19/11",
+     "oque": "APEC em Shenzhen; encontro Xi–Trump e possível cúpula com Putin"
+    },
+    {
+     "quando": "25/11",
+     "oque": "ESA divulga as imagens detalhadas de Didymos e Dimorphos feitas pela Hera"
+    }
+   ],
+   "fontes": [
+    {
+     "nome": "Iran International, ao vivo de 7 e 8/11",
+     "url": "https://www.iranintl.com/en/liveblog/202611077068"
+    },
+    {
+     "nome": "CBS News, ao vivo sobre a guerra do Irã",
+     "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-strait-hormuz-persian-gulf/"
+    },
+    {
+     "nome": "Iran International (Washington Post), EUA pedem ajuda à China (7/11)",
+     "url": "https://www.iranintl.com/en/202611079372"
+    },
+    {
+     "nome": "News Today, China confirma conversas sobre cúpula tripla (7/11)",
+     "url": "https://newstodaynet.com/2026/11/07/china-weighs-historic-trump-xi-putin-summit/"
+    },
+    {
+     "nome": "Kyiv Post, delegação russa para Abu Dhabi",
+     "url": "https://www.kyivpost.com/post/89466"
+    },
+    {
+     "nome": "Ukraine Daily, 8/11 (dados oficiais ucranianos)",
+     "url": "https://thechrissampson.substack.com/p/ukraine-daily-november-8-2026-six"
+    },
+    {
+     "nome": "Anadolu via aNews, Kallas sobre a paz na Ucrânia (6/11)",
+     "url": "https://www.anews.com.tr/europe/2026/11/06/eu-must-be-part-of-any-ukraine-peace-deal-for-it-to-be-implemented-kallas"
+    },
+    {
+     "nome": "Business Standard, petróleo e a conta da Índia (6/11)",
+     "url": "https://www.business-standard.com/amp/industry/news/oil-set-for-biggest-weekly-drop-may-bring-relief-for-india-s-oil-bill-126110601681_1.html"
+    },
+    {
+     "nome": "Nippon.com (Jiji), Takaichi após as midterms (6/11)",
+     "url": "https://www.nippon.com/en/articles/-/56989"
+    },
+    {
+     "nome": "Seoul Economic Daily, laços China–Japão congelados (6/11)",
+     "url": "https://en.sedaily.com/international/2026/11/06/a-year-after-takaichis-taiwan-remark-china-japan-ties-stay"
+    },
+    {
+     "nome": "IBTimes UK (The Guardian), Londres vê esperança de paz (7/11)",
+     "url": "https://www.ibtimes.co.uk/uk-officials-see-iran-peace-opening-after-us-midterms-1830797"
+    },
+    {
+     "nome": "FMT (AFP), torre da Aramco atingida em Riad (8/11)",
+     "url": "https://www.freemalaysiatoday.com/category/world/2026/11/08/riyadh-financial-district-targeted-aramco-tower-damaged"
+    },
+    {
+     "nome": "MarketScreener (Reuters), torre de Riad danificada (8/11)",
+     "url": "https://www.marketscreener.com/news/tower-in-riyadh-damaged-by-projectile-four-people-say-ce785fd2d08df224"
+    },
+    {
+     "nome": "OfficeChai, DeepMind e o RSA-1024 (6/11)",
+     "url": "https://officechai.com/ai/google-deepmind-says-it-has-used-ai-agents-to-break-legacy-rsa-1024-encryption-faster-than-anyone-thought-possible/"
+    },
+    {
+     "nome": "Defense One, Pentágono segue a Ucrânia nos robôs terrestres (3/11)",
+     "url": "https://www.defenseone.com/defense-systems/2026/11/pentagon-ukraine-ground-robots/417011/"
+    },
+    {
+     "nome": "News-Medical, ferramenta de IA da Mayo Clinic (4/11)",
+     "url": "https://news-medical.net/news/20261104/AI-enabled-Mayo-Clinic-tool-supports-individualized-patient-care-decisions.aspx"
+    },
+    {
+     "nome": "Eyewire, AEYE-DS ganha o Prix Galien (4/11)",
+     "url": "https://eyewire.news/news/aeye-health-wins-2026-prix-galien-usa-award-for-autonomous-ai-diabetic-retinopathy-screening-technology"
+    },
+    {
+     "nome": "IT Brief, pesquisa HelloCollege com universitários (5/11)",
+     "url": "https://itbrief.news/story/students-worry-ai-is-reshaping-degree-value-careers"
+    },
+    {
+     "nome": "EurekAlert!, ISCHEMIA-EXTEND no JAMA (7/11)",
+     "url": "https://www.eurekalert.org/news-releases/1150605"
+    },
+    {
+     "nome": "JAMA, artigos novos on-line",
+     "url": "https://jamanetwork.com/journals/jama/newonline"
+    },
+    {
+     "nome": "Pharmavibes, notícias regulatórias (6/11)",
+     "url": "https://www.pharmavibes.co.uk/2026/11/06/international-regulatory-news-in-brief/"
+    },
+    {
+     "nome": "P.M. News, OMS aprova ensaios de duas vacinas (7/11)",
+     "url": "https://pmnewsnigeria.com/2026/11/07/who-approves-trials-for-two-ebola-vacccines/"
+    },
+    {
+     "nome": "Parrot Nigeria, boletim da OMS sobre ebola (8/11)",
+     "url": "https://parrotnigeria.com/2026/11/08/ebola-drc-records-10668-cases-5198-deaths-says-who/"
+    },
+    {
+     "nome": "OMS, ebola Bundibugyo na RDC",
+     "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON619"
+    },
+    {
+     "nome": "Jornal de Brasília, dengue e vacina do Butantan (4/11)",
+     "url": "https://jornaldebrasilia.com.br/noticias/saude/ministerio-da-saude-projeta-alta-da-dengue-em-2027-e-quer-voltar-a-usar-vacina-do-butantan/"
+    },
+    {
+     "nome": "Anvisa, painel sobre a Butantan-DV (8/6)",
+     "url": "https://www.gov.br/anvisa/pt-br/assuntos/noticias-anvisa/2026/anvisa-tera-painel-de-especialistas-para-aprofundar-investigacao-epidemiologica-sobre-vacina-butantan-dv"
+    },
+    {
+     "nome": "Iran International, Rezaei foi a Moscou pedir o S-400 (6/11)",
+     "url": "https://www.iranintl.com/en/202611067881"
+    },
+    {
+     "nome": "Chatham House, A guerra aproxima o Irã da Rússia",
+     "url": "https://www.chathamhouse.org/2026/11/war-pushing-iran-closer-russia"
+    },
+    {
+     "nome": "Bytes Europe (Yonhap), Kim Song Nam em Pequim (7/11)",
+     "url": "https://www.byteseu.com/2503701/"
+    },
+    {
+     "nome": "NK News, Kim Song Nam em Pequim (4/11)",
+     "url": "https://www.nknews.org/2026/11/senior-north-korean-party-official-visits-china-on-heels-of-kim-jong-un-trip/"
+    },
+    {
+     "nome": "NK News, ogiva de fragmentação (1/11)",
+     "url": "https://www.nknews.org/2026/11/north-korea-tests-cluster-warhead-plans-military-use-by-end-of-2026/"
+    },
+    {
+     "nome": "Business Recorder (Reuters), 33 mortos perto de Sanaa (8/11)",
+     "url": "https://www.brecorder.com/news/40447990/houthi-run-health-ministry-says-airstrikes-kill-33-near-yemen-capital"
+    },
+    {
+     "nome": "FinanceFeeds (CNBC), fechamento do petróleo em 6/11",
+     "url": "https://financefeeds.com/brent-crude-oil-price-98-32-saturday-week-ahead-us-iran-deal-bets-cpi-10-november-bull-105-bear-93/"
+    },
+    {
+     "nome": "News4Jax (AP), petroleiros de diesel russo mudam de rota (5/11)",
+     "url": "https://www.news4jax.com/business/2026/11/05/tankers-carrying-russian-diesel-change-course-raising-doubts-about-shipments-to-us/"
+    },
+    {
+     "nome": "Rio Times, Big Read Brasil (8/11)",
+     "url": "https://www.riotimesonline.com/the-big-read-brazil-8-november-2026/"
+    },
+    {
+     "nome": "NOAA/CPC, discussão diagnóstica do ENSO",
+     "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml"
+    },
+    {
+     "nome": "Weatherzone, índice do BoM passa de +2 °C (3/8)",
+     "url": "https://www.weatherzone.com/au/news/very-strong-el-nino-threshold-reached-for-first-time-in-over-10-years/1891487"
+    },
+    {
+     "nome": "Turkish Minute, Lula na COP31 (31/10)",
+     "url": "https://www.turkishminute.com/2026/10/31/brazils-lula-to-attend-cop31-climate-summit-in-turkey/"
+    },
+    {
+     "nome": "Tech Times, Hera chega a Didymos (5/11)",
+     "url": "https://www.techtimes.com/articles/330121/20261105/esa-hera-reaches-asteroid-didymos-first-close-image-shows-side-dart-never-photographed.htm"
+    },
+    {
+     "nome": "ESA, Hera antecipa chegada a Didymos",
+     "url": "https://www.esa.int/Space_Safety/Hera/ESA_s_Hera_targets_early_arrival_at_Didymos_asteroids"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-07",
+   "numero": 3,
+   "data": "2026-11-07",
+   "tempoLeitura": 14,
+   "fechamento": "Fechamento: sábado, 7/11, 7h (Brasília). Substitui a versão da noite de 6/11.",
+   "ticker": [
+    {
+     "regiao": "Mundo",
+     "texto": "Trump confirma ataque \"pequeno\" a uma defesa antiaérea do Irã na ilha de Qeshm",
+     "url": "https://www.timesofisrael.com/liveblog-november-07-2026"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Guarda Revolucionária diz estar pronta para mudar a \"doutrina nuclear\" se o Estado mandar",
+     "url": "https://www.aljazeera.com/news/liveblog/2026/11/7/iran-war-live-qatar-says-us-iran-should-not-wait-to-reach-a-peace-deal"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "EUA oferecem até US$ 20 milhões por informações sobre o programa nuclear iraniano",
+     "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-strait-hormuz-persian-gulf/"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Telegraph: Irã negocia o sistema antiaéreo S-400 com a Rússia",
+     "url": "https://www.timesofisrael.com/liveblog_entry/iran-said-to-be-negotiating-with-russia-for-s-400-air-defense-system"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Catar pede a EUA e Irã um acordo \"bom\" em vez de um \"perfeito\"",
+     "url": "https://www.iranintl.com/en/202611065901"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Brent fecha a US$ 98,32 e perde mais de 16% na semana",
+     "url": "https://financefeeds.com/brent-crude-oil-price-98-32-saturday-week-ahead-us-iran-deal-bets-cpi-10-november-bull-105-bear-93/"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Mísseis russos atingem Kiev e ferem ao menos 5, três dias antes da rodada de Abu Dhabi",
+     "url": "https://www.arabtimesonline.com/news/missiles-target-kyiv-and-injure-5-as-ukraine-prepares-for-talks-with-russia-and-us/"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Kallas: a UE não vai aplicar acordo de paz do qual não participe",
+     "url": "https://www.anews.com.tr/europe/2026/11/06/eu-must-be-part-of-any-ukraine-peace-deal-for-it-to-be-implemented-kallas"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "China abre feira de importação em Xangai e diz que nunca buscou superávit",
+     "url": "https://www.radiotamazuj.org/en/news/article/china-touts-open-trade-as-record-surplus-shadows-shanghai-import-expo"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Japão anuncia pacote emergencial de cibersegurança após onda de ataques",
+     "url": "https://www.bloomberg.com/news/articles/2026-11-06/japan-pm-takaichi-announces-emergency-cybersecurity-package"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Sistema com modelo não público da Anthropic prova conjectura de computação quântica de 2008",
+     "url": "https://psi.inc/research/aaronson-ambainis/"
+    },
+    {
+     "regiao": "Brasil",
+     "texto": "TSE abre ação contra a chapa Lula–Alckmin a pedido do Novo; defesa tem cinco dias",
+     "url": "https://www.riotimesonline.com/the-big-read-brazil-7-november-2026/"
+    },
+    {
+     "regiao": "Brasil",
+     "texto": "Tornados em Chapecó e Xanxerê deixam dois mortos e cerca de 6.300 casas atingidas em SC",
+     "url": "https://www.riotimesonline.com/the-big-read-brazil-7-november-2026/"
+    },
+    {
+     "regiao": "Brasil",
+     "texto": "Lula vai às Filipinas e discursa na abertura da cúpula da Asean em 15/11",
+     "url": "https://chumbogrossomanaus.com.br/noticias/lula-vai-as-filipinas-buscando-estreitar-vinculo-com-bloco-asiatico/"
+    }
+   ],
+   "capa": {
+    "chapeu": "Guerra do Irã",
+    "titulo": "O tiro pequeno de Trump",
+    "linhaFina": "Na madrugada de 7/11, os EUA atingiram o que Trump chamou de \"um pouco de um dispositivo antiaéreo\" na ilha iraniana de Qeshm. Foi o primeiro ataque desde a derrota republicana nas midterms. A Guarda Revolucionária respondeu com uma ameaça nuclear em palavras, e o Catar insiste: melhor um acordo bom agora do que um perfeito nunca.",
+    "camada": "FATO",
+    "confianca": "Alta"
+   },
+   "chamadas": [
+    {
+     "secao": "potencias",
+     "rotulo": "Grandes potências",
+     "texto": "Ataque limitado ao Irã, Kiev sob mísseis e a China jura não querer superávit"
+    },
+    {
+     "secao": "ia",
+     "rotulo": "Evolução das IAs",
+     "texto": "Uma IA resolve problema de 18 anos; o Pentágono quer drones aos milhões"
+    },
+    {
+     "secao": "medicina",
+     "rotulo": "Medicina",
+     "texto": "Remédio de DNA aprovado nos EUA e mpox mais que dobra no Rio"
+    },
+    {
+     "secao": "russia-ira",
+     "rotulo": "Rússia–Irã",
+     "texto": "Teerã pede o S-400; Moscou ainda não respondeu"
+    },
+    {
+     "secao": "coreia",
+     "rotulo": "Coreia do Norte",
+     "texto": "Pyongyang olha para Pequim e para o Irã antes da APEC"
+    }
+   ],
+   "numeros": [
+    {
+     "rotulo": "Brent",
+     "valor": "US$ 98,32",
+     "nota": "fechamento de 6/11; +3 centavos no dia",
+     "fonte": "CNBC via FinanceFeeds"
+    },
+    {
+     "rotulo": "WTI",
+     "valor": "US$ 90,83",
+     "nota": "fechamento de 6/11; perto de −13% na semana",
+     "fonte": "CNBC via FinanceFeeds"
+    },
+    {
+     "rotulo": "Brent na semana",
+     "valor": "−16%",
+     "nota": "maior queda semanal desde 2020 (semana até 6/11)",
+     "fonte": "CNBC / Reuters"
+    },
+    {
+     "rotulo": "Ibovespa",
+     "valor": "168.498",
+     "nota": "+1,39%, último pregão até 6/11; dólar a R$ 5,50",
+     "fonte": "Rio Times"
+    },
+    {
+     "rotulo": "Recompensa dos EUA",
+     "valor": "US$ 20 mi",
+     "nota": "por dados do programa nuclear do Irã (anunciada 6/11)",
+     "fonte": "Rewards for Justice via CBS"
+    },
+    {
+     "rotulo": "Niño 3.4",
+     "valor": "+2,1 °C",
+     "nota": "anomalia no boletim de 8/10; o próximo sai em 12/11",
+     "fonte": "NOAA/CPC"
+    }
+   ],
+   "potencias": [
+    {
+     "pais": "EUA",
+     "sigla": "US",
+     "titulo": "Um ataque pequeno depois da derrota",
+     "texto": "Trump confirmou na madrugada de 7/11 um ataque \"menor\" a uma defesa antiaérea em Qeshm, o primeiro desde as midterms. Na véspera, o governo ofereceu US$ 20 milhões por informações sobre o programa nuclear iraniano e sancionou casas de câmbio de rial, em ação coordenada com o Canadá.",
+     "camada": "FATO",
+     "confianca": "Alta",
+     "fontes": [
+      {
+       "nome": "Times of Israel, ao vivo de 7/11",
+       "url": "https://www.timesofisrael.com/liveblog-november-07-2026"
+      },
+      {
+       "nome": "CBS News, ao vivo sobre a guerra do Irã",
+       "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-strait-hormuz-persian-gulf/"
+      }
+     ]
+    },
+    {
+     "pais": "China",
+     "sigla": "CN",
+     "titulo": "Pequim promete importar mais",
+     "texto": "Na abertura da feira de importação de Xangai (5 a 10/11), o vice-premiê Ding Xuexiang disse que a China \"nunca buscou deliberadamente\" superávit e que sua tarifa média caiu para 7,3%. O superávit comercial chinês foi recorde em 2025, cerca de US$ 1,2 trilhão, e deve ser maior em 2026.",
+     "camada": "FATO",
+     "confianca": "Alta",
+     "fontes": [
+      {
+       "nome": "Radio Tamazuj (Reuters), feira de importação de Xangai (6/11)",
+       "url": "https://www.radiotamazuj.org/en/news/article/china-touts-open-trade-as-record-surplus-shadows-shanghai-import-expo"
+      }
+     ]
+    },
+    {
+     "pais": "Rússia",
+     "sigla": "RU",
+     "titulo": "Mísseis em Kiev antes da mesa",
+     "texto": "Mísseis russos atingiram Kiev na madrugada de 7/11, ferindo ao menos cinco pessoas e cortando luz e água, segundo a AP. Na terça (10/11), russos, ucranianos e americanos voltam a negociar em Abu Dhabi, na quarta rodada mediada por Washington. Moscou não comentou o ataque até o fechamento.",
+     "camada": "FATO",
+     "confianca": "Alta",
+     "fontes": [
+      {
+       "nome": "Arab Times (AP), mísseis em Kiev (7/11)",
+       "url": "https://www.arabtimesonline.com/news/missiles-target-kyiv-and-injure-5-as-ukraine-prepares-for-talks-with-russia-and-us/"
+      }
+     ]
+    },
+    {
+     "pais": "União Europeia",
+     "sigla": "EU",
+     "titulo": "Kallas exige lugar na mesa",
+     "texto": "A chefe da diplomacia europeia, Kaja Kallas, disse em 6/11 que a UE não aplicará nenhum acordo de paz do qual não participe, porque controla as sanções e os ativos russos congelados. \"Não somos mediadores. Estamos do lado ucraniano\", afirmou. A UE liberou mais € 4,36 bilhões a Kiev na semana.",
+     "camada": "FATO",
+     "confianca": "Alta",
+     "fontes": [
+      {
+       "nome": "Anadolu via aNews, Kallas sobre a paz na Ucrânia (6/11)",
+       "url": "https://www.anews.com.tr/europe/2026/11/06/eu-must-be-part-of-any-ukraine-peace-deal-for-it-to-be-implemented-kallas"
+      }
+     ]
+    },
+    {
+     "pais": "Índia",
+     "sigla": "IN",
+     "titulo": "A briga do etanol na gasolina",
+     "texto": "Rahul Gandhi, líder da oposição, acusou em 7/11 o governo Modi de vender gasolina com mais de 20% de etanol, citando testes do estado de Karnataka (até 31%). As petroleiras estatais contestam o método e dizem cumprir a norma, que permite de 19% a 21%. A mistura existe para cortar importações de petróleo.",
+     "camada": "FATO",
+     "confianca": "Média",
+     "fontes": [
+      {
+       "nome": "Business Standard, polêmica do E20 (7/11)",
+       "url": "https://www.business-standard.com/india-news/rahul-questions-e20-petrol-ethanol-levels-cites-karnataka-test-results-126110700329_1.html"
+      }
+     ]
+    },
+    {
+     "pais": "Japão",
+     "sigla": "JP",
+     "titulo": "Defesa digital de emergência",
+     "texto": "A primeira-ministra Sanae Takaichi anunciou em 6/11 um pacote emergencial de cibersegurança depois de uma onda de ataques a sistemas japoneses. No mesmo dia, a imprensa japonesa notou que, um ano depois da fala de Takaichi sobre Taiwan, a relação com a China segue congelada.",
+     "camada": "FATO",
+     "confianca": "Média",
+     "fontes": [
+      {
+       "nome": "Bloomberg, pacote emergencial de cibersegurança (6/11)",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-06/japan-pm-takaichi-announces-emergency-cybersecurity-package"
+      },
+      {
+       "nome": "Japan Times, um ano depois da fala sobre Taiwan (6/11)",
+       "url": "https://www.japantimes.co.jp/news/2026/11/06/japan/politics/takaichi-taiwan-remarks-anniversary/"
+      }
+     ]
+    },
+    {
+     "pais": "Reino Unido",
+     "sigla": "UK",
+     "titulo": "Burnham alivia a conta de energia",
+     "texto": "O orçamento do governo do primeiro-ministro Andy Burnham, apresentado na semana passada, prorrogou o corte de 5 pence no imposto sobre combustível e o IVA zero na eletricidade residencial até junho de 2027, e elevou o salário mínimo para £ 13,21 por hora. A guerra do Irã está por trás da pressão nas contas.",
+     "camada": "FATO",
+     "confianca": "Média",
+     "fontes": [
+      {
+       "nome": "Westminster Report, Chris Kane MP (2/11)",
+       "url": "https://chriskanemp.substack.com/p/westminster-report-2-november-2026"
+      }
+     ]
+    }
+   ],
+   "ia": {
+    "abertura": "A IA em quatro frentes. Aviso de transparência: esta revista é escrita com o Claude, modelo da Anthropic, citada duas vezes abaixo. Nesses casos, usamos o relato de terceiros e apontamos o que não foi verificado de forma independente.",
+    "frentes": [
+     {
+      "area": "Científica",
+      "itens": [
+       {
+        "titulo": "Uma IA fecha um problema aberto desde 2008",
+        "texto": "A empresa PSI anunciou em 6/11 que seu sistema, rodando um modelo não público da Anthropic, provou a conjectura de Aaronson-Ambainis, sobre quanto um computador quântico pode ser mais rápido que um comum em entradas aleatórias. A prova foi checada no Lean, programa que verifica matemática passo a passo. Ainda não houve revisão por pares.",
+        "camada": "FATO",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "PSI, prova da conjectura de Aaronson-Ambainis (6/11)",
+          "url": "https://psi.inc/research/aaronson-ambainis/"
+         }
+        ]
+       },
+       {
+        "titulo": "A energia que a IA consome",
+        "texto": "O Google anunciou em 5/11 um campus de IA de US$ 17 bilhões em Wyoming, alimentado por 702 MW de células a combustível a gás, com captura de carbono. É o retrato da corrida: os modelos crescem, e a disputa passa a ser por eletricidade.",
+        "camada": "FATO",
+        "confianca": "Alta",
+        "fontes": [
+         {
+          "nome": "Google, campus de IA em Wyoming (5/11)",
+          "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/wyoming-data-center/"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Militar",
+      "itens": [
+       {
+        "titulo": "Drones aos milhões",
+        "texto": "O secretário Pete Hegseth propôs um Comando de Guerra Autônoma e um programa de US$ 53,6 bilhões para drones e defesa antidrone no orçamento de 2027. A meta é passar de milhares a \"centenas de milhares\" de sistemas. O Congresso ainda precisa autorizar o comando e o dinheiro.",
+        "camada": "FATO",
+        "confianca": "Alta",
+        "fontes": [
+         {
+          "nome": "Arms Control Today, comando de guerra autônoma (nov/26)",
+          "url": "https://www.armscontrol.org/act/2026-11/news/dod-seeks-autonomous-warfare-command"
+         },
+         {
+          "nome": "ExecutiveGov, US$ 50 bi para armas autônomas (15/10)",
+          "url": "https://www.executivegov.com/articles/pentagon-funding-autonomous-weapons-hegseth-50-billion"
+         }
+        ]
+       },
+       {
+        "titulo": "Menos regras para armas autônomas",
+        "texto": "Em setembro, EUA e Rússia trabalharam juntos em Genebra para retirar de um texto da ONU a exigência de que um humano aprove alvos escolhidos por algoritmos, segundo o Washington Post. Rivais em quase tudo, as duas potências concordam em não se amarrar.",
+        "camada": "ANÁLISE",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "Ynet (Washington Post), EUA e Rússia na ONU (28/9)",
+          "url": "https://www.ynetnews.com/tech-and-digital/article/bjmhhhpqzg"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Médica",
+      "itens": [
+       {
+        "titulo": "Resumo de alta escrito por IA",
+        "texto": "Num estudo da Stony Brook com 60 internações, médicos preferiram o resumo de alta feito pela IA em 95% dos casos, achando-o mais completo e legível. É uma amostra pequena e mede preferência, não desfecho do paciente.",
+        "camada": "FATO",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "CEI, semana da política de saúde (31/10 a 6/11)",
+          "url": "https://cei.org/blog/this-week-in-health-care-policy-october-31-november-6-2026"
+         }
+        ]
+       },
+       {
+        "titulo": "Uma tomografia que acha o que não se procurou",
+        "texto": "O modelo Percival, da Penn Medicine, treinado com mais de 400 mil imagens de 52 mil pacientes, aponta doenças que o exame não buscava, como fibrilação atrial e doença renal. Os testes clínicos estão previstos para o início de 2027.",
+        "camada": "FATO",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "CEI, semana da política de saúde (31/10 a 6/11)",
+          "url": "https://cei.org/blog/this-week-in-health-care-policy-october-31-november-6-2026"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Acadêmica",
+      "itens": [
+       {
+        "titulo": "O reitor que alertava sobre a cola",
+        "texto": "Santiago Schnell deixou o cargo de provost (vice-reitor acadêmico) de Dartmouth na semana de 2/11. Um comitê concluiu que ele não declarou uso significativo de IA, incluindo o Claude, num artigo de opinião e num trabalho acadêmico, apesar de as regras exigirem. A reportagem original é da Ars Technica.",
+        "camada": "FATO",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "Breitbart (Ars Technica), reitor de Dartmouth renuncia (2/11)",
+          "url": "https://breitbart.com/tech/2026/11/02/dartmouth-provost-who-warned-about-ai-cheating-resigns-after-investigation-of-his-own-ai-usage"
+         }
+        ]
+       },
+       {
+        "titulo": "A lição: declarar é a regra",
+        "texto": "O caso mostra que o problema não é usar IA, mas esconder o uso. Para quem estuda, vale a regra das revistas científicas: diga o que a ferramenta fez e confira tudo nas fontes originais.",
+        "camada": "ANÁLISE",
+        "confianca": "Alta",
+        "fontes": [
+         {
+          "nome": "Breitbart (Ars Technica), reitor de Dartmouth renuncia (2/11)",
+          "url": "https://breitbart.com/tech/2026/11/02/dartmouth-provost-who-warned-about-ai-cheating-resigns-after-investigation-of-his-own-ai-usage"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "glossario": [
+     {
+      "termo": "Conjectura",
+      "def": "Afirmação matemática que se acredita verdadeira, mas ainda não foi provada."
+     },
+     {
+      "termo": "Lean",
+      "def": "Assistente de provas: programa que confere cada passo de uma demonstração matemática."
+     },
+     {
+      "termo": "Célula a combustível",
+      "def": "Equipamento que gera eletricidade por reação química, sem combustão, aqui usando gás natural."
+     },
+     {
+      "termo": "Arma autônoma",
+      "def": "Sistema que escolhe e ataca alvos sem que um humano aprove cada disparo."
+     }
+    ]
+   },
+   "medicina": {
+    "abertura": "Saúde em quatro frentes. Nada aqui é orientação médica individual: decisões de tratamento são com o seu médico.",
+    "frentes": [
+     {
+      "area": "Pesquisa clínica",
+      "itens": [
+       {
+        "titulo": "Sedação inalada na UTI não reduziu mortes",
+        "texto": "O ensaio randomizado SAVE-ICU, publicado no JAMA em 14/10, comparou isoflurano inalado com sedação venosa em 786 pacientes em ventilação mecânica, em 14 UTIs do Canadá. A mortalidade foi de 42,5% contra 43,8%, sem diferença real. Limitações: estudo aberto (todos sabiam o tratamento) e metade do grupo inalado também recebeu sedação venosa.",
+        "camada": "FATO",
+        "confianca": "Alta",
+        "fontes": [
+         {
+          "nome": "JAMA, ensaio SAVE-ICU (14/10)",
+          "url": "https://jamanetwork.com/journals/jama/fullarticle/10.1001/jama.2026.18471"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Aprovações",
+      "itens": [
+       {
+        "titulo": "Primeiro remédio de DNA aprovado pela FDA",
+        "texto": "A FDA deu aprovação acelerada ao Voceryq, da Inovio, uma imunoterapia de DNA contra a papilomatose respiratória recorrente, doença rara ligada ao HPV. No estudo, com 32 adultos, 27% dos avaliados ficaram 12 meses sem cirurgia. A amostra é pequena e a aprovação depende de um estudo confirmatório.",
+        "camada": "FATO",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "MyChesCo, FDA aprova Voceryq (7/11)",
+          "url": "https://www.mychesco.com/a/news/regional/icymi-fda-approves-inovios-first-dna-medicine-for-rare-disease/"
+         }
+        ]
+       },
+       {
+        "titulo": "Ozempic e Wegovy com preço negociado nos EUA",
+        "texto": "A partir de 1/1/2027, 15 remédios do Medicare, incluindo Ozempic e Wegovy, passam a ter preço negociado pelo governo. A estimativa oficial é poupar US$ 685 milhões aos pacientes em 2027.",
+        "camada": "FATO",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "CEI, semana da política de saúde (31/10 a 6/11)",
+          "url": "https://cei.org/blog/this-week-in-health-care-policy-october-31-november-6-2026"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Surtos e saúde global",
+      "itens": [
+       {
+        "titulo": "Ebola sem vacina específica",
+        "texto": "O dado mais recente do ECDC (3/11) segue sendo o de referência: 10.532 casos confirmados e 5.126 mortes na RDC até 2/11, pela espécie Bundibugyo, que não tem vacina aprovada. Ensaios de vacinas estão em andamento. O risco para fora da África segue muito baixo.",
+        "camada": "FATO",
+        "confianca": "Alta",
+        "fontes": [
+         {
+          "nome": "ECDC, ebola Bundibugyo (3/11)",
+          "url": "https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00026/2026-11-03"
+         },
+         {
+          "nome": "OMS, surto de ebola na RDC",
+          "url": "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Brasil e SUS",
+      "itens": [
+       {
+        "titulo": "Mpox mais que dobra no Rio",
+        "texto": "O estado do Rio confirmou 269 casos de mpox de janeiro a 3/11, contra 119 em todo o 2025, sem mortes. A vacina está no SUS para grupos específicos, e a secretaria estadual diz que ampliar a vacinação cabe ao Ministério da Saúde.",
+        "camada": "FATO",
+        "confianca": "Alta",
+        "fontes": [
+         {
+          "nome": "O Liberal, mpox no Rio (4/11)",
+          "url": "https://www.oliberal.com/variedades/mpox-rio-de-janeiro-ja-tem-mais-que-o-dobro-dos-casos-registrados-em-2025-1.1190077"
+         }
+        ]
+       },
+       {
+        "titulo": "Dengue e clima vão à COP31",
+        "texto": "O ministro Alexandre Padilha levará à COP31, na Turquia (9 a 20/11), os dados do SUS sobre clima e saúde. O ministério projeta alta de 20% a 40% da dengue em 2027 por causa do El Niño.",
+        "camada": "FATO",
+        "confianca": "Alta",
+        "fontes": [
+         {
+          "nome": "Estado de Minas, Saúde projeta alta da dengue (4/11)",
+          "url": "https://www.em.com.br/bem-viver/2026/11/7533219-ministerio-da-saude-projeta-alta-da-dengue-em-2027.html"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "glossario": [
+     {
+      "termo": "Ensaio randomizado",
+      "def": "Estudo que sorteia quem recebe cada tratamento, para comparar de forma justa."
+     },
+     {
+      "termo": "Estudo aberto",
+      "def": "Ensaio em que médicos e pacientes sabem qual tratamento foi dado, o que pode enviesar resultados."
+     },
+     {
+      "termo": "Imunoterapia de DNA",
+      "def": "Tratamento que entrega um pedaço de DNA para o corpo produzir proteínas que treinam o sistema imune."
+     },
+     {
+      "termo": "Mpox",
+      "def": "Doença viral, antes chamada varíola dos macacos, que causa lesões na pele e febre."
+     }
+    ]
+   },
+   "russiaIra": {
+    "titulo": "O pedido do S-400",
+    "linhaFina": "Depois da carta a Putin, Teerã quer a arma antiaérea mais cobiçada da Rússia. Moscou cala.",
+    "itens": [
+     {
+      "titulo": "Teerã negocia o S-400",
+      "texto": "O jornal britânico Telegraph relatou em 6/11, citando um funcionário iraniano anônimo, que o Irã negocia o sistema antiaéreo S-400 (nome OTAN: SA-21 Growler) e está \"otimista\" com a aprovação de Putin. O pedido viria na carta de Mojtaba Khamenei entregue por Mohsen Rezaei em 5/11. O Kremlin não comentou.",
+      "camada": "FATO",
+      "confianca": "Baixa",
+      "fontes": [
+       {
+        "nome": "Times of Israel (Telegraph), Irã negocia S-400 (7/11)",
+        "url": "https://www.timesofisrael.com/liveblog_entry/iran-said-to-be-negotiating-with-russia-for-s-400-air-defense-system"
+       },
+       {
+        "nome": "Al Jazeera, Rezaei com Putin (6/11)",
+        "url": "https://www.aljazeera.com/news/2026/11/6/irans-security-chief-meets-putin-delivers-message-from-khamenei"
+       }
+      ]
+     },
+     {
+      "titulo": "A prova de que falta defesa aérea",
+      "texto": "Horas depois, os EUA atingiram uma defesa antiaérea iraniana em Qeshm, e a Guarda Revolucionária alegou ter derrubado um drone americano MQ-1 na mesma ilha em 6/11, sem confirmação dos EUA. Os dois fatos mostram por que Teerã insiste em armas russas.",
+      "camada": "FATO",
+      "confianca": "Média",
+      "fontes": [
+       {
+        "nome": "Times of Israel, ao vivo de 7/11",
+        "url": "https://www.timesofisrael.com/liveblog-november-07-2026"
+       },
+       {
+        "nome": "CBS News, ao vivo sobre a guerra do Irã",
+        "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-strait-hormuz-persian-gulf/"
+       }
+      ]
+     },
+     {
+      "titulo": "Por que Moscou hesita",
+      "texto": "Entregar o S-400 em plena guerra exporia a tecnologia a ataques americanos e israelenses, irritaria Israel e os países do Golfo, e tiraria baterias da frente ucraniana. A Rússia prefere vender armas menores, como os 90 lançadores revelados pelo FT em 5/11, e manter a imagem de mediadora.",
+      "camada": "ANÁLISE",
+      "confianca": "Média",
+      "fontes": [
+       {
+        "nome": "Al-Monitor, lançadores russos para o Irã (5/11)",
+        "url": "https://www.al-monitor.com/originals/2026/11/russia-provide-iran-90-missile-launchers-military-ties-grow-reports"
+       },
+       {
+        "nome": "Chatham House, A guerra aproxima o Irã da Rússia",
+        "url": "https://www.chathamhouse.org/2026/11/war-pushing-iran-closer-russia"
+       }
+      ]
+     },
+     {
+      "titulo": "Seis meses à frente",
+      "texto": "Estimativa do Observatório: 15% de chance de entrega de S-400 ao Irã nos próximos seis meses; 60% de a Rússia continuar só com armas de curto alcance e diplomacia. O peso maior vai para a hesitação, porque o Su-35 comprado também foi adiado para depois da guerra.",
+      "camada": "CENÁRIO",
+      "confianca": "Baixa",
+      "fontes": [
+       {
+        "nome": "Times of Israel (Telegraph), Irã negocia S-400 (7/11)",
+        "url": "https://www.timesofisrael.com/liveblog_entry/iran-said-to-be-negotiating-with-russia-for-s-400-air-defense-system"
+       },
+       {
+        "nome": "Al Jazeera, Rezaei com Putin (6/11)",
+        "url": "https://www.aljazeera.com/news/2026/11/6/irans-security-chief-meets-putin-delivers-message-from-khamenei"
+       }
+      ]
+     }
+    ],
+    "box": {
+     "titulo": "Placar da parceria",
+     "linhas": [
+      {
+       "area": "Armas",
+       "texto": "Pedido de S-400 (Telegraph, 6/11). Lançadores APU-L/LMUR (FT, 5/11). Su-35 com entrega após a guerra."
+      },
+      {
+       "area": "Drones",
+       "texto": "O Shahed-136 iraniano virou o Geran-2 russo, hoje feito na própria Rússia."
+      },
+      {
+       "area": "Energia",
+       "texto": "Gasoduto Rússia–Irã discutido no Kremlin em 5/11."
+      },
+      {
+       "area": "Nuclear",
+       "texto": "A Guarda Revolucionária diz estar pronta para mudar a \"doutrina nuclear\" se o Estado mandar (7/11). A Rússia ofereceu guardar urânio iraniano num eventual acordo."
+      },
+      {
+       "area": "Sanções",
+       "texto": "Novas sanções dos EUA a casas de câmbio de rial (6/11), em coordenação com o Canadá."
+      }
+     ]
+    }
+   },
+   "coreiaNorte": {
+    "titulo": "Pyongyang olha para Pequim",
+    "linhaFina": "Testes, diplomacia com a China e um olho no que acontece com o Irã.",
+    "itens": [
+     {
+      "titulo": "Um emissário em Pequim",
+      "texto": "Kim Song Nam, chefe do Departamento Internacional do Partido dos Trabalhadores, chegou a Pequim em 3/11 a convite do Partido Comunista Chinês, segundo a KCNA. Dez dias antes, ele acompanhou Kim Jong-un a Dandong, cidade chinesa da fronteira. Um especialista ouvido pelo NK News acha que a pauta inclui a APEC.",
+      "camada": "FATO",
+      "confianca": "Alta",
+      "fontes": [
+       {
+        "nome": "NK News, Kim Song Nam em Pequim (4/11)",
+        "url": "https://www.nknews.org/2026/11/senior-north-korean-party-official-visits-china-on-heels-of-kim-jong-un-trip/"
+       }
+      ]
+     },
+     {
+      "titulo": "Novo míssil antiaéreo, segundo a KCNA",
+      "texto": "A agência estatal KCNA (versão oficial) disse que o país testou um novo sistema de mísseis antiaéreos e fez um exercício com mísseis de cruzeiro. Seul registrou em 4/11 vários mísseis lançados de Sondok rumo ao Mar do Leste, o quarto lançamento em uma semana.",
+      "camada": "FATO",
+      "confianca": "Média",
+      "fontes": [
+       {
+        "nome": "NBC News, teste de míssil antiaéreo (KCNA)",
+        "url": "https://www.nbcnews.com/world/asia/north-korea-says-tested-air-defense-missile-cruise-missile-drill-rcna607583"
+       },
+       {
+        "nome": "NK News, mísseis de Sondok (4/11)",
+        "url": "https://www.nknews.org/2026/11/north-korea-fires-unidentified-projectile-east-toward-sea-south-korean-military/"
+       }
+      ]
+     },
+     {
+      "titulo": "A lição que Pyongyang tira do Irã",
+      "texto": "Para o regime norte-coreano, o Irã, sem bomba atômica, é atacado de novo, enquanto a Coreia do Norte, com bomba, é cortejada. A leitura reforça a recusa a desnuclearizar, como Kim Yo-jong repetiu em 4/11, e explica o investimento em defesa antiaérea.",
+      "camada": "ANÁLISE",
+      "confianca": "Média",
+      "fontes": [
+       {
+        "nome": "Arab News Japan, Kim Yo-jong via KCNA (4/11)",
+        "url": "https://www.arabnews.jp/en/japan/north-korea-warns-of-stronger-response-to-us-hostility-kcna-3001276"
+       },
+       {
+        "nome": "Times of Israel, ao vivo de 7/11",
+        "url": "https://www.timesofisrael.com/liveblog-november-07-2026"
+       }
+      ]
+     },
+     {
+      "titulo": "Antes da APEC",
+      "texto": "Estimativa do Observatório: 70% de chance de novo lançamento de míssil antes da cúpula da APEC (18 e 19/11), dado o ritmo de quatro em uma semana. Encontro Trump–Kim em 2026: 10%.",
+      "camada": "CENÁRIO",
+      "confianca": "Baixa",
+      "fontes": [
+       {
+        "nome": "NK News, mísseis de Sondok (4/11)",
+        "url": "https://www.nknews.org/2026/11/north-korea-fires-unidentified-projectile-east-toward-sea-south-korean-military/"
+       },
+       {
+        "nome": "Arab News Japan, Kim Yo-jong via KCNA (4/11)",
+        "url": "https://www.arabnews.jp/en/japan/north-korea-warns-of-stronger-response-to-us-hostility-kcna-3001276"
+       }
+      ]
+     }
+    ],
+    "box": {
+     "titulo": "Termômetro da península",
+     "linhas": [
+      {
+       "area": "Mísseis",
+       "texto": "17 lançamentos de mísseis balísticos de curto alcance em 2026 até 29/10, segundo Seul, Washington e Tóquio."
+      },
+      {
+       "area": "China",
+       "texto": "Kim Jong-un em Dandong e Kim Song Nam em Pequim: o canal com a China está ativo."
+      },
+      {
+       "area": "EUA",
+       "texto": "Diálogo é \"opção, não necessidade\", disse Kim Yo-jong (4/11)."
+      },
+      {
+       "area": "Rússia",
+       "texto": "O tratado de 2024 tem cláusula de assistência mútua. Soldados norte-coreanos lutaram por Moscou em Kursk."
+      }
+     ]
+    }
+   },
+   "secoes": [
+    {
+     "eixo": "Guerras",
+     "itens": [
+      {
+       "titulo": "Ataque limitado, mensagem calibrada",
+       "texto": "Agências iranianas relataram duas explosões na área de Suza, em Qeshm, na madrugada de 7/11. Trump disse que os EUA derrubaram \"um pouco de um dispositivo antiaéreo\". O Catar pediu um acordo \"bom\", e a Guarda Revolucionária alegou que dois petroleiros bateram em minas em 6/11, sem confirmação.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "Times of Israel, ao vivo de 7/11",
+         "url": "https://www.timesofisrael.com/liveblog-november-07-2026"
+        },
+        {
+         "nome": "Iran International, Catar pede acordo \"bom\" (6/11)",
+         "url": "https://www.iranintl.com/en/202611065901"
+        },
+        {
+         "nome": "CBS News, ao vivo sobre a guerra do Irã",
+         "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-strait-hormuz-persian-gulf/"
+        }
+       ]
+      },
+      {
+       "titulo": "Ucrânia: a semana mais dura antes da mesa",
+       "texto": "Além do ataque a Kiev (7/11), bombas guiadas russas mataram 55 pessoas numa antiga escola em Komyshuvakha, Zaporíjia, em 2/11, segundo autoridades ucranianas citadas pela AP. Moscou não comentou. Kallas fala em ao menos 45 civis mortos na semana.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "Arab Times (AP), mísseis em Kiev (7/11)",
+         "url": "https://www.arabtimesonline.com/news/missiles-target-kyiv-and-injure-5-as-ukraine-prepares-for-talks-with-russia-and-us/"
+        },
+        {
+         "nome": "Anadolu via aNews, Kallas sobre a paz na Ucrânia (6/11)",
+         "url": "https://www.anews.com.tr/europe/2026/11/06/eu-must-be-part-of-any-ukraine-peace-deal-for-it-to-be-implemented-kallas"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Energia",
+     "itens": [
+      {
+       "titulo": "A semana em que o petróleo desabou",
+       "texto": "O Brent fechou 6/11 a US$ 98,32 e o WTI a US$ 90,83, com queda semanal de mais de 16% e quase 13%. Na agenda: inflação dos EUA e projeção da EIA em 10/11, relatório da OPEP em 11/11 e reunião da OPEP+ em 29/11.",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "FinanceFeeds (CNBC), fechamento do petróleo em 6/11",
+         "url": "https://financefeeds.com/brent-crude-oil-price-98-32-saturday-week-ahead-us-iran-deal-bets-cpi-10-november-bull-105-bear-93/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Brasil",
+     "itens": [
+      {
+       "titulo": "TSE investiga a chapa Lula–Alckmin",
+       "texto": "O TSE abriu em 5/11 ação do partido Novo contra 35 atos do governo, como subsídios a combustíveis, que teriam sido abuso de poder na eleição. O Novo pede a cassação e oito anos de inelegibilidade. Não há prazo para julgamento, e os dois são presumidos inocentes.",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "Rio Times, Big Read Brasil (7/11)",
+         "url": "https://www.riotimesonline.com/the-big-read-brazil-7-november-2026/"
+        }
+       ]
+      },
+      {
+       "titulo": "Tornados no oeste catarinense",
+       "texto": "Temporais em 4/11 mataram duas pessoas em Santa Catarina. A Defesa Civil confirmou tornados em Chapecó e Xanxerê, e o Inmet registrou rajadas de 126 km/h. Cerca de 6.300 casas foram atingidas.",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "Rio Times, Big Read Brasil (7/11)",
+         "url": "https://www.riotimesonline.com/the-big-read-brazil-7-november-2026/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Clima",
+     "itens": [
+      {
+       "titulo": "Um El Niño que pode ser histórico",
+       "texto": "No último boletim (8/10), a NOAA deu mais de 83% de chance de El Niño forte a muito forte até o início de 2027 e 83% de chance de ser o maior desde 1950 em outubro a dezembro. No Sul do Brasil, isso costuma significar mais chuva e temporais. O próximo boletim sai em 12/11.",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "NOAA/CPC, discussão diagnóstica do ENSO (8/10)",
+         "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Espaço",
+     "itens": [
+      {
+       "titulo": "Missão secreta da Força Espacial",
+       "texto": "Um Falcon 9 lançou a missão USSF-432 de Vandenberg, na Califórnia, às 21h48 de Brasília de 6/11. A carga não foi divulgada; observadores apostam em satélites militares de baixa órbita. Defesa planetária: sem alerta novo da NASA/CNEOS ou da ESA/NEOCC verificado nesta edição.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "Space.com, lançamento do USSF-432 (6/11)",
+         "url": "https://www.space.com/space-exploration/launches-spacecraft/spacex-launches-classified-mission-space-force-ussf-432"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "analise": {
+    "titulo": "A diplomacia da violência",
+    "texto": [
+     "Em 1966, o economista Thomas Schelling escreveu em Arms and Influence que a força limitada é uma forma de falar: o que importa não é o dano causado, mas o dano que se ameaça causar depois. O ataque \"pequeno\" de Trump a Qeshm segue essa gramática. Um alvo militar, poucos mísseis, nenhuma vítima anunciada: é um recado para a mesa de negociação. Clausewitz diria o mesmo de outro modo: a guerra é a continuação da política por outros meios.",
+     "A história tem um precedente próximo. Em abril de 1988, a Operação Praying Mantis afundou navios iranianos no Golfo, e o Irã aceitou o cessar-fogo com o Iraque três meses depois. A analogia falha em dois pontos. Em 1988, o Irã estava exausto após oito anos de guerra; hoje tem novo Líder Supremo, que precisa provar firmeza. E o recado de força chega de um presidente que acabou de perder o Congresso, o que pode ser lido em Teerã como fraqueza, não como determinação."
+    ]
+   },
+   "ler": [
+    {
+     "tipo": "Livro",
+     "titulo": "Da Guerra",
+     "autor": "Carl von Clausewitz",
+     "nivel": "★★★",
+     "porque": "Leia o Livro I, capítulo 1, sobre a guerra como instrumento da política. É a base para entender ataques limitados como o de Qeshm."
+    },
+    {
+     "tipo": "Livro",
+     "titulo": "Diplomacia",
+     "autor": "Henry Kissinger",
+     "nivel": "★★",
+     "porque": "Os capítulos sobre a Guerra Fria mostram como força e negociação andam juntas. Compare com a pressão de Trump sobre o Irã."
+    },
+    {
+     "tipo": "Relatório",
+     "titulo": "The war is pushing Iran closer to Russia",
+     "autor": "Chatham House",
+     "nivel": "★★",
+     "porque": "Ajuda a entender por que a Rússia vende armas ao Irã, mas hesita em mandar as mais avançadas, como o S-400.",
+     "url": "https://www.chathamhouse.org/2026/11/war-pushing-iran-closer-russia"
+    }
+   ],
+   "pensar": [
+    "Um ataque pequeno pode evitar uma guerra grande, ou só a adia? Schelling e Clausewitz responderiam de forma diferente?",
+    "Se a Coreia do Norte conclui que só a bomba garante segurança, o que isso diz sobre o futuro do Tratado de Não Proliferação?"
+   ],
+   "acompanhar": [
+    {
+     "quando": "9/11",
+     "oque": "Possível retomada de ataques maiores dos EUA ao Irã (relato do Haaretz, não confirmado)"
+    },
+    {
+     "quando": "9–20/11",
+     "oque": "COP31 em Antália, na Turquia, com Lula e o ministro Padilha"
+    },
+    {
+     "quando": "10/11",
+     "oque": "Rodada Rússia–Ucrânia–EUA em Abu Dhabi; inflação dos EUA; G7 de chanceleres em Paris (10–11/11)"
+    },
+    {
+     "quando": "12/11",
+     "oque": "Boletim mensal do ENSO da NOAA"
+    },
+    {
+     "quando": "15/11",
+     "oque": "Lula discursa na abertura da cúpula da Asean, em Manila"
+    },
+    {
+     "quando": "18–19/11",
+     "oque": "Cúpula da APEC em Shenzhen"
+    }
+   ],
+   "fontes": [
+    {
+     "nome": "Times of Israel, ao vivo de 7/11",
+     "url": "https://www.timesofisrael.com/liveblog-november-07-2026"
+    },
+    {
+     "nome": "CBS News, ao vivo sobre a guerra do Irã",
+     "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-strait-hormuz-persian-gulf/"
+    },
+    {
+     "nome": "Radio Tamazuj (Reuters), feira de importação de Xangai (6/11)",
+     "url": "https://www.radiotamazuj.org/en/news/article/china-touts-open-trade-as-record-surplus-shadows-shanghai-import-expo"
+    },
+    {
+     "nome": "Arab Times (AP), mísseis em Kiev (7/11)",
+     "url": "https://www.arabtimesonline.com/news/missiles-target-kyiv-and-injure-5-as-ukraine-prepares-for-talks-with-russia-and-us/"
+    },
+    {
+     "nome": "Anadolu via aNews, Kallas sobre a paz na Ucrânia (6/11)",
+     "url": "https://www.anews.com.tr/europe/2026/11/06/eu-must-be-part-of-any-ukraine-peace-deal-for-it-to-be-implemented-kallas"
+    },
+    {
+     "nome": "Business Standard, polêmica do E20 (7/11)",
+     "url": "https://www.business-standard.com/india-news/rahul-questions-e20-petrol-ethanol-levels-cites-karnataka-test-results-126110700329_1.html"
+    },
+    {
+     "nome": "Bloomberg, pacote emergencial de cibersegurança (6/11)",
+     "url": "https://www.bloomberg.com/news/articles/2026-11-06/japan-pm-takaichi-announces-emergency-cybersecurity-package"
+    },
+    {
+     "nome": "Japan Times, um ano depois da fala sobre Taiwan (6/11)",
+     "url": "https://www.japantimes.co.jp/news/2026/11/06/japan/politics/takaichi-taiwan-remarks-anniversary/"
+    },
+    {
+     "nome": "Westminster Report, Chris Kane MP (2/11)",
+     "url": "https://chriskanemp.substack.com/p/westminster-report-2-november-2026"
+    },
+    {
+     "nome": "PSI, prova da conjectura de Aaronson-Ambainis (6/11)",
+     "url": "https://psi.inc/research/aaronson-ambainis/"
+    },
+    {
+     "nome": "Google, campus de IA em Wyoming (5/11)",
+     "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/wyoming-data-center/"
+    },
+    {
+     "nome": "Arms Control Today, comando de guerra autônoma (nov/26)",
+     "url": "https://www.armscontrol.org/act/2026-11/news/dod-seeks-autonomous-warfare-command"
+    },
+    {
+     "nome": "ExecutiveGov, US$ 50 bi para armas autônomas (15/10)",
+     "url": "https://www.executivegov.com/articles/pentagon-funding-autonomous-weapons-hegseth-50-billion"
+    },
+    {
+     "nome": "Ynet (Washington Post), EUA e Rússia na ONU (28/9)",
+     "url": "https://www.ynetnews.com/tech-and-digital/article/bjmhhhpqzg"
+    },
+    {
+     "nome": "CEI, semana da política de saúde (31/10 a 6/11)",
+     "url": "https://cei.org/blog/this-week-in-health-care-policy-october-31-november-6-2026"
+    },
+    {
+     "nome": "Breitbart (Ars Technica), reitor de Dartmouth renuncia (2/11)",
+     "url": "https://breitbart.com/tech/2026/11/02/dartmouth-provost-who-warned-about-ai-cheating-resigns-after-investigation-of-his-own-ai-usage"
+    },
+    {
+     "nome": "JAMA, ensaio SAVE-ICU (14/10)",
+     "url": "https://jamanetwork.com/journals/jama/fullarticle/10.1001/jama.2026.18471"
+    },
+    {
+     "nome": "MyChesCo, FDA aprova Voceryq (7/11)",
+     "url": "https://www.mychesco.com/a/news/regional/icymi-fda-approves-inovios-first-dna-medicine-for-rare-disease/"
+    },
+    {
+     "nome": "ECDC, ebola Bundibugyo (3/11)",
+     "url": "https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00026/2026-11-03"
+    },
+    {
+     "nome": "OMS, surto de ebola na RDC",
+     "url": "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026"
+    },
+    {
+     "nome": "O Liberal, mpox no Rio (4/11)",
+     "url": "https://www.oliberal.com/variedades/mpox-rio-de-janeiro-ja-tem-mais-que-o-dobro-dos-casos-registrados-em-2025-1.1190077"
+    },
+    {
+     "nome": "Estado de Minas, Saúde projeta alta da dengue (4/11)",
+     "url": "https://www.em.com.br/bem-viver/2026/11/7533219-ministerio-da-saude-projeta-alta-da-dengue-em-2027.html"
+    },
+    {
+     "nome": "Times of Israel (Telegraph), Irã negocia S-400 (7/11)",
+     "url": "https://www.timesofisrael.com/liveblog_entry/iran-said-to-be-negotiating-with-russia-for-s-400-air-defense-system"
+    },
+    {
+     "nome": "Al Jazeera, Rezaei com Putin (6/11)",
+     "url": "https://www.aljazeera.com/news/2026/11/6/irans-security-chief-meets-putin-delivers-message-from-khamenei"
+    },
+    {
+     "nome": "Al-Monitor, lançadores russos para o Irã (5/11)",
+     "url": "https://www.al-monitor.com/originals/2026/11/russia-provide-iran-90-missile-launchers-military-ties-grow-reports"
+    },
+    {
+     "nome": "Chatham House, A guerra aproxima o Irã da Rússia",
+     "url": "https://www.chathamhouse.org/2026/11/war-pushing-iran-closer-russia"
+    },
+    {
+     "nome": "NK News, Kim Song Nam em Pequim (4/11)",
+     "url": "https://www.nknews.org/2026/11/senior-north-korean-party-official-visits-china-on-heels-of-kim-jong-un-trip/"
+    },
+    {
+     "nome": "NBC News, teste de míssil antiaéreo (KCNA)",
+     "url": "https://www.nbcnews.com/world/asia/north-korea-says-tested-air-defense-missile-cruise-missile-drill-rcna607583"
+    },
+    {
+     "nome": "NK News, mísseis de Sondok (4/11)",
+     "url": "https://www.nknews.org/2026/11/north-korea-fires-unidentified-projectile-east-toward-sea-south-korean-military/"
+    },
+    {
+     "nome": "Arab News Japan, Kim Yo-jong via KCNA (4/11)",
+     "url": "https://www.arabnews.jp/en/japan/north-korea-warns-of-stronger-response-to-us-hostility-kcna-3001276"
+    },
+    {
+     "nome": "Iran International, Catar pede acordo \"bom\" (6/11)",
+     "url": "https://www.iranintl.com/en/202611065901"
+    },
+    {
+     "nome": "FinanceFeeds (CNBC), fechamento do petróleo em 6/11",
+     "url": "https://financefeeds.com/brent-crude-oil-price-98-32-saturday-week-ahead-us-iran-deal-bets-cpi-10-november-bull-105-bear-93/"
+    },
+    {
+     "nome": "Rio Times, Big Read Brasil (7/11)",
+     "url": "https://www.riotimesonline.com/the-big-read-brazil-7-november-2026/"
+    },
+    {
+     "nome": "NOAA/CPC, discussão diagnóstica do ENSO (8/10)",
+     "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml"
+    },
+    {
+     "nome": "Space.com, lançamento do USSF-432 (6/11)",
+     "url": "https://www.space.com/space-exploration/launches-spacecraft/spacex-launches-classified-mission-space-force-ussf-432"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-06",
+   "numero": 2,
+   "data": "2026-11-06",
+   "tempoLeitura": 6,
+   "ticker": [
+    {
+     "regiao": "Mundo",
+     "texto": "Kospi chega a cair 8,55% e aciona o circuit breaker; pregão de Seul para por 20 minutos",
+     "url": "https://en.bloomingbit.io/feed/news/123783"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Nikkei recua 6,2% na manhã de sexta; SK Hynix cai 11,8% e Samsung, 10%",
+     "url": "https://gulfnews.com/business/markets/asian-markets-follow-us-plunge-as-ai-stocks-face-fresh-sell-off-1.500737887"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Nasdaq 100 tem o pior dia desde março de 2020 (−6,36%); US$ 3 trilhões evaporam",
+     "url": "https://www.ibtimes.com.au/wall-street-ai-tech-stocks-selloff-1878032"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Brent toca US$ 100 na Ásia, mas caminha para queda semanal de cerca de 12%",
+     "url": "https://financefeeds.com/brent-crude-oil-price-99-90-friday-after-wall-street-ai-rout-jobs-report-iran-deal-bets-bull-103-60-bear-93-50/"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Irã relata novos ataques a petroleiros em Ormuz; não há confirmação independente",
+     "url": "https://finance.biggo.com/news/710c1c97-f1aa-4cb4-b6c2-d77568cd5e81"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Eurasia Group reduz a 10% a chance de acordo EUA–Irã",
+     "url": "https://finance.biggo.com/news/710c1c97-f1aa-4cb4-b6c2-d77568cd5e81"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Banco da Inglaterra sobe o juro para 4% e cita a guerra com o Irã",
+     "url": "https://www.ibtimes.com.au/wall-street-ai-tech-stocks-selloff-1878032"
+    },
+    {
+     "regiao": "Brasil",
+     "texto": "Lula reúne ministros nesta sexta para fechar a MP do Ministério da Segurança Pública",
+     "url": "https://www.metropoles.com/brasil/lula-vai-discutir-com-ministros-mp-do-ministerio-da-seguranca-nesta-sexta"
+    },
+    {
+     "regiao": "Brasil",
+     "texto": "Dólar fechou a R$ 5,49 e Ibovespa caiu 0,82% na quinta (5/11)",
+     "url": "https://www.dgabc.com.br/Noticia/4367137/fechamento-do-mercado-financeiro"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Ucrânia diz ter derrubado 105 de 128 drones russos; Rússia diz ter abatido 496 ucranianos",
+     "url": "https://www.manilatimes.net/2026/11/06/world/americas-emea/russia-and-ukraine-trade-airstrikes-as-reconstruction-and-security-talks-resume-in-brussels/2463740"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Aliados discutem em Bruxelas reconstrução e garantias para a Ucrânia antes de Abu Dhabi",
+     "url": "https://www.manilatimes.net/2026/11/06/world/americas-emea/russia-and-ukraine-trade-airstrikes-as-reconstruction-and-security-talks-resume-in-brussels/2463740"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Sudão: ataque de drone a posto de combustível em Kordofan do Sul mata mais de 19 civis",
+     "url": "https://darfur24.com/en/2026/11/06/drone-strikes-in-sudan-this-week"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Estação Espacial conclui troca de painéis solares iniciada em 2021",
+     "url": "https://spaceflightnow.com/2026/11/05/spacewalkers-complete-five-year-effort-to-upgrade-space-station-power-supply/"
+    },
+    {
+     "regiao": "Brasil",
+     "texto": "Payroll de outubro nos EUA sai hoje às 10h30 de Brasília e pode mexer com o dólar",
+     "url": "https://financefeeds.com/brent-crude-oil-price-99-90-friday-after-wall-street-ai-rout-jobs-report-iran-deal-bets-bull-103-60-bear-93-50/"
+    }
+   ],
+   "capa": {
+    "chapeu": "Mercados e tecnologia",
+    "titulo": "O tombo da IA atravessa o Pacífico",
+    "linhaFina": "A queda das ações de tecnologia em Wall Street chegou à Ásia nesta sexta. Seul interrompeu o pregão depois de uma queda de 8,55%, e Tóquio caiu mais de 6%. As fábricas de chips de memória, que abastecem os data centers, foram as mais atingidas.",
+    "camada": "FATO",
+    "confianca": "Alta"
+   },
+   "numeros": [
+    {
+     "rotulo": "Kospi",
+     "valor": "−8,55%",
+     "nota": "às 9h03 de 6/11 em Seul, 4.923 pontos, quando o circuit breaker foi acionado",
+     "fonte": "Bloomingbit"
+    },
+    {
+     "rotulo": "Nikkei 225",
+     "valor": "−6,2%",
+     "nota": "manhã de 6/11 em Tóquio, 57.271 pontos",
+     "fonte": "Gulf News (AP)"
+    },
+    {
+     "rotulo": "Nasdaq 100",
+     "valor": "−6,36%",
+     "nota": "fechamento de 5/11; pior dia desde março de 2020",
+     "fonte": "IBTimes"
+    },
+    {
+     "rotulo": "Brent",
+     "valor": "US$ 99,90",
+     "nota": "05h06 GMT de 6/11; +1,67% no dia, cerca de −12% na semana",
+     "fonte": "FinanceFeeds (CNBC)"
+    },
+    {
+     "rotulo": "WTI",
+     "valor": "US$ 91,69",
+     "nota": "manhã de 6/11 na Ásia; +1,43%",
+     "fonte": "FinanceFeeds (CNBC)"
+    },
+    {
+     "rotulo": "Dólar",
+     "valor": "R$ 5,49",
+     "nota": "fechamento de 5/11; +0,68%",
+     "fonte": "Diário do Grande ABC"
+    }
+   ],
+   "secoes": [
+    {
+     "eixo": "Tecnologia",
+     "itens": [
+      {
+       "titulo": "Seul e Tóquio pagam a conta",
+       "texto": "A Bolsa de Seul acionou o circuit breaker (pausa automática do pregão depois de uma queda forte) às 9h03. A SK Hynix caiu 11,8% e a Samsung, 10%. As duas fabricam a memória usada em servidores de IA. O medo vem dos EUA: governadores eleitos no Texas, na Geórgia e em Ohio prometem frear novos data centers.",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "Bloomingbit",
+         "url": "https://en.bloomingbit.io/feed/news/123783"
+        },
+        {
+         "nome": "Gulf News",
+         "url": "https://gulfnews.com/business/markets/asian-markets-follow-us-plunge-as-ai-stocks-face-fresh-sell-off-1.500737887"
+        },
+        {
+         "nome": "IBTimes",
+         "url": "https://www.ibtimes.com.au/wall-street-ai-tech-stocks-selloff-1878032"
+        }
+       ]
+      },
+      {
+       "titulo": "A cadeia da IA é um sistema único",
+       "texto": "A queda mostra como a corrida da IA ligou a Coreia, o Japão e Taiwan às urnas americanas. Se a construção de data centers nos EUA desacelerar, quem perde primeiro são os fornecedores asiáticos de chips. Isso enfraquece o argumento de que a IA dos EUA cresce sem limite, e a China pode explorar essa pausa.",
+       "camada": "ANÁLISE",
+       "confianca": "Média",
+       "fontes": []
+      }
+     ]
+    },
+    {
+     "eixo": "Guerras",
+     "itens": [
+      {
+       "titulo": "Ormuz: ataques continuam, acordo recua",
+       "texto": "A UKMTO, agência britânica que monitora a navegação, registrou ao menos cinco incidentes com navios desde domingo. A Guarda Revolucionária alega que dois petroleiros e um rebocador pegaram fogo ao usar rotas não autorizadas, sem confirmação independente. Os houthis alegam ter atacado o aeroporto de Dammam, e a Arábia Saudita não confirmou. Trump diz que decide \"em breve\".",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "BigGo Finance (CNBC)",
+         "url": "https://finance.biggo.com/news/710c1c97-f1aa-4cb4-b6c2-d77568cd5e81"
+        },
+        {
+         "nome": "The National",
+         "url": "https://www.thenationalnews.com/news/mena/2026/11/06/youll-know-soon-enough-trump-considers-iran-options/"
+        }
+       ]
+      },
+      {
+       "titulo": "Ucrânia: drones, Bruxelas e Abu Dhabi",
+       "texto": "Kiev diz ter derrubado 105 de 128 drones russos na madrugada de quinta. Moscou alega ter abatido 496 drones ucranianos, e mais de 200 miraram a região de Ryazan, onde uma refinaria pode ter sido atingida. Em Bruxelas, aliados e o Banco Mundial discutiram reconstrução e garantias de segurança. As alegações de cada lado não foram verificadas de forma independente.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "Manila Times (AP)",
+         "url": "https://www.manilatimes.net/2026/11/06/world/americas-emea/russia-and-ukraine-trade-airstrikes-as-reconstruction-and-security-talks-resume-in-brussels/2463740"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Energia",
+     "itens": [
+      {
+       "titulo": "Petróleo: a pior semana em meses",
+       "texto": "O Brent subiu 3,88% na quinta, para US$ 98,29, e tocou US$ 100 na manhã de sexta na Ásia. Mesmo assim, caminha para uma queda semanal de cerca de 12%, depois do tombo de quase 10% na quarta. O Banco da Inglaterra elevou o juro para 4% e disse que pode subir de novo se a guerra com o Irã continuar.",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "FinanceFeeds",
+         "url": "https://financefeeds.com/brent-crude-oil-price-99-90-friday-after-wall-street-ai-rout-jobs-report-iran-deal-bets-bull-103-60-bear-93-50/"
+        },
+        {
+         "nome": "BigGo Finance",
+         "url": "https://finance.biggo.com/news/710c1c97-f1aa-4cb4-b6c2-d77568cd5e81"
+        },
+        {
+         "nome": "IBTimes",
+         "url": "https://www.ibtimes.com.au/wall-street-ai-tech-stocks-selloff-1878032"
+        }
+       ]
+      },
+      {
+       "titulo": "Brent acima de US$ 110 em duas semanas?",
+       "texto": "A consultoria Eurasia Group reduziu a 10% a chance de acordo EUA–Irã e diz que uma escalada levaria o Brent a US$ 110–125. O Observatório estima em cerca de 30% a probabilidade de o Brent passar de US$ 110 até 20/11, porque os ataques em Ormuz continuam e Trump mantém as opções militares. É uma estimativa.",
+       "camada": "CENÁRIO",
+       "confianca": "Baixa",
+       "fontes": [
+        {
+         "nome": "BigGo Finance (Eurasia Group)",
+         "url": "https://finance.biggo.com/news/710c1c97-f1aa-4cb4-b6c2-d77568cd5e81"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Brasil",
+     "itens": [
+      {
+       "titulo": "Ministério da Segurança sai do papel",
+       "texto": "Lula reúne nesta sexta os ministros da Casa Civil, da Justiça, da Fazenda e do Planejamento para fechar a medida provisória (lei com efeito imediato, que o Congresso precisa aprovar) que cria o Ministério da Segurança Pública. Ele disse que a implantação não será imediata e que também quer criar uma guarda nacional.",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "Metrópoles",
+         "url": "https://www.metropoles.com/brasil/lula-vai-discutir-com-ministros-mp-do-ministerio-da-seguranca-nesta-sexta"
+        }
+       ]
+      },
+      {
+       "titulo": "Dólar à espera do payroll",
+       "texto": "O dólar fechou a quinta a R$ 5,49 (+0,68%), e o Ibovespa caiu 0,82%. Nesta sexta, às 10h30 de Brasília, sai o payroll (relatório oficial de empregos dos EUA). A expectativa é de 59 mil vagas em outubro. Um número fraco reforça o clima de aversão a risco, que costuma pressionar moedas como o real.",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "Diário do Grande ABC",
+         "url": "https://www.dgabc.com.br/Noticia/4367137/fechamento-do-mercado-financeiro"
+        },
+        {
+         "nome": "FinanceFeeds (CNBC)",
+         "url": "https://financefeeds.com/brent-crude-oil-price-99-90-friday-after-wall-street-ai-rout-jobs-report-iran-deal-bets-bull-103-60-bear-93-50/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Clima e espaço",
+     "itens": [
+      {
+       "titulo": "Estação Espacial com 30% mais energia",
+       "texto": "Em 5/11, Anil Menon (NASA) e Joshua Kutryk (agência canadense) instalaram o último dos oito novos painéis solares enroláveis (iROSA) da Estação Espacial Internacional, numa caminhada de 6h59. A troca começou em junho de 2021. Segundo a NASA, os painéis aumentam em até 30% a energia disponível. A estação deve ser aposentada em 2030.",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "Spaceflight Now",
+         "url": "https://spaceflightnow.com/2026/11/05/spacewalkers-complete-five-year-effort-to-upgrade-space-station-power-supply/"
+        }
+       ]
+      },
+      {
+       "titulo": "El Niño: próximo boletim em 12/11",
+       "texto": "O último dado da NOAA (26/10) mostrava anomalia de +2,5 °C no Pacífico central, nível de El Niño muito forte. O boletim mensal sai em 12/11. No Brasil, o padrão típico é seca no Norte e no Nordeste e chuva acima da média no Sul.",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "NOAA/CPC",
+         "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/lanina/enso_evolution-status-fcsts-web.pdf"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "África",
+     "itens": [
+      {
+       "titulo": "Sudão: a guerra dos drones contra o combustível",
+       "texto": "Segundo o portal Darfur24, um drone atribuído às Forças de Apoio Rápido (RSF, paramilitares em guerra com o exército) atingiu um posto de combustível lotado em Taqali, Kordofan do Sul, matando mais de 19 civis. Drones atribuídos ao exército também mataram civis em Darfur do Norte. A ONU alerta que esses ataques cortam o acesso a água, saúde e comida.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "Darfur24",
+         "url": "https://darfur24.com/en/2026/11/06/drone-strikes-in-sudan-this-week"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "analise": {
+    "titulo": "Tucídides e o contágio",
+    "texto": [
+     "Tucídides conta que a peste de Atenas, em 430 a.C., chegou pelo porto do Pireu e atravessou a cidade mais rápido do que qualquer exército espartano. O medo também se espalha assim. Em 1997, a crise que começou na Tailândia derrubou a Coreia do Sul em poucas semanas. Nesta sexta, o caminho foi o inverso: uma eleição americana bastou para parar a bolsa de Seul.",
+     "Keohane e Nye chamaram esse fenômeno de interdependência complexa: quanto mais ligadas as economias, mais um choque local vira choque global. A analogia com 1997 tem limite. Naquela crise, faltava dólar na Ásia; hoje, a dúvida é se os EUA vão continuar comprando os chips que a Ásia produz. A vulnerabilidade agora está na demanda, não nas reservas."
+    ]
+   },
+   "ler": [
+    {
+     "tipo": "Livro",
+     "titulo": "A Guerra dos Chips",
+     "autor": "Chris Miller",
+     "nivel": "★",
+     "porque": "Os capítulos sobre a Samsung e a Coreia do Sul explicam por que a bolsa de Seul depende tanto dos chips de memória."
+    },
+    {
+     "tipo": "Livro",
+     "titulo": "Power and Interdependence",
+     "autor": "Robert Keohane e Joseph Nye",
+     "nivel": "★★★",
+     "porque": "O primeiro capítulo define interdependência e vulnerabilidade. Use-o para pensar quem depende mais de quem na cadeia da IA."
+    },
+    {
+     "tipo": "Livro",
+     "titulo": "História da Guerra do Peloponeso",
+     "autor": "Tucídides",
+     "nivel": "★★",
+     "porque": "Leia a descrição da peste no Livro II (capítulos 47 a 54). É um dos primeiros estudos sobre como o medo muda o comportamento de uma sociedade."
+    }
+   ],
+   "pensar": [
+    "Se uma eleição estadual no Texas consegue parar a bolsa de Seul, quem tem de fato poder sobre a corrida da IA: governos nacionais, eleitores locais ou empresas?",
+    "Hobbes dizia que o medo é a paixão que mais governa os homens. Mercados e Estados em guerra reagem ao medo do mesmo jeito?"
+   ],
+   "acompanhar": [
+    {
+     "quando": "6/11",
+     "oque": "Payroll dos EUA às 10h30 de Brasília e MP do Ministério da Segurança Pública"
+    },
+    {
+     "quando": "Próximos dias",
+     "oque": "Decisão de Trump sobre o Irã e novos incidentes em Ormuz"
+    },
+    {
+     "quando": "10–11/11",
+     "oque": "Negociação Rússia–Ucrânia–EUA em Abu Dhabi"
+    },
+    {
+     "quando": "12/11",
+     "oque": "Boletim mensal do ENSO da NOAA"
+    },
+    {
+     "quando": "17/11",
+     "oque": "Resultado trimestral da Nvidia"
+    }
+   ],
+   "fontes": [
+    {
+     "nome": "Bloomingbit, circuit breaker do Kospi",
+     "url": "https://en.bloomingbit.io/feed/news/123783"
+    },
+    {
+     "nome": "Gulf News, mercados asiáticos 6/11",
+     "url": "https://gulfnews.com/business/markets/asian-markets-follow-us-plunge-as-ai-stocks-face-fresh-sell-off-1.500737887"
+    },
+    {
+     "nome": "IBTimes, as cinco causas da queda",
+     "url": "https://www.ibtimes.com.au/wall-street-ai-tech-stocks-selloff-1878032"
+    },
+    {
+     "nome": "FinanceFeeds, Brent 6/11",
+     "url": "https://financefeeds.com/brent-crude-oil-price-99-90-friday-after-wall-street-ai-rout-jobs-report-iran-deal-bets-bull-103-60-bear-93-50/"
+    },
+    {
+     "nome": "BigGo Finance, petroleiros e Eurasia Group",
+     "url": "https://finance.biggo.com/news/710c1c97-f1aa-4cb4-b6c2-d77568cd5e81"
+    },
+    {
+     "nome": "The National, opções de Trump sobre o Irã",
+     "url": "https://www.thenationalnews.com/news/mena/2026/11/06/youll-know-soon-enough-trump-considers-iran-options/"
+    },
+    {
+     "nome": "Manila Times (AP), Ucrânia e Bruxelas",
+     "url": "https://www.manilatimes.net/2026/11/06/world/americas-emea/russia-and-ukraine-trade-airstrikes-as-reconstruction-and-security-talks-resume-in-brussels/2463740"
+    },
+    {
+     "nome": "Metrópoles, MP da Segurança",
+     "url": "https://www.metropoles.com/brasil/lula-vai-discutir-com-ministros-mp-do-ministerio-da-seguranca-nesta-sexta"
+    },
+    {
+     "nome": "Diário do Grande ABC, fechamento 5/11",
+     "url": "https://www.dgabc.com.br/Noticia/4367137/fechamento-do-mercado-financeiro"
+    },
+    {
+     "nome": "Spaceflight Now, painéis da Estação Espacial",
+     "url": "https://spaceflightnow.com/2026/11/05/spacewalkers-complete-five-year-effort-to-upgrade-space-station-power-supply/"
+    },
+    {
+     "nome": "Darfur24, drones no Sudão",
+     "url": "https://darfur24.com/en/2026/11/06/drone-strikes-in-sudan-this-week"
+    },
+    {
+     "nome": "NOAA/CPC, ENSO 26/10",
+     "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/lanina/enso_evolution-status-fcsts-web.pdf"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-04",
+   "numero": 1,
+   "data": "2026-11-04",
+   "tempoLeitura": 6,
+   "ticker": [
+    {
+     "regiao": "Mundo",
+     "texto": "Democratas conquistam Câmara e Senado nas eleições de meio de mandato dos EUA",
+     "url": "https://www.justsecurity.org/163369/early-edition-november-4-2026/"
+    },
+    {
+     "regiao": "Brasil",
+     "texto": "Copom interrompe cinco cortes seguidos e mantém a Selic em 13,75%",
+     "url": "https://www.cnnbrasil.com.br/economia/money/macroeconomia/copom-novembro-2026/"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Guarda Revolucionária alega que quatro petroleiros bateram em minas perto de Ormuz (sem confirmação independente)",
+     "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-midterms-strait-of-hormuz/"
+    },
+    {
+     "regiao": "Brasil",
+     "texto": "Dólar fecha a R$ 5,45, alta de 9,46% desde a reeleição de Lula em 25/10",
+     "url": "https://www.cnnbrasil.com.br/economia/money/macroeconomia/copom-novembro-2026/"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Ataque russo em Komyshuvakha (Zaporíjia) deixa ao menos 40 mortos, diz Zelensky",
+     "url": "https://www.aljazeera.com/news/2026/11/4/ukraine-raises-death-toll-from-russian-strike-on-zaporizhia-to-40-people"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Brent fecha a US$ 103,60 em 3/11, o menor valor desde 7 de outubro",
+     "url": "https://globaloilshock.com/en/news/oil-price-week-45-2026/"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Rússia e Ucrânia voltam a negociar em Abu Dhabi em 10 e 11/11",
+     "url": "https://www.aljazeera.com/news/2026/11/4/ukraine-raises-death-toll-from-russian-strike-on-zaporizhia-to-40-people"
+    },
+    {
+     "regiao": "Brasil",
+     "texto": "Flávio Bolsonaro diz que vai pedir a anulação da eleição; Lula venceu com 51,79%",
+     "url": "https://www.infomoney.com.br/politica/ao-vivo-eleicoes-segundo-turno-2026/"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "AIE: Europa entra no inverno com os menores estoques de gás desde 2013",
+     "url": "https://globaloilshock.com/en/news/oil-price-week-45-2026/"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Venezuela ataca o ELN em Apure com apoio de drones e inteligência dos EUA; ao menos 23 mortos",
+     "url": "https://www.justsecurity.org/163369/early-edition-november-4-2026/"
+    }
+   ],
+   "capa": {
+    "chapeu": "Estados Unidos",
+    "titulo": "O eleitor americano vota contra a guerra",
+    "linhaFina": "Democratas tomam o Congresso um dia depois de Trump admitir que o Irã pesou na derrota. Em Teerã, o recado foi lido como vitória.",
+    "camada": "FATO",
+    "confianca": "Alta"
+   },
+   "numeros": [
+    {
+     "rotulo": "Brent",
+     "valor": "US$ 103,60",
+     "nota": "fechamento de 3/11; −8% na semana",
+     "fonte": "Reuters/ICE"
+    },
+    {
+     "rotulo": "Selic",
+     "valor": "13,75%",
+     "nota": "mantida em 4/11",
+     "fonte": "Banco Central"
+    },
+    {
+     "rotulo": "Dólar",
+     "valor": "R$ 5,45",
+     "nota": "fechamento de 4/11",
+     "fonte": "CNN Brasil"
+    },
+    {
+     "rotulo": "Niño-3.4",
+     "valor": "+2,1 °C",
+     "nota": "anomalia de setembro; El Niño forte",
+     "fonte": "NOAA/CPC, 8/10"
+    },
+    {
+     "rotulo": "Navios em espera",
+     "valor": "≈490",
+     "nota": "fora de Ormuz em 3/11",
+     "fonte": "JMIC"
+    }
+   ],
+   "secoes": [
+    {
+     "eixo": "Mundo",
+     "itens": [
+      {
+       "titulo": "Democratas controlam o Congresso",
+       "texto": "Na contagem da manhã de 4/11, os democratas tinham 54 cadeiras no Senado (Alasca e Mississippi ainda abertos) e 231 na Câmara, contra 139 republicanos, com 65 cadeiras sem resultado. Trump disse que aceita o resultado e que \"parte disso foi o Irã\".",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "Just Security (AP, Reuters, NYT)",
+         "url": "https://www.justsecurity.org/163369/early-edition-november-4-2026/"
+        }
+       ]
+      },
+      {
+       "titulo": "O que muda em Washington",
+       "texto": "Com o governo dividido, Trump perde a capacidade de aprovar leis e o Congresso ganha o controle do orçamento e das investigações. A War Powers Resolution de 1973, criada depois do Vietnã, deve voltar ao centro do debate sobre a guerra do Irã.",
+       "camada": "ANÁLISE",
+       "confianca": "Média",
+       "fontes": []
+      }
+     ]
+    },
+    {
+     "eixo": "Guerras",
+     "itens": [
+      {
+       "titulo": "Irã: o estreito segue travado",
+       "texto": "A guerra começou em 28/02 com a Operação Epic Fury, de EUA e Israel. Hoje o JMIC mantém a ameaça em Ormuz no nível \"severo\", com 18 ataques confirmados desde 6/10. Trump disse ao FT que não tem planos imediatos de atacar, e o Catar espera respostas a uma nova proposta de acordo.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "CBS News",
+         "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-midterms-strait-of-hormuz/"
+        },
+        {
+         "nome": "Global Oil Shock (UKMTO, JMIC)",
+         "url": "https://globaloilshock.com/en/news/oil-price-week-45-2026/"
+        }
+       ]
+      },
+      {
+       "titulo": "Ucrânia: 40 mortos em ponto de ajuda humanitária",
+       "texto": "Bombas atingiram uma escola em Komyshuvakha onde se distribuía ajuda, e um segundo ataque acertou um abrigo. A ONU disse que o ataque provavelmente violou o direito internacional. Moscou não comentou esse ataque e alega ter matado \"até 25 militares\" em outros alvos, sem confirmação independente.",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "Al Jazeera",
+         "url": "https://www.aljazeera.com/news/2026/11/4/ukraine-raises-death-toll-from-russian-strike-on-zaporizhia-to-40-people"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Energia",
+     "itens": [
+      {
+       "titulo": "Petróleo cai com rumor de paz",
+       "texto": "O Brent caiu cerca de 8% na semana com relatos de um rascunho de acordo, que o Irã nega estar perto. A OPEP+ manteve a produção de dezembro pela terceira vez seguida. Mesmo assim, o barril custa uns 60% mais que há um ano.",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "Global Oil Shock (Reuters, OPEP, AIE)",
+         "url": "https://globaloilshock.com/en/news/oil-price-week-45-2026/"
+        },
+        {
+         "nome": "Fortune",
+         "url": "https://fortune.com/article/price-of-oil-11-04-2026/"
+        }
+       ]
+      },
+      {
+       "titulo": "O mercado compra notícias, não barris",
+       "texto": "Com cerca de 490 navios parados, a queda depende só de expectativa. Um incidente confirmado em Ormuz pode levar o Brent de volta a US$ 110–115. Probabilidade de impasse nas próximas semanas: cerca de 50%, pela minha estimativa.",
+       "camada": "CENÁRIO",
+       "confianca": "Média",
+       "fontes": []
+      }
+     ]
+    },
+    {
+     "eixo": "Brasil",
+     "itens": [
+      {
+       "titulo": "Copom pausa os cortes de juros",
+       "texto": "O Banco Central manteve a Selic em 13,75% em 4/11, encerrando uma sequência de cinco cortes iniciada em março, quando a taxa estava em 15%. O dólar fechou a R$ 5,45, com o mercado temendo uma política fiscal expansionista no novo mandato.",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "CNN Brasil",
+         "url": "https://www.cnnbrasil.com.br/economia/money/macroeconomia/copom-novembro-2026/"
+        }
+       ]
+      },
+      {
+       "titulo": "Depois da virada de Lula",
+       "texto": "Lula venceu o segundo turno em 25/10 com 51,79% contra 48,21% de Flávio Bolsonaro, que liderava o primeiro turno. Foi a primeira vez desde a redemocratização que o líder do primeiro turno perdeu. Flávio diz que vai pedir a anulação da eleição.",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "InfoMoney",
+         "url": "https://www.infomoney.com.br/politica/ao-vivo-eleicoes-segundo-turno-2026/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Clima",
+     "itens": [
+      {
+       "titulo": "El Niño caminha para nível histórico",
+       "texto": "No boletim de 8/10, a NOAA dava mais de 83% de chance de El Niño forte a muito forte até o início de 2027, e 83% de chance de superar todos os eventos desde 1950 no trimestre outubro–dezembro. Para o Brasil, isso costuma significar seca no Norte e no Nordeste e chuva forte no Sul.",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "NOAA/CPC",
+         "url": "https://cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc_Sp.shtml"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "analise": {
+    "titulo": "Kant nas urnas",
+    "texto": [
+     "Em À Paz Perpétua (1795), Kant argumentou que repúblicas tendem a ser mais pacíficas, porque quem paga a guerra, o cidadão, decide sobre ela. O voto de 3 de novembro parece um teste dessa ideia, mas com um detalhe: o eleitor só pôde opinar oito meses depois de a guerra começar.",
+     "A história americana mostra que perder o Congresso não encerra uma guerra. Em 2006 os democratas venceram por causa do Iraque, e Bush respondeu enviando mais tropas. Clausewitz ajuda a ler o momento: se a guerra é a continuação da política, uma mudança na política interna muda os fins da guerra, e uma saída negociada fica mais atraente."
+    ]
+   },
+   "ler": [
+    {
+     "tipo": "Livro",
+     "titulo": "À Paz Perpétua",
+     "autor": "Immanuel Kant",
+     "nivel": "★★",
+     "porque": "Tem umas 60 páginas. Leia o primeiro artigo definitivo e pergunte se o voto de ontem confirma Kant."
+    },
+    {
+     "tipo": "Livro",
+     "titulo": "O Petróleo",
+     "autor": "Daniel Yergin",
+     "nivel": "★",
+     "porque": "Os capítulos sobre 1973 e a Guerra Irã-Iraque mostram que gargalo mais guerra dá choque de preço há 50 anos."
+    },
+    {
+     "tipo": "Livro",
+     "titulo": "Disorder",
+     "autor": "Helen Thompson",
+     "nivel": "★★",
+     "porque": "Explica como energia, dívida e democracia se cruzam, e por que uma guerra no Golfo vira tema de eleição."
+    }
+   ],
+   "pensar": [
+    "Se os eleitores punem a guerra só depois que ela começa, a paz democrática de Kant funciona ou falha?",
+    "O Irã trava a economia mundial com minas baratas. O que Sun Tzu e Mahan diriam dessa forma de guerra?"
+   ],
+   "acompanhar": [
+    {
+     "quando": "5–6/11",
+     "oque": "Respostas de EUA e Irã à proposta de acordo mediada pelo Catar"
+    },
+    {
+     "quando": "10–11/11",
+     "oque": "Conversas Rússia–Ucrânia em Abu Dhabi"
+    },
+    {
+     "quando": "Esta semana",
+     "oque": "Cadeiras restantes da Câmara dos EUA e Senado no Alasca e no Mississippi"
+    },
+    {
+     "quando": "Contínuo",
+     "oque": "Incidentes em Ormuz confirmados pela UKMTO, não só alegados pela Guarda Revolucionária"
+    }
+   ],
+   "fontes": [
+    {
+     "nome": "Just Security, Early Edition 4/11",
+     "url": "https://www.justsecurity.org/163369/early-edition-november-4-2026/"
+    },
+    {
+     "nome": "CBS News, Iran war live updates",
+     "url": "https://www.cbsnews.com/live-updates/iran-war-us-trump-midterms-strait-of-hormuz/"
+    },
+    {
+     "nome": "Al Jazeera, Zaporíjia",
+     "url": "https://www.aljazeera.com/news/2026/11/4/ukraine-raises-death-toll-from-russian-strike-on-zaporizhia-to-40-people"
+    },
+    {
+     "nome": "Global Oil Shock, semana 45",
+     "url": "https://globaloilshock.com/en/news/oil-price-week-45-2026/"
+    },
+    {
+     "nome": "Fortune, preço do petróleo 4/11",
+     "url": "https://fortune.com/article/price-of-oil-11-04-2026/"
+    },
+    {
+     "nome": "CNN Brasil, Copom",
+     "url": "https://www.cnnbrasil.com.br/economia/money/macroeconomia/copom-novembro-2026/"
+    },
+    {
+     "nome": "InfoMoney, segundo turno",
+     "url": "https://www.infomoney.com.br/politica/ao-vivo-eleicoes-segundo-turno-2026/"
+    },
+    {
+     "nome": "NOAA/CPC, boletim ENSO",
+     "url": "https://cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc_Sp.shtml"
+    }
+   ]
+  }
+ ]
+}

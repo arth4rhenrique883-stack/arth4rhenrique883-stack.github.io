@@ -1,0 +1,521 @@
+{
+  "atualizadoEm": "2026-11-09T23:40:00-03:00",
+  "edicoes": [
+    {
+      "id": "2026-11-10",
+      "numero": 1,
+      "data": "2026-11-10",
+      "tempoLeitura": 12,
+      "fechamento": "Edição de terça-feira, 10/11, fechada na noite de 9/11 (horário de Brasília).",
+      "recado": "Bom dia! Este é o seu jornal de cada dia, feito para ler com calma, com café. Aqui as notícias vêm explicadas sem palavrão técnico: quando uma palavra difícil aparecer, ela vem traduzida logo ao lado ou no cantinho “Palavrinhas”, no fim. Hoje: o que muda na sua semana de trabalho, um remédio para emagrecer em comprimido, um alerta sobre golpes com voz falsa e um pouquinho do mundo.",
+      "citacao": "Duas folgas por semana, sem cortar o salário",
+      "capa": {
+        "chapeu": "Política no Brasil",
+        "titulo": "Eleição decidida, agora o país volta ao trabalho",
+        "linhaFina": "Lula foi reeleito em 25 de outubro com 51,79% dos votos e começa o novo mandato em janeiro. Nesta semana, ele está na Turquia para a conferência do clima, enquanto em Brasília o Congresso discute a idade para um jovem ser preso, a proibição das apostas on-line e o Orçamento do ano que vem. E a mudança mais sentida no bolso do trabalhador, o fim da escala 6x1, já tem data para começar.",
+        "selo": "Confirmado"
+      },
+      "resumo": [
+        {
+          "tema": "Brasil",
+          "texto": "O fim da escala 6x1 começa a valer em meados de dezembro: no máximo 42 horas por semana e duas folgas, sem cortar salário."
+        },
+        {
+          "tema": "Brasil",
+          "texto": "Lula discursa na quarta (11/11) na conferência do clima da ONU, na Turquia, levando o menor desmatamento da Amazônia desde 1988."
+        },
+        {
+          "tema": "Saúde",
+          "texto": "A Anvisa aprovou a versão em comprimido do remédio para obesidade semaglutida (Wegovy). Deve chegar às farmácias no 1º semestre de 2027."
+        },
+        {
+          "tema": "Saúde",
+          "texto": "Novembro Azul: o Brasil deve ter cerca de 78 mil casos novos de câncer de próstata por ano. Conversar com o médico é o primeiro passo."
+        },
+        {
+          "tema": "Tecnologia",
+          "texto": "Golpes com voz clonada por inteligência artificial seguem crescendo. Combine uma “senha da família” para se proteger."
+        },
+        {
+          "tema": "Mundo",
+          "texto": "O petróleo ficou mais barato depois que Trump disse ser “muito improvável” voltar a bombardear o Irã."
+        }
+      ],
+      "numeros": [
+        {
+          "rotulo": "Lula no 2º turno",
+          "valor": "51,79%",
+          "nota": "contra 48,21% de Flávio Bolsonaro, em 25/10",
+          "fonte": "TSE"
+        },
+        {
+          "rotulo": "Nova jornada",
+          "valor": "42 horas",
+          "nota": "máximo por semana a partir de dezembro de 2026; 40 horas em dezembro de 2027",
+          "fonte": "Emenda à Constituição promulgada em 16/10"
+        },
+        {
+          "rotulo": "Desmatamento",
+          "valor": "3.335 km²",
+          "nota": "na Amazônia entre ago./2025 e jul./2026, o menor desde 1988",
+          "fonte": "Inpe"
+        },
+        {
+          "rotulo": "Câncer de próstata",
+          "valor": "77.920",
+          "nota": "casos novos esperados por ano no Brasil (2026 a 2028)",
+          "fonte": "Inca"
+        },
+        {
+          "rotulo": "Golpes digitais",
+          "valor": "24%",
+          "nota": "dos brasileiros com mais de 16 anos já caíram em algum golpe digital",
+          "fonte": "DataSenado, citado pelo Diário do Pará (18/7)"
+        }
+      ],
+      "politica": {
+        "abertura": "O que acontece em Brasília e como isso chega na vida da gente.",
+        "itens": [
+          {
+            "titulo": "Lula reeleito: o que vem agora",
+            "texto": "O Tribunal Superior Eleitoral (TSE), que organiza as eleições, confirmou: Lula (PT) teve 64,3 milhões de votos (51,79%) e Flávio Bolsonaro (PL), 59,8 milhões (48,21%), no segundo turno de 25 de outubro. Foi uma disputa apertada: no primeiro turno, em 4 de outubro, Flávio tinha ficado na frente. O novo mandato começa em janeiro de 2027. Outro detalhe importante: o partido de Flávio, o PL, elegeu a maior bancada de deputados (121 dos 513). Ou seja, o presidente vai precisar negociar muito com o Congresso para aprovar seus projetos.",
+            "selo": "Confirmado",
+            "fontes": [
+              {
+                "nome": "TSE, resultado do 2º turno (25/10)",
+                "url": "https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/presidente-do-tse-anuncia-reeleicao-de-lula-e-faz-balanco-do-2o-turno-das-eleicoes-2026"
+              },
+              {
+                "nome": "Wikipédia, eleições gerais de 2026 (composição da Câmara)",
+                "url": "https://en.wikipedia.org/wiki/2026_Brazilian_general_election"
+              }
+            ]
+          },
+          {
+            "titulo": "Fim da escala 6x1: quando muda e o que muda",
+            "texto": "A mudança na Constituição foi aprovada pelo Congresso e promulgada em 16 de outubro. Na prática: a partir de meados de dezembro, quem trabalha com carteira assinada passa a ter no máximo 42 horas por semana e duas folgas semanais, de preferência com o domingo. Em dezembro de 2027 o limite cai para 40 horas. O salário não pode diminuir. Falta um decreto do governo com os detalhes (por exemplo, como contar as folgas em quem trabalha em escala). Ele era esperado para 9/11, mas foi adiado e deve sair depois de 16/11, quando Lula voltar de viagem.",
+            "selo": "Confirmado",
+            "fontes": [
+              {
+                "nome": "Brasil de Fato, emenda promulgada (16/10)",
+                "url": "https://www.brasildefato.com.br/2026/10/16/promulgada-escala-5x2-passa-a-valer-na-semana-anterior-ao-natal/"
+              },
+              {
+                "nome": "O Tempo/Folhapress, decreto adiado (9/11)",
+                "url": "https://www.otempo.com.br/economia/2026/11/9/decreto-que-regulamenta-fim-da-6x1-tem-publicacao-adiada-e-so-deve-sair-apos-retorno-de-lula"
+              }
+            ]
+          },
+          {
+            "titulo": "Lula leva a floresta para a Turquia",
+            "texto": "A COP31, a grande reunião anual da ONU sobre o clima, começou em 9/11 em Antália, na Turquia, e vai até 20/11. Lula discursa na quarta-feira (11/11). Ele chega com uma boa notícia: o desmatamento da Amazônia foi o menor desde 1988, segundo o Inpe, o instituto que mede a floresta por satélite. Ele também tenta juntar dinheiro para um fundo que paga países por manterem suas florestas em pé. Depois, segue para uma reunião de países asiáticos nas Filipinas.",
+            "selo": "Confirmado",
+            "fontes": [
+              {
+                "nome": "Revista Amazônia, agenda de Lula na COP31 (7/11)",
+                "url": "https://revistaamazonia.com.br/lula-cop31-cupula-de-lideres-antalia-agenda-tfff-desmatamento-asean"
+              },
+              {
+                "nome": "Jornal do Comércio, Lula sobre a COP31 (6/11)",
+                "url": "https://www.jornaldocomercio.com/economia/2026/11/1269553-lula-vamos-a-cop31-com-proposta-para-que-mundo-leve-a-serio-reducao-de-dependencia-de-petroleo.html"
+              }
+            ]
+          },
+          {
+            "titulo": "Congresso discute a idade para ser preso",
+            "texto": "Nesta terça (10/11) e quarta (11/11), deputados ouvem especialistas sobre uma proposta antiga, de 2015, que reduz a maioridade penal, ou seja, a idade a partir da qual uma pessoa responde a crimes como adulto (hoje, 18 anos). O relator, deputado Mendonça Filho, quer apresentar seu parecer até o fim de novembro. Ainda não há data para votação, e o Senado só vai olhar o assunto depois da Câmara.",
+            "selo": "Confirmado",
+            "fontes": [
+              {
+                "nome": "ND Mais, a pauta do Congresso na semana (9/11)",
+                "url": "https://ndmais.com.br/politica/maioridade-penal-congresso-debate-reducao-nesta-semana/"
+              }
+            ]
+          },
+          {
+            "titulo": "Apostas on-line proibidas, mas falta o Congresso",
+            "texto": "Em setembro, Lula assinou uma medida provisória, um tipo de regra que vale na hora mas precisa ser confirmada pelo Congresso em alguns meses, que proíbe as “bets” (sites de apostas esportivas) e jogos como o “tigrinho”. O governo agora tenta montar, nesta semana, a comissão de deputados e senadores que vai analisar a medida. Se o Congresso não votar a tempo, ela perde a validade.",
+            "selo": "Confirmado",
+            "fontes": [
+              {
+                "nome": "ND Mais, a pauta do Congresso na semana (9/11)",
+                "url": "https://ndmais.com.br/politica/maioridade-penal-congresso-debate-reducao-nesta-semana/"
+              },
+              {
+                "nome": "Diário do Pará, o que a medida das bets muda (25/9)",
+                "url": "https://diariodopara.com.br/seu-bolso/governo-anuncia-mp-para-proibir-bets-e-cassinos-on-line-no-brasil-veja-o-que-muda/"
+              }
+            ]
+          },
+          {
+            "titulo": "O dinheiro do país para 2027",
+            "texto": "Na quarta (11/11), o ministro do Planejamento, Bruno Moretti, apresenta aos parlamentares o Orçamento de 2027, que é a lista de quanto o governo pode gastar em cada área, como saúde e educação. A votação final está marcada para 16 e 17 de dezembro.",
+            "selo": "Confirmado",
+            "fontes": [
+              {
+                "nome": "ND Mais, a pauta do Congresso na semana (9/11)",
+                "url": "https://ndmais.com.br/politica/maioridade-penal-congresso-debate-reducao-nesta-semana/"
+              }
+            ]
+          }
+        ],
+        "explica": {
+          "titulo": "Entenda: por que um país dividido ao meio importa",
+          "texto": "Lula venceu por pouco mais de 4 milhões de votos, e o partido do adversário terá mais deputados que qualquer outro. Isso quer dizer que, nos próximos anos, quase nada passa no Congresso sem conversa e acordo. Para quem acompanha as notícias, a dica é observar não só o que o presidente promete, mas o que os deputados e senadores aceitam votar."
+        }
+      },
+      "saude": {
+        "abertura": "O caderno mais recheado da casa: remédios novos, estudos importantes e o que muda no SUS.",
+        "aviso": "Importante: estas notícias servem para informar e para levar perguntas à consulta. Nunca comece, pare ou troque um remédio sem conversar com o seu médico.",
+        "frentes": [
+          {
+            "area": "Remédios novos",
+            "itens": [
+              {
+                "titulo": "Remédio para emagrecer agora em comprimido",
+                "texto": "A Anvisa, a agência que libera remédios no Brasil, aprovou em 4/11 a semaglutida em comprimido (nome comercial Wegovy) para tratar obesidade em adultos. É a mesma substância do famoso Ozempic, que é injetável. No estudo principal, quem tomou a dose mais alta perdeu em média cerca de 13,6% do peso em pouco mais de um ano. O preço ainda não foi definido, e a previsão é chegar às farmácias no primeiro semestre de 2027. Vai precisar de receita.",
+                "selo": "Confirmado",
+                "fontes": [
+                  {
+                    "nome": "Agência GBC, Anvisa aprova semaglutida oral (8/11)",
+                    "url": "https://agenciagbc.com/2026/11/08/ozempic-em-comprimido-e-aprovado-no-brasil-veja-quanto-pode-custar-e-quando-chega-as-farmacias/"
+                  }
+                ]
+              },
+              {
+                "titulo": "Um remédio novo para evitar um segundo derrame",
+                "texto": "Quem já teve um AVC (o derrame causado por um coágulo que entope uma artéria do cérebro) corre risco de ter outro. Um grande estudo com mais de 12 mil pacientes em 37 países testou um remédio novo, o asundexiane, junto com a aspirina. O resultado: o número de novos AVCs caiu de 8,4% para 6,2%, sem aumentar de forma importante os sangramentos graves, que é o grande medo com esse tipo de remédio. Ele ainda não está aprovado nos EUA nem no Brasil.",
+                "selo": "Confirmado",
+                "fontes": [
+                  {
+                    "nome": "American Heart Association, resultado do OCEANIC-STROKE",
+                    "url": "https://newsroom.heart.org/news/new-medication-may-reduce-chances-of-a-second-clot-caused-stroke-without-bleeding-risk"
+                  },
+                  {
+                    "nome": "TCTMD, análise apresentada em 7/11",
+                    "url": "https://www.tctmd.com/news/oceanic-stroke-asundexian-benefits-seen-across-vascular-risk-strata"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "area": "Coração e longevidade",
+            "itens": [
+              {
+                "titulo": "Remédio de colesterol depois dos 70: parar ou continuar?",
+                "texto": "Muitos idosos tomam estatina (como sinvastatina ou atorvastatina) para baixar o colesterol, mesmo sem nunca ter tido problema no coração. Um estudo suíço com cerca de 1.900 idosos, com idade média de 77 anos, testou o que acontece quando eles param. Nos primeiros dois anos, parar pareceu não fazer diferença. Mas, acompanhando por até quatro anos, quem parou teve mais infartos (1,6% contra 0,6%), mais derrames (2,2% contra 0,8%) e mais mortes (9,8% contra 8%). Os especialistas dizem que a decisão deve ser feita caso a caso, com o médico.",
+                "selo": "Confirmado",
+                "fontes": [
+                  {
+                    "nome": "Healio, estudo STREAM no congresso da AHA (8/11)",
+                    "url": "https://www.healio.com/news/cardiology/20261108/new-study-informs-statin-discontinuation-in-older-adults-without-cvd"
+                  }
+                ]
+              },
+              {
+                "titulo": "Quando o exame melhora, mas a pessoa não",
+                "texto": "Dois estudos grandes apresentados no maior congresso de cardiologia dos EUA, em Chicago (6 a 9/11), trouxeram uma lição curiosa. Um remédio derrubou em 78% uma gordura do sangue ligada a infartos, a lipoproteína(a). Outro baixou bastante uma inflamação do sangue. Mas, nos dois casos, o número de infartos e derrames não diminuiu. Moral da história: um exame de sangue “bonito” não garante, sozinho, um coração protegido. Por isso os remédios só são aprovados quando mostram que evitam doença de verdade.",
+                "selo": "Explicação",
+                "fontes": [
+                  {
+                    "nome": "American Heart Association, estudo Lp(a) HORIZON (7/11)",
+                    "url": "https://newsroom.heart.org/news/lp-a-horizon-trial-lp-a-fell-by-78-but-cardiovascular-outcomes-unexpectedly-neutral"
+                  },
+                  {
+                    "nome": "Healio, estudo ZEUS (7/11)",
+                    "url": "https://www.healio.com/news/cardiology/20261107/ziltivekimab-cuts-inflammation-but-not-cv-events-in-atherosclerosis-kidney-disease"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "area": "Câncer",
+            "itens": [
+              {
+                "titulo": "Novembro Azul: o recado sobre a próstata",
+                "texto": "Novembro é o mês de lembrar da saúde do homem. Segundo o Inca, o instituto nacional do câncer, o Brasil deve ter cerca de 78 mil casos novos de câncer de próstata por ano até 2028. É o tumor mais comum nos homens, tirando o de pele. Um ponto que confunde muita gente: o Ministério da Saúde não recomenda exame de rotina para todo homem sem sintomas, porque ele pode dar falso alarme e levar a tratamentos desnecessários. O certo é cada homem conversar com o médico, levando em conta idade e casos na família. Quem tem sintomas (como dificuldade para urinar) deve procurar atendimento.",
+                "selo": "Confirmado",
+                "fontes": [
+                  {
+                    "nome": "Diário do Grande ABC, Novembro Azul e números do Inca (29/10)",
+                    "url": "https://www.dgabc.com.br/Noticia/4365819/novembro-azul-brasil-deve-ter-77-9-mil-casos-de-cancer-de-prostata"
+                  }
+                ]
+              },
+              {
+                "titulo": "Próstata avançada: mais tempo de vida",
+                "texto": "Um estudo europeu com 1.173 homens com câncer de próstata já espalhado mostrou que somar um remédio, a abiraterona, ao tratamento padrão aumentou o tempo de vida típico de 4,4 para 6,2 anos. Em troca, pressão alta forte ficou mais comum. O estudo foi apresentado num congresso em outubro e ainda não saiu publicado por completo.",
+                "selo": "Confirmado",
+                "fontes": [
+                  {
+                    "nome": "CURE, resultados de próstata no congresso ESMO 2026",
+                    "url": "https://www.curetoday.com/view/3-prostate-cancer-results-from-esmo-2026-patients-should-know"
+                  }
+                ]
+              },
+              {
+                "titulo": "Mamografia pelo SUS a partir dos 40",
+                "texto": "Vale lembrar: desde 2025, o SUS oferece a mamografia de rotina para mulheres de 40 a 74 anos (antes era de 50 a 69). Com pedido médico, mulheres de qualquer idade podem fazer o exame. O Ministério da Saúde também promete oferecer 23 remédios novos contra o câncer, de graça, até dezembro de 2026.",
+                "selo": "Confirmado",
+                "fontes": [
+                  {
+                    "nome": "Sanar, balanço do Ministério da Saúde (1/11)",
+                    "url": "https://sanarmed.com/noticias/sus-amplia-mamografia-faixa-40-74-23-medicamentos-oncologicos/"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "area": "Vacinas e doenças",
+            "itens": [
+              {
+                "titulo": "Sarampo aparece na fronteira do Amazonas",
+                "texto": "O Amazonas confirmou 21 casos de sarampo neste ano, quase todos em cidades na fronteira com Peru e Colômbia, como Tabatinga. O Ministério da Saúde liberou R$ 524 mil em 9/11 para vacinar e conter a doença. Os casos vieram de fora: o vírus não circula de forma permanente no Brasil desde 2024. Nos EUA, a situação é bem pior, com mais de 5 mil casos em 2026, o maior número em 35 anos, depois que a vacinação de crianças caiu. A vacina tríplice viral é gratuita no posto de saúde; vale conferir a carteirinha de filhos e netos.",
+                "selo": "Confirmado",
+                "fontes": [
+                  {
+                    "nome": "Gazeta da Amazônia, sarampo no Amazonas (9/11)",
+                    "url": "https://gazetadaamazonia.com.br/09/11/2026/vacinacao-sarampo-no-amazonas/"
+                  },
+                  {
+                    "nome": "Al Jazeera, sarampo nos EUA (7/11)",
+                    "url": "https://aljazeera.com/news/2026/11/7/cdc-reports-more-than-5000-measles-cases-highest-number-in-35-years"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "area": "SUS mais perto de você",
+            "itens": [
+              {
+                "titulo": "Seu histórico médico vai te acompanhar no SUS",
+                "texto": "O Ministério da Saúde criou em outubro uma nova política de saúde digital. A ideia é que suas informações de saúde (exames, consultas, vacinas) fiquem juntas e sigam você em qualquer posto ou hospital do SUS, usando o CPF como identificação principal. O aplicativo Meu SUS Digital ganhou mais de 30 funções novas, e as consultas a distância já passaram de 12 milhões desde 2025. O plano detalhado de como tudo vai funcionar deve ficar pronto em até seis meses.",
+                "selo": "Confirmado",
+                "fontes": [
+                  {
+                    "nome": "Brasil 61, SUS terá histórico clínico integrado (4/11)",
+                    "url": "https://brasil61.com/n/sus-tera-historico-clinico-integrado-e-ampliacao-de-servicos-digitais-bras2617421.amp"
+                  }
+                ]
+              },
+              {
+                "titulo": "Remédio feito no Brasil",
+                "texto": "Quase toda a matéria-prima dos remédios vendidos aqui vem de fora, principalmente da China e da Índia. Na pandemia, isso causou falta de medicamentos. Agora a Anvisa vai dar prioridade, em 2027, à análise de até oito pedidos de fabricantes que produzem essa matéria-prima no Brasil.",
+                "selo": "Confirmado",
+                "fontes": [
+                  {
+                    "nome": "Agência Brasil via Diario de Pernambuco, Anvisa e insumos nacionais (7/11)",
+                    "url": "https://www.diariodepernambuco.com.br/amp/dp-/dp-saude/2026/11/11728603-anvisa-vai-selecionar-dossies-para-incentivar-a-producao-nacional-de-insumos-farmaceuticos.html"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "explica": {
+          "titulo": "Como ler uma notícia de saúde sem cair em armadilha",
+          "texto": "Três perguntas ajudam: 1) Foi testado em pessoas ou só em laboratório? 2) Quantas pessoas participaram? Estudos com milhares de pessoas, como os desta edição, valem muito mais que um relato isolado. 3) O remédio evitou a doença ou só melhorou um exame? Como vimos no caderno, as duas coisas nem sempre andam juntas."
+        }
+      },
+      "tecnologia": {
+        "abertura": "A inteligência artificial (IA) são programas de computador que conversam, escrevem e analisam imagens quase como uma pessoa. Ela já está no celular, no banco e no consultório. Aviso de transparência: este jornal é escrito com a ajuda do Claude, uma IA da empresa Anthropic.",
+        "itens": [
+          {
+            "titulo": "A IA já ajuda o médico a acertar o diagnóstico",
+            "texto": "Um estudo publicado na revista científica Science comparou médicos e IA resolvendo casos difíceis passo a passo, pedindo exames como na vida real. A IA acertou mais vezes. Mas há ressalvas: eram casos raros, numa simulação, e os médicos não puderam consultar colegas. A IA ainda é uma ajudante, e não substitui a consulta.",
+            "selo": "Confirmado",
+            "fontes": [
+              {
+                "nome": "ACSH, a IA diagnostica melhor? (3/11)",
+                "url": "https://www.acsh.org/news/2026/11/03/does-ai-diagnose-better-or-take-different-test-50427"
+              }
+            ]
+          },
+          {
+            "titulo": "Em conversa longa, a IA pode “esquecer” as regras",
+            "texto": "Pesquisadores testaram assistentes de IA em conversas compridas. Quando a conversa ficava longa demais e a IA precisava “resumir” o que veio antes, ela desrespeitou uma instrução combinada em 38% das vezes, contra 10% em conversas curtas. É um estudo pequeno e ainda não revisado por outros cientistas, mas o recado é útil: confira o que a IA responde, principalmente em assuntos de saúde e dinheiro.",
+            "selo": "Confirmado",
+            "fontes": [
+              {
+                "nome": "arXiv, estudo ARCBench (nov.)",
+                "url": "https://arxiv.org/abs/2611.03223"
+              }
+            ]
+          },
+          {
+            "titulo": "IA de graça já invade computadores tão bem quanto a paga",
+            "texto": "Num teste de segurança feito por uma empresa americana, uma IA chinesa gratuita conseguiu invadir uma rede de computadores de mentirinha tão bem quanto uma IA de acesso restrito da OpenAI (a dona do ChatGPT). Para nós, isso significa que ferramentas poderosas estão cada vez mais nas mãos de qualquer um, inclusive de golpistas. Por isso o cuidado com senhas e mensagens suspeitas só aumenta.",
+            "selo": "Confirmado",
+            "fontes": [
+              {
+                "nome": "Vals AI, teste de ataque cibernético",
+                "url": "https://www.vals.ai/benchmarks/cyber_offense"
+              }
+            ]
+          },
+          {
+            "titulo": "Quase todo estudante já usa IA",
+            "texto": "Uma pesquisa com mais de 27 mil estudantes em 35 países, divulgada em julho, mostrou que 88% deles usam IA nos estudos. Só 28% acham que as provas medem bem o que o trabalho vai exigir. As escolas e faculdades estão repensando como avaliar os alunos.",
+            "selo": "Confirmado",
+            "fontes": [
+              {
+                "nome": "ETIH, pesquisa do Digital Education Council (jul.)",
+                "url": "https://www.edtechinnovationhub.com/news/q6zw9wco2mttajdbd1jyeonjnpiovu"
+              }
+            ]
+          },
+          {
+            "titulo": "A lei brasileira da IA continua parada",
+            "texto": "O projeto que cria regras para a IA no Brasil (PL 2.338) foi aprovado pelo Senado em dezembro de 2024 e está na Câmara desde março de 2025. Em outubro, ainda esperava o parecer do relator, deputado Aguinaldo Ribeiro. A proposta prevê, por exemplo, que a pessoa prejudicada por uma decisão tomada por IA tenha direito a explicação e a revisão feita por um ser humano.",
+            "selo": "Confirmado",
+            "fontes": [
+              {
+                "nome": "Merovian, situação do PL 2.338 (out.)",
+                "url": "https://merovian.app/blog/pl-2338-marco-legal-da-inteligencia-artificial"
+              }
+            ]
+          }
+        ],
+        "protejase": {
+          "titulo": "Proteja-se: golpe da voz clonada",
+          "intro": "Com poucos segundos de áudio, tirado de um vídeo ou de uma ligação, a IA consegue imitar a voz de um filho ou neto pedindo dinheiro com urgência. Segundo o DataSenado, 24% dos brasileiros acima de 16 anos já sofreram algum golpe digital.",
+          "dicas": [
+            "Combine com a família uma “senha” ou pergunta que só vocês sabem responder.",
+            "Pedido de dinheiro com pressa? Desligue e ligue de volta para o número que você já tem salvo.",
+            "Antes de qualquer Pix, confira o nome de quem vai receber.",
+            "Nunca passe senhas ou códigos que chegam por mensagem, nem para quem diz ser do banco.",
+            "Salve os contatos com nome e sobrenome, e não só como “filho” ou “mãe”.",
+            "Desconfie de vídeo ou áudio com boca fora de sincronia, voz metálica ou pele “lisa demais”."
+          ],
+          "fontes": [
+            {
+              "nome": "Diário do Pará, como proteger idosos dos golpes com IA (18/7)",
+              "url": "https://diariodopara.com.br/cotidiano/clonagem-de-voz-e-videos-falsos-veja-como-proteger-os-idosos-dos-golpes-com-ia/"
+            }
+          ]
+        }
+      },
+      "mundo": {
+        "abertura": "Só o essencial do que acontece lá fora, e por que pode chegar até aqui.",
+        "itens": [
+          {
+            "titulo": "Petróleo mais barato",
+            "texto": "Os EUA entraram em guerra com o Irã, país do Oriente Médio, e o Irã fechou parte da passagem marítima por onde sai muito do petróleo do mundo. Agora Trump disse que voltar a bombardear é “muito improvável” se houver acordo, e o preço do petróleo caiu. Se continuar assim, pode aliviar o preço dos combustíveis com o tempo.",
+            "selo": "Confirmado",
+            "fontes": [
+              {
+                "nome": "The New Arab, Trump minimiza volta à guerra (9/11)",
+                "url": "https://www.newarab.com/news/trump-plays-down-return-war-chinese-diplomats-tehran"
+              }
+            ]
+          },
+          {
+            "titulo": "Rússia e Ucrânia conversam de novo",
+            "texto": "Nesta terça e quarta (10 e 11/11), representantes da Rússia, da Ucrânia e dos EUA se reúnem em Abu Dhabi, nos Emirados Árabes, para negociar o fim da guerra. Na noite anterior, a Rússia lançou mais de 300 drones (aviõezinhos sem piloto) contra a Ucrânia, segundo o governo ucraniano.",
+            "selo": "Confirmado",
+            "fontes": [
+              {
+                "nome": "Anadolu via aNews, ataques da noite de 8 para 9/11",
+                "url": "https://www.anews.com.tr/world/2026/11/09/russia-ukraine-trade-accusations-about-overnight-strikes-that-kill-1-injure-7"
+              }
+            ]
+          },
+          {
+            "titulo": "Tempo: frio fora de época e El Niño a caminho",
+            "texto": "Uma frente fria forte para novembro chegou até a Bahia e deve ficar no litoral até quarta (11/11), enquanto o interior do Nordeste tem calor de até 41 °C. E vem aí o El Niño, o aquecimento das águas do Oceano Pacífico que muda as chuvas no mundo todo: em outubro, a agência americana de oceanos dava mais de 83% de chance de ele ser forte. No Brasil, costuma trazer seca no Norte e no Nordeste e chuva demais no Sul. Novo boletim sai na quinta (12/11).",
+            "selo": "Confirmado",
+            "fontes": [
+              {
+                "nome": "Climatempo, frente fria de novembro",
+                "url": "https://www.climatempo.com.br/noticia/frio/grande-e-forte-frente-fria-avanca-sobre-o-brasil-entre-7-e-9-de-novembro-de-2026"
+              },
+              {
+                "nome": "NOAA, boletim do El Niño",
+                "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml"
+              }
+            ]
+          },
+          {
+            "titulo": "Uma pedrinha espacial passou, sem perigo",
+            "texto": "Um asteroide pequeno, de 4 a 9 metros, passou pela Terra em 8/11, mais perto que a Lua. Se aparecer manchete assustadora, pode ficar tranquila: ele não tinha nenhuma chance de bater aqui, e objetos desse tamanho queimam no céu antes de chegar ao chão.",
+            "selo": "Confirmado",
+            "fontes": [
+              {
+                "nome": "Fanpage.it, asteroide 2026 VR5 (8/11)",
+                "url": "https://www.fanpage.it/innovazione/scienze/la-nasa-comunica-che-un-asteroide-sta-passando-vicinissimo-alla-terra-in-questi-minuti/"
+              }
+            ]
+          }
+        ]
+      },
+      "palavrinhas": [
+        {
+          "termo": "Emenda constitucional",
+          "def": "Mudança no texto da Constituição. Precisa de muitos votos no Congresso e, depois de promulgada, vale sem precisar da assinatura do presidente."
+        },
+        {
+          "termo": "Medida provisória",
+          "def": "Regra que o presidente cria e que vale na hora, mas que precisa ser aprovada pelo Congresso em alguns meses para não perder a validade."
+        },
+        {
+          "termo": "Maioridade penal",
+          "def": "Idade a partir da qual a pessoa responde por crimes como adulto. Hoje, no Brasil, é 18 anos."
+        },
+        {
+          "termo": "Anvisa",
+          "def": "Agência do governo que autoriza a venda de remédios, vacinas e alimentos no Brasil."
+        },
+        {
+          "termo": "AVC",
+          "def": "Acidente vascular cerebral, o “derrame”: quando o sangue deixa de chegar a uma parte do cérebro."
+        },
+        {
+          "termo": "Estatina",
+          "def": "Remédio para baixar o colesterol, como sinvastatina e atorvastatina."
+        },
+        {
+          "termo": "Inteligência artificial (IA)",
+          "def": "Programas de computador que aprendem com muitos exemplos e conseguem conversar, escrever ou reconhecer imagens."
+        },
+        {
+          "termo": "El Niño",
+          "def": "Aquecimento das águas do Oceano Pacífico que muda o padrão de chuva e de calor em várias partes do mundo."
+        }
+      ],
+      "conversa": [
+        "Na sua família, alguém trabalha na escala 6x1? O que vai mudar na rotina com duas folgas por semana?",
+        "Você usaria uma IA para tirar dúvidas de saúde antes de ir ao médico? Até onde confiaria nela?"
+      ],
+      "agenda": [
+        {
+          "quando": "10 e 11/11",
+          "oque": "Deputados debatem a maioridade penal; Rússia, Ucrânia e EUA negociam em Abu Dhabi"
+        },
+        {
+          "quando": "11/11",
+          "oque": "Lula discursa na conferência do clima, na Turquia; Orçamento de 2027 é apresentado no Congresso"
+        },
+        {
+          "quando": "12/11",
+          "oque": "Novo boletim sobre o El Niño, da agência americana NOAA"
+        },
+        {
+          "quando": "A partir de 16/11",
+          "oque": "Previsão do decreto com os detalhes do fim da escala 6x1"
+        },
+        {
+          "quando": "Meados de dezembro",
+          "oque": "Começa a valer a jornada máxima de 42 horas e as duas folgas"
+        },
+        {
+          "quando": "Até dezembro",
+          "oque": "Promessa do governo de oferecer 23 remédios novos contra o câncer no SUS"
+        }
+      ]
+    }
+  ]
+}

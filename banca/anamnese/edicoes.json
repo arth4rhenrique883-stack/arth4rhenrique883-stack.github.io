@@ -1,0 +1,867 @@
+{
+ "atualizadoEm": "2026-11-10T00:00:00-03:00",
+ "edicoes": [
+  {
+   "id": "2026-11-10",
+   "numero": 1,
+   "data": "2026-11-10",
+   "tempoLeitura": 22,
+   "fechamento": "Fechamento: terça-feira, 10/11/2026, 0h (Brasília). Dados conferidos nas fontes listadas em cada nota.",
+   "ticker": [
+    {
+     "area": "Cardio",
+     "texto": "ZEUS: ziltivekimab derruba PCR em 64% e não reduz MACE (HR 0,99)",
+     "url": "https://www.hcplive.com/view/ziltivekimab-fails-to-reduce-cardiovascular-events-in-ascvd-and-ckd-zeus"
+    },
+    {
+     "area": "Cardio",
+     "texto": "Lp(a)HORIZON: pelacarsen baixa Lp(a) em 78%, mas o desfecho primário é neutro",
+     "url": "https://newsroom.heart.org/news/lp-a-horizon-trial-lp-a-fell-by-78-but-cardiovascular-outcomes-unexpectedly-neutral"
+    },
+    {
+     "area": "Geriatria",
+     "texto": "STREAM: suspender estatina em ≥70 anos multimórbidos é não inferior, com 1 evento a mais a cada 40",
+     "url": "https://www.hcplive.com/view/stream-statin-discontinuation-noninferior-in-older-adults-without-cvd"
+    },
+    {
+     "area": "Onco",
+     "texto": "Vacina de mRNA personalizada + pembrolizumabe: HR 0,58 para recidiva de melanoma",
+     "url": "https://www.onclive.com/view/adjuvant-intismeran-autogene-plus-pembrolizumab-improves-rfs-and-dmfs-in-melanoma"
+    },
+    {
+     "area": "Infecto",
+     "texto": "Ebola Bundibugyo na RDC passa de 10,5 mil casos confirmados; segue como ESPII",
+     "url": "https://www.gov.uk/government/publications/outbreaks-under-monitoring-in-2026/outbreaks-under-monitoring-week-44-week-ending-1-november-2026"
+    },
+    {
+     "area": "Brasil",
+     "texto": "Anvisa aprova semaglutida oral 25 mg para obesidade (4/11)",
+     "url": "https://site.cff.org.br/noticia/Noticias-gerais/05/11/2026/anvisa-aprova-primeiro-medicamento-de-glp-1-oral-para-obesidade"
+    },
+    {
+     "area": "Brasil",
+     "texto": "SUS institui Política Nacional de Informação e Saúde Digital, com CPF como identificador",
+     "url": "https://brasil61.com/n/sus-tera-historico-clinico-integrado-e-ampliacao-de-servicos-digitais-bras2617421"
+    },
+    {
+     "area": "FDA",
+     "texto": "Decisão sobre ivonescimab em NSCLC EGFR+ esperada para 14/11",
+     "url": "https://www.primetherapeutics.com/fda-decisions-expected-november-2026"
+    },
+    {
+     "area": "Pediatria",
+     "texto": "PROSpect (Lancet): prona e HFOV não aumentam dias livres de ventilador na SDRA pediátrica",
+     "url": "https://www.news-medical.net/news/20261106/Routine-pediatric-lung-therapies-do-not-improve-ventilator-free-days.aspx"
+    }
+   ],
+   "capa": {
+    "kicker": "AHA 2026 · Chicago, 7 a 9 de novembro",
+    "titulo": "O biomarcador caiu. O infarto, não.",
+    "linhaFina": "Dois ensaios de fase 3 publicados no NEJM baixaram muito a PCR e a lipoproteína(a), sem reduzir eventos cardiovasculares. É a melhor aula do ano sobre desfecho substituto.",
+    "texto": [
+     "No sábado (7/11), a sessão de abertura dos late-breakers da American Heart Association trouxe dois resultados negativos que a cardiologia esperava positivos. No ZEUS, o ziltivekimab (anticorpo anti-IL-6, 15 mg SC mensal) foi testado em 6.376 pacientes com doença aterosclerótica, DRC e PCR-us ≥ 2 mg/L. A PCR caiu, em mediana, 64 pontos percentuais em relação ao placebo. O MACE de 3 pontos ocorreu em 17,6% contra 17,7% (HR 0,99; IC 95% 0,88–1,11) em 33 meses de seguimento mediano. Houve mais infecções graves e mais tromboembolismo venoso no braço ativo.",
+     "No Lp(a)HORIZON, o pelacarsen (oligonucleotídeo antisense, 80 mg SC mensal) foi dado a 8.323 pacientes com doença cardiovascular estabelecida e Lp(a) ≥ 70 mg/dL. A Lp(a) caiu em média 78%, e o tempo até o primeiro MACE não diferiu do placebo. Houve 19 casos de anafilaxia no grupo pelacarsen e nenhum no placebo. Steven Nissen, um dos líderes, resumiu: o estudo \"não funcionou\", mas isso não torna a Lp(a) irrelevante.",
+     "Os dois estudos partiam de hipóteses fortes. A Lp(a) é fator de risco causal pela genética (randomização mendeliana), e a inflamação já tinha mostrado benefício com canaquinumabe (CANTOS, 2017) e colchicina (COLCOT, 2019; LoDoCo2, 2020). Mudar o número no laboratório não garantiu mudar o desfecho clínico. A pergunta agora é por quê: dose, tempo de exposição, população, via biológica errada ou efeito adverso que anula o benefício."
+    ],
+    "camada": "FATO",
+    "evidencia": "ECR fase 3",
+    "confianca": "Alta",
+    "confiancaMotivo": "Dois ECRs grandes, duplo-cegos, com desfecho clínico duro, publicados no NEJM em 7/11/2026.",
+    "fontes": [
+     {
+      "nome": "HCPLive: ZEUS (NEJM, Ridker et al.)",
+      "url": "https://www.hcplive.com/view/ziltivekimab-fails-to-reduce-cardiovascular-events-in-ascvd-and-ckd-zeus"
+     },
+     {
+      "nome": "AHA Newsroom: Lp(a)HORIZON",
+      "url": "https://newsroom.heart.org/news/lp-a-horizon-trial-lp-a-fell-by-78-but-cardiovascular-outcomes-unexpectedly-neutral"
+     },
+     {
+      "nome": "TCTMD: programa de late-breakers",
+      "url": "https://www.tctmd.com/news/whats-going-be-hot-aha-2026"
+     }
+    ],
+    "citacao": "\"Baixar o número no laboratório não é o mesmo que proteger o paciente.\""
+   },
+   "numeros": [
+    {
+     "val": "HR 0,99",
+     "lab": "ZEUS · MACE",
+     "nota": "PCR −64% e nenhum ganho clínico",
+     "src": {
+      "nome": "NEJM via HCPLive",
+      "url": "https://www.hcplive.com/view/ziltivekimab-fails-to-reduce-cardiovascular-events-in-ascvd-and-ckd-zeus"
+     }
+    },
+    {
+     "val": "−78%",
+     "lab": "Lp(a) com pelacarsen",
+     "nota": "desfecho primário neutro",
+     "src": {
+      "nome": "AHA",
+      "url": "https://newsroom.heart.org/news/lp-a-horizon-trial-lp-a-fell-by-78-but-cardiovascular-outcomes-unexpectedly-neutral"
+     }
+    },
+    {
+     "val": "1 em 40",
+     "lab": "STREAM · NNH em 2 anos",
+     "nota": "evento ou óbito a mais ao parar a estatina",
+     "src": {
+      "nome": "NEJM via HCPLive",
+      "url": "https://www.hcplive.com/view/stream-statin-discontinuation-noninferior-in-older-adults-without-cvd"
+     }
+    },
+    {
+     "val": "HR 0,58",
+     "lab": "INTerpath-001 · RFS",
+     "nota": "vacina mRNA individualizada no melanoma",
+     "src": {
+      "nome": "OncLive",
+      "url": "https://www.onclive.com/view/adjuvant-intismeran-autogene-plus-pembrolizumab-improves-rfs-and-dmfs-in-melanoma"
+     }
+    },
+    {
+     "val": "10.532",
+     "lab": "Bundibugyo · RDC",
+     "nota": "casos confirmados até 1/11; 5.126 óbitos",
+     "src": {
+      "nome": "UKHSA",
+      "url": "https://www.gov.uk/government/publications/outbreaks-under-monitoring-in-2026/outbreaks-under-monitoring-week-44-week-ending-1-november-2026"
+     }
+    }
+   ],
+   "cadernos": [
+    {
+     "id": "cardio",
+     "nome": "Cardiologia e prevenção",
+     "itens": [
+      {
+       "titulo": "STREAM: parar a estatina em idosos multimórbidos é \"não inferior\", mas não é de graça",
+       "camada": "FATO",
+       "evidencia": "ECR aberto",
+       "confianca": "Média",
+       "data": "7/11/2026",
+       "texto": "1.880 pessoas com ≥ 70 anos (média 77,5), duas ou mais doenças crônicas e sem doença aterosclerótica conhecida foram randomizadas para continuar ou suspender a estatina de prevenção primária, na Suíça, Holanda e França. A não inferioridade foi atingida pela sobrevida livre de eventos restrita à média: 96,5 contra 98,5 semanas em 2 anos (diferença −2,0 semanas, dentro da margem de −5,2). Mas o desfecho primário (IAM não fatal, AVC isquêmico não fatal ou óbito) ocorreu em 12,7% contra 9,2% (HR 1,38; IC 95% 1,05–1,81). Os autores estimam 1 evento a mais a cada 40 pessoas que param. O LDL subiu de 99 para 176 mg/dL. Não houve ganho em qualidade de vida, dor, quedas ou sarcopenia. Publicado no NEJM (Rodondi et al.).",
+       "prova": "Desprescrição em idosos é tema de geriatria e clínica. Saiba explicar por que um estudo pode ser \"não inferior\" com HR > 1: a margem foi definida em semanas de vida livre de eventos, não em risco relativo.",
+       "fontes": [
+        {
+         "nome": "HCPLive",
+         "url": "https://www.hcplive.com/view/stream-statin-discontinuation-noninferior-in-older-adults-without-cvd"
+        }
+       ]
+      },
+      {
+       "titulo": "ZEUS fecha (por ora) a porta da IL-6 na aterosclerose com DRC",
+       "camada": "ANALISE",
+       "evidencia": "ECR fase 3",
+       "confianca": "Média",
+       "data": "7/11/2026",
+       "texto": "A hipótese inflamatória não morreu: canaquinumabe e colchicina reduziram eventos em ECRs anteriores. O ZEUS mostra que bloquear a IL-6, nessa população (DRC, 66% com diabetes, 42% com IC), não traduziu a queda da PCR em menos MACE, e trouxe sinal de infecção grave e TEV. Uma leitura possível é que a PCR seja marcador de risco, não o alvo causal. Outra é que a população com DRC tenha muitos mecanismos concorrentes de evento. Os dados não permitem decidir entre elas.",
+       "prova": "Revise a sequência CANTOS (2017) → COLCOT (2019) → LoDoCo2 (2020) → ZEUS (2026). É uma ótima pergunta de discursiva sobre inflamação e aterosclerose.",
+       "fontes": [
+        {
+         "nome": "HCPLive",
+         "url": "https://www.hcplive.com/view/ziltivekimab-fails-to-reduce-cardiovascular-events-in-ascvd-and-ckd-zeus"
+        }
+       ]
+      },
+      {
+       "titulo": "Arritmia, AVC e pressão: o que mais saiu da AHA",
+       "camada": "FATO",
+       "evidencia": "Programa do congresso",
+       "confianca": "Média",
+       "data": "7–9/11/2026",
+       "texto": "O programa incluiu REDUCE (espironolactona após AVC), OPTIMAL-Stroke e OPTIMAL-Diabetes (controle pressórico intensivo), Ez-PAVE (estatina + ezetimiba), OptimPacing (estimulação do sistema de condução vs. VD no BAV), COAST-AF (ablação guiada por áreas de baixa voltagem na FA persistente) e SYNCHRONIZE-CVOT (survodutida, agonista GLP-1/glucagon). Até o fechamento desta edição, não conferimos os números finais desses estudos em fonte independente. Eles entram nas próximas edições.",
+       "prova": "Estimulação do ramo esquerdo (LBBAP) e controle pressórico intensivo são temas quentes de residência em cardiologia.",
+       "fontes": [
+        {
+         "nome": "TCTMD: programa",
+         "url": "https://www.tctmd.com/news/whats-going-be-hot-aha-2026"
+        }
+       ]
+      }
+     ],
+     "box": {
+      "titulo": "Na prática, hoje",
+      "texto": "Nenhum desses estudos muda a dosagem da Lp(a): ela continua indicada uma vez na vida para estratificar risco, segundo a própria liderança do Lp(a)HORIZON. Outras drogas anti-Lp(a) (olpasirana, lepodisirana, muvalaplina) seguem em ensaios de desfecho. [CENÁRIO] Probabilidade de ao menos uma delas ser positiva: incerta, ~40%. O Lp(a)HORIZON baixou o otimismo, mas mecanismos e doses diferem."
+     }
+    },
+    {
+     "id": "onco",
+     "nome": "Oncologia",
+     "itens": [
+      {
+       "titulo": "Vacina de mRNA feita para o tumor de cada paciente reduz recidiva de melanoma",
+       "camada": "FATO",
+       "evidencia": "ECR fase 3",
+       "confianca": "Alta",
+       "data": "24/10/2026 (ESMO, LBA1)",
+       "texto": "No INTerpath-001, 1.137 pacientes com melanoma cutâneo ressecado estádio IIB–IV receberam pembrolizumabe com intismeran autogene (terapia de neoantígenos individualizada, Moderna/MSD) ou com placebo. RFS: HR 0,58 (IC 95% 0,45–0,75); 82,2% contra 70,0% livres de recidiva em 24 meses. Metástase à distância: HR 0,62. Sobrevida global ainda imatura (HR 0,77; IC 0,45–1,31; não significativa). A curva só se separa depois do 6º mês (HR 0,42 a partir daí), coerente com o tempo de fabricação da vacina e de resposta das células T. Efeitos mais comuns: febre (52%), dor no local e síndrome gripal. Publicação completa no NEJM prevista para 11/11.",
+       "prova": "Diferencie RFS, DMFS e OS. Um examinador pode perguntar por que OS imatura não invalida o resultado e por que ainda não o confirma.",
+       "fontes": [
+        {
+         "nome": "OncLive",
+         "url": "https://www.onclive.com/view/adjuvant-intismeran-autogene-plus-pembrolizumab-improves-rfs-and-dmfs-in-melanoma"
+        },
+        {
+         "nome": "Resumo ESMO 2026",
+         "url": "https://lifesciencedaily.news/?p=15694"
+        }
+       ]
+      },
+      {
+       "titulo": "ESMO 2026 em quatro linhas",
+       "camada": "FATO",
+       "evidencia": "ECR fase 3",
+       "confianca": "Média",
+       "data": "23–27/10/2026, Madri",
+       "texto": "DeLLphi-305: tarlatamabe (biespecífico DLL3×CD3) + durvalumabe na manutenção do CPPC extenso, OS mediana 21,1 vs 12,7 meses (HR 0,42). Krascendo 1: divarasibe vs sotorasibe/adagrasibe no NSCLC KRAS G12C, OS 17,7 vs 12,0 meses (HR 0,56). VOLGA: durvalumabe + enfortumabe vedotina perioperatórios em câncer de bexiga musculoinvasivo inelegível a cisplatina, EFS HR 0,51 e pCR 45% vs 10%. HARMONi-GI1: ivonescimabe (biespecífico PD-1×VEGF) + gemcitabina/cisplatina vs durvalumabe + quimio em vias biliares, OS 14,9 vs 12,1 meses (HR 0,75).",
+       "prova": "Saiba o que é um anticorpo biespecífico e um ADC (conjugado anticorpo-fármaco): aparecem cada vez mais em provas de clínica e oncologia.",
+       "fontes": [
+        {
+         "nome": "Life Science Daily: 5 resultados",
+         "url": "https://lifesciencedaily.news/?p=15694"
+        },
+        {
+         "nome": "CancerNetwork: HARMONi-GI1",
+         "url": "https://www.cancernetwork.com/view/ivonescimab-combo-improves-survival-in-advanced-biliary-tract-cancer"
+        }
+       ]
+      },
+      {
+       "titulo": "Anvisa registra sugemalimabe; SUS promete 23 oncológicos até dezembro",
+       "camada": "FATO",
+       "evidencia": "Regulatório",
+       "confianca": "Alta",
+       "data": "22–29/10/2026",
+       "texto": "A Anvisa aprovou o sugemalimabe (anti-PD-L1), com platina, na 1ª linha do NSCLC metastático sem EGFR, ALK, ROS1 ou RET (RE 4.190, de 22/10), usando reliance com a EMA. Em 29/10, o Ministério da Saúde reafirmou a faixa de rastreamento mamográfico de 40 a 74 anos (mudança feita em 2025), incorporou teste genético para câncer de mama hereditário e prometeu 23 novos oncológicos até dezembro, sem divulgar a lista.",
+       "prova": "Rastreamento de câncer de mama: compare a regra atual do SUS (40–74) com a recomendação anterior (50–69, bienal) e com a USPSTF.",
+       "fontes": [
+        {
+         "nome": "CFF: sugemalimabe",
+         "url": "https://site.cff.org.br/noticia/Noticias-gerais/26/10/2026/anvisa-aprova-medicamento-para-tipo-de-cancer-de-pulmao-que-representa-ate-85-dos-casos"
+        },
+        {
+         "nome": "Sanar: SUS e Outubro Rosa",
+         "url": "https://sanarmed.com/noticias/sus-amplia-mamografia-faixa-40-74-23-medicamentos-oncologicos/"
+        }
+       ]
+      }
+     ],
+     "box": {
+      "titulo": "Para ler com calma",
+      "texto": "HR de RFS bonito não é cura. O INTerpath-001 teve OS imatura e descontinuação por evento adverso maior no braço combinado (16,6% vs 9,5%). A decisão regulatória vai depender da maturidade da sobrevida."
+     }
+    },
+    {
+     "id": "infecto",
+     "nome": "Infectologia e saúde global",
+     "itens": [
+      {
+       "titulo": "Ebola Bundibugyo: o maior surto já visto dessa espécie, sem vacina aprovada",
+       "camada": "FATO",
+       "evidencia": "Vigilância",
+       "confianca": "Alta",
+       "data": "até 1/11/2026",
+       "texto": "Declarado em 15/5 em Ituri (RDC) e classificado como ESPII pela OMS em 17/5, o surto soma 10.532 casos e 5.126 óbitos confirmados na RDC até 1/11, em 67 zonas de saúde de 8 províncias, com 472 casos novos na última semana. Houve casos no Quênia (9), em Uganda (20, surto encerrado em 27/8) e um caso na Nigéria, evacuado para a Suíça. Não há vacina nem terapia aprovadas para o vírus Bundibugyo; o Ervebo é específico para o Zaire. Em teste: plataforma PARTNERS (anticorpo MBP134 e remdesivir), profilaxia pós-exposição com obeldesivir oral (EBO-PEP BUNDI) e vacinas ChAdOx1-BDBV (fase 1 em Oxford), mRNA e rVSV.",
+       "prova": "Febres hemorrágicas virais: precauções, notificação imediata e definição de caso suspeito em viajantes. A letalidade bruta aqui é cerca de 49% entre confirmados.",
+       "fontes": [
+        {
+         "nome": "UKHSA, semana 44",
+         "url": "https://www.gov.uk/government/publications/outbreaks-under-monitoring-in-2026/outbreaks-under-monitoring-week-44-week-ending-1-november-2026"
+        },
+        {
+         "nome": "OMS: declaração de ESPII",
+         "url": "https://www.who.int/news/item/17-05-2026-epidemic-of-ebola-disease-in-the-democratic-republic-of-the-congo-and-uganda-determined-a-public-health-emergency-of-international-concern"
+        },
+        {
+         "nome": "IPPS: contramedidas, dia 75",
+         "url": "https://ippsecretariat.org/news/ebola-bundibugyo-day-75-tracking-progress-on-medical-countermeasures/"
+        }
+       ]
+      },
+      {
+       "titulo": "H5N1 e H1N1v: dois sinais para vigiar",
+       "camada": "FATO",
+       "evidencia": "Vigilância",
+       "confianca": "Alta",
+       "data": "30/9–1/11/2026",
+       "texto": "Nos EUA, o condado de Yakima (Washington) teve dois novos casos humanos de H5N1 ligados a gado leiteiro, um fatal (31/10). São 72 casos humanos de H5 no país desde 2024; o risco para a população geral segue avaliado como baixo. No Brasil, foi confirmado um caso de influenza suína A(H1N1)v em Santa Catarina, em mulher com doenças crônicas que morreu em 28/8.",
+       "prova": "Influenza variante (v) é infecção humana por vírus de origem suína: é de notificação e investigação obrigatórias.",
+       "fontes": [
+        {
+         "nome": "UKHSA, semana 44",
+         "url": "https://www.gov.uk/government/publications/outbreaks-under-monitoring-in-2026/outbreaks-under-monitoring-week-44-week-ending-1-november-2026"
+        }
+       ]
+      },
+      {
+       "titulo": "ESBL na bacteremia: pip-tazo volta ao debate",
+       "camada": "ANALISE",
+       "evidencia": "Análise interina",
+       "confianca": "Baixa",
+       "data": "24/7/2026",
+       "texto": "Análise interina do PETERPEN (piperacilina-tazobactam vs meropenem em bacteremia por E. coli e K. pneumoniae produtoras de ESBL) não mostrou diferença em falha terapêutica. O MERINO (JAMA, 2018) tinha mostrado mais mortes com pip-tazo. Até sair a mortalidade final, o carbapenêmico segue como padrão.",
+       "prova": "MERINO é pergunta clássica: carbapenêmico é a escolha para bacteremia grave por ESBL.",
+       "fontes": [
+        {
+         "nome": "Contagion Live",
+         "url": "https://www.contagionlive.com/shorts/peterpen-data-piperacillin-tazobactam"
+        }
+       ]
+      },
+      {
+       "titulo": "Hepatite B: FDA aprova o primeiro antisense, bepirovirsen",
+       "camada": "FATO",
+       "evidencia": "Regulatório",
+       "confianca": "Alta",
+       "data": "20/10/2026",
+       "texto": "O bepirovirsen (GSK) foi aprovado nos EUA para hepatite B crônica sem cirrose, com antiviral, em pacientes com HBsAg ≤ 3.000 UI/mL, com base nos estudos B-Well 1 e 2. O alvo é a chamada cura funcional: perda sustentada do HBsAg, algo raro com os análogos nucleos(t)ídeos.",
+       "prova": "Revise a sorologia da hepatite B (HBsAg, anti-HBc, HBeAg, anti-HBs) e o que é cura funcional versus supressão viral.",
+       "fontes": [
+        {
+         "nome": "AJMC: aprovações de outubro",
+         "url": "https://www.ajmc.com/view/october-fda-approvals-bring-advances-across-5-specialties"
+        }
+       ]
+      }
+     ],
+     "box": {
+      "titulo": "E o Brasil?",
+      "texto": "O risco de Bundibugyo no Brasil é muito baixo, mas um caso importado em viajante é o cenário que testa o sistema. Os hospitais de referência e o protocolo do Ministério para doença pelo vírus Ebola valem para todas as espécies."
+     }
+    },
+    {
+     "id": "neuro",
+     "nome": "Neurologia",
+     "itens": [
+      {
+       "titulo": "Fator XI: asundexian aguarda o FDA para prevenção secundária de AVC",
+       "camada": "FATO",
+       "evidencia": "ECR fase 3",
+       "confianca": "Alta",
+       "data": "NEJM, abril/2026; decisão FDA em nov/2026",
+       "texto": "O OCEANIC-STROKE, publicado no NEJM em abril, mostrou que o asundexian (inibidor oral do fator XIa), somado à antiagregação, reduziu AVC isquêmico recorrente após AVC não cardioembólico ou AIT de alto risco, sem aumento significativo de sangramento maior. A decisão do FDA está prevista para novembro. A ideia por trás: o fator XI pesa mais na trombose do que na hemostasia.",
+       "prova": "Prevenção secundária do AVC: antiagregação, estatina, controle pressórico e, na FA, anticoagulação. O fator XI é a fronteira.",
+       "fontes": [
+        {
+         "nome": "NeurologyLive",
+         "url": "https://www.neurologylive.com/view/newly-published-phase-3-oceanic-stroke-trial-data-show-asundexian-reduces-recurrent-ischemic-stroke-risk"
+        },
+        {
+         "nome": "Prime: decisões do FDA",
+         "url": "https://www.primetherapeutics.com/fda-decisions-expected-november-2026"
+        }
+       ]
+      },
+      {
+       "titulo": "Alzheimer: o alvo tau ainda engatinha",
+       "camada": "FATO",
+       "evidencia": "ECR fase 2",
+       "confianca": "Média",
+       "data": "AAIC, julho/2026",
+       "texto": "O diranersen (antisense intratecal contra tau, Biogen) errou o desfecho primário na fase 2 (416 pessoas), mas reduziu biomarcadores de tau e vai à fase 3. O anticorpo anti-tau posdinemabe (J&J) não desacelerou o declínio e foi descontinuado. O mirodenafil (AR1001) terá dados de fase 3 no CTAD, em Boston.",
+       "prova": "Amiloide vs tau: os anti-amiloides (lecanemabe, donanemabe) têm ARIA como efeito adverso típico. Saiba o que é ARIA-E e ARIA-H.",
+       "fontes": [
+        {
+         "nome": "Being Patient: AAIC 2026",
+         "url": "https://beingpatient.com/?p=124582"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "endo",
+     "nome": "Endocrinologia, metabolismo e rim",
+     "itens": [
+      {
+       "titulo": "Semaglutida em comprimido para obesidade chega ao Brasil",
+       "camada": "FATO",
+       "evidencia": "Regulatório",
+       "confianca": "Alta",
+       "data": "4/11/2026",
+       "texto": "A Anvisa aprovou a semaglutida oral 25 mg (RE 4.249/2026) para IMC ≥ 30, ou ≥ 27 com comorbidade, com escalonamento 1,5 → 4 → 9 → 25 mg. No OASIS 4 (64 semanas), a perda média passou de 13% do peso. O comprimido precisa ser tomado em jejum, com pouca água, 30 minutos antes de comer ou de outros remédios, por causa do absorvedor SNAC. Preço não divulgado.",
+       "prova": "Mecanismo dos agonistas GLP-1, contraindicações (história de carcinoma medular de tireoide/NEM 2) e efeitos gastrointestinais.",
+       "fontes": [
+        {
+         "nome": "CFF",
+         "url": "https://site.cff.org.br/noticia/Noticias-gerais/05/11/2026/anvisa-aprova-primeiro-medicamento-de-glp-1-oral-para-obesidade"
+        }
+       ]
+      },
+      {
+       "titulo": "Kidney Week: a nefropatia por IgA vive uma revolução",
+       "camada": "FATO",
+       "evidencia": "ECR fase 3",
+       "confianca": "Média",
+       "data": "23–26/10/2026",
+       "texto": "Inibidores de BAFF/APRIL dominaram: povetacicept reduziu a proteinúria (UPCR) em 52% vs 4% (RAINIER, interina), e telitacicept manteve a TFG quase estável em 104 semanas (−0,6 vs −5,7 mL/min/1,73 m²/ano). No ATTACK, aspirina 75 mg em prevenção primária na DRC não reduziu eventos de forma significativa (HR 0,73; IC 0,52–1,03) e teve mais sangramento maior (29 vs 19). Um crossover pequeno (30 pacientes) não mostrou alta de potássio com dieta liberada em frutas e vegetais.",
+       "prova": "IgAN é a glomerulonefrite primária mais comum no mundo. Saiba a apresentação clássica: hematúria após infecção de vias aéreas.",
+       "fontes": [
+        {
+         "nome": "HCPLive: 8 destaques",
+         "url": "https://www.hcplive.com/view/asn-kidney-week-2026-recap-8-key-updates-in-kidney-disease-to-know"
+        }
+       ]
+      }
+     ],
+     "box": {
+      "titulo": "14 de novembro",
+      "texto": "Dia Mundial do Diabetes, data de nascimento de Frederick Banting (1891), que isolou a insulina com Charles Best em Toronto em 1921."
+     }
+    },
+    {
+     "id": "ped",
+     "nome": "Pediatria, mulher e cirurgia",
+     "itens": [
+      {
+       "titulo": "PROSpect: prona e HFOV não ajudam na SDRA pediátrica",
+       "camada": "FATO",
+       "evidencia": "ECR fatorial",
+       "confianca": "Alta",
+       "data": "Lancet, nov/2026",
+       "texto": "424 crianças com SDRA pediátrica moderada a grave, em 75 hospitais de 18 países, num desenho fatorial 2×2. Nem a posição prona nem a ventilação oscilatória de alta frequência aumentaram os dias livres de ventilador até o dia 28. Mortalidade de 10% em 28 dias, igual entre grupos. A prona trouxe mais obstrução de via aérea e lesão por pressão; a HFOV, mais instabilidade hemodinâmica.",
+       "prova": "Contraste com o adulto: no PROSEVA (2013) a prona reduziu mortalidade na SDRA grave. Criança não é adulto pequeno.",
+       "fontes": [
+        {
+         "nome": "News-Medical",
+         "url": "https://www.news-medical.net/news/20261106/Routine-pediatric-lung-therapies-do-not-improve-ventilator-free-days.aspx"
+        }
+       ]
+      },
+      {
+       "titulo": "Apendicite: antibiótico antes da cirurgia não evita perfuração",
+       "camada": "FATO",
+       "evidencia": "ECR aberto",
+       "confianca": "Alta",
+       "data": "JAMA Surgery, 2025",
+       "texto": "Clássico recente para a prova. No PERFECT-Antibiotics (1.774 pacientes, Finlândia e Noruega), antibiótico pré-operatório enquanto se espera a apendicectomia não reduziu a perfuração (8,3% vs 8,9%). Reduziu infecção de sítio cirúrgico (1,6% vs 3,2%; NNT 63) e intra-abdominal (0,7% vs 1,9%).",
+       "prova": "Saiba calcular NNT a partir da redução absoluta de risco: 1 / (0,032 − 0,016) ≈ 63.",
+       "fontes": [
+        {
+         "nome": "MDedge",
+         "url": "https://mdedge.com/content/antibiotics-pre-appendectomy-dont-lower-perforation-risk-reduce-infections"
+        }
+       ]
+      },
+      {
+       "titulo": "Diálise: vaso bioengenheirado em mulheres",
+       "camada": "FATO",
+       "evidencia": "Análise interina",
+       "confianca": "Média",
+       "data": "Kidney Week, out/2026",
+       "texto": "No V012, mulheres em hemodiálise com vaso acelular bioengenheirado (ATEV) ficaram 220 dias sem cateter em 12 meses, contra 129 com fístula arteriovenosa, e tiveram menos infecção de acesso (5,1% vs 15%). A fístula falha mais em mulheres, em parte pelo calibre menor dos vasos.",
+       "prova": "Acesso vascular para hemodiálise: fístula > enxerto > cateter, em regra.",
+       "fontes": [
+        {
+         "nome": "HCPLive: Kidney Week",
+         "url": "https://www.hcplive.com/view/asn-kidney-week-2026-recap-8-key-updates-in-kidney-disease-to-know"
+        }
+       ]
+      }
+     ],
+     "box": {
+      "titulo": "Ginecologia e obstetrícia nesta edição",
+      "texto": "Os destaques da semana em GO vieram do SUS (mamografia 40–74, teste genético para câncer de mama hereditário) e de uma experiência na Nigéria em que o ECG com IA no pré-natal dobrou a detecção de cardiomiopatia periparto. Uma seção maior de obstetrícia volta na próxima edição."
+     }
+    },
+    {
+     "id": "mental",
+     "nome": "Saúde mental",
+     "itens": [
+      {
+       "titulo": "Olanzapina injetável mensal sem observação pós-dose",
+       "camada": "FATO",
+       "evidencia": "Regulatório",
+       "confianca": "Alta",
+       "data": "9/10/2026",
+       "texto": "O FDA aprovou a olanzapina de liberação prolongada subcutânea mensal (Weltruza, Teva) para esquizofrenia em adultos, sem suplementação oral e sem o monitoramento pós-injeção exigido pela formulação antiga por causa da síndrome de delirium/sedação pós-injeção.",
+       "prova": "Antipsicóticos de depósito melhoram adesão; lembre a síndrome metabólica associada à olanzapina.",
+       "fontes": [
+        {
+         "nome": "Patient Care",
+         "url": "https://www.patientcareonline.com/view/4-fda-decisions-for-primary-care-to-know-from-october-2026"
+        }
+       ]
+      },
+      {
+       "titulo": "Psilocibina e bupropiona: dois negativos que ensinam",
+       "camada": "ANALISE",
+       "evidencia": "ECR",
+       "confianca": "Média",
+       "data": "2026",
+       "texto": "No EPISODE (JAMA Psychiatry, 2026; 144 adultos com depressão resistente), psilocibina 25 mg não superou o placebo ativo no desfecho primário (resposta 17,0% vs 10,6%; OR 1,73, IC 0,53–6,23). No CONCORD (Kidney Week), bupropiona e ativação comportamental não superaram o controle para depressão em DRC. Placebo ativo e cegamento são difíceis em psiquiatria, e isso pesa em ambos.",
+       "prova": "Saiba o que é placebo ativo e por que ele é usado em estudos com psicodélicos.",
+       "fontes": [
+        {
+         "nome": "Resumo do EPISODE",
+         "url": "https://s4me.info/threads/efficacy-and-safety-of-psilocybin-in-treatment-resistant-major-depression-the-episode-randomized-clinical-trial-2026-mertens-et-al.49404"
+        },
+        {
+         "nome": "HCPLive: CONCORD",
+         "url": "https://www.hcplive.com/view/asn-kidney-week-2026-recap-8-key-updates-in-kidney-disease-to-know"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "sus",
+     "nome": "SUS, IA e tecnologia médica",
+     "itens": [
+      {
+       "titulo": "Política Nacional de Informação e Saúde Digital: histórico clínico integrado e CPF",
+       "camada": "FATO",
+       "evidencia": "Normativo",
+       "confianca": "Alta",
+       "data": "28/10/2026",
+       "texto": "A Portaria GM/MS nº 12.301 instituiu a PNISD: histórico clínico unificado que acompanha o paciente, CPF como identificador prioritário, proteção de dados e soberania digital. São 63 Núcleos de Telessaúde, com mais de 12 milhões de atendimentos desde janeiro de 2025. O plano de ação deve ser pactuado na CIT em até 180 dias.",
+       "prova": "Saiba o que é a CIT (Ministério, Conass e Conasems) e o princípio da integralidade.",
+       "fontes": [
+        {
+         "nome": "Brasil 61",
+         "url": "https://brasil61.com/n/sus-tera-historico-clinico-integrado-e-ampliacao-de-servicos-digitais-bras2617421"
+        }
+       ]
+      },
+      {
+       "titulo": "IA na consulta: o que a Resolução CFM 2.454/2026 permite",
+       "camada": "FATO",
+       "evidencia": "Normativo",
+       "confianca": "Alta",
+       "data": "11/2/2026",
+       "texto": "O CFM normatizou o uso de IA na prática médica: a ferramenta apoia, mas a decisão e a responsabilidade são do médico. Em abril, um estudo na Science (Harvard e Beth Israel) mostrou um modelo de raciocínio igualando ou superando internistas no diagnóstico com dados reais de pronto-socorro, só com texto. Os autores pedem ensaios prospectivos antes de qualquer uso clínico.",
+       "prova": "Pense em viés de automação: quando o médico confia demais na sugestão da máquina.",
+       "fontes": [
+        {
+         "nome": "CFM",
+         "url": "https://portal.cfm.org.br/noticias/cfm-normatiza-uso-da-ia-na-medicina"
+        },
+        {
+         "nome": "NPR/Michigan Public",
+         "url": "https://www.michiganpublic.org/2026-04-30/in-real-world-test-an-ai-model-did-better-than-doctors-at-diagnosing-patients"
+        }
+       ]
+      },
+      {
+       "titulo": "AHA dedicou uma sessão inteira a IA diagnóstica",
+       "camada": "FATO",
+       "evidencia": "Programa do congresso",
+       "confianca": "Média",
+       "data": "9/11/2026",
+       "texto": "WATCH-LV (ECG de smartwatch com IA para disfunção de VE), AI ECHO INSIGHT (eco assistido por IA), PROVAR+ (tele-ECG com IA para cardiopatia estrutural em populações desassistidas) e LIFE-AI (placa coronária por IA + FFR-TC). Os números ainda não foram conferidos em fonte independente e entram na próxima edição.",
+       "prova": "Sensibilidade, especificidade e valor preditivo dependem da prevalência: um teste com IA em população de baixo risco gera muitos falsos positivos.",
+       "fontes": [
+        {
+         "nome": "MarketScale",
+         "url": "https://www.marketscale.com/industries/healthcare/ai-aha-2026-built-for-everyone-medina-inojosa.md"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "leituraCritica": [
+    {
+     "titulo": "Quando o biomarcador mente: uma breve história",
+     "texto": [
+      "Em 1989, o CAST mostrou que encainida e flecainida, que suprimiam extrassístoles após o infarto, aumentavam a mortalidade. Em 2007, o torcetrapibe (ILLUMINATE) subiu o HDL e aumentou mortes. Em 2011, a niacina (AIM-HIGH) subiu o HDL sem benefício. Em 2026, ZEUS e Lp(a)HORIZON entram nessa lista, com a ressalva de que nenhum deles aumentou mortalidade.",
+      "Regra de bolso: um desfecho substituto só é confiável quando já foi validado por ECRs com desfecho clínico para aquela classe de droga. O LDL é o exemplo de sucesso: estatinas, ezetimiba e inibidores de PCSK9 baixaram LDL e eventos. Cada nova via precisa provar o mesmo."
+     ]
+    },
+    {
+     "titulo": "Como ler um estudo de não inferioridade (o caso STREAM)",
+     "texto": [
+      "1. Qual é a margem e como foi escolhida? No STREAM, −5,2 semanas de vida livre de eventos em 2 anos.",
+      "2. O estudo é aberto? Sim, o que pode influenciar condutas e relatos.",
+      "3. O que dizem os números absolutos? 12,7% vs 9,2%: cerca de 3,5 pontos percentuais, ou NNH de aproximadamente 29 pelo cálculo bruto e de 40 pela estimativa dos autores em 2 anos.",
+      "4. O que se ganhou em troca? Nada mensurável em qualidade de vida, dor ou quedas. \"Não inferior\" não quer dizer \"igual\". Quer dizer \"não pior que o tolerável\", e quem define o tolerável é o pesquisador, antes do estudo."
+     ]
+    }
+   ],
+   "aprovacoes": {
+    "fda": [
+     {
+      "farmaco": "Remibrutinibe (Rhapsido)",
+      "indicacao": "Dermografismo sintomático refratário a anti-H1",
+      "data": "7/10/2026",
+      "status": "Aprovado"
+     },
+     {
+      "farmaco": "Olanzapina LP SC (Weltruza)",
+      "indicacao": "Esquizofrenia, dose mensal",
+      "data": "9/10/2026",
+      "status": "Aprovado"
+     },
+     {
+      "farmaco": "Satralizumabe (Enspryng)",
+      "indicacao": "Doença ocular tireoidiana",
+      "data": "15/10/2026",
+      "status": "Aprovado"
+     },
+     {
+      "farmaco": "Bepirovirsen (Hibsago)",
+      "indicacao": "Hepatite B crônica sem cirrose",
+      "data": "20/10/2026",
+      "status": "Aprovado"
+     },
+     {
+      "farmaco": "Ivonescimabe",
+      "indicacao": "NSCLC não escamoso EGFR+ pós-TKI, com quimio",
+      "data": "14/11/2026",
+      "status": "Em análise"
+     },
+     {
+      "farmaco": "Neladalquibe",
+      "indicacao": "NSCLC ALK+ pré-tratado",
+      "data": "27/11/2026",
+      "status": "Em análise"
+     },
+     {
+      "farmaco": "Povetacicept",
+      "indicacao": "Nefropatia por IgA (acelerada)",
+      "data": "30/11/2026",
+      "status": "Em análise"
+     },
+     {
+      "farmaco": "Giredestranto",
+      "indicacao": "Adjuvante, mama inicial RE+/HER2−",
+      "data": "30/11/2026",
+      "status": "Em análise"
+     },
+     {
+      "farmaco": "Asundexian",
+      "indicacao": "Prevenção secundária de AVC/AIT",
+      "data": "nov/2026",
+      "status": "Em análise"
+     }
+    ],
+    "anvisa": [
+     {
+      "farmaco": "Sugemalimabe (Cejemly)",
+      "indicacao": "NSCLC metastático, 1ª linha, com platina",
+      "data": "22/10/2026",
+      "status": "Registrado"
+     },
+     {
+      "farmaco": "Semaglutida oral 25 mg (Wegovy)",
+      "indicacao": "Obesidade e sobrepeso com comorbidade",
+      "data": "4/11/2026",
+      "status": "Registrado"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "AJMC: FDA outubro",
+      "url": "https://www.ajmc.com/view/october-fda-approvals-bring-advances-across-5-specialties"
+     },
+     {
+      "nome": "Prime Therapeutics: FDA novembro",
+      "url": "https://www.primetherapeutics.com/fda-decisions-expected-november-2026"
+     },
+     {
+      "nome": "CFF: sugemalimabe",
+      "url": "https://site.cff.org.br/noticia/Noticias-gerais/26/10/2026/anvisa-aprova-medicamento-para-tipo-de-cancer-de-pulmao-que-representa-ate-85-dos-casos"
+     },
+     {
+      "nome": "CFF: semaglutida oral",
+      "url": "https://site.cff.org.br/noticia/Noticias-gerais/05/11/2026/anvisa-aprova-primeiro-medicamento-de-glp-1-oral-para-obesidade"
+     }
+    ]
+   },
+   "historia": [
+    {
+     "titulo": "8 de novembro de 1895: a mão de Anna Bertha",
+     "texto": "Wilhelm Röntgen observou que um tubo de raios catódicos coberto fazia brilhar uma tela fluorescente do outro lado da sala. Semanas depois, radiografou a mão da esposa, com o anel visível. Ganhou o primeiro Nobel de Física (1901) e não patenteou a descoberta. Em menos de um ano, os raios X já eram usados para achar projéteis em feridos."
+    },
+    {
+     "titulo": "Por que \"Ebola\" e por que \"Bundibugyo\"",
+     "texto": "Em 1976, a equipe que investigou o surto de Yambuku (então Zaire) escolheu o nome de um rio próximo, o Ebola, para não estigmatizar a aldeia. A espécie Bundibugyo foi identificada em 2007, num surto no distrito de mesmo nome, no oeste de Uganda. O surto atual é de longe o maior já registrado dessa espécie."
+    },
+    {
+     "titulo": "Toronto, 1922: o menino Leonard Thompson",
+     "texto": "Em janeiro de 1922, um adolescente de 14 anos com diabetes tipo 1 recebeu o primeiro extrato de insulina de Banting e Best. A primeira dose falhou por impurezas; a purificação de James Collip tornou a segunda eficaz. Banting dividiu o prêmio do Nobel com Best, e Macleod dividiu o seu com Collip."
+    },
+    {
+     "titulo": "A estatina nasceu de um fungo",
+     "texto": "Em 1973, Akira Endo isolou a mevastatina de um fungo Penicillium, depois de testar milhares de culturas. O 4S (1994), com sinvastatina, foi o primeiro grande ECR a mostrar redução de mortalidade total. Três décadas depois, o STREAM pergunta quando parar."
+    }
+   ],
+   "fronteiras": [
+    {
+     "pergunta": "A Lp(a) é causal, mas é tratável?",
+     "texto": "A genética diz que níveis altos causam doença. O Lp(a)HORIZON diz que baixá-la com antisense, nessa dose e nesse tempo, não reduziu eventos. Ensaios com olpasirana, lepodisirana e muvalaplina vão dizer se o problema é a molécula ou a hipótese."
+    },
+    {
+     "pergunta": "Dá para anticoagular sem sangrar?",
+     "texto": "Os inibidores do fator XI apostam que trombose e hemostasia usam vias parcialmente distintas. O OCEANIC-STROKE é o primeiro grande sucesso em AVC. Falta saber se vale para FA, onde a classe já teve tropeços."
+    },
+    {
+     "pergunta": "Vacina contra o próprio câncer funciona em sobrevida?",
+     "texto": "O INTerpath-001 mostrou menos recidiva. A sobrevida global ainda está imatura. Também não se sabe se a abordagem funciona em tumores com menos mutações que o melanoma, como pâncreas e próstata."
+    },
+    {
+     "pergunta": "Quanto tempo leva para fazer uma vacina para uma espécie nova de Ebola?",
+     "texto": "Contra o Zaire, o rVSV-ZEBOV levou décadas de pesquisa até o Ervebo (2019). Contra o Bundibugyo, a fase 1 começou cerca de 70 dias após a declaração do surto. A plataforma existe, mas eficácia em campo ainda não."
+    }
+   ],
+   "estudo": {
+    "temas": [
+     {
+      "tema": "Prevenção cardiovascular no idoso e desprescrição",
+      "porque": "STREAM, estatinas em prevenção primária e polifarmácia caem em clínica médica e geriatria."
+     },
+     {
+      "tema": "Prevenção secundária do AVC",
+      "porque": "Antiagregação dupla por tempo limitado, alvo pressórico, estatina e a chegada do fator XI."
+     },
+     {
+      "tema": "Febres hemorrágicas virais e notificação compulsória",
+      "porque": "Ebola, dengue grave e febre amarela: definição de caso, isolamento, notificação imediata."
+     },
+     {
+      "tema": "SDRA: adulto versus criança",
+      "porque": "Berlim/critérios novos, PROSEVA no adulto e PROSpect na criança."
+     },
+     {
+      "tema": "Rastreamento do câncer de mama no SUS",
+      "porque": "A faixa 40–74 mudou a resposta-padrão de provas antigas (50–69)."
+     },
+     {
+      "tema": "Leitura crítica: NNT, NNH, HR, não inferioridade",
+      "porque": "Cai no Revalida, no ENAMED e em todas as provas de residência com caso de MBE."
+     }
+    ],
+    "leituras": [
+     {
+      "titulo": "Como Ler Artigos Científicos (How to Read a Paper)",
+      "autor": "Trisha Greenhalgh",
+      "porque": "O livro mais didático de medicina baseada em evidências. Leia os capítulos sobre ensaios clínicos e sobre desfechos substitutos."
+     },
+     {
+      "titulo": "O Imperador de Todos os Males",
+      "autor": "Siddhartha Mukherjee",
+      "porque": "Biografia do câncer, ganhou o Pulitzer. Ajuda a entender por que imunoterapia e vacinas personalizadas são uma virada histórica."
+     },
+     {
+      "titulo": "Mortais (Being Mortal)",
+      "autor": "Atul Gawande",
+      "porque": "Sobre envelhecer e o que a medicina deve oferecer no fim da vida. Combina com o debate do STREAM."
+     },
+     {
+      "titulo": "Contágio (Spillover)",
+      "autor": "David Quammen",
+      "porque": "Como vírus saltam de animais para humanos. Tem capítulos sobre Ebola e sobre gripe aviária."
+     }
+    ],
+    "diretrizes": [
+     {
+      "titulo": "Diretriz Brasileira de Dislipidemias e Prevenção da Aterosclerose (SBC)",
+      "nota": "Base para estratificação de risco e metas de LDL. Confira a versão mais recente no portal da SBC."
+     },
+     {
+      "titulo": "Guia de Vigilância em Saúde (Ministério da Saúde)",
+      "nota": "Capítulos de doenças de notificação compulsória e febres hemorrágicas."
+     },
+     {
+      "titulo": "Matriz de Referência do ENAMED/Revalida (Inep)",
+      "nota": "O Revalida 2026.2 usou as mesmas questões do ENAMED 2026, com corte fixo de 60 pontos."
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "Sanar: Revalida 2026.2 e ENAMED",
+      "url": "https://sanarmed.com/revalida-2026-2-tera-as-mesmas-questoes-do-enamed-veja-o-que-muda-na-prova/"
+     }
+    ]
+   },
+   "agenda": [
+    {
+     "data": "11/11",
+     "evento": "Publicação completa do INTerpath-001 no NEJM (prevista)"
+    },
+    {
+     "data": "14/11",
+     "evento": "Dia Mundial do Diabetes · decisão do FDA sobre ivonescimabe"
+    },
+    {
+     "data": "22/11",
+     "evento": "FDA: deramiocel (Duchenne) e molgramostim (proteinose alveolar autoimune)"
+    },
+    {
+     "data": "27/11",
+     "evento": "FDA: neladalquibe (NSCLC ALK+) e saroglitazar (colangite biliar primária)"
+    },
+    {
+     "data": "30/11",
+     "evento": "FDA: povetacicept (IgAN), giredestranto (mama RE+) e bezuclastinibe (GIST)"
+    },
+    {
+     "data": "nov",
+     "evento": "Novembro Azul (saúde do homem) · CTAD em Boston, com dados de fase 3 do AR1001"
+    },
+    {
+     "data": "dez",
+     "evento": "Prazo do Ministério da Saúde para ofertar 23 novos oncológicos no SUS"
+    }
+   ],
+   "quiz": [
+    {
+     "p": "No ZEUS, a PCR caiu 64% e o HR para MACE foi 0,99. Que conceito explica a discordância?",
+     "r": "Falha do desfecho substituto: o biomarcador mudou, mas não está (ou não está sozinho) na via causal que gera eventos nessa população. Exemplos históricos: CAST e torcetrapibe."
+    },
+    {
+     "p": "No STREAM, o HR foi 1,38 e mesmo assim a suspensão foi declarada não inferior. Como?",
+     "r": "A margem de não inferioridade foi definida em diferença de sobrevida livre de eventos (−5,2 semanas em 2 anos). A diferença observada (−2,0 semanas, IC até −3,7) ficou dentro dessa margem."
+    },
+    {
+     "p": "Calcule o NNT para infecção de sítio cirúrgico no PERFECT-Antibiotics (3,2% vs 1,6%).",
+     "r": "RAR = 1,6 pontos percentuais → NNT = 1/0,016 ≈ 63."
+    },
+    {
+     "p": "Por que o Ervebo não é a resposta para o surto atual?",
+     "r": "É uma vacina contra a espécie Zaire ebolavirus. O vírus Bundibugyo é outra espécie, e a proteção cruzada não está comprovada."
+    },
+    {
+     "p": "Qual a faixa etária atual de rastreamento mamográfico no SUS para mulheres sem sintomas?",
+     "r": "40 a 74 anos (mudança de 2025; antes, 50 a 69)."
+    }
+   ],
+   "glossario": [
+    {
+     "termo": "Desfecho substituto",
+     "def": "Medida intermediária (exame, biomarcador) usada no lugar de um desfecho clínico, como infarto ou morte."
+    },
+    {
+     "termo": "MACE",
+     "def": "Eventos cardiovasculares adversos maiores. Normalmente IAM, AVC e morte cardiovascular (3 pontos)."
+    },
+    {
+     "termo": "RMST",
+     "def": "Sobrevida média restrita: tempo médio livre de evento até um horizonte definido. Usada no STREAM."
+    },
+    {
+     "termo": "Não inferioridade",
+     "def": "Desenho que testa se um tratamento não é pior que outro além de uma margem definida antes do estudo."
+    },
+    {
+     "termo": "ESPII",
+     "def": "Emergência de Saúde Pública de Importância Internacional, declarada pela OMS sob o Regulamento Sanitário Internacional."
+    },
+    {
+     "termo": "Antisense (ASO)",
+     "def": "Oligonucleotídeo que se liga a um RNA mensageiro e bloqueia a produção de uma proteína. Ex.: pelacarsen, bepirovirsen."
+    },
+    {
+     "termo": "Biespecífico",
+     "def": "Anticorpo que reconhece dois alvos ao mesmo tempo. Ex.: tarlatamabe (DLL3 e CD3), ivonescimabe (PD-1 e VEGF)."
+    },
+    {
+     "termo": "Reliance regulatório",
+     "def": "Quando uma agência, como a Anvisa, usa a análise de outra agência de referência para acelerar um registro."
+    }
+   ]
+  }
+ ]
+}

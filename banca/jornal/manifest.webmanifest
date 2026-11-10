@@ -1,0 +1,31 @@
+{
+  "name": "Jornal de Cada Dia",
+  "short_name": "Jornal",
+  "description": "As notícias do dia em linguagem simples: política, saúde e tecnologia.",
+  "lang": "pt-BR",
+  "id": "/banca/jornal/",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ECE3D4",
+  "theme_color": "#3A2D2B",
+  "icons": [
+    {
+      "src": "icone-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icone-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icone-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
