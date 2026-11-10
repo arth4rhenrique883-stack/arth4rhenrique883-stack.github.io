@@ -10,7 +10,7 @@
    "ticker": [
     {
      "regiao": "Mundo",
-     "texto": "Trump diz que a guerra com o Irã está \"efetivamente encerrada\", mas mantém o bloqueio",
+     "texto": "Trump diz que a guerra com o Irã está “efetivamente encerrada”, mas mantém o bloqueio",
      "url": "https://www.aljazeera.com/news/2026/11/9/trump-calls-iran-war-effectively-over-after-talks-with-qatar-pm"
     },
     {
@@ -50,7 +50,7 @@
     },
     {
      "regiao": "Mundo",
-     "texto": "Kim Yo Jong chama Guterres de \"parcial\" e rejeita diálogo com Seul",
+     "texto": "Kim Yo Jong chama Guterres de “parcial” e rejeita diálogo com Seul",
      "url": "https://koreajoongangdaily.com/korea/pyongyang-rejects-un-chiefs-call-for-interkorean-dialogue-in-wake-of-dmz-mine-blast/12965400"
     },
     {
@@ -82,7 +82,7 @@
    "capa": {
     "chapeu": "Nem guerra, nem paz",
     "titulo": "Trump dá a guerra por encerrada e mantém o cerco",
-    "linhaFina": "Depois de receber o premiê do Catar, que levou a proposta iraniana de dois dias para reabrir Ormuz, Trump disse que o Irã está \"militarmente acabado\" e que os EUA ficam no \"status quo\": bloqueio naval e terrestre. Teerã fala em \"negociações imaginárias\". O Brent cai abaixo de US$ 91.",
+    "linhaFina": "Depois de receber o premiê do Catar, que levou a proposta iraniana de dois dias para reabrir Ormuz, Trump disse que o Irã está “militarmente acabado” e que os EUA ficam no “status quo”: bloqueio naval e terrestre. Teerã fala em “negociações imaginárias”. O Brent cai abaixo de US$ 91.",
     "camada": "FATO",
     "confianca": "Alta"
    },
@@ -150,13 +150,13 @@
     {
      "pais": "EUA",
      "sigla": "US",
-     "titulo": "Guerra \"acabada\", bloqueio mantido",
-     "texto": "Após receber o premiê do Catar, Trump disse que o Irã \"militarmente está efetivamente acabado\" e que os EUA mantêm o \"status quo\": bloqueio naval e a Força-Tarefa Iron Gate nas rotas terrestres e no Cáspio. Segundo a OilPrice, Rubio e Hegseth resistem a liberar US$ 8 bilhões iranianos.",
+     "titulo": "Guerra “acabada”, bloqueio mantido",
+     "texto": "Após receber o premiê do Catar, Trump disse que o Irã “militarmente está efetivamente acabado” e que os EUA mantêm o “status quo”: bloqueio naval e a Força-Tarefa Iron Gate nas rotas terrestres e no Cáspio. Segundo a OilPrice, Rubio e Hegseth resistem a liberar US$ 8 bilhões iranianos.",
      "camada": "FATO",
      "confianca": "Alta",
      "fontes": [
       {
-       "nome": "Al Jazeera, Trump chama a guerra de \"efetivamente encerrada\" após encontro com o premiê do Catar (9/11)",
+       "nome": "Al Jazeera, Trump chama a guerra de “efetivamente encerrada” após encontro com o premiê do Catar (9/11)",
        "url": "https://www.aljazeera.com/news/2026/11/9/trump-calls-iran-war-effectively-over-after-talks-with-qatar-pm"
       },
       {
@@ -169,7 +169,7 @@
      "pais": "China",
      "sigla": "CN",
      "titulo": "Pequim quer roteiro fechado em Shenzhen",
-     "texto": "Segundo o Wall Street Journal, a China quer uma cúpula tripla com declarações prontas, enquanto Washington prefere conversa aberta sobre Irã e armas nucleares. O porta-voz Guo Jiakun disse em 10/11 que Pequim \"está em comunicação\" com as partes, sem confirmar o encontro (versão oficial).",
+     "texto": "Segundo o Wall Street Journal, a China quer uma cúpula tripla com declarações prontas, enquanto Washington prefere conversa aberta sobre Irã e armas nucleares. O porta-voz Guo Jiakun disse em 10/11 que Pequim “está em comunicação” com as partes, sem confirmar o encontro (versão oficial).",
      "camada": "FATO",
      "confianca": "Média",
      "fontes": [
@@ -209,7 +209,7 @@
      "pais": "União Europeia",
      "sigla": "EU",
      "titulo": "Fora da sala, com a conta",
-     "texto": "Os europeus não entram nas conversas principais em Abu Dhabi. O chanceler alemão Johann Wadephul disse no G7 que \"não pode haver solução sem a Europa\". Kaja Kallas, chefe da diplomacia da UE, não descartou sanções ao Irã pelos ciberataques; chanceleres do bloco se reúnem em 16/11.",
+     "texto": "Os europeus não entram nas conversas principais em Abu Dhabi. O chanceler alemão Johann Wadephul disse no G7 que “não pode haver solução sem a Europa”. Kaja Kallas, chefe da diplomacia da UE, não descartou sanções ao Irã pelos ciberataques; chanceleres do bloco se reúnem em 16/11.",
      "camada": "FATO",
      "confianca": "Alta",
      "fontes": [
@@ -227,7 +227,7 @@
      "pais": "França",
      "sigla": "FR",
      "titulo": "Paris culpa Teerã pelas geladeiras",
-     "texto": "Promotores franceses atribuíram à unidade Shahid Kaveh, ligada à Guarda Revolucionária, o ataque de 12/10 que desligou a refrigeração de cerca de 700 supermercados. O chanceler Jean-Noël Barrot falou em escala \"sem precedentes\". A França convocou o embaixador e pediu sanções europeias. O Irã não comentou.",
+     "texto": "Promotores franceses atribuíram à unidade Shahid Kaveh, ligada à Guarda Revolucionária, o ataque de 12/10 que desligou a refrigeração de cerca de 700 supermercados. O chanceler Jean-Noël Barrot falou em escala “sem precedentes”. A França convocou o embaixador e pediu sanções europeias. O Irã não comentou.",
      "camada": "FATO",
      "confianca": "Alta",
      "fontes": [
@@ -245,7 +245,7 @@
      "pais": "Índia",
      "sigla": "IN",
      "titulo": "Nova Délhi oferece corredor de grãos",
-     "texto": "Em telefonema com Modi em 9/11, Zelensky disse que a Índia \"está pronta para mediar\" corredores de alimentos no Mar Negro, onde ataques a portos levaram o trigo à máxima de três anos. Grande compradora de petróleo russo, a Índia é vista por Kiev como canal de pressão sobre Moscou.",
+     "texto": "Em telefonema com Modi em 9/11, Zelensky disse que a Índia “está pronta para mediar” corredores de alimentos no Mar Negro, onde ataques a portos levaram o trigo à máxima de três anos. Grande compradora de petróleo russo, a Índia é vista por Kiev como canal de pressão sobre Moscou.",
      "camada": "FATO",
      "confianca": "Média",
      "fontes": [
@@ -293,7 +293,7 @@
     }
    ],
    "ia": {
-    "abertura": "A IA em quatro frentes. Aviso de transparência: esta revista é escrita com o Claude, modelo da Anthropic, e a Anthropic está entre as empresas que assinaram o Apelo de Paris citado abaixo; por isso usamos o texto oficial do Eliseu e a cobertura da imprensa, não comunicados da empresa.",
+    "abertura": "A IA em quatro frentes. Aviso de transparência: o Observatório, do Xeque News, é escrito com a ajuda do Claude, modelo da Anthropic, e a Anthropic está entre as empresas que assinaram o Apelo de Paris citado abaixo; por isso usamos o texto oficial do Eliseu e a cobertura da imprensa, não comunicados da empresa.",
     "frentes": [
      {
       "area": "Científica",
@@ -446,7 +446,7 @@
         "url": "https://jpost.com/middle-east/iran-news/article-914229"
        },
        {
-        "nome": "Al Jazeera, Trump chama a guerra de \"efetivamente encerrada\" após encontro com o premiê do Catar (9/11)",
+        "nome": "Al Jazeera, Trump chama a guerra de “efetivamente encerrada” após encontro com o premiê do Catar (9/11)",
         "url": "https://www.aljazeera.com/news/2026/11/9/trump-calls-iran-war-effectively-over-after-talks-with-qatar-pm"
        }
       ]
@@ -519,8 +519,8 @@
     "linhaFina": "A irmã do líder rejeita o apelo de Guterres por diálogo e defende fortificar a fronteira.",
     "itens": [
      {
-      "titulo": "\"Parcial e irresponsável\"",
-      "texto": "Em nota da agência estatal KCNA (versão oficial) de 10/11, Kim Yo Jong acusou António Guterres de repetir a versão de Seul e disse que reforçar a fronteira sul é \"o mais justo\" exercício de autodefesa. Guterres havia pedido na semana passada a volta dos canais entre as duas Coreias.",
+      "titulo": "“Parcial e irresponsável”",
+      "texto": "Em nota da agência estatal KCNA (versão oficial) de 10/11, Kim Yo Jong acusou António Guterres de repetir a versão de Seul e disse que reforçar a fronteira sul é “o mais justo” exercício de autodefesa. Guterres havia pedido na semana passada a volta dos canais entre as duas Coreias.",
       "camada": "FATO",
       "confianca": "Alta",
       "fontes": [
@@ -536,7 +536,7 @@
      },
      {
       "titulo": "A mina da discórdia",
-      "texto": "Em 21/9, uma mina feriu três soldados sul-coreanos na Zona Desmilitarizada. Investigação de Seul com o Comando da ONU concluiu que minas norte-coreanas foram plantadas ao sul da linha de demarcação; Pyongyang chama as conclusões de \"fabricadas\". Em 22/10, Seul pediu desculpas formais na ONU.",
+      "texto": "Em 21/9, uma mina feriu três soldados sul-coreanos na Zona Desmilitarizada. Investigação de Seul com o Comando da ONU concluiu que minas norte-coreanas foram plantadas ao sul da linha de demarcação; Pyongyang chama as conclusões de “fabricadas”. Em 22/10, Seul pediu desculpas formais na ONU.",
       "camada": "FATO",
       "confianca": "Alta",
       "fontes": [
@@ -548,7 +548,7 @@
      },
      {
       "titulo": "Endurecer antes de negociar",
-      "texto": "Com Trump querendo levar \"desnuclearização\" e cortes de armas nucleares a Shenzhen, Pyongyang endurece para não ser tratada como item da pauta. A vitória democrata nas eleições americanas, lê o SCMP, também esfria a ideia de uma nova cúpula Trump–Kim.",
+      "texto": "Com Trump querendo levar “desnuclearização” e cortes de armas nucleares a Shenzhen, Pyongyang endurece para não ser tratada como item da pauta. A vitória democrata nas eleições americanas, lê o SCMP, também esfria a ideia de uma nova cúpula Trump–Kim.",
       "camada": "ANÁLISE",
       "confianca": "Média",
       "fontes": [
@@ -611,7 +611,7 @@
      "itens": [
       {
        "titulo": "Abu Dhabi começa sob ataque",
-       "texto": "Na véspera, segundo a Força Aérea ucraniana, a Rússia lançou 162 drones (96 a jato) e um Iskander-M; 135 foram abatidos ou bloqueados, houve impactos em 19 locais e 14 feridos. Dnipro e Kamianske ficaram sem luz. Zelensky diz que Moscou quer \"dividir a Ucrânia ao longo do Dnipro\". Moscou não comentou os números.",
+       "texto": "Na véspera, segundo a Força Aérea ucraniana, a Rússia lançou 162 drones (96 a jato) e um Iskander-M; 135 foram abatidos ou bloqueados, houve impactos em 19 locais e 14 feridos. Dnipro e Kamianske ficaram sem luz. Zelensky diz que Moscou quer “dividir a Ucrânia ao longo do Dnipro”. Moscou não comentou os números.",
        "camada": "FATO",
        "confianca": "Média",
        "fontes": [
@@ -755,8 +755,8 @@
    "analise": {
     "titulo": "Nem guerra, nem paz: a fórmula de Brest-Litovsk",
     "texto": [
-     "Em fevereiro de 1918, em Brest-Litovsk, Leon Trotsky anunciou que a Rússia bolchevique não assinaria a paz com a Alemanha, mas também não lutaria mais: \"nem guerra, nem paz\". Ontem, o presidente iraniano Pezeshkian usou a mesma expressão para descrever o impasse, e Trump respondeu com o seu \"status quo\": a guerra estaria acabada, mas o bloqueio continua. Clausewitz ajuda a ler o momento: a guerra é a continuação da política por outros meios, e o bloqueio é a política continuando a guerra por meios mais baratos.",
-     "A analogia falha num ponto central. Em 1918, quem dizia \"nem guerra, nem paz\" era o lado fraco, tentando ganhar tempo; a Alemanha retomou a ofensiva em dias e impôs termos piores em março. Hoje, quem prefere o impasse é o lado forte, e o fraco controla Ormuz. Por isso o tempo não corre só contra Teerã: o petróleo barato e a pressão do Golfo também cobram de Washington. Um impasse confortável para os dois raramente dura."
+     "Em fevereiro de 1918, em Brest-Litovsk, Leon Trotsky anunciou que a Rússia bolchevique não assinaria a paz com a Alemanha, mas também não lutaria mais: “nem guerra, nem paz”. Ontem, o presidente iraniano Pezeshkian usou a mesma expressão para descrever o impasse, e Trump respondeu com o seu “status quo”: a guerra estaria acabada, mas o bloqueio continua. Clausewitz ajuda a ler o momento: a guerra é a continuação da política por outros meios, e o bloqueio é a política continuando a guerra por meios mais baratos.",
+     "A analogia falha num ponto central. Em 1918, quem dizia “nem guerra, nem paz” era o lado fraco, tentando ganhar tempo; a Alemanha retomou a ofensiva em dias e impôs termos piores em março. Hoje, quem prefere o impasse é o lado forte, e o fraco controla Ormuz. Por isso o tempo não corre só contra Teerã: o petróleo barato e a pressão do Golfo também cobram de Washington. Um impasse confortável para os dois raramente dura."
     ]
    },
    "ler": [
@@ -772,7 +772,7 @@
      "titulo": "A Próxima Onda",
      "autor": "Mustafa Suleyman",
      "nivel": "★★",
-     "porque": "Discute por que é tão difícil \"conter\" a IA. Procure o trecho sobre acordos voluntários e compare com o Apelo de Paris."
+     "porque": "Discute por que é tão difícil “conter” a IA. Procure o trecho sobre acordos voluntários e compare com o Apelo de Paris."
     },
     {
      "tipo": "Livro",
@@ -783,7 +783,7 @@
     }
    ],
    "pensar": [
-    "Se o lado mais forte prefere \"nem guerra, nem paz\", quem tem pressa de acabar com o impasse?",
+    "Se o lado mais forte prefere “nem guerra, nem paz”, quem tem pressa de acabar com o impasse?",
     "Um compromisso voluntário sobre IA, sem EUA e China, é um primeiro passo ou um álibi?"
    ],
    "acompanhar": [
@@ -810,7 +810,7 @@
    ],
    "fontes": [
     {
-     "nome": "Al Jazeera, Trump chama a guerra de \"efetivamente encerrada\" após encontro com o premiê do Catar (9/11)",
+     "nome": "Al Jazeera, Trump chama a guerra de “efetivamente encerrada” após encontro com o premiê do Catar (9/11)",
      "url": "https://www.aljazeera.com/news/2026/11/9/trump-calls-iran-war-effectively-over-after-talks-with-qatar-pm"
     },
     {
@@ -977,6 +977,10 @@
      "nome": "Itamaraty, Lula na COP31",
      "url": "https://www.gov.br/mre/pt-br/canais_atendimento/imprensa/notas-a-imprensa/participacao-do-presidente-luiz-inacio-lula-da-silva-na-cop-31-na-turquia"
     }
+   ],
+   "introducao": [
+    "A edição de hoje gira em torno de uma pergunta: o que acontece quando uma guerra é declarada encerrada, mas o cerco continua? Depois de receber a proposta iraniana levada pelo Catar, Trump disse que o conflito com o Irã acabou, enquanto mantém o bloqueio naval e terrestre; o mercado já reage, e o Brent cai abaixo de US$ 91. Ao mesmo tempo, em Abu Dhabi, EUA, Rússia e Ucrânia voltam a negociar sem os europeus, na manhã seguinte a um ataque com 162 drones.",
+    "Nos cadernos fixos, você encontra o giro das grandes potências, o Apelo de Paris sobre segurança da IA (e por que EUA e China ficaram de fora), o plano de cooperação Rússia–Irã revelado por um documento vazado e a resposta de Kim Yo Jong a António Guterres. No fim, o ensaio do dia volta a Brest-Litovsk, em 1918, para entender o “nem guerra, nem paz”, e a seção “Para ampliar o conhecimento” reúne todas as fontes, por assunto, com link direto."
    ]
   },
   {

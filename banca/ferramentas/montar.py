@@ -28,7 +28,7 @@ PUBS = [
     ("mundo-lafaiete", "revista", "Do Mundo a Lafaiete",
      "O Observatório completo, com geopolítica, guerras, energia, IA e espaço, mais o caderno de Conselheiro Lafaiete.",
      {"destaque": True, "semMedicina": True, "encarte": "obs"}),
-    # Caderno Brasil (pedido de Arthur, 10/11/2026): ao abrir, o leitor escolhe "Mundo + Brasil" ou
+    # Caderno Brasil (10/11/2026): ao abrir, o leitor escolhe "Mundo + Brasil" ou
     # "Apenas Brasil". O caderno é o mesmo do Terra Brasilis (jornal-brasil/edicoes.json, sem Lafaiete),
     # copiado como brasil.json; a página só mostra a escolha se brasil.json existir ao lado dela.
     ("observatorio", "revista", "Observatório Diário",
@@ -37,7 +37,7 @@ PUBS = [
     ("xequemate", "medicina", "Xeque-Mate",
      "Só medicina, para estudantes: estudos, ensaios clínicos, aprovações e saúde pública.",
      {"destaque": True}),
-    # Terra Brasilis e O Carijó viraram UM jornal (pedido de Arthur, 10/11/2026): ao abrir, o leitor
+    # Terra Brasilis e O Carijó viraram UM jornal (10/11/2026): ao abrir, o leitor
     # escolhe o caderno Brasil ou Conselheiro Lafaiete. O caderno de Lafaiete vem de jornal-lafaiete/
     # e é copiado como lafaiete.json (extras); /lafaiete/ só redireciona para /brasil/#lafaiete.
     ("brasil", "jornal-brasil", "Terra Brasilis",
@@ -53,14 +53,14 @@ DOSSIES = [
      "Dossiê de estudo: por que um ministro do STF citado no caso Banco Master continua no cargo."),
 ]
 
-# Logo da rainha (pedido de Arthur, 10/11/2026): em TODOS os jornais e dossiês, parada,
+# Logo da rainha (10/11/2026): em TODOS os jornais e dossiês, parada,
 # em tinta, como selo no canto. Se a página de origem já a tiver, não duplica.
 RAINHA = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "rainha.html"), encoding="utf-8").read()
 
 def com_rainha(html):
     return com_compromisso(html) if "rainha-canto" in html else com_compromisso(html) + "\n" + RAINHA
 
-# Fontes e compromisso editorial (pedido de Arthur, 10/11/2026): expediente no pé de TODOS os
+# Fontes e compromisso editorial (10/11/2026): expediente no pé de TODOS os
 # jornais e dossiês, com as fontes de referência, a linha editorial sem partido e os limites.
 # Página completa em /banca/fontes/. Se a página de origem já o tiver, não duplica.
 COMPROMISSO = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "compromisso.html"), encoding="utf-8").read()
@@ -75,7 +75,7 @@ def com_compromisso(html):
 ENCARTE = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "encarte-lafaiete.js"), encoding="utf-8").read()
 
 def sem_medicina(dados):
-    """O Observatório não traz mais medicina (pedido de Arthur, 10/11/2026): ela fica no Xeque-Mate."""
+    """O Observatório não traz mais medicina (10/11/2026): ela fica no Xeque-Mate."""
     d = json.loads(dados)
     for e in d.get("edicoes", []):
         e.pop("medicina", None)

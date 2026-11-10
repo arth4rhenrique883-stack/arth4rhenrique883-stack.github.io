@@ -148,7 +148,27 @@ select{font-family:var(--label);font-weight:600;font-size:12.5px;letter-spacing:
 .item h4{font-family:var(--head);font-weight:600;font-size:23px;line-height:1.16;margin:0;text-wrap:balance}
 .item p{margin:0;font-size:17px;line-height:1.5;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
 .item .foot{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:center}
-.item .srcs{font-family:var(--label);font-weight:600;font-size:11px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 12px}
+.item .srcs{font-family:var(--label);font-weight:600;font-size:12px;color:var(--ink-2);display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}
+.item .srcs::before{content:"Leia na fonte:";font-weight:800;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+.srcs a,.ampliar a{text-decoration:underline;text-decoration-thickness:1px;padding-block:3px}
+.srcs a::after,.ampliar a::after{content:" ↗";text-decoration:none;display:inline-block;margin-left:2px}
+.casa{font-family:var(--label);font-weight:800;font-size:12px;letter-spacing:.3em;text-transform:uppercase;margin:0 0 2px}
+.casa::before,.casa::after{content:" ✱ ";font-weight:400}
+.intro{border:2px solid var(--ink);outline:1px solid var(--ink);outline-offset:3px;margin:6px 4px 24px;padding:16px 18px;display:grid;gap:8px}
+.intro .it{font-family:var(--label);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;text-align:center}
+.intro .it::before,.intro .it::after{content:" ✱ ";font-weight:400}
+.intro p{margin:0;font-size:18px;line-height:1.55;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.intro p:first-of-type::first-letter{font-family:var(--mast);float:left;font-size:3.4em;line-height:.86;padding:4px 8px 0 0}
+.ampliar{padding-block:18px 40px;display:grid;gap:14px}
+.ampliar .st{font-family:var(--mast);font-weight:400;text-transform:uppercase;font-size:clamp(28px,4.4vw,40px);line-height:1;text-align:center}
+.ampliar .sub{font-family:var(--head);font-style:italic;text-align:center;margin:0;color:var(--ink-2)}
+.amp-grupos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:4px 32px}
+.amp-g h3{font-family:var(--label);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin:12px 0 6px;padding:6px 0;border-top:4px solid var(--ink);border-bottom:1px solid var(--ink)}
+.amp-g ul{margin:0;padding:0;list-style:none}
+.amp-g li{padding:7px 0;border-bottom:1px solid var(--hair);font-size:15px;line-height:1.4}
+.amp-g li b{display:block;font-family:var(--head);font-weight:600;font-size:16px}
+.amp-g li a{display:block;font-family:var(--label);font-weight:600;font-size:12.5px}
+.ampliar .aviso{font-family:var(--head);font-style:italic;font-size:14px;text-align:center}
 
 /* cadernos */
 .caderno{padding-block:8px 6px;scroll-margin-top:12px}
@@ -264,6 +284,7 @@ main [id]{scroll-margin-top:12px}
 
   <header class="mast">
     <hr class="dbl">
+    <p class="casa">Xeque News</p>
     <h1 class="wordmark">Observatório</h1>
     <p class="motto">Geopolítica, história e estratégia para entender o dia</p>
     <hr class="dbl rev">
@@ -495,7 +516,7 @@ main [id]{scroll-margin-top:12px}
     const ri = dossie("russia-ira", "Rússia–Irã", ed.russiaIra);
     const nk = dossie("coreia", "Coreia do Norte", ed.coreiaNorte);
     const calls = (ed.chamadas||[]).length ? `<nav class="calls" aria-label="Chamadas"><span class="ct">Nesta edição</span>${ed.chamadas.map(c=>`<a class="call" href="#${esc(c.secao)}"><span class="r">${esc(c.rotulo)}</span><span class="x">${esc(c.texto)}</span></a>`).join("")}</nav>` : "";
-    const tocItems = [["potencias","Potências",pot],["ia","IA",ia],["medicina","Medicina",med],["russia-ira","Rússia–Irã",ri],["coreia","Coreia do Norte",nk],["mais","Mais do dia",(ed.secoes||[]).length],["ensaio","Ensaio",ed.analise]].filter(x=>x[2]);
+    const tocItems = [["potencias","Potências",pot],["ia","IA",ia],["medicina","Medicina",med],["russia-ira","Rússia–Irã",ri],["coreia","Coreia do Norte",nk],["mais","Mais do dia",(ed.secoes||[]).length],["ensaio","Ensaio",ed.analise],["ampliar","Fontes",1]].filter(x=>x[2]);
     const toc = $("#toc");
     if (pot || ia || med || ri || nk){ toc.hidden = false; toc.innerHTML = `<span>Nesta edição</span>` + tocItems.map(([id,l])=>`<a href="#${id}">${l}</a>`).join(""); } else { toc.hidden = true; toc.innerHTML = ""; }
     const axes = (ed.secoes||[]).map(s => `
@@ -524,7 +545,16 @@ main [id]{scroll-margin-top:12px}
       </div>`).join("");
     const qs = (ed.pensar||[]).map(q=>`<li>${esc(q)}</li>`).join("");
     const watch = (ed.acompanhar||[]).map(w=>`<li><span class="w">${esc(w.quando)}</span><span>${esc(w.oque)}</span></li>`).join("");
-    const srcs = (ed.fontes||[]).map(f=>`<li>${link(f)}</li>`).join("");
+    const vistas = new Set();
+    const grupo = (nome, its) => { const li = (its||[]).filter(i => (i.fontes||[]).length).map(i => { i.fontes.forEach(f => vistas.add(f.url||f.nome)); return `<li><b>${esc(i.titulo)}</b>${i.fontes.map(link).join("")}</li>`; }).join(""); return li ? `<div class="amp-g"><h3>${esc(nome)}</h3><ul>${li}</ul></div>` : ""; };
+    let grupos = grupo("Giro das potências", (ed.potencias||[]).map(p => ({titulo: `${p.pais}: ${p.titulo}`, fontes: p.fontes})))
+      + grupo("Evolução das IAs", ((ed.ia||{}).frentes||[]).flatMap(f => f.itens||[]))
+      + grupo("Medicina", ((ed.medicina||{}).frentes||[]).flatMap(f => f.itens||[]))
+      + grupo("Rússia–Irã", (ed.russiaIra||{}).itens) + grupo("Coreia do Norte", (ed.coreiaNorte||{}).itens)
+      + (ed.secoes||[]).map(s => grupo(s.eixo, s.itens)).join("");
+    const resto = (ed.fontes||[]).filter(f => !vistas.has(f.url||f.nome));
+    if (resto.length) grupos += `<div class="amp-g"><h3>Outras fontes desta edição</h3><ul>${resto.map(f=>`<li>${link(f)}</li>`).join("")}</ul></div>`;
+    const intro = ed.introducao ? `<section class="intro" aria-label="Para começar"><span class="it">Para começar</span>${[].concat(ed.introducao).map(p=>`<p>${esc(p)}</p>`).join("")}</section>` : "";
 
     $("#edition").innerHTML = `
       ${c.chapeu?`<p class="banner">${esc(c.chapeu)}</p>`:""}
@@ -542,6 +572,7 @@ main [id]{scroll-margin-top:12px}
         ${calls}
       </div>
       </div>
+      ${intro}
       ${nums?`<hr class="dbl"><section class="nums" aria-label="Números do dia">${nums}</section>`:""}
       ${pot}${ia}${med}${ri}${nk}
       ${(pot||ia||med||ri||nk)&&axes?`<hr class="dbl"><div class="mais-t" id="mais">Mais do dia</div><hr class="thin">`:""}
@@ -552,10 +583,11 @@ main [id]{scroll-margin-top:12px}
         <div><h3>Para pensar</h3><ul class="qs">${qs}</ul></div>
         <div><h3>Para acompanhar</h3><ul class="watch">${watch}</ul></div>
       </section>
-      <hr class="dbl rev"><footer class="sources">
-        <span class="st">Fontes desta edição</span>
-        <ul>${srcs}</ul>
-        <span class="aviso">Números de baixas e alegações de governos em guerra aparecem sempre identificados como alegação. Probabilidades em cenários são estimativas do Observatório.</span>
+      <hr class="dbl rev"><footer class="ampliar" id="ampliar">
+        <span class="st">Para ampliar o conhecimento</span>
+        <p class="sub">Todas as fontes desta edição, organizadas por assunto. Toque no nome para ler a matéria ou o documento original.</p>
+        <div class="amp-grupos">${grupos}</div>
+        <span class="aviso">Números de baixas e alegações de governos em guerra aparecem sempre identificados como alegação. Probabilidades em cenários são estimativas do Observatório. Uma publicação Xeque News.</span>
       </footer>`;
     const fr = $("#edition .front"); if (fr) fr.after($("#ticker"));
   }
@@ -597,7 +629,7 @@ main [id]{scroll-margin-top:12px}
 
 <!--brasil:inicio-->
 <style>
-/* Caderno Brasil (pedido de Arthur, 10/11/2026): ao abrir, o leitor escolhe "Mundo + Brasil"
+/* Caderno Brasil (10/11/2026): ao abrir, o leitor escolhe "Mundo + Brasil"
    ou "Apenas Brasil". O conteúdo vem de brasil.json, o caderno Brasil do Terra Brasilis
    (mesmos dados, sem Lafaiete). Sem brasil.json ao lado da página, nada muda. */
 .modo-escolha #edition,.modo-escolha #toc,.modo-escolha #ticker,.modo-escolha .mast .dateline,.modo-escolha .mast .toolbar,.modo-escolha .mast > hr.thin,
@@ -732,8 +764,8 @@ main [id]{scroll-margin-top:12px}
       + '<hr class="thin"><div class="toolbar"><div class="legend"><span class="chip FATO">Confirmado</span><span class="chip ANALISE">Explicação</span><span class="chip CENARIO">Previsão</span></div>'
       + '<button type="button" class="troca" data-troca>Trocar leitura</button><label class="pick">Edição <select id="br-picker" aria-label="Escolher edição do Brasil">' + opts + "</select></label></div><hr class=\"thin\">"
       + (c.chapeu ? '<p class="banner">' + esc(c.chapeu) + "</p>" : "") + '<hr class="dbl">'
-      + '<div class="front"><section class="cover" aria-label="Manchete"><h2>' + esc(c.titulo) + '</h2><p class="deck">' + esc(c.linhaFina) + "</p>"
-      + (e.citacao ? '<blockquote class="quote">' + esc(String(e.citacao).replace(/^[“"]|[”"]$/g, "")) + "</blockquote>" : "")
+      + '<div class="front"><section class="cover" aria-label="Manchete"><h2>' + esc(c.titulo) + '</h2><p class="deck">' + esc((String(c.linhaFina||"").match(/[^.!?]+[.!?]*/g) || [""]).filter(semLafa).join("").trim()) + "</p>"
+      + (function(){ if (!e.citacao) return ""; var m = String(e.citacao).match(/^\s*[“"]?(.*?)[”"]?\s*(?:\(([^)]+)\))?\s*$/); return '<blockquote class="quote">' + esc(m ? m[1].replace(/[“”"]/g, "") : e.citacao) + "</blockquote>" + (m && m[2] ? '<span class="fecha" style="text-align:center">' + esc(m[2]) + "</span>" : ""); })()
       + (e.recado ? '<span class="fecha">' + esc(e.recado) + "</span>" : "") + "</section>"
       + (resumo.length ? '<div class="side"><nav class="resumo calls" aria-label="Resumo"><span class="ct">O Brasil em poucas linhas</span>' + resumo.map(function(r){ return '<span class="call"><span class="r">' + esc(r.tema) + '</span><span class="x">' + esc(r.texto) + "</span></span>"; }).join("") + "</nav></div>" : "")
       + "</div>"
@@ -747,8 +779,10 @@ main [id]{scroll-margin-top:12px}
       + '<hr class="dbl"><section class="trio">'
       + (perg.length ? '<div><h3>Perguntas para refletir</h3><ul class="qs">' + perg.map(function(q){ return "<li>" + esc(q) + "</li>"; }).join("") + "</ul></div>" : "")
       + (agenda.length ? '<div><h3>Para acompanhar</h3><ul class="watch">' + agenda.map(function(w){ return '<li><span class="w">' + esc(w.quando) + "</span><span>" + esc(w.oque) + "</span></li>"; }).join("") + "</ul></div>" : "")
-      + '</section><hr class="dbl rev"><footer class="sources"><span class="st">Fontes desta edição</span><ul>' + todas.map(function(f){ return "<li>" + (f.url ? '<a href="' + esc(f.url) + '" target="_blank" rel="noopener">' + esc(f.nome) + "</a>" : esc(f.nome)) + "</li>"; }).join("") + "</ul>"
-      + '<span class="aviso">' + esc(e.fechamento || "") + " O caderno Brasil é o mesmo do jornal Terra Brasilis, feito com a ajuda do Claude, uma inteligência artificial, a partir da imprensa e de fontes oficiais.</span></footer>";
+      + '</section><hr class="dbl rev"><footer class="ampliar" id="br-ampliar"><span class="st">Para ampliar o conhecimento</span><p class="sub">Todas as fontes do caderno Brasil, organizadas por assunto. Toque no nome para ler a matéria ou o documento original.</p><div class="amp-grupos">'
+      + (e.cadernos||[]).filter(function(cd){ return cd.id !== "lafaiete"; }).map(function(cd){ var li = (cd.itens||[]).filter(function(it){ return (it.fontes||[]).length; }).map(function(it){ return "<li><b>" + esc(it.titulo) + "</b>" + it.fontes.map(function(f){ return f.url ? '<a href="' + esc(f.url) + '" target="_blank" rel="noopener">' + esc(f.nome) + "</a>" : esc(f.nome); }).join("") + "</li>"; }).join(""); return li ? '<div class="amp-g"><h3>' + esc(cd.titulo) + "</h3><ul>" + li + "</ul></div>" : ""; }).join("")
+      + (hist && (hist.fontes||[]).length && semLafa(hist.titulo + " " + hist.texto) ? '<div class="amp-g"><h3>Um pouco de história</h3><ul><li><b>' + esc(hist.titulo) + "</b>" + hist.fontes.map(function(f){ return f.url ? '<a href="' + esc(f.url) + '" target="_blank" rel="noopener">' + esc(f.nome) + "</a>" : esc(f.nome); }).join("") + "</li></ul></div>" : "")
+      + '</div><span class="aviso">' + esc(e.fechamento || "") + " O caderno Brasil é o mesmo do jornal Terra Brasilis. Uma publicação Xeque News, feita com a ajuda do Claude, uma inteligência artificial, a partir da imprensa e de fontes oficiais.</span></footer>";
     var pk = document.getElementById("br-picker");
     if (pk) pk.addEventListener("change", function(){ renderBrasil(lista()[Number(pk.value)]); window.scrollTo(0, 0); });
   }
@@ -775,6 +809,7 @@ main [id]{scroll-margin-top:12px}
     if (location.hash === "#escolher") history.replaceState(null, "", location.pathname);
   });
 
+  window.addEventListener("hashchange", function(){ if (!dados) return; var h = location.hash; if (h === "#apenas-brasil") aplica("brasil"); else if (h === "#mundo-brasil") aplica("mundo"); else if (h === "#escolher") aplica(null); });
   fetch("brasil.json", {cache: "no-store"}).then(function(r){ if (!r.ok) throw 0; return r.json(); }).then(function(d){
     if (!d || !(d.edicoes||[]).length) return;
     dados = d;
@@ -795,7 +830,7 @@ main [id]{scroll-margin-top:12px}
 
 <!--compromisso:inicio-->
 <style>
-/* Fontes e compromisso editorial (pedido de Arthur, 10/11/2026): expediente impresso no pé de todos os jornais */
+/* Fontes e compromisso editorial (10/11/2026): expediente impresso no pé de todos os jornais */
 .compromisso-editorial{max-width:860px;margin:36px auto 84px;padding:0 16px;color:#3A2D2B;font-family:"Newsreader","Source Serif 4","Libre Caslon Text",Georgia,"Times New Roman",serif;box-sizing:border-box}
 .compromisso-editorial *{box-sizing:border-box}
 .compromisso-editorial .ce-caixa{border:2px solid #3A2D2B;outline:1px solid #3A2D2B;outline-offset:3px;padding:18px 18px 14px;background:rgba(255,255,255,.18)}
@@ -820,7 +855,7 @@ main [id]{scroll-margin-top:12px}
 </style>
 <section class="compromisso-editorial" id="fontes-e-compromisso" aria-labelledby="ce-titulo">
  <div class="ce-caixa">
-  <div class="ce-chapeu">Expediente ✱ Fontes de referência ✱ Linha editorial</div>
+  <div class="ce-chapeu">Xeque News ✱ Expediente ✱ Fontes de referência ✱ Linha editorial</div>
   <h2 class="ce-titulo" id="ce-titulo">Fontes e compromisso editorial</h2>
   <p class="ce-linha">De onde vêm as notícias, como elas são escolhidas e qual é o nosso compromisso com quem lê.</p>
 
@@ -841,7 +876,7 @@ main [id]{scroll-margin-top:12px}
    </div>
   </div>
 
-  <div class="ce-limite">Limites, com honestidade: estes jornais são escritos com a ajuda do Claude, uma inteligência artificial da Anthropic, a partir de pesquisa na internet. Nenhum jornal é livre de vieses, e uma IA também pode errar, resumir mal ou escolher mal os assuntos. Por isso o nosso compromisso é com a neutralidade, e não uma promessa de perfeição: mostrar as fontes para que você mesmo possa conferir.</div>
+  <div class="ce-limite">Limites, com honestidade: os jornais do Xeque News são escritos com a ajuda do Claude, uma inteligência artificial da Anthropic, a partir de pesquisa na internet. Nenhum jornal é livre de vieses, e uma IA também pode errar, resumir mal ou escolher mal os assuntos. Por isso o nosso compromisso é com a neutralidade, e não uma promessa de perfeição: mostrar as fontes para que você mesmo possa conferir.</div>
 
   <details>
    <summary>Ver todas as fontes de referência e como corrigimos erros</summary>
@@ -863,10 +898,10 @@ main [id]{scroll-margin-top:12px}
     <li>Cada afirmação importante leva o grau de confiança (alta, média ou baixa) quando o jornal usa esse selo.</li>
    </ul>
    <h3>Erros e correções</h3>
-   <p>Quando um erro é encontrado, a correção sai na edição seguinte, dizendo o que estava errado e o que é o certo. Achou um erro, uma fonte fraca ou um texto que pareceu tomar partido? Avise o editor da Banca (quem compartilhou este link com você); a próxima edição corrige e explica.</p>
+   <p>Quando um erro é encontrado, a correção sai na edição seguinte, dizendo o que estava errado e o que é o certo. Achou um erro, uma fonte fraca ou um texto que pareceu tomar partido? Avise a redação do Xeque News pela aba “Sugestões” do Terra Brasilis ou por quem compartilhou este link com você; a próxima edição corrige e explica.</p>
    <p>Saúde: nada aqui substitui a consulta com médico ou profissional de saúde.</p>
   </details>
-  <p class="ce-pe">Leia o compromisso completo em <a href="https://arth4rhenrique883-stack.github.io/banca/fontes/">arth4rhenrique883-stack.github.io/banca/fontes</a></p>
+  <p class="ce-pe">Leia o compromisso completo do Xeque News em <a href="https://arth4rhenrique883-stack.github.io/banca/fontes/">Fontes e compromisso editorial</a></p>
  </div>
 </section>
 <!--compromisso:fim-->

@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,500&family=Archivo+Narrow:wght@500;600;700&display=swap">
 <style>
-/* Layout: jornal antigo impresso, como a referência de Arthur. Papel bege texturizado, tinta marrom quase preta, filetes duplos, manchete condensada enorme, títulos em serifa caixa-alta, texto em serifa itálica justificada, gravura em P&B, citação em caixa. Visual único (sem tema escuro), por escolha. */
+/* Layout: jornal antigo impresso. Papel bege texturizado, tinta marrom quase preta, filetes duplos, manchete condensada enorme, títulos em serifa caixa-alta, texto em serifa itálica justificada, gravura em P&B, citação em caixa. Visual único (sem tema escuro), por escolha. */
 :root{
   --paper:#ECE3D4;
   --sheet:#F2EBDF;
@@ -302,7 +302,7 @@ fetch("edicoes.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
 </script>
 <!--compromisso:inicio-->
 <style>
-/* Fontes e compromisso editorial (pedido de Arthur, 10/11/2026): expediente impresso no pé de todos os jornais */
+/* Fontes e compromisso editorial (10/11/2026): expediente impresso no pé de todos os jornais */
 .compromisso-editorial{max-width:860px;margin:36px auto 84px;padding:0 16px;color:#3A2D2B;font-family:"Newsreader","Source Serif 4","Libre Caslon Text",Georgia,"Times New Roman",serif;box-sizing:border-box}
 .compromisso-editorial *{box-sizing:border-box}
 .compromisso-editorial .ce-caixa{border:2px solid #3A2D2B;outline:1px solid #3A2D2B;outline-offset:3px;padding:18px 18px 14px;background:rgba(255,255,255,.18)}
@@ -327,7 +327,7 @@ fetch("edicoes.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
 </style>
 <section class="compromisso-editorial" id="fontes-e-compromisso" aria-labelledby="ce-titulo">
  <div class="ce-caixa">
-  <div class="ce-chapeu">Expediente ✱ Fontes de referência ✱ Linha editorial</div>
+  <div class="ce-chapeu">Xeque News ✱ Expediente ✱ Fontes de referência ✱ Linha editorial</div>
   <h2 class="ce-titulo" id="ce-titulo">Fontes e compromisso editorial</h2>
   <p class="ce-linha">De onde vêm as notícias, como elas são escolhidas e qual é o nosso compromisso com quem lê.</p>
 
@@ -348,7 +348,7 @@ fetch("edicoes.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
    </div>
   </div>
 
-  <div class="ce-limite">Limites, com honestidade: estes jornais são escritos com a ajuda do Claude, uma inteligência artificial da Anthropic, a partir de pesquisa na internet. Nenhum jornal é livre de vieses, e uma IA também pode errar, resumir mal ou escolher mal os assuntos. Por isso o nosso compromisso é com a neutralidade, e não uma promessa de perfeição: mostrar as fontes para que você mesmo possa conferir.</div>
+  <div class="ce-limite">Limites, com honestidade: os jornais do Xeque News são escritos com a ajuda do Claude, uma inteligência artificial da Anthropic, a partir de pesquisa na internet. Nenhum jornal é livre de vieses, e uma IA também pode errar, resumir mal ou escolher mal os assuntos. Por isso o nosso compromisso é com a neutralidade, e não uma promessa de perfeição: mostrar as fontes para que você mesmo possa conferir.</div>
 
   <details>
    <summary>Ver todas as fontes de referência e como corrigimos erros</summary>
@@ -370,10 +370,10 @@ fetch("edicoes.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
     <li>Cada afirmação importante leva o grau de confiança (alta, média ou baixa) quando o jornal usa esse selo.</li>
    </ul>
    <h3>Erros e correções</h3>
-   <p>Quando um erro é encontrado, a correção sai na edição seguinte, dizendo o que estava errado e o que é o certo. Achou um erro, uma fonte fraca ou um texto que pareceu tomar partido? Avise o editor da Banca (quem compartilhou este link com você); a próxima edição corrige e explica.</p>
+   <p>Quando um erro é encontrado, a correção sai na edição seguinte, dizendo o que estava errado e o que é o certo. Achou um erro, uma fonte fraca ou um texto que pareceu tomar partido? Avise a redação do Xeque News pela aba “Sugestões” do Terra Brasilis ou por quem compartilhou este link com você; a próxima edição corrige e explica.</p>
    <p>Saúde: nada aqui substitui a consulta com médico ou profissional de saúde.</p>
   </details>
-  <p class="ce-pe">Leia o compromisso completo em <a href="https://arth4rhenrique883-stack.github.io/banca/fontes/">arth4rhenrique883-stack.github.io/banca/fontes</a></p>
+  <p class="ce-pe">Leia o compromisso completo do Xeque News em <a href="https://arth4rhenrique883-stack.github.io/banca/fontes/">Fontes e compromisso editorial</a></p>
  </div>
 </section>
 <!--compromisso:fim-->
