@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Só o mundo, para estudar: geopolítica, guerras, energia, clima, IA e espaço, com história e filosofia.">
+<meta name="description" content="O mundo para estudar (geopolítica, guerras, energia, clima, IA e espaço, com história e filosofia) e o caderno do Brasil. Ao abrir, escolha Mundo + Brasil ou Apenas Brasil.">
 <meta name="theme-color" content="#3A2D2B">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -594,6 +594,204 @@ main [id]{scroll-margin-top:12px}
   window.addEventListener("hashchange", () => { if (data && hashId()) pick(hashId()); });
 })();
 </script>
+
+<!--brasil:inicio-->
+<style>
+/* Caderno Brasil (pedido de Arthur, 10/11/2026): ao abrir, o leitor escolhe "Mundo + Brasil"
+   ou "Apenas Brasil". O conteúdo vem de brasil.json, o caderno Brasil do Terra Brasilis
+   (mesmos dados, sem Lafaiete). Sem brasil.json ao lado da página, nada muda. */
+.modo-escolha #edition,.modo-escolha #toc,.modo-escolha #ticker,.modo-escolha .mast .dateline,.modo-escolha .mast .toolbar,.modo-escolha .mast > hr.thin,
+.modo-brasil #edition,.modo-brasil #toc,.modo-brasil #ticker,.modo-brasil .mast .dateline,.modo-brasil .mast .toolbar,.modo-brasil .mast > hr.thin{display:none}
+#escolha,#so-brasil{display:none}
+.modo-escolha #escolha,.modo-brasil #so-brasil{display:block}
+.esc-t{font-family:var(--head);font-weight:500;text-transform:uppercase;text-align:center;font-size:clamp(26px,5vw,52px);line-height:1.04;margin:0;padding:18px 0 6px;text-wrap:balance}
+.esc-l{font-family:var(--head);font-style:italic;text-align:center;font-size:18px;color:var(--ink-2);margin:0 0 18px}
+.esc-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px;padding-block:8px 30px}
+.esc-card{display:grid;gap:10px;align-content:start;text-align:left;font:inherit;color:inherit;cursor:pointer;background:rgba(255,252,244,.35);border:2px solid var(--ink);outline:1px solid var(--ink);outline-offset:3px;padding:18px 18px 16px;margin:4px;min-height:44px}
+.esc-card:hover .esc-n{text-decoration:underline}
+.esc-k{font-family:var(--label);font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.esc-k::before{content:"✱ ";font-weight:400}
+.esc-n{font-family:var(--mast);font-weight:400;text-transform:uppercase;font-size:clamp(34px,5.2vw,52px);line-height:1}
+.esc-d{font-family:var(--head);font-style:italic;font-size:17px;line-height:1.42;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.esc-m{font-family:var(--label);font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--muted);border-top:1px solid var(--hair);padding-top:8px}
+.troca{font-family:var(--label);font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:transparent;color:var(--ink);border:2px solid var(--ink);border-radius:0;padding:7px 10px;cursor:pointer;min-height:36px}
+.br-nota{font-family:var(--head);font-style:italic;font-size:16.5px;line-height:1.45;border:1.5px dashed var(--ink);padding:12px 14px;margin:0 0 22px;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.br-aviso{font-family:var(--label);font-weight:600;font-size:12px;letter-spacing:.04em;border-left:4px solid var(--ink);padding:6px 10px;margin:0 0 16px}
+.impacto{border-top:1.5px dashed var(--ink);border-bottom:1.5px dashed var(--ink);background:rgba(255,252,244,.4);padding:9px 10px 10px;margin-top:2px}
+.impacto .im-t{margin:0 0 6px;font-family:var(--label);font-weight:800;font-size:11px;letter-spacing:.14em;text-transform:uppercase;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;text-align:left}
+.impacto .im-t small{font-weight:600;letter-spacing:.06em;color:var(--muted)}
+.impacto dl{margin:0;display:grid;grid-template-columns:7.6em minmax(0,1fr);gap:6px 10px}
+.impacto dt{font-family:var(--label);font-weight:800;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:3px}
+.impacto dd{margin:0;font-size:15px;line-height:1.42;text-align:left}
+.impacto .im-g{font-size:15px;line-height:1.42;margin:0 0 6px;text-align:left}
+@media (max-width:480px){.impacto dl{grid-template-columns:1fr;gap:0}.impacto dd{margin-bottom:8px}}
+.caderno-brasil .fronts,#so-brasil .fronts{grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:0 34px}
+.caderno-brasil .front-col,#so-brasil .front-col{margin-bottom:10px}
+#so-brasil .front{padding-block:18px 22px}
+#so-brasil .resumo{display:grid;align-content:start}
+#so-brasil .resumo .ct{font-family:var(--label);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;padding-bottom:6px;border-bottom:2px solid var(--ink)}
+#so-brasil .resumo .call{cursor:default}
+#so-brasil .historia .text p:first-child::first-letter{font-family:var(--mast);float:left;font-size:4.1em;line-height:.86;padding:4px 10px 0 0}
+#so-brasil .linha{display:grid;margin:14px 0 0;padding:0;list-style:none}
+#so-brasil .linha li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:10px;padding-block:7px;border-top:1px solid var(--hair);font-size:15.5px;line-height:1.4}
+#so-brasil .linha b{font-family:var(--mast);font-weight:400;font-size:20px}
+</style>
+<section id="escolha" class="wrap" aria-labelledby="esc-titulo">
+  <h2 class="esc-t" id="esc-titulo">Como você quer ler hoje?</h2>
+  <p class="esc-l">Escolha a sua edição. Dá para trocar a qualquer momento.</p>
+  <hr class="dbl">
+  <div class="esc-cards">
+    <button type="button" class="esc-card" data-modo="mundo">
+      <span class="esc-k">O mundo e o país</span>
+      <span class="esc-n">Mundo + Brasil</span>
+      <span class="esc-d">O Observatório completo: geopolítica, guerras, energia, clima, IA e espaço, com história e filosofia, e mais o caderno do Brasil, com o efeito de cada notícia na vida do trabalhador e de cada classe.</span>
+      <span class="esc-m" id="esc-m-mundo"></span>
+    </button>
+    <button type="button" class="esc-card" data-modo="brasil">
+      <span class="esc-k">Só o país</span>
+      <span class="esc-n">Apenas Brasil</span>
+      <span class="esc-d">Só o Brasil e Minas Gerais: Brasília, o bolso, a saúde, a escola e o Estado, com o quadro “Como isso afeta você” em toda notícia.</span>
+      <span class="esc-m" id="esc-m-brasil"></span>
+    </button>
+  </div>
+</section>
+<section id="so-brasil" class="wrap" aria-label="Apenas Brasil"></section>
+<script>
+(function(){
+  var esc = function(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); };
+  var CHAVE = "observatorio-leitura";
+  var body = document.body, edition = document.getElementById("edition");
+  var escolha = document.getElementById("escolha"), soBr = document.getElementById("so-brasil");
+  if (!edition || !escolha || !soBr) return;
+  var wrap = edition.closest(".wrap"); if (wrap) { wrap.after(escolha); escolha.after(soBr); }
+  var dados = null, modo = null, edBr = null;
+  var IMPACTO = [["trabalhador","Trabalhador e operário"],["baixa","Classe baixa"],["media","Classe média"],["alta","Classe alta"]];
+  var SELO = {"confirmado":["FATO","Confirmado"],"explicação":["ANALISE","Explicação"],"explicacao":["ANALISE","Explicação"],"previsão":["CENARIO","Previsão"],"previsao":["CENARIO","Previsão"]};
+  var semLafa = function(t){ return !/lafaiete|carij/i.test(t); };
+  function curta(iso){ var p = String(iso||"").split("-"); return p.length === 3 ? p[2] + "/" + p[1] + "/" + p[0] : ""; }
+  function lista(){ return ((dados && dados.edicoes) || []).slice().sort(function(a,b){ return String(b.data).localeCompare(String(a.data)) || (b.numero||0) - (a.numero||0); }); }
+  function escolhe(iso){
+    var eds = lista(); if (!eds.length) return null; if (!iso) return eds[0];
+    for (var i = 0; i < eds.length; i++) if (String(eds[i].data) <= iso) return eds[i];
+    var ult = eds[eds.length-1]; return (Date.parse(ult.data) - Date.parse(iso)) / 864e5 <= 2 ? ult : null;
+  }
+  function dataDaPagina(){ var el = document.getElementById("issue-date"); var m = el ? el.textContent.match(/(\d{2})\/(\d{2})\/(\d{4})/) : null; return m ? m[3]+"-"+m[2]+"-"+m[1] : ""; }
+  function selo(s){ var k = SELO[String(s||"").toLowerCase()]; return s ? '<span class="chip ' + (k ? k[0] : "ANALISE") + '">' + esc(k ? k[1] : s) + "</span>" : ""; }
+  function fontes(fs){ return (fs||[]).length ? '<span class="srcs">' + fs.map(function(f){ return f.url ? '<a href="' + esc(f.url) + '" target="_blank" rel="noopener">' + esc(f.nome) + "</a>" : esc(f.nome); }).join("") + "</span>" : ""; }
+  function impacto(im){
+    if (!im) return "";
+    var l = IMPACTO.filter(function(p){ return im[p[0]]; }).map(function(p){ return "<dt>" + p[1] + "</dt><dd>" + esc(im[p[0]]) + "</dd>"; }).join("");
+    if (!l && !im.geral) return "";
+    return '<aside class="impacto"><p class="im-t">Como isso afeta você <small>Explicação do jornal</small></p>' + (im.geral ? '<p class="im-g">' + esc(im.geral) + "</p>" : "") + (l ? "<dl>" + l + "</dl>" : "") + "</aside>";
+  }
+  function item(it){ return '<article class="item"><h4>' + esc(it.titulo) + "</h4><p>" + esc(it.texto) + "</p>" + impacto(it.impacto) + '<div class="foot">' + selo(it.selo) + fontes(it.fontes) + "</div></article>"; }
+  function cadernos(e, pref){
+    return (e.cadernos||[]).filter(function(c){ return c.id !== "lafaiete"; }).map(function(c){
+      return '<div class="front-col" id="' + pref + esc(c.id) + '"><h3>' + esc(c.titulo) + "</h3>" + (c.aviso ? '<p class="br-aviso">' + esc(c.aviso) + "</p>" : "")
+        + (c.itens||[]).map(item).join("") + (c.caixa ? '<aside class="box"><p class="bt">' + esc(c.caixa.titulo) + "</p><dl><dd>" + esc(c.caixa.texto) + "</dd></dl></aside>" : "") + "</div>";
+    }).join("");
+  }
+  var EXPLICA = "Em toda notícia do Brasil, o quadro “Como isso afeta você” explica o efeito na vida do trabalhador e do operário, da classe baixa, da classe média e da classe alta. É uma explicação do jornal, sem tomar partido. Selos: “Confirmado” é fato checado; “Explicação” é leitura do jornal; “Previsão” é possibilidade.";
+
+  /* Mundo + Brasil: o caderno entra no Observatório, antes de "Mais do dia" */
+  var ocupado = false;
+  function insere(){
+    if (modo !== "mundo" || !dados || ocupado || edition.querySelector(".caderno-brasil")) return;
+    var e = escolhe(dataDaPagina()); if (!e) return;
+    ocupado = true;
+    var h = '<section class="caderno caderno-brasil" id="brasil" aria-label="Brasil"><hr class="dbl"><div class="cad-head"><div class="cad-tag">Caderno Brasil</div><h2>O país e como ele chega até você</h2><p>'
+      + esc((e.capa||{}).titulo) + ". Edição de " + esc(curta(e.data)) + ", do jornal Terra Brasilis.</p></div>"
+      + '<p class="br-nota">' + esc(EXPLICA) + '</p><div class="fronts">' + cadernos(e, "br-") + "</div></section>";
+    var ref = edition.querySelector("#mais") || edition.querySelector(".axes") || edition.querySelector("section.trio");
+    if (ref && ref.previousElementSibling && /\bdbl\b/.test(ref.previousElementSibling.className)) ref = ref.previousElementSibling;
+    if (ref) ref.insertAdjacentHTML("beforebegin", h); else edition.insertAdjacentHTML("beforeend", h);
+    var toc = document.getElementById("toc");
+    if (toc && !toc.hidden && !toc.querySelector('a[href="#brasil"]')) {
+      var antes = toc.querySelector('a[href="#mais"]') || toc.querySelector('a[href="#ensaio"]');
+      var a = document.createElement("a"); a.href = "#brasil"; a.textContent = "Brasil";
+      if (antes) toc.insertBefore(a, antes); else toc.appendChild(a);
+    }
+    ocupado = false;
+  }
+  new MutationObserver(insere).observe(edition, {childList: true});
+
+  /* Apenas Brasil: edição própria, só com o país */
+  function renderBrasil(e){
+    edBr = e;
+    var c = e.capa || {};
+    var resumo = (e.resumo||[]).filter(function(r){ return semLafa(r.tema + " " + r.texto); });
+    var nums = (e.numeros||[]).filter(function(n){ return semLafa(n.rotulo + " " + n.nota); });
+    var agenda = (e.agenda||[]).filter(function(a){ return semLafa(a.oque); });
+    var perg = (e.conversa||[]).filter(semLafa);
+    var hist = e.historia;
+    var todas = [], vistas = {};
+    (e.cadernos||[]).forEach(function(cd){ if (cd.id === "lafaiete") return; (cd.itens||[]).forEach(function(it){ (it.fontes||[]).forEach(function(f){ if (!vistas[f.url||f.nome]) { vistas[f.url||f.nome] = 1; todas.push(f); } }); }); });
+    (e.numeros||[]).forEach(function(n){ if (n.fonte && semLafa(n.rotulo + " " + n.nota)) todas.push({nome: n.fonte}); });
+    var opts = lista().map(function(x, i){ return '<option value="' + i + '"' + (x === e ? " selected" : "") + ">nº " + esc(x.numero) + " · " + esc(curta(x.data)) + "</option>"; }).join("");
+    soBr.innerHTML = '<div class="dateline"><span>Caderno Brasil, Nº ' + esc(e.numero) + '</span><span class="ast" aria-hidden="true">✱</span><span>' + esc(e.tempoLeitura ? e.tempoLeitura + " min de leitura" : "Brasil e Minas Gerais") + '</span><span class="ast" aria-hidden="true">✱</span><span>' + esc(curta(e.data)) + "</span></div>"
+      + '<hr class="thin"><div class="toolbar"><div class="legend"><span class="chip FATO">Confirmado</span><span class="chip ANALISE">Explicação</span><span class="chip CENARIO">Previsão</span></div>'
+      + '<button type="button" class="troca" data-troca>Trocar leitura</button><label class="pick">Edição <select id="br-picker" aria-label="Escolher edição do Brasil">' + opts + "</select></label></div><hr class=\"thin\">"
+      + (c.chapeu ? '<p class="banner">' + esc(c.chapeu) + "</p>" : "") + '<hr class="dbl">'
+      + '<div class="front"><section class="cover" aria-label="Manchete"><h2>' + esc(c.titulo) + '</h2><p class="deck">' + esc(c.linhaFina) + "</p>"
+      + (e.citacao ? '<blockquote class="quote">' + esc(String(e.citacao).replace(/^[“"]|[”"]$/g, "")) + "</blockquote>" : "")
+      + (e.recado ? '<span class="fecha">' + esc(e.recado) + "</span>" : "") + "</section>"
+      + (resumo.length ? '<div class="side"><nav class="resumo calls" aria-label="Resumo"><span class="ct">O Brasil em poucas linhas</span>' + resumo.map(function(r){ return '<span class="call"><span class="r">' + esc(r.tema) + '</span><span class="x">' + esc(r.texto) + "</span></span>"; }).join("") + "</nav></div>" : "")
+      + "</div>"
+      + (nums.length ? '<hr class="dbl"><section class="nums" aria-label="Números do dia">' + nums.map(function(n){ return '<div class="num"><span class="lab">' + esc(n.rotulo) + '</span><span class="val">' + esc(n.valor) + '</span><span class="note">' + esc(n.nota) + '</span><span class="src">' + esc(n.fonte) + "</span></div>"; }).join("") + "</section>" : "")
+      + '<section class="caderno" id="brasil" aria-label="Brasil"><hr class="dbl"><div class="cad-head"><div class="cad-tag">Caderno Brasil</div><h2>O país e como ele chega até você</h2><p>Brasília, o bolso, a saúde, a escola e Minas Gerais.</p></div>'
+      + '<p class="br-nota">' + esc(EXPLICA) + '</p><div class="fronts">' + cadernos(e, "br-") + "</div></section>"
+      + ((e.palavrinhas||[]).length ? '<div class="gloss"><span class="gt">Palavras do dia</span><dl>' + e.palavrinhas.map(function(g){ return "<div><dt>" + esc(g.termo) + "</dt><dd>" + esc(g.def) + "</dd></div>"; }).join("") + "</dl></div>" : "")
+      + (hist && semLafa(hist.titulo + " " + hist.texto) ? '<hr class="dbl"><section class="essay historia" aria-label="História"><div><div class="tag">✱ Um pouco de história ✱</div><h3>' + esc(hist.titulo) + "</h3>"
+          + ((hist.linha||[]).length ? '<ul class="linha">' + hist.linha.map(function(l){ return "<li><b>" + esc(l.ano) + "</b><span>" + esc(l.fato) + "</span></li>"; }).join("") + "</ul>" : "")
+          + '</div><div class="text"><p>' + esc(hist.texto) + "</p>" + ((hist.fontes||[]).length ? '<div class="item"><div class="foot">' + fontes(hist.fontes) + "</div></div>" : "") + "</div></section>" : "")
+      + '<hr class="dbl"><section class="trio">'
+      + (perg.length ? '<div><h3>Perguntas para refletir</h3><ul class="qs">' + perg.map(function(q){ return "<li>" + esc(q) + "</li>"; }).join("") + "</ul></div>" : "")
+      + (agenda.length ? '<div><h3>Para acompanhar</h3><ul class="watch">' + agenda.map(function(w){ return '<li><span class="w">' + esc(w.quando) + "</span><span>" + esc(w.oque) + "</span></li>"; }).join("") + "</ul></div>" : "")
+      + '</section><hr class="dbl rev"><footer class="sources"><span class="st">Fontes desta edição</span><ul>' + todas.map(function(f){ return "<li>" + (f.url ? '<a href="' + esc(f.url) + '" target="_blank" rel="noopener">' + esc(f.nome) + "</a>" : esc(f.nome)) + "</li>"; }).join("") + "</ul>"
+      + '<span class="aviso">' + esc(e.fechamento || "") + " O caderno Brasil é o mesmo do jornal Terra Brasilis, feito com a ajuda do Claude, uma inteligência artificial, a partir da imprensa e de fontes oficiais.</span></footer>";
+    var pk = document.getElementById("br-picker");
+    if (pk) pk.addEventListener("change", function(){ renderBrasil(lista()[Number(pk.value)]); window.scrollTo(0, 0); });
+  }
+
+  function aplica(m, rolar){
+    modo = m;
+    body.classList.remove("modo-escolha", "modo-brasil", "modo-mundo");
+    body.classList.add("modo-" + (m === "brasil" ? "brasil" : m === "mundo" ? "mundo" : "escolha"));
+    try { if (m) sessionStorage.setItem(CHAVE, m); else sessionStorage.removeItem(CHAVE); } catch (e) {}
+    var cad = edition.querySelector(".caderno-brasil"); if (m !== "mundo" && cad) cad.remove();
+    var tl = document.querySelector('#toc a[href="#brasil"]'); if (m !== "mundo" && tl) tl.remove();
+    if (m === "mundo") insere();
+    if (m === "brasil") renderBrasil(escolhe("") );
+    if (rolar !== false) window.scrollTo(0, 0);
+  }
+
+  // botão "Trocar leitura" na barra do Observatório
+  var tb = document.querySelector(".mast .toolbar");
+  if (tb && !tb.querySelector("[data-troca]")) tb.insertAdjacentHTML("beforeend", '<button type="button" class="troca" data-troca hidden>Trocar leitura</button>');
+  document.addEventListener("click", function(ev){
+    var b = ev.target.closest && ev.target.closest("[data-modo],[data-troca]"); if (!b) return;
+    if (b.hasAttribute("data-troca")) { aplica(null); return; }
+    aplica(b.getAttribute("data-modo"));
+    if (location.hash === "#escolher") history.replaceState(null, "", location.pathname);
+  });
+
+  fetch("brasil.json", {cache: "no-store"}).then(function(r){ if (!r.ok) throw 0; return r.json(); }).then(function(d){
+    if (!d || !(d.edicoes||[]).length) return;
+    dados = d;
+    var t = document.querySelector(".mast [data-troca]"); if (t) t.hidden = false;
+    var u = lista()[0];
+    var mb = document.getElementById("esc-m-brasil"); if (mb) mb.textContent = "Edição nº " + u.numero + " de " + curta(u.data) + ": " + ((u.capa||{}).titulo || "");
+    var mm = document.getElementById("esc-m-mundo"), it = document.getElementById("issue");
+    var h = location.hash.replace(/^#/, ""), salvo = null;
+    try { salvo = sessionStorage.getItem(CHAVE); } catch (e) {}
+    var m = h === "apenas-brasil" ? "brasil" : (h === "mundo-brasil" || h === "brasil" || /^br-/.test(h) || /^e-/.test(h) || (h && h !== "escolher" && document.getElementById(h))) ? "mundo" : h === "escolher" ? null : salvo;
+    aplica(m === "brasil" || m === "mundo" ? m : null, false);
+    var poe = function(){ var dt = document.getElementById("issue-date"); if (mm && dt && dt.textContent) mm.textContent = (it ? it.textContent + ", " : "") + dt.textContent; };
+    poe(); new MutationObserver(poe).observe(document.getElementById("issue-date"), {childList: true, characterData: true, subtree: true});
+  }).catch(function(){});
+})();
+</script>
+<!--brasil:fim-->
 
 <!--compromisso:inicio-->
 <style>

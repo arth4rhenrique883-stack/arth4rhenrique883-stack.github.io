@@ -28,9 +28,12 @@ PUBS = [
     ("mundo-lafaiete", "revista", "Do Mundo a Lafaiete",
      "O Observatório completo, com geopolítica, guerras, energia, IA e espaço, mais o caderno de Conselheiro Lafaiete.",
      {"destaque": True, "semMedicina": True, "encarte": "obs"}),
+    # Caderno Brasil (pedido de Arthur, 10/11/2026): ao abrir, o leitor escolhe "Mundo + Brasil" ou
+    # "Apenas Brasil". O caderno é o mesmo do Terra Brasilis (jornal-brasil/edicoes.json, sem Lafaiete),
+    # copiado como brasil.json; a página só mostra a escolha se brasil.json existir ao lado dela.
     ("observatorio", "revista", "Observatório Diário",
-     "Só o mundo, para estudar: geopolítica, guerras, energia, clima, IA e espaço, com história e filosofia.",
-     {"destaque": True, "semMedicina": True}),
+     "O mundo para estudar (geopolítica, guerras, energia, clima, IA e espaço, com história e filosofia) e o caderno do Brasil. Ao abrir, escolha Mundo + Brasil ou Apenas Brasil.",
+     {"destaque": True, "semMedicina": True, "extras": {"brasil.json": "jornal-brasil/edicoes.json"}}),
     ("xequemate", "medicina", "Xeque-Mate",
      "Só medicina, para estudantes: estudos, ensaios clínicos, aprovações e saúde pública.",
      {"destaque": True}),
