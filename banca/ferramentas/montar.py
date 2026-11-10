@@ -189,7 +189,7 @@ def tela_inicial(cards):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Banca</title>
-<meta name="description" content="Os jornais do dia num só lugar: Jornal de Cada Dia, Terra Brasilis, O Carijó, Observatório Diário e Anamnese.">
+<meta name="description" content="Os jornais do dia num só lugar: Jornal de Cada Dia, Terra Brasilis, O Carijó, Observatório Diário e Xeque-Mate.">
 <meta name="theme-color" content="{TINTA}">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -273,7 +273,7 @@ for velho, novo in REDIRECIONA.items():
 
 manifest = {
     "name": "Banca", "short_name": "Banca",
-    "description": "Os jornais do dia num só lugar: Jornal de Cada Dia, Terra Brasilis, O Carijó, Observatório Diário e Anamnese.",
+    "description": "Os jornais do dia num só lugar: Jornal de Cada Dia, Terra Brasilis, O Carijó, Observatório Diário e Xeque-Mate.",
     "lang": "pt-BR", "id": "/banca/", "start_url": "./", "scope": "./",
     "display": "standalone", "orientation": "portrait",
     "background_color": PAPEL, "theme_color": TINTA,

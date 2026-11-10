@@ -1,5 +1,5 @@
 /* Service worker único da Banca. Versão gerada automaticamente pelo montar.py. */
-const V = "1c5d0212d8";
+const V = "73b7e46714";
 const CACHE = "banca-" + V;
 const BASE = ["./", "index.html", "manifest.webmanifest", "icone-180.png", "icone-192.png", "icone-512.png", "icone-maskable-512.png", "jornal/", "jornal/index.html", "jornal/edicoes.json", "jornal/icone-192.png", "brasil/", "brasil/index.html", "brasil/edicoes.json", "brasil/icone-192.png", "lafaiete/", "lafaiete/index.html", "lafaiete/edicoes.json", "lafaiete/icone-192.png", "observatorio/", "observatorio/index.html", "observatorio/edicoes.json", "observatorio/icone-192.png", "xequemate/", "xequemate/index.html", "xequemate/edicoes.json", "xequemate/icone-192.png"];
 
