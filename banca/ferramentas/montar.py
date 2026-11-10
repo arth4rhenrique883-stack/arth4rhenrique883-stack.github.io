@@ -76,6 +76,10 @@ def com_compromisso(html):
     i = html.find("<!--rainha:inicio-->")
     return html[:i] + COMPROMISSO + "\n" + html[i:] if i >= 0 else html + "\n" + COMPROMISSO
 
+# Modo claro e escuro (10/11/2026): botão em todas as páginas; ver ferramentas/tema.py e tema.html.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from tema import aplicar as com_tema
+
 ENCARTE = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "encarte-lafaiete.js"), encoding="utf-8").read()
 
 def sem_medicina(dados):
@@ -221,6 +225,7 @@ def montar(pasta, origem, nome, desc, opts):
                   + com_rainha(html) + REGISTRO.replace("{raiz}", "../"))
         if opts.get("encarte"):
             pagina += "\n<script>\n" + ENCARTE.replace("{modo}", opts["encarte"]) + "</script>\n"
+        pagina = com_tema(pagina)
         os.makedirs(d, exist_ok=True)
         open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(pagina)
         open(os.path.join(d, "edicoes.json"), "w", encoding="utf-8").write(dados)
@@ -263,8 +268,8 @@ def montar_dossie(pasta, origem, nome, desc):
     cab = (CABECA.format(desc=H.escape(desc), tinta=TINTA, raiz="")
            .replace('content="Xeque News"', f'content="{H.escape(nome)}"'))
     os.makedirs(d, exist_ok=True)
-    open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(
-        cab + com_rainha(html) + REGISTRO.replace("{raiz}", "../") + "</body>\n</html>\n")
+    open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(com_tema(
+        cab + com_rainha(html) + REGISTRO.replace("{raiz}", "../") + "</body>\n</html>\n"))
     man = {"name": nome, "short_name": "Caso Master" if pasta == "caso-master" else nome,
            "description": desc, "lang": "pt-BR", "id": f"/banca/{pasta}/", "start_url": "./", "scope": "./",
            "display": "standalone", "background_color": PAPEL, "theme_color": TINTA,
@@ -377,12 +382,12 @@ for args in DOSSIES:
 _f = os.path.join(BANCA, "fontes")
 os.makedirs(_f, exist_ok=True)
 _corpo = FONTES.replace('<div class="wrap">', '</head>\n<body>' + BARRA.replace("{nome}", "Fontes e compromisso") + '<div class="wrap">', 1)
-open(os.path.join(_f, "index.html"), "w", encoding="utf-8").write(
+open(os.path.join(_f, "index.html"), "w", encoding="utf-8").write(com_tema(
     CABECA.format(desc="As fontes de referência dos jornais do Xeque News e o compromisso editorial: sem partido, fato separado de opinião, os dois lados, correção pública.", tinta=TINTA, raiz="../")
-    + com_rainha(_corpo + "\n" + COMPROMISSO.replace("<details>", "<details open>")) + REGISTRO.replace("{raiz}", "../") + "</body>\n</html>\n")
+    + com_rainha(_corpo + "\n" + COMPROMISSO.replace("<details>", "<details open>")) + REGISTRO.replace("{raiz}", "../") + "</body>\n</html>\n"))
 print("fontes: atualizado")
 
-open(os.path.join(BANCA, "index.html"), "w", encoding="utf-8").write(tela_inicial(cards))
+open(os.path.join(BANCA, "index.html"), "w", encoding="utf-8").write(com_tema(tela_inicial(cards)))
 
 # caminhos antigos que mudaram de nome: redirecionam e desligam o service worker velho
 REDIRECIONA = {"anamnese": "xequemate"}

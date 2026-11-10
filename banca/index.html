@@ -1,6 +1,91 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
+<!--tema:inicio-->
+<style id="tema-xeque">
+/* Modo claro e escuro (10/11/2026). Claro = o papel bege de sempre. Escuro = jornal impresso em negativo:
+   papel grafite quente, tinta marfim, filetes claros. Na primeira visita segue o aparelho; depois lembra a escolha.
+   Fonte única: banca/ferramentas/tema.html (o montar.py injeta onde faltar). Não apague nas rotinas. */
+html[data-tema="escuro"]{
+  color-scheme:dark;
+  --papel:#191714;--papel-escuro:#221F1B;--papel2:#221F1B;--paper:#191714;--paper-2:#221F1B;--sheet:#1E1B18;
+  --tinta:#ECE3D4;--tinta-suave:#BFB4A4;--tinta2:#BFB4A4;--ink:#ECE3D4;--ink-2:#DDD3C3;--muted:#B5A999;--suave:#BFB4A4;
+  --fio:#D9CFBF;--rule:#D9CFBF;--hair:rgba(236,227,212,.32);--filete:#9D8F80;
+  --realce:#2C2823;--soft:#26221E;--signal:#E39A84;
+  --tinta-forte:#F3ECDF;--tinta-hover:#CFC5B5;--tarja-suave:#3A342D;--veu:rgba(255,244,226,.035);
+  --fato:#9CC9AA;--alega:#E0B072;--analise:#A9B6E0;--cenario:#D4A3C1;
+}
+html[data-tema="escuro"],html[data-tema="escuro"] body{background-color:#191714}
+html[data-tema="escuro"] body{
+  background-image:
+    radial-gradient(ellipse at 50% 35%, rgba(255,236,205,.045), rgba(0,0,0,0) 70%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .93  0 0 0 0 .89  0 0 0 0 .83  0 0 0 .05 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>") !important}
+/* véus claros sobre o papel: no escuro, quase transparentes */
+html[data-tema="escuro"] :is(.plate,.cad-head .eng,.esc-card,.impacto,.box,.opcao,.aviso,.jornais article,a.pub,li.sug-item){background:rgba(255,244,226,.035)!important}
+html[data-tema="escuro"] :is(.opcao:hover,a.pub:hover,a.pub:focus-visible,a.outro:hover,a.outro:focus-visible){background:rgba(255,244,226,.08)!important}
+html[data-tema="escuro"] .sug :is(input[type=text],input[type=email],input[type=password],textarea,select){background:rgba(255,244,226,.05);color:var(--tinta)}
+html[data-tema="escuro"] :is(.item,.dia,.linha-tempo li){border-color:rgba(236,227,212,.4)}
+html[data-tema="escuro"] .passos li.trava{background:repeating-linear-gradient(-45deg,transparent 0 6px,rgba(224,176,114,.14) 6px 8px)}
+/* gravuras: as desenhadas viram negativo (traço marfim); a foto antiga fica como prancha colada, um pouco mais baixa */
+html[data-tema="escuro"] svg[aria-label^="Gravura"]{filter:invert(1) hue-rotate(180deg) sepia(.12)}
+html[data-tema="escuro"] .gravura{background:#D8CFBF!important}
+html[data-tema="escuro"] .gravura img{filter:contrast(1.05) sepia(.25) brightness(.86)}
+/* expediente "Fontes e compromisso editorial" */
+html[data-tema="escuro"] body .compromisso-editorial,html[data-tema="escuro"] body .compromisso-editorial :is(h2.ce-titulo,h3,a){color:var(--tinta)}
+html[data-tema="escuro"] body .compromisso-editorial :is(.ce-linha,.ce-pe){color:var(--tinta-suave)}
+html[data-tema="escuro"] body .compromisso-editorial :is(.ce-caixa,.ce-chapeu,h3,.ce-selos span,details,.ce-limite){border-color:var(--tinta);outline-color:var(--tinta)}
+html[data-tema="escuro"] body .compromisso-editorial .ce-caixa{background:rgba(255,244,226,.035)}
+/* logo da rainha: o mesmo selo, em marfim sobre grafite */
+html[data-tema="escuro"] body .rainha-canto{background:#191714;border-color:#ECE3D4;outline-color:#ECE3D4}
+html[data-tema="escuro"] body .rainha-canto svg g{stroke:#ECE3D4}
+html[data-tema="escuro"] body .rainha-canto svg circle{fill:#191714}
+/* barra da Banca */
+html[data-tema="escuro"] .banca-volta{background:#0F0E0C;color:#ECE3D4;border-bottom:1px solid rgba(236,227,212,.35)}
+html[data-tema="escuro"] .banca-volta a:hover,html[data-tema="escuro"] .banca-volta a:focus-visible{background:#ECE3D4;color:#0F0E0C}
+html[data-tema="escuro"] .banca-mini a{color:#ECE3D4}
+/* o botão */
+.tema-alternador{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:44px;min-height:44px;padding:6px 10px;
+  font:600 13px/1 "Archivo","Archivo Narrow","Helvetica Neue",Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;
+  cursor:pointer;border-radius:0;background:#ECE3D4;color:#3A2D2B;border:1.5px solid #3A2D2B;outline:1px solid #3A2D2B;outline-offset:2px}
+.tema-alternador svg{width:18px;height:18px;flex:none}
+.tema-alternador:focus-visible{outline-width:3px}
+.tema-alternador.solto{position:fixed;left:max(12px,env(safe-area-inset-left,0px));bottom:max(12px,env(safe-area-inset-bottom,0px));z-index:9998}
+html[data-tema="escuro"] .tema-alternador{background:#191714;color:#ECE3D4;border-color:#ECE3D4;outline-color:#ECE3D4}
+.banca-volta .tema-alternador{background:transparent;color:inherit;border-color:currentColor;outline:0;flex:none;padding:8px 10px}
+.banca-volta .tema-alternador:hover,.banca-volta .tema-alternador:focus-visible{background:#ECE3D4;color:#3A2D2B}
+html[data-tema="escuro"] .banca-volta .tema-alternador:hover,html[data-tema="escuro"] .banca-volta .tema-alternador:focus-visible{color:#0F0E0C}
+@media (max-width:430px){.tema-alternador .tema-rot{display:none}}
+@media print{.tema-alternador{display:none}}
+</style>
+<script id="tema-xeque-js">
+(function(){
+  var CHAVE="xeque-tema", R=document.documentElement;
+  function guardado(){try{var v=localStorage.getItem(CHAVE);return v==="claro"||v==="escuro"?v:null}catch(e){return null}}
+  function sistema(){try{return matchMedia("(prefers-color-scheme: dark)").matches?"escuro":"claro"}catch(e){return "claro"}}
+  function cor(t){var m=document.querySelectorAll('meta[name="theme-color"]');for(var i=0;i<m.length;i++)m[i].setAttribute("content",t==="escuro"?"#0F0E0C":"#3A2D2B")}
+  var LUA='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="currentColor"/></svg>';
+  var SOL='<svg viewBox="0 0 24 24" aria-hidden="true"><g stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>';
+  function pintar(t){
+    R.setAttribute("data-tema",t);cor(t);
+    var b=document.querySelector(".tema-alternador");
+    if(b){var e=t==="escuro";b.innerHTML=(e?SOL:LUA)+'<span class="tema-rot">'+(e?"Claro":"Escuro")+"</span>";
+      b.setAttribute("aria-label",e?"Mudar para o modo claro":"Mudar para o modo escuro");b.setAttribute("aria-pressed",e?"true":"false");b.title=b.getAttribute("aria-label")}
+  }
+  pintar(guardado()||sistema());
+  try{matchMedia("(prefers-color-scheme: dark)").addEventListener("change",function(){if(!guardado())pintar(sistema())})}catch(e){}
+  function botao(){
+    if(document.querySelector(".tema-alternador"))return;
+    var b=document.createElement("button");b.type="button";b.className="tema-alternador";
+    b.addEventListener("click",function(){var n=R.getAttribute("data-tema")==="escuro"?"claro":"escuro";try{localStorage.setItem(CHAVE,n)}catch(e){}pintar(n)});
+    var barra=document.querySelector(".banca-volta");
+    if(barra){var f=barra.querySelector(".banca-fontes");barra.insertBefore(b,f||null)}else{b.className+=" solto";document.body.appendChild(b)}
+    pintar(R.getAttribute("data-tema")||"claro");
+  }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",botao);else botao();
+})();
+</script>
+<!--tema:fim-->
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Xeque News</title>
