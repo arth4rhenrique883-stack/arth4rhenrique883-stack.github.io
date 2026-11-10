@@ -19,7 +19,7 @@ ICONES = ["icone-180.png", "icone-192.png", "icone-512.png", "icone-maskable-512
 
 PUBS = [
     # pasta no site, pasta de origem, nome, para quem / do que trata, opções
-    #   destaque: cartão grande na tela inicial (os outros vão para "Também na Banca")
+    #   destaque: cartão grande na tela inicial (os outros vão para "Também no Xeque News")
     #   semMedicina: tira o caderno de medicina (que agora vive no Xeque-Mate)
     #   encarte: junta o caderno de Conselheiro Lafaiete do O Carijó ("jornal" ou "obs")
     ("jornal", "revista-leiga", "Jornal de Cada Dia",
@@ -93,7 +93,7 @@ CABECA = """<!doctype html>
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Banca">
+<meta name="apple-mobile-web-app-title" content="Xeque News">
 <link rel="manifest" href="{raiz}manifest.webmanifest">
 <link rel="icon" type="image/png" sizes="192x192" href="{raiz}icone-192.png">
 <link rel="apple-touch-icon" href="{raiz}icone-180.png">
@@ -113,7 +113,7 @@ BARRA = """
 @media (max-width:430px){.banca-volta span{display:none}}
 @media print{.banca-volta{display:none}}
 </style>
-<nav class="banca-volta" aria-label="Banca"><a href="../">&#8249;&nbsp;Todos os jornais</a><span>{nome}</span><a href="../fontes/" class="banca-fontes">Fontes</a></nav>
+<nav class="banca-volta" aria-label="Xeque News"><a href="../">&#8249;&nbsp;Todos os jornais</a><span>{nome}</span><a href="../fontes/" class="banca-fontes">Fontes</a></nav>
 """
 
 REGISTRO = """
@@ -239,7 +239,7 @@ def montar(pasta, origem, nome, desc, opts):
 VOLTA_DOSSIE = """
 <style>.banca-mini{font:600 13px/1.2 "IBM Plex Mono","Courier New",monospace;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:12px 0 0}
 .banca-mini a{color:#3A2D2B}</style>
-<div class="banca-mini"><a href="../">&#8249; Ver também os jornais da Banca</a></div>
+<div class="banca-mini"><a href="../">&#8249; Ver também os jornais do Xeque News</a></div>
 """
 
 def montar_dossie(pasta, origem, nome, desc):
@@ -254,7 +254,7 @@ def montar_dossie(pasta, origem, nome, desc):
     m = re.search(r"<(div|header|main|nav|section|article)\b", html)
     html = html[:m.start()] + VOLTA_DOSSIE + html[m.start():] if m else VOLTA_DOSSIE + html
     cab = (CABECA.format(desc=H.escape(desc), tinta=TINTA, raiz="")
-           .replace('content="Banca"', f'content="{H.escape(nome)}"'))
+           .replace('content="Xeque News"', f'content="{H.escape(nome)}"'))
     os.makedirs(d, exist_ok=True)
     open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(
         cab + com_rainha(html) + REGISTRO.replace("{raiz}", "../") + "</body>\n</html>\n")
@@ -287,12 +287,12 @@ def tela_inicial(cards):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Banca</title>
+<title>Xeque News</title>
 <meta name="description" content="Os jornais do dia num só lugar: Jornal de Cada Dia, Do Mundo a Lafaiete, Observatório Diário e Xeque-Mate, e Terra Brasilis (Brasil e Lafaiete).">
 <meta name="theme-color" content="{TINTA}">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Banca">
+<meta name="apple-mobile-web-app-title" content="Xeque News">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" type="image/png" sizes="192x192" href="icone-192.png">
 <link rel="apple-touch-icon" href="icone-180.png">
@@ -308,7 +308,7 @@ body{{margin:0;background:var(--papel);color:var(--tinta);font-family:"Newsreade
 .wrap{{max-width:780px;margin:0 auto;padding:max(22px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) 48px max(16px, env(safe-area-inset-left, 0px))}}
 .duplo{{border-top:6px solid var(--tinta);border-bottom:2px solid var(--tinta);height:11px}}
 .duplo.inv{{border-top-width:2px;border-bottom-width:6px}}
-h1{{font-family:"Anton",Impact,"Arial Narrow",sans-serif;font-weight:400;font-size:clamp(76px,24vw,168px);line-height:.95;text-align:center;margin:12px 0 8px;text-transform:uppercase;letter-spacing:.01em}}
+h1{{font-family:"Anton",Impact,"Arial Narrow",sans-serif;font-weight:400;font-size:clamp(50px,13.5vw,150px);line-height:.95;text-align:center;margin:12px 0 8px;text-transform:uppercase;letter-spacing:.01em}}
 .linha{{display:flex;justify-content:space-between;align-items:center;gap:8px;font-family:"Archivo",Arial,sans-serif;font-weight:800;letter-spacing:.1em;font-size:13px;text-transform:uppercase;padding:12px 2px;border-bottom:1px solid var(--tinta)}}
 h2{{font-family:"Playfair Display",Georgia,serif;font-weight:600;text-transform:uppercase;text-align:center;font-size:clamp(26px,6.5vw,40px);margin:18px 0 6px;letter-spacing:.02em}}
 .sub{{text-align:center;font-style:italic;font-size:19px;color:var(--suave);margin:0 0 22px}}
@@ -339,18 +339,18 @@ a.outro:hover,a.outro:focus-visible{{background:rgba(255,255,255,.4)}}
 <body>
 <div class="wrap">
   <div class="duplo"></div>
-  <h1>Banca</h1>
+  <h1>Xeque News</h1>
   <div class="duplo inv"></div>
   <div class="linha"><span>{len(cards)} jornais</span><span>✱</span><span class="larga">Edição todo dia</span><span class="larga">✱</span><span>{hoje.strftime('%d/%m/%Y')}</span></div>
   <h2>Escolha o seu jornal</h2>
   <p class="sub">Toque num jornal para ler a edição de hoje.</p>
 {chr(10).join(itens)}
-  {('<h3 class="tamb">Também na Banca</h3>' + chr(10) + chr(10).join(outros)) if outros else ""}
+  {('<h3 class="tamb">Também no Xeque News</h3>' + chr(10) + chr(10).join(outros)) if outros else ""}
   {('<h3 class="tamb">Dossiês de estudo</h3>' + chr(10) + chr(10).join(f'  <a class="outro" href="{p}/"><img src="{p}/icone-192.png" alt="" width="44" height="44"><span><b>{H.escape(n)}</b> {H.escape(ds)}</span></a>' for p, _, n, ds in DOSSIES)) if DOSSIES else ""}
   <h3 class="tamb">Fontes e compromisso editorial</h3>
   <a class="outro" href="fontes/"><span><b>Sem partido, com fonte</b> Todos os jornais seguem a mesma linha: nenhum vínculo com partido ou governo, fato separado de opinião, os dois lados, cada notícia com fonte, link e data, e erros corrigidos às claras. Veja as fontes de cada jornal.</span></a>
   <div class="caixa">"Cada página impressa aproximava o mundo"</div>
-  <p class="nota">Para ter a Banca como aplicativo no celular: no Android, abra no Chrome, toque nos três pontinhos e em "Instalar app" ou "Adicionar à tela inicial"; no iPhone, abra no Safari, toque em Compartilhar e em "Adicionar à Tela de Início". Depois da primeira visita, os jornais abrem até sem internet. Textos escritos com a ajuda do Claude, IA da Anthropic; não substituem orientação médica.</p>
+  <p class="nota">Para ter o Xeque News como aplicativo no celular: no Android, abra no Chrome, toque nos três pontinhos e em "Instalar app" ou "Adicionar à tela inicial"; no iPhone, abra no Safari, toque em Compartilhar e em "Adicionar à Tela de Início". Depois da primeira visita, os jornais abrem até sem internet. Textos escritos com a ajuda do Claude, IA da Anthropic; não substituem orientação médica.</p>
 </div>
 {REGISTRO.replace("{raiz}", "./")}
 </body>
@@ -370,7 +370,7 @@ _f = os.path.join(BANCA, "fontes")
 os.makedirs(_f, exist_ok=True)
 _corpo = FONTES.replace('<div class="wrap">', '</head>\n<body>' + BARRA.replace("{nome}", "Fontes e compromisso") + '<div class="wrap">', 1)
 open(os.path.join(_f, "index.html"), "w", encoding="utf-8").write(
-    CABECA.format(desc="As fontes de referência dos jornais da Banca e o compromisso editorial: sem partido, fato separado de opinião, os dois lados, correção pública.", tinta=TINTA, raiz="../")
+    CABECA.format(desc="As fontes de referência dos jornais do Xeque News e o compromisso editorial: sem partido, fato separado de opinião, os dois lados, correção pública.", tinta=TINTA, raiz="../")
     + com_rainha(_corpo + "\n" + COMPROMISSO.replace("<details>", "<details open>")) + REGISTRO.replace("{raiz}", "../") + "</body>\n</html>\n")
 print("fontes: atualizado")
 
@@ -402,7 +402,7 @@ for velho, novo in REDIRECIONA.items():
     open(os.path.join(d, "sw.js"), "w", encoding="utf-8").write(SW_ANTIGO)
 
 manifest = {
-    "name": "Banca", "short_name": "Banca",
+    "name": "Xeque News", "short_name": "Xeque News",
     "description": "Os jornais do dia num só lugar: Jornal de Cada Dia, Do Mundo a Lafaiete, Observatório Diário e Xeque-Mate, e Terra Brasilis (Brasil e Lafaiete).",
     "lang": "pt-BR", "id": "/banca/", "start_url": "./", "scope": "./",
     "display": "standalone", "orientation": "portrait",
