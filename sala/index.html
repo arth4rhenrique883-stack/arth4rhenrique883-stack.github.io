@@ -1,0 +1,559 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<link rel="icon" href="icone.png"><link rel="manifest" href="manifest.webmanifest"><title>Sala Vermelha LAMUEH</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>@font-face{font-family:'Inter';font-weight:400;font-style:normal;font-display:swap;src:url(fonts/inter-latin-400-normal.woff2) format('woff2')}@font-face{font-family:'Inter';font-weight:500;font-style:normal;font-display:swap;src:url(fonts/inter-latin-500-normal.woff2) format('woff2')}@font-face{font-family:'Inter';font-weight:600;font-style:normal;font-display:swap;src:url(fonts/inter-latin-600-normal.woff2) format('woff2')}@font-face{font-family:'Inter';font-weight:700;font-style:normal;font-display:swap;src:url(fonts/inter-latin-700-normal.woff2) format('woff2')}@font-face{font-family:'IBM Plex Mono';font-weight:400;font-style:normal;font-display:swap;src:url(fonts/ibm-plex-mono-latin-400-normal.woff2) format('woff2')}@font-face{font-family:'IBM Plex Mono';font-weight:500;font-style:normal;font-display:swap;src:url(fonts/ibm-plex-mono-latin-500-normal.woff2) format('woff2')}</style>
+<style>
+/* Layout: uma coisa por vez. Cabeçalho mínimo com abas; cada aba mostra um único bloco centrado (um cartão, uma questão). Preto e branco; vermelho = marca/errei; azul = atualização fora da apostila/acertei. */
+:root{
+  --bg:#FFFFFF; --ink:#0A0A0A; --muted:#6B6B6B; --line:#E7E7E7; --soft:#F6F6F6;
+  --red:#C1121F; --blue:#1D4ED8;
+  --f-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0A0A0A;--ink:#F4F4F4;--muted:#9A9A9A;--line:#262626;--soft:#151515;--red:#FF5C6A;--blue:#7AA2FF;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0A0A0A;--ink:#F4F4F4;--muted:#9A9A9A;--line:#262626;--soft:#151515;--red:#FF5C6A;--blue:#7AA2FF;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px;flex-wrap:wrap}
+.brand{font-weight:700;letter-spacing:.02em;display:flex;align-items:center;gap:8px;font-size:15px}
+.brand i{width:8px;height:8px;border-radius:50%;background:var(--red);display:inline-block}
+nav{display:flex;gap:2px;flex-wrap:wrap}
+nav a{color:var(--muted);text-decoration:none;font-size:14px;padding:4px 10px;border-radius:6px}
+nav a[aria-current="page"]{color:var(--ink);font-weight:600;background:var(--soft)}
+nav a:focus-visible,button:focus-visible,select:focus-visible,.card:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+main{padding-block:32px 56px}
+.view{display:flex;flex-direction:column;gap:20px}
+h1,h2{margin:0;font-weight:700;letter-spacing:-.01em;text-wrap:balance;line-height:1.15}
+h1{font-size:28px} h2{font-size:22px}
+.label{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.label.upd{color:var(--blue)}
+.muted{color:var(--muted)}
+p{margin:0}
+.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+select{font:inherit;font-size:14px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 10px}
+button{font:inherit;cursor:pointer}
+.btn{font-size:15px;font-weight:500;border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:9px 16px;border-radius:8px}
+.btn:hover{border-color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn.no{color:var(--red);border-color:var(--red)}
+.btn.yes{color:var(--blue);border-color:var(--blue)}
+.link{background:none;border:0;padding:0;color:var(--muted);font-size:14px;text-decoration:underline;text-underline-offset:3px}
+.progress{height:2px;background:var(--line);border-radius:2px;overflow:hidden}
+.progress span{display:block;height:100%;background:var(--ink)}
+.card{border:1px solid var(--line);border-radius:14px;padding:28px 24px;min-height:280px;display:flex;flex-direction:column;gap:18px;cursor:pointer;background:var(--bg)}
+.card.flipped{border-color:var(--ink)}
+.card .top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.card .q{font-size:21px;font-weight:600;line-height:1.4}
+.card .a{font-size:17px;line-height:1.6;border-top:1px solid var(--line);padding-top:16px}
+.card .hint{margin-top:auto;font-size:13px;color:var(--muted)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.row .mid{display:flex;gap:10px}
+.tag-ok{color:var(--blue)} .tag-bad{color:var(--red)}
+.qbox{display:flex;flex-direction:column;gap:16px}
+.stem{font-size:18px;font-weight:500;line-height:1.5}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{text-align:left;border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:11px 14px;border-radius:10px;display:flex;gap:12px;font-size:15.5px}
+.opt:hover:not(:disabled){border-color:var(--ink)}
+.opt .l{font-family:var(--f-mono);color:var(--muted)}
+.opt:disabled{cursor:default}
+.opt.right{border-color:var(--blue);box-shadow:inset 3px 0 0 var(--blue)}
+.opt.wrong{border-color:var(--red);box-shadow:inset 3px 0 0 var(--red)}
+.comment{font-size:15px;line-height:1.6;display:flex;flex-direction:column;gap:10px}
+.upd-note{border-left:2px solid var(--blue);padding-left:12px;font-size:14.5px}
+.upd-note b{color:var(--blue);font-weight:600}
+details{border-top:1px solid var(--line);padding-top:14px}
+summary{cursor:pointer;font-size:14px;color:var(--muted)}
+.stats{display:flex;flex-direction:column;gap:10px;margin-top:12px;font-size:14px}
+.stats .s{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px}
+.bar{grid-column:1/-1;height:3px;background:var(--line);display:flex;border-radius:2px;overflow:hidden}
+.bar .g{background:var(--blue)} .bar .r{background:var(--red)}
+ol.blocks,ul.plain{margin:0;padding:0;list-style:none;display:flex;flex-direction:column}
+ol.blocks li,ul.plain li{padding:14px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px}
+ol.blocks li b,ul.plain li b{font-weight:600}
+ol.blocks li span.d,ul.plain li span.d{grid-column:1/-1;color:var(--muted);font-size:14.5px}
+.pg{font-family:var(--f-mono);font-size:12.5px;color:var(--muted);white-space:nowrap}
+.note{border-left:2px solid var(--red);padding-left:12px;font-size:15px}
+.ref{display:flex;flex-direction:column;gap:6px;padding:16px 0;border-bottom:1px solid var(--line)}
+.ref h3{margin:0;font-size:16.5px;font-weight:600}
+.ref p{font-size:15px}
+.ref .vs{font-size:14px;color:var(--muted)}
+.ref .links{display:flex;gap:14px;font-family:var(--f-mono);font-size:13px}
+.ref .links a,.inline-a{color:var(--blue);text-decoration:none}
+.ref .links a:hover,.inline-a:hover{text-decoration:underline}
+.syn{display:flex;flex-direction:column}
+.syn div{padding:16px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:6px}
+.syn b{font-weight:600}
+.syn p{font-size:15px}
+footer{color:var(--muted);font-size:13px;padding-block:0 32px}
+@media (max-width:520px){.card{padding:22px 18px}.card .q{font-size:19px}h1{font-size:24px}}
+@media (prefers-reduced-motion:no-preference){.card,.opt{transition:border-color .15s}}
+</style>
+
+<header><div class="wrap">
+  <div class="brand"><i></i>LAMUEH · prova 16/11</div>
+  <nav aria-label="Seções">
+    <a href="#cartoes" data-v="cartoes">Cartões</a>
+    <a href="#questoes" data-v="questoes">Questões</a>
+    <a href="#atualizacoes" data-v="atualizacoes">Atualizações</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+
+<section class="view" id="v-cartoes">
+  <div class="controls">
+    <select id="fc-theme" aria-label="Bloco"></select>
+    <select id="fc-mode" aria-label="Quais cartões">
+      <option value="all">Todos</option><option value="new">Não vistos</option><option value="wrong">Só os que errei</option>
+    </select>
+    <button class="link" id="fc-shuffle">Embaralhar</button>
+  </div>
+  <div class="progress" aria-hidden="true"><span id="fc-prog"></span></div>
+  <div class="card" id="card" tabindex="0" role="button" aria-label="Flashcard, clique para virar">
+    <div class="top"><span class="label" id="c-theme"></span><span class="label" id="c-pos"></span></div>
+    <div class="q" id="c-front"></div>
+    <div class="a" id="c-back" hidden></div>
+    <div class="hint" id="c-hint">Clique ou aperte espaço para ver a resposta</div>
+  </div>
+  <div class="row">
+    <button class="btn" id="fc-prev" aria-label="Cartão anterior">←</button>
+    <div class="mid"><button class="btn no" id="fc-bad">Errei</button><button class="btn yes" id="fc-ok">Acertei</button></div>
+    <button class="btn" id="fc-next" aria-label="Próximo cartão">→</button>
+  </div>
+  <details>
+    <summary>Meu progresso por bloco</summary>
+    <div class="stats" id="fc-stats"></div>
+    <p class="muted" style="font-size:13px;margin-top:12px">Atalhos: espaço vira, 1 = errei, 2 = acertei, setas navegam. Marcações ficam salvas neste navegador. <button class="link" id="fc-reset">Zerar marcações</button></p>
+  </details>
+</section>
+
+<section class="view" id="v-questoes" hidden>
+  <div class="controls">
+    <select id="q-theme" aria-label="Bloco"></select>
+    <button class="link" id="q-shuffle">Modo simulado (embaralhar)</button>
+    <button class="link" id="q-reset">Recomeçar</button>
+  </div>
+  <div class="progress" aria-hidden="true"><span id="q-prog"></span></div>
+  <div class="qbox" id="qbox"></div>
+  <div class="row">
+    <button class="btn" id="q-prev">← Anterior</button>
+    <span class="label" id="q-score"></span>
+    <button class="btn primary" id="q-next">Próxima →</button>
+  </div>
+</section>
+
+<section class="view" id="v-atualizacoes" hidden>
+  <div class="label upd">Fora da apostila · PubMed</div>
+  <h1>O que mudou desde 2022</h1>
+  <p class="muted">Na prova, responda pela apostila. Isto é para não levar conceito velho para o internato. Todas as referências foram conferidas no PubMed.</p>
+  <div id="upd-list"></div>
+  <h2 style="margin-top:12px">O que ler por fora</h2>
+  <p class="muted">AHA 2025 Parte 9 (ACLS) e Parte 11 (pós-PCR), as duas primeiras da lista acima, e o DEVICE, sobre videolaringoscopia.</p>
+</section>
+
+</main>
+<footer class="wrap">Fonte: Apostila LAMUEH 2022. Complementos: artigos do PubMed com link por DOI.</footer>
+
+<script>
+const THEMES={a:"Paciente grave",b:"Via aérea",c:"PCR",d:"Pós-PCR",e:"Trauma (ATLS)"};
+// [tema, página PDF, frente, verso]
+const CARDS=[
+["a","3, 8","Definição gasométrica de insuficiência respiratória aguda?","PaO2 < 60 mmHg (ou SpO2 < 90%) ou PaCO2 > 45–50 mmHg, de instalação aguda."],
+["a","4","Primeira medida obrigatória no paciente inconsciente e arresponsivo?","Glicemia capilar e correção de hipoglicemia. Se não der para medir rápido, bolus empírico de glicose hipertônica (p. 7)."],
+["a","7","Etilista pesado com rebaixamento: o que vem antes da glicose?","Tiamina, para evitar encefalopatia de Wernicke (confusão, ataxia, alteração da motricidade ocular, podendo chegar a choque e coma)."],
+["a","3, 9","Sinais de gravidade no exame do paciente grave (lista da apostila)?","Bradicardia < 40 bpm, pulso filiforme, TEC > 4 s, estase jugular, estertores, cianose de extremidades, pele fria e úmida, diurese < 0,5 mL/kg/h, estado mental alterado."],
+["a","3–4","Principais escalas de triagem e quantos níveis têm vantagem?","ESI, Manchester, Australasian e canadense (CTAS). Escalas de 5 níveis são superiores às de 3 (Fitzgerald). Triagem reduz o tempo de atendimento do grave."],
+["a","4","Quando a triagem deixa de ser necessária?","Quando não há grande demanda e o atendimento médico é imediato, independentemente da queixa."],
+["a","4","Sequência para determinar irresponsividade?","Estímulo verbal (\"você me ouve?\"), depois tátil (mãos/face), depois doloroso sem causar dano (pressão no leito ungueal)."],
+["a","4–5","Glasgow-P: como as pupilas entram no escore?","Subtrai: nenhuma pupila reage = −2; uma reage = −1; ambas = 0. Validado no TCE, ainda não em pacientes clínicos."],
+["a","4","Na escala de Glasgow, qual resposta pontuar?","Sempre o valor máximo obtido, checando limitantes (por exemplo, surdez)."],
+["a","5","Decorticação sugere lesão onde?","Lesão ou disfunção supratentorial extensa."],
+["a","5","Descerebração sugere lesão onde?","Tronco cerebral, ou até diencéfalo."],
+["a","5","Hemiparesia dimidiada com face ipsilateral?","Lesão acima da ponte, contralateral."],
+["a","5","Ausência de resposta motora sugere?","Lesão periférica, pontina ou bulbar."],
+["a","5","Sinais motores focais e assimétricos sugerem?","Patologia estrutural (com raras exceções)."],
+["a","6","Pupilas puntiformes (< 2 mm)?","Intoxicação por opioide ou lesão pontina."],
+["a","6","Pupilas médio-fixas (4–6 mm) sem resposta à luz?","Lesão de mesencéfalo."],
+["a","6","Pupilas midriáticas (> 8 mm)?","Anfetamina ou cocaína, ou acometimento do III par."],
+["a","6","Pupila fixa unilateral?","Lesão do III nervo craniano (oculomotor)."],
+["a","6","Respiração atáxica (Biot) indica?","Lesão em regiões inferiores, como o bulbo."],
+["a","6","Hiperventilação neurogênica central: definição e topografia?","Respiração profunda e rápida, ≥ 25 irpm; lesão de ponte ou mesencéfalo."],
+["a","6","Cheyne-Stokes ajuda a localizar o coma?","Não. Ocorre em muitas patologias e não serve para o diagnóstico diferencial."],
+["a","6","Olhos de boneca preservados; e se a alteração for horizontal ou vertical?","Preservado: transição pontomesencefálica íntegra. Olhar horizontal alterado: ponte. Olhar conjugado vertical alterado: mesencéfalo."],
+["a","6","Etiologia mais comum da alteração de consciência?","Tóxico-metabólica-infecciosa (cerca de 2/3), causando encefalopatia difusa."],
+["a","6","Encefalopatia focal sem causa estrutural: exceções citadas?","Alguns casos de hipoglicemia, encefalopatia hepática e uremia."],
+["a","6","Quando pedir TC de crânio sem contraste no coma?","Em todos em que a causa não é rapidamente identificada pela história; sempre se houver sinal focal. RM em caso de dúvida."],
+["a","6","TC na HSA: sensibilidade e complicação?","98% se feita até 12 h do início; hidrocefalia em cerca de 20%."],
+["a","6","Primeira alteração na TC do AVC isquêmico?","Perda da diferenciação entre substância cinzenta e branca."],
+["a","6","Hematoma subdural na TC?","Imagem em foice ou crescente."],
+["a","7","Suspeita de hipertensão intracraniana: posição?","Cabeceira a 30°."],
+["a","7","Antídoto de opioide e dose?","Naloxona 0,4 a 2 mg IV."],
+["a","7","Flumazenil: contraindicação citada?","História de convulsões. Uso indiscriminado de antídotos deve ser evitado."],
+["a","7","Quando considerar IOT no paciente com rebaixamento?","Inconsciente a ponto de não proteger ou manter a via aérea pérvia, ou respiração ineficaz e hipoxemia."],
+["a","7","Primeira medida se o paciente não respira normalmente?","Checar obstrução de via aérea (ruídos, cavidade oral, trauma, sinais de obstrução, queda da língua)."],
+["a","7","Hipoxemia como sinal de obstrução de VA é precoce ou tardio?","Tardio, sinal de extrema gravidade."],
+["a","7","Bradipneia e Cheyne-Stokes no desconforto respiratório significam?","Sinais tardios, maior gravidade."],
+["a","7","Movimentos torácicos paradoxais e unilaterais sugerem?","Paradoxais: obstrução de VA ou instabilidade da caixa torácica. Unilaterais: pneumotórax, derrame ou atelectasia."],
+["a","8","IRpA tipo I: mecanismo e gasometria?","Hipoxêmica: falência da oxigenação com ventilação preservada (V/Q, shunt, espaço morto, difusão). PaO2 < 60 com PaCO2 < 45, que pode estar baixa por hiperventilação."],
+["a","8","IRpA tipo II: mecanismo?","Hipercápnica (PaCO2 > 45). Causas comuns: queda da ventilação minuto e aumento do espaço morto. Aumento de produção de CO2 raramente causa hipercapnia importante."],
+["a","8","Critérios para considerar VNI?","Dispneia moderada a grave, FR 24–30, aumento do trabalho respiratório; PaCO2 > 45 (ou piora no retentor crônico) ou P/F < 200."],
+["a","8","Indicações com benefício demonstrado de VNI?","DPOC exacerbada com acidose respiratória (PaCO2 > 45 ou pH < 7,3), edema pulmonar cardiogênico, IRpA hipoxêmica no imunossuprimido (questionável), extubação de alto risco (> 65 a, ICC, DPOC, APACHE II > 12)."],
+["a","9","Quando partir para ventilação invasiva?","Alteração do nível de consciência ou falha do O2 suplementar ou da VNI."],
+["b","9","As 4 perguntas para indicar intubação?","1) Protege a via aérea? 2) Há falha de ventilação ou oxigenação? 3) Qual a evolução esperada? 4) Quais os próximos passos do manejo?"],
+["b","9","Reflexo do vômito serve para avaliar proteção de VA?","Não. Melhor: fonação clara e desimpedida e deglutição espontânea. Acúmulo de secreção em orofaringe indica comprometimento."],
+["b","9","Exemplos de evolução abrupta que pedem IOT precoce?","Lesão de SNC e anafilaxia."],
+["b","10","O que marcar antes de manipular a VA?","A membrana cricotireóidea."],
+["b","10","LEMON?","Look externally, Evaluate 3-3-2, Mallampati, Obstruction, Neck mobility. Preditor de laringoscopia difícil."],
+["b","10","Regra 3-3-2?","Abertura oral 3 dedos, mento-hioide 3 dedos, hioide-tireoide 2 dedos. Dedos do paciente."],
+["b","10","Os 4 sinais de obstrução do LEMON?","Voz abafada, estridor, dispneia e salivação excessiva."],
+["b","10","ROMAN?","Ventilação BVM difícil: Restriction/Radiation, Obstruction/Obesity (IMC > 26), Mask seal/Mallampati/Male, Age > 55, No teeth."],
+["b","10","Paciente sem dentes: como melhorar o selo da máscara?","Rolo de gaze entre as gengivas ou a borda inferior da máscara entre o lábio inferior e a gengiva."],
+["b","10","RODS?","Dispositivo supraglótico difícil: Restriction, Obstruction/Obesity, Distorted airway, Short thyromental distance."],
+["b","10–11","SMART?","Cricotireoidostomia difícil: Surgery, Mass, Anatomy/Access, Radiation, Tumor."],
+["b","11","SRI: definição e números?","Hipnótico + bloqueador neuromuscular simultâneos em paciente pré-oxigenado. Sucesso 99%, complicações em cerca de 12%."],
+["b","11–12","Os 7 passos da SRI na apostila?","Preparação, pré-oxigenação, otimização pré-intubação, indução e paralisia, posicionamento, posicionamento do tubo, pós-intubação."],
+["b","11","Preparação: monitorização exigida?","Cardioscopia, oximetria, PA e capnografia; acesso venoso funcionante; videolaringoscópio de preferência; tubo (ou 0,5 mm menor) com cuff testado; fio-guia proximal à abertura lateral; material de resgate."],
+["b","11","Pré-oxigenação: quanto tempo e como?","O2 na maior concentração por ≥ 3 min (ou 8 respirações de capacidade vital), cabeceira a 30–40°."],
+["b","11","Na SRI, quando ventilar o paciente (apostila)?","Só se a SpO2 cair abaixo de 93%."],
+["b","11","Otimização pré-intubação?","Corrigir hipotensão (volume e DVA), drenar pneumo/hemotórax, considerar fentanil em sangramento intracraniano e dissecção de aorta."],
+["b","11","Ordem das drogas na indução?","Bolus rápido das doses preparadas, começando pelo hipnótico, depois o BNM."],
+["b","11","Posicionamento para intubar?","Cama na altura do xifoide do intubador, paciente na cabeceira, meato acústico externo na altura do manúbrio, coxim no occipício."],
+["b","11","Padrão-ouro para confirmar o tubo?","Capnografia com forma de onda (colorimétrico é alternativa). Medir CO2 expirado é obrigatório."],
+["b","11","Quantas tentativas a apostila aconselha antes de SpO2 < 93%?","No máximo duas. Abaixo de 93%: interromper e ventilar."],
+["b","12","Sellick e BURP na apostila (capítulo de via aérea)?","Sellick não é aconselhado de rotina (pode obstruir; treino não retido > 3 meses). BURP é controverso. Melhor ajuste: laringoscopia bimanual."],
+["b","12","Ventilador pós-IOT?","VC 4–6 mL/kg de peso predito, platô ≤ 30 cmH2O, checar auto-PEEP, RX de tórax, ficar à beira do leito, analgesia contínua."],
+["b","13","Definição de falha de via aérea?","Não manter SpO2 > 93% durante ou após a laringoscopia, ou falha em 3 tentativas de IOT."],
+["b","13","\"Não intubo, mas ventilo\" vs \"não intubo, não ventilo\"?","O primeiro dá tempo de rever a técnica. O segundo é o mais grave: chamar ajuda, dispositivo extraglótico enquanto prepara a crico; sem ventilar com extraglótico, cricotireoidostomia imediata."],
+["c","13","Definição de PCR?","Cessação súbita da função mecânica cardíaca com colapso hemodinâmico."],
+["c","13","PCR vs morte súbita cardiovascular?","PCR: evento rapidamente detectado com chance de RCE com RCP. Evolução a óbito ou sem RCP: morte súbita cardiovascular."],
+["c","13–14","Epidemiologia da PCR?","6,5–8,5 milhões/ano, metade < 65 anos; ~70% extra-hospitalares; 80% em FV/TVSP."],
+["c","14","Principal etiologia da PCR?","IAM. Emergências neurológicas: cerca de 16% das PCR extra-hospitalares."],
+["c","14","Sobrevida da PCR extra-hospitalar e RCE intra-hospitalar?","ExH: ~7% (8–11% se o SME já estava no local). Intra-hospitalar: RCE em torno de 50%."],
+["c","14","As 3 fases da PCR?","Elétrica (0–4/5 min, FV: desfibrilar já), hemodinâmica (4–10 min: RCP + choque), metabólica (> 10 min: acidose, foco em cuidados pós-PCR e hipotermia)."],
+["c","14","Por que a AHA mudou ABC para CAB?","Compressões de alta qualidade precoces são a intervenção mais importante para RCE e recuperação neurológica."],
+["c","14","Frequência e profundidade das compressões?","100–120/min e 5–6 cm. > 120/min piora a profundidade; > 6 cm aumenta lesões intratorácicas."],
+["c","14","Quanto do débito cardíaco a compressão gera?","No máximo 1/3 do débito fisiológico."],
+["c","14","RCP em posição prona?","Razoável pela AHA quando não é possível colocar em supino."],
+["c","15","Após uma pausa, quanto tempo para recuperar a pressão de perfusão coronariana?","Cerca de 1 minuto de RCP de qualidade. Por isso: comprimir durante a carga do desfibrilador e pausar só no choque."],
+["c","15","Relação compressão-ventilação?","Sem VA avançada 30:2 (SME: assíncrona 1 a cada 6 s é razoável, AHA 2017). Com VA avançada: compressões contínuas e 1 ventilação a cada 6 s."],
+["c","15","Complicações das compressões?","Fratura de costelas e esterno, contusão pulmonar, pneumotórax, contusão miocárdica, derrame pericárdico, laceração esplênica e hepática."],
+["c","15","Por que o desfibrilador bifásico substituiu o monofásico?","Precisa de menos energia e causa menos disfunção miocárdica pós-choque."],
+["c","15","Desfibrilação sem RCP funciona até quando?","Resulta em RCE principalmente nos primeiros 2 minutos; depois a evidência é conflitante."],
+["c","15","Ritmo organizado logo após o choque: o que fazer?","Manter RCP por mais um ciclo (pode ser AESP)."],
+["c","15","Posições das pás?","Anteroapical (ápice + infraclavicular direita; padrão no supino), anteroposterior (paraesternal esquerda + infraescapular esquerda), posteroapical (precordial + infraescapular esquerda)."],
+["c","16","Distâncias de segurança das pás?","Gel de uma pá a > 5 cm da outra; ≥ 12,5 cm do marca-passo."],
+["c","16","Precauções antes do choque?","Ninguém tocando o paciente, secar o paciente, nada de superfície condutora, interromper ventilação/O2, retirar metais e adesivos de medicação, tricotomia se necessário."],
+["c","16","Complicações da desfibrilação?","Queimadura de pele, choque inadvertido em outra pessoa e lesão miocárdica."],
+["c","16","Abertura da VA com e sem trauma?","Trauma: jaw thrust (mantém a cervical neutra). Sem trauma: head tilt-chin lift."],
+["c","16–17","Técnica C-E da máscara?","Polegar e indicador formam um C sobre a máscara; os outros dedos formam um E na mandíbula. Socorrista atrás da vítima."],
+["c","17","BVM vs IOT na PCR extra-hospitalar?","ECR não mostrou inferioridade nem superioridade da BVM; tendência à equivalência."],
+["c","17","Indicação absoluta de IOT na PCR?","Apenas uma: ventilação ineficiente com BVM."],
+["c","17","Quanto das interrupções de compressão vem da VA avançada?","Cerca de 25%. VA avançada não é prioridade na fase inicial."],
+["c","18","Acesso na PCR: qual a melhor alternativa ao periférico?","Intraósseo. O central demora e serve principalmente para monitorar PVC."],
+["c","18","Adrenalina: em que ritmos a evidência é mais forte?","Não chocáveis (AESP e assistolia): precoce aumenta RCE, alta hospitalar e desfecho neurológico. Em FV/TVSP a evidência é menor."],
+["c","18","Quanto cai a chance de RCE por minuto sem vasopressor?","4% por minuto."],
+["c","18","Por que a vasopressina saiu do algoritmo?","Sem benefício sobre a adrenalina em RCE e alta, isolada ou combinada, e com custo maior."],
+["c","18","Corticoide na PCR?","Dois estudos mostraram benefício da associação adrenalina-corticoide-vasopressina; isolado, dados insuficientes."],
+["c","19","Antiarrítmicos: quais ritmos e qual objetivo?","Só FV/TVSP (nunca assistolia/AESP). Objetivo: ajudar a desfibrilação e restaurar ritmo perfusional, não reverter quimicamente."],
+["c","19","Amiodarona: classe e indicação?","Classe III com características de todas as classes; FV/TVSP após falha da desfibrilação inicial."],
+["c","19","Lidocaína: lugar no algoritmo?","Classe I, segunda linha, na indisponibilidade da amiodarona (menor sobrevida à admissão, sobrevida à alta igual)."],
+["c","19","Magnésio na PCR?","Eficaz na TV polimórfica."],
+["c","19","Bicarbonato de sódio: quando?","PCR documentada por hipercalemia, acidose metabólica ou intoxicação por tricíclicos. Rotina não."],
+["c","19","Exames laboratoriais durante a PCR?","Uso limitado. Suspeitou de hipercalemia: tratar empiricamente sem esperar o resultado."],
+["c","20","Os 5 H?","Hipo/hipercalemia, hipóxia, hipovolemia, hipotermia, H+ (acidose)."],
+["c","20","Os 5 T?","Tóxicos, tamponamento cardíaco, trombose coronariana, TEP, tensão (pneumotórax hipertensivo)."],
+["c","20","Elementos do BLS?","Reconhecimento imediato, acionamento do sistema de emergência, manejo básico de VA, RCP precoce de alta qualidade e desfibrilação rápida com DEA."],
+["c","20","Local e técnica da compressão?","Metade inferior do esterno, mãos entrelaçadas, braços estendidos perpendiculares, comprimir com a região hipotênar."],
+["c","21","Ventilação no BLS: tempo e volume?","2 ventilações de 1 s a cada 30 compressões; 500–600 mL (6–7 mL/kg)."],
+["c","21","Checagem de pulso?","Carotídeo ou femoral, em até 10 s; a cada 2 min ou 5 ciclos se houver ritmo que gere pulso."],
+["c","21","Números de emergência?","192 SAMU; 193 Corpo de Bombeiros."],
+["c","21","Por que evitar hiperventilação na PCR?","Mais de 10 ventilações/min reduz o débito cardíaco."],
+["c","21","RCE vs ressuscitação bem-sucedida?","RCE: restauração da função cardíaca. Sucesso: manutenção da função neurológica prévia."],
+["c","22","Fenômeno de Lázaro?","RCE tardio após parar a RCP: ~0,6%, em até 10 min. Hipóteses: hiperinsuflação, drogas lentas, hipercalemia, stunning. Se suspeitar de hiperinsuflação, aguardar apneia antes do óbito."],
+["c","22","Regra validada de término na PCR extra-hospitalar?","Sem RCE no pré-hospitalar + ritmo inicial não chocável + PCR não testemunhada."],
+["c","22","Número de choques e prognóstico?","Acima de 10 choques, sobrevida em 30 dias de cerca de 5%."],
+["c","22","Capnografia no término da PCR intra-hospitalar?","Incapacidade de obter EtCO2 > 10 mmHg após 20 min de RCP."],
+["c","22","Por que pensar em doação de órgãos antes de parar?","Manter esforços pode preservar órgãos; há subutilização dos protocolos de captação."],
+["d","23","Principal causa de óbito na PCR extra-hospitalar recuperada?","Lesão neurológica."],
+["d","23","Febre nas primeiras 48 h pós-PCR?","Fator independente de mortalidade e de pior desfecho neurológico."],
+["d","23","Componentes do choque da síndrome pós-PCR?","Cardiogênico (disfunção miocárdica, isquemia-reperfusão, sobrecarga adrenérgica) e distributivo (vasodilatação, inflamação, lesão endotelial, insuficiência adrenal)."],
+["d","23","Metas das primeiras 6 h pós-PCR além da hemodinâmica?","Adequar oxigenação e ventilação, corrigir distúrbios hidroeletrolíticos e tratar a causa."],
+["d","24","Frequência cardíaca esperada após RCE?","Taquicardia reflexa. Bradicardia sugere causa cardíaca, hipóxia, distúrbio metabólico ou intoxicação."],
+["d","24","Reflexos de tronco a examinar pós-PCR?","Fotomotor, consensual, córneo-palpebral, oculocefálico, drive respiratório e tosse. Glasgow com atenção à resposta motora."],
+["d","24","ECG pós-RCE: o que indica reperfusão emergencial?","Supra de ST ou BRE novo. Sem hemodinâmica disponível: reperfusão química (p. 25)."],
+["d","25","Desvio do eixo para a direita no ECG pós-PCR?","Sugere TEP como causa."],
+["d","25","Eco pós-PCR: difusa vs segmentar?","Hipocontratilidade difusa é esperada na síndrome pós-PCR; alteração segmentar sugere SCA."],
+["d","25","TC de crânio pós-PCR?","Recomendada em todo comatoso; detecta edema cerebral precoce."],
+["d","25","Gasometria pós-PCR: frequência?","Intervalos não maiores que 6 h, sobretudo no controle de temperatura."],
+["d","25","Leucocitose esperada pós-PCR?","10.000–20.000 (demarginação e inflamação). Acima disso, investigar."],
+["d","26","Troponina pós-PCR?","Elevação discreta esperada (troponina I 0–5 ng/mL). Níveis maiores ou ascendentes: pensar em SCA."],
+["d","26","Lactato pós-PCR?","Correlaciona com mortalidade; monitorar a cada 6 h na hipotermia e no reaquecimento."],
+["d","26–27","Tabela de alvos ventilatórios pós-PCR?","PaCO2 ~40 (40–45), EtCO2 ~35, SatO2 > 94% com a menor FiO2, PaO2 ~100 mmHg (100–120 se 33 °C)."],
+["d","26","Efeito da hipotermia na gasometria?","PaCO2 real 6–7 mmHg menor que a relatada; PaO2 relatada superestimada. Visar PaCO2 discretamente maior."],
+["d","27","Vasopressor de escolha pós-PCR e por quê?","Norepinefrina: mesma mortalidade da dopamina com menos arritmia."],
+["d","27","Alvos de perfusão pós-PCR?","PAM > 65 para reverter choque, 80–100 quando possível para perfusão cerebral; diurese > 0,5 mL/kg/h; PVC 8–12."],
+["d","27","Inotrópicos e doses?","Dobutamina 2–20 µg/kg/min; milrinona ataque 50 µg/kg em 10 min e 0,375–0,75 µg/kg/min. Refratário: balão intra-aórtico, ECMO VA."],
+["d","27","Antiarrítmico profilático após RCE?","Não. Só em arritmia instável recorrente; corrigir a causa."],
+["d","27","Coronariografia de emergência: indicações?","Supra ou BRE novo. Considerar: choque cardiogênico progressivo, troponina ascendente, hipocinesia segmentar; alguns serviços fazem em todo chocável extra-hospitalar. O coma não adia."],
+["d","28","Hipotermia terapêutica vs controle ativo de temperatura?","HT: 32–34 °C. Controle ativo: alvo < 36 °C. Alvo geral 32–36 °C, iniciado o quanto antes, por no mínimo 24–48 h."],
+["d","28","Quem recebe controle de temperatura?","Todo paciente após RCE que não obedece comandos, qualquer ritmo, intra ou extra-hospitalar. CI formais: diretiva paliativa prévia e falta de estrutura."],
+["d","28","Contraindicação da indução de hipotermia?","Sangramento ativo em sítio não compressível (risco também com instabilidade e trombólise, sem CI formal)."],
+["d","28","SF gelado: dose e efeito?","1 L de SF 0,9% a 4 °C em 15 min reduz ~1 °C. Cuidado em IC e DRC. Externo/intravascular: 0,5–1 °C/h."],
+["d","28","Principal causa de falha em atingir o alvo térmico?","Calafrios. Tratar com sedação (propofol ou midazolam) e às vezes BNM, com EEG contínuo se usar BNM."],
+["d","29","Melhor local para medir a temperatura central?","Cateter venoso central > esofágico > vesical > retal."],
+["d","29","Reaquecimento: velocidade e riscos?","≤ 0,5 °C/h. Rápido: edema cerebral, convulsões, hipercalemia. Sangramento maior: reaquecer até 36 °C."],
+["d","29","Glicemia alvo pós-PCR?","140–180 mg/dL. Não usar controle intensivo (70–108)."],
+["d","29","Profilaxia de crise epiléptica pós-PCR?","Não há indicação. EEG diário e sempre que suspeitar de estado de mal não convulsivo."],
+["d","29","Fatores de pior e melhor prognóstico pós-PCR?","Pior: > 70 anos, doença cerebrovascular, DRC, IC, febre nas primeiras 48 h. Melhor: PCR testemunhada e ritmo chocável."],
+["d","30","Achados clínicos de mau prognóstico?","Glasgow ≤ 4 nas primeiras 48 h; sem reflexo córneo-palpebral e pupilar em 24 h; sem resposta motora em 24 ou 72 h."],
+["d","30","O que reduz a acurácia do exame prognóstico?","Sedativos e BNM, IRA, insuficiência hepática, choque e hipotermia terapêutica."],
+["d","30","Status epiléptico mioclônico pós-PCR?","Mioclonias bilaterais síncronas de face, membros e axiais: mau prognóstico mesmo com tronco preservado."],
+["d","30","Teste auxiliar mais útil no prognóstico?","Ausência bilateral do N20 no potencial evocado somatossensorial do mediano, entre 24 e 72 h."],
+["d","30","Padrões malignos de EEG?","Supressão, surto-supressão, complexos periódicos generalizados, baixa voltagem (< 10 µV), crises, ausência de reatividade, padrão alfa-teta."],
+["d","30","Neuroimagem no prognóstico?","TC costuma ser normal logo após; edema no 3º dia nos de pior prognóstico. RM com coeficiente de difusão aparente é mais acurada."],
+["e","31","Definição de politraumatizado?","Lesões em 2 ou mais sistemas, com pelo menos uma (ou a combinação) representando risco à vida."],
+["e","31","Trauma como causa de morte?","Principal causa até 44 anos; 30% das mortes em idosos; 3º lugar no Brasil."],
+["e","32","Distribuição trimodal das mortes?","1º pico: segundos a minutos (50%; aorta, coração, medula alta/tronco; só prevenção). 2º: minutos a horas (30%; hemorragias, hemopneumotórax, hematomas; golden hour). 3º: dias a semanas (sepse, disfunção de múltiplos órgãos)."],
+["e","32","As 9 etapas da avaliação inicial?","Preparação, triagem, exame primário, reanimação, auxiliares do primário, exame secundário, auxiliares do secundário, reavaliação e monitorização, cuidados definitivos."],
+["e","32","Triagem: múltiplas vítimas vs desastre?","Hospital dá conta: risco iminente e lesões multissistêmicas primeiro. Desastre: os com maior chance de sobreviver primeiro."],
+["e","32","Solução de reanimação preparada na sala?","Ringer lactato aquecido."],
+["e","33","Colar cervical sozinho imobiliza?","Não. Precisa de prancha longa e coxins laterais. Na sala, retirar da prancha (úlcera de pressão)."],
+["e","33","Regra Canadense: fatores de alto risco?","Idade > 65, parestesias de extremidades, mecanismo perigoso (queda ≥ 1 m ou 5 degraus, carga axial, colisão > 100 km/h, capotamento ou ejeção, veículo recreativo, bicicleta)."],
+["e","33","Regra Canadense: fatores de baixo risco?","Colisão traseira simples, senta na sala, deambula, dor cervical tardia, sem dor em linha média. Se presente: testar rotação de 45° para cada lado."],
+["e","33","Critérios NEXUS?","Sem dor/sensibilidade em linha média, sem intoxicação, alerta normal, sem déficit focal, sem lesão distrativa. Todos presentes: dispensa imagem."],
+["e","33","Imagem da coluna cervical no secundário?","TC multidetectores até T1. Sem TC: RX perfil, AP e odontoide (boca aberta)."],
+["e","33","Fraturas cervicais mais letais e a fratura do enforcado?","80% dos óbitos: luxação atlanto-occipital e fraturas C1–C2. Hangman: C2, a 2ª fratura cervical mais comum, associada a fraturas de crânio e mandíbula."],
+["e","33","Paciente falando normalmente: conduta para VA?","Obstrução significativa improvável; O2 por máscara a 11 L/min."],
+["e","34","Indicações de via aérea definitiva no trauma?","Apneia, proteção contra aspiração, comprometimento iminente (inalação, fratura facial, convulsões), TCE com hiperventilação, incapacidade de oxigenar com máscara."],
+["e","34","O que é via aérea definitiva?","Cânula na traqueia com balonete insuflado, fixada e ligada a ventilação com O2."],
+["e","34","SRI no capítulo de trauma: drogas?","Etomidato 0,3 mg/kg e succinilcolina 1–2 mg/kg (cerca de 100 mg). O texto cita pressão cricoide e dispensa hiperextensão cervical."],
+["e","34","Contraindicações da IOT nasotraqueal?","Apneia e trauma de face."],
+["e","35","Combitubo e máscara laríngea são definitivas?","Não. São transitórias até a via aérea definitiva."],
+["e","35","Bougie: taxa de sucesso?","> 95%; com suspeita de lesão cervical, 100% em < 45 s."],
+["e","36","Indicações de via aérea cirúrgica?","Trauma maxilofacial extenso, distorção anatômica cervical, impossibilidade de ver as cordas vocais (sangue, secreção, edema)."],
+["e","36","Cricotireoidostomia cirúrgica: técnica e restrição?","Incisão transversa na membrana cricotireóidea, dilatação, cânula 7–8 mm. Idade < 12 anos: contraindicação relativa."],
+["e","37","Cricotireoidostomia por punção: parâmetros e limite?","Jato a 40–50 psi, 15 L/min. Retém CO2; oxigenação adequada só por 30–45 min. Pode em < 12 anos."],
+["e","37","Fratura de laringe: VA de escolha?","IOT; traqueostomia de emergência se a intubação falhar."],
+["e","37","DOPE?","Dessaturação súbita no intubado: Deslocamento do tubo, Obstrução, Pneumotórax, Equipamento."],
+["e","37","O2 no B do trauma?","Todos recebem O2 (máscara ≥ 11 L/min ou tubo), com oximetria e ECG contínuo. RX de tórax AP."],
+["e","38","Lesões que comprometem a ventilação de imediato?","Pneumotórax hipertensivo, hemotórax maciço, pneumotórax aberto e lesão traqueobrônquica."],
+["e","38","Quadro do pneumotórax hipertensivo?","Dispneia importante + desvio contralateral da traqueia, enfisema subcutâneo, hipertimpanismo, MV abolido, turgência jugular, hipotensão/choque."],
+["e","38","Causa mais comum de pneumotórax hipertensivo (ATLS)?","Ventilação com pressão positiva em lesão pleuropulmonar não percebida."],
+["e","38","Descompressão do pneumotórax hipertensivo?","Adulto: 4º–5º EIC entre linhas axilares anterior e média. Criança: 2º EIC na hemiclavicular. Diagnóstico clínico (US se estiver à mão)."],
+["e","38","Drenagem torácica: onde passar o dreno?","4º–5º EIC entre axilares anterior e média, rente à borda superior da costela (feixe na borda inferior); dedo na cavidade antes do dreno."],
+["e","39","Pneumotórax aberto: tamanho crítico e conduta?","Ferida ≥ 2/3 do diâmetro da traqueia. Curativo quadrado fixado em 3 lados; definitivo: drenagem + fechamento cirúrgico. Ocluir os 4 lados pode gerar hipertensivo."],
+["e","39","Hemotórax maciço: definição e diferença do hipertensivo?","> 1.500 mL ou 1/3 da volemia. Macicez, traqueia central, jugulares colabadas."],
+["e","39","Hemotórax: quando toracotomia?","Saída imediata ≥ 1.500 mL ou drenagem de 200 mL/h nas primeiras 2–4 h."],
+["e","39","Lesão traqueobrônquica?","Em geral até 2,54 cm da carina; hemoptise, enfisema cervical, pneumotórax hipertensivo, cianose; pulmão não expande com 1 dreno. Intubação por fibroscopia."],
+["e","40","Choque no politraumatizado, até prova em contrário?","Hipovolêmico hemorrágico."],
+["e","40","Acesso venoso no trauma?","Periféricos calibrosos; sem eles, Seldinger (femoral, jugular, subclávia) ou dissecção de safena. Colher tipagem/gravidez, gasometria, lactato e toxicológico."],
+["e","40","Intraósseo na criança?","Após 2 tentativas periféricas, antes do central; 3 dedos abaixo da tuberosidade tibial; não em fratura ou infecção."],
+["e","40","Pelve instável no pré-hospitalar?","Cinta pélvica ou lençol pelos trocanteres. MAST desaconselhada."],
+["e","40","Hipovolemia na criança: sinais e volume?","Taquicardia e má perfusão precoces; PP < 20 mmHg. PAS normal = 70 + 2 × idade. Cristaloide 20 mL/kg, até 3 vezes na 1ª hora."],
+["e","40","Fontes de sangramento no trauma?","Abdome (mais comum: fígado e baço), pelve, tórax e ossos longos (úmero/tíbia até 750 mL; fêmur até 1.500 mL)."],
+["e","40","Classe I e II de hemorragia?","I: até 750 mL (< 15%), FC < 100, tudo normal. II: 750–1.500 (15–30%), FC > 100, PP reduzida, FR 20–30, diurese 20–30 mL/h."],
+["e","40","Classe III e IV de hemorragia?","III: 1.500–2.000 (31–40%), FC > 120, PA reduzida, FR 30–40, diurese 5–15, BE −6 a −10, transfundir. IV: > 2.000 (> 40%), FC > 140, FR > 35, diurese desprezível, PTM."],
+["e","41","Por que a pressão de pulso cai na classe II?","Aumento da PA diastólica pelas catecolaminas; a sistólica pouco muda."],
+["e","41","Cristaloide de escolha e volume inicial?","Ringer lactato aquecido a 39 °C; 1 L no adulto, 20 mL/kg na criança < 40 kg. Muito SF: acidose hiperclorêmica."],
+["e","41","Diurese que indica boa resposta?","0,5 mL/kg/h adulto; 1 mL/kg/h < 12 anos; 2 mL/kg/h < 1 ano."],
+["e","41","Hipotensão permissiva: em quem?","Trauma penetrante até o controle cirúrgico (ressuscitação balanceada/controlada). No trauma fechado com TCE, combater a hipotensão."],
+["e","41","Definição de transfusão maciça?","> 10 U de concentrado de hemácias em 24 h ou > 4 U em 1 h."],
+["e","41","Ácido tranexâmico no trauma?","Nas primeiras 3 h: 1ª dose em 10 min (idealmente no local), 2ª dose de 1 g em 8 h (CRASH-2)."],
+["e","41","Escore ABC para PTM?","PAS < 90, FC > 120, FAST positivo, lesão penetrante de tronco. ≥ 2 pontos: iniciar PTM."],
+["e","41","Cálcio na transfusão?","Só guiado pelo cálcio ionizado (citrato), principalmente no PTM."],
+["e","41","Coagulopatia no trauma?","Até 30% dos graves; contribuem hemodiluição e hipotermia. Pedir TP/INR, TTPa e plaquetas na 1ª hora."],
+["e","42","Hipotensão refratária sem sangramento contínuo?","Choque obstrutivo (pneumo hipertensivo, tamponamento, embolia gasosa) ou cardiogênico (contusão, IAM). Raros: neurogênico, insuficiência adrenal."],
+["e","42","Tríade de Beck e conduta?","Hipotensão, turgência jugular, bulhas abafadas. FAST subxifoide confirma; tratamento: toracotomia; ponte: pericardiocentese (15–25 mL bastam)."],
+["e","42","Contusão miocárdica?","Até 1/3 do trauma torácico fechado, < 5% grave. ECG: arritmia ventricular, FA, bradicardia sinusal, BRD."],
+["e","42","Embolia aérea traumática?","Fístula brônquio-veia pulmonar. Trendelenburg, toracotomia, clampeamento hilar e aspiração do ar."],
+["e","42","Glasgow revisado: mudanças?","Estímulo por pressão; \"palavras\" e \"sons\"; \"flexão normal\"; usar \"NT\" se não testável; pupilas subtraem do escore."],
+["e","43","Rebaixamento no politrauma: a quem atribuir?","Excluídas hipoxemia, hipotensão e álcool/drogas, a trauma do SNC até prova em contrário."],
+["e","43","AESP no trauma sugere?","Tamponamento, pneumotórax hipertensivo ou hipovolemia grave."],
+["e","43","Contraindicação da sonda vesical?","Suspeita de lesão uretral: sangue no meato, equimose perineal, sangue no escroto, fratura pélvica. Fazer uretrografia retrógrada. Toque retal para próstata alta não é mais recomendado."],
+["e","43","Lesão uretral confirmada: como medir diurese?","Instável: punção suprapúbica. Estável: cistostomia suprapúbica."],
+["e","43","Sonda nasogástrica: contraindicação?","Suspeita de fratura de base de crânio/lâmina crivosa: usar orogástrica."],
+["e","43","Exames de imagem no primário do trauma fechado?","RX AP de tórax e AP de pelve, portáteis; FAST ou lavado peritoneal para sangramento oculto."],
+["e","43","Quando fazer o exame secundário?","Só quando, após a reanimação, os sinais vitais tendem à normalização. História (AMPLA) e exame da cabeça aos pés."],
+["e","43","Exames especializados do secundário?","TC e RX de coluna e extremidades, TC de crânio/tórax/abdome, urografia, eco transesofágico, broncoscopia, esofagoscopia. Só no estável."],
+["e","44","XABCDE?","PHTLS: X = controle de hemorragia externa exsanguinante (torniquete) antes do A, no pré-hospitalar e só quando houver essa hemorragia. Não elimina o C."]
+];
+// questões: {t, p, q, o, a, c, u?}
+const QS=[
+{t:"a",p:"4, 7",q:"Homem de 58 anos chega ao PS arresponsivo, sem sinais de trauma. Qual é a primeira medida específica, segundo a apostila?",o:["TC de crânio sem contraste","Glicemia capilar e correção de hipoglicemia","Flumazenil empírico","Naloxona empírica","Punção lombar"],a:1,c:"No inconsciente e arresponsivo, glicemia capilar e correção de hipoglicemia são as primeiras medidas obrigatórias (p. 4). Antídotos não devem ser usados de forma indiscriminada (p. 7)."},
+{t:"a",p:"7",q:"Etilista crônico com confusão e glicemia de 40 mg/dL. Qual a sequência correta?",o:["Glicose hipertônica e depois tiamina","Tiamina e depois glicose","Só glicose, tiamina é desnecessária","Flumazenil e glicose","Naloxona e tiamina"],a:1,c:"Em etilistas pesados, o bolus de glicose deve ser precedido por tiamina para evitar encefalopatia de Wernicke (confusão, ataxia, alteração da motricidade ocular)."},
+{t:"a",p:"6–7",q:"Paciente em coma com pupilas puntiformes e bradipneia. Hipótese e conduta mais adequadas?",o:["Lesão de mesencéfalo; TC","Intoxicação por cocaína; benzodiazepínico","Intoxicação por opioide; naloxona 0,4–2 mg IV","Lesão do III par; neurocirurgia","Hipoglicemia; glicose"],a:2,c:"Pupilas < 2 mm: opioide ou lesão pontina (p. 6). Na suspeita de opioide, naloxona 0,4–2 mg IV (p. 7)."},
+{t:"a",p:"7",q:"Em qual situação o flumazenil está contraindicado, segundo a apostila?",o:["Idoso","Uso de álcool","História de convulsões","Hipotensão","Gestação"],a:2,c:"O flumazenil pode ser usado na intoxicação por benzodiazepínicos, mas é contraindicado em pacientes com história de convulsões."},
+{t:"a",p:"5",q:"Paciente comatoso responde ao estímulo doloroso com extensão dos quatro membros. Topografia provável?",o:["Lesão supratentorial extensa","Tronco cerebral ou diencéfalo","Nervo periférico","Córtex frontal isolado","Medula cervical baixa"],a:1,c:"Descerebração sugere lesão ou disfunção de tronco cerebral ou até diencéfalo. Decorticação é supratentorial extensa."},
+{t:"a",p:"6",q:"Padrão de respiração profunda e rápida, ≥ 25 irpm, em paciente comatoso sugere lesão em:",o:["Bulbo","Ponte ou mesencéfalo","Córtex","Cerebelo","Não tem valor localizatório"],a:1,c:"Hiperventilação neurogênica central indica lesão de ponte ou mesencéfalo. Respiração atáxica (Biot) aponta bulbo; Cheyne-Stokes não localiza."},
+{t:"a",p:"6",q:"Sobre a etiologia do rebaixamento do nível de consciência, é correto afirmar:",o:["A maioria é estrutural","Cerca de 2/3 são tóxico-metabólico-infecciosas, com encefalopatia difusa","Encefalopatia focal nunca tem causa metabólica","TC só se Glasgow < 8","Hidrocefalia é a causa mais comum"],a:1,c:"Dois terços dos casos são tóxico-metabólico-infecciosos. Encefalopatia focal se relaciona a causa estrutural, exceto alguns casos de hipoglicemia, encefalopatia hepática e uremia."},
+{t:"a",p:"8",q:"Gasometria: PaO2 52 mmHg e PaCO2 58 mmHg. Classificação?",o:["IRpA tipo I","IRpA tipo II (hipercápnica)","Normal","Alcalose respiratória","Não preenche IRpA"],a:1,c:"Tipo II: PaO2 < 60 com PaCO2 > 45. Causas comuns: queda da ventilação minuto e aumento do espaço morto."},
+{t:"a",p:"8",q:"Em qual situação a VNI tem benefício demonstrado, segundo a apostila?",o:["Pneumonia em imunocompetente","DPOC exacerbada com pH < 7,3","Rebaixamento com Glasgow 7","Asma com PaCO2 normal","Vômitos incoercíveis"],a:1,c:"Benefício demonstrado: DPOC com acidose respiratória (PaCO2 > 45 ou pH < 7,3), EAP cardiogênico, hipoxêmica no imunossuprimido (questionável) e extubação de alto risco."},
+{t:"a",p:"9",q:"Qual achado NÃO consta como sinal de gravidade circulatória na apostila?",o:["Bradicardia < 40 bpm","Tempo de enchimento capilar > 4 s","Débito urinário < 0,5 mL/kg/h","Pressão de pulso alargada","Pele fria e úmida"],a:3,c:"A lista inclui bradicardia grave, pulso filiforme, TEC > 4 s, estase jugular, estertores, cianose, pele fria e úmida, diurese < 0,5 mL/kg/h e estado mental alterado. Pressão de pulso alargada não está."},
+{t:"b",p:"9",q:"Qual o melhor indicador de que o paciente protege a via aérea?",o:["Reflexo do vômito presente","Fonação clara e deglutição espontânea","Glasgow 9","SpO2 > 94%","FR normal"],a:1,c:"O reflexo do vômito não é comprovadamente eficaz e pode induzir aspiração. Fonação clara e deglutição espontânea indicam proteção; secreção acumulada indica comprometimento."},
+{t:"b",p:"10",q:"A regra 3-3-2 faz parte de qual mnemônico?",o:["ROMAN","RODS","LEMON, letra E","SMART","DOPE"],a:2,c:"LEMON avalia laringoscopia difícil; E = Evaluate 3-3-2 (abertura oral 3, mento-hioide 3, hioide-tireoide 2, dedos do paciente)."},
+{t:"b",p:"10",q:"No ROMAN, a idade associada a ventilação com BVM difícil é:",o:["> 45 anos","> 55 anos","> 65 anos","> 70 anos","Idade não entra"],a:1,c:"A de ROMAN: idade acima de 55 anos. O IMC de corte do O é > 26."},
+{t:"b",p:"10–11",q:"Radioterapia cervical prévia e tumor de pescoço dificultam principalmente qual procedimento, pelo mnemônico SMART?",o:["Laringoscopia","Ventilação com BVM","Cricotireoidostomia","Supraglótico","Punção venosa"],a:2,c:"SMART (Surgery, Mass, Anatomy, Radiation, Tumor) prediz cricotireoidostomia difícil."},
+{t:"b",p:"11",q:"Durante a SRI, segundo a apostila, o paciente só deve ser ventilado antes da intubação se:",o:["Sempre, para evitar hipoxemia","SpO2 < 93%","SpO2 < 85%","EtCO2 > 45","Após 60 s de apneia"],a:1,c:"Na SRI não se ventila a menos que a oximetria esteja abaixo de 93%.",u:"O ECR PREVENT mostrou que ventilar com BVM entre a indução e a laringoscopia reduziu hipoxemia grave sem aumentar aspiração. Na prova, fique com a apostila."},
+{t:"b",p:"11",q:"Qual o padrão-ouro para confirmar o posicionamento do tubo?",o:["Ausculta em 5 pontos","Radiografia de tórax","Capnografia com forma de onda","Detector colorimétrico","Embaçamento do tubo"],a:2,c:"A medida do CO2 expirado é obrigatória; o colorimétrico é alternativa, mas a capnografia com forma de onda é o padrão-ouro. O RX avalia altura e parênquima, não confirma traqueia."},
+{t:"b",p:"11",q:"Sobre a pré-oxigenação na SRI, está correto:",o:["1 min com O2 a 5 L/min","≥ 3 min na maior FiO2 disponível, ou 8 respirações de capacidade vital","Só em quem tem SpO2 < 90%","Sempre em decúbito zero","Com ventilação de 20 irpm"],a:1,c:"O2 na maior concentração por no mínimo 3 min antes da indução; no saudável, 8 respirações de capacidade vital equivalem. Inclinação de 30–40° quando possível.",u:"O ECR PREOXI mostrou menos hipoxemia com pré-oxigenação por VNI do que com máscara."},
+{t:"b",p:"13",q:"Falha de via aérea é definida por:",o:["2 tentativas sem sucesso","Não manter SpO2 > 93% durante/após a laringoscopia ou 3 tentativas falhas","Necessidade de bougie","Mallampati IV","Uso de videolaringoscópio"],a:1,c:"Pelo menos uma: falha em manter SpO2 acima de 93% durante ou após a laringoscopia, ou falha em três tentativas."},
+{t:"b",p:"13",q:"Cenário \"não intubo, não ventilo\". Conduta da apostila:",o:["Nova laringoscopia com outra lâmina","Chamar ajuda, extraglótico enquanto prepara a crico; sem ventilar, cricotireoidostomia imediata","Aguardar a volta da ventilação espontânea","Traqueostomia eletiva","Intubação nasotraqueal às cegas"],a:1,c:"É a forma mais grave: chamar ajuda, tentar extraglótico simultaneamente ao preparo do material de crico (já à beira do leito) e, se não ventilar, crico imediata."},
+{t:"b",p:"12",q:"Ventilador logo após a intubação, segundo a apostila:",o:["VC 8–10 mL/kg de peso real","VC 4–6 mL/kg de peso predito e platô ≤ 30 cmH2O","PEEP zero sempre","FR 30 para todos","Platô até 40 cmH2O"],a:1,c:"VC 4–6 mL/kg de massa corporal ideal (sexo e altura), platô preferencialmente ≤ 30, checar auto-PEEP, RX de tórax e analgesia contínua."},
+{t:"c",p:"14",q:"Compressões torácicas de alta qualidade segundo a AHA citada na apostila:",o:["80–100/min, 4–5 cm","100–120/min, 5–6 cm","> 120/min, > 6 cm","100/min, 3–4 cm","120–140/min, 5 cm"],a:1,c:"100–120/min e 5–6 cm. Acima de 120/min a profundidade fica inadequada; acima de 6 cm aumentam lesões intratorácicas."},
+{t:"c",p:"15, 21",q:"Paciente intubado em PCR. Como ficam compressões e ventilações?",o:["30:2 mantido","15:2","Compressões contínuas e 1 ventilação a cada 6 s","Compressões contínuas e 20 ventilações/min","Pausa a cada 10 compressões"],a:2,c:"Com via aérea avançada, compressões contínuas e simultâneas a 1 ventilação a cada 6 s (10/min). Hiperventilação reduz o débito cardíaco."},
+{t:"c",p:"14",q:"PCR há 12 minutos sem RCE. Em que fase está e qual o foco?",o:["Elétrica; desfibrilar","Hemodinâmica; só compressões","Metabólica; acidose grave, foco em cuidados pós-PCR, incluindo hipotermia","Elétrica; adrenalina","Não há fases na PCR"],a:2,c:"Elétrica: 0–4/5 min. Hemodinâmica: 4–10 min. Metabólica: > 10 min, com acidose e disfunção celular graves."},
+{t:"c",p:"19",q:"FV persistente após o primeiro choque. Segundo a apostila, a amiodarona está indicada:",o:["Antes do primeiro choque","Em FV/TVSP após falha da desfibrilação inicial","Em assistolia","Em AESP","Só se houver hipercalemia"],a:1,c:"Antiarrítmicos são reservados a FV/TVSP, para auxiliar a desfibrilação. A amiodarona entra após a falha da desfibrilação inicial; lidocaína é segunda linha.",u:"No ALPS, nem amiodarona nem lidocaína aumentaram significativamente a sobrevida à alta vs placebo."},
+{t:"c",p:"19",q:"O uso de bicarbonato de sódio na PCR é recomendado em:",o:["Toda PCR > 10 min","PCR por intoxicação por antidepressivo tricíclico","Assistolia","Toda AESP","PCR por hipotermia"],a:1,c:"Uso só em casos documentados de hipercalemia, acidose metabólica ou intoxicação por tricíclicos. Rotina não, por efeitos adversos."},
+{t:"c",p:"18",q:"Sobre a vasopressina na PCR, a apostila afirma:",o:["Substitui a 1ª dose de adrenalina","Foi removida do algoritmo por não ter benefício sobre a adrenalina","É a droga de escolha na assistolia","Melhora o desfecho neurológico","Deve ser associada à lidocaína"],a:1,c:"Sem benefício vs adrenalina em RCE e alta, nem na combinação, e com custo maior: removida do algoritmo do suporte avançado.",u:"O ECR VAM-IHCA (vasopressina + metilprednisolona na PCR intra-hospitalar) aumentou a RCE, sem diferença em sobrevida aos 30 dias."},
+{t:"c",p:"18",q:"Cada minuto de PCR sem vasopressor reduz a chance de RCE em:",o:["1%","4%","10%","15%","Não altera"],a:1,c:"4% por minuto. A adrenalina precoce tem evidência mais forte nos ritmos não chocáveis.",u:"No PARAMEDIC2, a adrenalina aumentou a sobrevida em 30 dias na PCR extra-hospitalar, sem diferença significativa em desfecho neurológico favorável."},
+{t:"c",p:"22",q:"Qual NÃO é critério da regra validada de término da RCP na PCR extra-hospitalar?",o:["Sem RCE no pré-hospitalar","Ritmo inicial não chocável","PCR não testemunhada","Idade acima de 80 anos","Todos são critérios"],a:3,c:"A regra tem 3 variáveis: sem RCE no extra-hospitalar, ritmo não chocável e PCR não testemunhada. Idade não entra."},
+{t:"c",p:"22",q:"No término da RCP intra-hospitalar, qual valor de capnografia a apostila cita?",o:["EtCO2 < 20 após 10 min","EtCO2 < 10 após 20 min de RCP","EtCO2 > 35","EtCO2 < 5 após 5 min","Capnografia não ajuda"],a:1,c:"Incapacidade de obter EtCO2 acima de 10 mmHg após 20 min de RCP é um dos fatores; a decisão é multifatorial."},
+{t:"c",p:"22",q:"Sobre o fenômeno de Lázaro:",o:["Ocorre em 10% dos casos","RCE tardio em ~0,6%, esperado em até 10 min após encerrar a RCP","Só ocorre em hipotermia","Indica sempre bom prognóstico","Ocorre até 1 h depois"],a:1,c:"Incidência ~0,6%, até 10 min após o fim dos esforços. Hipóteses: hiperinsuflação, drogas lentas, hipercalemia, stunning. Razoável avisar a família."},
+{t:"c",p:"17",q:"Única indicação absoluta de IOT durante a PCR:",o:["Toda PCR intra-hospitalar","Ventilação ineficiente com BVM","Ritmo chocável","PCR > 10 min","Necessidade de drogas"],a:1,c:"VA avançada não é prioridade inicial (cerca de 25% das interrupções vêm dela). Indicação absoluta: ventilação ineficiente com BVM. Se intubar, sem parar compressões."},
+{t:"c",p:"15",q:"Após choque em FV, aparece ritmo organizado no monitor. Conduta:",o:["Checar pulso imediatamente por 30 s","Manter RCP por mais um ciclo","Novo choque","Adrenalina e parar","Cardioversão sincronizada"],a:1,c:"AESP pode surgir após desfibrilação bem-sucedida, então mantém-se a RCP por mais um ciclo antes de checar."},
+{t:"c",p:"19",q:"Magnésio intravenoso na PCR tem eficácia demonstrada em:",o:["Assistolia","TV polimórfica","FV monomórfica refratária","AESP por hipovolemia","Bradicardia"],a:1,c:"O magnésio provou eficácia na resolução da TV polimórfica."},
+{t:"c",p:"16",q:"Paciente com marca-passo em FV. Distância mínima entre pá e gerador:",o:["2,5 cm","5 cm","12,5 cm","20 cm","Não importa"],a:2,c:"≥ 12,5 cm do dispositivo. Entre as pás, o gel deve ficar a mais de 5 cm da outra pá."},
+{t:"c",p:"20",q:"Qual NÃO faz parte dos 5H e 5T da apostila?",o:["Hipotermia","Tamponamento","TEP","Hipoglicemia","Tóxicos"],a:3,c:"5H: hipo/hipercalemia, hipóxia, hipovolemia, hipotermia, H+. 5T: tóxicos, tamponamento, trombose coronariana, TEP, tensão. Hipoglicemia não está na lista da apostila."},
+{t:"d",p:"26",q:"Alvo de PaCO2 no pós-PCR segundo a apostila:",o:["30–35 mmHg","35–40 mmHg","40–45 mmHg","50–55 mmHg","Não há alvo"],a:2,c:"Hiperventilação causa vasoconstrição cerebral; manter PaCO2 entre 40 e 45 (tabela: ~40; EtCO2 ~35)."},
+{t:"d",p:"27",q:"Vasopressor de escolha no choque pós-PCR:",o:["Dopamina","Norepinefrina","Vasopressina","Adrenalina","Fenilefrina"],a:1,c:"Por extrapolação da sepse (mesma mortalidade, mais arritmia com dopamina), norepinefrina é a escolha."},
+{t:"d",p:"27",q:"Alvos pressóricos pós-PCR na apostila:",o:["PAS > 90 apenas","PAM > 65 e, se possível, 80–100","PAM 55–60","PAM > 110","PAS < 140"],a:1,c:"PAM > 65 para reverter o choque e, quando possível, 80–100 para otimizar perfusão cerebral; diurese > 0,5 mL/kg/h, PVC 8–12.",u:"No ECR BOX, PAM-alvo 63 vs 77 mmHg não alterou morte ou incapacidade grave em 90 dias."},
+{t:"d",p:"29",q:"Glicemia-alvo pós-PCR:",o:["70–108 mg/dL","110–140 mg/dL","140–180 mg/dL","180–220 mg/dL","Sem controle"],a:2,c:"140–180 mg/dL. Controle intensivo (70–108) aumenta hipoglicemia e não é recomendado."},
+{t:"d",p:"29",q:"Velocidade máxima de reaquecimento após hipotermia terapêutica:",o:["0,5 °C/h","1 °C/h","2 °C/h","Livre","0,1 °C/dia"],a:0,c:"Lento e progressivo, ≤ 0,5 °C/h. Reaquecimento rápido associa-se a edema cerebral, convulsões e hipercalemia."},
+{t:"d",p:"30",q:"Entre os testes auxiliares, o mais útil para prognóstico pós-PCR é:",o:["EEG em 6 h","TC de crânio na admissão","Ausência bilateral do N20 no PESS em 24–72 h","Lactato inicial","Troponina"],a:2,c:"A ausência bilateral de potenciais evocados (N20 do mediano) após 24–72 h é a ferramenta mais útil. TC costuma ser normal no início."},
+{t:"d",p:"25",q:"Eco à beira do leito pós-PCR mostra hipocinesia segmentar. Isso sugere:",o:["Síndrome pós-PCR típica","SCA como causa","TEP","Tamponamento","Nada, é esperado"],a:1,c:"Hipocontratilidade difusa é esperada; alteração segmentar sugere SCA. Também pode indicar coronariografia (p. 27)."},
+{t:"d",p:"28",q:"Quem tem indicação de controle ativo de temperatura pós-PCR?",o:["Só FV extra-hospitalar","Só quem tem Glasgow 3","Todo paciente após RCE que não obedece comandos, qualquer ritmo e local","Só PCR intra-hospitalar","Ninguém, foi abandonado"],a:2,c:"Indicação universal ao comatoso após RCE (não obedece comandos ou sem movimento intencional), independentemente do ritmo e do local. CI formais: diretiva paliativa e falta de estrutura.",u:"No TTM2, hipotermia a 33 °C não reduziu a mortalidade em 6 meses comparada à normotermia com tratamento precoce de febre (≥ 37,8 °C). A AHA 2025 revisou alvos e duração."},
+{t:"d",p:"26",q:"Paciente em hipotermia a 33 °C. A PaCO2 relatada pelo gasômetro em relação à real é:",o:["Igual","6–7 mmHg menor","6–7 mmHg maior que a real","Sempre 40","Imprevisível"],a:2,c:"A PaCO2 real pode ser 6–7 mmHg menor que a relatada, ou seja, o gasômetro superestima. Visar PaCO2 discretamente maior evita hiperventilação iatrogênica; PaO2 100–120."},
+{t:"d",p:"29",q:"Profilaxia primária de crise epiléptica no pós-PCR:",o:["Fenitoína para todos","Levetiracetam se comatoso","Não indicada; EEG diário e se houver suspeita","Benzodiazepínico contínuo","Só se mioclonia"],a:2,c:"Eventos epilépticos são frequentes e muitas vezes não convulsivos, mas não há indicação de profilaxia primária. EEG diário e na suspeita de estado de mal não convulsivo."},
+{t:"d",p:"27",q:"Pós-PCR extra-hospitalar em FV, ECG sem supra, estável. Segundo a apostila:",o:["Coronariografia é obrigatória em todos","Alguns serviços indicam CATE de emergência a todos os chocáveis, pela alta prevalência de DAC","Nunca fazer CATE sem supra","Esperar o paciente acordar","Trombolisar"],a:1,c:"A indicação é cristalina com supra ou BRE novo. Sem supra, alguns serviços indicam em todos os chocáveis; considerar se choque cardiogênico, troponina ascendente ou hipocinesia segmentar. O coma não adia.",u:"No TOMAHAWK, angiografia imediata em PCR extra-hospitalar sem supra não reduziu a mortalidade em 30 dias."},
+{t:"e",p:"32",q:"O segundo pico da distribuição trimodal de mortes no trauma:",o:["Segundos a minutos; laceração de aorta","Minutos a horas; hemorragias e hematomas, golden hour","Dias a semanas; sepse","Só em idosos","Não existe"],a:1,c:"Minutos a horas (30% dos óbitos): ruptura esplênica, laceração hepática, fratura pélvica, hemopneumotórax, hematomas epidural/subdural. É onde o atendimento rápido muda o desfecho."},
+{t:"e",p:"33",q:"Mulher de 70 anos, colisão a 40 km/h, Glasgow 15, sem dor cervical. Pela Regra Canadense:",o:["Liberar sem imagem","Testar rotação a 45°","Manter colar e fazer imagem, pois idade > 65 é alto risco","NEXUS não se aplica","Só RX se dor"],a:2,c:"A primeira pergunta é se há fator de alto risco: idade > 65, parestesias ou mecanismo perigoso. Qualquer um obriga imagem."},
+{t:"e",p:"33",q:"Qual é critério NEXUS para dispensar imagem cervical?",o:["Idade < 65","Ausência de dor em linha média","Colisão traseira simples","Capaz de sentar","Rotação de 45°"],a:1,c:"NEXUS: sem dor em linha média, sem intoxicação, alerta normal, sem déficit focal, sem lesão distrativa. As outras opções são da Regra Canadense."},
+{t:"e",p:"38",q:"Adulto com pneumotórax hipertensivo. Local da descompressão por agulha na edição do ATLS citada:",o:["2º EIC na linha hemiclavicular","4º–5º EIC entre as linhas axilares anterior e média","7º EIC na linha axilar posterior","Subxifoide","3º EIC paraesternal"],a:1,c:"Adultos (especialmente parede espessa): 4º ou 5º EIC entre axilares média e anterior. Crianças: 2º EIC hemiclavicular. O diagnóstico é clínico."},
+{t:"e",p:"38–39",q:"Vítima de FAF no tórax, hipotensa, MV abolido à direita, macicez, traqueia central e jugulares colabadas. Diagnóstico:",o:["Pneumotórax hipertensivo","Hemotórax maciço","Tamponamento","Pneumotórax aberto","Contusão pulmonar"],a:1,c:"Hemotórax maciço: MV ausente como no hipertensivo, mas macicez, sem desvio de traqueia e jugulares colabadas pela hipovolemia."},
+{t:"e",p:"39",q:"Indicação de toracotomia no hemotórax:",o:["Qualquer volume drenado","Saída imediata ≥ 1.500 mL ou 200 mL/h nas primeiras 2–4 h","500 mL em 1 h","Hemotórax bilateral","Febre após drenagem"],a:1,c:"Toracotomia de urgência quando há saída imediata ≥ 1.500 mL ou drenagem de 200 mL/h nas primeiras duas a quatro horas."},
+{t:"e",p:"39",q:"Pneumotórax aberto no pré-hospitalar. Conduta imediata:",o:["Curativo oclusivo nos 4 lados","Curativo quadrado fixado em 3 lados","Drenagem no local","Intubação imediata","Nada até o hospital"],a:1,c:"O curativo em 3 lados cria um mecanismo valvular. Fechar os 4 lados pode converter em pneumotórax hipertensivo. Definitivo: drenagem + fechamento cirúrgico."},
+{t:"e",p:"40",q:"Homem de 70 kg, FC 128, PA 86/60, FR 32, ansioso e confuso, diurese 10 mL/h. Classe de hemorragia:",o:["I","II","III","IV","Não classificável"],a:2,c:"Classe III: 1.500–2.000 mL (31–40%), FC > 120, PA reduzida, FR 30–40, diurese 5–15, ansioso e confuso. Precisa de hemoderivados e controle do sangramento."},
+{t:"e",p:"41",q:"A hipotensão permissiva (ressuscitação balanceada) está mais indicada em:",o:["TCE grave com hipotensão","Trauma penetrante antes do controle cirúrgico do sangramento","Idoso com trauma fechado","Choque neurogênico","Tamponamento"],a:1,c:"No penetrante, grandes volumes antes do controle do foco aumentam o sangramento. No trauma fechado com lesão cerebral, combater a hipotensão é fundamental."},
+{t:"e",p:"41",q:"Transfusão maciça é definida por:",o:["> 4 U de CH em 24 h","> 10 U de CH em 24 h ou > 4 U em 1 h","Qualquer transfusão de plasma","> 2 U em 1 h","> 6 U em 6 h"],a:1,c:"> 10 U de concentrado de hemácias nas 24 h iniciais ou > 4 U em uma hora. Plasma e plaquetas precoces parecem aumentar a sobrevida.",u:"O PROPPR comparou plasma:plaquetas:hemácias 1:1:1 vs 1:1:2; sem diferença em mortalidade em 24 h e 30 dias, com mais hemostasia alcançada no 1:1:1."},
+{t:"e",p:"41",q:"Ácido tranexâmico no trauma grave:",o:["Até 8 h, dose única de 2 g","Nas primeiras 3 h, 1ª dose em 10 min e 1 g em 8 h","Só no centro cirúrgico","Só se fibrinogênio baixo","Contraindicado com PTM"],a:1,c:"Dentro das primeiras três horas (CRASH-2); primeira dose em 10 min, de preferência no local, e 1 g em 8 h no hospital. Usado junto com o PTM.",u:"No PATCH-Trauma, TXA pré-hospitalar não aumentou a sobrevida com bom desfecho funcional em 6 meses (desfecho primário); a mortalidade em 28 dias foi menor."},
+{t:"e",p:"43",q:"Politraumatizado com fratura pélvica e sangue no meato uretral. Próximo passo para monitorar diurese:",o:["Sondagem vesical de demora","Toque retal e sondagem","Uretrografia retrógrada antes de qualquer sondagem","Sonda de alívio","Ignorar a diurese"],a:2,c:"Suspeita de lesão uretral contraindica a sonda vesical; confirmar com uretrografia retrógrada. Instável: punção suprapúbica; estável: cistostomia."},
+{t:"e",p:"43",q:"TCE com rinorreia e equimose periorbitária bilateral. Descompressão gástrica:",o:["Sonda nasogástrica","Sonda orogástrica","Não descomprimir","Gastrostomia","Sonda nasoenteral"],a:1,c:"Na suspeita de fratura de base de crânio e lâmina crivosa, a via nasogástrica está formalmente contraindicada: usar orogástrica."},
+{t:"e",p:"36–37",q:"Criança de 8 anos com trauma maxilofacial grave, entra em apneia e não se consegue intubar. Via aérea indicada:",o:["Cricotireoidostomia cirúrgica","Cricotireoidostomia por punção com ventilação a jato","Nasotraqueal às cegas","Aguardar","Combitubo definitivo"],a:1,c:"Abaixo de 12 anos a crico cirúrgica é contraindicação relativa; a por punção pode ser usada e é a opção quando a via aérea cirúrgica precisa sair em segundos. Limite: 30–45 min de oxigenação, retenção de CO2."},
+{t:"e",p:"37",q:"Criança intubada dessatura subitamente na ambulância. Pelo DOPE, a causa mais comum é:",o:["Obstrução do tubo","Deslocamento do tubo","Pneumotórax","Falha do equipamento","Broncoespasmo"],a:1,c:"O deslocamento inadvertido do tubo é a causa mais comum de deterioração súbita nesses pacientes. DOPE: Deslocamento, Obstrução, Pneumotórax, Equipamento."},
+{t:"e",p:"42",q:"Facada em precórdio, hipotensão, turgência jugular e bulhas abafadas. Conduta definitiva:",o:["Drenagem torácica","Pericardiocentese como tratamento definitivo","Toracotomia","Volume até normalizar a PA","Trombólise"],a:2,c:"Tríade de Beck: tamponamento. Tratamento emergencial é a toracotomia; a pericardiocentese é ponte (15–25 mL bastam). Volume melhora transitoriamente e atrasa o diagnóstico."},
+{t:"e",p:"41",q:"Criança de 5 anos em ressuscitação volêmica. Diurese que indica boa resposta:",o:["0,5 mL/kg/h","1 mL/kg/h","2 mL/kg/h","3 mL/kg/h","30 mL/h fixos"],a:1,c:"0,5 no adulto, 1 mL/kg/h em menores de 12 anos e 2 mL/kg/h em menores de 1 ano."},
+{t:"e",p:"41",q:"Escore ABC para iniciar PTM inclui:",o:["Glasgow < 8","FAST positivo","Lactato > 4","Idade > 65","Fratura de fêmur"],a:1,c:"ABC: PAS < 90, FC > 120, FAST positivo e lesão penetrante de tronco. ≥ 2 pontos indica PTM."},
+{t:"b",p:"12, 34",q:"Sobre a manobra de Sellick, a apostila (capítulo de via aérea) recomenda:",o:["Uso obrigatório em toda SRI","Não usar de rotina, pois pode obstruir a VA e dificultar a intubação","Usar só em gestantes","Usar até confirmar com RX","Substituir a pré-oxigenação"],a:1,c:"Capítulo 2 (p. 12) e PCR (p. 17): não aconselhado de rotina. Atenção: o capítulo de trauma (p. 34) ainda descreve pressão cricoide na SRI.",u:"No ECR IRIS, não se demonstrou que omitir o Sellick seja não inferior para aspiração (eventos raros nos dois grupos), e o Sellick piorou a visão laringoscópica e alongou a intubação."}
+];
+const UPD=[
+{tag:"PCR · AHA 2025",h:"Novas diretrizes de suporte avançado",p:"A AHA publicou em 2025 a Parte 9 (ACLS adulto), que inclui recomendações sobre dupla desfibrilação sequencial, RCP com cabeça elevada, POCUS na PCR e regras de término refinadas conforme o escopo do SME.",vs:"Apostila: diretrizes AHA anteriores (cita atualização de 2017).",pmid:"41122884",doi:"10.1161/CIR.0000000000001376"},
+{tag:"Pós-PCR · AHA 2025",h:"Novas diretrizes de cuidados pós-PCR",p:"A Parte 11 revisa alvos de PA, O2, ventilação e glicemia, alvos e duração do controle de temperatura, ICP e suporte circulatório, e separa prognóstico favorável de desfavorável.",vs:"Apostila: alvo 32–36 °C por 24–48 h e prognóstico só de mau desfecho.",pmid:"41122894",doi:"10.1161/CIR.0000000000001375"},
+{tag:"Temperatura · ECR",h:"TTM2: 33 °C vs normotermia",p:"1.900 comatosos pós-PCR extra-hospitalar: hipotermia a 33 °C não reduziu mortalidade em 6 meses comparada à normotermia com tratamento precoce de febre (≥ 37,8 °C).",vs:"Apostila: hipotermia terapêutica 32–34 °C como opção benéfica.",pmid:"34133859",doi:"10.1056/NEJMoa2100591"},
+{tag:"Pós-PCR · ECR",h:"TOMAHAWK: CATE imediato sem supra",p:"Angiografia imediata após PCR extra-hospitalar sem supra de ST não reduziu a mortalidade em 30 dias vs estratégia tardia/seletiva.",vs:"Apostila: alguns serviços fazem CATE em todos os chocáveis.",pmid:"34459570",doi:"10.1056/NEJMoa2101909"},
+{tag:"Pós-PCR · ECR",h:"BOX: alvo de PAM",p:"Comatosos pós-PCR: PAM-alvo de 63 vs 77 mmHg sem diferença em morte ou incapacidade grave em 90 dias.",vs:"Apostila: PAM 80–100 quando possível.",pmid:"36027564",doi:"10.1056/NEJMoa2208687"},
+{tag:"PCR · ECR",h:"DOSE VF: FV refratária",p:"Dupla desfibrilação sequencial e troca de vetor (pás anteroposteriores) aumentaram a sobrevida à alta vs desfibrilação padrão em FV refratária.",vs:"Apostila: cita posições das pás, sem estratégia para FV refratária.",pmid:"36342151",doi:"10.1056/NEJMoa2207304"},
+{tag:"PCR · ECR",h:"PARAMEDIC2: adrenalina",p:"8.014 PCR extra-hospitalares: adrenalina aumentou sobrevida em 30 dias (3,2% vs 2,4%), sem diferença significativa em sobrevida com bom desfecho neurológico.",vs:"Apostila: adrenalina precoce melhora RCE, alta e neuro nos não chocáveis.",pmid:"30021076",doi:"10.1056/NEJMoa1806842"},
+{tag:"PCR · ECR",h:"ALPS: amiodarona e lidocaína",p:"FV/TVSP refratária: sobrevida à alta 24,4% (amiodarona), 23,7% (lidocaína), 21,0% (placebo), sem diferença significativa vs placebo na análise principal.",vs:"Apostila: antiarrítmicos aumentam RCE e sobrevida à admissão.",pmid:"27043165",doi:"10.1056/NEJMoa1514204"},
+{tag:"PCR · ECR",h:"VAM-IHCA: vasopressina + corticoide",p:"PCR intra-hospitalar: vasopressina + metilprednisolona aumentou a RCE (42% vs 33%), sem diferença em sobrevida ou neuro aos 30 dias.",vs:"Apostila: vasopressina removida; ACV com benefício em dois estudos.",pmid:"34587236",doi:"10.1001/jama.2021.16628"},
+{tag:"Via aérea · ECR",h:"DEVICE: videolaringoscopia",p:"Críticos no PS/UTI: sucesso na 1ª tentativa de 85,1% com videolaringoscópio vs 70,8% com laringoscopia direta.",vs:"Apostila: videolaringoscópio “preferencialmente”, sem dado.",pmid:"37326325",doi:"10.1056/NEJMoa2301601"},
+{tag:"Via aérea · ECR",h:"PREVENT: ventilar na indução",p:"Ventilação com BVM entre indução e laringoscopia reduziu hipoxemia grave (10,9% vs 22,8%), sem aumento de aspiração.",vs:"Apostila: não ventilar na SRI a menos que SpO2 < 93%.",pmid:"30779528",doi:"10.1056/NEJMoa1812405"},
+{tag:"Via aérea · ECR",h:"PREOXI: pré-oxigenar com VNI",p:"Pré-oxigenação com VNI reduziu hipoxemia na intubação de emergência (9,1% vs 18,5% com máscara).",vs:"Apostila: O2 na maior concentração por 3 min.",pmid:"38869091",doi:"10.1056/NEJMoa2313680"},
+{tag:"Via aérea · ECR",h:"RSI: cetamina vs etomidato",p:"2.365 críticos: sem diferença na mortalidade em 28 dias (28,1% vs 29,1%); colapso cardiovascular mais frequente com cetamina (22,1% vs 17,0%).",vs:"Apostila (trauma): etomidato 0,3 mg/kg.",pmid:"41369227",doi:"10.1056/NEJMoa2511420"},
+{tag:"Via aérea · ECR",h:"IRIS: manobra de Sellick",p:"3.472 SRI: o procedimento simulado não demonstrou não inferioridade para aspiração; com Sellick, mais Cormack-Lehane 3–4 e intubação mais demorada.",vs:"Apostila: não de rotina (cap. 2) e citada na SRI (trauma).",pmid:"30347104",doi:"10.1001/jamasurg.2018.3577"},
+{tag:"Trauma · ECR",h:"CRASH-2: ácido tranexâmico",p:"20.211 pacientes com sangramento significativo: TXA (1 g em 10 min + 1 g em 8 h) reduziu morte hospitalar em 4 semanas.",vs:"Apostila: mesma posologia, nas primeiras 3 h. Base da recomendação.",pmid:"20554319",doi:"10.1016/S0140-6736(10)60835-5"},
+{tag:"Trauma · ECR",h:"PATCH-Trauma: TXA no pré-hospitalar",p:"TXA pré-hospitalar não aumentou sobrevida com bom desfecho funcional em 6 meses; mortalidade em 28 dias foi menor (17,3% vs 21,8%).",vs:"Apostila: dose inicial de preferência no local do acidente.",pmid:"37314244",doi:"10.1056/NEJMoa2215457"},
+{tag:"Trauma · ECR",h:"PROPPR: proporção 1:1:1",p:"Plasma, plaquetas e hemácias 1:1:1 vs 1:1:2: sem diferença em mortalidade em 24 h e 30 dias; mais hemostasia e menos morte por exsanguinação em 24 h no 1:1:1.",vs:"Apostila: plaquetas e plasma precoces parecem aumentar sobrevida.",pmid:"25647203",doi:"10.1001/jama.2015.12"}
+];
+
+const $=s=>document.querySelector(s);
+const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+
+// navegação por aba
+const VIEWS=["cartoes","questoes","atualizacoes"];
+function route(){const h=(location.hash||"").slice(1);const v=VIEWS.includes(h)?h:"cartoes";
+  VIEWS.forEach(x=>{$("#v-"+x).hidden=x!==v});
+  document.querySelectorAll("nav a").forEach(a=>{if(a.dataset.v===v)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
+  window.scrollTo(0,0)}
+addEventListener("hashchange",route);
+
+function fillThemeSelect(el,count){el.innerHTML=`<option value="all">Todos os blocos (${count("all")})</option>`+Object.entries(THEMES).map(([k,v])=>`<option value="${k}">${v} (${count(k)})</option>`).join("")}
+
+// cartões
+let marks=store.get("lamueh-marks",{});
+let fTheme="all",fMode="all",order=CARDS.map((_,i)=>i),pos=0,flipped=false;
+function visible(){return order.filter(i=>(fTheme==="all"||CARDS[i][0]===fTheme)&&(fMode==="all"||(fMode==="new"&&!marks[i])||(fMode==="wrong"&&marks[i]==="bad")))}
+function render(){
+  const v=visible();if(pos>=v.length)pos=Math.max(0,v.length-1);
+  flipped=false;$("#card").classList.remove("flipped");$("#c-back").hidden=true;$("#c-hint").hidden=false;
+  if(!v.length){$("#c-theme").textContent="";$("#c-pos").textContent="";$("#c-front").textContent=fMode==="wrong"?"Nenhum cartão errado neste bloco.":"Você já viu todos os cartões deste bloco.";$("#c-hint").hidden=true;$("#fc-prog").style.width="100%";stats();return}
+  const i=v[pos],c=CARDS[i];
+  $("#c-theme").textContent=THEMES[c[0]]+" · p. "+c[1];
+  $("#c-pos").innerHTML=(pos+1)+" / "+v.length+(marks[i]?(marks[i]==="ok"?' · <span class="tag-ok">acertou</span>':' · <span class="tag-bad">errou</span>'):"");
+  $("#c-front").textContent=c[2];$("#c-back").textContent=c[3];
+  $("#fc-prog").style.width=((pos+1)/v.length*100)+"%";
+  stats();
+}
+function flip(){if(!visible().length)return;flipped=!flipped;$("#c-back").hidden=!flipped;$("#c-hint").hidden=flipped;$("#card").classList.toggle("flipped",flipped)}
+function markIt(m){const v=visible();if(!v.length)return;marks[v[pos]]=m;store.set("lamueh-marks",marks);if(fMode==="all")pos=Math.min(pos+1,v.length-1);render()}
+function stats(){$("#fc-stats").innerHTML=Object.entries(THEMES).map(([k,n])=>{const idx=CARDS.map((c,i)=>c[0]===k?i:-1).filter(i=>i>=0);const ok=idx.filter(i=>marks[i]==="ok").length,bad=idx.filter(i=>marks[i]==="bad").length,t=idx.length;
+  return `<div class="s"><span>${n}</span><span class="pg">${ok} certos · ${bad} errados · ${t-ok-bad} faltam</span><div class="bar"><span class="g" style="width:${ok/t*100}%"></span><span class="r" style="width:${bad/t*100}%"></span></div></div>`}).join("")}
+fillThemeSelect($("#fc-theme"),k=>k==="all"?CARDS.length:CARDS.filter(c=>c[0]===k).length);
+$("#fc-theme").onchange=e=>{fTheme=e.target.value;pos=0;render()};
+$("#fc-mode").onchange=e=>{fMode=e.target.value;pos=0;render()};
+$("#card").onclick=flip;
+$("#card").onkeydown=e=>{if(e.key===" "||e.key==="Enter"){e.preventDefault();flip()}};
+$("#fc-ok").onclick=()=>markIt("ok");$("#fc-bad").onclick=()=>markIt("bad");
+$("#fc-next").onclick=()=>{pos=Math.min(pos+1,visible().length-1);render()};
+$("#fc-prev").onclick=()=>{pos=Math.max(pos-1,0);render()};
+$("#fc-shuffle").onclick=()=>{for(let i=order.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[order[i],order[j]]=[order[j],order[i]]}pos=0;render()};
+let resetArm=false;
+$("#fc-reset").onclick=()=>{if(!resetArm){resetArm=true;$("#fc-reset").textContent="clique de novo para confirmar";setTimeout(()=>{resetArm=false;$("#fc-reset").textContent="Zerar marcações"},3000);return}marks={};store.set("lamueh-marks",marks);resetArm=false;$("#fc-reset").textContent="Zerar marcações";render()};
+
+// questões, uma por vez
+let qTheme="all",qOrder=QS.map((_,i)=>i),qPos=0,answered={};
+const L="ABCDE";
+function qVisible(){return qOrder.filter(i=>qTheme==="all"||QS[i].t===qTheme)}
+function renderQ(){
+  const v=qVisible();if(qPos>=v.length)qPos=Math.max(0,v.length-1);
+  const box=$("#qbox");if(!v.length){box.innerHTML="";return}
+  const i=v[qPos],q=QS[i];
+  box.innerHTML=`<div class="row"><span class="label">Questão ${qPos+1} de ${v.length} · ${THEMES[q.t]}</span><span class="pg">p. ${q.p}</span></div><p class="stem">${q.q}</p><div class="opts"></div><div class="comment" id="q-cm"></div>`;
+  const opts=box.querySelector(".opts");
+  q.o.forEach((o,j)=>{const b=document.createElement("button");b.className="opt";b.id=`q${i}o${j}`;b.innerHTML=`<span class="l">${L[j]}</span><span>${o}</span>`;b.onclick=()=>{if(answered[i]!==undefined)return;answered[i]=j;showQ(i);score()};opts.appendChild(b)});
+  if(answered[i]!==undefined)showQ(i);
+  $("#q-prog").style.width=((qPos+1)/v.length*100)+"%";
+  $("#q-prev").disabled=qPos===0;$("#q-next").disabled=qPos===v.length-1;
+  score();
+}
+function showQ(i){const q=QS[i],j=answered[i];document.querySelectorAll("#qbox .opt").forEach((b,k)=>{b.disabled=true;if(k===q.a)b.classList.add("right");else if(k===j)b.classList.add("wrong")});
+  const ok=j===q.a;
+  $("#q-cm").innerHTML=`<p><b class="${ok?"tag-ok":"tag-bad"}">${ok?"Correto.":"Incorreto. Gabarito "+L[q.a]+"."}</b> ${q.c}</p>${q.u?`<p class="upd-note"><b>Atualização.</b> ${q.u} <a class="inline-a" href="#atualizacoes">Referências</a></p>`:""}`}
+function score(){const v=qVisible(),a=v.filter(i=>answered[i]!==undefined),c=a.filter(i=>answered[i]===QS[i].a).length;$("#q-score").textContent=a.length?`${c}/${a.length} certas`:""}
+fillThemeSelect($("#q-theme"),k=>k==="all"?QS.length:QS.filter(q=>q.t===k).length);
+$("#q-theme").onchange=e=>{qTheme=e.target.value;qPos=0;renderQ()};
+$("#q-next").onclick=()=>{qPos++;renderQ()};$("#q-prev").onclick=()=>{qPos--;renderQ()};
+$("#q-shuffle").onclick=()=>{for(let i=qOrder.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[qOrder[i],qOrder[j]]=[qOrder[j],qOrder[i]]}answered={};qPos=0;renderQ()};
+$("#q-reset").onclick=()=>{answered={};qOrder=QS.map((_,i)=>i);qPos=0;renderQ()};
+
+// teclado
+document.addEventListener("keydown",e=>{
+  if(e.target.closest&&e.target.closest("select,input,textarea"))return;
+  if(!$("#v-cartoes").hidden){
+    if(e.key==="1")markIt("bad");else if(e.key==="2")markIt("ok");
+    else if(e.key==="ArrowRight")$("#fc-next").click();else if(e.key==="ArrowLeft")$("#fc-prev").click();
+    else if(e.key===" "&&e.target===document.body){e.preventDefault();flip()}
+  }else if(!$("#v-questoes").hidden){
+    if(e.key==="ArrowRight"&&!$("#q-next").disabled)$("#q-next").click();else if(e.key==="ArrowLeft"&&!$("#q-prev").disabled)$("#q-prev").click();
+  }
+});
+
+// atualizações
+$("#upd-list").innerHTML=UPD.map(u=>`<article class="ref"><span class="label upd">${u.tag}</span><h3>${u.h}</h3><p>${u.p}</p><p class="vs">${u.vs}</p><div class="links"><a href="https://pubmed.ncbi.nlm.nih.gov/${u.pmid}/" target="_blank" rel="noopener">PMID ${u.pmid}</a><a href="https://doi.org/${u.doi}" target="_blank" rel="noopener">DOI ${u.doi}</a></div></article>`).join("");
+
+route();render();renderQ();
+</script>
+
+</body></html>

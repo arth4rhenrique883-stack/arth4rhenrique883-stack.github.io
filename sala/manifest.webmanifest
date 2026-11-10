@@ -1,0 +1,1 @@
+{"name": "Sala Vermelha LAMUEH", "short_name": "Sala Vermelha", "start_url": "./", "display": "standalone", "background_color": "#0A0A0A", "theme_color": "#0A0A0A", "icons": [{"src": "icone.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}]}
