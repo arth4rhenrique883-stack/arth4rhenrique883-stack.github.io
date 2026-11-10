@@ -46,9 +46,15 @@ h2,h3,h4{text-wrap:balance}
 .mast{padding-block:28px 0;display:grid;gap:14px;text-align:center}
 .wordmark{font-family:var(--mast);font-weight:400;font-size:clamp(64px, 19vw, 230px);line-height:.92;letter-spacing:.01em;text-transform:uppercase;margin:4px 0 2px}
 .edline{display:flex;justify-content:space-between;align-items:center;gap:8px 18px;flex-wrap:wrap;font-family:var(--ui);font-weight:700;font-size:15px;letter-spacing:.12em;text-transform:uppercase;padding-block:4px 10px;border-bottom:1.5px solid var(--rule)}
+@media (max-width:560px){.edline{justify-content:center}}
 .edline .ast{font-size:26px;line-height:0;letter-spacing:0;transform:translateY(3px)}
 .banner{font-family:var(--head);font-weight:500;font-size:clamp(34px, 7vw, 84px);line-height:1;text-transform:uppercase;letter-spacing:.01em;margin:4px 0 6px}
 .toolbar{display:flex;justify-content:space-between;align-items:center;gap:10px 18px;flex-wrap:wrap;font-family:var(--ui);font-size:14px;padding-block:8px;text-align:left}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:0;border:2px solid var(--ink)}
+.tab{font-family:var(--head);font-weight:700;font-size:clamp(20px, 3vw, 28px);letter-spacing:.06em;text-transform:uppercase;background:transparent;color:var(--ink);border:0;padding:10px 12px;cursor:pointer}
+.tab + .tab{border-left:2px solid var(--ink)}
+.tab.on{background:var(--ink);color:var(--paper)}
+.tab:not(.on):hover{background:var(--soft)}
 .legend{display:flex;gap:8px;flex-wrap:wrap;align-items:center;color:var(--muted)}
 select{font-family:var(--ui);font-size:15px;background:var(--sheet);color:var(--ink);border:1.5px solid var(--ink);border-radius:0;padding:5px 8px}
 #dataLonga{font-style:italic;font-family:var(--body);color:var(--muted)}
@@ -207,7 +213,9 @@ footer{padding-block:14px 40px;font-family:var(--ui);font-size:13.5px;color:var(
     <h1 class="wordmark">Xeque-Mate</h1>
     <hr class="dbl">
     <div class="edline"><span id="volume">Vol. 1</span><span class="ast" aria-hidden="true">✱</span><span>Revista de medicina · 8º período</span><span class="ast" aria-hidden="true">✱</span><span id="dataExt"></span></div>
-    <p class="banner">Atualização médica</p>
+    <p class="banner" id="banner">Atualização médica</p>
+    <hr class="dbl thin">
+    <div class="tabs" role="tablist" aria-label="Escolher aba"><button class="tab on" role="tab" data-tab="mundo" onclick="setTab('mundo')">Mundo</button><button class="tab" role="tab" data-tab="brasil" onclick="setTab('brasil')">Brasil</button></div>
     <hr class="dbl">
     <div class="toolbar">
       <div class="legend"><span class="chip FATO">Fato</span><span class="chip ANALISE">Análise</span><span class="chip CENARIO">Cenário</span><span class="ev">Nível de evidência</span></div>
@@ -235,7 +243,14 @@ const ev=e=>e?`<span class="ev">${esc(e)}</span>`:"";
 const srcs=f=>(f&&f.length)?`<div class="src">Fontes: ${f.map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.nome)}</a>`).join("")}</div>`:"";
 const dataExt=d=>{try{return new Date(d+"T12:00:00").toLocaleDateString("pt-BR",{weekday:"long",day:"numeric",month:"long",year:"numeric"})}catch(e){return d}};
 
-function render(e){
+let TAB=(location.hash==="#brasil")?"brasil":"mundo", CUR=null;
+function setTab(t){TAB=t;try{history.replaceState(null,"","#"+t)}catch(_){location.hash=t}render(CUR);window.scrollTo(0,0)}
+function render(E){
+  CUR=E;
+  const hasBr=!!E.brasil; if(!hasBr)TAB="mundo";
+  const e=(TAB==="brasil")?Object.assign({},E,E.brasil):E;
+  document.querySelectorAll(".tab").forEach(b=>{const on=b.dataset.tab===TAB;b.classList.toggle("on",on);b.setAttribute("aria-selected",on);if(b.dataset.tab==="brasil")b.hidden=!hasBr});
+  $("#banner").textContent=TAB==="brasil"?"Saúde no Brasil":"Atualização médica";
   $("#ticker").innerHTML=(e.ticker||[]).map(t=>`<a class="tick" href="${esc(t.url)}" target="_blank" rel="noopener"><span class="ar">${esc(t.area)}</span><span>${esc(t.texto)}</span></a>`).join("");
   $("#volume").textContent=`Vol. 1, Nº ${e.numero}`;
   $("#dataExt").textContent=new Date(e.data+"T12:00:00").toLocaleDateString("pt-BR");$("#dataLonga").textContent=dataExt(e.data);
@@ -259,7 +274,7 @@ function render(e){
   }
   if(e.leituraCritica){h+=`<section class="sec" id="critica"><div class="sec-h"><h2>Leitura crítica</h2><span class="tag">Medicina baseada em evidências</span></div><div class="crit">${e.leituraCritica.map(a=>`<article><h3>${esc(a.titulo)}</h3>${a.texto.map(p=>`<p>${esc(p)}</p>`).join("")}</article>`).join("")}</div><div style="height:22px"></div></section>`}
   if(e.aprovacoes){const A=e.aprovacoes;const tb=(rows)=>`<div class="tw"><table><thead><tr><th>Fármaco</th><th>Indicação</th><th>Data</th><th>Status</th></tr></thead><tbody>${rows.map(r=>`<tr><td><b>${esc(r.farmaco)}</b></td><td>${esc(r.indicacao)}</td><td class="d">${esc(r.data)}</td><td><span class="st ${/aprov|regist/i.test(r.status)?"ok":"wait"}">${esc(r.status)}</span></td></tr>`).join("")}</tbody></table></div>`;
-    h+=`<section class="sec" id="aprov"><div class="sec-h"><h2>Aprovações e decisões</h2><span class="tag">FDA · Anvisa</span></div><div class="two"><div><p class="tbl-h">FDA (EUA)</p>${tb(A.fda)}</div><div><p class="tbl-h">Anvisa (Brasil)</p>${tb(A.anvisa)}</div></div><div style="height:12px"></div>${srcs(A.fontes)}<div style="height:22px"></div></section>`}
+    h+=`<section class="sec" id="aprov"><div class="sec-h"><h2>Aprovações e decisões</h2><span class="tag">${A.fda?"FDA (EUA)":"Anvisa (Brasil)"}</span></div>${A.fda?tb(A.fda):""}${A.anvisa?tb(A.anvisa):""}<div style="height:12px"></div>${srcs(A.fontes)}<div style="height:22px"></div></section>`}
   if(e.historia){h+=`<section class="sec" id="historia"><div class="sec-h"><h2>Curiosidades e história</h2><span class="tag">Do arquivo</span></div><div class="hist">${e.historia.map(a=>`<article><h3>${esc(a.titulo)}</h3><p>${esc(a.texto)}</p></article>`).join("")}</div><div style="height:26px"></div></section>`}
   if(e.fronteiras){h+=`<section class="sec" id="fronteiras"><div class="sec-h"><h2>O que ainda não sabemos</h2><span class="tag">Fronteiras</span></div><div class="hist front">${e.fronteiras.map(a=>`<article><h3>${esc(a.pergunta)}</h3><p>${esc(a.texto)}</p></article>`).join("")}</div><div style="height:26px"></div></section>`}
   if(e.estudo){const S=e.estudo;h+=`<section class="sec" id="estudo"><div class="sec-h"><h2>Para estudar</h2><span class="tag">Residência · Revalida · ENAMED</span></div><div class="study">
@@ -280,6 +295,7 @@ fetch("edicoes.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
   sel.innerHTML=eds.map((e,i)=>`<option value="${i}">Nº ${e.numero} · ${new Date(e.data+"T12:00:00").toLocaleDateString("pt-BR")}</option>`).join("");
   sel.onchange=()=>{render(eds[+sel.value]);window.scrollTo(0,0)};
   render(eds[0]);
+  window.addEventListener("hashchange",()=>{const h=location.hash.slice(1);if((h==="brasil"||h==="mundo")&&h!==TAB){TAB=h;render(CUR)}});
 }).catch(()=>{$("#main").innerHTML='<p class="loading">Não foi possível carregar a edição. Recarregue a página.</p>'});
 </script>
 

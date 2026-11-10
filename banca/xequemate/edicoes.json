@@ -1,5 +1,5 @@
 {
- "atualizadoEm": "2026-11-10T00:00:00-03:00",
+ "atualizadoEm": "2026-11-10T02:30:00-03:00",
  "edicoes": [
   {
    "id": "2026-11-10",
@@ -32,16 +32,6 @@
      "area": "Infecto",
      "texto": "Ebola Bundibugyo na RDC passa de 10,5 mil casos confirmados; segue como ESPII",
      "url": "https://www.gov.uk/government/publications/outbreaks-under-monitoring-in-2026/outbreaks-under-monitoring-week-44-week-ending-1-november-2026"
-    },
-    {
-     "area": "Brasil",
-     "texto": "Anvisa aprova semaglutida oral 25 mg para obesidade (4/11)",
-     "url": "https://site.cff.org.br/noticia/Noticias-gerais/05/11/2026/anvisa-aprova-primeiro-medicamento-de-glp-1-oral-para-obesidade"
-    },
-    {
-     "area": "Brasil",
-     "texto": "SUS institui Política Nacional de Informação e Saúde Digital, com CPF como identificador",
-     "url": "https://brasil61.com/n/sus-tera-historico-clinico-integrado-e-ampliacao-de-servicos-digitais-bras2617421"
     },
     {
      "area": "FDA",
@@ -227,25 +217,6 @@
          "url": "https://www.cancernetwork.com/view/ivonescimab-combo-improves-survival-in-advanced-biliary-tract-cancer"
         }
        ]
-      },
-      {
-       "titulo": "Anvisa registra sugemalimabe; SUS promete 23 oncológicos até dezembro",
-       "camada": "FATO",
-       "evidencia": "Regulatório",
-       "confianca": "Alta",
-       "data": "22–29/10/2026",
-       "texto": "A Anvisa aprovou o sugemalimabe (anti-PD-L1), com platina, na 1ª linha do NSCLC metastático sem EGFR, ALK, ROS1 ou RET (RE 4.190, de 22/10), usando reliance com a EMA. Em 29/10, o Ministério da Saúde reafirmou a faixa de rastreamento mamográfico de 40 a 74 anos (mudança feita em 2025), incorporou teste genético para câncer de mama hereditário e prometeu 23 novos oncológicos até dezembro, sem divulgar a lista.",
-       "prova": "Rastreamento de câncer de mama: compare a regra atual do SUS (40–74) com a recomendação anterior (50–69, bienal) e com a USPSTF.",
-       "fontes": [
-        {
-         "nome": "CFF: sugemalimabe",
-         "url": "https://site.cff.org.br/noticia/Noticias-gerais/26/10/2026/anvisa-aprova-medicamento-para-tipo-de-cancer-de-pulmao-que-representa-ate-85-dos-casos"
-        },
-        {
-         "nome": "Sanar: SUS e Outubro Rosa",
-         "url": "https://sanarmed.com/noticias/sus-amplia-mamografia-faixa-40-74-23-medicamentos-oncologicos/"
-        }
-       ]
       }
      ],
      "box": {
@@ -281,13 +252,13 @@
        ]
       },
       {
-       "titulo": "H5N1 e H1N1v: dois sinais para vigiar",
+       "titulo": "H5N1 nos EUA: mais um caso fatal ligado a gado leiteiro",
        "camada": "FATO",
        "evidencia": "Vigilância",
        "confianca": "Alta",
        "data": "30/9–1/11/2026",
-       "texto": "Nos EUA, o condado de Yakima (Washington) teve dois novos casos humanos de H5N1 ligados a gado leiteiro, um fatal (31/10). São 72 casos humanos de H5 no país desde 2024; o risco para a população geral segue avaliado como baixo. No Brasil, foi confirmado um caso de influenza suína A(H1N1)v em Santa Catarina, em mulher com doenças crônicas que morreu em 28/8.",
-       "prova": "Influenza variante (v) é infecção humana por vírus de origem suína: é de notificação e investigação obrigatórias.",
+       "texto": "O condado de Yakima (Washington) teve dois novos casos humanos de H5N1 ligados a gado leiteiro, um deles fatal (31/10). São 72 casos humanos de H5 nos EUA desde 2024. O risco para a população geral segue avaliado como baixo.",
+       "prova": "Saiba diferenciar influenza sazonal, aviária (H5N1) e variante suína (H1N1v), e quando cada uma é de notificação imediata.",
        "fontes": [
         {
          "nome": "UKHSA, semana 44",
@@ -375,21 +346,6 @@
      "id": "endo",
      "nome": "Endocrinologia, metabolismo e rim",
      "itens": [
-      {
-       "titulo": "Semaglutida em comprimido para obesidade chega ao Brasil",
-       "camada": "FATO",
-       "evidencia": "Regulatório",
-       "confianca": "Alta",
-       "data": "4/11/2026",
-       "texto": "A Anvisa aprovou a semaglutida oral 25 mg (RE 4.249/2026) para IMC ≥ 30, ou ≥ 27 com comorbidade, com escalonamento 1,5 → 4 → 9 → 25 mg. No OASIS 4 (64 semanas), a perda média passou de 13% do peso. O comprimido precisa ser tomado em jejum, com pouca água, 30 minutos antes de comer ou de outros remédios, por causa do absorvedor SNAC. Preço não divulgado.",
-       "prova": "Mecanismo dos agonistas GLP-1, contraindicações (história de carcinoma medular de tireoide/NEM 2) e efeitos gastrointestinais.",
-       "fontes": [
-        {
-         "nome": "CFF",
-         "url": "https://site.cff.org.br/noticia/Noticias-gerais/05/11/2026/anvisa-aprova-primeiro-medicamento-de-glp-1-oral-para-obesidade"
-        }
-       ]
-      },
       {
        "titulo": "Kidney Week: a nefropatia por IgA vive uma revolução",
        "camada": "FATO",
@@ -508,36 +464,17 @@
     },
     {
      "id": "sus",
-     "nome": "SUS, IA e tecnologia médica",
+     "nome": "IA e tecnologia médica",
      "itens": [
       {
-       "titulo": "Política Nacional de Informação e Saúde Digital: histórico clínico integrado e CPF",
+       "titulo": "IA de raciocínio iguala internistas no diagnóstico com dados reais",
        "camada": "FATO",
-       "evidencia": "Normativo",
-       "confianca": "Alta",
-       "data": "28/10/2026",
-       "texto": "A Portaria GM/MS nº 12.301 instituiu a PNISD: histórico clínico unificado que acompanha o paciente, CPF como identificador prioritário, proteção de dados e soberania digital. São 63 Núcleos de Telessaúde, com mais de 12 milhões de atendimentos desde janeiro de 2025. O plano de ação deve ser pactuado na CIT em até 180 dias.",
-       "prova": "Saiba o que é a CIT (Ministério, Conass e Conasems) e o princípio da integralidade.",
-       "fontes": [
-        {
-         "nome": "Brasil 61",
-         "url": "https://brasil61.com/n/sus-tera-historico-clinico-integrado-e-ampliacao-de-servicos-digitais-bras2617421"
-        }
-       ]
-      },
-      {
-       "titulo": "IA na consulta: o que a Resolução CFM 2.454/2026 permite",
-       "camada": "FATO",
-       "evidencia": "Normativo",
-       "confianca": "Alta",
-       "data": "11/2/2026",
-       "texto": "O CFM normatizou o uso de IA na prática médica: a ferramenta apoia, mas a decisão e a responsabilidade são do médico. Em abril, um estudo na Science (Harvard e Beth Israel) mostrou um modelo de raciocínio igualando ou superando internistas no diagnóstico com dados reais de pronto-socorro, só com texto. Os autores pedem ensaios prospectivos antes de qualquer uso clínico.",
+       "evidencia": "Estudo retrospectivo",
+       "confianca": "Média",
+       "data": "Science, 30/4/2026",
+       "texto": "Pesquisadores de Harvard e do Beth Israel compararam um modelo de raciocínio da OpenAI com internistas em casos reais de pronto-socorro, da triagem à internação, usando só o texto do prontuário. A IA igualou ou superou os médicos em vários momentos. Os autores lembram que a máquina não viu o paciente, não usou imagem nem exame físico, e pedem ensaios prospectivos antes de qualquer uso clínico.",
        "prova": "Pense em viés de automação: quando o médico confia demais na sugestão da máquina.",
        "fontes": [
-        {
-         "nome": "CFM",
-         "url": "https://portal.cfm.org.br/noticias/cfm-normatiza-uso-da-ia-na-medicina"
-        },
         {
          "nome": "NPR/Michigan Public",
          "url": "https://www.michiganpublic.org/2026-04-30/in-real-world-test-an-ai-model-did-better-than-doctors-at-diagnosing-patients"
@@ -637,20 +574,6 @@
       "status": "Em análise"
      }
     ],
-    "anvisa": [
-     {
-      "farmaco": "Sugemalimabe (Cejemly)",
-      "indicacao": "NSCLC metastático, 1ª linha, com platina",
-      "data": "22/10/2026",
-      "status": "Registrado"
-     },
-     {
-      "farmaco": "Semaglutida oral 25 mg (Wegovy)",
-      "indicacao": "Obesidade e sobrepeso com comorbidade",
-      "data": "4/11/2026",
-      "status": "Registrado"
-     }
-    ],
     "fontes": [
      {
       "nome": "AJMC: FDA outubro",
@@ -659,14 +582,6 @@
      {
       "nome": "Prime Therapeutics: FDA novembro",
       "url": "https://www.primetherapeutics.com/fda-decisions-expected-november-2026"
-     },
-     {
-      "nome": "CFF: sugemalimabe",
-      "url": "https://site.cff.org.br/noticia/Noticias-gerais/26/10/2026/anvisa-aprova-medicamento-para-tipo-de-cancer-de-pulmao-que-representa-ate-85-dos-casos"
-     },
-     {
-      "nome": "CFF: semaglutida oral",
-      "url": "https://site.cff.org.br/noticia/Noticias-gerais/05/11/2026/anvisa-aprova-primeiro-medicamento-de-glp-1-oral-para-obesidade"
      }
     ]
    },
@@ -800,10 +715,6 @@
     {
      "data": "nov",
      "evento": "Novembro Azul (saúde do homem) · CTAD em Boston, com dados de fase 3 do AR1001"
-    },
-    {
-     "data": "dez",
-     "evento": "Prazo do Ministério da Saúde para ofertar 23 novos oncológicos no SUS"
     }
    ],
    "quiz": [
@@ -861,7 +772,333 @@
      "termo": "Reliance regulatório",
      "def": "Quando uma agência, como a Anvisa, usa a análise de outra agência de referência para acelerar um registro."
     }
-   ]
+   ],
+   "brasil": {
+    "ticker": [
+     {
+      "area": "Brasil",
+      "texto": "Anvisa aprova semaglutida oral 25 mg para obesidade (4/11)",
+      "url": "https://site.cff.org.br/noticia/Noticias-gerais/05/11/2026/anvisa-aprova-primeiro-medicamento-de-glp-1-oral-para-obesidade"
+     },
+     {
+      "area": "Brasil",
+      "texto": "SUS institui Política Nacional de Informação e Saúde Digital, com CPF como identificador",
+      "url": "https://brasil61.com/n/sus-tera-historico-clinico-integrado-e-ampliacao-de-servicos-digitais-bras2617421"
+     },
+     {
+      "area": "Minas",
+      "texto": "Minas tem 48,4 mil casos confirmados e 52 mortes por dengue em 2026; Estado prevê 2027 difícil com El Niño",
+      "url": "https://www.otempo.com.br/cidades/2026/10/28/minas-tem-52-mortes-por-dengue-em-2026-e-se-prepara-para-cenario-desafiador-com-el-nino-super-forte"
+     },
+     {
+      "area": "SUS",
+      "texto": "Ministério inicia oferta de 9 oncológicos e promete 23 até dezembro",
+      "url": "https://brasil61.com/n/ministerio-da-saude-inicia-oferta-de-nove-medicamentos-oncologicos-pelo-sus-bras2617354"
+     },
+     {
+      "area": "Vigilância",
+      "texto": "Caso fatal de influenza suína H1N1v em Santa Catarina entra no radar internacional",
+      "url": "https://www.gov.uk/government/publications/outbreaks-under-monitoring-in-2026/outbreaks-under-monitoring-week-44-week-ending-1-november-2026"
+     }
+    ],
+    "capa": {
+     "kicker": "Minas Gerais · Jornada Mineira de Arboviroses, 28/10",
+     "titulo": "Minas se prepara para um 2027 de dengue",
+     "linhaFina": "Com 48,4 mil casos confirmados e 52 mortes neste ano, o Estado espera nova epidemia no início de 2027, puxada por um El Niño forte.",
+     "texto": [
+      "Até 28/10, Minas Gerais confirmou 48.403 casos de dengue (65.005 prováveis) e 52 mortes, além de 15.384 casos de chikungunya com seis mortes. O secretário de Saúde, Fábio Baccheretti, disse que 2027 \"provavelmente não será um ano fácil\": o pico deve vir em fevereiro e março, e o El Niño tende a mudar chuva e temperatura a favor do Aedes.",
+      "A resposta do Estado inclui capacitação de profissionais, armadilhas de ovos (ovitrampas), agentes nas escolas e o VigiDrones, programa de cerca de R$ 30,5 milhões que usa drones para achar criadouros. Segundo a SES-MG, 80% a 85% dos focos estão dentro das casas.",
+      "Para quem está na clínica, o ponto central é que morte por dengue é, na maior parte das vezes, evitável. O que salva é reconhecer os sinais de alarme cedo (dor abdominal intensa, vômitos persistentes, sangramento de mucosa, letargia, hepatomegalia, aumento do hematócrito com queda de plaquetas) e hidratar conforme o estadiamento."
+     ],
+     "camada": "FATO",
+     "evidencia": "Vigilância",
+     "confianca": "Alta",
+     "confiancaMotivo": "Números oficiais da SES-MG divulgados em 28/10/2026; a previsão para 2027 é [CENÁRIO] do próprio Estado.",
+     "citacao": "\"Morte por dengue é evitável quando os sinais de alarme são reconhecidos a tempo.\"",
+     "fontes": [
+      {
+       "nome": "O Tempo, 28/10/2026",
+       "url": "https://www.otempo.com.br/cidades/2026/10/28/minas-tem-52-mortes-por-dengue-em-2026-e-se-prepara-para-cenario-desafiador-com-el-nino-super-forte"
+      }
+     ]
+    },
+    "numeros": [
+     {
+      "val": "52",
+      "lab": "Mortes por dengue · MG",
+      "nota": "48.403 casos confirmados em 2026",
+      "src": {
+       "nome": "O Tempo",
+       "url": "https://www.otempo.com.br/cidades/2026/10/28/minas-tem-52-mortes-por-dengue-em-2026-e-se-prepara-para-cenario-desafiador-com-el-nino-super-forte"
+      }
+     },
+     {
+      "val": "40–74",
+      "lab": "Mamografia no SUS",
+      "nota": "faixa de rastreamento sem sintomas",
+      "src": {
+       "nome": "Sanar",
+       "url": "https://sanarmed.com/noticias/sus-amplia-mamografia-faixa-40-74-23-medicamentos-oncologicos/"
+      }
+     },
+     {
+      "val": "23",
+      "lab": "Oncológicos prometidos",
+      "nota": "no SUS até dezembro",
+      "src": {
+       "nome": "Sanar",
+       "url": "https://sanarmed.com/noticias/sus-amplia-mamografia-faixa-40-74-23-medicamentos-oncologicos/"
+      }
+     },
+     {
+      "val": "25 mg",
+      "lab": "Semaglutida oral",
+      "nota": "aprovada pela Anvisa em 4/11",
+      "src": {
+       "nome": "CFF",
+       "url": "https://site.cff.org.br/noticia/Noticias-gerais/05/11/2026/anvisa-aprova-primeiro-medicamento-de-glp-1-oral-para-obesidade"
+      }
+     },
+     {
+      "val": "2/3",
+      "lab": "Idosos só com SUS",
+      "nota": "ELSI-Brasil, 3ª onda",
+      "src": {
+       "nome": "Fiocruz via Intramed",
+       "url": "https://www.intramed.net/content/fiocruz-apresenta-pesquisa-abrangente-sobre-a-saude-dos-idosos-no-pais"
+      }
+     }
+    ],
+    "cadernos": [
+     {
+      "id": "br-sus",
+      "nome": "SUS e Ministério da Saúde",
+      "itens": [
+       {
+        "titulo": "Política Nacional de Informação e Saúde Digital: histórico clínico integrado e CPF",
+        "camada": "FATO",
+        "evidencia": "Normativo",
+        "confianca": "Alta",
+        "data": "28/10/2026",
+        "texto": "A Portaria GM/MS nº 12.301 instituiu a PNISD: histórico clínico unificado que acompanha o paciente, CPF como identificador prioritário, proteção de dados e soberania digital. São 63 Núcleos de Telessaúde, com mais de 12 milhões de atendimentos desde janeiro de 2025. O plano de ação deve ser pactuado na CIT em até 180 dias.",
+        "prova": "Saiba o que é a CIT (Ministério, Conass e Conasems) e o princípio da integralidade.",
+        "fontes": [
+         {
+          "nome": "Brasil 61",
+          "url": "https://brasil61.com/n/sus-tera-historico-clinico-integrado-e-ampliacao-de-servicos-digitais-bras2617421"
+         }
+        ]
+       },
+       {
+        "titulo": "Anvisa registra sugemalimabe; SUS promete 23 oncológicos até dezembro",
+        "camada": "FATO",
+        "evidencia": "Regulatório",
+        "confianca": "Alta",
+        "data": "22–29/10/2026",
+        "texto": "A Anvisa aprovou o sugemalimabe (anti-PD-L1), com platina, na 1ª linha do NSCLC metastático sem EGFR, ALK, ROS1 ou RET (RE 4.190, de 22/10), usando reliance com a EMA. Em 29/10, o Ministério da Saúde reafirmou a faixa de rastreamento mamográfico de 40 a 74 anos (mudança feita em 2025), incorporou teste genético para câncer de mama hereditário e prometeu 23 novos oncológicos até dezembro, sem divulgar a lista.",
+        "prova": "Rastreamento de câncer de mama: compare a regra atual do SUS (40–74) com a recomendação anterior (50–69, bienal) e com a USPSTF.",
+        "fontes": [
+         {
+          "nome": "CFF: sugemalimabe",
+          "url": "https://site.cff.org.br/noticia/Noticias-gerais/26/10/2026/anvisa-aprova-medicamento-para-tipo-de-cancer-de-pulmao-que-representa-ate-85-dos-casos"
+         },
+         {
+          "nome": "Sanar: SUS e Outubro Rosa",
+          "url": "https://sanarmed.com/noticias/sus-amplia-mamografia-faixa-40-74-23-medicamentos-oncologicos/"
+         }
+        ]
+       },
+       {
+        "titulo": "Vacina da dengue do Butantan: onde estamos",
+        "camada": "FATO",
+        "evidencia": "Regulatório",
+        "confianca": "Alta",
+        "data": "registro 8/12/2025; SUS desde jan/2026",
+        "texto": "A vacina tetravalente atenuada do Butantan, de dose única, foi registrada pela Anvisa para 12 a 59 anos e é exclusiva do SUS. A aplicação começou em janeiro de 2026, com adultos de 50 a 59 anos e profissionais da atenção primária, e estados como São Paulo ampliaram o público ao longo do ano. Ampliar para idosos depende de novos estudos.",
+        "prova": "Compare as duas vacinas de dengue do PNI: a Qdenga (Takeda, duas doses, 10 a 14 anos) e a do Butantan (dose única). Saiba as contraindicações de vacinas atenuadas.",
+        "fontes": [
+         {
+          "nome": "Viva",
+          "url": "https://viva.com.br/saude-e-bem-estar/vacina-contra-dengue-do-butantan-sera-aplicada-em-adultos-de-50-a-59-anos.html"
+         },
+         {
+          "nome": "Ministério: guia técnico",
+          "url": "https://www.gov.br/saude/pt-br/vacinacao/publicacoes/guia-tecnico-operacional-da-vacina-dengue-atenuada-do-instituto-butantan"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "br-reg",
+      "nome": "Anvisa, CFM e regulação",
+      "itens": [
+       {
+        "titulo": "Semaglutida em comprimido para obesidade chega ao Brasil",
+        "camada": "FATO",
+        "evidencia": "Regulatório",
+        "confianca": "Alta",
+        "data": "4/11/2026",
+        "texto": "A Anvisa aprovou a semaglutida oral 25 mg (RE 4.249/2026) para IMC ≥ 30, ou ≥ 27 com comorbidade, com escalonamento 1,5 → 4 → 9 → 25 mg. No OASIS 4 (64 semanas), a perda média passou de 13% do peso. O comprimido precisa ser tomado em jejum, com pouca água, 30 minutos antes de comer ou de outros remédios, por causa do absorvedor SNAC. Preço não divulgado.",
+        "prova": "Mecanismo dos agonistas GLP-1, contraindicações (história de carcinoma medular de tireoide/NEM 2) e efeitos gastrointestinais.",
+        "fontes": [
+         {
+          "nome": "CFF",
+          "url": "https://site.cff.org.br/noticia/Noticias-gerais/05/11/2026/anvisa-aprova-primeiro-medicamento-de-glp-1-oral-para-obesidade"
+         }
+        ]
+       },
+       {
+        "titulo": "IA na consulta: o que a Resolução CFM 2.454/2026 permite",
+        "camada": "FATO",
+        "evidencia": "Normativo",
+        "confianca": "Alta",
+        "data": "11/2/2026",
+        "texto": "O CFM normatizou o uso de inteligência artificial na prática médica em fevereiro: a ferramenta pode apoiar diagnóstico, documentação e decisão, mas a decisão final e a responsabilidade continuam sendo do médico. Em outubro, o CFM voltou ao tema num encontro em Goiânia sobre uso ético da IA e fiscalização.",
+        "prova": "Pense em viés de automação: quando o médico confia demais na sugestão da máquina.",
+        "fontes": [
+         {
+          "nome": "CFM",
+          "url": "https://portal.cfm.org.br/noticias/cfm-normatiza-uso-da-ia-na-medicina"
+         },
+         {
+          "nome": "Legismap: CFM em Goiânia",
+          "url": "https://legismap.com.br/conteudos/artigos-e-noticias/noticias-portal-cfm-em-01-10-2026"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "br-vig",
+      "nome": "Vigilância e Minas Gerais",
+      "itens": [
+       {
+        "titulo": "Santa Catarina confirma caso fatal de influenza suína A(H1N1)v",
+        "camada": "FATO",
+        "evidencia": "Vigilância",
+        "confianca": "Alta",
+        "data": "notificado em 30/9/2026",
+        "texto": "Uma mulher adulta com doenças crônicas morreu em 28/8 em Santa Catarina por influenza A(H1N1)v, vírus de origem suína. Quatro pessoas da casa tiveram quadro gripal. O caso entrou na lista internacional de surtos monitorados. Até agora não há sinal de transmissão sustentada entre pessoas.",
+        "prova": "Influenza variante (v) é infecção humana por vírus de origem suína: notificação imediata e investigação de contatos e de exposição a suínos.",
+        "fontes": [
+         {
+          "nome": "UKHSA, semana 44",
+          "url": "https://www.gov.uk/government/publications/outbreaks-under-monitoring-in-2026/outbreaks-under-monitoring-week-44-week-ending-1-november-2026"
+         }
+        ]
+       },
+       {
+        "titulo": "Conselheiro Lafaiete: hospital regional deve abrir até o fim de 2026",
+        "camada": "FATO",
+        "evidencia": "Gestão",
+        "confianca": "Média",
+        "data": "25/6/2026",
+        "texto": "Iniciado em 2010 e parado por anos, o Hospital Regional de Conselheiro Lafaiete teve a gestão concedida ao Instituto de Saúde HSVP por 25 anos. Terá 97 leitos (20 de UTI), quatro salas cirúrgicas (urologia, vascular, cardíaca, geral, neuro, ortopedia, oftalmologia), raio X, TC, ultrassom e ECG, para atender 51 municípios da macrorregião Centro-Sul. A obra foi retomada em 2021 com recursos do acordo de Brumadinho (cerca de R$ 76 milhões). A conclusão está prevista para o fim de 2026, sem data de abertura definida.",
+        "prova": "Regionalização do SUS: macrorregião de saúde, hospital regional e o papel das CIBs. Ótimo exemplo para questões de gestão.",
+        "fontes": [
+         {
+          "nome": "Agência Minas: concessão",
+          "url": "https://www.agenciaminas.mg.gov.br/noticia/governo-de-minas-da-novo-passo-para-abertura-do-hospital-regional-de-conselheiro-lafaiete"
+         },
+         {
+          "nome": "Agência Minas: vistoria",
+          "url": "https://www.agenciaminas.mg.gov.br/noticia/governo-de-minas-vistoria-obras-do-hospital-regional-de-conselheiro-lafaiete-128964"
+         }
+        ]
+       },
+       {
+        "titulo": "ELSI-Brasil: como envelhece o brasileiro",
+        "camada": "FATO",
+        "evidencia": "Coorte nacional",
+        "confianca": "Alta",
+        "data": "26/5/2026",
+        "texto": "A 3ª onda do Estudo Longitudinal da Saúde dos Idosos (Fiocruz e UFMG) mostrou 34,4% dos idosos com níveis pressóricos de hipertensão, 20,4% com dificuldade em ao menos uma atividade básica de vida diária (44,2% aos 80 anos ou mais), só 37,9% dos dependentes recebendo ajuda e 5,8% dos cuidadores treinados. Dois em cada três idosos têm o SUS como única fonte de cuidado, e 69,2% estão vinculados à Estratégia Saúde da Família.",
+        "prova": "Escalas de Katz (AVD básicas) e Lawton (instrumentais) caem em geriatria e medicina de família. Combine com o STREAM da aba Mundo.",
+        "fontes": [
+         {
+          "nome": "Fiocruz via Intramed",
+          "url": "https://www.intramed.net/content/fiocruz-apresenta-pesquisa-abrangente-sobre-a-saude-dos-idosos-no-pais"
+         }
+        ]
+       }
+      ],
+      "box": {
+       "titulo": "E o El Niño?",
+       "texto": "O Observatório acompanha o ENSO. Se o El Niño forte se confirmar no verão, a combinação de calor e chuva irregular tende a favorecer o Aedes no Sudeste. [CENÁRIO] Probabilidade de 2027 superar 2026 em casos de dengue em Minas: média, cerca de 55%. A própria SES-MG trabalha com essa hipótese, mas imunidade da população e sorotipos circulantes também pesam."
+      }
+     },
+     {
+      "id": "br-formacao",
+      "nome": "Formação médica",
+      "itens": [
+       {
+        "titulo": "Revalida 2026.2 usa as mesmas questões do ENAMED",
+        "camada": "FATO",
+        "evidencia": "Normativo",
+        "confianca": "Alta",
+        "data": "prova em 13/9/2026",
+        "texto": "O Inep usou na 1ª etapa do Revalida 2026.2 as mesmas 100 questões do ENAMED 2026 (Exame Nacional de Avaliação da Formação Médica), com a mesma metodologia de cálculo e nota de corte fixa de 60 pontos. A prova de habilidades clínicas segue obrigatória. As questões seguem a Matriz de Referência Comum para a Avaliação da Formação Médica.",
+        "prova": "A matriz do ENAMED é um roteiro de estudo pronto: use-a para checar lacunas antes do internato.",
+        "fontes": [
+         {
+          "nome": "Sanar",
+          "url": "https://sanarmed.com/revalida-2026-2-tera-as-mesmas-questoes-do-enamed-veja-o-que-muda-na-prova/"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "aprovacoes": {
+     "anvisa": [
+      {
+       "farmaco": "Sugemalimabe (Cejemly)",
+       "indicacao": "NSCLC metastático, 1ª linha, com platina",
+       "data": "22/10/2026",
+       "status": "Registrado"
+      },
+      {
+       "farmaco": "Semaglutida oral 25 mg (Wegovy)",
+       "indicacao": "Obesidade e sobrepeso com comorbidade",
+       "data": "4/11/2026",
+       "status": "Registrado"
+      }
+     ],
+     "fontes": [
+      {
+       "nome": "CFF: sugemalimabe",
+       "url": "https://site.cff.org.br/noticia/Noticias-gerais/26/10/2026/anvisa-aprova-medicamento-para-tipo-de-cancer-de-pulmao-que-representa-ate-85-dos-casos"
+      },
+      {
+       "nome": "CFF: semaglutida oral",
+       "url": "https://site.cff.org.br/noticia/Noticias-gerais/05/11/2026/anvisa-aprova-primeiro-medicamento-de-glp-1-oral-para-obesidade"
+      }
+     ]
+    },
+    "agenda": [
+     {
+      "data": "14/11",
+      "evento": "Dia Mundial do Diabetes"
+     },
+     {
+      "data": "nov",
+      "evento": "Novembro Azul (saúde do homem)"
+     },
+     {
+      "data": "dez",
+      "evento": "Prazo do Ministério para os 23 oncológicos no SUS"
+     },
+     {
+      "data": "fim/26",
+      "evento": "Previsão de conclusão do Hospital Regional de Conselheiro Lafaiete"
+     },
+     {
+      "data": "abr/27",
+      "evento": "Prazo (180 dias) para o plano de ação da saúde digital ser pactuado na CIT"
+     }
+    ]
+   }
   }
  ]
 }
