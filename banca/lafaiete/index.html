@@ -256,7 +256,7 @@ function render(e){
   if(e.palavrinhas?.length) h += `<div id="palavrinhas"><h2>Palavrinhas</h2><dl>${e.palavrinhas.map(g=>`<div><dt>${esc(g.termo)}</dt><dd>${esc(g.def)}</dd></div>`).join("")}</dl></div>`;
   if(e.agenda?.length) h += `<div id="agenda"><h2>Agenda da cidade</h2><ul class="agenda">${e.agenda.map(a=>`<li><span class="q">${esc(a.quando)}</span><span class="o">${esc(a.oque)}</span></li>`).join("")}</ul></div>`;
   h += `</section>`;
-  if(e.conversa?.length) h += `<section class="conversa">${cab("Para conversar na praça","")}<ul style="padding-top:18px">${e.conversa.map(q=>`<li>${esc(q)}</li>`).join("")}</ul></section>`;
+  if(e.conversa?.length) h += `<section class="conversa">${cab("Perguntas para refletir","Sobre a nossa cidade. Não há resposta certa: o que vale é pensar junto.")}<ul style="padding-top:18px">${e.conversa.map(q=>`<li>${esc(q)}</li>`).join("")}</ul></section>`;
   document.getElementById("conteudo").innerHTML = h;
   document.getElementById("notaFim").textContent = `${e.fechamento||""} Selos: “Confirmado” é fato checado; “Explicação” é a leitura do jornal; “Previsão” é uma possibilidade. ✱ O Carijó é feito com a ajuda do Claude, uma inteligência artificial, a partir da imprensa local e de fontes oficiais.`;
 }
