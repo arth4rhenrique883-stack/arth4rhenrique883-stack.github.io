@@ -269,6 +269,18 @@ fetch("edicoes.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
 }).catch(()=>{document.getElementById("conteudo").innerHTML='<p class="erro">Não foi possível abrir o jornal agora. Tente recarregar a página.</p>';});
 </script>
 
+<!--rainha:inicio-->
+<style>
+/* Logo da rainha (o mesmo traço de batimento com coroa do Xeque-Mate), parada e em tinta, como selo impresso no canto */
+.rainha-canto{position:fixed;right:max(12px,env(safe-area-inset-right,0px));bottom:max(12px,env(safe-area-inset-bottom,0px));z-index:9998;
+  width:48px;height:48px;padding:5px;box-sizing:border-box;background:#ECE3D4;border:1.5px solid #3A2D2B;outline:1px solid #3A2D2B;outline-offset:2px;
+  line-height:0;pointer-events:none;animation:none}
+.rainha-canto svg{width:100%;height:100%;display:block;overflow:hidden}
+@media print{.rainha-canto{position:absolute;top:8px;right:8px;bottom:auto}}
+</style>
+<div class="rainha-canto" role="img" aria-label="Logo da rainha"><svg viewBox="97 -1 46 46" aria-hidden="true"><g fill="none" stroke="#3A2D2B" stroke-linejoin="round" stroke-linecap="round"><path d="M0 34H62L66 30H70L74 34H100L104 38L109 15L115 25L120 6L125 25L131 15L136 42L140 34H160L166 28H172L178 34H240" stroke-width="3.2"/><g stroke-width="2.2" fill="#ECE3D4"><circle cx="109" cy="12.4" r="2.6"/><circle cx="120" cy="3.4" r="2.6"/><circle cx="131" cy="12.4" r="2.6"/></g></g></svg></div>
+<!--rainha:fim-->
+
 <script>
 /* Banca: guarda os jornais para ler sem internet e recarrega quando chega edição nova */
 if ("serviceWorker" in navigator) {

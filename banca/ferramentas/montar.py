@@ -48,6 +48,13 @@ DOSSIES = [
      "Dossiê de estudo: por que um ministro do STF citado no caso Banco Master continua no cargo."),
 ]
 
+# Logo da rainha (pedido de Arthur, 10/11/2026): em TODOS os jornais e dossiês, parada,
+# em tinta, como selo no canto. Se a página de origem já a tiver, não duplica.
+RAINHA = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "rainha.html"), encoding="utf-8").read()
+
+def com_rainha(html):
+    return html if "rainha-canto" in html else html + "\n" + RAINHA
+
 ENCARTE = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "encarte-lafaiete.js"), encoding="utf-8").read()
 
 def sem_medicina(dados):
@@ -185,7 +192,7 @@ def montar(pasta, origem, nome, desc, opts):
             m = re.search(r"<(div|header|main|nav|section|article|p|h1|a)\b", html)
             html = html[:m.start()] + barra + html[m.start():] if m else barra + html
         pagina = (CABECA.format(desc=H.escape(desc), tinta=TINTA, raiz="../")
-                  + html + REGISTRO.replace("{raiz}", "../"))
+                  + com_rainha(html) + REGISTRO.replace("{raiz}", "../"))
         if opts.get("encarte"):
             pagina += "\n<script>\n" + ENCARTE.replace("{modo}", opts["encarte"]) + "</script>\n"
         os.makedirs(d, exist_ok=True)
@@ -225,7 +232,7 @@ def montar_dossie(pasta, origem, nome, desc):
            .replace('content="Banca"', f'content="{H.escape(nome)}"'))
     os.makedirs(d, exist_ok=True)
     open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(
-        cab + html + REGISTRO.replace("{raiz}", "../") + "</body>\n</html>\n")
+        cab + com_rainha(html) + REGISTRO.replace("{raiz}", "../") + "</body>\n</html>\n")
     man = {"name": nome, "short_name": "Caso Master" if pasta == "caso-master" else nome,
            "description": desc, "lang": "pt-BR", "id": f"/banca/{pasta}/", "start_url": "./", "scope": "./",
            "display": "standalone", "background_color": PAPEL, "theme_color": TINTA,
