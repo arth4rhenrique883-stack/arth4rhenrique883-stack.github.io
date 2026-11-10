@@ -55,7 +55,19 @@ DOSSIES = [
 RAINHA = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "rainha.html"), encoding="utf-8").read()
 
 def com_rainha(html):
-    return html if "rainha-canto" in html else html + "\n" + RAINHA
+    return com_compromisso(html) if "rainha-canto" in html else com_compromisso(html) + "\n" + RAINHA
+
+# Fontes e compromisso editorial (pedido de Arthur, 10/11/2026): expediente no pé de TODOS os
+# jornais e dossiês, com as fontes de referência, a linha editorial sem partido e os limites.
+# Página completa em /banca/fontes/. Se a página de origem já o tiver, não duplica.
+COMPROMISSO = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "compromisso.html"), encoding="utf-8").read()
+FONTES = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "fontes.html"), encoding="utf-8").read()
+
+def com_compromisso(html):
+    if "compromisso-editorial" in html:
+        return html
+    i = html.find("<!--rainha:inicio-->")
+    return html[:i] + COMPROMISSO + "\n" + html[i:] if i >= 0 else html + "\n" + COMPROMISSO
 
 ENCARTE = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "encarte-lafaiete.js"), encoding="utf-8").read()
 
@@ -93,10 +105,12 @@ BARRA = """
 .banca-volta a{color:inherit;text-decoration:none;display:inline-flex;align-items:center;gap:8px;padding:8px 14px 8px 10px;
   border:1.5px solid #ECE3D4;min-height:44px}
 .banca-volta a:hover,.banca-volta a:focus-visible{background:#ECE3D4;color:#3A2D2B;outline:none}
-.banca-volta span{opacity:.85;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.banca-volta a.banca-fontes{padding:8px 12px;flex:none}
+.banca-volta span{flex:1;text-align:right;opacity:.85;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:430px){.banca-volta span{display:none}}
 @media print{.banca-volta{display:none}}
 </style>
-<nav class="banca-volta" aria-label="Banca"><a href="../">&#8249;&nbsp;Todos os jornais</a><span>{nome}</span></nav>
+<nav class="banca-volta" aria-label="Banca"><a href="../">&#8249;&nbsp;Todos os jornais</a><span>{nome}</span><a href="../fontes/" class="banca-fontes">Fontes</a></nav>
 """
 
 REGISTRO = """
@@ -330,6 +344,8 @@ a.outro:hover,a.outro:focus-visible{{background:rgba(255,255,255,.4)}}
 {chr(10).join(itens)}
   {('<h3 class="tamb">Também na Banca</h3>' + chr(10) + chr(10).join(outros)) if outros else ""}
   {('<h3 class="tamb">Dossiês de estudo</h3>' + chr(10) + chr(10).join(f'  <a class="outro" href="{p}/"><img src="{p}/icone-192.png" alt="" width="44" height="44"><span><b>{H.escape(n)}</b> {H.escape(ds)}</span></a>' for p, _, n, ds in DOSSIES)) if DOSSIES else ""}
+  <h3 class="tamb">Fontes e compromisso editorial</h3>
+  <a class="outro" href="fontes/"><span><b>Sem partido, com fonte</b> Todos os jornais seguem a mesma linha: nenhum vínculo com partido ou governo, fato separado de opinião, os dois lados, cada notícia com fonte, link e data, e erros corrigidos às claras. Veja as fontes de cada jornal.</span></a>
   <div class="caixa">"Cada página impressa aproximava o mundo"</div>
   <p class="nota">Para ter a Banca como aplicativo no celular: no Android, abra no Chrome, toque nos três pontinhos e em "Instalar app" ou "Adicionar à tela inicial"; no iPhone, abra no Safari, toque em Compartilhar e em "Adicionar à Tela de Início". Depois da primeira visita, os jornais abrem até sem internet. Textos escritos com a ajuda do Claude, IA da Anthropic; não substituem orientação médica.</p>
 </div>
@@ -345,6 +361,15 @@ for pasta, origem, nome, desc, opts in PUBS:
 
 for args in DOSSIES:
     montar_dossie(*args)
+
+# página "Fontes e compromisso editorial", ligada na barra de cada jornal e na tela inicial
+_f = os.path.join(BANCA, "fontes")
+os.makedirs(_f, exist_ok=True)
+_corpo = FONTES.replace('<div class="wrap">', '</head>\n<body>' + BARRA.replace("{nome}", "Fontes e compromisso") + '<div class="wrap">', 1)
+open(os.path.join(_f, "index.html"), "w", encoding="utf-8").write(
+    CABECA.format(desc="As fontes de referência dos jornais da Banca e o compromisso editorial: sem partido, fato separado de opinião, os dois lados, correção pública.", tinta=TINTA, raiz="../")
+    + com_rainha(_corpo + "\n" + COMPROMISSO.replace("<details>", "<details open>")) + REGISTRO.replace("{raiz}", "../") + "</body>\n</html>\n")
+print("fontes: atualizado")
 
 open(os.path.join(BANCA, "index.html"), "w", encoding="utf-8").write(tela_inicial(cards))
 
@@ -394,7 +419,7 @@ base = ["./", "index.html", "manifest.webmanifest"] + ICONES
 for pasta, _, _, _, opts in PUBS:
     base += [f"{pasta}/", f"{pasta}/index.html", f"{pasta}/edicoes.json", f"{pasta}/icone-192.png"]
     base += [f"{pasta}/{x}" for x in opts.get("extras", {})]
-base += ["lafaiete/edicoes.json"]
+base += ["lafaiete/edicoes.json", "fontes/", "fontes/index.html"]
 for pasta, *_ in DOSSIES:
     base += [f"{pasta}/", f"{pasta}/index.html", f"{pasta}/icone-192.png"]
 h = hashlib.sha256()

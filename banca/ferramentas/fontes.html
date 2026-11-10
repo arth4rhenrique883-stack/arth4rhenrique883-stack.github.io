@@ -1,0 +1,56 @@
+<title>Fontes e compromisso editorial — Banca</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:wght@600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400;1,6..72,500&family=Archivo:wght@600;800&display=swap">
+<style>
+/* Layout: página de expediente de jornal antigo; cabeça condensada entre filetes duplos, uma caixa por jornal com as fontes de cada um, e o compromisso completo embaixo */
+:root{--papel:#ECE3D4;--tinta:#3A2D2B;--suave:#5E4E48;--fio:#B9A993}
+*{box-sizing:border-box}
+body{margin:0;background:var(--papel);color:var(--tinta);font-family:"Newsreader",Georgia,"Times New Roman",serif;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .35  0 0 0 0 .27  0 0 0 0 .2  0 0 0 .10 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.wrap{max-width:860px;margin:0 auto;padding:22px 16px 0}
+.duplo{border-top:6px solid var(--tinta);border-bottom:2px solid var(--tinta);height:11px}
+.duplo.inv{border-top-width:2px;border-bottom-width:6px}
+h1{font-family:"Anton",Impact,"Arial Narrow",sans-serif;font-weight:400;font-size:clamp(44px,12vw,96px);line-height:.95;text-align:center;margin:12px 0 8px;text-transform:uppercase}
+.linha{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;font:800 13px/1.3 "Archivo",Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:12px 2px;border-bottom:1px solid var(--tinta)}
+.abre{font-style:italic;font-size:20px;line-height:1.5;text-align:justify;margin:20px 0}
+.abre::first-letter{font-family:"Playfair Display",Georgia,serif;font-style:normal;font-weight:700;float:left;font-size:64px;line-height:.85;padding:6px 8px 0 0}
+h2.sec{font-family:"Playfair Display",Georgia,serif;font-weight:600;text-transform:uppercase;text-align:center;font-size:clamp(22px,5.5vw,32px);margin:26px 0 12px}
+.jornais{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:640px){.jornais{grid-template-columns:1fr}}
+.jornais article{border:1.5px solid var(--tinta);padding:14px 14px 10px;background:rgba(255,255,255,.18)}
+.jornais h3{font-family:"Anton",Impact,sans-serif;font-weight:400;text-transform:uppercase;font-size:26px;line-height:1.05;margin:0 0 6px}
+.jornais p{font-size:16.5px;line-height:1.45;text-align:justify;margin:0 0 8px}
+.jornais p b{font-family:"Archivo",Arial,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+</style>
+<div class="wrap">
+ <div class="duplo"></div>
+ <h1>Fontes e Compromisso</h1>
+ <div class="duplo inv"></div>
+ <div class="linha"><span>Expediente da Banca</span><span>✱</span><span>Vale para todos os jornais</span></div>
+ <p class="abre">Um jornal só merece confiança quando mostra de onde tira o que publica. Esta página reúne as fontes de referência de cada jornal da Banca, explica como elas são escolhidas e diz, com honestidade, o que prometemos e o que não podemos prometer.</p>
+
+ <h2 class="sec">As fontes de cada jornal</h2>
+ <div class="jornais">
+  <article><h3>Jornal de Cada Dia</h3>
+   <p>Política brasileira, saúde e tecnologia em linguagem simples.</p>
+   <p><b>Fontes:</b> Agência Brasil, Agência Câmara e Agência Senado, TSE, STF, órgãos do governo federal; Ministério da Saúde, Anvisa, Fiocruz, Butantan, Inca; Folha, Estadão, g1, Reuters, AP, BBC; revistas científicas.</p></article>
+  <article><h3>Terra Brasilis</h3>
+   <p>O Brasil e Conselheiro Lafaiete, com o quadro "Como isso afeta você".</p>
+   <p><b>Fontes:</b> gov.br, IBGE, Banco Central, Agência Brasil, Agência Minas, ALMG, STF, Inmet; Folha, Estadão, g1, O Tempo, Estado de Minas, Reuters, AP; Prefeitura e Câmara de Lafaiete; Lafaiete Agora, Correio de Minas, Jornal Correio da Cidade, Voz Ativa.</p>
+   <p>O quadro "Como isso afeta você" é explicação do jornal, sem número inventado e sem tomar partido.</p></article>
+  <article><h3>Observatório Diário</h3>
+   <p>Geopolítica, guerras, energia, clima, IA e espaço, para estudar.</p>
+   <p><b>Fontes:</b> ONU, FMI, Banco Mundial; IEA, EIA, OPEP, ANP; NOAA, BoM, Copernicus, INPE; NASA, ESA, CNEOS, NEOCC; SIPRI, IISS, RUSI, CSIS, RAND, ACLED, Oryx; Chatham House, Brookings, Carnegie, CFR, CEBRI; Reuters, AP, AFP, BBC, FT, The Economist, Folha, Estadão.</p>
+   <p>Cada item leva o selo FATO, ANÁLISE ou CENÁRIO e o grau de confiança. Mídia estatal só como versão oficial de um governo.</p></article>
+  <article><h3>Do Mundo a Lafaiete</h3>
+   <p>O Observatório mais o caderno de Conselheiro Lafaiete. Usa as fontes do Observatório e as do caderno de Lafaiete do Terra Brasilis.</p></article>
+  <article><h3>Xeque-Mate</h3>
+   <p>Medicina para estudantes, com abas Mundo e Brasil.</p>
+   <p><b>Fontes:</b> NEJM, The Lancet, JAMA, BMJ, Nature Medicine, PubMed; congressos médicos; FDA, EMA, OMS, CDC, ECDC; Ministério da Saúde, SUS, Conitec, Anvisa, CFM, Fiocruz, Butantan, Inca, SES-MG.</p>
+   <p>Cada estudo diz o desenho, o tamanho, o efeito com número, o nível de evidência e se já foi publicado ou só anunciado. Não é conselho médico.</p></article>
+  <article><h3>Dossiês de estudo</h3>
+   <p>Textos longos sobre um assunto, como "O Caso Moraes–Vorcaro".</p>
+   <p><b>Fontes:</b> documentos e decisões oficiais (STF, PGR, Polícia Federal, Banco Central), leis, e imprensa de referência de linhas diferentes. Cada fonte vem listada no fim do dossiê, com link e data.</p></article>
+ </div>
+</div>
