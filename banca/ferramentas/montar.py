@@ -34,10 +34,12 @@ PUBS = [
     ("xequemate", "medicina", "Xeque-Mate",
      "Só medicina, para estudantes: estudos, ensaios clínicos, aprovações e saúde pública.",
      {"destaque": True}),
+    # Terra Brasilis e O Carijó viraram UM jornal (pedido de Arthur, 10/11/2026): ao abrir, o leitor
+    # escolhe o caderno Brasil ou Conselheiro Lafaiete. O caderno de Lafaiete vem de jornal-lafaiete/
+    # e é copiado como lafaiete.json (extras); /lafaiete/ só redireciona para /brasil/#lafaiete.
     ("brasil", "jornal-brasil", "Terra Brasilis",
-     "Só o Brasil, Minas e Lafaiete, em linguagem simples.", {}),
-    ("lafaiete", "jornal-lafaiete", "O Carijó",
-     "Só Conselheiro Lafaiete, com a cobertura completa da cidade.", {}),
+     "O Brasil e Conselheiro Lafaiete num jornal só: escolha o caderno ao abrir. Toda notícia diz como afeta o trabalhador e cada classe.",
+     {"destaque": True, "extras": {"lafaiete.json": "jornal-lafaiete/edicoes.json"}}),
 ]
 
 # Dossiês de estudo: páginas avulsas (sem edicoes.json), cada uma com seu próprio
@@ -198,6 +200,12 @@ def montar(pasta, origem, nome, desc, opts):
         os.makedirs(d, exist_ok=True)
         open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(pagina)
         open(os.path.join(d, "edicoes.json"), "w", encoding="utf-8").write(dados)
+        for nome_extra, orig_extra in opts.get("extras", {}).items():
+            p_extra = os.path.join(ORIGEM, orig_extra)
+            if os.path.exists(p_extra):
+                txt = open(p_extra, encoding="utf-8").read()
+                json.loads(txt)  # aborta se o JSON estiver quebrado
+                open(os.path.join(d, nome_extra), "w", encoding="utf-8").write(txt)
         print(f"{pasta}: atualizado")
     else:
         print(f"{pasta}: origem ausente, mantida a versão anterior")
@@ -263,7 +271,7 @@ def tela_inicial(cards):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Banca</title>
-<meta name="description" content="Os jornais do dia num só lugar: Jornal de Cada Dia, Do Mundo a Lafaiete, Observatório Diário e Xeque-Mate, mais Terra Brasilis e O Carijó.">
+<meta name="description" content="Os jornais do dia num só lugar: Jornal de Cada Dia, Do Mundo a Lafaiete, Observatório Diário e Xeque-Mate, e Terra Brasilis (Brasil e Lafaiete).">
 <meta name="theme-color" content="{TINTA}">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -341,24 +349,33 @@ for args in DOSSIES:
 open(os.path.join(BANCA, "index.html"), "w", encoding="utf-8").write(tela_inicial(cards))
 
 # caminhos antigos que mudaram de nome: redirecionam e desligam o service worker velho
-REDIRECIONA = {"anamnese": "xequemate"}
+REDIRECIONA = {"anamnese": "xequemate", "lafaiete": "brasil/#lafaiete"}
+# o caderno de Lafaiete continua em lafaiete/edicoes.json porque o encarte-lafaiete.js
+# (Jornal de Cada Dia e Do Mundo a Lafaiete) lê dali
+GUARDA_JSON = {"lafaiete": "jornal-lafaiete/edicoes.json"}
 for velho, novo in REDIRECIONA.items():
     d = os.path.join(BANCA, velho)
     if os.path.isdir(d):
         for f in os.listdir(d):
             os.remove(os.path.join(d, f))
     os.makedirs(d, exist_ok=True)
+    if velho in GUARDA_JSON and os.path.exists(os.path.join(ORIGEM, GUARDA_JSON[velho])):
+        txt = open(os.path.join(ORIGEM, GUARDA_JSON[velho]), encoding="utf-8").read()
+        json.loads(txt)
+        open(os.path.join(d, "edicoes.json"), "w", encoding="utf-8").write(txt)
+    alvo = "../" + novo if "#" in novo else "../" + novo + "/"
+    js = f'location.replace("{alvo}")' if "#" in novo else f'location.replace("{alvo}"+location.search+location.hash)'
     open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(
         f'<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Mudou de endereço</title>'
-        f'<meta http-equiv="refresh" content="0; url=../{novo}/"><link rel="canonical" href="../{novo}/">'
-        f'<script>location.replace("../{novo}/"+location.search+location.hash)</script></head>'
+        f'<meta http-equiv="refresh" content="0; url={alvo}"><link rel="canonical" href="{alvo}">'
+        f'<script>{js}</script></head>'
         f'<body style="background:{PAPEL};color:{TINTA};font:18px Georgia,serif;padding:24px">'
-        f'<p>Este jornal mudou de endereço: <a href="../{novo}/" style="color:inherit">abrir</a>.</p></body></html>\n')
+        f'<p>Este jornal mudou de endereço: <a href="{alvo}" style="color:inherit">abrir</a>.</p></body></html>\n')
     open(os.path.join(d, "sw.js"), "w", encoding="utf-8").write(SW_ANTIGO)
 
 manifest = {
     "name": "Banca", "short_name": "Banca",
-    "description": "Os jornais do dia num só lugar: Jornal de Cada Dia, Do Mundo a Lafaiete, Observatório Diário e Xeque-Mate, mais Terra Brasilis e O Carijó.",
+    "description": "Os jornais do dia num só lugar: Jornal de Cada Dia, Do Mundo a Lafaiete, Observatório Diário e Xeque-Mate, e Terra Brasilis (Brasil e Lafaiete).",
     "lang": "pt-BR", "id": "/banca/", "start_url": "./", "scope": "./",
     "display": "standalone", "orientation": "portrait",
     "background_color": PAPEL, "theme_color": TINTA,
@@ -374,8 +391,10 @@ open(os.path.join(BANCA, "manifest.webmanifest"), "w", encoding="utf-8").write(
     json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
 
 base = ["./", "index.html", "manifest.webmanifest"] + ICONES
-for pasta, *_ in PUBS:
+for pasta, _, _, _, opts in PUBS:
     base += [f"{pasta}/", f"{pasta}/index.html", f"{pasta}/edicoes.json", f"{pasta}/icone-192.png"]
+    base += [f"{pasta}/{x}" for x in opts.get("extras", {})]
+base += ["lafaiete/edicoes.json"]
 for pasta, *_ in DOSSIES:
     base += [f"{pasta}/", f"{pasta}/index.html", f"{pasta}/icone-192.png"]
 h = hashlib.sha256()

@@ -78,7 +78,13 @@
          "nome": "Diario de Pernambuco/Correio Braziliense, STF deixa caso Master para 2027 (9/11)",
          "url": "https://www.diariodepernambuco.com.br/politica/2026/11/11728670-stf-deixa-para-2027-discussao-sobre-ministros-e-caso-banco-master.html"
         }
-       ]
+       ],
+       "impacto": {
+        "trabalhador": "No dia a dia, nada muda já: não há multa, imposto ou regra nova. O que pesa é a confiança: quando um caso grande demora, cresce a sensação de que a Justiça é lenta para os de cima.",
+        "baixa": "Efeito direto pequeno: o caso não mexe em benefício, salário ou preço. Vale lembrar que, em qualquer banco, o FGC (Fundo Garantidor de Créditos) protege depósitos e aplicações como poupança e CDB até R$ 250 mil por pessoa.",
+        "media": "Para quem investe em CDB de bancos pequenos que pagam juros altos, o caso lembra a regra: o FGC cobre até R$ 250 mil por pessoa e por banco. Acima disso, o risco é seu.",
+        "alta": "Quem tinha valores acima do limite do FGC em bancos médios é quem mais sente casos assim. A demora no STF prolonga a incerteza jurídica, que costuma deixar investidores mais cautelosos."
+       }
       },
       {
        "titulo": "Lula na COP31 e a espera pelo novo ministro da Fazenda",
@@ -93,13 +99,25 @@
          "nome": "O Tempo/Folhapress, decreto da 6x1 adiado (9/11)",
          "url": "https://www.otempo.com.br/economia/2026/11/9/decreto-que-regulamenta-fim-da-6x1-tem-publicacao-adiada-e-so-deve-sair-apos-retorno-de-lula"
         }
-       ]
+       ],
+       "impacto": {
+        "trabalhador": "O decreto que detalha o fim da escala 6x1 só deve sair depois do dia 16. Até lá, a jornada de quem trabalha seis dias e folga um não muda: vale o que está no contrato e na convenção da categoria.",
+        "baixa": "O nome do ministro da Fazenda indica como o governo vai tratar gastos e programas sociais em 2027. Por ora não há anúncio, então nada muda no Bolsa Família nem em outros benefícios.",
+        "media": "A espera pelo ministro mexe com o dólar e os juros dos financiamentos, porque o mercado tenta adivinhar a política econômica. Em compras grandes a prazo, vale comparar taxas antes de fechar.",
+        "alta": "Empresários e investidores acompanham o nome da Fazenda de perto: ele sinaliza impostos, juros e regras. Para empresas, o decreto do 6x1 também vai definir custos de escala e contratação."
+       }
       },
       {
        "titulo": "Por que um pedido de vista atrasa tanto",
        "selo": "Explicação",
        "texto": "No STF, qualquer ministro pode pedir para levar o processo e estudá-lo melhor antes de votar. Enquanto isso, o julgamento fica parado. Há prazo para devolver, mas, se ele cai perto das férias da Justiça, o caso só volta no ano seguinte. É uma regra comum nos tribunais, mas muitas vezes é criticada por deixar decisões importantes esperando.",
-       "fontes": []
+       "fontes": [],
+       "impacto": {
+        "trabalhador": "Pedidos de vista também atrasam processos que tocam a vida de quem trabalha, como ações sobre direitos trabalhistas e previdência que chegam ao STF.",
+        "baixa": "Quem depende de uma decisão da Justiça para receber benefício costuma sentir mais a demora, porque não tem reserva para esperar.",
+        "media": "Ações sobre planos de saúde, impostos e consumo também podem ficar paradas por um pedido de vista. Saber que a regra existe ajuda a entender por que \"o processo não anda\".",
+        "alta": "Quem tem causas de grande valor costuma pagar advogados para acompanhar os prazos. Para empresas, a demora significa ficar mais tempo sem saber qual regra vai valer."
+       }
       }
      ]
     },
@@ -117,7 +135,13 @@
          "nome": "Correio de Minas, Bolsa Família antecipado (8/11)",
          "url": "https://correiodeminas.com.br/2026/11/08/bolsa-familia-de-novembro-chega-a-r-1-100-apos-novo-reajuste-e-sera-pago-antes-da-data/"
         }
-       ]
+       ],
+       "impacto": {
+        "trabalhador": "Se a família recebe o Bolsa Família, o dinheiro de novembro cai entre 16 e 18/11, sem precisar pedir nada. Quem tem carteira assinada pode continuar no programa se a renda por pessoa da casa estiver dentro do limite da regra de proteção.",
+        "baixa": "É quem mais sente: o mínimo passou de R$ 600 para R$ 691 por família, mais R$ 173 por criança de até 6 anos, e o dinheiro chega antes. Ajuda a organizar as contas do fim do mês.",
+        "media": "Não recebe o benefício, mas sente um pouco no comércio do bairro: dinheiro que cai mais cedo costuma movimentar mercado, farmácia e lojas antes do fim do mês.",
+        "alta": "Efeito direto quase nenhum. Indiretamente, o reajuste aumenta o gasto do governo, tema que pesa nas discussões sobre contas públicas, impostos e juros."
+       }
       },
       {
        "titulo": "Juros parados e inflação de outubro a caminho",
@@ -128,7 +152,13 @@
          "nome": "BP Money, IPCA-15 de outubro (23/10)",
          "url": "https://bpmoney.com.br/economia/ipca-15-desacelera-para-032-em-outubro-mas-inflacao-em-12-meses-sobe-a-462/"
         }
-       ]
+       ],
+       "impacto": {
+        "trabalhador": "Com a Selic em 13,75%, crediário e cartão continuam caros. A prévia da inflação mostrou comida mais cara: é a despesa que mais pesa no salário de quem ganha menos.",
+        "baixa": "Comida mais cara pesa mais em quem gasta quase toda a renda no mercado. Evite o rotativo do cartão e o cheque especial, que têm os juros mais altos do país.",
+        "media": "Financiamento de carro e casa segue caro. Por outro lado, dinheiro guardado em aplicações que seguem a Selic, como Tesouro Selic e CDB, continua rendendo bem.",
+        "alta": "Juros altos favorecem quem tem muito dinheiro aplicado em renda fixa. Para quem tem empresa, o crédito caro adia investimentos e contratações."
+       }
       }
      ]
     },
@@ -147,13 +177,25 @@
          "nome": "Correio da Cidade, ação sobre diabetes em Lafaiete",
          "url": "https://www.jornalcorreiodacidade.com.br/noticias/51639-lafaiete-tera-acao-gratuita-de-prevencao-e-orientacao-sobre-diabetes"
         }
-       ]
+       ],
+       "impacto": {
+        "trabalhador": "Diabetes descoberto cedo evita afastamento do trabalho por complicações. O exame de glicose é rápido e gratuito no posto de saúde.",
+        "baixa": "O teste é de graça no SUS e na ação de sábado na Praça do Cristo, em Lafaiete. Não precisa de plano de saúde.",
+        "media": "Mesmo quem tem plano pode aproveitar a ação gratuita para medir glicose e pressão sem marcar consulta.",
+        "alta": "O risco é o mesmo para todos: dinheiro não impede o diabetes. Sedentarismo e alimentação com muito açúcar pesam em qualquer classe."
+       }
       },
       {
        "titulo": "Frio fora de época: atenção com idosos e crianças",
        "selo": "Explicação",
        "texto": "Com o frio e a chuva desta semana, aumentam as gripes e resfriados. Agasalhe bem os mais velhos e as crianças, mantenha a casa arejada mesmo no frio e procure o posto de saúde se houver febre alta, falta de ar ou cansaço fora do comum.",
-       "fontes": []
+       "fontes": [],
+       "impacto": {
+        "trabalhador": "Quem sai cedo para trabalhar ou trabalha na rua (obra, entrega, feira) sente mais o frio com chuva. Roupa em camadas e uma muda seca na bolsa ajudam.",
+        "baixa": "Casas com goteira, pouca roupa de frio ou cobertor sofrem mais. A Defesa Civil e a assistência social da prefeitura podem ser procuradas em caso de necessidade.",
+        "media": "Gastos com aquecedor e chuveiro mais quente aumentam a conta de luz. Vale fechar frestas antes de ligar aparelhos.",
+        "alta": "O cuidado com idosos e crianças é o mesmo. Quem emprega cuidadores, porteiros ou domésticas pode ajustar horários nos dias de chuva forte."
+       }
       }
      ]
     },
@@ -171,7 +213,13 @@
          "nome": "Muita Informação, regras do Enem 2026 (1/11)",
          "url": "https://muitainformacao.com.br/noticias/falta-uma-semana-para-o-enem-2026-confira-horarios-documentos-e-regras-do-inep/"
         }
-       ]
+       ],
+       "impacto": {
+        "trabalhador": "Quem trabalha e estuda pode usar a nota do Enem para tentar o Prouni (bolsas em faculdades particulares) e o Sisu (vagas em federais), inclusive em cursos à noite.",
+        "baixa": "Para famílias de baixa renda, o Enem é a principal porta para bolsas do Prouni e financiamento pelo Fies. Faltar à prova significa esperar mais um ano.",
+        "media": "A nota do Enem dá acesso às federais, que são gratuitas, e diminui o gasto da família com mensalidades.",
+        "alta": "Para quem pode pagar faculdade particular, a nota pesa menos, mas segue sendo a entrada para as universidades públicas mais concorridas."
+       }
       }
      ]
     },
@@ -189,7 +237,13 @@
          "nome": "Correio de Minas, eleição no MPMG (9/11)",
          "url": "https://correiodeminas.com.br/2026/11/09/membros-do-mpmg-elegem-amanha-10-lista-triplice-para-escolha-do-procurador-geral-de-justica-entrerriano-concorre-a-segundo-mandato/"
         }
-       ]
+       ],
+       "impacto": {
+        "trabalhador": "O Ministério Público defende direitos coletivos, como segurança no trabalho e serviços públicos. Quem comanda o órgão influencia quais casos andam mais rápido.",
+        "baixa": "É o MP que cobra das prefeituras vagas em creche, remédio e atendimento de saúde. O perfil do novo chefe pesa nessas ações.",
+        "media": "O MP também atua em defesa do consumidor e contra a corrupção na gestão pública, o que afeta a qualidade dos serviços pagos com seus impostos.",
+        "alta": "Empresas que lidam com o Estado, licenças ambientais e mineração (forte em Minas e na região de Lafaiete) acompanham de perto quem vai liderar o MP."
+       }
       },
       {
        "titulo": "Frio de inverno em novembro, até quarta",
@@ -204,7 +258,13 @@
          "nome": "Correio de Minas, alerta da Defesa Civil (8/11)",
          "url": "https://correiodeminas.com.br/2026/11/08/defesa-civil-divulga-previsao-do-tempo-e-alerta-populacao-para-riscos-de-queda-de-arvores-e-de-banho-em-cachoeiras/"
         }
-       ]
+       ],
+       "impacto": {
+        "trabalhador": "Chuva forte e risco de deslizamento atrasam ônibus e podem parar obras. Quem trabalha ao ar livre deve seguir as orientações de segurança da empresa.",
+        "baixa": "Quem mora em encosta ou perto de córrego corre mais risco com chuva forte. Em caso de rachaduras ou barulho na terra, saia de casa e ligue para a Defesa Civil (199).",
+        "media": "Granizo pode estragar carro e telhado: vale guardar o carro na garagem e conferir o que o seguro cobre.",
+        "alta": "Produtores rurais e donos de imóveis com mais bens expostos podem ter prejuízos com granizo e vento. Seguro agrícola e residencial ganham importância."
+       }
       },
       {
        "titulo": "Cleitinho visita Lafaiete",
@@ -215,64 +275,15 @@
          "nome": "Correio da Cidade (9/11)",
          "url": "https://www.jornalcorreiodacidade.com.br/noticias/51674-leandro-chagas-recebe-cleitinho-e-discute-novos-investimentos-para-lafaiete"
         }
-       ]
+       ],
+       "impacto": {
+        "trabalhador": "Se o Hospital Regional for priorizado, pode haver mais vagas de obra agora e, depois, empregos na área de saúde. Por enquanto, não há valores nem datas anunciados.",
+        "baixa": "Um hospital regional funcionando pode evitar viagens a Belo Horizonte para tratamento pelo SUS. Mas, até haver data oficial, continua só promessa.",
+        "media": "Mais leitos na região aliviariam os hospitais e o pronto-socorro, mesmo para quem tem plano de saúde.",
+        "alta": "Investimento do Estado na cidade costuma valorizar imóveis e atrair negócios, mas tudo depende de verba no orçamento de 2027."
+       }
       }
      ]
-    },
-    {
-     "id": "lafaiete",
-     "titulo": "Lafaiete, a nossa cidade",
-     "abertura": "O essencial da cidade hoje. A cobertura completa está no jornal O Carijó",
-     "itens": [
-      {
-       "titulo": "Hospital Regional deve ficar para 2027",
-       "selo": "Previsão",
-       "texto": "A obra entrou na reta final e ainda contrata pedreiros e serventes, mas não há data oficial para atender pacientes. O Governo de Minas falava em terminar em dezembro de 2026; a Prefeitura fala em maio de 2027 e documentos do acordo de Brumadinho, que pagam R$ 33 milhões em equipamentos, apontam o primeiro semestre de 2027.",
-       "fontes": [
-        {
-         "nome": "Correio de Minas (4/11)",
-         "url": "https://correiodeminas.com.br/2026/11/04/hospital-regional-de-lafaiete-ainda-contrata-trabalhadores-e-entra-na-reta-final-com-previsao-de-funcionamento-no-1o-semestre-de-2027/"
-        }
-       ]
-      },
-      {
-       "titulo": "Furtos não caíram na cidade",
-       "selo": "Confirmado",
-       "texto": "De janeiro a julho, Lafaiete teve 643 furtos, quase o mesmo que em 2025 (637). Em Minas, os furtos caíram 15%. Das 36 cidades mineiras com mais de 100 mil moradores, só 4 não tiveram queda, e Lafaiete é uma delas.",
-       "fontes": [
-        {
-         "nome": "Correio de Minas (9/11)",
-         "url": "https://correiodeminas.com.br/2026/11/09/conselheiro-lafaiete-tem-643-furtos-em-sete-meses-de-2026-e-nao-acompanha-a-queda-de-minas/"
-        }
-       ]
-      },
-      {
-       "titulo": "PM prende dois por tráfico no bairro Carijós",
-       "selo": "Confirmado",
-       "texto": "No domingo (8/11), a Polícia Militar prendeu dois homens no bairro Carijós e apreendeu mais de 250 porções de drogas, balanças e R$ 2.622 em dinheiro.",
-       "fontes": [
-        {
-         "nome": "Correio de Minas (9/11)",
-         "url": "https://correiodeminas.com.br/2026/11/09/cerco-fechado-pm-usa-inteligencia-e-cao-policial-para-prender-dois-e-apreender-mais-de-250-porcoes-de-drogas-em-lafaiete/"
-        }
-       ]
-      },
-      {
-       "titulo": "BR-040 fecha por uma hora no sábado",
-       "selo": "Confirmado",
-       "texto": "No sábado (14/11), das 15h às 16h, a BR-040 para nos dois sentidos no km 612, em Congonhas, para uma detonação de rocha das obras de duplicação. Quem for viajar deve se programar.",
-       "fontes": [
-        {
-         "nome": "Correio de Minas (9/11)",
-         "url": "https://correiodeminas.com.br/2026/11/09/epr-via-mineira-programa-desmonte-controlado-de-rocha-em-congonhas-para-avanco-das-obras-de-duplicacao-da-br-040/"
-        }
-       ]
-      }
-     ],
-     "caixa": {
-      "titulo": "Quer mais da cidade?",
-      "texto": "O Carijó é o jornal só de Conselheiro Lafaiete, com Prefeitura, Câmara, saúde, escolas, vagas do Sine, segurança e esporte. Na Banca, é o cartão logo abaixo do Terra Brasilis."
-     }
     }
    ],
    "tempo": {

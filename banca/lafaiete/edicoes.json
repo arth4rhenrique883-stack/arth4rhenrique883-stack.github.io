@@ -82,7 +82,13 @@
          "nome": "TSE, outubro de 2026",
          "url": "https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/cleitinho-azevedo-republicanos-e-eleito-governador-de-minas-gerais"
         }
-       ]
+       ],
+       "impacto": {
+        "trabalhador": "Se a promessa virar obra, abre vagas na construção e, depois, empregos no hospital. Até sair no Diário Oficial ou no orçamento, ainda é conversa.",
+        "baixa": "Para quem depende do SUS, o Hospital Regional é o que mais importa: menos viagens a BH para internação e cirurgia. Mas ainda não há data.",
+        "media": "Um hospital a mais na região tende a aliviar as filas também para quem tem plano de saúde, que muitas vezes usa a mesma rede.",
+        "alta": "Boa relação entre prefeitura e governo do estado costuma atrair investimento, mas o efeito sobre negócios e imóveis só vem quando houver dinheiro previsto no orçamento."
+       }
       },
       {
        "titulo": "Taxa de iluminação e tapa-buracos: nada de novo",
@@ -93,7 +99,13 @@
          "nome": "Lafaiete Agora, 05/11/2026",
          "url": "https://lafaieteagora.com.br/2026/11/05/erivelton-reage-a-projeto-de-lei-que-preve-aumento-na-conta-de-luz-em-lafaiete-e-proposta-sai-de-pauta-na-camara/"
         }
-       ]
+       ],
+       "impacto": {
+        "trabalhador": "Sem novidade, a conta de luz não muda por causa da taxa por enquanto. Buraco na rua continua estragando bicicleta e moto de quem vai trabalhar.",
+        "baixa": "Uma taxa de iluminação nova, se aprovada, vem na conta de luz: pesa mais em quem tem orçamento apertado. Por ora, nada foi votado.",
+        "media": "Os buracos estragam pneu e suspensão do carro, um gasto que aparece na oficina. Se o projeto da taxa voltar, vale acompanhar o valor proposto.",
+        "alta": "O efeito da taxa depende de como ela for cobrada (por consumo ou valor fixo). Até haver projeto votado, não dá para saber quanto cada um pagaria."
+       }
       },
       {
        "titulo": "Governador eleito quer proibir dinheiro do estado em shows",
@@ -104,7 +116,13 @@
          "nome": "Lafaiete Agora, 07/11/2026",
          "url": "https://lafaieteagora.com.br/2026/11/07/cleitinho-anuncia-projeto-que-proibe-uso-de-recursos-estaduais-para-financiar-shows-e-festas-nos-municipios-mineiros/"
         }
-       ]
+       ],
+       "impacto": {
+        "trabalhador": "Festas da cidade empregam temporariamente montadores, seguranças e vendedores. Com menos verba, pode haver menos eventos e menos bicos.",
+        "baixa": "Shows gratuitos na praça são, muitas vezes, o lazer que a família pode pagar. Se a lei passar, podem diminuir ou depender de patrocínio.",
+        "media": "Pode haver menos eventos gratuitos e mais eventos com ingresso. Quem defende a medida diz que o dinheiro iria para saúde e estradas.",
+        "alta": "Empresas podem ser chamadas a patrocinar festas. Comerciantes e donos de bares e hotéis que lucram com os eventos também sentem."
+       }
       }
      ],
      "caixa": {
@@ -131,7 +149,13 @@
          "nome": "Agência Minas, 26/06/2026",
          "url": "https://www.agenciaminas.mg.gov.br/noticia/governo-de-minas-da-novo-passo-para-abertura-do-hospital-regional-de-conselheiro-lafaiete"
         }
-       ]
+       ],
+       "impacto": {
+        "trabalhador": "A obra ainda contrata servente, pedreiro de acabamento e sinaleiro pelo Sine. Quando abrir, deve gerar empregos na saúde, mas ainda sem data.",
+        "baixa": "É a obra que mais mexe com quem depende do SUS. Enquanto não abre, internações e cirurgias continuam indo para outras cidades.",
+        "media": "Mais leitos e UTI na região diminuem a espera em casos graves, mesmo para quem tem plano.",
+        "alta": "Um hospital grande atrai clínicas, laboratórios e profissionais para a cidade, o que movimenta imóveis e serviços na vizinhança."
+       }
       },
       {
        "titulo": "Sábado tem exame de glicose grátis na Praça do Cristo",
@@ -142,7 +166,13 @@
          "nome": "Correio da Cidade, 07/11/2026",
          "url": "https://www.jornalcorreiodacidade.com.br/noticias/51639-lafaiete-tera-acao-gratuita-de-prevencao-e-orientacao-sobre-diabetes"
         }
-       ]
+       ],
+       "impacto": {
+        "trabalhador": "Sábado das 9h às 16h: dá para ir sem faltar ao serviço. O teste é rápido e de graça.",
+        "baixa": "Não precisa de plano nem de consulta marcada: é só chegar. Se der alterado, a ação encaminha para o atendimento.",
+        "media": "Vale levar pais e avós: o diabetes muitas vezes não dá sinal no começo.",
+        "alta": "O risco não depende de renda. A ação é uma chance de fazer o teste sem esperar consulta."
+       }
       },
       {
        "titulo": "Mal súbito depois do futebol em Santana dos Montes",
@@ -153,7 +183,13 @@
          "nome": "Lafaiete Agora, 09/11/2026",
          "url": "https://lafaieteagora.com.br/2026/11/09/professor-morre-apos-partida-de-futebol/"
         }
-       ]
+       ],
+       "impacto": {
+        "trabalhador": "Muitos trabalhadores jogam bola no fim de semana depois de uma semana pesada. Antes de esporte intenso, principalmente depois dos 40, vale passar por um médico.",
+        "baixa": "O posto de saúde pode pedir exames básicos, como pressão e eletrocardiograma, pelo SUS, antes de começar ou voltar ao esporte.",
+        "media": "Quem tem plano pode fazer um check-up do coração antes de voltar a jogar ou correr.",
+        "alta": "Dinheiro não substitui a prevenção: o check-up vale para todos, principalmente para quem tem histórico de doença no coração na família."
+       }
       }
      ],
      "caixa": {
@@ -179,7 +215,13 @@
          "nome": "Correio da Cidade, 09/11/2026",
          "url": "https://www.jornalcorreiodacidade.com.br/noticias/51666-sine-lafaiete-confira-as-75-vagas-de-trabalho-desta-segundafeira-para-comercio-construcao-servicos-e-outros-setores"
         }
-       ]
+       ],
+       "impacto": {
+        "trabalhador": "É a notícia mais direta para quem procura trabalho: há vagas em obras (BR-040 e Hospital Regional), comércio e serviços. Ligue antes no (31) 3764-9807.",
+        "baixa": "25 vagas não pedem experiência: é uma porta para o primeiro emprego com carteira assinada.",
+        "media": "As vagas são em maioria de nível básico. Para quem busca cargos técnicos ou de nível superior, só aparecem duas de instrutor de musculação.",
+        "alta": "Para quem tem empresa, o Sine é um caminho gratuito para anunciar vagas e encontrar funcionários na cidade."
+       }
       }
      ],
      "caixa": {
@@ -201,7 +243,13 @@
          "nome": "Correio de Minas, 09/11/2026",
          "url": "https://correiodeminas.com.br/2026/11/09/conselheiro-lafaiete-tem-643-furtos-em-sete-meses-de-2026-e-nao-acompanha-a-queda-de-minas/"
         }
-       ]
+       ],
+       "impacto": {
+        "trabalhador": "Furto de bicicleta, moto e celular atinge muito quem vai e volta do trabalho a pé ou de ônibus. Evite deixar a bicicleta sem cadeado.",
+        "baixa": "Perder um celular ou uma bicicleta pesa mais em quem não tem seguro nem dinheiro para repor. Registrar o boletim de ocorrência ajuda a polícia a mapear os locais.",
+        "media": "Furtos de carro, de objetos no carro e em casas preocupam. Seguro, alarme e iluminação na porta ajudam a diminuir o risco.",
+        "alta": "Comércio e empresas sentem os furtos no prejuízo e no gasto com segurança privada. Os dados mostram que roubos (com violência) caíram 20%."
+       }
       },
       {
        "titulo": "Furto de cobre na CSN leva dois à prisão em Congonhas",
@@ -212,7 +260,13 @@
          "nome": "Lafaiete Agora, 06/11/2026",
          "url": "https://lafaieteagora.com.br/2026/11/06/funcionario-de-mineradora-e-dono-de-ferro-velho-sao-presos-apos-furto-de-cobre-na-csn/"
         }
-       ]
+       ],
+       "impacto": {
+        "trabalhador": "Furto dentro da empresa pode levar a demissão por justa causa e processo. Quem compra material furtado também comete crime (receptação).",
+        "baixa": "Vender sucata para ferro-velho é renda para muita gente. Desconfie de cobre barato e sem origem: quem compra pode responder por receptação.",
+        "media": "Furto de fios e cobre também causa falta de luz e de telefone em bairros inteiros.",
+        "alta": "Para mineradoras e indústrias da região, furtos assim aumentam o gasto com vigilância e controle interno."
+       }
       }
      ],
      "caixa": {
@@ -234,7 +288,13 @@
          "nome": "Correio da Cidade, 09/11/2026",
          "url": "https://www.jornalcorreiodacidade.com.br/noticias/51671-frente-fria-derruba-temperaturas-em-lafaiete-e-traz-alerta-de-tempestades"
         }
-       ]
+       ],
+       "impacto": {
+        "trabalhador": "Quem trabalha na rua ou em obra sente mais o frio com chuva. Agasalho em camadas e uma muda seca ajudam.",
+        "baixa": "Casas com goteira ou em áreas de risco sofrem mais. Em caso de emergência, ligue para a Defesa Civil (199).",
+        "media": "Granizo pode estragar carro e telhado: se puder, deixe o carro na garagem.",
+        "alta": "Produtores rurais da região podem ter perdas com granizo e vento: é hora de conferir o seguro."
+       }
       },
       {
        "titulo": "Lembrete: BR-040 fecha por uma hora no sábado",
@@ -245,7 +305,13 @@
          "nome": "Correio de Minas, 09/11/2026",
          "url": "https://correiodeminas.com.br/2026/11/09/epr-via-mineira-programa-desmonte-controlado-de-rocha-em-congonhas-para-avanco-das-obras-de-duplicacao-da-br-040/"
         }
-       ]
+       ],
+       "impacto": {
+        "trabalhador": "Motoristas de caminhão, ônibus e aplicativo que usam a BR-040 no sábado à tarde devem planejar o horário para não perder viagem.",
+        "baixa": "Quem viaja de ônibus intermunicipal pode sofrer atraso no sábado entre 15h e 16h.",
+        "media": "Quem vai a BH ou ao Rio de carro no sábado pode sair antes das 15h ou depois das 16h.",
+        "alta": "Empresas com entregas e cargas pela BR-040 devem ajustar a programação. A duplicação, quando pronta, deve encurtar o tempo de viagem e baratear o frete."
+       }
       }
      ]
     },
@@ -263,7 +329,13 @@
          "nome": "Correio da Cidade, 09/11/2026",
          "url": "https://www.jornalcorreiodacidade.com.br/noticias/51677-lafaiete-tj-sports-centroluz-leva-atletas-para-amistoso-na-cidade-do-galo"
         }
-       ]
+       ],
+       "impacto": {
+        "trabalhador": "Escolinhas de bairro dão às crianças de famílias trabalhadoras uma chance de serem vistas por grandes clubes.",
+        "baixa": "Para crianças de baixa renda, o esporte de base é ocupação, disciplina e às vezes um caminho profissional. Muitas escolinhas têm projetos sociais.",
+        "media": "Avaliação em clube grande é uma oportunidade, mas a chance de virar profissional é pequena: vale manter a escola em primeiro lugar.",
+        "alta": "Escolinhas e projetos de base dependem de patrocínio local. Empresas da cidade podem apoiar e ganhar visibilidade."
+       }
       }
      ]
     }
