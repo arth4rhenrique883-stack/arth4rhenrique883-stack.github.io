@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Medicina para estudantes: estudos, ensaios clínicos e saúde pública.">
+<meta name="theme-color" content="#3A2D2B">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Banca">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="../icone-192.png">
+<link rel="apple-touch-icon" href="../icone-180.png">
+<title>Anamnese</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,500&family=Archivo+Narrow:wght@500;600;700&display=swap">
+<style>
+/* Layout: jornal antigo impresso, como a referência de Arthur. Papel bege texturizado, tinta marrom quase preta, filetes duplos, manchete condensada enorme, títulos em serifa caixa-alta, texto em serifa itálica justificada, gravura em P&B, citação em caixa. Visual único (sem tema escuro), por escolha. */
+:root{
+  --paper:#ECE3D4;
+  --sheet:#F2EBDF;
+  --ink:#3A2D2B;
+  --muted:#5E4E48;
+  --rule:#3A2D2B;
+  --hair:#B9A993;
+  --signal:#7E2A1E;
+  --soft:#E1D5C1;
+  --mast:"Anton", "Impact", "Arial Narrow", sans-serif;
+  --head:"Playfair Display", Georgia, "Times New Roman", serif;
+  --body:"Newsreader", Georgia, "Times New Roman", serif;
+  --ui:"Archivo Narrow", "Arial Narrow", Arial, sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background-color:var(--paper);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .27 0 0 0 0 .2 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),radial-gradient(ellipse at 30% 20%, rgba(255,250,240,.55), transparent 60%),radial-gradient(ellipse at 80% 90%, rgba(120,90,60,.10), transparent 55%);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.5;margin:0}
+a{color:inherit}
+a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+h2,h3,h4{text-wrap:balance}
+.dbl{border:0;height:10px;margin:0;border-top:4px solid var(--rule);border-bottom:2px solid var(--rule)}
+.dbl.thin{height:6px;border-top-width:2px;border-bottom-width:1px}
+
+/* cabeçalho */
+.mast{padding-block:28px 0;display:grid;gap:14px;text-align:center}
+.wordmark{font-family:var(--mast);font-weight:400;font-size:clamp(64px, 19vw, 230px);line-height:.92;letter-spacing:.01em;text-transform:uppercase;margin:4px 0 2px}
+.edline{display:flex;justify-content:space-between;align-items:center;gap:8px 18px;flex-wrap:wrap;font-family:var(--ui);font-weight:700;font-size:15px;letter-spacing:.12em;text-transform:uppercase;padding-block:4px 10px;border-bottom:1.5px solid var(--rule)}
+.edline .ast{font-size:26px;line-height:0;letter-spacing:0;transform:translateY(3px)}
+.banner{font-family:var(--head);font-weight:500;font-size:clamp(34px, 7vw, 84px);line-height:1;text-transform:uppercase;letter-spacing:.01em;margin:4px 0 6px}
+.toolbar{display:flex;justify-content:space-between;align-items:center;gap:10px 18px;flex-wrap:wrap;font-family:var(--ui);font-size:14px;padding-block:8px;text-align:left}
+.legend{display:flex;gap:8px;flex-wrap:wrap;align-items:center;color:var(--muted)}
+select{font-family:var(--ui);font-size:15px;background:var(--sheet);color:var(--ink);border:1.5px solid var(--ink);border-radius:0;padding:5px 8px}
+#dataLonga{font-style:italic;font-family:var(--body);color:var(--muted)}
+
+/* selos */
+.chip{display:inline-block;font-family:var(--ui);font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:2px 7px;vertical-align:middle;white-space:nowrap}
+.chip.FATO{background:var(--ink);color:var(--paper)}
+.chip.ANALISE{border:1.5px solid var(--ink);color:var(--ink)}
+.chip.CENARIO{border:1.5px dashed var(--signal);color:var(--signal)}
+.ev{display:inline-block;font-family:var(--ui);font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-bottom:1.5px solid var(--ink);white-space:nowrap}
+.conf{font-family:var(--ui);font-size:13px;color:var(--muted);letter-spacing:.04em}
+.meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+
+/* faixa de notas */
+.ticker{text-align:left;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:0 26px;padding-block:6px}
+.tick{display:flex;gap:8px;align-items:baseline;padding:6px 0;text-decoration:none;line-height:1.3;border-bottom:1px solid var(--hair);font-size:16px}
+.tick:hover span:last-child{text-decoration:underline}
+.tick .ar{flex:none;font-family:var(--ui);font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.tick .ar::after{content:" ✱"}
+
+/* capa */
+.cover{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:34px;padding-block:24px 28px}
+.cover-l{display:grid;gap:12px;align-content:start}
+.kicker{font-family:var(--ui);font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--signal);margin:0}
+.cover h2{font-family:var(--head);font-weight:700;font-size:clamp(32px, 4.6vw, 52px);line-height:1.02;text-transform:uppercase;margin:0}
+.deck{font-style:italic;font-size:20px;line-height:1.4;margin:0;text-align:justify;hyphens:auto}
+.why{font-family:var(--ui);font-size:13.5px;color:var(--muted);margin:0}
+.pull{margin:10px 0 0;border:2px solid var(--ink);padding:16px 18px;font-family:var(--head);font-weight:600;font-size:clamp(19px, 2.2vw, 24px);line-height:1.15;text-transform:uppercase;text-align:center}
+.cover-body{display:grid;gap:12px;align-content:start;min-width:0}
+.cover-body p{margin:0;font-style:italic;font-size:17.5px;text-align:justify;hyphens:auto}
+figure.grav{margin:0;border:2px solid var(--ink);padding:6px;background:var(--sheet)}
+figure.grav svg{display:block;width:100%;height:auto}
+figure.grav figcaption{font-family:var(--ui);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;text-align:center;padding-top:6px;color:var(--muted)}
+@media (max-width:820px){.cover{grid-template-columns:minmax(0,1fr);gap:18px}}
+
+/* números */
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.num{padding:14px 16px 16px 0;display:grid;gap:3px;align-content:start;min-width:0}
+.num + .num{padding-left:16px;border-left:1.5px solid var(--rule)}
+.num .lab{font-family:var(--ui);font-weight:700;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.num .val{font-family:var(--mast);font-size:38px;line-height:1.05;font-variant-numeric:tabular-nums;letter-spacing:.01em}
+.num .note{font-style:italic;font-size:15.5px;line-height:1.3}
+.num .src{font-family:var(--ui);font-size:12.5px;color:var(--muted)}
+@media (max-width:560px){.num + .num{padding-left:0;border-left:0;border-top:1px solid var(--hair)}}
+
+/* índice */
+.toc{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 10px;padding-block:10px;font-family:var(--ui);font-weight:700;font-size:13.5px;letter-spacing:.1em;text-transform:uppercase}
+.toc a{text-decoration:none}
+.toc a + a::before{content:"✱";margin-right:10px;color:var(--muted)}
+.toc a:hover{text-decoration:underline}
+
+/* cadernos */
+.sec{padding-block:26px 6px}
+.sec-h{display:grid;justify-items:center;gap:2px;text-align:center;margin-bottom:20px}
+.sec-h h2{font-family:var(--head);font-weight:600;font-size:clamp(30px, 5vw, 54px);line-height:1.02;text-transform:uppercase;margin:8px 0 0}
+.sec-h .tag{font-family:var(--ui);font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding-bottom:8px}
+.sec-h::before,.sec-h::after{content:"";justify-self:stretch;height:8px;border-top:3px solid var(--rule);border-bottom:1.5px solid var(--rule)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0 30px}
+.item{display:grid;gap:8px;align-content:start;padding-bottom:22px;margin-bottom:22px;border-bottom:1px solid var(--hair);min-width:0}
+.item h3{font-family:var(--head);font-weight:700;font-size:22px;line-height:1.12;text-transform:uppercase;margin:0}
+.item p{margin:0;font-size:17px;text-align:justify;hyphens:auto}
+.item > p:not(.prova){font-style:italic}
+.date{font-family:var(--ui);font-weight:600;font-size:13px;letter-spacing:.06em;color:var(--muted)}
+.prova{font-size:15.5px;border-left:3px double var(--ink);border-left-width:5px;padding:4px 0 4px 12px;text-align:left!important}
+.prova b{font-family:var(--ui);font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-right:6px}
+.src{font-family:var(--ui);font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 12px}
+.src a{color:var(--ink)}
+.box{border:2px solid var(--ink);padding:14px 18px;margin-bottom:26px;display:grid;gap:6px;background:rgba(255,250,240,.35)}
+.box h4{margin:0;font-family:var(--head);font-weight:700;font-size:19px;text-transform:uppercase;text-align:center}
+.box p{margin:0;font-size:16.5px;font-style:italic;text-align:justify;hyphens:auto}
+
+/* leitura crítica */
+.crit{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px}
+.crit article{display:grid;gap:10px;align-content:start;min-width:0}
+.crit h3{font-family:var(--head);font-weight:700;font-size:24px;line-height:1.1;text-transform:uppercase;margin:0}
+.crit p{margin:0;font-size:17px;font-style:italic;text-align:justify;hyphens:auto}
+
+/* tabelas */
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:16px;min-width:560px}
+th{font-family:var(--ui);font-weight:700;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;text-align:left;border-top:3px solid var(--rule);border-bottom:1.5px solid var(--rule);padding:6px 10px 6px 0}
+td{border-bottom:1px solid var(--hair);padding:8px 10px 8px 0;vertical-align:top}
+td.d{font-family:var(--ui);font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.st{font-family:var(--ui);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.st.ok{color:var(--ink)}
+.st.wait{color:var(--signal)}
+.tbl-h{font-family:var(--head);font-weight:700;font-size:20px;text-transform:uppercase;margin:4px 0 8px}
+.two{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:30px}
+@media (max-width:860px){.two{grid-template-columns:minmax(0,1fr)}}
+
+/* história e fronteiras */
+.hist{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+.hist article{display:grid;gap:6px;align-content:start;border-top:3px double var(--ink);padding-top:10px}
+.hist h3{font-family:var(--head);font-weight:700;font-size:20px;line-height:1.15;text-transform:uppercase;margin:0}
+.hist p{margin:0;font-size:16.5px;font-style:italic;text-align:justify;hyphens:auto}
+.front article{border-top:2px dashed var(--ink)}
+
+/* estudo */
+.study{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+.study ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.study li{display:grid;gap:2px}
+.study li b{font-weight:600}
+.study li span{font-size:16px;font-style:italic;color:var(--muted)}
+.agenda li{grid-template-columns:56px 1fr;gap:10px;display:grid}
+.agenda .ad{font-family:var(--ui);font-weight:700;font-variant-numeric:tabular-nums}
+
+/* quiz e glossário */
+details{border-bottom:1px solid var(--hair);padding:10px 0}
+summary{cursor:pointer;font-weight:600;font-size:17.5px}
+details p{margin:8px 0 0;font-size:16.5px;font-style:italic}
+dl.gl{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px 30px;margin:0}
+dl.gl div{min-width:0}
+dl.gl dt{font-family:var(--ui);font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+dl.gl dd{margin:2px 0 0;font-size:16px;font-style:italic}
+footer{padding-block:14px 40px;font-family:var(--ui);font-size:13.5px;color:var(--muted);display:grid;gap:6px;text-align:center}
+.loading{padding-block:60px;font-family:var(--ui);color:var(--muted);text-align:center}
+</style>
+
+<template id="grav"><figure class="grav"><svg viewBox="0 0 400 300" role="img" aria-label="Gravura de um coração humano em estilo de prancha anatômica antiga">
+  <defs>
+    <pattern id="h1" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="5" height="5" fill="#F2EBDF"/><line x1="0" y1="0" x2="0" y2="5" stroke="#3A2D2B" stroke-width="1.1"/></pattern>
+    <pattern id="h2" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(-40)"><rect width="4" height="4" fill="url(#h1)"/><line x1="0" y1="0" x2="0" y2="4" stroke="#3A2D2B" stroke-width="1.2"/></pattern>
+    <pattern id="h3" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(80)"><rect width="7" height="7" fill="#F2EBDF"/><line x1="0" y1="0" x2="0" y2="7" stroke="#3A2D2B" stroke-width=".7"/></pattern>
+  </defs>
+  <rect width="400" height="300" fill="url(#h3)"/>
+  <rect x="14" y="14" width="372" height="272" fill="#F2EBDF" stroke="#3A2D2B" stroke-width="1.5"/>
+  <path d="M232 70 C232 40 262 30 286 40 C306 48 312 70 300 84" fill="none" stroke="#3A2D2B" stroke-width="22"/>
+  <path d="M232 70 C232 40 262 30 286 40 C306 48 312 70 300 84" fill="none" stroke="url(#h1)" stroke-width="18"/>
+  <path d="M254 40 L250 22 M272 36 L276 18 M290 44 L302 30" stroke="#3A2D2B" stroke-width="7" stroke-linecap="round"/>
+  <path d="M188 92 C182 62 196 46 214 50" fill="none" stroke="#3A2D2B" stroke-width="20"/>
+  <path d="M188 92 C182 62 196 46 214 50" fill="none" stroke="#F2EBDF" stroke-width="15"/>
+  <path d="M200 96 C150 70 104 96 108 150 C112 204 170 244 222 272 C262 240 312 196 312 140 C312 92 276 74 244 92 C230 98 214 100 200 96 Z" fill="url(#h1)" stroke="#3A2D2B" stroke-width="2.5"/>
+  <path d="M222 272 C262 240 312 196 312 140 C312 112 300 96 284 90 C300 120 290 180 222 272 Z" fill="url(#h2)"/>
+  <path d="M200 96 C170 140 196 200 222 272" fill="none" stroke="#3A2D2B" stroke-width="3"/>
+  <path d="M196 120 C186 130 182 150 190 168 M204 160 C216 176 214 200 220 220 M180 110 C160 120 146 140 150 164" fill="none" stroke="#3A2D2B" stroke-width="1.8"/>
+  <path d="M128 104 C150 112 168 120 198 118" fill="none" stroke="#3A2D2B" stroke-width="1.5"/>
+  <text x="200" y="279" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-style="italic" font-size="11" fill="#3A2D2B">Cor humanum</text>
+</svg><figcaption>Fig. 1 · Coração, ao modo das pranchas anatômicas do séc. XVI</figcaption></figure></template>
+
+
+<style>
+.banca-volta{position:sticky;top:0;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:12px;
+  background:#3A2D2B;color:#ECE3D4;padding:8px max(14px, env(safe-area-inset-right, 0px)) 8px max(14px, env(safe-area-inset-left, 0px));
+  padding-top:max(8px, env(safe-area-inset-top, 0px));font:600 15px/1.2 "Archivo","Archivo Narrow","Helvetica Neue",Arial,sans-serif;
+  letter-spacing:.08em;text-transform:uppercase}
+.banca-volta a{color:inherit;text-decoration:none;display:inline-flex;align-items:center;gap:8px;padding:8px 14px 8px 10px;
+  border:1.5px solid #ECE3D4;min-height:44px}
+.banca-volta a:hover,.banca-volta a:focus-visible{background:#ECE3D4;color:#3A2D2B;outline:none}
+.banca-volta span{opacity:.85;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media print{.banca-volta{display:none}}
+</style>
+<nav class="banca-volta" aria-label="Banca"><a href="../">&#8249;&nbsp;Todos os jornais</a><span>Xeque-Mate</span></nav>
+<div class="wrap">
+  <header class="mast">
+    <hr class="dbl">
+    <h1 class="wordmark">Anamnese</h1>
+    <hr class="dbl">
+    <div class="edline"><span id="volume">Vol. 1</span><span class="ast" aria-hidden="true">✱</span><span>Revista de medicina · 8º período</span><span class="ast" aria-hidden="true">✱</span><span id="dataExt"></span></div>
+    <p class="banner">Atualização médica</p>
+    <hr class="dbl">
+    <div class="toolbar">
+      <div class="legend"><span class="chip FATO">Fato</span><span class="chip ANALISE">Análise</span><span class="chip CENARIO">Cenário</span><span class="ev">Nível de evidência</span></div>
+      <span id="dataLonga"></span>
+      <label>Edição <select id="sel" aria-label="Escolher edição"></select></label>
+    </div>
+    <hr class="dbl thin">
+    <nav class="ticker" aria-label="Notas rápidas" id="ticker"></nav>
+    <hr class="dbl">
+  </header>
+  <main id="main"><p class="loading">Carregando a edição…</p></main>
+  <hr class="dbl">
+  <footer>
+    <span>Anamnese é uma revista de estudo escrita com o Claude. Cada nota traz data e fonte; confira sempre o artigo original antes de aplicar qualquer conduta.</span>
+    <span id="upd"></span>
+  </footer>
+</div>
+
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const chipName={FATO:"Fato",ANALISE:"Análise",CENARIO:"Cenário"};
+const chip=c=>c?`<span class="chip ${c}">${chipName[c]||c}</span>`:"";
+const ev=e=>e?`<span class="ev">${esc(e)}</span>`:"";
+const srcs=f=>(f&&f.length)?`<div class="src">Fontes: ${f.map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.nome)}</a>`).join("")}</div>`:"";
+const dataExt=d=>{try{return new Date(d+"T12:00:00").toLocaleDateString("pt-BR",{weekday:"long",day:"numeric",month:"long",year:"numeric"})}catch(e){return d}};
+
+function render(e){
+  $("#ticker").innerHTML=(e.ticker||[]).map(t=>`<a class="tick" href="${esc(t.url)}" target="_blank" rel="noopener"><span class="ar">${esc(t.area)}</span><span>${esc(t.texto)}</span></a>`).join("");
+  $("#volume").textContent=`Vol. 1, Nº ${e.numero}`;
+  $("#dataExt").textContent=new Date(e.data+"T12:00:00").toLocaleDateString("pt-BR");$("#dataLonga").textContent=dataExt(e.data);
+  const c=e.capa;
+  let h=`<section class="cover">
+    <div class="cover-l"><p class="kicker">${esc(c.kicker)}</p><h2>${esc(c.titulo)}</h2><p class="deck">${esc(c.linhaFina)}</p>
+      <div class="meta">${chip(c.camada)}${ev(c.evidencia)}<span class="conf">Confiança ${esc(c.confianca)}</span></div>
+      <p class="why">${esc(c.confiancaMotivo)} · ${e.tempoLeitura} min de leitura</p>
+      ${c.citacao?`<blockquote class="pull">${esc(c.citacao)}</blockquote>`:""}</div>
+    <div class="cover-body">${document.getElementById("grav").innerHTML}${c.texto.map(p=>`<p>${esc(p)}</p>`).join("")}${srcs(c.fontes)}</div>
+  </section>`;
+  h+=`<hr class="dbl"><section class="nums" aria-label="Números da semana">${(e.numeros||[]).map(n=>`<div class="num"><span class="lab">${esc(n.lab)}</span><span class="val">${esc(n.val)}</span><span class="note">${esc(n.note||n.nota)}</span><a class="src" href="${esc(n.src.url)}" target="_blank" rel="noopener">${esc(n.src.nome)}</a></div>`).join("")}</section>`;
+  const toc=[...(e.cadernos||[]).map(k=>[k.id,k.nome]),["critica","Leitura crítica"],["aprov","Aprovações"],["historia","História"],["fronteiras","Fronteiras"],["estudo","Para estudar"],["quiz","Teste-se"]];
+  h+=`<hr class="dbl"><nav class="toc" aria-label="Cadernos">${toc.map(([id,n])=>`<a href="#${id}">${esc(n)}</a>`).join("")}</nav><hr class="dbl thin">`;
+  for(const k of e.cadernos||[]){
+    h+=`<section class="sec" id="${esc(k.id)}"><div class="sec-h"><h2>${esc(k.nome)}</h2><span class="tag">Caderno</span></div><div class="cols">`;
+    h+=k.itens.map(i=>`<article class="item"><div class="meta">${chip(i.camada)}${ev(i.evidencia)}<span class="conf">Confiança ${esc(i.confianca)}</span></div>
+      <h3>${esc(i.titulo)}</h3><span class="date">${esc(i.data)}</span><p>${esc(i.texto)}</p>
+      ${i.prova?`<p class="prova"><b>Para a prova</b>${esc(i.prova)}</p>`:""}${srcs(i.fontes)}</article>`).join("");
+    h+=`</div>${k.box?`<aside class="box"><h4>${esc(k.box.titulo)}</h4><p>${esc(k.box.texto)}</p></aside>`:""}</section>`;
+  }
+  if(e.leituraCritica){h+=`<section class="sec" id="critica"><div class="sec-h"><h2>Leitura crítica</h2><span class="tag">Medicina baseada em evidências</span></div><div class="crit">${e.leituraCritica.map(a=>`<article><h3>${esc(a.titulo)}</h3>${a.texto.map(p=>`<p>${esc(p)}</p>`).join("")}</article>`).join("")}</div><div style="height:22px"></div></section>`}
+  if(e.aprovacoes){const A=e.aprovacoes;const tb=(rows)=>`<div class="tw"><table><thead><tr><th>Fármaco</th><th>Indicação</th><th>Data</th><th>Status</th></tr></thead><tbody>${rows.map(r=>`<tr><td><b>${esc(r.farmaco)}</b></td><td>${esc(r.indicacao)}</td><td class="d">${esc(r.data)}</td><td><span class="st ${/aprov|regist/i.test(r.status)?"ok":"wait"}">${esc(r.status)}</span></td></tr>`).join("")}</tbody></table></div>`;
+    h+=`<section class="sec" id="aprov"><div class="sec-h"><h2>Aprovações e decisões</h2><span class="tag">FDA · Anvisa</span></div><div class="two"><div><p class="tbl-h">FDA (EUA)</p>${tb(A.fda)}</div><div><p class="tbl-h">Anvisa (Brasil)</p>${tb(A.anvisa)}</div></div><div style="height:12px"></div>${srcs(A.fontes)}<div style="height:22px"></div></section>`}
+  if(e.historia){h+=`<section class="sec" id="historia"><div class="sec-h"><h2>Curiosidades e história</h2><span class="tag">Do arquivo</span></div><div class="hist">${e.historia.map(a=>`<article><h3>${esc(a.titulo)}</h3><p>${esc(a.texto)}</p></article>`).join("")}</div><div style="height:26px"></div></section>`}
+  if(e.fronteiras){h+=`<section class="sec" id="fronteiras"><div class="sec-h"><h2>O que ainda não sabemos</h2><span class="tag">Fronteiras</span></div><div class="hist front">${e.fronteiras.map(a=>`<article><h3>${esc(a.pergunta)}</h3><p>${esc(a.texto)}</p></article>`).join("")}</div><div style="height:26px"></div></section>`}
+  if(e.estudo){const S=e.estudo;h+=`<section class="sec" id="estudo"><div class="sec-h"><h2>Para estudar</h2><span class="tag">Residência · Revalida · ENAMED</span></div><div class="study">
+    <div><p class="tbl-h">Temas da semana para revisar</p><ul>${S.temas.map(t=>`<li><b>${esc(t.tema)}</b><span>${esc(t.porque)}</span></li>`).join("")}</ul></div>
+    <div><p class="tbl-h">Para ler</p><ul>${S.leituras.map(t=>`<li><b>${esc(t.titulo)}</b><span>${esc(t.autor)}. ${esc(t.porque)}</span></li>`).join("")}</ul>
+    <p class="tbl-h" style="margin-top:20px">Diretrizes e documentos</p><ul>${S.diretrizes.map(t=>`<li><b>${esc(t.titulo)}</b><span>${esc(t.nota)}</span></li>`).join("")}</ul></div>
+    <div><p class="tbl-h">Agenda</p><ul class="agenda">${(e.agenda||[]).map(a=>`<li><span class="ad">${esc(a.data)}</span><span>${esc(a.evento)}</span></li>`).join("")}</ul></div>
+  </div><div style="height:12px"></div>${srcs(S.fontes)}<div style="height:22px"></div></section>`}
+  if(e.quiz){h+=`<section class="sec" id="quiz"><div class="sec-h"><h2>Teste-se</h2><span class="tag">Toque para ver a resposta</span></div>${e.quiz.map(q=>`<details><summary>${esc(q.p)}</summary><p>${esc(q.r)}</p></details>`).join("")}<div style="height:26px"></div></section>`}
+  if(e.glossario){h+=`<section class="sec"><div class="sec-h"><h2>Glossário</h2><span class="tag">Termos desta edição</span></div><dl class="gl">${e.glossario.map(g=>`<div><dt>${esc(g.termo)}</dt><dd>${esc(g.def)}</dd></div>`).join("")}</dl><div style="height:26px"></div></section>`}
+  $("#main").innerHTML=h;
+  $("#upd").textContent=e.fechamento||"";
+}
+
+fetch("edicoes.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
+  const eds=(d.edicoes||[]).slice().sort((a,b)=>b.data.localeCompare(a.data));
+  const sel=$("#sel");
+  sel.innerHTML=eds.map((e,i)=>`<option value="${i}">Nº ${e.numero} · ${new Date(e.data+"T12:00:00").toLocaleDateString("pt-BR")}</option>`).join("");
+  sel.onchange=()=>{render(eds[+sel.value]);window.scrollTo(0,0)};
+  render(eds[0]);
+}).catch(()=>{$("#main").innerHTML='<p class="loading">Não foi possível carregar a edição. Recarregue a página.</p>'});
+</script>
+
+<script>
+/* Banca: guarda os jornais para ler sem internet e recarrega quando chega edição nova */
+if ("serviceWorker" in navigator) {
+  addEventListener("load", function () {
+    navigator.serviceWorker.register("../sw.js", {scope: "../"}).then(function (r) {
+      r.addEventListener("updatefound", function () {
+        var w = r.installing; if (!w) return;
+        w.addEventListener("statechange", function () {
+          if (w.state === "activated" && navigator.serviceWorker.controller) location.reload();
+        });
+      });
+    }).catch(function () {});
+  });
+}
+</script>

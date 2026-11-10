@@ -27,7 +27,7 @@ PUBS = [
      "O jornal de Conselheiro Lafaiete: prefeitura, saúde, empregos e agenda da cidade."),
     ("observatorio", "revista", "Observatório Diário",
      "Para estudar o mundo: geopolítica completa, guerras, energia, clima, IA e espaço, com história e filosofia."),
-    ("anamnese", "medicina", "Anamnese",
+    ("xequemate", "medicina", "Xeque-Mate",
      "Medicina para estudantes: estudos, ensaios clínicos e saúde pública."),
 ]
 
@@ -254,6 +254,22 @@ for pasta, origem, nome, desc in PUBS:
     cards.append((pasta, nome, desc, manchete, dt))
 
 open(os.path.join(BANCA, "index.html"), "w", encoding="utf-8").write(tela_inicial(cards))
+
+# caminhos antigos que mudaram de nome: redirecionam e desligam o service worker velho
+REDIRECIONA = {"anamnese": "xequemate"}
+for velho, novo in REDIRECIONA.items():
+    d = os.path.join(BANCA, velho)
+    if os.path.isdir(d):
+        for f in os.listdir(d):
+            os.remove(os.path.join(d, f))
+    os.makedirs(d, exist_ok=True)
+    open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(
+        f'<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Mudou de endereço</title>'
+        f'<meta http-equiv="refresh" content="0; url=../{novo}/"><link rel="canonical" href="../{novo}/">'
+        f'<script>location.replace("../{novo}/"+location.search+location.hash)</script></head>'
+        f'<body style="background:{PAPEL};color:{TINTA};font:18px Georgia,serif;padding:24px">'
+        f'<p>Este jornal mudou de endereço: <a href="../{novo}/" style="color:inherit">abrir</a>.</p></body></html>\n')
+    open(os.path.join(d, "sw.js"), "w", encoding="utf-8").write(SW_ANTIGO)
 
 manifest = {
     "name": "Banca", "short_name": "Banca",

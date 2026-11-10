@@ -70,11 +70,11 @@
       ]
     },
     {
-      "name": "Anamnese",
-      "url": "anamnese/",
+      "name": "Xeque-Mate",
+      "url": "xequemate/",
       "icons": [
         {
-          "src": "anamnese/icone-192.png",
+          "src": "xequemate/icone-192.png",
           "sizes": "192x192"
         }
       ]
