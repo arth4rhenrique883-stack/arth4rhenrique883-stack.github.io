@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="O Brasil e Conselheiro Lafaiete num jornal só: escolha o caderno ao abrir. Toda notícia diz como afeta o trabalhador e cada classe.">
+<meta name="description" content="O Brasil e Minas Gerais: Brasília, o seu bolso, saúde, escola e Minas. Toda notícia diz como afeta o trabalhador e cada classe.">
 <meta name="theme-color" content="#3A2D2B">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Libre+Caslon+Display&family=Libre+Caslon+Text:wght@400;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400;1,6..72,500&family=Archivo:wght@600;800&family=UnifrakturMaguntia&display=swap">
 <style>
 /* Edição em preto e aba "Sugestões" com cadastro (10/11/2026): ver blocos no fim do estilo e o segundo <script>. */
-/* Terra Brasilis, jornal do Brasil e de Conselheiro Lafaiete (fundido com O Carijó em 10/11/2026): tela de escolha do caderno ao abrir. Layout: jornal antigo impresso — papel bege com textura, manchete condensada entre filetes duplos, linha de edição com asteriscos, seções em serifa maiúscula, texto em itálico justificado, gravura em P&B e citações em caixa com borda. Visual único (sempre papel claro), por escolha. */
+/* Terra Brasilis, jornal do Brasil e de Minas Gerais. Desde 10/11/2026 Conselheiro Lafaiete voltou a ter jornal próprio (O Carijó, ../lafaiete/); este abre direto no caderno Brasil. Layout: jornal antigo impresso — papel bege com textura, manchete condensada entre filetes duplos, linha de edição com asteriscos, seções em serifa maiúscula, texto em itálico justificado, gravura em P&B e citações em caixa com borda. Visual único (sempre papel claro), por escolha. */
 :root{
   --papel:#EEE5D6;
   --papel-escuro:#E2D6C1;
@@ -364,19 +364,19 @@ html body .rainha-canto svg g{stroke:#111}
   </div>
   <header>
     <hr class="duplo">
-    <div class="cabeca"><div class="orelha esq"><b>Grátis</b>Edição digital<i>Brasil e Conselheiro Lafaiete</i></div><h1 class="nome">Terra Brasilis</h1><div class="orelha dir"><b>Cartas</b><a href="#sugestoes">Mande a sua sugestão &#8250;</a><i>A redação responde por e-mail</i></div></div>
-    <p class="lema">O país e a nossa cidade, com fonte, data e sem partido</p>
+    <div class="cabeca"><div class="orelha esq"><b>Grátis</b>Edição digital<i>Brasil e Minas Gerais</i></div><h1 class="nome">Terra Brasilis</h1><div class="orelha dir"><b>Cartas</b><a href="#sugestoes">Mande a sua sugestão &#8250;</a><i>A redação responde por e-mail</i></div></div>
+    <p class="lema">O país e o nosso estado, com fonte, data e sem partido</p>
     <hr class="duplo inv">
-    <div class="linha-edicao"><span id="vol">Vol. 1</span><span class="ast meio" aria-hidden="true">✱</span><span class="meio" id="meio">Brasil e Conselheiro Lafaiete</span><span class="ast" aria-hidden="true">✱</span><span id="dataCurta"></span></div>
+    <div class="linha-edicao"><span id="vol">Vol. 1</span><span class="ast meio" aria-hidden="true">✱</span><span class="meio" id="meio">O Brasil e Minas Gerais</span><span class="ast" aria-hidden="true">✱</span><span id="dataCurta"></span></div>
     <hr class="simples">
-    <p class="chamada" id="chamada">O país e a nossa cidade</p>
+    <p class="chamada" id="chamada">O país e o nosso estado</p>
     <hr class="duplo">
     <nav class="indice" aria-label="Cadernos" id="indice"></nav>
     <hr class="simples" id="fioIndice">
   </header>
   <main id="conteudo"><p class="erro">Abrindo o jornal…</p></main>
   <hr class="duplo">
-  <p class="nota-fim" id="notaFim">Terra Brasilis ✱ jornal do Brasil e de Conselheiro Lafaiete feito com a ajuda do Claude, uma inteligência artificial ✱ cada notícia traz a fonte e a data</p>
+  <p class="nota-fim" id="notaFim">Terra Brasilis ✱ jornal do Brasil e de Minas Gerais feito com a ajuda do Claude, uma inteligência artificial ✱ cada notícia traz a fonte e a data</p>
 </div>
 
 <script>
@@ -398,10 +398,11 @@ $("menor").onclick=()=>{escala=Math.max(0.85,+(escala-0.1).toFixed(2));aplicaEsc
 
 /* Os dois cadernos do jornal. Cada um tem o seu arquivo de edições. */
 const CADERNOS = {
-  brasil:   {arquivo:"edicoes.json",  nome:"Brasil",              meio:"O Brasil e Minas Gerais", chamada:"O país e o nosso estado", desc:"Brasília, o seu bolso, saúde, escola e Minas Gerais.", tempo:"O tempo em Lafaiete", conversa:"Sobre o país. Não há resposta certa: o que vale é pensar junto."},
-  lafaiete: {arquivo:"lafaiete.json", nome:"Conselheiro Lafaiete", meio:"Conselheiro Lafaiete, MG", chamada:"A nossa cidade",          desc:"O Carijó: prefeitura e Câmara, saúde, emprego, segurança, cidade e esporte.", tempo:"O tempo em Lafaiete", conversa:"Sobre a nossa cidade. Não há resposta certa: o que vale é pensar junto."}
+  brasil:   {arquivo:"edicoes.json",  nome:"Brasil",              meio:"O Brasil e Minas Gerais", chamada:"O país e o nosso estado", desc:"Brasília, o seu bolso, saúde, escola e Minas Gerais.", tempo:"O tempo em Lafaiete", conversa:"Sobre o país. Não há resposta certa: o que vale é pensar junto."}
 };
 const dados = {};
+/* Jornal de um caderno só (10/11/2026): abre direto, sem tela de escolha. */
+const UNICO = Object.keys(CADERNOS).length===1 ? Object.keys(CADERNOS)[0] : null;
 
 const IMPACTO = [["trabalhador","Trabalhador e operário"],["baixa","Classe baixa"],["media","Classe média"],["alta","Classe alta"]];
 const impacto = im => {
@@ -417,14 +418,14 @@ const caixa = b => b ? `<aside class="caixa"><h4>${esc(b.titulo)}</h4><p class="
 
 function cabecalho(qual){
   const em = !!qual;
-  $("trocar").classList.toggle("oculto",!em);
+  $("trocar").classList.toggle("oculto",!em||!!UNICO);
   $("edicao").classList.toggle("oculto",!em);
   $("rotEdicao").classList.toggle("oculto",!em);
   $("indice").classList.toggle("oculto",!em);
   $("fioIndice").classList.toggle("oculto",!em);
   const c = em ? CADERNOS[qual] : null;
-  $("meio").textContent = em ? c.meio : "Brasil e Conselheiro Lafaiete";
-  $("chamada").textContent = em ? c.chamada : "O país e a nossa cidade";
+  $("meio").textContent = em ? c.meio : "O Brasil e Minas Gerais";
+  $("chamada").textContent = em ? c.chamada : "O país e o nosso estado";
 }
 
 function mostraEscolha(){
@@ -450,7 +451,7 @@ function mostraEscolha(){
     <div class="explica-impacto">Em toda notícia, o quadro “Como isso afeta você” explica o efeito na vida do trabalhador e do operário, da classe baixa, da classe média e da classe alta. É uma explicação do jornal, sem tomar partido.</div>
   </section>`;
   document.querySelectorAll(".opcao").forEach(b=>b.onclick=()=>{location.hash=b.dataset.qual;});
-  $("notaFim").textContent = "Terra Brasilis ✱ jornal do Brasil e de Conselheiro Lafaiete (com O Carijó) feito com a ajuda do Claude, uma inteligência artificial ✱ cada notícia traz a fonte e a data";
+  $("notaFim").textContent = "Terra Brasilis ✱ jornal do Brasil e de Minas Gerais feito com a ajuda do Claude, uma inteligência artificial ✱ cada notícia traz a fonte e a data";
 }
 
 function render(qual, e){
@@ -492,9 +493,9 @@ function render(qual, e){
   h += `</section>`;
   if(e.conversa?.length) h += `<section class="conversa">${cab("Perguntas para refletir",C.conversa)}<ul style="padding-top:18px">${e.conversa.map(q=>`<li>${esc(q)}</li>`).join("")}</ul></section>`;
   const outro = qual==="brasil" ? "lafaiete" : "brasil";
-  h += `<p style="text-align:center;padding-block:8px 18px"><button class="btn" type="button" id="irOutro">Ler também o caderno ${esc(CADERNOS[outro].nome)} &#8250;</button></p>`;
+  if(CADERNOS[outro]) h += `<p style="text-align:center;padding-block:8px 18px"><button class="btn" type="button" id="irOutro">Ler também o caderno ${esc(CADERNOS[outro].nome)} &#8250;</button></p>`;
   $("conteudo").innerHTML = h;
-  $("irOutro").onclick=()=>{location.hash=outro;};
+  if($("irOutro")) $("irOutro").onclick=()=>{location.hash=outro;};
   $("notaFim").textContent = `${e.fechamento||""} Selos: “Confirmado” é fato checado; “Explicação” é a leitura do jornal; “Previsão” é uma possibilidade. O quadro “Como isso afeta você” é explicação do jornal, sem tomar partido. ✱ Terra Brasilis é feito com a ajuda do Claude, uma inteligência artificial, a partir da imprensa e de fontes oficiais.`;
 }
 
@@ -511,16 +512,17 @@ function abre(qual){
 
 function rota(){
   const q = location.hash.replace("#","");
-  if(q==="sugestoes") abreSugestoes(); else if(CADERNOS[q]) abre(q); else mostraEscolha();
+  if(q==="lafaiete" && !CADERNOS.lafaiete && location.pathname.indexOf("/banca/")>=0){ location.replace("../lafaiete/"); return; }
+  if(q==="sugestoes") abreSugestoes(); else if(CADERNOS[q]) abre(q); else if(UNICO) abre(UNICO); else mostraEscolha();
 }
-$("trocar").onclick=()=>{ history.pushState(null,"",location.pathname+location.search); mostraEscolha(); window.scrollTo({top:0}); };
+$("trocar").onclick=()=>{ if(UNICO){ location.hash=UNICO; return; } history.pushState(null,"",location.pathname+location.search); mostraEscolha(); window.scrollTo({top:0}); };
 addEventListener("hashchange", rota);
 addEventListener("popstate", rota);
 
 Promise.all(Object.entries(CADERNOS).map(([k,c]) =>
   fetch(c.arquivo,{cache:"no-store"}).then(r=>r.json()).then(j=>{dados[k]=j;}).catch(()=>{dados[k]=null;})
 )).then(()=>{
-  if(!dados.brasil && !dados.lafaiete){ $("conteudo").innerHTML='<p class="erro">Não foi possível abrir o jornal agora. Tente recarregar a página.</p>'; return; }
+  if(!Object.values(dados).some(Boolean)){ $("conteudo").innerHTML='<p class="erro">Não foi possível abrir o jornal agora. Tente recarregar a página.</p>'; return; }
   rota();
 });
 </script>
@@ -589,7 +591,7 @@ function abreSugestoes(){
   $("vol").textContent="Vol. 1"; $("dataCurta").textContent="";
   $("meio").textContent="Carta dos leitores"; $("chamada").textContent="A palavra é sua";
   ["edicao","rotEdicao","indice","fioIndice"].forEach(id=>$(id).classList.add("oculto"));
-  $("trocar").classList.remove("oculto");
+  $("trocar").classList.remove("oculto"); if(UNICO) $("trocar").innerHTML="&#8249; Voltar ao jornal";
   $("notaFim").textContent="Terra Brasilis ✱ as sugestões são lidas pela redação; os dados de quem escreve servem só para responder ✱ feito com a ajuda do Claude, uma inteligência artificial";
   const naBanca = /github\.io$/.test(location.hostname) || location.hostname==="localhost" || location.hostname==="127.0.0.1";
   if(!naBanca){
@@ -721,7 +723,7 @@ function sugDesenhaFormulario(area,u){
   const nome=u.displayName||"";
   const lista=SUG.lista;
   const TIPOS={tema:"Tema para uma próxima edição",melhoria:"Melhoria no jornal",correcao:"Correção de um erro",outro:"Outro assunto"};
-  const CADS={brasil:"Caderno Brasil",lafaiete:"Caderno Conselheiro Lafaiete",os_dois:"Os dois cadernos"};
+  const CADS={brasil:"Terra Brasilis (Brasil e Minas)",lafaiete:"O Carijó (Conselheiro Lafaiete)",os_dois:"Os dois jornais"};
   const dt=s=>{ if(!s?.seconds) return "agora"; const d=new Date(s.seconds*1000); return d.toLocaleDateString("pt-BR"); };
   area.innerHTML=`<div class="sug-grade"><div>
     <div class="quem"><span>Você entrou como <b>${esc(nome||u.email)}</b> (${esc(u.email)})</span><button class="linkbt" type="button" id="sugSair">Sair</button></div>

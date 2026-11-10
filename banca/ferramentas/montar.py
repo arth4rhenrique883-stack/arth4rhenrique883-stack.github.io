@@ -37,12 +37,16 @@ PUBS = [
     ("xequemate", "medicina", "Xeque-Mate",
      "Só medicina, para estudantes: estudos, ensaios clínicos, aprovações e saúde pública.",
      {"destaque": True}),
-    # Terra Brasilis e O Carijó viraram UM jornal (10/11/2026): ao abrir, o leitor
-    # escolhe o caderno Brasil ou Conselheiro Lafaiete. O caderno de Lafaiete vem de jornal-lafaiete/
-    # e é copiado como lafaiete.json (extras); /lafaiete/ só redireciona para /brasil/#lafaiete.
+    # Terra Brasilis (10/11/2026): só o Brasil e Minas Gerais; abre direto, sem tela de escolha.
     ("brasil", "jornal-brasil", "Terra Brasilis",
-     "O Brasil e Conselheiro Lafaiete num jornal só: escolha o caderno ao abrir. Toda notícia diz como afeta o trabalhador e cada classe.",
-     {"destaque": True, "extras": {"lafaiete.json": "jornal-lafaiete/edicoes.json"}}),
+     "O Brasil e Minas Gerais: Brasília, o seu bolso, saúde, escola e Minas. Toda notícia diz como afeta o trabalhador e cada classe.",
+     {"destaque": True}),
+    # O Carijó (10/11/2026): Conselheiro Lafaiete voltou a ser jornal próprio, de uso pessoal por enquanto.
+    #   oculto: fica fora da tela inicial e dos atalhos do app; abre só pelo link direto (/banca/lafaiete/).
+    # O lafaiete/edicoes.json também alimenta o encarte-lafaiete.js (Jornal de Cada Dia e Do Mundo a Lafaiete).
+    ("lafaiete", "jornal-lafaiete", "O Carijó",
+     "O jornal de Conselheiro Lafaiete: Prefeitura e Câmara, saúde, emprego, segurança, cidade e esporte. Toda notícia diz como afeta o trabalhador e cada classe.",
+     {"oculto": True}),
 ]
 
 # Dossiês de estudo: páginas avulsas (sem edicoes.json), cada uma com seu próprio
@@ -210,7 +214,10 @@ def montar(pasta, origem, nome, desc, opts):
         else:  # sem <body>: entra antes do primeiro elemento visível da página
             m = re.search(r"<(div|header|main|nav|section|article|p|h1|a)\b", html)
             html = html[:m.start()] + barra + html[m.start():] if m else barra + html
-        pagina = (CABECA.format(desc=H.escape(desc), tinta=TINTA, raiz="../")
+        cabeca = CABECA.format(desc=H.escape(desc), tinta=TINTA, raiz="../")
+        if opts.get("oculto"):
+            cabeca += '<meta name="robots" content="noindex, nofollow">\n'
+        pagina = (cabeca
                   + com_rainha(html) + REGISTRO.replace("{raiz}", "../"))
         if opts.get("encarte"):
             pagina += "\n<script>\n" + ENCARTE.replace("{modo}", opts["encarte"]) + "</script>\n"
@@ -288,7 +295,7 @@ def tela_inicial(cards):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Xeque News</title>
-<meta name="description" content="Os jornais do dia num só lugar: Jornal de Cada Dia, Do Mundo a Lafaiete, Observatório Diário e Xeque-Mate, e Terra Brasilis (Brasil e Lafaiete).">
+<meta name="description" content="Os jornais do dia num só lugar: Jornal de Cada Dia, Do Mundo a Lafaiete, Observatório Diário, Xeque-Mate e Terra Brasilis (Brasil e Minas).">
 <meta name="theme-color" content="{TINTA}">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -360,7 +367,8 @@ a.outro:hover,a.outro:focus-visible{{background:rgba(255,255,255,.4)}}
 cards = []
 for pasta, origem, nome, desc, opts in PUBS:
     manchete, dt = montar(pasta, origem, nome, desc, opts)
-    cards.append((pasta, nome, desc, manchete, dt, opts.get("destaque", False)))
+    if not opts.get("oculto"):
+        cards.append((pasta, nome, desc, manchete, dt, opts.get("destaque", False)))
 
 for args in DOSSIES:
     montar_dossie(*args)
@@ -377,10 +385,8 @@ print("fontes: atualizado")
 open(os.path.join(BANCA, "index.html"), "w", encoding="utf-8").write(tela_inicial(cards))
 
 # caminhos antigos que mudaram de nome: redirecionam e desligam o service worker velho
-REDIRECIONA = {"anamnese": "xequemate", "lafaiete": "brasil/#lafaiete"}
-# o caderno de Lafaiete continua em lafaiete/edicoes.json porque o encarte-lafaiete.js
-# (Jornal de Cada Dia e Do Mundo a Lafaiete) lê dali
-GUARDA_JSON = {"lafaiete": "jornal-lafaiete/edicoes.json"}
+REDIRECIONA = {"anamnese": "xequemate"}
+GUARDA_JSON = {}
 for velho, novo in REDIRECIONA.items():
     d = os.path.join(BANCA, velho)
     if os.path.isdir(d):
@@ -403,7 +409,7 @@ for velho, novo in REDIRECIONA.items():
 
 manifest = {
     "name": "Xeque News", "short_name": "Xeque News",
-    "description": "Os jornais do dia num só lugar: Jornal de Cada Dia, Do Mundo a Lafaiete, Observatório Diário e Xeque-Mate, e Terra Brasilis (Brasil e Lafaiete).",
+    "description": "Os jornais do dia num só lugar: Jornal de Cada Dia, Do Mundo a Lafaiete, Observatório Diário, Xeque-Mate e Terra Brasilis (Brasil e Minas).",
     "lang": "pt-BR", "id": "/banca/", "start_url": "./", "scope": "./",
     "display": "standalone", "orientation": "portrait",
     "background_color": PAPEL, "theme_color": TINTA,
@@ -422,7 +428,7 @@ base = ["./", "index.html", "manifest.webmanifest"] + ICONES
 for pasta, _, _, _, opts in PUBS:
     base += [f"{pasta}/", f"{pasta}/index.html", f"{pasta}/edicoes.json", f"{pasta}/icone-192.png"]
     base += [f"{pasta}/{x}" for x in opts.get("extras", {})]
-base += ["lafaiete/edicoes.json", "fontes/", "fontes/index.html"]
+base += ["fontes/", "fontes/index.html"]
 for pasta, *_ in DOSSIES:
     base += [f"{pasta}/", f"{pasta}/index.html", f"{pasta}/icone-192.png"]
 h = hashlib.sha256()

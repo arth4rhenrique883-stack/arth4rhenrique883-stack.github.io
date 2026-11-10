@@ -1,7 +1,7 @@
 {
   "name": "Xeque News",
   "short_name": "Xeque News",
-  "description": "Os jornais do dia num só lugar: Jornal de Cada Dia, Do Mundo a Lafaiete, Observatório Diário e Xeque-Mate, e Terra Brasilis (Brasil e Lafaiete).",
+  "description": "Os jornais do dia num só lugar: Jornal de Cada Dia, Do Mundo a Lafaiete, Observatório Diário, Xeque-Mate e Terra Brasilis (Brasil e Minas).",
   "lang": "pt-BR",
   "id": "/banca/",
   "start_url": "./",
