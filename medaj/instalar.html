@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#050505">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="marca6-192.png">
+<title>xmR · instalar</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; background: #050505; color: #e8e6e1; font: 17px/1.55 Lato, system-ui, sans-serif; }
+  main { max-width: 560px; margin: 0 auto; padding: 40px 18px 60px; }
+  img.logo { width: 72px; height: 72px; border-radius: 18px; display: block; margin-bottom: 14px; }
+  h1 { font-weight: 500; margin: 0 0 6px; }
+  .sub { color: #9a978f; margin: 0 0 24px; }
+  button, a.btn { display: inline-block; font: inherit; font-weight: 600; background: #F0B429; color: #111; border: 0;
+    border-radius: 99px; padding: 12px 24px; text-decoration: none; cursor: pointer; margin: 0 8px 10px 0; }
+  a.btn.sec { background: transparent; color: #e8e6e1; border: 1px solid #444; }
+  button[hidden] { display: none; }
+  h2 { font-size: 17px; margin: 30px 0 8px; }
+  ol { padding-left: 22px; margin: 0; } li { margin: 6px 0; }
+  .ok { color: #8fd694; }
+</style>
+</head>
+<body>
+<main>
+  <img class="logo" src="marca6-192.png" alt="">
+  <h1>xmR · residência</h1>
+  <p class="sub">Instale no computador (Windows, Mac, Linux) ou no Android. Abre em janela própria e funciona sem internet.</p>
+  <button id="inst" hidden>Instalar no computador</button>
+  <a class="btn sec" href="./">Abrir no navegador</a>
+  <a class="btn sec" href="../app/xmR.apk" download>Baixar APK (Android)</a>
+  <p id="ok" class="ok" hidden>Instalado. Procure “xmR” no menu Iniciar ou no Launchpad.</p>
+  <h2>Se o botão não aparecer</h2>
+  <ol>
+    <li>Abra esta página no <b>Chrome</b> ou no <b>Edge</b>.</li>
+    <li>Na barra de endereço, clique no ícone de <b>instalar</b> (monitor com seta) ou em menu ⋮ → <b>Instalar xmR</b> (Edge: ⋯ → Aplicativos → Instalar este site como um aplicativo).</li>
+    <li>Abra o xmR uma vez com internet: ele guarda tudo e depois funciona offline.</li>
+  </ol>
+  <p style="color:#9a978f;font-size:15px;margin-top:24px">No iPhone/iPad: Safari → Compartilhar → Adicionar à Tela de Início.</p>
+</main>
+<script>
+let ev = null; const b = document.getElementById("inst");
+addEventListener("beforeinstallprompt", e => { e.preventDefault(); ev = e; b.hidden = false; });
+b.onclick = async () => { if (!ev) return; ev.prompt(); await ev.userChoice; ev = null; b.hidden = true; };
+addEventListener("appinstalled", () => { b.hidden = true; document.getElementById("ok").hidden = false; });
+if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
+</script>
+</body>
+</html>
