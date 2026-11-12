@@ -553,14 +553,14 @@ def montar_cartoes():
             return json.load(open(os.path.join(BANCA, pasta, "edicoes.json"), encoding="utf-8"))["edicoes"]
         except Exception:
             return []
-    def baralho(i, nome, de, pares):
+    def baralho(i, nome, de, pares, limite=30):
         vistos, cartas = set(), []
         for f, v in pares:
             f, v = corta(f, 230), corta(v, 330)
             if f and v and f.lower() not in vistos:
                 vistos.add(f.lower())
                 cartas.append({"k": hashlib.sha256(f.encode("utf-8")).hexdigest()[:8], "f": f, "v": v})
-        return {"id": i, "nome": nome, "de": de, "cartas": cartas[:30]}
+        return {"id": i, "nome": nome, "de": de, "cartas": cartas[:limite]}
     def termos(lista):
         return [("O que é: " + str(x.get("termo", "")).strip() + "?", x.get("def", ""))
                 for x in (lista or []) if isinstance(x, dict) and x.get("termo")]
@@ -573,9 +573,33 @@ def montar_cartoes():
         mundo += termos((e.get("ia") or {}).get("glossario")) + termos(e.get("glossario"))
     for e in edicoes("brasil"):
         brasil += termos(e.get("palavrinhas"))
+    # 8º período (12/11/2026, pedido de Arthur): os "lances" (pergunta e resposta) que já existem nas
+    # apostilas do app de estudo do 8º período (periodos/oitavo/d/*.js, outro projeto dele; só lemos).
+    oitavo = []
+    pasta8 = os.path.join(os.path.dirname(BANCA), "periodos", "oitavo", "d")
+    nomes8 = {"cirurgia": "Cirurgia", "gineco": "Ginecologia", "obst": "Obstetrícia", "ped": "Pediatria",
+              "urg": "Urgência", "oftalmo": "Oftalmologia", "otorrino": "Otorrino", "medlegal": "Medicina legal"}
+    for chave, nome8 in nomes8.items():
+        try:
+            txt = open(os.path.join(pasta8, chave + ".js"), encoding="utf-8").read()
+            dado, _ = json.JSONDecoder().raw_decode(txt[txt.index("] = ") + 4:])
+        except Exception:
+            continue
+        pares8 = []
+        def anda(o):
+            if isinstance(o, dict):
+                if o.get("t") == "lance" and o.get("q") and o.get("a"):
+                    pares8.append((o["q"], o["a"]))
+                for v in o.values():
+                    anda(v)
+            elif isinstance(o, list):
+                for v in o:
+                    anda(v)
+        anda(dado)
+        oitavo.append(baralho("p8-" + chave, "8º · " + nome8, "Apostila do 8º período", pares8, limite=2000))
     bs = [b for b in (baralho("medicina", "Medicina", "Quiz e glossário do Xeque-Mate", med),
                       baralho("mundo", "Mundo", "Glossário do Observatório", mundo),
-                      baralho("brasil", "Brasil", "Palavrinhas do Terra Brasilis", brasil)) if b["cartas"]]
+                      baralho("brasil", "Brasil", "Palavrinhas do Terra Brasilis", brasil), *oitavo) if b["cartas"]]
     open(os.path.join(BANCA, "cartoes.json"), "w", encoding="utf-8").write(
         json.dumps({"v": 1, "casa": "Xeque News", "baralhos": bs}, ensure_ascii=False, separators=(",", ":")) + "\n")
     print("cartoes.json:", ", ".join(f'{b["nome"]} {len(b["cartas"])}' for b in bs))

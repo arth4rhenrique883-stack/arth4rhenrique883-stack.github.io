@@ -23,7 +23,7 @@ function capa(lista, aviso) {
     f.texto(b.de, { tam: 22, centro: true, cor: SUAVE, depois: 20 });
   });
   f.filete(false);
-  f.texto(aviso || "Perguntas e termos tirados dos jornais do Xeque News.", { tam: 22, centro: true, cor: SUAVE });
+  f.texto(aviso || "Jornais do Xeque News e apostilas do 8º período.", { tam: 22, centro: true, cor: SUAVE });
   f.pintar();
 }
 

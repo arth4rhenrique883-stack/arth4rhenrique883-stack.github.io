@@ -39,9 +39,9 @@ function embaralha(a) {
 }
 
 function comecar(cartas) {
-  sabidas = (ler("sabe-" + id) || []).filter((k) => cartas.some((c) => c.k === k));
+  sabidas = ler("sabe-" + id) || [];
   let falta = cartas.filter((c) => sabidas.indexOf(c.k) < 0);
-  if (!falta.length) { sabidas = []; falta = cartas.slice(); } // sabia todas: recomeça
+  if (!falta.length) falta = cartas.slice(); // sabia todas desta remessa: revê assim mesmo
   fila = embaralha(falta);
   pos = 0;
   frente();
@@ -79,7 +79,7 @@ function fim() {
   const f = folhaNova();
   f.filete(true);
   f.texto("FIM DA RODADA", { tam: 44, fonte: ANTON, centro: true, depois: 10 });
-  f.texto("Você marcou " + sabidas.length + " cartas como sabidas neste baralho.", { tam: 30, centro: true, depois: 16 });
+  f.texto("Você já marcou " + sabidas.length + " cartas como sabidas neste baralho. Abra de novo para receber outras.", { tam: 30, centro: true, depois: 16 });
   f.botao("OUTRA RODADA", () => comecar(ler("cartas-" + id) || []));
   f.pintar();
   topo();
@@ -96,9 +96,10 @@ Page(
       const guardadas = ler("cartas-" + id);
       if (guardadas && guardadas.length) comecar(guardadas);
       else aviso("Buscando as cartas pelo celular…");
-      this.request({ method: "CARTAS", params: { id } })
+      this.request({ method: "CARTAS", params: { id, sabe: ler("sabe-" + id) || [] } })
         .then((r) => {
           if (r && r.ok && r.cartas && r.cartas.length) {
+            // guarda sempre a remessa nova: a próxima rodada já usa cartas novas
             guardar("cartas-" + id, r.cartas);
             if (!guardadas || !guardadas.length) comecar(r.cartas);
           } else if (!guardadas) {

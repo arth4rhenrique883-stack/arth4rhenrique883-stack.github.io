@@ -5,12 +5,12 @@
     "appName": "Xeque Cards",
     "appType": "app",
     "version": {
-      "code": 1,
-      "name": "1.0.0"
+      "code": 2,
+      "name": "1.1.0"
     },
     "icon": "icon.png",
     "vender": "Xeque News",
-    "description": "Flashcards do dia no pulso: quiz e glossários do Xeque-Mate, do Observatório e do Terra Brasilis."
+    "description": "Flashcards no pulso: jornais do Xeque News e as apostilas do 8º período de medicina."
   },
   "permissions": [
     "data:os.device.info",

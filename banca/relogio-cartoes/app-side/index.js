@@ -29,7 +29,17 @@ AppSideService(
         tudo()
           .then((c) => {
             const b = c.baralhos.filter((x) => x.id === id)[0];
-            res(null, b ? { ok: true, cartas: b.cartas } : { ok: false, erro: "baralho não encontrado" });
+            if (!b) return res(null, { ok: false, erro: "baralho não encontrado" });
+            // Baralhos grandes (8º período): manda 40 por vez, primeiro as que o relógio ainda não marcou
+            // como sabidas, para a transferência por Bluetooth ser rápida.
+            const sabe = (req.params && req.params.sabe) || [];
+            let cartas = b.cartas;
+            if (cartas.length > 40) {
+              const falta = cartas.filter((x) => sabe.indexOf(x.k) < 0);
+              const base = falta.length >= 40 ? falta : falta.concat(cartas.filter((x) => sabe.indexOf(x.k) >= 0));
+              cartas = base.map((x) => [Math.random(), x]).sort((p, q) => p[0] - q[0]).slice(0, 40).map((p) => p[1]);
+            }
+            res(null, { ok: true, cartas, total: b.cartas.length });
           })
           .catch(erro);
       }
