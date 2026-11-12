@@ -1,6 +1,994 @@
 {
- "atualizadoEm": "2026-11-10T07:10:00-03:00",
+ "atualizadoEm": "2026-11-12T07:15:00-03:00",
  "edicoes": [
+  {
+   "id": "2026-11-12",
+   "numero": 7,
+   "data": "2026-11-12",
+   "tempoLeitura": 14,
+   "fechamento": "Fechamento: quinta-feira, 12/11, 7h15 (Brasília). Não houve edição em 11/11; esta cobre os fatos de 10 a 12/11. Esclarecimento: na edição de 10/11 dissemos que a mina de 21/9 na Zona Desmilitarizada feriu três soldados sul-coreanos; a Arms Control Association registra dois feridos, e as fontes divergem.",
+   "introducao": [
+    "A edição de hoje trata de duas mesas de negociação e de quem ficou fora delas. Em Abu Dhabi, EUA, Rússia e Ucrânia encerraram dois dias de conversa com um acordo para trocar prisioneiros e nenhum avanço sobre território; os europeus estavam na cidade, mas não na sala. No Golfo, Washington fala em conversar com o Irã, Teerã nega qualquer negociação e o Estreito de Ormuz, por onde passa boa parte do petróleo do mundo, segue fechado.",
+    "Nos cadernos fixos, você encontra o giro das grandes potências, a inteligência artificial em quatro frentes (da genética ao comando de armas nucleares), o que a Rússia de fato entrega ao Irã e a aposta naval de Kim Jong Un. Depois vêm guerras, energia, Brasil, clima e espaço. O ensaio do dia volta a Ialta, em 1945, para perguntar o que acontece quando os grandes decidem sem os demais. No fim, “Para ampliar o conhecimento” reúne todas as fontes, com link direto e data."
+   ],
+   "ticker": [
+    {
+     "regiao": "Mundo",
+     "texto": "Abu Dhabi termina com acordo de troca de prisioneiros e sem avanço sobre território",
+     "url": "https://www.aljazeera.com/amp/news/2026/11/11/russia-ukraine-talks-in-abu-dhabi-end-with-prisoner-exchange-agreement"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Witkoff e Kushner vão a Moscou hoje para falar com Putin; depois, Dublin com Zelensky",
+     "url": "https://www.euronews.com/2026/11/11/abu-dhabi-peace-talks-end-with-prisoner-exchange-agreement-as-us-envoys-prepare-to-meet-pu"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Irã nega negociação com os EUA e diz que Ormuz só reabre com sete condições atendidas",
+     "url": "https://finwire.io/news/world-news/iran-denies-talks-with-us-says-hormuz-will-stay-shut-until-demands-are-met"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Wall Street Journal: Vance avalia conversar com o chefe de segurança do Irã; Teerã desmente",
+     "url": "https://lifenewsagency.com/vance-is-considering-talks-with-irans-security-chief-to-end-the-war-wsj-reports/"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Brent oscila perto de US$ 92,60; OPEP+ elevou a produção em 2 milhões de barris por dia em outubro",
+     "url": "https://houseofsaud.com/opec-november-omr-brent-output-surge/"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Kiev relata 163 drones russos numa noite; Moscou diz ter abatido 627 aparelhos ucranianos",
+     "url": "https://abcnews.com/International/ukraine-russia-exchange-hundreds-drones-day-2-abu/story?id=138038984"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Kim Jong Un visita base naval em obras e pede conclusão “sem falta”",
+     "url": "https://www.24newshd.tv/12-Nov-2026/north-korea-s-kim-inspects-naval-base-construction"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Chanceler norte-coreana rejeita cobrança do G7 sobre armas nucleares",
+     "url": "https://en.sedaily.com/politics/2026/11/12/north-koreas-choe-son-hui-rejects-g7-talk-on-nuclear-status"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Universidade chinesa ligada ao Exército comprou chips H200 da Nvidia apesar do veto dos EUA",
+     "url": "https://www.aljazeera.com/news/2026/11/11/chinese-university-buys-nvidia-ai-h200-chips-despite-us-ban-records-show"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "Índia propõe trégua em três partes para energia e Mar Negro",
+     "url": "https://www.businesstoday.in/india/story/india-offers-3-part-plan-to-de-escalate-russia-ukraine-war-why-the-resolution-matters-to-new-delhi-566756-2026-11-11"
+    },
+    {
+     "regiao": "Mundo",
+     "texto": "DeepMind anuncia o AlphaGenome 2, que prevê o efeito de variações do DNA por tipo de célula",
+     "url": "https://siliconangle.com/2026/11/11/google-deepmind-releases-new-advanced-robotics-ai-model-and-next-generation-gene-prediction-model/"
+    },
+    {
+     "regiao": "Brasil",
+     "texto": "Lula abre a cúpula da COP31: “falamos mais de armas e tarifas” do que do clima",
+     "url": "https://sbtnews.sbt.com.br/noticia/politica/leia-a-integra-do-discurso-de-lula-na-cupula-da-cop-31"
+    },
+    {
+     "regiao": "Brasil",
+     "texto": "IBGE divulga hoje o IPCA de outubro; mercado esperava 0,29%",
+     "url": "https://www.ativovirtual.com.br/avnews/artigos/ipca-de-outubro-e-cpi-dos-eua-lideram-agenda-economica-da-semana"
+    },
+    {
+     "regiao": "Brasil",
+     "texto": "NOAA atualiza hoje o boletim do El Niño; o de outubro apontava evento forte a muito forte",
+     "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml"
+    }
+   ],
+   "capa": {
+    "chapeu": "Os de fora da sala",
+    "titulo": "Presos voltam para casa; a guerra continua",
+    "linhaFina": "Dois dias de conversa entre EUA, Rússia e Ucrânia em Abu Dhabi terminaram com um acordo de princípio para trocar prisioneiros e nenhum avanço sobre território. Os enviados americanos seguem hoje para Moscou. No Golfo, Washington fala em diálogo, Teerã nega, e Ormuz segue fechado.",
+    "camada": "FATO",
+    "confianca": "Alta"
+   },
+   "chamadas": [
+    {
+     "secao": "potencias",
+     "rotulo": "Grandes potências",
+     "texto": "Europa busca um representante; Japão teme ficar isolado na cúpula de Shenzhen"
+    },
+    {
+     "secao": "ia",
+     "rotulo": "Evolução das IAs",
+     "texto": "EUA, China e Rússia discutem tirar a IA do comando nuclear, diz jornal"
+    },
+    {
+     "secao": "russia-ira",
+     "rotulo": "Rússia–Irã",
+     "texto": "Lançadores de mísseis, gasoduto e ferrovia: o que Moscou entrega e o que adia"
+    },
+    {
+     "secao": "coreia",
+     "rotulo": "Coreia do Norte",
+     "texto": "Torpedo novo, base naval em obras e um recado ao G7"
+    }
+   ],
+   "numeros": [
+    {
+     "rotulo": "Brent",
+     "valor": "US$ 92,63",
+     "nota": "manhã de 12/11, variação de −0,14%; fechou a US$ 91,49 em 10/11",
+     "fonte": "Trading Economics; House of Saud"
+    },
+    {
+     "rotulo": "WTI",
+     "valor": "US$ 86,32",
+     "nota": "manhã de 12/11, variação de −0,24%",
+     "fonte": "Trading Economics"
+    },
+    {
+     "rotulo": "Prisioneiros",
+     "valor": "1.000",
+     "nota": "de cada lado, podendo chegar a 1.500, segundo Zelensky; número final sai hoje (12/11)",
+     "fonte": "Euronews, 11/11"
+    },
+    {
+     "rotulo": "Drones russos",
+     "valor": "163",
+     "nota": "noite de 10 para 11/11; 130 abatidos ou bloqueados (alegação de Kiev)",
+     "fonte": "Força Aérea da Ucrânia via ABC News"
+    },
+    {
+     "rotulo": "Ataques a navios",
+     "valor": "37",
+     "nota": "em Ormuz e arredores em novembro, até 11/11; maior total mensal da guerra",
+     "fonte": "Monitores marítimos via Al Jazeera e Reuters"
+    },
+    {
+     "rotulo": "OPEP+",
+     "valor": "+2,04 mi",
+     "nota": "barris por dia a mais em outubro, para 41,23 milhões",
+     "fonte": "Relatório mensal da OPEP via House of Saud, 12/11"
+    }
+   ],
+   "potencias": [
+    {
+     "pais": "EUA",
+     "sigla": "US",
+     "titulo": "Vance cogita falar com Teerã",
+     "texto": "Segundo o Wall Street Journal, o vice-presidente JD Vance avalia um encontro com Mohsen Rezaei, chefe do conselho de segurança do Irã, sem data marcada. O chanceler Abbas Araghchi e Rezaei negam. O secretário de Estado Marco Rubio diz que não há avanço à vista.",
+     "camada": "FATO",
+     "confianca": "Média",
+     "fontes": [
+      {
+       "nome": "Life News Agency (relato do Wall Street Journal via Anadolu), 11/11/2026",
+       "url": "https://lifenewsagency.com/vance-is-considering-talks-with-irans-security-chief-to-end-the-war-wsj-reports/"
+      },
+      {
+       "nome": "Iran International, 12/11/2026",
+       "url": "https://www.iranintl.com/en/202611122691"
+      }
+     ]
+    },
+    {
+     "pais": "China",
+     "sigla": "CN",
+     "titulo": "Chips vetados chegam a Xi’an",
+     "texto": "Registros de compra vistos pela Reuters mostram que a Universidade Politécnica do Noroeste, ligada ao Exército chinês e na lista de restrições dos EUA desde 2001, comprou dois chips H200 da Nvidia em outubro, por meio de um revendedor. Não há comentário de Pequim na reportagem.",
+     "camada": "FATO",
+     "confianca": "Média",
+     "fontes": [
+      {
+       "nome": "Al Jazeera (Reuters), 11/11/2026",
+       "url": "https://www.aljazeera.com/news/2026/11/11/chinese-university-buys-nvidia-ai-h200-chips-despite-us-ban-records-show"
+      }
+     ]
+    },
+    {
+     "pais": "Rússia",
+     "sigla": "RU",
+     "titulo": "“Cada palmo” e a visita a Putin",
+     "texto": "O negociador Vladimir Medinsky confirmou a troca de prisioneiros e disse que “cada palmo da nossa terra voltará à Rússia”. Moscou exige a retirada ucraniana do Donbass e recusa cessar-fogo imediato. Os enviados Steve Witkoff e Jared Kushner devem ver Putin hoje.",
+     "camada": "FATO",
+     "confianca": "Alta",
+     "fontes": [
+      {
+       "nome": "Meduza, 11/11/2026",
+       "url": "https://meduza.io/en/feature/2026/11/11/russia-ukraine-peace-talks-conclude-in-abu-dhabi-with-prisoner-exchange-agreement-but-no-breakthrough-on-territory"
+      },
+      {
+       "nome": "Euronews, 11/11/2026",
+       "url": "https://www.euronews.com/2026/11/11/abu-dhabi-peace-talks-end-with-prisoner-exchange-agreement-as-us-envoys-prepare-to-meet-pu"
+      }
+     ]
+    },
+    {
+     "pais": "União Europeia",
+     "sigla": "EU",
+     "titulo": "Em busca de uma cadeira",
+     "texto": "Europeus foram a Abu Dhabi para conversas paralelas com ucranianos e americanos, sem sentar com os russos. Zelensky diz que a Europa precisa definir até o fim de novembro quem a representa e espera decisão na reunião de 19/11, na Alemanha. Kushner admite um formato ampliado adiante.",
+     "camada": "FATO",
+     "confianca": "Alta",
+     "fontes": [
+      {
+       "nome": "Kyiv Post, 11/11/2026",
+       "url": "https://www.kyivpost.com/post/89761"
+      },
+      {
+       "nome": "Al Jazeera, 11/11/2026",
+       "url": "https://www.aljazeera.com/amp/news/2026/11/11/russia-ukraine-talks-in-abu-dhabi-end-with-prisoner-exchange-agreement"
+      }
+     ]
+    },
+    {
+     "pais": "Índia",
+     "sigla": "IN",
+     "titulo": "Trégua em três partes",
+     "texto": "Segundo o Economic Times, Nova Délhi propôs a Moscou e Kiev parar ataques a energia, manter grãos e combustíveis circulando no Mar Negro e poupar navios mercantes. Kiev chamou a proposta de “a mais ampla”; Moscou rejeita tréguas parciais. Cinco marinheiros indianos já morreram em ataques.",
+     "camada": "FATO",
+     "confianca": "Média",
+     "fontes": [
+      {
+       "nome": "Business Today (relato do Economic Times), 11/11/2026",
+       "url": "https://www.businesstoday.in/india/story/india-offers-3-part-plan-to-de-escalate-russia-ukraine-war-why-the-resolution-matters-to-new-delhi-566756-2026-11-11"
+      }
+     ]
+    },
+    {
+     "pais": "Japão",
+     "sigla": "JP",
+     "titulo": "Tóquio teme ficar de fora",
+     "texto": "A agência Kyodo informa que a reunião formal entre Sanae Takaichi e Xi Jinping na APEC (18 e 19/11) não deve ocorrer. Pequim cobra que a premiê recue de falas sobre Taiwan. O Japão disse aos EUA que se preocupa com a mensagem de uma cúpula EUA–China–Rússia.",
+     "camada": "FATO",
+     "confianca": "Média",
+     "fontes": [
+      {
+       "nome": "Seoul Economic Daily (relato da Kyodo), 11/11/2026",
+       "url": "https://en.sedaily.com/world/2026/11/11/china-set-to-snub-japans-takaichi-at-apec-summit"
+      }
+     ]
+    },
+    {
+     "pais": "Reino Unido",
+     "sigla": "UK",
+     "titulo": "Aviões saem de base inglesa",
+     "texto": "Em 9/11, os EUA tiraram nove aviões-tanque KC-135 e três V-22 Osprey da base de Mildenhall e elevaram o alerta de segurança. Rezaei ameaçou bases americanas na Europa em caso de novo ataque. O premiê Andy Burnham atribui à Guarda Revolucionária um plano contra a base de Fairford; o Irã nega.",
+     "camada": "FATO",
+     "confianca": "Média",
+     "fontes": [
+      {
+       "nome": "Iran International, 12/11/2026",
+       "url": "https://www.iranintl.com/en/202611122691"
+      }
+     ]
+    }
+   ],
+   "ia": {
+    "abertura": "A inteligência artificial em quatro frentes: um modelo que lê o DNA célula por célula, um trote que expôs conversas sobre uso militar, um teste de consultório e um balanço de cinco anos feito por pesquisadores.",
+    "frentes": [
+     {
+      "area": "Científica",
+      "itens": [
+       {
+        "titulo": "O DNA lido célula por célula",
+        "texto": "A Google DeepMind anunciou em 11/11 o AlphaGenome 2, modelo que prevê como variações no DNA mudam o funcionamento de tipos específicos de células. Ele usa o Atlas Celular Humano, mapa de milhões de células, e passa a prever também a metilação. Não há artigo revisado citado, e o modelo não tem uso clínico aprovado.",
+        "camada": "FATO",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "SiliconANGLE, 11/11/2026",
+          "url": "https://siliconangle.com/2026/11/11/google-deepmind-releases-new-advanced-robotics-ai-model-and-next-generation-gene-prediction-model/"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Militar",
+      "itens": [
+       {
+        "titulo": "Um trote e o que ele revelou",
+        "texto": "Segundo The Intercept, a dupla russa Vovan e Lexus se passou por uma autoridade ucraniana e conversou 17 minutos com três executivos de segurança nacional da OpenAI. Eles falaram de apoio à defesa da Ucrânia e de contatos com o Pentágono. A empresa confirmou o trote e diz ter tomado medidas.",
+        "camada": "FATO",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "The Intercept, 11/11/2026",
+          "url": "https://theintercept.com/2026/11/11/openai-ukraine-russia-prank-security/"
+         }
+        ]
+       },
+       {
+        "titulo": "IA longe do botão nuclear?",
+        "texto": "O South China Morning Post, citado pelo Moscow Times, diz que EUA, China e Rússia negociam um compromisso para limitar a IA no comando de arsenais nucleares, a ser anunciado em Shenzhen. A fonte é anônima e nenhum governo confirmou; o Kremlin só diz que troca propostas de pauta.",
+        "camada": "FATO",
+        "confianca": "Baixa",
+        "fontes": [
+         {
+          "nome": "The Moscow Times (relato do South China Morning Post), 11/11/2026",
+          "url": "https://www.themoscowtimes.com/2026/11/11/russia-china-and-us-in-talks-to-curb-ai-use-in-nuclear-arsenals-report-says-a94228"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Médica",
+      "itens": [
+       {
+        "titulo": "A IA que faz a primeira conversa",
+        "texto": "Estudo na revista The Lancet testou o AMIE, sistema de conversa do Google, com 100 adultos antes da consulta num hospital de Boston. A lista de sete hipóteses incluiu o diagnóstico final em 90% dos casos. Um médico acompanhou cada conversa ao vivo; o resultado não vale para uso sem supervisão.",
+        "camada": "FATO",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "The Lancet, estudo de viabilidade do AMIE, 2026",
+          "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01535-7/abstract"
+         },
+         {
+          "nome": "ARISE (resumo do estudo), 08/10/2026",
+          "url": "https://www.arise-ai.org/blog/amie-lancet"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Acadêmica",
+      "itens": [
+       {
+        "titulo": "O balanço dos cem anos",
+        "texto": "O relatório AI100, estudo sediado em Stanford que sai a cada cinco anos, foi publicado em 10/11 sob coordenação de Michael Wooldridge, de Oxford. Diz que a IA encurta pesquisas de anos para meses, que fotos e vídeos deixaram de ser prova confiável e que alguns agentes escaparam de ambientes de teste.",
+        "camada": "FATO",
+        "confianca": "Alta",
+        "fontes": [
+         {
+          "nome": "Stanford AI100, relatório de 2026 (PDF), 10/11/2026",
+          "url": "https://ai100.stanford.edu/sites/g/files/sbiybj36086/files/media/file/ai100_report_2026.pdf"
+         },
+         {
+          "nome": "Stanford HAI (resumo do relatório), 10/11/2026",
+          "url": "https://hai.stanford.edu/news/the-world-has-changed-insights-from-the-new-ai100-report"
+         }
+        ]
+       },
+       {
+        "titulo": "Quem decide o rumo",
+        "texto": "O ponto mais político do relatório é dizer que bilhões de pessoas são afetadas pela IA sem opinar sobre ela. É uma pergunta clássica: quem pode decidir por todos? Vale notar o limite: o painel é de acadêmicos, e suas recomendações não obrigam governos nem empresas.",
+        "camada": "ANÁLISE",
+        "confianca": "Média",
+        "fontes": [
+         {
+          "nome": "Stanford HAI (resumo do relatório), 10/11/2026",
+          "url": "https://hai.stanford.edu/news/the-world-has-changed-insights-from-the-new-ai100-report"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "glossario": [
+     {
+      "termo": "Metilação do DNA",
+      "def": "Marca química que liga ou desliga genes sem mudar a sequência do DNA."
+     },
+     {
+      "termo": "Comando e controle nuclear",
+      "def": "Conjunto de pessoas, regras e sistemas que autoriza e transmite a ordem de usar armas nucleares."
+     },
+     {
+      "termo": "Estudo de viabilidade",
+      "def": "Pesquisa pequena que testa se algo pode ser feito com segurança, antes de medir se funciona melhor."
+     },
+     {
+      "termo": "Agente de IA",
+      "def": "Programa que planeja e executa tarefas em sequência, usando ferramentas, em vez de só responder."
+     }
+    ]
+   },
+   "russiaIra": {
+    "titulo": "O que Moscou entrega, o que Moscou adia",
+    "linhaFina": "Lançadores de mísseis para helicópteros e promessas de gás e trilhos mostram uma parceria útil ao Irã, mas com limites.",
+    "itens": [
+     {
+      "titulo": "Noventa lançadores",
+      "texto": "Documentos de um fabricante russo, revelados pelo Financial Times em 6/11, indicam que a Rússia aceitou em 2024 fornecer ao Irã 90 lançadores do míssil guiado LMUR (Izdeliye 305), usado em helicópteros Mi-28. A entrega não foi confirmada. Um porta-voz do Exército iraniano disse que Teerã comprou caças Su-35.",
+      "camada": "FATO",
+      "confianca": "Média",
+      "fontes": [
+       {
+        "nome": "Al Jazeera (relato do Financial Times), 06/11/2026",
+        "url": "https://www.aljazeera.com/news/2026/11/6/rocket-launcher-deal-illustrates-deepening-russia-iran-relations"
+       }
+      ]
+     },
+     {
+      "titulo": "A carta, o gás e os trilhos",
+      "texto": "Em 5/11, Mohsen Rezaei entregou a Putin uma mensagem do líder supremo Mojtaba Khamenei. Segundo Rezaei, falou-se de gasodutos da Rússia para o Irã e foi aprovado o acordo da ferrovia Rasht–Astara, de 162 km. A agência iraniana Fars diz que um empréstimo russo de US$ 1 bilhão está pronto, mas atrasado.",
+      "camada": "FATO",
+      "confianca": "Média",
+      "fontes": [
+       {
+        "nome": "Euronews via Yahoo, 06/11/2026",
+        "url": "https://ca.news.yahoo.com/iran-delivers-secret-khamenei-message-154218342.html"
+       },
+       {
+        "nome": "Russia's Pivot to Asia, 08/11/2026",
+        "url": "https://russiaspivottoasia.com/russia-iran-bilateral-relations-november-2026-update/"
+       }
+      ]
+     },
+     {
+      "titulo": "Ajuda com freio",
+      "texto": "Para Hanna Notte, do Centro James Martin, o apoio russo é “operacionalmente útil”, mas não muda o jogo, porque Moscou mantém linhas vermelhas. O tratado de 2025 entre os dois não tem cláusula de defesa mútua. A Rússia equilibra o Irã com os países do Golfo e com a conversa com Washington.",
+      "camada": "ANÁLISE",
+      "confianca": "Média",
+      "fontes": [
+       {
+        "nome": "Al Jazeera (relato do Financial Times), 06/11/2026",
+        "url": "https://www.aljazeera.com/news/2026/11/6/rocket-launcher-deal-illustrates-deepening-russia-iran-relations"
+       }
+      ]
+     },
+     {
+      "titulo": "Até o fim do ano",
+      "texto": "Estimativa do Observatório: 25% de chance de entrega confirmada de armamento russo de grande porte ao Irã (S-400 ou Su-35) até 31/12; 40% de assinatura do contrato da ferrovia Rasht–Astara no mesmo prazo. Moscou ganha mais como mediadora em Shenzhen do que como fornecedora.",
+      "camada": "CENÁRIO",
+      "confianca": "Baixa",
+      "fontes": [
+       {
+        "nome": "Al Jazeera (relato do Financial Times), 06/11/2026",
+        "url": "https://www.aljazeera.com/news/2026/11/6/rocket-launcher-deal-illustrates-deepening-russia-iran-relations"
+       },
+       {
+        "nome": "Euronews via Yahoo, 06/11/2026",
+        "url": "https://ca.news.yahoo.com/iran-delivers-secret-khamenei-message-154218342.html"
+       }
+      ]
+     }
+    ],
+    "box": {
+     "titulo": "Placar da parceria",
+     "linhas": [
+      {
+       "area": "Armas",
+       "texto": "90 lançadores LMUR contratados em 2024 (FT); entrega não confirmada."
+      },
+      {
+       "area": "Energia",
+       "texto": "Gasoduto de até 110 bi m³ por ano em negociação, sem rota nem prazo fechados."
+      },
+      {
+       "area": "Nuclear",
+       "texto": "Bushehr 1 em operação; unidade 2 prevista para cerca de 2029."
+      },
+      {
+       "area": "Comércio",
+       "texto": "Alta de 10,4% nos oito primeiros meses de 2026, segundo Putin."
+      },
+      {
+       "area": "Rotas",
+       "texto": "Ferrovia Rasht–Astara: acordo aprovado, contrato ainda por assinar."
+      }
+     ]
+    }
+   },
+   "coreiaNorte": {
+    "titulo": "Kim olha para o mar",
+    "linhaFina": "Em três dias, Pyongyang testou um torpedo, mostrou uma base naval em obras e respondeu ao G7.",
+    "itens": [
+     {
+      "titulo": "Torpedo “de alta velocidade”",
+      "texto": "A agência estatal KCNA (versão oficial) disse que o país testou em 9/11, no Mar do Leste, um novo torpedo de alta velocidade, previsto para entrar em serviço no início de 2027. Não foram divulgados alcance nem plataforma de lançamento. Em outubro, Pyongyang alegou ter testado outro torpedo guiado com IA.",
+      "camada": "FATO",
+      "confianca": "Média",
+      "fontes": [
+       {
+        "nome": "AFP via The Manila Times, 11/11/2026",
+        "url": "https://www.manilatimes.net/2026/11/11/world/asia-oceania/north-korea-tests-new-high-speed-torpedo/2466762"
+       }
+      ]
+     },
+     {
+      "titulo": "Uma base na costa leste",
+      "texto": "Kim Jong Un visitou em 11/11 as obras de uma grande base naval na costa leste e, segundo a KCNA, chamou o projeto de tarefa central para a segurança do Estado. O local e o tamanho não foram informados. O país já lançou destróieres de 5 mil toneladas e promete navios de 10 mil.",
+      "camada": "FATO",
+      "confianca": "Média",
+      "fontes": [
+       {
+        "nome": "AFP via 24 News HD, 12/11/2026",
+        "url": "https://www.24newshd.tv/12-Nov-2026/north-korea-s-kim-inspects-naval-base-construction"
+       }
+      ]
+     },
+     {
+      "titulo": "“Direito constitucional”",
+      "texto": "A chanceler Choe Son Hui rejeitou em 12/11 a declaração dos chanceleres do G7, que cobrou a desnuclearização e a retirada de tropas norte-coreanas da guerra na Ucrânia. Ela reafirmou a “vontade inabalável” de manter armas nucleares e disse que o tema não cabe ao Ocidente.",
+      "camada": "FATO",
+      "confianca": "Média",
+      "fontes": [
+       {
+        "nome": "Seoul Economic Daily, 12/11/2026",
+        "url": "https://en.sedaily.com/politics/2026/11/12/north-koreas-choe-son-hui-rejects-g7-talk-on-nuclear-status"
+       }
+      ]
+     },
+     {
+      "titulo": "Por que o mar",
+      "texto": "Uma marinha com armas nucleares dificulta que um primeiro ataque elimine o arsenal. E o momento ajuda: segundo o South China Morning Post, a desnuclearização da península saiu da pauta de Shenzhen a pedido da China. Sem pressão conjunta, Pyongyang avança sem custo novo.",
+      "camada": "ANÁLISE",
+      "confianca": "Média",
+      "fontes": [
+       {
+        "nome": "The Moscow Times (relato do South China Morning Post), 11/11/2026",
+        "url": "https://www.themoscowtimes.com/2026/11/11/russia-china-and-us-in-talks-to-curb-ai-use-in-nuclear-arsenals-report-says-a94228"
+       },
+       {
+        "nome": "AFP via 24 News HD, 12/11/2026",
+        "url": "https://www.24newshd.tv/12-Nov-2026/north-korea-s-kim-inspects-naval-base-construction"
+       }
+      ]
+     },
+     {
+      "titulo": "O que vem",
+      "texto": "Estimativa do Observatório: 50% de chance de novo teste de míssil ou torpedo até o fim da APEC (19/11); 10% de encontro entre Trump e Kim até 31/12. A sequência de testes desde outubro sustenta a primeira cifra; a recusa pública a negociar, a segunda.",
+      "camada": "CENÁRIO",
+      "confianca": "Baixa",
+      "fontes": [
+       {
+        "nome": "Arms Control Association, edição de 11/2026",
+        "url": "https://www.armscontrol.org/act/2026-11/news/north-korea-and-south-korea-launch-missiles-amid-tensions"
+       },
+       {
+        "nome": "Seoul Economic Daily, 12/11/2026",
+        "url": "https://en.sedaily.com/politics/2026/11/12/north-koreas-choe-son-hui-rejects-g7-talk-on-nuclear-status"
+       }
+      ]
+     }
+    ],
+    "box": {
+     "titulo": "Termômetro da península",
+     "linhas": [
+      {
+       "area": "Mar",
+       "texto": "Torpedo testado em 9/11; base naval visitada em 11/11."
+      },
+      {
+       "area": "G7",
+       "texto": "Choe Son Hui rejeita a declaração de Paris (12/11)."
+      },
+      {
+       "area": "Mísseis",
+       "texto": "Hipersônico em 3/10, balístico tático em 12/10, cruzeiro de submarino em 14/10."
+      },
+      {
+       "area": "Seul",
+       "texto": "Coreia do Sul testou seu planador hipersônico em 8/10."
+      },
+      {
+       "area": "Shenzhen",
+       "texto": "Desnuclearização fora da pauta tripla, segundo o SCMP."
+      }
+     ]
+    }
+   },
+   "secoes": [
+    {
+     "eixo": "Guerras",
+     "itens": [
+      {
+       "titulo": "Ucrânia: troca sim, território não",
+       "texto": "A rodada de Abu Dhabi (10 e 11/11) terminou com acordo de princípio para uma grande troca de prisioneiros, que a agência estatal russa TASS prevê para duas a três semanas. Kushner disse que território é o tema “mais difícil” e relatou progresso em garantias de segurança. Kiev fala em acordo até o Ano-Novo.",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "Al Jazeera, 11/11/2026",
+         "url": "https://www.aljazeera.com/amp/news/2026/11/11/russia-ukraine-talks-in-abu-dhabi-end-with-prisoner-exchange-agreement"
+        },
+        {
+         "nome": "Meduza, 11/11/2026",
+         "url": "https://meduza.io/en/feature/2026/11/11/russia-ukraine-peace-talks-conclude-in-abu-dhabi-with-prisoner-exchange-agreement-but-no-breakthrough-on-territory"
+        }
+       ]
+      },
+      {
+       "titulo": "Drones dos dois lados",
+       "texto": "Na noite de 10 para 11/11, a Ucrânia contou 163 drones russos e mísseis; seis subestações foram atingidas, segundo o premiê. A Rússia diz ter abatido 627 aparelhos ucranianos em 22 regiões; houve dois mortos em Smolensk, segundo o governador. Na noite seguinte, Kiev contou 123 drones. Nenhum número foi verificado de forma independente.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "ABC News, 11/11/2026",
+         "url": "https://abcnews.com/International/ukraine-russia-exchange-hundreds-drones-day-2-abu/story?id=138038984"
+        },
+        {
+         "nome": "Ukraine Daily (dados da Força Aérea ucraniana), 12/11/2026",
+         "url": "https://thechrissampson.substack.com/p/ukraine-daily-november-12-2026-overnight"
+        }
+       ]
+      },
+      {
+       "titulo": "Ormuz: ilhas e navios",
+       "texto": "Segundo o Wall Street Journal, os EUA voltaram a bombardear a ilha iraniana de Qeshm nesta semana. O Irã atacou a ilha desabitada de Didamar, de Omã, e diz ter destruído equipamento de navegação. A Guarda Revolucionária relatou três petroleiros em chamas; monitores contam 37 ataques a navios em novembro.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "Daily Caller (com WSJ, Reuters e Pentágono), 11/11/2026",
+         "url": "https://dailycaller.com/2026/11/11/iran-war-rages-on-trump-peace-claims/"
+        },
+        {
+         "nome": "Al Jazeera e Reuters via Finwire, 11/11/2026",
+         "url": "https://finwire.io/news/world-news/iran-denies-talks-with-us-says-hormuz-will-stay-shut-until-demands-are-met"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Energia",
+     "itens": [
+      {
+       "titulo": "Petróleo: o piso dos US$ 90",
+       "texto": "O Brent tocou US$ 89,16 em 10/11, fechou a US$ 91,49 e voltou a cerca de US$ 92,60 na manhã de 12/11. O relatório mensal da OPEP mostra a OPEP+ produzindo 2,04 milhões de barris por dia a mais em outubro e mantém a previsão de demanda para 2026. O impasse EUA–Irã segura o preço.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "House of Saud (relatório mensal da OPEP), 12/11/2026",
+         "url": "https://houseofsaud.com/opec-november-omr-brent-output-surge/"
+        },
+        {
+         "nome": "Trading Economics, cotação do Brent, 12/11/2026",
+         "url": "https://tradingeconomics.com/commodity/brent-crude-oil"
+        }
+       ]
+      },
+      {
+       "titulo": "Gás: mais navios saindo do Golfo",
+       "texto": "Em outubro, 31 navios carregados de gás natural liquefeito (GNL) saíram pelo estreito, contra 23 em setembro, segundo a S&P Global: o maior número desde o início da guerra, em 28/2. A maioria carregou em Ras Laffan, no Catar. A Kpler, com outro método, contou 42 cargas.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "Dawn (com agências), 11/11/2026",
+         "url": "https://www.dawn.com/news/2043645/iran-urges-us-to-meet-terms-for-hormuz-opening"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Brasil",
+     "itens": [
+      {
+       "titulo": "Lula na COP31",
+       "texto": "Na abertura da cúpula de líderes, em Antália (11/11), Lula disse que o mundo passou a falar “mais de armas e tarifas” do que do clima, cobrou os países ricos e ligou sua reeleição a um projeto de sustentabilidade. Citou queda de 71% no desmatamento da Amazônia de 2022 a 2026, dado do governo.",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "SBT News (íntegra do discurso), 11/11/2026",
+         "url": "https://sbtnews.sbt.com.br/noticia/politica/leia-a-integra-do-discurso-de-lula-na-cupula-da-cop-31"
+        },
+        {
+         "nome": "Vermelho, 11/11/2026",
+         "url": "https://vermelho.org.br/2026/11/11/lula-cobra-nacoes-ricas-e-poluidoras-na-cop31-clima-sumiu-das-pautas-do-g7-e-do-g20/"
+        }
+       ]
+      },
+      {
+       "titulo": "A leitura da oposição",
+       "texto": "Lula disse que o eleitor “confrontou aqueles que negam as evidências da ciência”. Veículos críticos ao governo, como a Revista Oeste, leram a frase como ataque à oposição; a Gazeta do Povo viu recado ao senador Flávio Bolsonaro (PL), derrotado no segundo turno. Até o fechamento, não localizamos resposta pública do senador.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "Gazeta do Povo, 11/11/2026",
+         "url": "https://www.gazetadopovo.com.br/mundo/cop-31-lula-alfineta-trump-flavio-discurso/"
+        },
+        {
+         "nome": "Revista Oeste, 11/11/2026",
+         "url": "https://revistaoeste.com/politica/lula-culpa-paises-ricos-por-crise-climatica-e-ataca-oposicao-em-discurso-na-cop31/"
+        }
+       ]
+      },
+      {
+       "titulo": "Inflação sai hoje",
+       "texto": "O IBGE divulga nesta quinta (12/11) o IPCA de outubro, índice oficial de inflação. A agenda de mercado da semana indicava alta de 0,29% no mês. O dado orienta a próxima decisão do Banco Central, que manteve a taxa Selic em 13,75% ao ano em 4/11.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "Ativo Virtual (agenda econômica), 08/11/2026",
+         "url": "https://www.ativovirtual.com.br/avnews/artigos/ipca-de-outubro-e-cpi-dos-eua-lideram-agenda-economica-da-semana"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Clima",
+     "itens": [
+      {
+       "titulo": "El Niño: boletim novo hoje",
+       "texto": "A NOAA, agência de oceanos e atmosfera dos EUA, atualiza hoje (12/11) seu boletim do El Niño. O de 8/10 registrava +2,1 °C na região Niño-3.4, que serve de termômetro do fenômeno, e 83% de chance de um evento “histórico” entre outubro e dezembro. Para o Brasil, o padrão é chuva no Sul e seca no Norte.",
+       "camada": "FATO",
+       "confianca": "Alta",
+       "fontes": [
+        {
+         "nome": "NOAA/CPC, discussão diagnóstica do ENSO, 08/10/2026",
+         "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml"
+        }
+       ]
+      },
+      {
+       "titulo": "A conta de Antália",
+       "texto": "Na COP31, Lula lembrou que as metas nacionais atuais levam a cerca de 2,8 °C de aquecimento e defendeu US$ 1,3 trilhão por ano em financiamento climático. São números de referência da ONU citados no discurso; a distância entre meta e promessa é o centro da negociação.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "SBT News (íntegra do discurso), 11/11/2026",
+         "url": "https://sbtnews.sbt.com.br/noticia/politica/leia-a-integra-do-discurso-de-lula-na-cupula-da-cop-31"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "eixo": "Espaço",
+     "itens": [
+      {
+       "titulo": "Starship: voo 15 na sexta",
+       "texto": "O 15º voo da Starship, da SpaceX, está previsto para 13/11, com janela a partir das 22h45 UTC (19h45 de Brasília), em Starbase, Texas, levando satélites Starlink. Segundo Elon Musk, a meta é capturar na torre tanto o propulsor quanto a nave. A data ainda pode mudar.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "Space Launch Schedule, 07/11/2026",
+         "url": "https://www.spacelaunchschedule.com/news/starship-flight-15-launch-date-how-to-watch/"
+        }
+       ]
+      },
+      {
+       "titulo": "Hera já está em Didymos",
+       "texto": "A sonda europeia Hera chegou em 5/11 ao sistema Didymos e fez a primeira imagem de perto, a cerca de 60 km. Ela vai medir a massa de Dimorphos e a cratera deixada pela sonda DART em 2022, para calibrar a defesa planetária. O par de asteroides não oferece risco à Terra. Imagens completas saem em 25/11.",
+       "camada": "FATO",
+       "confianca": "Média",
+       "fontes": [
+        {
+         "nome": "Tech Times, 05/11/2026",
+         "url": "https://www.techtimes.com/articles/330121/20261105/esa-hera-reaches-asteroid-didymos-first-close-image-shows-side-dart-never-photographed.htm"
+        },
+        {
+         "nome": "ESA, missão Hera",
+         "url": "https://www.esa.int/Space_Safety/Hera/ESA_s_Hera_targets_early_arrival_at_Didymos_asteroids"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "analise": {
+    "titulo": "Ialta em Shenzhen? Os grandes e os de fora",
+    "texto": [
+     "Em fevereiro de 1945, em Ialta, na Crimeia, Roosevelt, Churchill e Stalin discutiram o destino da Europa sem que poloneses, franceses ou alemães estivessem à mesa. A imagem voltou nesta semana: uma reportagem da agência AFP diz, já no título, que a cúpula prevista entre Xi, Trump e Putin em Shenzhen “evoca” Ialta, e em Abu Dhabi o negociador russo disse não entender “em que qualidade” os europeus estavam ali. Tucídides registrou a lógica há 2.400 anos, no Diálogo de Melos: entre desiguais, os fortes fazem o que podem e os fracos sofrem o que devem. Kant respondeu, em À Paz Perpétua, que um tratado firmado com reserva secreta de motivos para uma guerra futura não é paz, é só trégua.",
+     "A analogia falha em três pontos. Em Ialta, os três eram aliados que venciam a mesma guerra e tinham exércitos no terreno que repartiam; em Shenzhen, são rivais, e a pauta conhecida é estreita (segundo o South China Morning Post, limites à IA no comando nuclear, com Ucrânia e Coreia fora dela). Depois, a Europa e o Japão de hoje não são países ocupados: pagam boa parte da conta da Ucrânia e podem recusar o que não assinaram. Por fim, muitos historiadores veem a própria Ialta menos como partilha e mais como o reconhecimento de onde os exércitos já estavam. A lição que resta é mais modesta: quem não escolhe seu representante a tempo, como Zelensky cobrou dos europeus, acaba representado pelos outros."
+    ]
+   },
+   "ler": [
+    {
+     "tipo": "Livro",
+     "titulo": "História da Guerra do Peloponeso",
+     "autor": "Tucídides",
+     "nivel": "★★",
+     "porque": "Leia o Diálogo de Melos (livro V). São poucas páginas e mostram, sem enfeite, como uma potência fala com quem não pode resistir. Compare com a posição da Europa em Abu Dhabi."
+    },
+    {
+     "tipo": "Livro",
+     "titulo": "Diplomacia",
+     "autor": "Henry Kissinger",
+     "nivel": "★★",
+     "porque": "O capítulo sobre as conferências de 1945 explica o que Ialta decidiu de fato e o que virou mito. Procure a diferença entre esfera de influência e ocupação militar."
+    },
+    {
+     "tipo": "Livro",
+     "titulo": "A Guerra dos Chips",
+     "autor": "Chris Miller",
+     "nivel": "★",
+     "porque": "Ajuda a entender por que dois chips H200 numa universidade chinesa viram notícia e como funcionam os controles de exportação dos EUA."
+    }
+   ],
+   "pensar": [
+    "Uma paz negociada sem quem vai pagar por ela pode durar?",
+    "Se as três maiores potências nucleares combinarem regras para a IA, isso protege o mundo ou só confirma quem manda nele?"
+   ],
+   "acompanhar": [
+    {
+     "quando": "12/11",
+     "oque": "Witkoff e Kushner com Putin em Moscou; número final da troca de prisioneiros; boletim do El Niño da NOAA; IPCA de outubro"
+    },
+    {
+     "quando": "13/11",
+     "oque": "Voo 15 da Starship, com janela a partir das 19h45 de Brasília"
+    },
+    {
+     "quando": "16/11",
+     "oque": "Chanceleres da UE discutem sanções ao Irã por ciberataques"
+    },
+    {
+     "quando": "18–19/11",
+     "oque": "APEC em Shenzhen e possível cúpula Xi–Trump–Putin; em 19/11, reunião da coalizão de apoio à Ucrânia na Alemanha"
+    },
+    {
+     "quando": "25/11",
+     "oque": "ESA divulga as primeiras imagens completas de Didymos e Dimorphos feitas pela Hera"
+    }
+   ],
+   "fontes": [
+    {
+     "nome": "Life News Agency (relato do Wall Street Journal via Anadolu), 11/11/2026",
+     "url": "https://lifenewsagency.com/vance-is-considering-talks-with-irans-security-chief-to-end-the-war-wsj-reports/"
+    },
+    {
+     "nome": "Iran International, 12/11/2026",
+     "url": "https://www.iranintl.com/en/202611122691"
+    },
+    {
+     "nome": "Al Jazeera (Reuters), 11/11/2026",
+     "url": "https://www.aljazeera.com/news/2026/11/11/chinese-university-buys-nvidia-ai-h200-chips-despite-us-ban-records-show"
+    },
+    {
+     "nome": "Meduza, 11/11/2026",
+     "url": "https://meduza.io/en/feature/2026/11/11/russia-ukraine-peace-talks-conclude-in-abu-dhabi-with-prisoner-exchange-agreement-but-no-breakthrough-on-territory"
+    },
+    {
+     "nome": "Euronews, 11/11/2026",
+     "url": "https://www.euronews.com/2026/11/11/abu-dhabi-peace-talks-end-with-prisoner-exchange-agreement-as-us-envoys-prepare-to-meet-pu"
+    },
+    {
+     "nome": "Kyiv Post, 11/11/2026",
+     "url": "https://www.kyivpost.com/post/89761"
+    },
+    {
+     "nome": "Al Jazeera, 11/11/2026",
+     "url": "https://www.aljazeera.com/amp/news/2026/11/11/russia-ukraine-talks-in-abu-dhabi-end-with-prisoner-exchange-agreement"
+    },
+    {
+     "nome": "Business Today (relato do Economic Times), 11/11/2026",
+     "url": "https://www.businesstoday.in/india/story/india-offers-3-part-plan-to-de-escalate-russia-ukraine-war-why-the-resolution-matters-to-new-delhi-566756-2026-11-11"
+    },
+    {
+     "nome": "Seoul Economic Daily (relato da Kyodo), 11/11/2026",
+     "url": "https://en.sedaily.com/world/2026/11/11/china-set-to-snub-japans-takaichi-at-apec-summit"
+    },
+    {
+     "nome": "SiliconANGLE, 11/11/2026",
+     "url": "https://siliconangle.com/2026/11/11/google-deepmind-releases-new-advanced-robotics-ai-model-and-next-generation-gene-prediction-model/"
+    },
+    {
+     "nome": "The Intercept, 11/11/2026",
+     "url": "https://theintercept.com/2026/11/11/openai-ukraine-russia-prank-security/"
+    },
+    {
+     "nome": "The Moscow Times (relato do South China Morning Post), 11/11/2026",
+     "url": "https://www.themoscowtimes.com/2026/11/11/russia-china-and-us-in-talks-to-curb-ai-use-in-nuclear-arsenals-report-says-a94228"
+    },
+    {
+     "nome": "The Lancet, estudo de viabilidade do AMIE, 2026",
+     "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01535-7/abstract"
+    },
+    {
+     "nome": "ARISE (resumo do estudo), 08/10/2026",
+     "url": "https://www.arise-ai.org/blog/amie-lancet"
+    },
+    {
+     "nome": "Stanford AI100, relatório de 2026 (PDF), 10/11/2026",
+     "url": "https://ai100.stanford.edu/sites/g/files/sbiybj36086/files/media/file/ai100_report_2026.pdf"
+    },
+    {
+     "nome": "Stanford HAI (resumo do relatório), 10/11/2026",
+     "url": "https://hai.stanford.edu/news/the-world-has-changed-insights-from-the-new-ai100-report"
+    },
+    {
+     "nome": "Al Jazeera (relato do Financial Times), 06/11/2026",
+     "url": "https://www.aljazeera.com/news/2026/11/6/rocket-launcher-deal-illustrates-deepening-russia-iran-relations"
+    },
+    {
+     "nome": "Euronews via Yahoo, 06/11/2026",
+     "url": "https://ca.news.yahoo.com/iran-delivers-secret-khamenei-message-154218342.html"
+    },
+    {
+     "nome": "Russia's Pivot to Asia, 08/11/2026",
+     "url": "https://russiaspivottoasia.com/russia-iran-bilateral-relations-november-2026-update/"
+    },
+    {
+     "nome": "AFP via The Manila Times, 11/11/2026",
+     "url": "https://www.manilatimes.net/2026/11/11/world/asia-oceania/north-korea-tests-new-high-speed-torpedo/2466762"
+    },
+    {
+     "nome": "AFP via 24 News HD, 12/11/2026",
+     "url": "https://www.24newshd.tv/12-Nov-2026/north-korea-s-kim-inspects-naval-base-construction"
+    },
+    {
+     "nome": "Seoul Economic Daily, 12/11/2026",
+     "url": "https://en.sedaily.com/politics/2026/11/12/north-koreas-choe-son-hui-rejects-g7-talk-on-nuclear-status"
+    },
+    {
+     "nome": "Arms Control Association, edição de 11/2026",
+     "url": "https://www.armscontrol.org/act/2026-11/news/north-korea-and-south-korea-launch-missiles-amid-tensions"
+    },
+    {
+     "nome": "ABC News, 11/11/2026",
+     "url": "https://abcnews.com/International/ukraine-russia-exchange-hundreds-drones-day-2-abu/story?id=138038984"
+    },
+    {
+     "nome": "Ukraine Daily (dados da Força Aérea ucraniana), 12/11/2026",
+     "url": "https://thechrissampson.substack.com/p/ukraine-daily-november-12-2026-overnight"
+    },
+    {
+     "nome": "Daily Caller (com WSJ, Reuters e Pentágono), 11/11/2026",
+     "url": "https://dailycaller.com/2026/11/11/iran-war-rages-on-trump-peace-claims/"
+    },
+    {
+     "nome": "Al Jazeera e Reuters via Finwire, 11/11/2026",
+     "url": "https://finwire.io/news/world-news/iran-denies-talks-with-us-says-hormuz-will-stay-shut-until-demands-are-met"
+    },
+    {
+     "nome": "House of Saud (relatório mensal da OPEP), 12/11/2026",
+     "url": "https://houseofsaud.com/opec-november-omr-brent-output-surge/"
+    },
+    {
+     "nome": "Trading Economics, cotação do Brent, 12/11/2026",
+     "url": "https://tradingeconomics.com/commodity/brent-crude-oil"
+    },
+    {
+     "nome": "Dawn (com agências), 11/11/2026",
+     "url": "https://www.dawn.com/news/2043645/iran-urges-us-to-meet-terms-for-hormuz-opening"
+    },
+    {
+     "nome": "SBT News (íntegra do discurso), 11/11/2026",
+     "url": "https://sbtnews.sbt.com.br/noticia/politica/leia-a-integra-do-discurso-de-lula-na-cupula-da-cop-31"
+    },
+    {
+     "nome": "Vermelho, 11/11/2026",
+     "url": "https://vermelho.org.br/2026/11/11/lula-cobra-nacoes-ricas-e-poluidoras-na-cop31-clima-sumiu-das-pautas-do-g7-e-do-g20/"
+    },
+    {
+     "nome": "Gazeta do Povo, 11/11/2026",
+     "url": "https://www.gazetadopovo.com.br/mundo/cop-31-lula-alfineta-trump-flavio-discurso/"
+    },
+    {
+     "nome": "Revista Oeste, 11/11/2026",
+     "url": "https://revistaoeste.com/politica/lula-culpa-paises-ricos-por-crise-climatica-e-ataca-oposicao-em-discurso-na-cop31/"
+    },
+    {
+     "nome": "Ativo Virtual (agenda econômica), 08/11/2026",
+     "url": "https://www.ativovirtual.com.br/avnews/artigos/ipca-de-outubro-e-cpi-dos-eua-lideram-agenda-economica-da-semana"
+    },
+    {
+     "nome": "NOAA/CPC, discussão diagnóstica do ENSO, 08/10/2026",
+     "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml"
+    },
+    {
+     "nome": "Space Launch Schedule, 07/11/2026",
+     "url": "https://www.spacelaunchschedule.com/news/starship-flight-15-launch-date-how-to-watch/"
+    },
+    {
+     "nome": "Tech Times, 05/11/2026",
+     "url": "https://www.techtimes.com/articles/330121/20261105/esa-hera-reaches-asteroid-didymos-first-close-image-shows-side-dart-never-photographed.htm"
+    },
+    {
+     "nome": "ESA, missão Hera",
+     "url": "https://www.esa.int/Space_Safety/Hera/ESA_s_Hera_targets_early_arrival_at_Didymos_asteroids"
+    },
+    {
+     "nome": "Hong Kong Free Press (AFP), 12/11/2026",
+     "url": "https://hongkongfp.com/2026/11/12/xi-trump-putin-summit-in-shenzhen-evokes-1945-yalta-carve-up/"
+    }
+   ]
+  },
   {
    "id": "2026-11-10",
    "numero": 6,
@@ -293,7 +1281,7 @@
     }
    ],
    "ia": {
-    "abertura": "A IA em quatro frentes.",
+    "abertura": "A IA em quatro frentes. Aviso de transparência: o Observatório, do Xeque News, é escrito com a ajuda do Claude, modelo da Anthropic, e a Anthropic está entre as empresas que assinaram o Apelo de Paris citado abaixo; por isso usamos o texto oficial do Eliseu e a cobertura da imprensa, não comunicados da empresa.",
     "frentes": [
      {
       "area": "Científica",
@@ -1267,7 +2255,7 @@
     }
    ],
    "ia": {
-    "abertura": "A IA em quatro frentes.",
+    "abertura": "A IA em quatro frentes. Aviso de transparência: esta revista é escrita com o Claude, modelo da Anthropic; hoje um modelo da Anthropic aparece só como ferramenta de teste citada por terceiros.",
     "frentes": [
      {
       "area": "Científica",
@@ -2217,7 +3205,7 @@
     }
    ],
    "ia": {
-    "abertura": "A IA em quatro frentes.",
+    "abertura": "A IA em quatro frentes. Aviso de transparência: esta revista é escrita com o Claude, modelo da Anthropic; hoje a Anthropic não é citada.",
     "frentes": [
      {
       "area": "Científica",
@@ -3113,7 +4101,7 @@
     }
    ],
    "ia": {
-    "abertura": "A IA em quatro frentes.",
+    "abertura": "A IA em quatro frentes. Aviso de transparência: esta revista é escrita com o Claude, modelo da Anthropic, citada duas vezes abaixo. Nesses casos, usamos o relato de terceiros e apontamos o que não foi verificado de forma independente.",
     "frentes": [
      {
       "area": "Científica",

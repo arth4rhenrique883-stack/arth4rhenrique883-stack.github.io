@@ -600,7 +600,10 @@ function abre(qual){
 function rota(){
   const q = location.hash.replace("#","");
   if(q==="lafaiete" && !CADERNOS.lafaiete && location.pathname.indexOf("/banca/")>=0){ location.replace("../lafaiete/"); return; }
-  if(q==="sugestoes") abreSugestoes(); else if(CADERNOS[q]) abre(q); else if(UNICO) abre(UNICO); else mostraEscolha();
+  if(q==="sugestoes") return abreSugestoes();
+  const abrir = () => { if(CADERNOS[q]) abre(q); else if(UNICO) abre(UNICO); else mostraEscolha(); };
+  /* Porta de entrada (12/11/2026): no site público, com o Firebase ligado, é preciso entrar para ler. */
+  portaria().then(ok => { if(location.hash.replace("#","")!==q) return; if(ok) abrir(); else abrePorta(); });
 }
 $("trocar").onclick=()=>{ if(UNICO){ location.hash=UNICO; return; } history.pushState(null,"",location.pathname+location.search); mostraEscolha(); window.scrollTo({top:0}); };
 addEventListener("hashchange", rota);
@@ -615,8 +618,8 @@ Promise.all(Object.entries(CADERNOS).map(([k,c]) =>
 </script>
 <script>
 /* Aba "Sugestões" (10/11/2026): o leitor entra com Google ou com e-mail e senha
-   e manda temas ou melhorias; a redação responde por e-mail. A LEITURA do jornal continua aberta;
-   o cadastro só é pedido para enviar. Login e banco de dados: Google Firebase (Auth + Firestore).
+   e manda temas ou melhorias; a redação responde por e-mail. Desde 12/11/2026 o cadastro também é pedido para LER
+   (função portaria), quando o Firebase está configurado. Login e banco de dados: Google Firebase (Auth + Firestore).
    A configuração pública do Firebase fica em /banca/sugestoes/config.js (fora desta página, para
    as rotinas diárias não mexerem). Enquanto ela não existir, a aba avisa que abre em breve. */
 const SUG_SITE = "https://arth4rhenrique883-stack.github.io/banca/brasil/#sugestoes";
@@ -654,8 +657,11 @@ function sugCarregaConfig(){
   });
 }
 
-async function sugIniciaFirebase(){
-  if(SUG.fb) return SUG.fb;
+function sugIniciaFirebase(){
+  if(!SUG.inicio) SUG.inicio = sugInicia().catch(e=>{ SUG.inicio=null; throw e; });
+  return SUG.inicio;
+}
+async function sugInicia(){
   const cfg = await sugCarregaConfig();
   if(!cfg || !cfg.apiKey) return null;
   const base=`https://www.gstatic.com/firebasejs/${FB_VER}/`;
@@ -665,8 +671,40 @@ async function sugIniciaFirebase(){
   const db=F.getFirestore(app);
   SUG.fb={A,F,auth,db};
   try{ await A.getRedirectResult(auth); }catch(e){ SUG.msg={erro:sugErro(e)}; }
-  A.onAuthStateChanged(auth,u=>{ SUG.user=u; SUG.lista=null; if(location.hash==="#sugestoes") sugDesenha(); });
+  SUG.pronto = new Promise(res=>{
+    A.onAuthStateChanged(auth,u=>{ const primeira=!SUG.sabe; SUG.sabe=true; SUG.user=u; SUG.lista=null; res();
+      try{ if(sugLeitorOk(u)) localStorage.setItem("tb-leitor","1"); else if(!u) localStorage.removeItem("tb-leitor"); }catch(e){}
+      if(location.hash==="#sugestoes") sugDesenha(); else if(!primeira) rota(); });
+  });
+  await SUG.pronto;
   return SUG.fb;
+}
+
+/* Quem pode ler: entrou com o Google, ou com e-mail e senha e já confirmou o e-mail. */
+function sugLeitorOk(u){
+  return !!u && (u.emailVerified || u.providerData.some(p=>p.providerId==="google.com"));
+}
+const NA_BANCA = /github\.io$/.test(location.hostname) || location.hostname==="localhost" || location.hostname==="127.0.0.1";
+/* Devolve true se a leitura está liberada. Fora do site público (artefato) e enquanto o Firebase
+   não estiver configurado, a leitura fica aberta. Sem internet, vale o último login deste aparelho. */
+async function portaria(){
+  if(!NA_BANCA) return true;
+  let fb;
+  try{ fb = await sugIniciaFirebase(); }
+  catch(e){ try{ return localStorage.getItem("tb-leitor")==="1"; }catch(e2){ return false; } }
+  if(!fb) return true;
+  return sugLeitorOk(SUG.user);
+}
+function abrePorta(){
+  SUG.modo="porta";
+  cabecalho(null);
+  $("vol").textContent="Vol. 1"; $("dataCurta").textContent="";
+  $("meio").textContent="Entrada dos leitores"; $("chamada").textContent="Entre para ler";
+  ["edicao","rotEdicao","indice","fioIndice","trocar"].forEach(id=>$(id).classList.add("oculto"));
+  $("notaFim").textContent="Terra Brasilis ✱ o cadastro é gratuito; os seus dados servem só para o acesso e para responder às suas sugestões";
+  $("conteudo").innerHTML=`<section class="sug">${cab("Entre para ler o jornal","O cadastro é gratuito e leva um minuto. Depois de entrar, este aparelho lembra de você.")}<div id="sugArea"><p class="erro">Abrindo…</p></div></section>`;
+  if(SUG.fb) sugDesenha();
+  else $("sugArea").innerHTML=`<p class="msg erro">Não foi possível conferir o seu cadastro agora. Confira a internet e recarregue a página.</p>`;
 }
 
 function sugCab(){
@@ -674,6 +712,7 @@ function sugCab(){
 }
 
 function abreSugestoes(){
+  SUG.modo="sug";
   cabecalho(null);
   $("vol").textContent="Vol. 1"; $("dataCurta").textContent="";
   $("meio").textContent="Carta dos leitores"; $("chamada").textContent="A palavra é sua";
@@ -694,7 +733,7 @@ function abreSugestoes(){
 }
 
 function sugAvisoPriv(){
-  return `<div class="aviso-priv" id="aviso-privacidade"><p><b>Aviso de privacidade.</b> Para enviar uma sugestão pedimos cadastro com nome e e-mail. Usamos esses dados só para ler a sua mensagem e responder a você por e-mail. Não vendemos, não emprestamos e não usamos para propaganda.</p><p>Os dados ficam guardados no Google Firebase (serviço do Google que faz o login e guarda as mensagens). Ler o jornal continua livre, sem cadastro.</p><p>Você pode ver as suas sugestões aqui e, quando quiser, apagar todas elas e o cadastro no botão “Apagar meus dados” (direitos da Lei Geral de Proteção de Dados, LGPD, Lei 13.709/2018).</p></div>`;
+  return `<div class="aviso-priv" id="aviso-privacidade"><p><b>Aviso de privacidade.</b> Para ler o jornal e enviar sugestões pedimos cadastro com nome e e-mail. Usamos esses dados só para liberar o seu acesso, ler a sua mensagem e responder a você por e-mail. Não vendemos, não emprestamos e não usamos para propaganda.</p><p>Os dados ficam guardados no Google Firebase (serviço do Google que faz o login e guarda as mensagens).</p><p>Você pode ver as suas sugestões aqui e, quando quiser, apagar todas elas e o cadastro no botão “Apagar meus dados” (direitos da Lei Geral de Proteção de Dados, LGPD, Lei 13.709/2018).</p></div>`;
 }
 
 const GOOGLE_G = `<svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.6 13.3l7.9 6.2C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.7c4.3-4 6.9-9.9 6.9-17.1z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.2C1 16.5 0 20.1 0 24s1 7.5 2.6 10.8l7.9-6.2z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.9-5.8l-7.4-5.7c-2.1 1.4-4.8 2.3-8.5 2.3-6.3 0-11.6-4.1-13.5-9.9l-7.9 6.2C6.6 42.6 14.6 48 24 48z"/></svg>`;
@@ -711,6 +750,7 @@ function sugDesenha(){
   if(!u) return sugDesenhaEntrada(area);
   const porSenha = u.providerData.some(p=>p.providerId==="password") && !u.providerData.some(p=>p.providerId==="google.com");
   if(porSenha && !u.emailVerified) return sugDesenhaConfirma(area,u);
+  if(SUG.modo==="porta") return rota();
   sugDesenhaFormulario(area,u);
 }
 
@@ -718,9 +758,9 @@ function sugDesenhaEntrada(area){
   const criar = SUG.aba==="criar";
   area.innerHTML=`<div class="sug-grade">
     <div>
-      <h3>Entre para enviar a sua sugestão</h3>
+      <h3>${SUG.modo==="porta"?"Entre ou crie o seu cadastro":"Entre para enviar a sua sugestão"}</h3>
       ${sugMsg()}
-      <label class="marca" style="margin-bottom:14px"><input type="checkbox" id="sugAceite"> <span>Li o <a href="#aviso-privacidade">aviso de privacidade</a> e aceito que o meu nome e o meu e-mail sejam usados para responder às minhas sugestões.</span></label>
+      <label class="marca" style="margin-bottom:14px"><input type="checkbox" id="sugAceite"> <span>Li o <a href="#aviso-privacidade">aviso de privacidade</a> e aceito que o meu nome e o meu e-mail sejam usados para o meu acesso ao jornal e para responder às minhas sugestões.</span></label>
       <button class="google" type="button" id="sugGoogle">${GOOGLE_G} Entrar com o Google</button>
       <div class="ou">ou com e-mail</div>
       <div class="abas" role="group" aria-label="Cadastro"><button type="button" id="abaCriar" aria-pressed="${criar}">Criar cadastro</button><button type="button" id="abaEntrar" aria-pressed="${!criar}">Já tenho cadastro</button></div>
@@ -733,7 +773,7 @@ function sugDesenhaEntrada(area){
     </div>
     <div>
       <h3>Por que pedimos cadastro</h3>
-      <ul class="conta"><li>Para saber quem escreveu e responder por e-mail.</li><li>Para evitar mensagens falsas ou automáticas.</li><li>Só para enviar sugestões: ler o jornal não exige cadastro.</li></ul>
+      <ul class="conta"><li>Para saber quem escreveu e responder por e-mail.</li><li>Para evitar mensagens falsas ou automáticas.</li><li>O cadastro é gratuito e serve para ler o jornal e para enviar sugestões.</li></ul>
       <div style="margin-top:14px">${sugAvisoPriv()}</div>
     </div>
   </div>`;

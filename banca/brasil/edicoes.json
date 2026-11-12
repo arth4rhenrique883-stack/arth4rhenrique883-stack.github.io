@@ -1,880 +1,1409 @@
 {
-  "edicoes": [
+ "edicoes": [
+  {
+   "numero": 3,
+   "data": "2026-11-12",
+   "tempoLeitura": 11,
+   "capa": {
+    "chapeu": "Contas do país",
+    "titulo": "Governo propõe aperto de até R$ 60 bilhões, e Senado decide hoje se vota",
+    "linhaFina": "O pacote reduz o ritmo de crescimento dos gastos federais e corta incentivos de impostos em 2027. A oposição pede mais tempo para ler o texto. No bolso, o Banco Central avisa que os juros ficam altos por mais tempo, e a inflação de outubro sai hoje. Em Minas, o Ministério Público já tem os três nomes para seu chefe."
+   },
+   "citacao": "“O que ela quer da gente é coragem.” (Guimarães Rosa, em Grande Sertão: Veredas, sobre a vida)",
+   "recado": "Não houve edição na quarta (11/11); por isso, esta reúne o que aconteceu desde terça. O assunto principal é o pacote de ajuste das contas do governo federal, que chegou ao Senado ontem. É um tema cheio de palavras difíceis, e por isso cada uma delas está explicada no texto e nas Palavrinhas. Assuntos das edições anteriores (Bolsa Família antecipado, caso Banco Master no STF) só voltam quando houver novidade.",
+   "resumo": [
     {
-      "numero": 2,
-      "data": "2026-11-10",
-      "tempoLeitura": 10,
-      "capa": {
-        "chapeu": "Seu dinheiro",
-        "titulo": "Bolsa Família cai mais cedo: entre 16 e 18 de novembro",
-        "linhaFina": "O governo antecipou o pagamento de novembro e o benefício mínimo agora é de R$ 691. Em Brasília, o STF deixou para fevereiro de 2027 a discussão sobre ministros citados no caso do Banco Master. Em Minas, o frio fora de época segue até quarta. E em Lafaiete, o Hospital Regional deve ficar para 2027."
-      },
-      "citacao": "“Minas são muitas.” (Guimarães Rosa)",
-      "recado": "Esta é a primeira edição da manhã, feita para sair cedo todos os dias. As notícias que já estavam na edição nº 1 (fim da escala 6x1, juros parados, maioridade penal, Enem) aparecem aqui só quando houve novidade. E um esclarecimento: a data de posse de Cleitinho publicada na edição nº 1, 6 de janeiro, está certa. Desde a Emenda Constitucional 111, de 2021, os governadores eleitos em 2026 assumem em 6 de janeiro, e não mais no dia 1º.",
-      "resumo": [
-        {
-          "tema": "Bolsa Família",
-          "texto": "Pagamento de novembro adiantado para 16, 17 e 18/11, conforme o final do NIS. Benefício mínimo subiu para R$ 691."
-        },
-        {
-          "tema": "STF",
-          "texto": "A discussão sobre ministros citados no caso do Banco Master só volta em fevereiro de 2027."
-        },
-        {
-          "tema": "Lula",
-          "texto": "Na COP31, na Turquia, discursa nesta quarta (11/11) e volta ao Brasil no dia 16. O decreto da 6x1 espera a volta dele."
-        },
-        {
-          "tema": "Minas",
-          "texto": "Promotores escolhem hoje (10/11) os três nomes para chefiar o Ministério Público. Frio fora de época até quarta."
-        },
-        {
-          "tema": "Saúde",
-          "texto": "Sábado (14/11) é o Dia Mundial do Diabetes, com teste de glicose grátis na Praça do Cristo, em Lafaiete."
-        },
-        {
-          "tema": "Lafaiete",
-          "texto": "Hospital Regional deve abrir só em 2027. Furtos não caíram na cidade, ao contrário do resto de Minas."
-        }
-      ],
-      "numeros": [
-        {
-          "rotulo": "Bolsa Família mínimo",
-          "valor": "R$ 691",
-          "nota": "era R$ 600; reajuste de 15,04% desde outubro",
-          "fonte": "Correio de Minas (8/11), com dados do MDS"
-        },
-        {
-          "rotulo": "Juros básicos",
-          "valor": "13,75%",
-          "nota": "ao ano; próxima decisão em 8 e 9/12",
-          "fonte": "Banco Central, via Seu Dinheiro (4/11)"
-        },
-        {
-          "rotulo": "Furtos em Lafaiete",
-          "valor": "643",
-          "nota": "de janeiro a julho de 2026 (637 em 2025)",
-          "fonte": "Correio de Minas (9/11)"
-        },
-        {
-          "rotulo": "Máxima de hoje",
-          "valor": "13 °C",
-          "nota": "em Lafaiete, com chuva",
-          "fonte": "HG Brasil (9/11)"
-        }
-      ],
-      "cadernos": [
-        {
-          "id": "brasilia",
-          "titulo": "Brasília",
-          "abertura": "O que o governo, o Congresso e o STF decidem, e como isso chega na vida da gente",
-          "itens": [
-            {
-              "titulo": "Caso Banco Master: STF deixa para 2027",
-              "selo": "Confirmado",
-              "texto": "O Supremo Tribunal Federal (STF) só deve voltar a discutir, em fevereiro de 2027, se abre ou não investigação sobre ministros citados em mensagens do celular de Daniel Vorcaro, ex-dono do Banco Master, banco fechado pelo Banco Central em 2025. O ministro Flávio Dino pediu mais tempo para estudar o caso (o chamado “pedido de vista”) em 15 de setembro e tem até 15 de dezembro para devolvê-lo. Como o Judiciário entra em recesso e só volta em fevereiro, o assunto fica para o ano que vem. Os ministros Alexandre de Moraes e André Mendonça pediram, um contra o outro, investigações. Importante: nesta fase não se discute punição, só se haverá investigação. Ninguém foi condenado.",
-              "fontes": [
-                {
-                  "nome": "Diario de Pernambuco/Correio Braziliense, STF deixa caso Master para 2027 (9/11)",
-                  "url": "https://www.diariodepernambuco.com.br/politica/2026/11/11728670-stf-deixa-para-2027-discussao-sobre-ministros-e-caso-banco-master.html"
-                }
-              ],
-              "impacto": {
-                "trabalhador": "No dia a dia, nada muda já: não há multa, imposto ou regra nova. O que pesa é a confiança: quando um caso grande demora, cresce a sensação de que a Justiça é lenta para os de cima.",
-                "baixa": "Efeito direto pequeno: o caso não mexe em benefício, salário ou preço. Vale lembrar que, em qualquer banco, o FGC (Fundo Garantidor de Créditos) protege depósitos e aplicações como poupança e CDB até R$ 250 mil por pessoa.",
-                "media": "Para quem investe em CDB de bancos pequenos que pagam juros altos, o caso lembra a regra: o FGC cobre até R$ 250 mil por pessoa e por banco. Acima disso, o risco é seu.",
-                "alta": "Quem tinha valores acima do limite do FGC em bancos médios é quem mais sente casos assim. A demora no STF prolonga a incerteza jurídica, que costuma deixar investidores mais cautelosos."
-              }
-            },
-            {
-              "titulo": "Lula na COP31 e a espera pelo novo ministro da Fazenda",
-              "selo": "Confirmado",
-              "texto": "Lula embarcou na segunda (9/11) para a COP31, a conferência do clima da ONU, em Antália, na Turquia. A cúpula com os chefes de governo é nesta quarta e quinta (11 e 12/11). Depois ele vai às Filipinas e volta ao Brasil no dia 16. Enquanto isso, o mercado financeiro espera o anúncio de quem será o ministro da Fazenda no novo mandato, que começa em janeiro. Por causa da viagem, o decreto com os detalhes do fim da escala 6x1 só deve sair depois da volta do presidente.",
-              "fontes": [
-                {
-                  "nome": "NeoFeed, agenda de Lula e espera pelo ministro da Fazenda (6/11)",
-                  "url": "https://neofeed.com.br/experts/lula-parte-para-a-turquia-e-deixa-o-mercado-em-modo-de-espera-pelo-titular-da-fazenda/"
-                },
-                {
-                  "nome": "O Tempo/Folhapress, decreto da 6x1 adiado (9/11)",
-                  "url": "https://www.otempo.com.br/economia/2026/11/9/decreto-que-regulamenta-fim-da-6x1-tem-publicacao-adiada-e-so-deve-sair-apos-retorno-de-lula"
-                }
-              ],
-              "impacto": {
-                "trabalhador": "O decreto que detalha o fim da escala 6x1 só deve sair depois do dia 16. Até lá, a jornada de quem trabalha seis dias e folga um não muda: vale o que está no contrato e na convenção da categoria.",
-                "baixa": "O nome do ministro da Fazenda indica como o governo vai tratar gastos e programas sociais em 2027. Por ora não há anúncio, então nada muda no Bolsa Família nem em outros benefícios.",
-                "media": "A espera pelo ministro mexe com o dólar e os juros dos financiamentos, porque o mercado tenta adivinhar a política econômica. Em compras grandes a prazo, vale comparar taxas antes de fechar.",
-                "alta": "Empresários e investidores acompanham o nome da Fazenda de perto: ele sinaliza impostos, juros e regras. Para empresas, o decreto do 6x1 também vai definir custos de escala e contratação."
-              }
-            },
-            {
-              "titulo": "Por que um pedido de vista atrasa tanto",
-              "selo": "Explicação",
-              "texto": "No STF, qualquer ministro pode pedir para levar o processo e estudá-lo melhor antes de votar. Enquanto isso, o julgamento fica parado. Há prazo para devolver, mas, se ele cai perto das férias da Justiça, o caso só volta no ano seguinte. É uma regra comum nos tribunais, mas muitas vezes é criticada por deixar decisões importantes esperando.",
-              "fontes": [],
-              "impacto": {
-                "trabalhador": "Pedidos de vista também atrasam processos que tocam a vida de quem trabalha, como ações sobre direitos trabalhistas e previdência que chegam ao STF.",
-                "baixa": "Quem depende de uma decisão da Justiça para receber benefício costuma sentir mais a demora, porque não tem reserva para esperar.",
-                "media": "Ações sobre planos de saúde, impostos e consumo também podem ficar paradas por um pedido de vista. Saber que a regra existe ajuda a entender por que “o processo não anda”.",
-                "alta": "Quem tem causas de grande valor costuma pagar advogados para acompanhar os prazos. Para empresas, a demora significa ficar mais tempo sem saber qual regra vai valer."
-              }
-            }
-          ]
-        },
-        {
-          "id": "bolso",
-          "titulo": "Bolso, emprego e preços",
-          "abertura": "O que entra e o que sai do orçamento da família",
-          "itens": [
-            {
-              "titulo": "Bolsa Família de novembro sai antes, e com valor maior",
-              "selo": "Confirmado",
-              "texto": "O pagamento de novembro foi antecipado e será feito em só três dias: NIS terminado em 1 recebe em 16/11; terminado em 2, em 17/11; de 3 a 0, em 18/11. Antes, ia até o dia 30. Não precisa pedir nada: cai sozinho para quem já recebe. Desde outubro o programa teve reajuste de 15,04%, o primeiro desde 2023: o mínimo por família passou de R$ 600 para R$ 691, e o adicional por criança de até 6 anos é de R$ 173. O governo diz que a antecipação, que também vale para dezembro, é uma prevenção contra os efeitos do El Niño forte que vem aí. O NIS é o número que aparece no cartão do Bolsa Família.",
-              "fontes": [
-                {
-                  "nome": "Correio de Minas, Bolsa Família antecipado (8/11)",
-                  "url": "https://correiodeminas.com.br/2026/11/08/bolsa-familia-de-novembro-chega-a-r-1-100-apos-novo-reajuste-e-sera-pago-antes-da-data/"
-                }
-              ],
-              "impacto": {
-                "trabalhador": "Se a família recebe o Bolsa Família, o dinheiro de novembro cai entre 16 e 18/11, sem precisar pedir nada. Quem tem carteira assinada pode continuar no programa se a renda por pessoa da casa estiver dentro do limite da regra de proteção.",
-                "baixa": "É quem mais sente: o mínimo passou de R$ 600 para R$ 691 por família, mais R$ 173 por criança de até 6 anos, e o dinheiro chega antes. Ajuda a organizar as contas do fim do mês.",
-                "media": "Não recebe o benefício, mas sente um pouco no comércio do bairro: dinheiro que cai mais cedo costuma movimentar mercado, farmácia e lojas antes do fim do mês.",
-                "alta": "Efeito direto quase nenhum. Indiretamente, o reajuste aumenta o gasto do governo, tema que pesa nas discussões sobre contas públicas, impostos e juros."
-              }
-            },
-            {
-              "titulo": "Juros parados e inflação de outubro a caminho",
-              "selo": "Previsão",
-              "texto": "A Selic segue em 13,75% ao ano até, pelo menos, a reunião de 8 e 9 de dezembro. O próximo número importante é a inflação oficial de outubro (o IPCA), que o IBGE divulga nos próximos dias. A prévia (IPCA-15) mostrou 4,62% em 12 meses, acima do teto da meta (4,5%), com comida mais cara e conta de luz mais barata. Se a inflação vier alta, fica mais difícil os juros voltarem a cair logo.",
-              "fontes": [
-                {
-                  "nome": "BP Money, IPCA-15 de outubro (23/10)",
-                  "url": "https://bpmoney.com.br/economia/ipca-15-desacelera-para-032-em-outubro-mas-inflacao-em-12-meses-sobe-a-462/"
-                }
-              ],
-              "impacto": {
-                "trabalhador": "Com a Selic em 13,75%, crediário e cartão continuam caros. A prévia da inflação mostrou comida mais cara: é a despesa que mais pesa no salário de quem ganha menos.",
-                "baixa": "Comida mais cara pesa mais em quem gasta quase toda a renda no mercado. Evite o rotativo do cartão e o cheque especial, que têm os juros mais altos do país.",
-                "media": "Financiamento de carro e casa segue caro. Por outro lado, dinheiro guardado em aplicações que seguem a Selic, como Tesouro Selic e CDB, continua rendendo bem.",
-                "alta": "Juros altos favorecem quem tem muito dinheiro aplicado em renda fixa. Para quem tem empresa, o crédito caro adia investimentos e contratações."
-              }
-            }
-          ]
-        },
-        {
-          "id": "saude",
-          "titulo": "Saúde no Brasil",
-          "abertura": "Cuidados da semana",
-          "aviso": "Estas notícias informam, mas não substituem o médico. Nunca comece, pare ou troque um remédio por conta própria. Em emergência, ligue 192 (SAMU).",
-          "itens": [
-            {
-              "titulo": "Sábado é o Dia Mundial do Diabetes",
-              "selo": "Confirmado",
-              "texto": "O 14 de novembro é o Dia Mundial do Diabetes. O diabetes é quando o açúcar no sangue fica alto demais, e muita gente tem sem saber, porque no começo quase não dá sinal. O exame de glicose é simples e o SUS faz nos postos de saúde. Em Lafaiete, no sábado (14/11), das 9h às 16h, a Praça do Cristo tem ação gratuita com teste de glicose, medida de pressão e orientação sobre alimentação e cuidado com os pés.",
-              "fontes": [
-                {
-                  "nome": "Correio da Cidade, ação sobre diabetes em Lafaiete",
-                  "url": "https://www.jornalcorreiodacidade.com.br/noticias/51639-lafaiete-tera-acao-gratuita-de-prevencao-e-orientacao-sobre-diabetes"
-                }
-              ],
-              "impacto": {
-                "trabalhador": "Diabetes descoberto cedo evita afastamento do trabalho por complicações. O exame de glicose é rápido e gratuito no posto de saúde.",
-                "baixa": "O teste é de graça no SUS e na ação de sábado na Praça do Cristo, em Lafaiete. Não precisa de plano de saúde.",
-                "media": "Mesmo quem tem plano pode aproveitar a ação gratuita para medir glicose e pressão sem marcar consulta.",
-                "alta": "O risco é o mesmo para todos: dinheiro não impede o diabetes. Sedentarismo e alimentação com muito açúcar pesam em qualquer classe."
-              }
-            },
-            {
-              "titulo": "Frio fora de época: atenção com idosos e crianças",
-              "selo": "Explicação",
-              "texto": "Com o frio e a chuva desta semana, aumentam as gripes e resfriados. Agasalhe bem os mais velhos e as crianças, mantenha a casa arejada mesmo no frio e procure o posto de saúde se houver febre alta, falta de ar ou cansaço fora do comum.",
-              "fontes": [],
-              "impacto": {
-                "trabalhador": "Quem sai cedo para trabalhar ou trabalha na rua (obra, entrega, feira) sente mais o frio com chuva. Roupa em camadas e uma muda seca na bolsa ajudam.",
-                "baixa": "Casas com goteira, pouca roupa de frio ou cobertor sofrem mais. A Defesa Civil e a assistência social da prefeitura podem ser procuradas em caso de necessidade.",
-                "media": "Gastos com aquecedor e chuveiro mais quente aumentam a conta de luz. Vale fechar frestas antes de ligar aparelhos.",
-                "alta": "O cuidado com idosos e crianças é o mesmo. Quem emprega cuidadores, porteiros ou domésticas pode ajustar horários nos dias de chuva forte."
-              }
-            }
-          ]
-        },
-        {
-          "id": "escola",
-          "titulo": "Escola e Enem",
-          "abertura": "Data que a família precisa saber",
-          "itens": [
-            {
-              "titulo": "Faltam cinco dias para a segunda prova do Enem",
-              "selo": "Confirmado",
-              "texto": "No domingo (15/11), feriado da República, é o segundo dia do Enem, com matemática e ciências da natureza. Leve documento oficial com foto e caneta preta de tubo transparente, e chegue cedo: os portões fecham na hora certa. Se o tempo estiver chuvoso, saia com mais folga.",
-              "fontes": [
-                {
-                  "nome": "Muita Informação, regras do Enem 2026 (1/11)",
-                  "url": "https://muitainformacao.com.br/noticias/falta-uma-semana-para-o-enem-2026-confira-horarios-documentos-e-regras-do-inep/"
-                }
-              ],
-              "impacto": {
-                "trabalhador": "Quem trabalha e estuda pode usar a nota do Enem para tentar o Prouni (bolsas em faculdades particulares) e o Sisu (vagas em federais), inclusive em cursos à noite.",
-                "baixa": "Para famílias de baixa renda, o Enem é a principal porta para bolsas do Prouni e financiamento pelo Fies. Faltar à prova significa esperar mais um ano.",
-                "media": "A nota do Enem dá acesso às federais, que são gratuitas, e diminui o gasto da família com mensalidades.",
-                "alta": "Para quem pode pagar faculdade particular, a nota pesa menos, mas segue sendo a entrada para as universidades públicas mais concorridas."
-              }
-            }
-          ]
-        },
-        {
-          "id": "minas",
-          "titulo": "Minas Gerais",
-          "abertura": "O que se decide em Belo Horizonte e chega até nós",
-          "itens": [
-            {
-              "titulo": "Ministério Público escolhe hoje os três nomes para seu chefe",
-              "selo": "Confirmado",
-              "texto": "Nesta terça (10/11), das 8h às 17h, promotores e procuradores de Minas votam pela internet para formar a lista tríplice, os três mais votados para procurador-geral de Justiça, o chefe do Ministério Público estadual, em 2027 e 2028. São quatro candidatos: Carlos Eduardo Ferreira Pinto, José Carlos Fernandes Júnior, Larissa Rodrigues Amaral e o atual procurador-geral, Paulo de Tarso Morais Filho, que tenta mais um mandato. Depois, o governador tem 15 dias para escolher um dos três. O Ministério Público é quem acusa nos processos e fiscaliza prefeituras e governo.",
-              "fontes": [
-                {
-                  "nome": "Correio de Minas, eleição no MPMG (9/11)",
-                  "url": "https://correiodeminas.com.br/2026/11/09/membros-do-mpmg-elegem-amanha-10-lista-triplice-para-escolha-do-procurador-geral-de-justica-entrerriano-concorre-a-segundo-mandato/"
-                }
-              ],
-              "impacto": {
-                "trabalhador": "O Ministério Público defende direitos coletivos, como segurança no trabalho e serviços públicos. Quem comanda o órgão influencia quais casos andam mais rápido.",
-                "baixa": "É o MP que cobra das prefeituras vagas em creche, remédio e atendimento de saúde. O perfil do novo chefe pesa nessas ações.",
-                "media": "O MP também atua em defesa do consumidor e contra a corrupção na gestão pública, o que afeta a qualidade dos serviços pagos com seus impostos.",
-                "alta": "Empresas que lidam com o Estado, licenças ambientais e mineração (forte em Minas e na região de Lafaiete) acompanham de perto quem vai liderar o MP."
-              }
-            },
-            {
-              "titulo": "Frio de inverno em novembro, até quarta",
-              "selo": "Confirmado",
-              "texto": "Uma massa de ar frio derrubou as temperaturas em Minas. O Inmet avisou sobre queda de 5 °C ou mais, e mais de 500 cidades mineiras ficaram sob aviso de chuva forte, vento e possível granizo. Em Belo Horizonte, seis regiões tiveram alerta de risco geológico (deslizamento). O frio deve continuar pelo menos até quarta (11/11). A Defesa Civil pede cuidado com árvores que podem cair e com banhos de cachoeira, onde a água pode subir de repente.",
-              "fontes": [
-                {
-                  "nome": "Correio da Cidade, frente fria e alerta de tempestades (9/11)",
-                  "url": "https://www.jornalcorreiodacidade.com.br/noticias/51671-frente-fria-derruba-temperaturas-em-lafaiete-e-traz-alerta-de-tempestades"
-                },
-                {
-                  "nome": "Correio de Minas, alerta da Defesa Civil (8/11)",
-                  "url": "https://correiodeminas.com.br/2026/11/08/defesa-civil-divulga-previsao-do-tempo-e-alerta-populacao-para-riscos-de-queda-de-arvores-e-de-banho-em-cachoeiras/"
-                }
-              ],
-              "impacto": {
-                "trabalhador": "Chuva forte e risco de deslizamento atrasam ônibus e podem parar obras. Quem trabalha ao ar livre deve seguir as orientações de segurança da empresa.",
-                "baixa": "Quem mora em encosta ou perto de córrego corre mais risco com chuva forte. Em caso de rachaduras ou barulho na terra, saia de casa e ligue para a Defesa Civil (199).",
-                "media": "Granizo pode estragar carro e telhado: vale guardar o carro na garagem e conferir o que o seguro cobre.",
-                "alta": "Produtores rurais e donos de imóveis com mais bens expostos podem ter prejuízos com granizo e vento. Seguro agrícola e residencial ganham importância."
-              }
-            },
-            {
-              "titulo": "Cleitinho visita Lafaiete",
-              "selo": "Confirmado",
-              "texto": "O governador eleito Cleitinho Azevedo (Republicanos) esteve na segunda (9/11) com o prefeito Leandro Chagas, em Lafaiete. Os dois falaram de investimentos para a cidade, e o Hospital Regional foi citado como uma das primeiras grandes entregas do próximo governo. Não foram anunciados valores nem datas.",
-              "fontes": [
-                {
-                  "nome": "Correio da Cidade (9/11)",
-                  "url": "https://www.jornalcorreiodacidade.com.br/noticias/51674-leandro-chagas-recebe-cleitinho-e-discute-novos-investimentos-para-lafaiete"
-                }
-              ],
-              "impacto": {
-                "trabalhador": "Se o Hospital Regional for priorizado, pode haver mais vagas de obra agora e, depois, empregos na área de saúde. Por enquanto, não há valores nem datas anunciados.",
-                "baixa": "Um hospital regional funcionando pode evitar viagens a Belo Horizonte para tratamento pelo SUS. Mas, até haver data oficial, continua só promessa.",
-                "media": "Mais leitos na região aliviariam os hospitais e o pronto-socorro, mesmo para quem tem plano de saúde.",
-                "alta": "Investimento do Estado na cidade costuma valorizar imóveis e atrair negócios, mas tudo depende de verba no orçamento de 2027."
-              }
-            }
-          ]
-        }
-      ],
-      "tempo": {
-        "texto": "Hoje e quarta seguem frios e chuvosos. A partir de quinta esquenta aos poucos, mas a chuva continua até o fim de semana. Guarda-chuva e agasalho.",
-        "dias": [
-          {
-            "dia": "Ter 10",
-            "min": 12,
-            "max": 13,
-            "ceu": "Chuva"
-          },
-          {
-            "dia": "Qua 11",
-            "min": 13,
-            "max": 18,
-            "ceu": "Chuva"
-          },
-          {
-            "dia": "Qui 12",
-            "min": 14,
-            "max": 21,
-            "ceu": "Pancadas"
-          },
-          {
-            "dia": "Sex 13",
-            "min": 16,
-            "max": 23,
-            "ceu": "Chuva"
-          },
-          {
-            "dia": "Sáb 14",
-            "min": 16,
-            "max": 24,
-            "ceu": "Chuva"
-          }
-        ],
-        "fontes": [
-          {
-            "nome": "HG Brasil, previsão atualizada em 9/11",
-            "url": "https://hgbrasil.com/weather/places/brazil/mg/conselheiro-lafaiete"
-          }
-        ]
-      },
-      "historia": {
-        "titulo": "A bandeira que nasceu quatro dias depois da República",
-        "texto": "Na semana do 15 de novembro, vale lembrar que a bandeira verde-amarela com o círculo azul e as estrelas é filha da República. Ela foi criada pelo Decreto nº 4, de 19 de novembro de 1889, apenas quatro dias depois da queda do Império. O desenho foi idealizado por Raimundo Teixeira Mendes e Miguel Lemos, com o astrônomo Manuel Pereira Reis, e pintado por Décio Villares. O lema “Ordem e Progresso” vem das ideias do filósofo francês Auguste Comte, o positivismo, muito forte entre os militares republicanos. As estrelas mostram o céu do Rio de Janeiro na manhã de 15 de novembro de 1889, e cada uma representa um estado. Por isso, o 19 de novembro é o Dia da Bandeira.",
-        "linha": [
-          {
-            "ano": "1822",
-            "fato": "Brasil independente adota a bandeira do Império, com a coroa"
-          },
-          {
-            "ano": "1889",
-            "fato": "15/11: Proclamação da República; 19/11: nova bandeira"
-          },
-          {
-            "ano": "1971",
-            "fato": "Lei nº 5.700 define as regras de uso da bandeira e dos símbolos nacionais"
-          },
-          {
-            "ano": "1992",
-            "fato": "Lei atualiza a bandeira para 27 estrelas"
-          }
-        ],
-        "fontes": [
-          {
-            "nome": "Wikipédia, Bandeira do Brasil",
-            "url": "https://pt.wikipedia.org/wiki/Bandeira_do_Brasil"
-          }
-        ]
-      },
-      "palavrinhas": [
-        {
-          "termo": "NIS",
-          "def": "Número de Identificação Social. É o número de quem está no Cadastro Único e define o dia do pagamento do Bolsa Família."
-        },
-        {
-          "termo": "Pedido de vista",
-          "def": "Quando um juiz pede mais tempo para estudar um processo antes de votar. O julgamento fica parado enquanto isso."
-        },
-        {
-          "termo": "Lista tríplice",
-          "def": "Lista com os três nomes mais votados por uma categoria, da qual o governante escolhe um para o cargo."
-        },
-        {
-          "termo": "Ministério Público",
-          "def": "Órgão que acusa nos processos criminais e defende os interesses da sociedade, fiscalizando governos e empresas."
-        },
-        {
-          "termo": "Positivismo",
-          "def": "Corrente de ideias do francês Auguste Comte, que pregava ordem social e progresso pela ciência. Inspirou o lema da bandeira."
-        }
-      ],
-      "agenda": [
-        {
-          "quando": "Hoje (10/11)",
-          "oque": "Eleição da lista tríplice do Ministério Público de Minas; Câmara ouve especialistas sobre maioridade penal"
-        },
-        {
-          "quando": "11 e 12/11",
-          "oque": "Cúpula de líderes da COP31, com Lula; Orçamento de 2027 apresentado no Congresso (11/11)"
-        },
-        {
-          "quando": "13/11",
-          "oque": "Último dia do cadastro de creche e pré-escola em Lafaiete (app Lafaiete Digital)"
-        },
-        {
-          "quando": "14/11",
-          "oque": "Dia Mundial do Diabetes: ação na Praça do Cristo (9h às 16h); BR-040 fecha das 15h às 16h em Congonhas"
-        },
-        {
-          "quando": "15/11",
-          "oque": "Segundo dia do Enem; feriado da Proclamação da República"
-        },
-        {
-          "quando": "16 a 18/11",
-          "oque": "Pagamento antecipado do Bolsa Família de novembro"
-        },
-        {
-          "quando": "19/11",
-          "oque": "Dia da Bandeira"
-        },
-        {
-          "quando": "20/11",
-          "oque": "Feriado nacional da Consciência Negra"
-        }
-      ],
-      "conversa": [
-        "Quem você conhece que recebe o Bolsa Família? Receber mais cedo ajuda a família a se organizar?",
-        "Você acha certo um juiz poder segurar um processo por meses para estudar melhor? Qual seria um prazo justo?",
-        "Se você fosse desenhar uma bandeira para Lafaiete, o que colocaria nela?"
-      ],
-      "fechamento": "Terra Brasilis, edição nº 2, fechada na manhã de 10/11/2026."
+     "tema": "Ajuste fiscal",
+     "texto": "Governo apresentou em 11/11 um pacote de R$ 50 a R$ 60 bilhões para 2027. O Senado remarcou a votação para hoje, às 16h; a oposição pede adiamento."
     },
     {
-      "numero": 1,
-      "data": "2026-11-10",
-      "tempoLeitura": 11,
-      "capa": {
-        "chapeu": "Primeira edição",
-        "titulo": "Juros, jornada e maioridade penal: o Brasil depois da eleição",
-        "linhaFina": "Em Brasília, o fim da escala 6x1 já tem data para começar, os juros pararam de cair e a Câmara quer votar a redução da maioridade penal até o fim do mês. Em Minas, o governador eleito Cleitinho começa a mostrar o que pretende. E em Conselheiro Lafaiete a semana é de chuva todos os dias, tapa-buracos parado e mais de 70 vagas no Sine."
-      },
-      "citacao": "Um país se faz com homens e livros, escreveu Monteiro Lobato.",
-      "recado": "Bem-vindo ao Terra Brasilis, o jornal que olha só para o Brasil, para Minas e para Conselheiro Lafaiete. O nome vem dos mapas antigos: “Terra Brasilis” é como os cartógrafos chamavam a nossa terra no começo do século XVI. As notícias do mundo ficam com o Jornal de Cada Dia e o Observatório; aqui, o assunto é a nossa casa. Cada notícia traz a fonte e a data.",
-      "resumo": [
-        {
-          "tema": "Trabalho",
-          "texto": "O fim da escala 6x1 começa em meados de dezembro: no máximo 42 horas por semana e duas folgas, sem cortar salário. Falta o decreto com os detalhes."
-        },
-        {
-          "tema": "Juros",
-          "texto": "O Banco Central parou de cortar juros: a Selic ficou em 13,75% ao ano. Crédito e prestações não devem baratear tão cedo."
-        },
-        {
-          "tema": "Congresso",
-          "texto": "O relator da redução da maioridade penal quer apresentar o texto até o fim de novembro. O Orçamento de 2027 é apresentado nesta quarta (11/11)."
-        },
-        {
-          "tema": "Escola",
-          "texto": "Segunda prova do Enem no domingo (15/11), com mais de 5 milhões de inscritos."
-        },
-        {
-          "tema": "Minas",
-          "texto": "O governador eleito Cleitinho quer proibir dinheiro do Estado para shows nas cidades. Ele toma posse em janeiro."
-        },
-        {
-          "tema": "Lafaiete",
-          "texto": "Chuva todos os dias até sábado. Tapa-buracos parado, UPA com atestado só em casos graves e 73 vagas no Sine."
-        }
-      ],
-      "numeros": [
-        {
-          "rotulo": "Juros básicos",
-          "valor": "13,75%",
-          "nota": "ao ano; Copom parou os cortes em 4/11",
-          "fonte": "Banco Central, via Seu Dinheiro (4/11)"
-        },
-        {
-          "rotulo": "Inflação",
-          "valor": "4,62%",
-          "nota": "em 12 meses na prévia de outubro, acima do teto da meta (4,5%)",
-          "fonte": "IBGE, IPCA-15 (23/10)"
-        },
-        {
-          "rotulo": "Nova jornada",
-          "valor": "42 horas",
-          "nota": "máximo semanal a partir de dezembro de 2026",
-          "fonte": "Emenda promulgada em 16/10"
-        },
-        {
-          "rotulo": "Vagas no Sine",
-          "valor": "73",
-          "nota": "em Conselheiro Lafaiete nesta segunda (9/11)",
-          "fonte": "Lafaiete Agora (9/11)"
-        }
-      ],
-      "cadernos": [
-        {
-          "id": "brasilia",
-          "titulo": "Brasília",
-          "abertura": "O que o governo e o Congresso decidem, e como isso chega na vida da gente",
-          "itens": [
-            {
-              "titulo": "Lula reeleito e um Congresso dividido",
-              "selo": "Confirmado",
-              "texto": "O TSE confirmou: Lula (PT) teve 51,79% dos votos válidos e Flávio Bolsonaro (PL), 48,21%, no segundo turno de 25 de outubro. O novo mandato começa em janeiro de 2027. O PL elegeu a maior bancada da Câmara, com 121 dos 513 deputados. Ou seja: o presidente vai precisar negociar muito para aprovar o que quer.",
-              "fontes": [
-                {
-                  "nome": "TSE, resultado do 2º turno (25/10)",
-                  "url": "https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/presidente-do-tse-anuncia-reeleicao-de-lula-e-faz-balanco-do-2o-turno-das-eleicoes-2026"
-                }
-              ]
-            },
-            {
-              "titulo": "Fim da escala 6x1: o que muda e quando",
-              "selo": "Confirmado",
-              "texto": "A mudança na Constituição foi promulgada em 16 de outubro. A partir de meados de dezembro, quem trabalha com carteira assinada passa a ter no máximo 42 horas por semana e duas folgas, de preferência com o domingo. Em dezembro de 2027 o limite cai para 40 horas. O salário não pode diminuir. O decreto com os detalhes, como a contagem das folgas em quem trabalha por escala, era esperado para 9/11, mas foi adiado para depois de 16/11.",
-              "fontes": [
-                {
-                  "nome": "Brasil de Fato, emenda promulgada (16/10)",
-                  "url": "https://www.brasildefato.com.br/2026/10/16/promulgada-escala-5x2-passa-a-valer-na-semana-anterior-ao-natal/"
-                },
-                {
-                  "nome": "O Tempo/Folhapress, decreto adiado (9/11)",
-                  "url": "https://www.otempo.com.br/economia/2026/11/9/decreto-que-regulamenta-fim-da-6x1-tem-publicacao-adiada-e-so-deve-sair-apos-retorno-de-lula"
-                }
-              ]
-            },
-            {
-              "titulo": "Maioridade penal: Câmara quer votar até o fim do mês",
-              "selo": "Confirmado",
-              "texto": "A proposta que reduz a maioridade penal, a idade a partir da qual alguém responde a um crime como adulto (hoje, 18 anos), já passou pela CCJ e está numa comissão especial. O relator, deputado Mendonça Filho (PL-PE), defende 16 anos e quer apresentar o texto até o fim de novembro; o PL quer 14 anos para crimes hediondos. Nesta terça e quarta (10 e 11/11), os deputados ouvem especialistas. A ideia é mandar ao Senado na primeira semana de dezembro. Por ser mudança na Constituição, precisa de 3/5 dos votos, em dois turnos, em cada Casa.",
-              "fontes": [
-                {
-                  "nome": "Diário de Pernambuco, relator quer texto no fim de novembro (4/11)",
-                  "url": "https://www.diariodepernambuco.com.br/politica/2026/11/11728374-reducao-da-maioridade-penal-relator-na-camara-quer-apresentar-texto-no-fim-de-novembro.html"
-                },
-                {
-                  "nome": "ND Mais, a pauta do Congresso na semana (9/11)",
-                  "url": "https://ndmais.com.br/politica/maioridade-penal-congresso-debate-reducao-nesta-semana/"
-                }
-              ]
-            },
-            {
-              "titulo": "Apostas on-line e Orçamento de 2027",
-              "selo": "Confirmado",
-              "texto": "Em setembro, Lula assinou uma medida provisória que proíbe as “bets” e jogos como o “tigrinho”. Ela vale na hora, mas perde a validade se o Congresso não votar a tempo; nesta semana o governo tenta montar a comissão que vai analisá-la. Na quarta (11/11), o ministro do Planejamento, Bruno Moretti, apresenta o Orçamento de 2027, que diz quanto o governo pode gastar em cada área. A votação final está marcada para 16 e 17 de dezembro.",
-              "fontes": [
-                {
-                  "nome": "ND Mais, a pauta do Congresso na semana (9/11)",
-                  "url": "https://ndmais.com.br/politica/maioridade-penal-congresso-debate-reducao-nesta-semana/"
-                }
-              ]
-            }
-          ],
-          "caixa": {
-            "titulo": "Lula fora do país",
-            "texto": "Lula está na Turquia para a COP31, a conferência do clima da ONU (9 a 20/11), e discursa na quarta (11/11), levando o menor desmatamento da Amazônia desde 1988, segundo o Inpe. Depois segue para as Filipinas. Por isso, decisões como o decreto da 6x1 ficam para a volta dele."
-          }
-        },
-        {
-          "id": "bolso",
-          "titulo": "Bolso, emprego e preços",
-          "abertura": "Juros, inflação e o que pesa no orçamento da família",
-          "itens": [
-            {
-              "titulo": "Banco Central para de cortar os juros",
-              "selo": "Confirmado",
-              "texto": "Em 4 de novembro, o Copom, o grupo do Banco Central que decide os juros, manteve a Selic em 13,75% ao ano. Foi a primeira pausa depois de cinco cortes seguidos, que desde março tinham baixado a taxa de 15%. Os motivos: o petróleo caro por causa da guerra no Oriente Médio, o dólar perto de R$ 5,50 e a inflação acima da meta. A próxima reunião é em 8 e 9 de dezembro.",
-              "fontes": [
-                {
-                  "nome": "Seu Dinheiro, Copom segura a Selic (4/11)",
-                  "url": "https://www.seudinheiro.com/2026/economia/copom-segura-selic-em-1375-e-interrompe-ciclo-de-cortes-nos-juros-mlim/"
-                }
-              ]
-            },
-            {
-              "titulo": "O que a Selic tem a ver com a sua conta",
-              "selo": "Explicação",
-              "texto": "A Selic é o juro “de referência” do país. Quando ela fica alta, o banco cobra mais caro no cartão, no cheque especial e no financiamento, e a poupança e outros investimentos rendem mais. O Banco Central usa os juros como um freio: segura as compras para os preços subirem menos. Com a pausa, empréstimos e prestações não devem ficar mais baratos tão cedo.",
-              "fontes": []
-            },
-            {
-              "titulo": "Comida subiu, luz baixou",
-              "selo": "Confirmado",
-              "texto": "Na prévia da inflação de outubro (o IPCA-15), os preços subiram 0,32% no mês e 4,62% em 12 meses, acima do teto da meta do governo, que é 4,5%. O que mais subiu foi a comida: tomate (+24,5%), cebola (+13,6%), batata (+11%) e arroz (+5,8%). Os combustíveis também subiram (+1,2%). Já a conta de luz caiu um pouco, porque a bandeira tarifária passou de amarela para verde, e as passagens de avião ficaram mais baratas. O número completo de outubro sai nos próximos dias.",
-              "fontes": [
-                {
-                  "nome": "BP Money, IPCA-15 de outubro (23/10)",
-                  "url": "https://bpmoney.com.br/economia/ipca-15-desacelera-para-032-em-outubro-mas-inflacao-em-12-meses-sobe-a-462/"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "saude",
-          "titulo": "Saúde no Brasil",
-          "abertura": "O que muda no SUS e nas farmácias",
-          "aviso": "Estas notícias servem para informar e levar perguntas à consulta. Nunca comece, pare ou troque um remédio sem falar com o seu médico.",
-          "itens": [
-            {
-              "titulo": "Anvisa aprova remédio para obesidade em comprimido",
-              "selo": "Confirmado",
-              "texto": "A Anvisa aprovou em 4/11 a semaglutida em comprimido (nome comercial Wegovy) para tratar obesidade em adultos. É a mesma substância do Ozempic, que é injetável. A previsão é chegar às farmácias no primeiro semestre de 2027, com receita. O preço ainda não foi definido.",
-              "fontes": [
-                {
-                  "nome": "Agência GBC, semaglutida oral aprovada (8/11)",
-                  "url": "https://agenciagbc.com/2026/11/08/ozempic-em-comprimido-e-aprovado-no-brasil-veja-quanto-pode-custar-e-quando-chega-as-farmacias/"
-                }
-              ]
-            },
-            {
-              "titulo": "Novembro Azul: a saúde do homem",
-              "selo": "Confirmado",
-              "texto": "O Inca estima cerca de 78 mil casos novos de câncer de próstata por ano no Brasil entre 2026 e 2028. Descoberto cedo, ele tem muito mais chance de cura. A recomendação é que o homem converse com o médico sobre os exames, principalmente a partir dos 50 anos, ou antes, se houver casos na família.",
-              "fontes": [
-                {
-                  "nome": "Inca, estimativa 2026–2028",
-                  "url": "https://www.gov.br/inca/pt-br"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "escola",
-          "titulo": "Escola e Enem",
-          "abertura": "Datas que a família precisa saber",
-          "itens": [
-            {
-              "titulo": "Segundo dia do Enem é no domingo",
-              "selo": "Confirmado",
-              "texto": "O primeiro dia de provas foi no domingo (8/11). O segundo, com matemática e ciências da natureza, é no domingo, 15 de novembro. São mais de 5 milhões de inscritos. Não esqueça documento com foto e caneta de tinta preta em tubo transparente, e chegue cedo: os portões fecham pontualmente. O gabarito oficial sai em até 10 dias úteis depois da prova, no site do Inep.",
-              "fontes": [
-                {
-                  "nome": "Muita Informação, regras do Enem 2026 (1/11)",
-                  "url": "https://muitainformacao.com.br/noticias/falta-uma-semana-para-o-enem-2026-confira-horarios-documentos-e-regras-do-inep/"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "minas",
-          "titulo": "Minas Gerais",
-          "abertura": "O que se decide em Belo Horizonte e chega até nós",
-          "itens": [
-            {
-              "titulo": "Cleitinho quer cortar dinheiro do Estado para shows",
-              "selo": "Confirmado",
-              "texto": "O governador eleito de Minas, Cleitinho Azevedo (Republicanos), anunciou em vídeo, no sábado (7/11), um projeto que proíbe o Estado de repassar dinheiro às prefeituras para pagar shows e festas. As cidades poderiam continuar fazendo festas e feiras, mas com dinheiro próprio. A ideia ainda precisa ser enviada e votada pelos deputados estaduais. Cleitinho toma posse em 6 de janeiro.",
-              "fontes": [
-                {
-                  "nome": "Lafaiete Agora (7/11)",
-                  "url": "https://lafaieteagora.com.br/2026/11/07/cleitinho-anuncia-projeto-que-proibe-uso-de-recursos-estaduais-para-financiar-shows-e-festas-nos-municipios-mineiros/"
-                },
-                {
-                  "nome": "Congresso em Foco, Cleitinho eleito governador",
-                  "url": "https://www.congressoemfoco.com.br/noticia/122678/cleitinho-e-eleito-governador-de-minas-gerais"
-                }
-              ]
-            },
-            {
-              "titulo": "Frente fria e El Niño a caminho",
-              "selo": "Confirmado",
-              "texto": "Uma frente fria forte para novembro deixou o tempo frio e chuvoso no Sudeste. E vem aí o El Niño, o aquecimento das águas do Pacífico que bagunça as chuvas: em outubro, a NOAA, agência americana, dava mais de 83% de chance de ele ser forte. No Brasil, costuma trazer seca no Norte e no Nordeste e chuva demais no Sul. Para Minas, o efeito é menos previsível. Novo boletim sai na quinta (12/11).",
-              "fontes": [
-                {
-                  "nome": "Climatempo, frente fria de novembro",
-                  "url": "https://www.climatempo.com.br/noticia/frio/grande-e-forte-frente-fria-avanca-sobre-o-brasil-entre-7-e-9-de-novembro-de-2026"
-                },
-                {
-                  "nome": "NOAA, boletim do El Niño",
-                  "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml"
-                }
-              ]
-            },
-            {
-              "titulo": "Clássico mineiro foi do Cruzeiro",
-              "selo": "Confirmado",
-              "texto": "No último clássico do Brasileirão, em 29 de outubro, o Cruzeiro venceu o Atlético na Arena MRV, com gol de Kaio Jorge logo no início do jogo.",
-              "fontes": [
-                {
-                  "nome": "O Liberal, Cruzeiro vence o Atlético (29/10)",
-                  "url": "https://www.oliberal.com/esportes/com-gol-no-inicio-de-kaio-jorge-cruzeiro-derrota-o-atletico-mg-na-arena-mrv-pelo-brasileirao-1.1188689"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "lafaiete",
-          "titulo": "Lafaiete, a nossa cidade",
-          "abertura": "O essencial da cidade nesta semana. A cobertura completa está no jornal O Carijó",
-          "itens": [
-            {
-              "titulo": "Tapa-buracos parado e protesto na Prefeitura",
-              "selo": "Confirmado",
-              "texto": "Moradores protestaram na sexta (6/11) contra os buracos nas ruas. A Secretaria de Obras disse que a operação tapa-buracos está parada por falta de dinheiro e que a usina de asfalto da Prefeitura também parou; a ideia é passá-la para uma empresa privada. O programa Asfalta Lafaiete deve voltar em 2027.",
-              "fontes": [
-                {
-                  "nome": "Lafaiete Agora (6/11)",
-                  "url": "https://lafaieteagora.com.br/2026/11/06/apos-convocacao-de-protesto-contra-buracos-nas-ruas-de-lafaiete-secretaria-de-obras-se-manifesta/"
-                }
-              ]
-            },
-            {
-              "titulo": "Taxa de iluminação: projeto saiu de pauta, mas pode voltar",
-              "selo": "Confirmado",
-              "texto": "O projeto da Prefeitura que mudava a taxa de iluminação pública, que vem na conta de luz, foi retirado de pauta na Câmara depois de muitas reclamações. Retirar de pauta não é arquivar: ele pode voltar.",
-              "fontes": [
-                {
-                  "nome": "Lafaiete Agora (5/11)",
-                  "url": "https://lafaieteagora.com.br/2026/11/05/erivelton-reage-a-projeto-de-lei-que-preve-aumento-na-conta-de-luz-em-lafaiete-e-proposta-sai-de-pauta-na-camara/"
-                }
-              ]
-            },
-            {
-              "titulo": "73 vagas no Sine nesta semana",
-              "selo": "Confirmado",
-              "texto": "O Sine Lafaiete divulgou cerca de 73 vagas na segunda (9/11): 25 para quem não tem experiência (ajudante de obras, auxiliar de limpeza, operador de caixa, auxiliar de cozinha) e 48 para quem tem (pedreiro, carpinteiro, motorista de caminhão, eletricista, soldador, mecânico). O Sine fica na Rua Marechal Floriano, 135 A, no Centro. Leve documento e carteira de trabalho; as vagas valem enquanto houver encaminhamentos.",
-              "fontes": [
-                {
-                  "nome": "Lafaiete Agora (9/11)",
-                  "url": "https://lafaieteagora.com.br/2026/11/09/procurando-emprego-veja-as-oportunidades-do-sine-lafaiete-desta-segunda-9-11/"
-                }
-              ]
-            },
-            {
-              "titulo": "Prazos da semana na cidade",
-              "selo": "Confirmado",
-              "texto": "O cadastro para creche e pré-escola de 2027 vai até sexta (13/11), pelo aplicativo Lafaiete Digital. Na saúde, a UPA passou a dar atestado só em casos graves, num teste de 45 dias, e uma carreta do SUS faz tomografias e ultrassons até 6 de dezembro.",
-              "fontes": [
-                {
-                  "nome": "O Carijó, edição de 10/11 (com as fontes de cada nota)",
-                  "url": "https://arth4rhenrique883-stack.github.io/banca/lafaiete/"
-                }
-              ]
-            }
-          ],
-          "caixa": {
-            "titulo": "Quer mais da cidade?",
-            "texto": "O Carijó é o jornal só de Conselheiro Lafaiete, com Prefeitura, Câmara, saúde, escolas, segurança e esporte. Na Banca, é o cartão logo abaixo do Terra Brasilis."
-          }
-        }
-      ],
-      "tempo": {
-        "texto": "Semana chuvosa e fria para novembro: guarda-chuva todos os dias e atenção a encostas e muros.",
-        "dias": [
-          {
-            "dia": "Ter 10",
-            "min": 12,
-            "max": 13,
-            "ceu": "Chuva"
-          },
-          {
-            "dia": "Qua 11",
-            "min": 13,
-            "max": 18,
-            "ceu": "Chuva"
-          },
-          {
-            "dia": "Qui 12",
-            "min": 14,
-            "max": 21,
-            "ceu": "Pancadas"
-          },
-          {
-            "dia": "Sex 13",
-            "min": 16,
-            "max": 23,
-            "ceu": "Chuva"
-          },
-          {
-            "dia": "Sáb 14",
-            "min": 16,
-            "max": 24,
-            "ceu": "Chuva"
-          }
-        ],
-        "fontes": [
-          {
-            "nome": "HG Brasil, previsão atualizada em 9/11",
-            "url": "https://hgbrasil.com/weather/places/brazil/mg/conselheiro-lafaiete"
-          }
-        ]
-      },
-      "historia": {
-        "titulo": "15 de novembro: a República e o Conselheiro que deu nome à cidade",
-        "texto": "No domingo, o Brasil lembra os 137 anos da Proclamação da República, em 15 de novembro de 1889, quando o Império de Dom Pedro II acabou. A nossa cidade guarda uma ligação curiosa com essa história. O nome dela homenageia Lafayette Rodrigues Pereira, jurista nascido em Queluz (o nome antigo de Lafaiete) e conselheiro do Império, que chegou a chefiar o governo de Dom Pedro II. O título de “Conselheiro” era uma honraria da monarquia. Em 1934, já na República, Queluz passou a se chamar Conselheiro Lafaiete.",
-        "linha": [
-          {
-            "ano": "1500s",
-            "fato": "Mapas portugueses chamam a nossa terra de “Terra Brasilis”"
-          },
-          {
-            "ano": "1834",
-            "fato": "Nasce em Queluz (MG) Lafayette Rodrigues Pereira"
-          },
-          {
-            "ano": "1883",
-            "fato": "Lafayette assume a chefia do governo do Império"
-          },
-          {
-            "ano": "1889",
-            "fato": "Proclamação da República, em 15 de novembro"
-          },
-          {
-            "ano": "1934",
-            "fato": "Queluz passa a se chamar Conselheiro Lafaiete"
-          }
-        ],
-        "fontes": [
-          {
-            "nome": "Wikipédia, Conselheiro Lafaiete",
-            "url": "https://en.wikipedia.org/wiki/Conselheiro_Lafaiete"
-          },
-          {
-            "nome": "Wikipédia, Lafayette Rodrigues Pereira",
-            "url": "https://pt.wikipedia.org/wiki/Lafayette_Rodrigues_Pereira"
-          },
-          {
-            "nome": "Wikipédia, Proclamação da República",
-            "url": "https://pt.wikipedia.org/wiki/Proclama%C3%A7%C3%A3o_da_Rep%C3%BAblica_do_Brasil"
-          }
-        ]
-      },
-      "palavrinhas": [
-        {
-          "termo": "Selic",
-          "def": "A taxa básica de juros do país, decidida pelo Banco Central. Serve de base para os juros dos bancos."
-        },
-        {
-          "termo": "Copom",
-          "def": "Comitê do Banco Central que se reúne a cada 45 dias para decidir a Selic."
-        },
-        {
-          "termo": "IPCA-15",
-          "def": "A prévia da inflação oficial, medida pelo IBGE na metade de cada mês."
-        },
-        {
-          "termo": "PEC",
-          "def": "Proposta de Emenda à Constituição. Precisa de 3/5 dos votos, em dois turnos, na Câmara e no Senado."
-        },
-        {
-          "termo": "Medida provisória",
-          "def": "Regra que o presidente assina e vale na hora, mas que o Congresso precisa confirmar em até 120 dias."
-        }
-      ],
-      "agenda": [
-        {
-          "quando": "10 e 11/11",
-          "oque": "Câmara ouve especialistas sobre a maioridade penal"
-        },
-        {
-          "quando": "11/11",
-          "oque": "Orçamento de 2027 é apresentado no Congresso; Lula discursa na COP31"
-        },
-        {
-          "quando": "12/11",
-          "oque": "Novo boletim do El Niño (NOAA)"
-        },
-        {
-          "quando": "13/11",
-          "oque": "Último dia do cadastro de creche e pré-escola em Lafaiete (app Lafaiete Digital)"
-        },
-        {
-          "quando": "15/11",
-          "oque": "Segundo dia do Enem; feriado da Proclamação da República"
-        },
-        {
-          "quando": "20/11",
-          "oque": "Feriado nacional da Consciência Negra"
-        },
-        {
-          "quando": "8 e 9/12",
-          "oque": "Próxima reunião do Copom sobre os juros"
-        },
-        {
-          "quando": "Meados de dezembro",
-          "oque": "Começa a jornada de 42 horas e as duas folgas semanais"
-        }
-      ],
-      "conversa": [
-        "Se você pudesse escolher, preferiria folgar no sábado ou no domingo? Por quê?",
-        "Dinheiro do Estado deveria pagar shows nas cidades, ou só obras e serviços? O que a festa traz de bom para uma cidade?",
-        "Você sabia que Lafaiete já se chamou Queluz? Que outro nome você daria à cidade?"
-      ],
-      "fechamento": "Terra Brasilis, edição nº 1, fechada na madrugada de 10/11/2026."
+     "tema": "Maioridade penal",
+     "texto": "O relator na Câmara entrega em 1º/12 o parecer que reduz de 18 para 16 anos. Votação na comissão pode ser no início de dezembro."
+    },
+    {
+     "tema": "Juros",
+     "texto": "A ata do Banco Central indica Selic em 13,75% por mais tempo e projeta inflação de 5,6% em 2026."
+    },
+    {
+     "tema": "Inflação",
+     "texto": "O IBGE tem previsão de divulgar hoje o IPCA de outubro. Em setembro, o acumulado de 12 meses estava em 4,58%."
+    },
+    {
+     "tema": "Saúde",
+     "texto": "Anvisa registrou um genérico e um similar da semaglutida para diabetes tipo 2. Vacina contra mpox: 25 mil doses a caminho."
+    },
+    {
+     "tema": "Minas",
+     "texto": "Paulo de Tarso teve 797 votos e lidera a lista para chefiar o Ministério Público. Aviso amarelo de tempestade vale hoje."
     }
-  ]
+   ],
+   "numeros": [
+    {
+     "rotulo": "Pacote fiscal",
+     "valor": "até R$ 60 bi",
+     "nota": "efeito previsto nas contas federais de 2027; o relator calcula de R$ 43 bi a R$ 54 bi",
+     "fonte": "Metrópoles, 12/11/2026"
+    },
+    {
+     "rotulo": "Inflação prevista para 2026",
+     "valor": "5,6%",
+     "nota": "projeção do Banco Central na ata do Copom; o teto da meta é 4,5%",
+     "fonte": "O Especialista (Banco Safra), 10/11/2026"
+    },
+    {
+     "rotulo": "Casos de mpox no ano",
+     "valor": "943",
+     "nota": "confirmados no Brasil até 10/11, com uma morte",
+     "fonte": "Jornal de Brasília, 11/11/2026"
+    },
+    {
+     "rotulo": "Máxima de hoje",
+     "valor": "26 °C",
+     "nota": "em Conselheiro Lafaiete, com chuva",
+     "fonte": "HG Brasil, 11/11/2026"
+    }
+   ],
+   "cadernos": [
+    {
+     "id": "brasilia",
+     "titulo": "Brasília",
+     "abertura": "O que o governo, o Congresso e o STF decidem, e como isso chega na vida da gente",
+     "itens": [
+      {
+       "titulo": "Pacote para segurar gastos chega ao Senado, que decide hoje se vota",
+       "selo": "Confirmado",
+       "texto": "O governo federal apresentou na quarta (11/11) um pacote para arrumar as contas públicas de 2027, o chamado ajuste fiscal: medidas para gastar menos e arrecadar mais, de modo que a dívida do país não cresça sem controle. O texto é um projeto de lei complementar (um tipo de lei que exige maioria absoluta: 41 dos 81 senadores e 257 dos 513 deputados), protocolado pelo senador Jaques Wagner (PT-BA) e preparado pelos ministros Dario Durigan (Fazenda) e Bruno Moretti (Planejamento). O governo estima efeito de R$ 50 bilhões a R$ 60 bilhões; o relator, senador Eduardo Braga (MDB-AM), calcula de R$ 43 bilhões a R$ 54 bilhões. O que o projeto prevê: 1) o teto de crescimento dos gastos federais acima da inflação cai de 2,5% para 2% ao ano, a partir de 2027, nos anos em que houver medidas de contenção; 2) o corte nos incentivos fiscais (descontos de imposto dados a setores e empresas) sobe de 10% para 20%; 3) empresas podem ter limite para usar créditos tributários no pagamento de impostos; 4) o governo poderá usar até 40% das sobras de fundos com destino carimbado, menos os de saúde, educação e seguridade social; 5) o Congresso terá 120 dias para criar regra sobre os supersalários, os pagamentos acima do teto do serviço público. O presidente do Senado, Davi Alcolumbre (União-AP), tentou votar no mesmo dia, mas a sessão foi suspensa e remarcada para esta quinta (12/11), às 16h, depois de consulta aos líderes. O que diz o governo: em entrevista ao jornal O Globo, o ministro Moretti afirmou que “as escolhas alocativas serão tais que não afetarão o crescimento das despesas de saúde” e que a política de aumento do salário mínimo e o piso da educação ficam preservados. O que diz a oposição: a senadora Tereza Cristina (PP-MS) disse que cortar gastos é “meritório”, mas considerou a votação precipitada e propôs deixá-la para segunda (16/11) ou terça (17/11); Magno Malta (PL-ES) afirmou não conhecer o texto e ameaçou pedir a retirada de pauta; Marcos Rogério (PL-RO) levantou dúvidas sobre o efeito nos repasses aos estados. Há crítica também dentro do partido do governo: o deputado Lindbergh Farias (PT-RJ) declarou estar “preocupado e frustrado com essa proposta”. Se passar no Senado, o projeto ainda vai à Câmara, onde o presidente Hugo Motta (Republicanos-PB) não confirmou data. Nada está aprovado.",
+       "fontes": [
+        {
+         "nome": "Metrópoles, 12/11/2026",
+         "url": "https://www.metropoles.com/brasil/com-ajuda-de-alcolumbre-base-de-lula-tenta-evitar-desidratacao-do-ajuste"
+        },
+        {
+         "nome": "TV Sim Brasil, 12/11/2026",
+         "url": "https://tvsimbrasil.com.br/brasil/politica/noticia/2026/11/12/senado-tenta-votar-ajuste-fiscal-60-bi-alcolumbre"
+        },
+        {
+         "nome": "Brasil 247 (entrevista do ministro a O Globo), 12/11/2026",
+         "url": "https://www.brasil247.com/economia/ministro-do-planejamento-nega-estelionato-eleitoral-e-diz-que-ajuste-fiscal-preservara-direitos-sociais/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Por enquanto, nada muda no salário nem nos direitos: o projeto ainda não foi votado. Segundo o ministro do Planejamento, a regra de aumento do salário mínimo fica de fora do aperto. O efeito mais provável é indireto: contas públicas mais arrumadas tendem a ajudar na queda dos juros, o que barateia o crediário, mas isso leva tempo.",
+        "baixa": "O texto apresentado deixa saúde, educação e seguridade social fora do uso das sobras de fundos, e o governo diz que os direitos sociais estão preservados. Vale acompanhar a votação, porque o Congresso pode mudar o projeto. Não há mudança em benefício anunciada.",
+        "media": "O corte maior nos incentivos fiscais pode encarecer produtos e serviços de setores que hoje pagam menos imposto, mas o projeto não lista quais. Se o ajuste convencer o mercado, dólar e juros de financiamento tendem a ceder aos poucos.",
+        "alta": "É quem sente mais diretamente: empresas com incentivos fiscais ou com créditos tributários a compensar podem pagar mais imposto em 2027. Servidores com ganhos acima do teto entram na discussão dos supersalários. Investidores acompanham o placar, que mexe com juros e câmbio."
+       }
+      },
+      {
+       "titulo": "Maioridade penal: parecer sai em 1º de dezembro",
+       "selo": "Confirmado",
+       "texto": "A Câmara dos Deputados discute a PEC 32/2015, uma proposta de emenda à Constituição que reduz de 18 para 16 anos a idade a partir da qual a pessoa responde por crime como adulto. Na quarta (11/11), a comissão especial ouviu especialistas, e o relator, deputado Mendonça Filho (PL-PE), informou que entrega o parecer aos líderes e ao presidente da Câmara em 1º de dezembro; a votação na comissão pode ocorrer no início de dezembro. Quem defende: o relator diz que há forte apoio da população (ele citou pesquisas com média acima de 80%, sem indicar quais) e propõe que os jovens cumpram pena em unidades separadas dos presídios comuns; a juíza aposentada Ludmila Lins Grilo argumentou que aos 16 anos o jovem já vota e trabalha; o deputado Marcel van Hattem (Novo-RS) afirmou que o debate protege infratores em vez das vítimas. Quem é contra: a promotora de Justiça Danielle Tuoto disse que os presídios estão superlotados, que o sistema socioeducativo tem vagas e que adolescentes respondem por 0,9% dos atos graves; a deputada Erika Kokay (PT-DF) afirmou que as unidades socioeducativas reintegram mais do que as prisões. Pelo governo, o secretário nacional de Políticas Penais, André Garcia, disse que há 12,2 mil adolescentes internados ou em semiliberdade, contra 727 mil presos adultos. Para mudar a Constituição são necessários 308 votos de deputados e 49 de senadores, em dois turnos em cada Casa.",
+       "fontes": [
+        {
+         "nome": "Agência Câmara de Notícias, 11/11/2026",
+         "url": "https://www.camara.leg.br/noticias/1318624-relator-aponta-amadurecimento-do-debate-sobre-reducao-da-maioridade-penal-e-marca-votacao-para-dezembro"
+        },
+        {
+         "nome": "ClicRDC, 12/11/2026",
+         "url": "https://clicrdc.com.br/fique-bem-informado/cafe-com-noticias-de-quinta-feira-12-de-novembro-de-2026/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "No trabalho, nada muda. A discussão toca a segurança do bairro e a vida de famílias com filhos adolescentes: se a PEC passar, jovens de 16 e 17 anos passam a responder como adultos.",
+        "baixa": "É o grupo mais exposto dos dois lados: bairros pobres sofrem mais com a violência, e a maioria dos adolescentes internados vem de famílias de baixa renda. Vale conhecer os argumentos de cada lado antes da votação.",
+        "media": "Efeito direto pequeno no dia a dia. O tema pesa na sensação de segurança e no destino do dinheiro público, já que tanto presídios quanto unidades separadas para jovens custam aos cofres do Estado.",
+        "alta": "Efeito direto pequeno. Quem contrata aprendizes e jovens trabalhadores não tem regra nova. A mudança, se aprovada, é na lei penal, e não na trabalhista."
+       }
+      },
+      {
+       "titulo": "Na COP31, Lula cobra dos países ricos atenção ao clima",
+       "selo": "Confirmado",
+       "texto": "Na abertura da cúpula de líderes da COP31, a conferência do clima da ONU, em Antália (Turquia), na quarta (11/11), o presidente Lula afirmou que “a mudança do clima desapareceu dos discursos e dos documentos das lideranças globais” e disse que guerras e disputas comerciais tomaram o lugar do assunto. Ele defendeu duas propostas levadas pelo Brasil, uma para diminuir a dependência de petróleo, gás e carvão e outra para acabar com o desmatamento, e pediu dinheiro para o Fundo Florestas Tropicais para Sempre, criado na COP30, em Belém. Segundo o jornal O Tempo, o fundo precisa captar mais de US$ 2 bilhões até o fim do ano para começar a funcionar. Não houve anúncio de novas metas com números. Lula volta ao Brasil no dia 16.",
+       "fontes": [
+        {
+         "nome": "O Tempo, 11/11/2026",
+         "url": "https://www.otempo.com.br/politica/governo/2026/11/11/lula-na-cop31-passamos-a-falar-mais-de-armas-e-tarifas-do-que-sobrevivencia-das-futuras-geracoes"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Sem efeito imediato. No longo prazo, acordos sobre clima influenciam empregos em energia, agricultura e construção, e o preço da comida em anos de seca ou enchente.",
+        "baixa": "Quem mora em área de risco de enchente ou deslizamento é quem mais sofre com eventos extremos. O discurso em si não muda nada no curto prazo; o que conta é se o dinheiro prometido chega.",
+        "media": "Efeito indireto: secas e chuvas fortes encarecem alimentos e conta de luz. Decisões da COP só aparecem no bolso ao longo de anos.",
+        "alta": "Empresas do agronegócio, de energia e de mineração acompanham de perto: regras sobre desmatamento e combustíveis fósseis afetam exportações e acesso a crédito no exterior."
+       }
+      },
+      {
+       "titulo": "Congresso vota hoje liberação de verbas; Orçamento fica para dezembro",
+       "selo": "Confirmado",
+       "texto": "Deputados e senadores se reúnem juntos nesta quinta (12/11), às 9h, com 24 projetos na pauta. A maior parte libera dinheiro extra para ministérios e órgãos públicos, como um crédito de R$ 543 milhões para vários ministérios e outro de R$ 13 milhões para a Ciência e Tecnologia. Também está na lista o projeto que confirma no Orçamento reajustes e reestruturações de carreiras já aprovados para servidores dos três Poderes. Já o Orçamento de 2027 tem votação prevista até 17 de dezembro, segundo acordo anunciado em 3/11 pelo presidente da Comissão Mista de Orçamento, deputado Domingos Neto (PSD-CE). A proposta de diretrizes para 2027 prevê salário mínimo de pelo menos R$ 1.717, valor que ainda pode mudar.",
+       "fontes": [
+        {
+         "nome": "Senado Notícias, 11/11/2026",
+         "url": "https://www12.senado.leg.br/noticias/materias/2026/11/11/sessao-do-congresso-sera-nesta-quinta-feira"
+        },
+        {
+         "nome": "Brasil 247, 3/11/2026",
+         "url": "https://www.brasil247.com/economia/congresso-fecha-acordo-para-votar-orcamento-de-2027-ate-17-de-dezembro/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "O número a acompanhar é o salário mínimo de 2027: a proposta fala em pelo menos R$ 1.717, mas o valor final só sai com o Orçamento, em dezembro, e depende da inflação do ano.",
+        "baixa": "O salário mínimo serve de base para aposentadorias, pensões e o BPC (benefício pago a idosos e pessoas com deficiência de baixa renda). O valor definitivo ainda não está fechado.",
+        "media": "Os créditos extras mantêm serviços federais funcionando até o fim do ano. Para servidores públicos, o projeto das carreiras confirma no Orçamento reajustes que já tinham sido aprovados.",
+        "alta": "Efeito direto pequeno. Quem emprega acompanha o mínimo de 2027, que reajusta pisos salariais e contribuições."
+       }
+      }
+     ]
+    },
+    {
+     "id": "bolso",
+     "titulo": "Bolso, emprego e preços",
+     "abertura": "O que entra e o que sai do orçamento da família",
+     "itens": [
+      {
+       "titulo": "Banco Central avisa: juros altos por mais tempo",
+       "selo": "Confirmado",
+       "texto": "O Banco Central publicou a ata da última reunião do Copom, o comitê que decide a Selic, a taxa básica de juros do país, hoje em 13,75% ao ano. A ata é o documento em que o comitê explica a decisão. Nela, o BC lista os riscos para a inflação: petróleo mais caro por causa dos conflitos no Oriente Médio, o El Niño (que afeta a colheita e a conta de luz), o dólar em alta e “os impactos do fim da escala 6×1 sobre os custos do trabalho”. O comitê também diz que dúvidas sobre o controle dos gastos do governo tornam mais caro o combate à inflação. A projeção do BC é de inflação de 5,6% em 2026 e 4,7% em 2027, acima do teto da meta, que é 4,5%. A próxima reunião é em 8 e 9 de dezembro.",
+       "fontes": [
+        {
+         "nome": "O Especialista (Banco Safra), 10/11/2026",
+         "url": "https://oespecialista.safra.com.br/ata-copom-selic-alta-impactos-investidores/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Crediário, cartão e empréstimo consignado continuam caros. O BC citou o fim da escala 6x1 como um fator de custo para as empresas; isso não muda a regra da jornada, mas entra na conta dos juros.",
+        "baixa": "Inflação acima da meta pesa mais em quem gasta quase tudo com comida, gás e transporte. Fuja do rotativo do cartão e do cheque especial, os juros mais altos do mercado.",
+        "media": "Financiar carro ou imóvel segue caro e sem previsão de alívio próximo. Em compensação, aplicações que acompanham a Selic, como Tesouro Selic e CDB, continuam rendendo acima da inflação.",
+        "alta": "Juros altos favorecem quem tem dinheiro aplicado em renda fixa e encarecem o crédito das empresas, o que costuma adiar investimentos e contratações."
+       }
+      },
+      {
+       "titulo": "Inflação de outubro sai hoje",
+       "selo": "Previsão",
+       "texto": "O IBGE tem previsão de divulgar nesta quinta (12/11) o IPCA de outubro, o índice oficial de inflação do país. Esta edição fechou antes da divulgação. Para comparar: em setembro o índice subiu 0,82% no mês e acumulou 4,58% em 12 meses, um pouco acima do teto da meta (4,5%). A prévia de outubro (IPCA-15) tinha mostrado alta menor no mês, de 0,32%, com comida mais cara e conta de luz mais barata. O resultado de hoje entra na próxima edição.",
+       "fontes": [
+        {
+         "nome": "Brasil Indicadores, com dados do IBGE, consulta em 12/11/2026",
+         "url": "https://brasilindicadores.com.br/ipca/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "O IPCA é a base de muitos reajustes de salário negociados pelos sindicatos. Se a inflação de 12 meses sobe, a categoria tende a pedir aumento maior na data-base.",
+        "baixa": "Quando o índice sobe por causa da comida, o aperto é maior para quem ganha menos. Pesquisar preço e trocar itens caros da cesta ajuda a atravessar o mês.",
+        "media": "Aluguel, plano de saúde e mensalidade escolar costumam ser reajustados por índices de inflação. Vale conferir no contrato qual índice é usado.",
+        "alta": "A inflação orienta a decisão sobre juros em dezembro. Para quem investe, o número de hoje mexe com as apostas do mercado para a Selic."
+       }
+      },
+      {
+       "titulo": "Lucro do Banco do Brasil cai com calote no campo",
+       "selo": "Confirmado",
+       "texto": "O Banco do Brasil, banco controlado pelo governo federal e o que mais empresta para a agricultura, teve lucro de R$ 1,27 bilhão no terceiro trimestre (julho a setembro), 66,5% menos que um ano antes. O motivo principal, segundo o balanço, foi o aumento de dívidas não pagas por médios e grandes produtores de soja, milho e gado. A inadimplência (parcela dos empréstimos em atraso) passou de 4,51% para 6,08% em um ano. O banco cortou pela metade a previsão de lucro para 2026, agora entre R$ 9 bilhões e R$ 11 bilhões, e vai distribuir aos acionistas o mínimo obrigatório de 25% do lucro.",
+       "fontes": [
+        {
+         "nome": "ClicRDC, 12/11/2026",
+         "url": "https://clicrdc.com.br/fique-bem-informado/cafe-com-noticias-de-quinta-feira-12-de-novembro-de-2026/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Para quem tem conta ou recebe salário pelo banco, nada muda: depósitos e serviços seguem normais. Com mais calote, bancos costumam ficar mais exigentes para liberar empréstimo.",
+        "baixa": "Sem efeito direto em benefícios pagos pelo banco. O crédito para pequenos produtores e para pessoas físicas pode ficar mais difícil de aprovar.",
+        "media": "Quem tem ações do Banco do Brasil recebe menos dividendos (a parte do lucro repassada aos acionistas). Para os demais clientes, o efeito é pequeno.",
+        "alta": "Produtores rurais endividados e acionistas são os mais afetados: crédito mais restrito no campo e dividendos menores. O governo federal, maior acionista, também recebe menos."
+       }
+      }
+     ]
+    },
+    {
+     "id": "saude",
+     "titulo": "Saúde no Brasil",
+     "abertura": "Cuidados da semana",
+     "aviso": "Estas notícias informam, mas não substituem o médico. Nunca comece, pare ou troque um remédio por conta própria. Em emergência, ligue 192 (SAMU).",
+     "itens": [
+      {
+       "titulo": "Anvisa registra genérico da semaglutida para diabetes",
+       "selo": "Confirmado",
+       "texto": "A Anvisa, agência federal que autoriza remédios, registrou em 10/11 duas novas canetas injetáveis de semaglutida, a mesma substância do Ozempic: um genérico (sem nome de marca) e um similar chamado Loryvia, ambos da empresa Ávita Care. Atenção ao detalhe: os dois foram aprovados para o “tratamento de pacientes adultos com diabetes mellitus tipo 2 insuficientemente controlado”, e não para emagrecimento. A agência já aprovou 22 canetas dessa família em 2026. A notícia não informa preço nem data de chegada às farmácias. Genéricos costumam custar menos que o remédio de marca, mas isso só se confirma quando o produto estiver à venda.",
+       "fontes": [
+        {
+         "nome": "Agência Brasil, 10/11/2026",
+         "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/anvisa-registra-duas-novas-canetas-emagrecedoras-de-semaglutida"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Para quem trata diabetes tipo 2, mais concorrência pode baixar o preço do remédio nos próximos meses. Não troque de medicamento sem falar com o médico.",
+        "baixa": "Esses produtos são vendidos em farmácia; a notícia não fala em oferta pelo SUS. O tratamento do diabetes pelo SUS continua com os remédios já disponíveis nos postos.",
+        "media": "É quem mais compra essas canetas do próprio bolso. Mais opções tendem a reduzir o preço, mas o uso para emagrecer fora da indicação da bula deve ser discutido com o médico.",
+        "alta": "Efeito pequeno no orçamento. Vale o mesmo cuidado: comprar só em farmácia regular e com receita, porque há falsificações no mercado."
+       }
+      },
+      {
+       "titulo": "Mpox: 25 mil doses de vacina a caminho",
+       "selo": "Confirmado",
+       "texto": "O Ministério da Saúde informou que um lote de 25 mil doses da vacina contra a mpox (doença causada por vírus, que provoca feridas na pele) deve chegar ao Brasil nas próximas semanas. Até 10/11, o país tinha 943 casos confirmados em 2026 e uma morte, com aumento recente no Rio de Janeiro, em São Paulo, no Ceará e no Distrito Federal. A vacina não é para todos: vai para quem trabalha em laboratório com o vírus, pessoas com algumas doenças que enfraquecem a imunidade, pessoas que vivem com HIV, usuários de PrEP (remédio que previne o HIV) e quem teve contato de risco com um caso, após avaliação. São duas doses, com 28 dias de intervalo. Sintomas: feridas na pele, ínguas, febre, dor no corpo e cansaço. Na dúvida, procure o posto de saúde e evite contato próximo e dividir objetos.",
+       "fontes": [
+        {
+         "nome": "Jornal de Brasília, 11/11/2026",
+         "url": "https://jornaldebrasilia.com.br/noticias/saude/mpox-lote-de-25-mil-doses-da-vacina-deve-chegar-ao-brasil-nas-proximas-semanas"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "O risco para a população em geral é baixo. Com feridas suspeitas na pele, procure atendimento; se o médico pedir afastamento, o atestado vale como em qualquer doença.",
+        "baixa": "A vacina e o atendimento são gratuitos pelo SUS para os grupos indicados. Não é preciso pagar por exame ou dose.",
+        "media": "Quem está nos grupos indicados deve procurar o serviço onde já se trata para agendar. Para os demais, valem os cuidados de higiene e evitar contato com feridas.",
+        "alta": "O risco é o mesmo em qualquer classe: o vírus passa por contato próximo. A vacina não é vendida como rotina na rede particular."
+       }
+      },
+      {
+       "titulo": "Com a chuva, atenção à dengue: governo prevê mais casos em 2027",
+       "selo": "Previsão",
+       "texto": "O Ministério da Saúde estima aumento de 20% a 40% nos casos de dengue no ano que vem, segundo o ministro Alexandre Padilha, em entrevista de 4/11 (o ministério não divulgou os dados por trás da conta). A Fiocruz projeta cerca de 1,5 milhão de casos prováveis em 2027, sem contar o efeito do El Niño; com um El Niño forte, o Sudeste poderia ter alta de 84,9% entre setembro de 2026 e o início de 2027. Em 2026, até aquela data, foram 489.197 casos prováveis e 368 mortes confirmadas. A vacina do Butantan segue suspensa no SUS desde junho, em revisão de segurança; a vacina Qdenga continua disponível na rede pública para quem tem de 10 a 14 anos. O que cada um pode fazer: não deixar água parada em vasos, calhas, pneus e caixas-d’água destampadas.",
+       "fontes": [
+        {
+         "nome": "Estado de Minas, 4/11/2026",
+         "url": "https://www.em.com.br/bem-viver/2026/11/7533219-ministerio-da-saude-projeta-alta-da-dengue-em-2027.html"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Dengue derruba por vários dias. Febre alta com dor no corpo e atrás dos olhos pede ida ao posto; o atestado garante o afastamento.",
+        "baixa": "Bairros com coleta de lixo irregular e água armazenada em tambor têm mais focos do mosquito. Tampar os reservatórios é a medida mais barata. A vacina para 10 a 14 anos é gratuita no posto.",
+        "media": "Quintais, piscinas sem tratamento e calhas entupidas também criam o mosquito. A rede particular oferece vacina paga para outras idades; converse com o médico.",
+        "alta": "O mosquito não escolhe bairro. Casas fechadas, terrenos vazios e obras paradas merecem vistoria, inclusive os que estão alugados ou à venda."
+       }
+      }
+     ]
+    },
+    {
+     "id": "escola",
+     "titulo": "Escola e Enem",
+     "abertura": "Data que a família precisa saber",
+     "itens": [
+      {
+       "titulo": "Enem no domingo: portões fecham às 13h",
+       "selo": "Confirmado",
+       "texto": "O segundo dia do Enem, o exame que dá acesso a universidades públicas e a bolsas, é neste domingo (15/11), feriado da República. São 90 questões: 45 de matemática e 45 de ciências da natureza (química, física e biologia). Pelo horário de Brasília, os portões abrem às 12h e fecham às 13h; a prova começa às 13h30 e termina às 18h30. Leve documento oficial com foto e caneta preta de tubo transparente. O gabarito oficial sai em até dez dias úteis depois da prova, no site do Inep, o órgão que organiza o exame. A previsão para domingo é de chuva em boa parte de Minas: saia com folga.",
+       "fontes": [
+        {
+         "nome": "Muita Informação, 1/11/2026",
+         "url": "https://muitainformacao.com.br/noticias/falta-uma-semana-para-o-enem-2026-confira-horarios-documentos-e-regras-do-inep/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Quem trabalha no domingo e vai fazer a prova deve combinar a folga com antecedência. A nota vale para o Prouni e o Sisu, inclusive para cursos noturnos.",
+        "baixa": "Faltar ao segundo dia elimina o candidato do exame. Vale ver antes o trajeto de ônibus, que no feriado roda com menos horários.",
+        "media": "A nota abre a porta das federais, que não cobram mensalidade. Um plano B de transporte ajuda em dia de chuva.",
+        "alta": "O exame é igual para todos. A nota é exigida também por quem pretende vagas concorridas em universidades públicas."
+       }
+      }
+     ]
+    },
+    {
+     "id": "minas",
+     "titulo": "Minas Gerais",
+     "abertura": "O que se decide em Belo Horizonte e chega até nós",
+     "itens": [
+      {
+       "titulo": "Ministério Público: Paulo de Tarso lidera a lista com 797 votos",
+       "selo": "Confirmado",
+       "texto": "Promotores e procuradores de Minas escolheram na terça (10/11) os três nomes da lista tríplice para procurador-geral de Justiça, o chefe do Ministério Público estadual, em 2027 e 2028. O atual chefe, Paulo de Tarso Morais Filho, ficou em primeiro, com 797 votos, seguido de José Carlos Fernandes Júnior (402) e Carlos Eduardo Ferreira Pinto (379). Larissa Rodrigues Amaral teve 249 votos e ficou fora. Votaram 1.133 membros. Agora o governador tem 15 dias para escolher um dos três; se não escolher, o mais votado assume. O governador Mateus Simões (PSD) está em viagem oficial à China e volta no sábado (14/11); a lista foi entregue ao governador em exercício, o deputado Tadeu Leite (MDB), presidente da Assembleia. O mais votado nem sempre é o nomeado: em 2024, o próprio Paulo de Tarso foi escolhido tendo ficado em segundo, por um voto. O jornal O Tempo registra, com base em bastidores e sem confirmação oficial, que Carlos Eduardo seria o preferido de Simões. O mandato cobre os dois primeiros anos do governo de Cleitinho Azevedo (Republicanos), que toma posse em 6 de janeiro.",
+       "fontes": [
+        {
+         "nome": "Estado de Minas, 10/11/2026",
+         "url": "https://www.em.com.br/politica/2026/11/7536402-mpmg-define-lista-triplice-para-escolha-do-procurador-geral-de-justica.html"
+        },
+        {
+         "nome": "O Tempo, 10/11/2026",
+         "url": "https://www.otempo.com.br/politica/2026/11/10/eleicao-do-ministerio-publico-de-minas-gerais-define-lista-triplice-para-procurador-geral-de-justica"
+        },
+        {
+         "nome": "Hoje em Dia, 11/11/2026",
+         "url": "https://www.hojeemdia.com.br/genteenegocios/mateus-sim-es-tera-15-dias-para-escolher-novo-procurador-geral-de-justica-de-minas-1.1140410"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "O Ministério Público atua em temas como segurança no trabalho e qualidade de serviços públicos. Quem chefia o órgão define prioridades, mas a mudança não se sente de imediato.",
+        "baixa": "É o MP que cobra de prefeituras e do Estado vaga em creche, remédio e atendimento. Qualquer pessoa pode fazer denúncia na promotoria da sua cidade, de graça.",
+        "media": "O órgão também atua na defesa do consumidor e no combate ao desvio de dinheiro público, o que afeta a qualidade dos serviços pagos com impostos.",
+        "alta": "Empresas de mineração, construção e as que têm contratos com o Estado acompanham a escolha, porque o MP fiscaliza licenças ambientais e licitações."
+       }
+      },
+      {
+       "titulo": "Assembleia: comissão rejeita veto e mantém regras de transparência",
+       "selo": "Confirmado",
+       "texto": "Uma comissão especial da Assembleia Legislativa de Minas (ALMG) rejeitou, na segunda (9/11), o veto do governador Mateus Simões a trechos da Lei de Diretrizes Orçamentárias de 2027, a lei que orienta como o Estado monta o orçamento. Veto é quando o governador barra parte de uma lei aprovada pelos deputados. Os trechos obrigam o Estado a publicar no Portal da Transparência dados sobre apoio a estudantes e sobre serviços de saúde, a divulgar as contas do Fundo de Erradicação da Miséria e a cobrir, com dinheiro do Tesouro, a falta de recursos causada pela isenção de contribuição de militares com doenças incapacitantes. O que diz o governo: os trechos podem ser inconstitucionais, vão além do que uma lei de diretrizes pode tratar, e as informações já constam de relatórios exigidos por lei. O que diz o relator, deputado Rodrigo Lopes (União): as regras reforçam a transparência e facilitam ao cidadão acompanhar o gasto. A decisão ainda precisa ser confirmada pelo plenário, onde votam todos os deputados.",
+       "fontes": [
+        {
+         "nome": "O Tempo, 9/11/2026",
+         "url": "https://www.otempo.com.br/politica/2026/11/9/assembleia-derruba-veto-de-mateus-simoes-ao-orcamento-e-mantem-regras-de-transparencia"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Sem efeito direto no salário. Para militares estaduais com doença incapacitante e suas famílias, a regra mantida trata de quem cobre a isenção da contribuição.",
+        "baixa": "Se o plenário confirmar, ficará mais fácil conferir na internet quanto o Estado gasta no combate à miséria e no apoio a estudantes.",
+        "media": "Mais dados publicados ajudam quem acompanha o uso dos impostos. Na prática, o efeito depende de o plenário confirmar e de o Estado cumprir.",
+        "alta": "Efeito direto pequeno. A disputa mostra o tom da relação entre a Assembleia e o governo, que conta para quem negocia com o Estado."
+       }
+      },
+      {
+       "titulo": "Projeto que reduz o IPVA segue parado",
+       "selo": "Confirmado",
+       "texto": "O projeto do governador Mateus Simões que reduz em até 75% o IPVA, o imposto anual sobre veículos, foi enviado à Assembleia em 16/10 e, até 6/11, não tinha sido lido em plenário, primeiro passo para começar a andar, segundo o jornal O Tempo. Não há notícia confirmada de mudança desde então. O imposto rende cerca de R$ 12 bilhões por ano em Minas, e parte vai para as prefeituras. O governo afirma, na justificativa do projeto, que ele permitiria ao governador eleito cumprir a promessa de campanha. Cleitinho Azevedo disse, em discurso no Senado em 15/10, que Simões tenta “atropelá-lo” ao enviar projetos ligados às promessas dele. O vice-governador eleito, Luís Eduardo Falcão (Republicanos), afirmou que qualquer corte depende das finanças do Estado e que “é um direito da Assembleia aprovar ou não”. Para o motorista, por ora, nada muda: o IPVA de 2027 segue a regra atual.",
+       "fontes": [
+        {
+         "nome": "O Tempo, 6/11/2026",
+         "url": "https://www.otempo.com.br/politica/aparte/2026/11/6/projeto-de-simoes-para-reduzir-ipva-em-minas-esta-em-compasso-de-espera-na-assembleia"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Quem usa moto ou carro para trabalhar seria beneficiado por um corte, mas não há nada aprovado. Planeje o IPVA de 2027 pelo valor de sempre.",
+        "baixa": "Quem não tem veículo não paga o imposto. Como parte do IPVA vai para as prefeituras, um corte grande poderia reduzir o dinheiro de serviços municipais; o tamanho desse efeito não foi calculado oficialmente.",
+        "media": "É o grupo que mais sente o IPVA no orçamento de janeiro. Sem aprovação, vale reservar o dinheiro normalmente.",
+        "alta": "Donos de vários veículos ou de frotas economizariam mais em valores absolutos. Para o Estado e as prefeituras, o corte significa menos arrecadação."
+       }
+      },
+      {
+       "titulo": "Aviso amarelo de tempestade vale hoje em Minas",
+       "selo": "Confirmado",
+       "texto": "O Inmet, o instituto federal de meteorologia, emitiu aviso amarelo de tempestade (o nível mais baixo da escala, chamado de “perigo potencial”) para esta quinta (12/11), das 0h às 23h59, em 11 estados e no Distrito Federal, incluindo cidades de Minas. A previsão é de chuva de 20 a 30 mm por hora ou até 50 mm no dia, ventos de 40 a 60 km/h e possibilidade de granizo em alguns pontos. O risco de falta de luz, queda de galhos e alagamentos é considerado baixo. Recomendações: não se abrigar debaixo de árvores, não estacionar perto de torres e placas e tirar aparelhos da tomada durante a tempestade. Emergência: Defesa Civil (199) e Bombeiros (193). Para saber se a sua cidade está na lista, consulte o portal de avisos do Inmet.",
+       "fontes": [
+        {
+         "nome": "GC Mais, com aviso do Inmet, 11/11/2026",
+         "url": "https://gcmais.com.br/noticias/2026/11/11/inmet-emite-alerta-de-tempestade-para-11-estados-e-o-df-veja-areas-afetadas"
+        },
+        {
+         "nome": "Inmet, portal de avisos, consulta em 12/11/2026",
+         "url": "https://avisos.inmet.gov.br/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Chuva forte atrasa ônibus e pode interromper trabalho ao ar livre. Em obra e em serviço na rua, raios pedem parada imediata.",
+        "baixa": "Quem mora em encosta ou perto de córrego deve ficar atento a rachaduras e à subida da água. Em caso de perigo, saia de casa e ligue 199.",
+        "media": "Granizo e vento podem danificar carro e telhado. Garagem coberta e conferência do seguro evitam prejuízo.",
+        "alta": "Produtores rurais e donos de imóveis com áreas abertas têm mais bens expostos a vento e granizo."
+       }
+      }
+     ]
+    }
+   ],
+   "tempo": {
+    "texto": "O frio da semana passada foi embora, mas a chuva fica. Hoje e amanhã chove mais; no fim de semana, pancadas espalhadas e tarde mais quente, com 28 °C no domingo do Enem. Guarda-chuva na bolsa todos os dias.",
+    "dias": [
+     {
+      "dia": "Qui 12",
+      "min": 15,
+      "max": 26,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Sex 13",
+      "min": 16,
+      "max": 24,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Sáb 14",
+      "min": 16,
+      "max": 25,
+      "ceu": "Pancadas"
+     },
+     {
+      "dia": "Dom 15",
+      "min": 16,
+      "max": 28,
+      "ceu": "Pancadas"
+     },
+     {
+      "dia": "Seg 16",
+      "min": 17,
+      "max": 20,
+      "ceu": "Pancadas"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "HG Brasil, previsão atualizada em 11/11/2026",
+      "url": "https://hgbrasil.com/weather/places/brazil/mg/conselheiro-lafaiete"
+     }
+    ]
+   },
+   "historia": {
+    "titulo": "Três vezes em que o Brasil tentou pôr freio nos gastos",
+    "texto": "O pacote que chegou ao Senado nesta semana é mais um capítulo de uma história antiga: como impedir que o governo gaste mais do que arrecada. Em 4 de maio de 2000, no governo Fernando Henrique Cardoso, a Lei de Responsabilidade Fiscal passou a exigir de União, estados e municípios metas para as contas e limites para o gasto com pessoal. Em dezembro de 2016, no governo Michel Temer, a Emenda Constitucional 95 criou o “teto de gastos”: a despesa federal só poderia crescer o equivalente à inflação, por até 20 anos. A regra foi alterada várias vezes e acabou substituída em 30 de agosto de 2023, no governo Lula, pela Lei Complementar 200, o “arcabouço fiscal”. Por ele, o gasto pode crescer acima da inflação, mas dentro de uma faixa: no mínimo 0,6% e no máximo 2,5% ao ano, e sempre menos do que o crescimento da arrecadação. É esse limite de 2,5% que o projeto atual propõe baixar para 2% em certos anos. Cada regra nasceu de um aperto nas contas e foi ajustada quando a política ou a economia mudaram.",
+    "linha": [
+     {
+      "ano": "2000",
+      "fato": "Lei de Responsabilidade Fiscal (Lei Complementar 101): metas e limites para União, estados e municípios"
+     },
+     {
+      "ano": "2016",
+      "fato": "Emenda Constitucional 95: teto de gastos, com despesa federal corrigida só pela inflação"
+     },
+     {
+      "ano": "2023",
+      "fato": "Lei Complementar 200: arcabouço fiscal, com crescimento do gasto entre 0,6% e 2,5% acima da inflação"
+     },
+     {
+      "ano": "2026",
+      "fato": "11/11: governo propõe baixar o limite para 2% em anos de contenção; texto ainda em votação"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "Planalto, Lei Complementar nº 101, de 4/5/2000",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp101.htm"
+     },
+     {
+      "nome": "Planalto, Emenda Constitucional nº 95, de 15/12/2016",
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc95.htm"
+     },
+     {
+      "nome": "Planalto, Lei Complementar nº 200, de 30/8/2023",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp200.htm"
+     }
+    ]
+   },
+   "palavrinhas": [
+    {
+     "termo": "Ajuste fiscal",
+     "def": "Conjunto de medidas para o governo gastar menos, arrecadar mais ou as duas coisas, e assim equilibrar as contas."
+    },
+    {
+     "termo": "Arcabouço fiscal",
+     "def": "Regra em vigor desde 2023 que limita quanto o gasto do governo federal pode crescer a cada ano."
+    },
+    {
+     "termo": "Incentivo fiscal",
+     "def": "Desconto ou isenção de imposto que o governo dá a um setor, uma região ou um tipo de empresa."
+    },
+    {
+     "termo": "Supersalário",
+     "def": "Pagamento a servidor público acima do teto da Constituição, que é o salário de ministro do STF."
+    },
+    {
+     "termo": "Ata do Copom",
+     "def": "Documento em que o Banco Central explica por que decidiu subir, baixar ou manter os juros."
+    },
+    {
+     "termo": "Veto",
+     "def": "Quando presidente ou governador barra uma lei, ou parte dela, aprovada pelos parlamentares. O Legislativo pode derrubar o veto."
+    }
+   ],
+   "agenda": [
+    {
+     "quando": "Hoje (12/11)",
+     "oque": "IBGE divulga a inflação de outubro; Congresso vota créditos às 9h; Senado pode votar o pacote fiscal às 16h; aviso amarelo de tempestade"
+    },
+    {
+     "quando": "14/11",
+     "oque": "Dia Mundial do Diabetes; volta prevista do governador Mateus Simões da China"
+    },
+    {
+     "quando": "15/11",
+     "oque": "Segundo dia do Enem (portões fecham às 13h); feriado da Proclamação da República"
+    },
+    {
+     "quando": "16/11",
+     "oque": "Lula volta ao Brasil; começa o pagamento antecipado do Bolsa Família (até 18/11)"
+    },
+    {
+     "quando": "20/11",
+     "oque": "Feriado nacional da Consciência Negra"
+    },
+    {
+     "quando": "1º/12",
+     "oque": "Relator entrega o parecer da PEC da maioridade penal"
+    },
+    {
+     "quando": "8 e 9/12",
+     "oque": "Reunião do Copom decide os juros"
+    },
+    {
+     "quando": "Até 17/12",
+     "oque": "Previsão de votação do Orçamento de 2027 no Congresso"
+    }
+   ],
+   "conversa": [
+    "O pacote fiscal corta incentivos de impostos e reduz o ritmo de crescimento dos gastos. Quando o dinheiro público não dá para tudo, quem deve decidir o que fica de fora, e com base em quê?",
+    "Senadores pediram mais tempo para ler um projeto que mexe em dezenas de bilhões. O que pesa mais numa democracia: decidir rápido ou decidir com todos sabendo o que votam?",
+    "Na maioridade penal, um lado fala das vítimas e o outro, da recuperação do jovem. É possível uma lei atender às duas preocupações ao mesmo tempo? O que ela precisaria ter?",
+    "A Assembleia de Minas quer mais dados de gastos na internet; o governo diz que eles já existem em relatórios. Informação publicada, mas difícil de achar, cumpre o dever de transparência?"
+   ],
+   "fechamento": "Terra Brasilis, edição nº 3, fechada na manhã de 12/11/2026. Uma publicação do Xeque News."
+  },
+  {
+   "numero": 2,
+   "data": "2026-11-10",
+   "tempoLeitura": 10,
+   "capa": {
+    "chapeu": "Seu dinheiro",
+    "titulo": "Bolsa Família cai mais cedo: entre 16 e 18 de novembro",
+    "linhaFina": "O governo antecipou o pagamento de novembro e o benefício mínimo agora é de R$ 691. Em Brasília, o STF deixou para fevereiro de 2027 a discussão sobre ministros citados no caso do Banco Master. Em Minas, o frio fora de época segue até quarta. E em Lafaiete, o Hospital Regional deve ficar para 2027."
+   },
+   "citacao": "“Minas são muitas.” (Guimarães Rosa)",
+   "recado": "Esta é a primeira edição da manhã, feita para sair cedo todos os dias. As notícias que já estavam na edição nº 1 (fim da escala 6x1, juros parados, maioridade penal, Enem) aparecem aqui só quando houve novidade. E um esclarecimento: a data de posse de Cleitinho publicada na edição nº 1, 6 de janeiro, está certa. Desde a Emenda Constitucional 111, de 2021, os governadores eleitos em 2026 assumem em 6 de janeiro, e não mais no dia 1º.",
+   "resumo": [
+    {
+     "tema": "Bolsa Família",
+     "texto": "Pagamento de novembro adiantado para 16, 17 e 18/11, conforme o final do NIS. Benefício mínimo subiu para R$ 691."
+    },
+    {
+     "tema": "STF",
+     "texto": "A discussão sobre ministros citados no caso do Banco Master só volta em fevereiro de 2027."
+    },
+    {
+     "tema": "Lula",
+     "texto": "Na COP31, na Turquia, discursa nesta quarta (11/11) e volta ao Brasil no dia 16. O decreto da 6x1 espera a volta dele."
+    },
+    {
+     "tema": "Minas",
+     "texto": "Promotores escolhem hoje (10/11) os três nomes para chefiar o Ministério Público. Frio fora de época até quarta."
+    },
+    {
+     "tema": "Saúde",
+     "texto": "Sábado (14/11) é o Dia Mundial do Diabetes, com teste de glicose grátis na Praça do Cristo, em Lafaiete."
+    },
+    {
+     "tema": "Lafaiete",
+     "texto": "Hospital Regional deve abrir só em 2027. Furtos não caíram na cidade, ao contrário do resto de Minas."
+    }
+   ],
+   "numeros": [
+    {
+     "rotulo": "Bolsa Família mínimo",
+     "valor": "R$ 691",
+     "nota": "era R$ 600; reajuste de 15,04% desde outubro",
+     "fonte": "Correio de Minas (8/11), com dados do MDS"
+    },
+    {
+     "rotulo": "Juros básicos",
+     "valor": "13,75%",
+     "nota": "ao ano; próxima decisão em 8 e 9/12",
+     "fonte": "Banco Central, via Seu Dinheiro (4/11)"
+    },
+    {
+     "rotulo": "Furtos em Lafaiete",
+     "valor": "643",
+     "nota": "de janeiro a julho de 2026 (637 em 2025)",
+     "fonte": "Correio de Minas (9/11)"
+    },
+    {
+     "rotulo": "Máxima de hoje",
+     "valor": "13 °C",
+     "nota": "em Lafaiete, com chuva",
+     "fonte": "HG Brasil (9/11)"
+    }
+   ],
+   "cadernos": [
+    {
+     "id": "brasilia",
+     "titulo": "Brasília",
+     "abertura": "O que o governo, o Congresso e o STF decidem, e como isso chega na vida da gente",
+     "itens": [
+      {
+       "titulo": "Caso Banco Master: STF deixa para 2027",
+       "selo": "Confirmado",
+       "texto": "O Supremo Tribunal Federal (STF) só deve voltar a discutir, em fevereiro de 2027, se abre ou não investigação sobre ministros citados em mensagens do celular de Daniel Vorcaro, ex-dono do Banco Master, banco fechado pelo Banco Central em 2025. O ministro Flávio Dino pediu mais tempo para estudar o caso (o chamado “pedido de vista”) em 15 de setembro e tem até 15 de dezembro para devolvê-lo. Como o Judiciário entra em recesso e só volta em fevereiro, o assunto fica para o ano que vem. Os ministros Alexandre de Moraes e André Mendonça pediram, um contra o outro, investigações. Importante: nesta fase não se discute punição, só se haverá investigação. Ninguém foi condenado.",
+       "fontes": [
+        {
+         "nome": "Diario de Pernambuco/Correio Braziliense, STF deixa caso Master para 2027 (9/11)",
+         "url": "https://www.diariodepernambuco.com.br/politica/2026/11/11728670-stf-deixa-para-2027-discussao-sobre-ministros-e-caso-banco-master.html"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "No dia a dia, nada muda já: não há multa, imposto ou regra nova. O que pesa é a confiança: quando um caso grande demora, cresce a sensação de que a Justiça é lenta para os de cima.",
+        "baixa": "Efeito direto pequeno: o caso não mexe em benefício, salário ou preço. Vale lembrar que, em qualquer banco, o FGC (Fundo Garantidor de Créditos) protege depósitos e aplicações como poupança e CDB até R$ 250 mil por pessoa.",
+        "media": "Para quem investe em CDB de bancos pequenos que pagam juros altos, o caso lembra a regra: o FGC cobre até R$ 250 mil por pessoa e por banco. Acima disso, o risco é seu.",
+        "alta": "Quem tinha valores acima do limite do FGC em bancos médios é quem mais sente casos assim. A demora no STF prolonga a incerteza jurídica, que costuma deixar investidores mais cautelosos."
+       }
+      },
+      {
+       "titulo": "Lula na COP31 e a espera pelo novo ministro da Fazenda",
+       "selo": "Confirmado",
+       "texto": "Lula embarcou na segunda (9/11) para a COP31, a conferência do clima da ONU, em Antália, na Turquia. A cúpula com os chefes de governo é nesta quarta e quinta (11 e 12/11). Depois ele vai às Filipinas e volta ao Brasil no dia 16. Enquanto isso, o mercado financeiro espera o anúncio de quem será o ministro da Fazenda no novo mandato, que começa em janeiro. Por causa da viagem, o decreto com os detalhes do fim da escala 6x1 só deve sair depois da volta do presidente.",
+       "fontes": [
+        {
+         "nome": "NeoFeed, agenda de Lula e espera pelo ministro da Fazenda (6/11)",
+         "url": "https://neofeed.com.br/experts/lula-parte-para-a-turquia-e-deixa-o-mercado-em-modo-de-espera-pelo-titular-da-fazenda/"
+        },
+        {
+         "nome": "O Tempo/Folhapress, decreto da 6x1 adiado (9/11)",
+         "url": "https://www.otempo.com.br/economia/2026/11/9/decreto-que-regulamenta-fim-da-6x1-tem-publicacao-adiada-e-so-deve-sair-apos-retorno-de-lula"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "O decreto que detalha o fim da escala 6x1 só deve sair depois do dia 16. Até lá, a jornada de quem trabalha seis dias e folga um não muda: vale o que está no contrato e na convenção da categoria.",
+        "baixa": "O nome do ministro da Fazenda indica como o governo vai tratar gastos e programas sociais em 2027. Por ora não há anúncio, então nada muda no Bolsa Família nem em outros benefícios.",
+        "media": "A espera pelo ministro mexe com o dólar e os juros dos financiamentos, porque o mercado tenta adivinhar a política econômica. Em compras grandes a prazo, vale comparar taxas antes de fechar.",
+        "alta": "Empresários e investidores acompanham o nome da Fazenda de perto: ele sinaliza impostos, juros e regras. Para empresas, o decreto do 6x1 também vai definir custos de escala e contratação."
+       }
+      },
+      {
+       "titulo": "Por que um pedido de vista atrasa tanto",
+       "selo": "Explicação",
+       "texto": "No STF, qualquer ministro pode pedir para levar o processo e estudá-lo melhor antes de votar. Enquanto isso, o julgamento fica parado. Há prazo para devolver, mas, se ele cai perto das férias da Justiça, o caso só volta no ano seguinte. É uma regra comum nos tribunais, mas muitas vezes é criticada por deixar decisões importantes esperando.",
+       "fontes": [],
+       "impacto": {
+        "trabalhador": "Pedidos de vista também atrasam processos que tocam a vida de quem trabalha, como ações sobre direitos trabalhistas e previdência que chegam ao STF.",
+        "baixa": "Quem depende de uma decisão da Justiça para receber benefício costuma sentir mais a demora, porque não tem reserva para esperar.",
+        "media": "Ações sobre planos de saúde, impostos e consumo também podem ficar paradas por um pedido de vista. Saber que a regra existe ajuda a entender por que “o processo não anda”.",
+        "alta": "Quem tem causas de grande valor costuma pagar advogados para acompanhar os prazos. Para empresas, a demora significa ficar mais tempo sem saber qual regra vai valer."
+       }
+      }
+     ]
+    },
+    {
+     "id": "bolso",
+     "titulo": "Bolso, emprego e preços",
+     "abertura": "O que entra e o que sai do orçamento da família",
+     "itens": [
+      {
+       "titulo": "Bolsa Família de novembro sai antes, e com valor maior",
+       "selo": "Confirmado",
+       "texto": "O pagamento de novembro foi antecipado e será feito em só três dias: NIS terminado em 1 recebe em 16/11; terminado em 2, em 17/11; de 3 a 0, em 18/11. Antes, ia até o dia 30. Não precisa pedir nada: cai sozinho para quem já recebe. Desde outubro o programa teve reajuste de 15,04%, o primeiro desde 2023: o mínimo por família passou de R$ 600 para R$ 691, e o adicional por criança de até 6 anos é de R$ 173. O governo diz que a antecipação, que também vale para dezembro, é uma prevenção contra os efeitos do El Niño forte que vem aí. O NIS é o número que aparece no cartão do Bolsa Família.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, Bolsa Família antecipado (8/11)",
+         "url": "https://correiodeminas.com.br/2026/11/08/bolsa-familia-de-novembro-chega-a-r-1-100-apos-novo-reajuste-e-sera-pago-antes-da-data/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Se a família recebe o Bolsa Família, o dinheiro de novembro cai entre 16 e 18/11, sem precisar pedir nada. Quem tem carteira assinada pode continuar no programa se a renda por pessoa da casa estiver dentro do limite da regra de proteção.",
+        "baixa": "É quem mais sente: o mínimo passou de R$ 600 para R$ 691 por família, mais R$ 173 por criança de até 6 anos, e o dinheiro chega antes. Ajuda a organizar as contas do fim do mês.",
+        "media": "Não recebe o benefício, mas sente um pouco no comércio do bairro: dinheiro que cai mais cedo costuma movimentar mercado, farmácia e lojas antes do fim do mês.",
+        "alta": "Efeito direto quase nenhum. Indiretamente, o reajuste aumenta o gasto do governo, tema que pesa nas discussões sobre contas públicas, impostos e juros."
+       }
+      },
+      {
+       "titulo": "Juros parados e inflação de outubro a caminho",
+       "selo": "Previsão",
+       "texto": "A Selic segue em 13,75% ao ano até, pelo menos, a reunião de 8 e 9 de dezembro. O próximo número importante é a inflação oficial de outubro (o IPCA), que o IBGE divulga nos próximos dias. A prévia (IPCA-15) mostrou 4,62% em 12 meses, acima do teto da meta (4,5%), com comida mais cara e conta de luz mais barata. Se a inflação vier alta, fica mais difícil os juros voltarem a cair logo.",
+       "fontes": [
+        {
+         "nome": "BP Money, IPCA-15 de outubro (23/10)",
+         "url": "https://bpmoney.com.br/economia/ipca-15-desacelera-para-032-em-outubro-mas-inflacao-em-12-meses-sobe-a-462/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Com a Selic em 13,75%, crediário e cartão continuam caros. A prévia da inflação mostrou comida mais cara: é a despesa que mais pesa no salário de quem ganha menos.",
+        "baixa": "Comida mais cara pesa mais em quem gasta quase toda a renda no mercado. Evite o rotativo do cartão e o cheque especial, que têm os juros mais altos do país.",
+        "media": "Financiamento de carro e casa segue caro. Por outro lado, dinheiro guardado em aplicações que seguem a Selic, como Tesouro Selic e CDB, continua rendendo bem.",
+        "alta": "Juros altos favorecem quem tem muito dinheiro aplicado em renda fixa. Para quem tem empresa, o crédito caro adia investimentos e contratações."
+       }
+      }
+     ]
+    },
+    {
+     "id": "saude",
+     "titulo": "Saúde no Brasil",
+     "abertura": "Cuidados da semana",
+     "aviso": "Estas notícias informam, mas não substituem o médico. Nunca comece, pare ou troque um remédio por conta própria. Em emergência, ligue 192 (SAMU).",
+     "itens": [
+      {
+       "titulo": "Sábado é o Dia Mundial do Diabetes",
+       "selo": "Confirmado",
+       "texto": "O 14 de novembro é o Dia Mundial do Diabetes. O diabetes é quando o açúcar no sangue fica alto demais, e muita gente tem sem saber, porque no começo quase não dá sinal. O exame de glicose é simples e o SUS faz nos postos de saúde. Em Lafaiete, no sábado (14/11), das 9h às 16h, a Praça do Cristo tem ação gratuita com teste de glicose, medida de pressão e orientação sobre alimentação e cuidado com os pés.",
+       "fontes": [
+        {
+         "nome": "Correio da Cidade, ação sobre diabetes em Lafaiete",
+         "url": "https://www.jornalcorreiodacidade.com.br/noticias/51639-lafaiete-tera-acao-gratuita-de-prevencao-e-orientacao-sobre-diabetes"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Diabetes descoberto cedo evita afastamento do trabalho por complicações. O exame de glicose é rápido e gratuito no posto de saúde.",
+        "baixa": "O teste é de graça no SUS e na ação de sábado na Praça do Cristo, em Lafaiete. Não precisa de plano de saúde.",
+        "media": "Mesmo quem tem plano pode aproveitar a ação gratuita para medir glicose e pressão sem marcar consulta.",
+        "alta": "O risco é o mesmo para todos: dinheiro não impede o diabetes. Sedentarismo e alimentação com muito açúcar pesam em qualquer classe."
+       }
+      },
+      {
+       "titulo": "Frio fora de época: atenção com idosos e crianças",
+       "selo": "Explicação",
+       "texto": "Com o frio e a chuva desta semana, aumentam as gripes e resfriados. Agasalhe bem os mais velhos e as crianças, mantenha a casa arejada mesmo no frio e procure o posto de saúde se houver febre alta, falta de ar ou cansaço fora do comum.",
+       "fontes": [],
+       "impacto": {
+        "trabalhador": "Quem sai cedo para trabalhar ou trabalha na rua (obra, entrega, feira) sente mais o frio com chuva. Roupa em camadas e uma muda seca na bolsa ajudam.",
+        "baixa": "Casas com goteira, pouca roupa de frio ou cobertor sofrem mais. A Defesa Civil e a assistência social da prefeitura podem ser procuradas em caso de necessidade.",
+        "media": "Gastos com aquecedor e chuveiro mais quente aumentam a conta de luz. Vale fechar frestas antes de ligar aparelhos.",
+        "alta": "O cuidado com idosos e crianças é o mesmo. Quem emprega cuidadores, porteiros ou domésticas pode ajustar horários nos dias de chuva forte."
+       }
+      }
+     ]
+    },
+    {
+     "id": "escola",
+     "titulo": "Escola e Enem",
+     "abertura": "Data que a família precisa saber",
+     "itens": [
+      {
+       "titulo": "Faltam cinco dias para a segunda prova do Enem",
+       "selo": "Confirmado",
+       "texto": "No domingo (15/11), feriado da República, é o segundo dia do Enem, com matemática e ciências da natureza. Leve documento oficial com foto e caneta preta de tubo transparente, e chegue cedo: os portões fecham na hora certa. Se o tempo estiver chuvoso, saia com mais folga.",
+       "fontes": [
+        {
+         "nome": "Muita Informação, regras do Enem 2026 (1/11)",
+         "url": "https://muitainformacao.com.br/noticias/falta-uma-semana-para-o-enem-2026-confira-horarios-documentos-e-regras-do-inep/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Quem trabalha e estuda pode usar a nota do Enem para tentar o Prouni (bolsas em faculdades particulares) e o Sisu (vagas em federais), inclusive em cursos à noite.",
+        "baixa": "Para famílias de baixa renda, o Enem é a principal porta para bolsas do Prouni e financiamento pelo Fies. Faltar à prova significa esperar mais um ano.",
+        "media": "A nota do Enem dá acesso às federais, que são gratuitas, e diminui o gasto da família com mensalidades.",
+        "alta": "Para quem pode pagar faculdade particular, a nota pesa menos, mas segue sendo a entrada para as universidades públicas mais concorridas."
+       }
+      }
+     ]
+    },
+    {
+     "id": "minas",
+     "titulo": "Minas Gerais",
+     "abertura": "O que se decide em Belo Horizonte e chega até nós",
+     "itens": [
+      {
+       "titulo": "Ministério Público escolhe hoje os três nomes para seu chefe",
+       "selo": "Confirmado",
+       "texto": "Nesta terça (10/11), das 8h às 17h, promotores e procuradores de Minas votam pela internet para formar a lista tríplice, os três mais votados para procurador-geral de Justiça, o chefe do Ministério Público estadual, em 2027 e 2028. São quatro candidatos: Carlos Eduardo Ferreira Pinto, José Carlos Fernandes Júnior, Larissa Rodrigues Amaral e o atual procurador-geral, Paulo de Tarso Morais Filho, que tenta mais um mandato. Depois, o governador tem 15 dias para escolher um dos três. O Ministério Público é quem acusa nos processos e fiscaliza prefeituras e governo.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, eleição no MPMG (9/11)",
+         "url": "https://correiodeminas.com.br/2026/11/09/membros-do-mpmg-elegem-amanha-10-lista-triplice-para-escolha-do-procurador-geral-de-justica-entrerriano-concorre-a-segundo-mandato/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "O Ministério Público defende direitos coletivos, como segurança no trabalho e serviços públicos. Quem comanda o órgão influencia quais casos andam mais rápido.",
+        "baixa": "É o MP que cobra das prefeituras vagas em creche, remédio e atendimento de saúde. O perfil do novo chefe pesa nessas ações.",
+        "media": "O MP também atua em defesa do consumidor e contra a corrupção na gestão pública, o que afeta a qualidade dos serviços pagos com seus impostos.",
+        "alta": "Empresas que lidam com o Estado, licenças ambientais e mineração (forte em Minas e na região de Lafaiete) acompanham de perto quem vai liderar o MP."
+       }
+      },
+      {
+       "titulo": "Frio de inverno em novembro, até quarta",
+       "selo": "Confirmado",
+       "texto": "Uma massa de ar frio derrubou as temperaturas em Minas. O Inmet avisou sobre queda de 5 °C ou mais, e mais de 500 cidades mineiras ficaram sob aviso de chuva forte, vento e possível granizo. Em Belo Horizonte, seis regiões tiveram alerta de risco geológico (deslizamento). O frio deve continuar pelo menos até quarta (11/11). A Defesa Civil pede cuidado com árvores que podem cair e com banhos de cachoeira, onde a água pode subir de repente.",
+       "fontes": [
+        {
+         "nome": "Correio da Cidade, frente fria e alerta de tempestades (9/11)",
+         "url": "https://www.jornalcorreiodacidade.com.br/noticias/51671-frente-fria-derruba-temperaturas-em-lafaiete-e-traz-alerta-de-tempestades"
+        },
+        {
+         "nome": "Correio de Minas, alerta da Defesa Civil (8/11)",
+         "url": "https://correiodeminas.com.br/2026/11/08/defesa-civil-divulga-previsao-do-tempo-e-alerta-populacao-para-riscos-de-queda-de-arvores-e-de-banho-em-cachoeiras/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Chuva forte e risco de deslizamento atrasam ônibus e podem parar obras. Quem trabalha ao ar livre deve seguir as orientações de segurança da empresa.",
+        "baixa": "Quem mora em encosta ou perto de córrego corre mais risco com chuva forte. Em caso de rachaduras ou barulho na terra, saia de casa e ligue para a Defesa Civil (199).",
+        "media": "Granizo pode estragar carro e telhado: vale guardar o carro na garagem e conferir o que o seguro cobre.",
+        "alta": "Produtores rurais e donos de imóveis com mais bens expostos podem ter prejuízos com granizo e vento. Seguro agrícola e residencial ganham importância."
+       }
+      },
+      {
+       "titulo": "Cleitinho visita Lafaiete",
+       "selo": "Confirmado",
+       "texto": "O governador eleito Cleitinho Azevedo (Republicanos) esteve na segunda (9/11) com o prefeito Leandro Chagas, em Lafaiete. Os dois falaram de investimentos para a cidade, e o Hospital Regional foi citado como uma das primeiras grandes entregas do próximo governo. Não foram anunciados valores nem datas.",
+       "fontes": [
+        {
+         "nome": "Correio da Cidade (9/11)",
+         "url": "https://www.jornalcorreiodacidade.com.br/noticias/51674-leandro-chagas-recebe-cleitinho-e-discute-novos-investimentos-para-lafaiete"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Se o Hospital Regional for priorizado, pode haver mais vagas de obra agora e, depois, empregos na área de saúde. Por enquanto, não há valores nem datas anunciados.",
+        "baixa": "Um hospital regional funcionando pode evitar viagens a Belo Horizonte para tratamento pelo SUS. Mas, até haver data oficial, continua só promessa.",
+        "media": "Mais leitos na região aliviariam os hospitais e o pronto-socorro, mesmo para quem tem plano de saúde.",
+        "alta": "Investimento do Estado na cidade costuma valorizar imóveis e atrair negócios, mas tudo depende de verba no orçamento de 2027."
+       }
+      }
+     ]
+    }
+   ],
+   "tempo": {
+    "texto": "Hoje e quarta seguem frios e chuvosos. A partir de quinta esquenta aos poucos, mas a chuva continua até o fim de semana. Guarda-chuva e agasalho.",
+    "dias": [
+     {
+      "dia": "Ter 10",
+      "min": 12,
+      "max": 13,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Qua 11",
+      "min": 13,
+      "max": 18,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Qui 12",
+      "min": 14,
+      "max": 21,
+      "ceu": "Pancadas"
+     },
+     {
+      "dia": "Sex 13",
+      "min": 16,
+      "max": 23,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Sáb 14",
+      "min": 16,
+      "max": 24,
+      "ceu": "Chuva"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "HG Brasil, previsão atualizada em 9/11",
+      "url": "https://hgbrasil.com/weather/places/brazil/mg/conselheiro-lafaiete"
+     }
+    ]
+   },
+   "historia": {
+    "titulo": "A bandeira que nasceu quatro dias depois da República",
+    "texto": "Na semana do 15 de novembro, vale lembrar que a bandeira verde-amarela com o círculo azul e as estrelas é filha da República. Ela foi criada pelo Decreto nº 4, de 19 de novembro de 1889, apenas quatro dias depois da queda do Império. O desenho foi idealizado por Raimundo Teixeira Mendes e Miguel Lemos, com o astrônomo Manuel Pereira Reis, e pintado por Décio Villares. O lema “Ordem e Progresso” vem das ideias do filósofo francês Auguste Comte, o positivismo, muito forte entre os militares republicanos. As estrelas mostram o céu do Rio de Janeiro na manhã de 15 de novembro de 1889, e cada uma representa um estado. Por isso, o 19 de novembro é o Dia da Bandeira.",
+    "linha": [
+     {
+      "ano": "1822",
+      "fato": "Brasil independente adota a bandeira do Império, com a coroa"
+     },
+     {
+      "ano": "1889",
+      "fato": "15/11: Proclamação da República; 19/11: nova bandeira"
+     },
+     {
+      "ano": "1971",
+      "fato": "Lei nº 5.700 define as regras de uso da bandeira e dos símbolos nacionais"
+     },
+     {
+      "ano": "1992",
+      "fato": "Lei atualiza a bandeira para 27 estrelas"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "Wikipédia, Bandeira do Brasil",
+      "url": "https://pt.wikipedia.org/wiki/Bandeira_do_Brasil"
+     }
+    ]
+   },
+   "palavrinhas": [
+    {
+     "termo": "NIS",
+     "def": "Número de Identificação Social. É o número de quem está no Cadastro Único e define o dia do pagamento do Bolsa Família."
+    },
+    {
+     "termo": "Pedido de vista",
+     "def": "Quando um juiz pede mais tempo para estudar um processo antes de votar. O julgamento fica parado enquanto isso."
+    },
+    {
+     "termo": "Lista tríplice",
+     "def": "Lista com os três nomes mais votados por uma categoria, da qual o governante escolhe um para o cargo."
+    },
+    {
+     "termo": "Ministério Público",
+     "def": "Órgão que acusa nos processos criminais e defende os interesses da sociedade, fiscalizando governos e empresas."
+    },
+    {
+     "termo": "Positivismo",
+     "def": "Corrente de ideias do francês Auguste Comte, que pregava ordem social e progresso pela ciência. Inspirou o lema da bandeira."
+    }
+   ],
+   "agenda": [
+    {
+     "quando": "Hoje (10/11)",
+     "oque": "Eleição da lista tríplice do Ministério Público de Minas; Câmara ouve especialistas sobre maioridade penal"
+    },
+    {
+     "quando": "11 e 12/11",
+     "oque": "Cúpula de líderes da COP31, com Lula; Orçamento de 2027 apresentado no Congresso (11/11)"
+    },
+    {
+     "quando": "13/11",
+     "oque": "Último dia do cadastro de creche e pré-escola em Lafaiete (app Lafaiete Digital)"
+    },
+    {
+     "quando": "14/11",
+     "oque": "Dia Mundial do Diabetes: ação na Praça do Cristo (9h às 16h); BR-040 fecha das 15h às 16h em Congonhas"
+    },
+    {
+     "quando": "15/11",
+     "oque": "Segundo dia do Enem; feriado da Proclamação da República"
+    },
+    {
+     "quando": "16 a 18/11",
+     "oque": "Pagamento antecipado do Bolsa Família de novembro"
+    },
+    {
+     "quando": "19/11",
+     "oque": "Dia da Bandeira"
+    },
+    {
+     "quando": "20/11",
+     "oque": "Feriado nacional da Consciência Negra"
+    }
+   ],
+   "conversa": [
+    "Quem você conhece que recebe o Bolsa Família? Receber mais cedo ajuda a família a se organizar?",
+    "Você acha certo um juiz poder segurar um processo por meses para estudar melhor? Qual seria um prazo justo?",
+    "Se você fosse desenhar uma bandeira para Lafaiete, o que colocaria nela?"
+   ],
+   "fechamento": "Terra Brasilis, edição nº 2, fechada na manhã de 10/11/2026."
+  },
+  {
+   "numero": 1,
+   "data": "2026-11-10",
+   "tempoLeitura": 11,
+   "capa": {
+    "chapeu": "Primeira edição",
+    "titulo": "Juros, jornada e maioridade penal: o Brasil depois da eleição",
+    "linhaFina": "Em Brasília, o fim da escala 6x1 já tem data para começar, os juros pararam de cair e a Câmara quer votar a redução da maioridade penal até o fim do mês. Em Minas, o governador eleito Cleitinho começa a mostrar o que pretende. E em Conselheiro Lafaiete a semana é de chuva todos os dias, tapa-buracos parado e mais de 70 vagas no Sine."
+   },
+   "citacao": "Um país se faz com homens e livros, escreveu Monteiro Lobato.",
+   "recado": "Bem-vindo ao Terra Brasilis, o jornal que olha só para o Brasil, para Minas e para Conselheiro Lafaiete. O nome vem dos mapas antigos: “Terra Brasilis” é como os cartógrafos chamavam a nossa terra no começo do século XVI. As notícias do mundo ficam com o Jornal de Cada Dia e o Observatório; aqui, o assunto é a nossa casa. Cada notícia traz a fonte e a data.",
+   "resumo": [
+    {
+     "tema": "Trabalho",
+     "texto": "O fim da escala 6x1 começa em meados de dezembro: no máximo 42 horas por semana e duas folgas, sem cortar salário. Falta o decreto com os detalhes."
+    },
+    {
+     "tema": "Juros",
+     "texto": "O Banco Central parou de cortar juros: a Selic ficou em 13,75% ao ano. Crédito e prestações não devem baratear tão cedo."
+    },
+    {
+     "tema": "Congresso",
+     "texto": "O relator da redução da maioridade penal quer apresentar o texto até o fim de novembro. O Orçamento de 2027 é apresentado nesta quarta (11/11)."
+    },
+    {
+     "tema": "Escola",
+     "texto": "Segunda prova do Enem no domingo (15/11), com mais de 5 milhões de inscritos."
+    },
+    {
+     "tema": "Minas",
+     "texto": "O governador eleito Cleitinho quer proibir dinheiro do Estado para shows nas cidades. Ele toma posse em janeiro."
+    },
+    {
+     "tema": "Lafaiete",
+     "texto": "Chuva todos os dias até sábado. Tapa-buracos parado, UPA com atestado só em casos graves e 73 vagas no Sine."
+    }
+   ],
+   "numeros": [
+    {
+     "rotulo": "Juros básicos",
+     "valor": "13,75%",
+     "nota": "ao ano; Copom parou os cortes em 4/11",
+     "fonte": "Banco Central, via Seu Dinheiro (4/11)"
+    },
+    {
+     "rotulo": "Inflação",
+     "valor": "4,62%",
+     "nota": "em 12 meses na prévia de outubro, acima do teto da meta (4,5%)",
+     "fonte": "IBGE, IPCA-15 (23/10)"
+    },
+    {
+     "rotulo": "Nova jornada",
+     "valor": "42 horas",
+     "nota": "máximo semanal a partir de dezembro de 2026",
+     "fonte": "Emenda promulgada em 16/10"
+    },
+    {
+     "rotulo": "Vagas no Sine",
+     "valor": "73",
+     "nota": "em Conselheiro Lafaiete nesta segunda (9/11)",
+     "fonte": "Lafaiete Agora (9/11)"
+    }
+   ],
+   "cadernos": [
+    {
+     "id": "brasilia",
+     "titulo": "Brasília",
+     "abertura": "O que o governo e o Congresso decidem, e como isso chega na vida da gente",
+     "itens": [
+      {
+       "titulo": "Lula reeleito e um Congresso dividido",
+       "selo": "Confirmado",
+       "texto": "O TSE confirmou: Lula (PT) teve 51,79% dos votos válidos e Flávio Bolsonaro (PL), 48,21%, no segundo turno de 25 de outubro. O novo mandato começa em janeiro de 2027. O PL elegeu a maior bancada da Câmara, com 121 dos 513 deputados. Ou seja: o presidente vai precisar negociar muito para aprovar o que quer.",
+       "fontes": [
+        {
+         "nome": "TSE, resultado do 2º turno (25/10)",
+         "url": "https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/presidente-do-tse-anuncia-reeleicao-de-lula-e-faz-balanco-do-2o-turno-das-eleicoes-2026"
+        }
+       ]
+      },
+      {
+       "titulo": "Fim da escala 6x1: o que muda e quando",
+       "selo": "Confirmado",
+       "texto": "A mudança na Constituição foi promulgada em 16 de outubro. A partir de meados de dezembro, quem trabalha com carteira assinada passa a ter no máximo 42 horas por semana e duas folgas, de preferência com o domingo. Em dezembro de 2027 o limite cai para 40 horas. O salário não pode diminuir. O decreto com os detalhes, como a contagem das folgas em quem trabalha por escala, era esperado para 9/11, mas foi adiado para depois de 16/11.",
+       "fontes": [
+        {
+         "nome": "Brasil de Fato, emenda promulgada (16/10)",
+         "url": "https://www.brasildefato.com.br/2026/10/16/promulgada-escala-5x2-passa-a-valer-na-semana-anterior-ao-natal/"
+        },
+        {
+         "nome": "O Tempo/Folhapress, decreto adiado (9/11)",
+         "url": "https://www.otempo.com.br/economia/2026/11/9/decreto-que-regulamenta-fim-da-6x1-tem-publicacao-adiada-e-so-deve-sair-apos-retorno-de-lula"
+        }
+       ]
+      },
+      {
+       "titulo": "Maioridade penal: Câmara quer votar até o fim do mês",
+       "selo": "Confirmado",
+       "texto": "A proposta que reduz a maioridade penal, a idade a partir da qual alguém responde a um crime como adulto (hoje, 18 anos), já passou pela CCJ e está numa comissão especial. O relator, deputado Mendonça Filho (PL-PE), defende 16 anos e quer apresentar o texto até o fim de novembro; o PL quer 14 anos para crimes hediondos. Nesta terça e quarta (10 e 11/11), os deputados ouvem especialistas. A ideia é mandar ao Senado na primeira semana de dezembro. Por ser mudança na Constituição, precisa de 3/5 dos votos, em dois turnos, em cada Casa.",
+       "fontes": [
+        {
+         "nome": "Diário de Pernambuco, relator quer texto no fim de novembro (4/11)",
+         "url": "https://www.diariodepernambuco.com.br/politica/2026/11/11728374-reducao-da-maioridade-penal-relator-na-camara-quer-apresentar-texto-no-fim-de-novembro.html"
+        },
+        {
+         "nome": "ND Mais, a pauta do Congresso na semana (9/11)",
+         "url": "https://ndmais.com.br/politica/maioridade-penal-congresso-debate-reducao-nesta-semana/"
+        }
+       ]
+      },
+      {
+       "titulo": "Apostas on-line e Orçamento de 2027",
+       "selo": "Confirmado",
+       "texto": "Em setembro, Lula assinou uma medida provisória que proíbe as “bets” e jogos como o “tigrinho”. Ela vale na hora, mas perde a validade se o Congresso não votar a tempo; nesta semana o governo tenta montar a comissão que vai analisá-la. Na quarta (11/11), o ministro do Planejamento, Bruno Moretti, apresenta o Orçamento de 2027, que diz quanto o governo pode gastar em cada área. A votação final está marcada para 16 e 17 de dezembro.",
+       "fontes": [
+        {
+         "nome": "ND Mais, a pauta do Congresso na semana (9/11)",
+         "url": "https://ndmais.com.br/politica/maioridade-penal-congresso-debate-reducao-nesta-semana/"
+        }
+       ]
+      }
+     ],
+     "caixa": {
+      "titulo": "Lula fora do país",
+      "texto": "Lula está na Turquia para a COP31, a conferência do clima da ONU (9 a 20/11), e discursa na quarta (11/11), levando o menor desmatamento da Amazônia desde 1988, segundo o Inpe. Depois segue para as Filipinas. Por isso, decisões como o decreto da 6x1 ficam para a volta dele."
+     }
+    },
+    {
+     "id": "bolso",
+     "titulo": "Bolso, emprego e preços",
+     "abertura": "Juros, inflação e o que pesa no orçamento da família",
+     "itens": [
+      {
+       "titulo": "Banco Central para de cortar os juros",
+       "selo": "Confirmado",
+       "texto": "Em 4 de novembro, o Copom, o grupo do Banco Central que decide os juros, manteve a Selic em 13,75% ao ano. Foi a primeira pausa depois de cinco cortes seguidos, que desde março tinham baixado a taxa de 15%. Os motivos: o petróleo caro por causa da guerra no Oriente Médio, o dólar perto de R$ 5,50 e a inflação acima da meta. A próxima reunião é em 8 e 9 de dezembro.",
+       "fontes": [
+        {
+         "nome": "Seu Dinheiro, Copom segura a Selic (4/11)",
+         "url": "https://www.seudinheiro.com/2026/economia/copom-segura-selic-em-1375-e-interrompe-ciclo-de-cortes-nos-juros-mlim/"
+        }
+       ]
+      },
+      {
+       "titulo": "O que a Selic tem a ver com a sua conta",
+       "selo": "Explicação",
+       "texto": "A Selic é o juro “de referência” do país. Quando ela fica alta, o banco cobra mais caro no cartão, no cheque especial e no financiamento, e a poupança e outros investimentos rendem mais. O Banco Central usa os juros como um freio: segura as compras para os preços subirem menos. Com a pausa, empréstimos e prestações não devem ficar mais baratos tão cedo.",
+       "fontes": []
+      },
+      {
+       "titulo": "Comida subiu, luz baixou",
+       "selo": "Confirmado",
+       "texto": "Na prévia da inflação de outubro (o IPCA-15), os preços subiram 0,32% no mês e 4,62% em 12 meses, acima do teto da meta do governo, que é 4,5%. O que mais subiu foi a comida: tomate (+24,5%), cebola (+13,6%), batata (+11%) e arroz (+5,8%). Os combustíveis também subiram (+1,2%). Já a conta de luz caiu um pouco, porque a bandeira tarifária passou de amarela para verde, e as passagens de avião ficaram mais baratas. O número completo de outubro sai nos próximos dias.",
+       "fontes": [
+        {
+         "nome": "BP Money, IPCA-15 de outubro (23/10)",
+         "url": "https://bpmoney.com.br/economia/ipca-15-desacelera-para-032-em-outubro-mas-inflacao-em-12-meses-sobe-a-462/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "saude",
+     "titulo": "Saúde no Brasil",
+     "abertura": "O que muda no SUS e nas farmácias",
+     "aviso": "Estas notícias servem para informar e levar perguntas à consulta. Nunca comece, pare ou troque um remédio sem falar com o seu médico.",
+     "itens": [
+      {
+       "titulo": "Anvisa aprova remédio para obesidade em comprimido",
+       "selo": "Confirmado",
+       "texto": "A Anvisa aprovou em 4/11 a semaglutida em comprimido (nome comercial Wegovy) para tratar obesidade em adultos. É a mesma substância do Ozempic, que é injetável. A previsão é chegar às farmácias no primeiro semestre de 2027, com receita. O preço ainda não foi definido.",
+       "fontes": [
+        {
+         "nome": "Agência GBC, semaglutida oral aprovada (8/11)",
+         "url": "https://agenciagbc.com/2026/11/08/ozempic-em-comprimido-e-aprovado-no-brasil-veja-quanto-pode-custar-e-quando-chega-as-farmacias/"
+        }
+       ]
+      },
+      {
+       "titulo": "Novembro Azul: a saúde do homem",
+       "selo": "Confirmado",
+       "texto": "O Inca estima cerca de 78 mil casos novos de câncer de próstata por ano no Brasil entre 2026 e 2028. Descoberto cedo, ele tem muito mais chance de cura. A recomendação é que o homem converse com o médico sobre os exames, principalmente a partir dos 50 anos, ou antes, se houver casos na família.",
+       "fontes": [
+        {
+         "nome": "Inca, estimativa 2026–2028",
+         "url": "https://www.gov.br/inca/pt-br"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "escola",
+     "titulo": "Escola e Enem",
+     "abertura": "Datas que a família precisa saber",
+     "itens": [
+      {
+       "titulo": "Segundo dia do Enem é no domingo",
+       "selo": "Confirmado",
+       "texto": "O primeiro dia de provas foi no domingo (8/11). O segundo, com matemática e ciências da natureza, é no domingo, 15 de novembro. São mais de 5 milhões de inscritos. Não esqueça documento com foto e caneta de tinta preta em tubo transparente, e chegue cedo: os portões fecham pontualmente. O gabarito oficial sai em até 10 dias úteis depois da prova, no site do Inep.",
+       "fontes": [
+        {
+         "nome": "Muita Informação, regras do Enem 2026 (1/11)",
+         "url": "https://muitainformacao.com.br/noticias/falta-uma-semana-para-o-enem-2026-confira-horarios-documentos-e-regras-do-inep/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "minas",
+     "titulo": "Minas Gerais",
+     "abertura": "O que se decide em Belo Horizonte e chega até nós",
+     "itens": [
+      {
+       "titulo": "Cleitinho quer cortar dinheiro do Estado para shows",
+       "selo": "Confirmado",
+       "texto": "O governador eleito de Minas, Cleitinho Azevedo (Republicanos), anunciou em vídeo, no sábado (7/11), um projeto que proíbe o Estado de repassar dinheiro às prefeituras para pagar shows e festas. As cidades poderiam continuar fazendo festas e feiras, mas com dinheiro próprio. A ideia ainda precisa ser enviada e votada pelos deputados estaduais. Cleitinho toma posse em 6 de janeiro.",
+       "fontes": [
+        {
+         "nome": "Lafaiete Agora (7/11)",
+         "url": "https://lafaieteagora.com.br/2026/11/07/cleitinho-anuncia-projeto-que-proibe-uso-de-recursos-estaduais-para-financiar-shows-e-festas-nos-municipios-mineiros/"
+        },
+        {
+         "nome": "Congresso em Foco, Cleitinho eleito governador",
+         "url": "https://www.congressoemfoco.com.br/noticia/122678/cleitinho-e-eleito-governador-de-minas-gerais"
+        }
+       ]
+      },
+      {
+       "titulo": "Frente fria e El Niño a caminho",
+       "selo": "Confirmado",
+       "texto": "Uma frente fria forte para novembro deixou o tempo frio e chuvoso no Sudeste. E vem aí o El Niño, o aquecimento das águas do Pacífico que bagunça as chuvas: em outubro, a NOAA, agência americana, dava mais de 83% de chance de ele ser forte. No Brasil, costuma trazer seca no Norte e no Nordeste e chuva demais no Sul. Para Minas, o efeito é menos previsível. Novo boletim sai na quinta (12/11).",
+       "fontes": [
+        {
+         "nome": "Climatempo, frente fria de novembro",
+         "url": "https://www.climatempo.com.br/noticia/frio/grande-e-forte-frente-fria-avanca-sobre-o-brasil-entre-7-e-9-de-novembro-de-2026"
+        },
+        {
+         "nome": "NOAA, boletim do El Niño",
+         "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml"
+        }
+       ]
+      },
+      {
+       "titulo": "Clássico mineiro foi do Cruzeiro",
+       "selo": "Confirmado",
+       "texto": "No último clássico do Brasileirão, em 29 de outubro, o Cruzeiro venceu o Atlético na Arena MRV, com gol de Kaio Jorge logo no início do jogo.",
+       "fontes": [
+        {
+         "nome": "O Liberal, Cruzeiro vence o Atlético (29/10)",
+         "url": "https://www.oliberal.com/esportes/com-gol-no-inicio-de-kaio-jorge-cruzeiro-derrota-o-atletico-mg-na-arena-mrv-pelo-brasileirao-1.1188689"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "lafaiete",
+     "titulo": "Lafaiete, a nossa cidade",
+     "abertura": "O essencial da cidade nesta semana. A cobertura completa está no jornal O Carijó",
+     "itens": [
+      {
+       "titulo": "Tapa-buracos parado e protesto na Prefeitura",
+       "selo": "Confirmado",
+       "texto": "Moradores protestaram na sexta (6/11) contra os buracos nas ruas. A Secretaria de Obras disse que a operação tapa-buracos está parada por falta de dinheiro e que a usina de asfalto da Prefeitura também parou; a ideia é passá-la para uma empresa privada. O programa Asfalta Lafaiete deve voltar em 2027.",
+       "fontes": [
+        {
+         "nome": "Lafaiete Agora (6/11)",
+         "url": "https://lafaieteagora.com.br/2026/11/06/apos-convocacao-de-protesto-contra-buracos-nas-ruas-de-lafaiete-secretaria-de-obras-se-manifesta/"
+        }
+       ]
+      },
+      {
+       "titulo": "Taxa de iluminação: projeto saiu de pauta, mas pode voltar",
+       "selo": "Confirmado",
+       "texto": "O projeto da Prefeitura que mudava a taxa de iluminação pública, que vem na conta de luz, foi retirado de pauta na Câmara depois de muitas reclamações. Retirar de pauta não é arquivar: ele pode voltar.",
+       "fontes": [
+        {
+         "nome": "Lafaiete Agora (5/11)",
+         "url": "https://lafaieteagora.com.br/2026/11/05/erivelton-reage-a-projeto-de-lei-que-preve-aumento-na-conta-de-luz-em-lafaiete-e-proposta-sai-de-pauta-na-camara/"
+        }
+       ]
+      },
+      {
+       "titulo": "73 vagas no Sine nesta semana",
+       "selo": "Confirmado",
+       "texto": "O Sine Lafaiete divulgou cerca de 73 vagas na segunda (9/11): 25 para quem não tem experiência (ajudante de obras, auxiliar de limpeza, operador de caixa, auxiliar de cozinha) e 48 para quem tem (pedreiro, carpinteiro, motorista de caminhão, eletricista, soldador, mecânico). O Sine fica na Rua Marechal Floriano, 135 A, no Centro. Leve documento e carteira de trabalho; as vagas valem enquanto houver encaminhamentos.",
+       "fontes": [
+        {
+         "nome": "Lafaiete Agora (9/11)",
+         "url": "https://lafaieteagora.com.br/2026/11/09/procurando-emprego-veja-as-oportunidades-do-sine-lafaiete-desta-segunda-9-11/"
+        }
+       ]
+      },
+      {
+       "titulo": "Prazos da semana na cidade",
+       "selo": "Confirmado",
+       "texto": "O cadastro para creche e pré-escola de 2027 vai até sexta (13/11), pelo aplicativo Lafaiete Digital. Na saúde, a UPA passou a dar atestado só em casos graves, num teste de 45 dias, e uma carreta do SUS faz tomografias e ultrassons até 6 de dezembro.",
+       "fontes": [
+        {
+         "nome": "O Carijó, edição de 10/11 (com as fontes de cada nota)",
+         "url": "https://arth4rhenrique883-stack.github.io/banca/lafaiete/"
+        }
+       ]
+      }
+     ],
+     "caixa": {
+      "titulo": "Quer mais da cidade?",
+      "texto": "O Carijó é o jornal só de Conselheiro Lafaiete, com Prefeitura, Câmara, saúde, escolas, segurança e esporte. Na Banca, é o cartão logo abaixo do Terra Brasilis."
+     }
+    }
+   ],
+   "tempo": {
+    "texto": "Semana chuvosa e fria para novembro: guarda-chuva todos os dias e atenção a encostas e muros.",
+    "dias": [
+     {
+      "dia": "Ter 10",
+      "min": 12,
+      "max": 13,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Qua 11",
+      "min": 13,
+      "max": 18,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Qui 12",
+      "min": 14,
+      "max": 21,
+      "ceu": "Pancadas"
+     },
+     {
+      "dia": "Sex 13",
+      "min": 16,
+      "max": 23,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Sáb 14",
+      "min": 16,
+      "max": 24,
+      "ceu": "Chuva"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "HG Brasil, previsão atualizada em 9/11",
+      "url": "https://hgbrasil.com/weather/places/brazil/mg/conselheiro-lafaiete"
+     }
+    ]
+   },
+   "historia": {
+    "titulo": "15 de novembro: a República e o Conselheiro que deu nome à cidade",
+    "texto": "No domingo, o Brasil lembra os 137 anos da Proclamação da República, em 15 de novembro de 1889, quando o Império de Dom Pedro II acabou. A nossa cidade guarda uma ligação curiosa com essa história. O nome dela homenageia Lafayette Rodrigues Pereira, jurista nascido em Queluz (o nome antigo de Lafaiete) e conselheiro do Império, que chegou a chefiar o governo de Dom Pedro II. O título de “Conselheiro” era uma honraria da monarquia. Em 1934, já na República, Queluz passou a se chamar Conselheiro Lafaiete.",
+    "linha": [
+     {
+      "ano": "1500s",
+      "fato": "Mapas portugueses chamam a nossa terra de “Terra Brasilis”"
+     },
+     {
+      "ano": "1834",
+      "fato": "Nasce em Queluz (MG) Lafayette Rodrigues Pereira"
+     },
+     {
+      "ano": "1883",
+      "fato": "Lafayette assume a chefia do governo do Império"
+     },
+     {
+      "ano": "1889",
+      "fato": "Proclamação da República, em 15 de novembro"
+     },
+     {
+      "ano": "1934",
+      "fato": "Queluz passa a se chamar Conselheiro Lafaiete"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "Wikipédia, Conselheiro Lafaiete",
+      "url": "https://en.wikipedia.org/wiki/Conselheiro_Lafaiete"
+     },
+     {
+      "nome": "Wikipédia, Lafayette Rodrigues Pereira",
+      "url": "https://pt.wikipedia.org/wiki/Lafayette_Rodrigues_Pereira"
+     },
+     {
+      "nome": "Wikipédia, Proclamação da República",
+      "url": "https://pt.wikipedia.org/wiki/Proclama%C3%A7%C3%A3o_da_Rep%C3%BAblica_do_Brasil"
+     }
+    ]
+   },
+   "palavrinhas": [
+    {
+     "termo": "Selic",
+     "def": "A taxa básica de juros do país, decidida pelo Banco Central. Serve de base para os juros dos bancos."
+    },
+    {
+     "termo": "Copom",
+     "def": "Comitê do Banco Central que se reúne a cada 45 dias para decidir a Selic."
+    },
+    {
+     "termo": "IPCA-15",
+     "def": "A prévia da inflação oficial, medida pelo IBGE na metade de cada mês."
+    },
+    {
+     "termo": "PEC",
+     "def": "Proposta de Emenda à Constituição. Precisa de 3/5 dos votos, em dois turnos, na Câmara e no Senado."
+    },
+    {
+     "termo": "Medida provisória",
+     "def": "Regra que o presidente assina e vale na hora, mas que o Congresso precisa confirmar em até 120 dias."
+    }
+   ],
+   "agenda": [
+    {
+     "quando": "10 e 11/11",
+     "oque": "Câmara ouve especialistas sobre a maioridade penal"
+    },
+    {
+     "quando": "11/11",
+     "oque": "Orçamento de 2027 é apresentado no Congresso; Lula discursa na COP31"
+    },
+    {
+     "quando": "12/11",
+     "oque": "Novo boletim do El Niño (NOAA)"
+    },
+    {
+     "quando": "13/11",
+     "oque": "Último dia do cadastro de creche e pré-escola em Lafaiete (app Lafaiete Digital)"
+    },
+    {
+     "quando": "15/11",
+     "oque": "Segundo dia do Enem; feriado da Proclamação da República"
+    },
+    {
+     "quando": "20/11",
+     "oque": "Feriado nacional da Consciência Negra"
+    },
+    {
+     "quando": "8 e 9/12",
+     "oque": "Próxima reunião do Copom sobre os juros"
+    },
+    {
+     "quando": "Meados de dezembro",
+     "oque": "Começa a jornada de 42 horas e as duas folgas semanais"
+    }
+   ],
+   "conversa": [
+    "Se você pudesse escolher, preferiria folgar no sábado ou no domingo? Por quê?",
+    "Dinheiro do Estado deveria pagar shows nas cidades, ou só obras e serviços? O que a festa traz de bom para uma cidade?",
+    "Você sabia que Lafaiete já se chamou Queluz? Que outro nome você daria à cidade?"
+   ],
+   "fechamento": "Terra Brasilis, edição nº 1, fechada na madrugada de 10/11/2026."
+  }
+ ]
 }

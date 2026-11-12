@@ -1,6 +1,553 @@
 {
  "edicoes": [
   {
+   "numero": 3,
+   "data": "2026-11-12",
+   "tempoLeitura": 11,
+   "capa": {
+    "chapeu": "Câmara Municipal",
+    "titulo": "Câmara leva 12 pedidos de explicação à Prefeitura",
+    "linhaFina": "A sessão desta quinta, às 14h, tem perguntas de vereadores sobre creches em obra, exames nos postos de saúde, iluminação de bairros, asfalto e a reforma das secretarias. Um projeto novo quer a hora de chegada escrita na pulseira da UPA. A Semana do Diabetes começa hoje, o Sine tem 88 vagas e a chuva segue até a semana que vem."
+   },
+   "citacao": "“Todo o poder emana do povo, que o exerce por meio de representantes eleitos ou diretamente.” (Constituição Federal de 1988, artigo 1º, parágrafo único)",
+   "recado": "Esta edição junta as notícias de quarta e de quinta. O assunto principal é a Câmara: mostramos o que cada vereador está perguntando à Prefeitura e avisamos que as respostas ainda não chegaram. Quando chegarem, a gente publica com o mesmo espaço.",
+   "resumo": [
+    {
+     "tema": "Câmara",
+     "texto": "Sessão de hoje, às 14h, tem 12 pedidos de informação à Prefeitura e 2 moções de aplauso."
+    },
+    {
+     "tema": "UPA",
+     "texto": "Projeto do vereador Erivelton Jayme quer a hora de chegada na pulseira do paciente. Ainda vai às comissões."
+    },
+    {
+     "tema": "Saúde",
+     "texto": "Semana do Diabetes vai de hoje a 18/11. No sábado, ação gratuita na Praça do Cristo, das 9h às 16h."
+    },
+    {
+     "tema": "Educação",
+     "texto": "Cadastro de creche para 2027 termina amanhã (13/11). Proerd formou cerca de 400 alunos."
+    },
+    {
+     "tema": "Emprego",
+     "texto": "Sine com 88 vagas na lista de quarta, 32 sem exigir experiência."
+    },
+    {
+     "tema": "Segurança",
+     "texto": "Dona de comércio presa no Sion por venda de bebida a adolescente; três presos por furto de bicicletas e notas falsas."
+    },
+    {
+     "tema": "Tempo",
+     "texto": "Chuva todos os dias até a semana que vem, com máximas entre 20 °C e 28 °C."
+    }
+   ],
+   "numeros": [
+    {
+     "rotulo": "Pedidos à Prefeitura",
+     "valor": "12",
+     "nota": "requerimentos na pauta de hoje da Câmara",
+     "fonte": "Câmara Municipal (SAPL), 12/11/2026"
+    },
+    {
+     "rotulo": "Verba do esporte",
+     "valor": "R$ 1,47 mi",
+     "nota": "repasse federal para o Parque Municipal, citado em requerimento",
+     "fonte": "Câmara Municipal (SAPL), 12/11/2026"
+    },
+    {
+     "rotulo": "Vagas no Sine",
+     "valor": "88",
+     "nota": "32 sem exigir experiência",
+     "fonte": "Lafaiete Agora, 11/11/2026"
+    },
+    {
+     "rotulo": "Máxima de hoje",
+     "valor": "26 °C",
+     "nota": "mínima de 15 °C, com chuva",
+     "fonte": "HG Brasil, 11/11/2026"
+    }
+   ],
+   "cadernos": [
+    {
+     "id": "politica",
+     "titulo": "Prefeitura e Câmara",
+     "abertura": "O que os vereadores perguntam e o que a Prefeitura ainda precisa responder",
+     "itens": [
+      {
+       "titulo": "Sessão de hoje tem 12 perguntas para a Prefeitura",
+       "selo": "Confirmado",
+       "texto": "A Câmara Municipal se reúne nesta quinta (12/11), às 14h, na 73ª sessão ordinária do ano, com transmissão pelo canal da Câmara no YouTube. A pauta publicada traz 14 itens: 2 moções de aplauso (homenagens) e 12 requerimentos, que são pedidos oficiais de informação à Prefeitura. Os assuntos: prazo para terminar as creches do Novo Horizonte e do Remonta (Professor Oswaldo Barbosa); o novo formato de marcação de exames de laboratório nos postos de saúde, criado por um ofício da Prefeitura (Damires Rinarlly); a reforma administrativa, com criação e divisão de secretarias e quanto isso custa, e o dinheiro da Educação em 2026 (Erivelton Jayme); o repasse de R$ 1.468.289,49 do Ministério do Esporte para um espaço esportivo no Parque Municipal e o problema de água de chuva e erosão no loteamento Sagrada Família (Pedro Américo); a iluminação da Vila Madalena e do Manoel Correia (Simone do Carmo); a segurança da Rua Amintas Junqueira, na entrada do JK, e o asfalto da Rua José Florêncio, perto do CAIC (Roger Diêgo); a manutenção do cemitério de Buarque de Macedo depois de reclamações no Dia de Finados (Cida Toledo); e as emendas parlamentares para asfalto (Gina Costa). Um requerimento é uma pergunta, não uma acusação: até a manhã de hoje a Prefeitura não tinha respondido a esses pedidos, e o jornal não encontrou manifestação dela sobre os temas. Também chegam à sessão as respostas a quatro pedidos antigos (números 624, 625, 672 e 681), cujo conteúdo a pauta não mostra.",
+       "fontes": [
+        {
+         "nome": "Câmara Municipal (SAPL), pauta da 73ª sessão ordinária, 12/11/2026",
+         "url": "https://sapl.conselheirolafaiete.mg.leg.br/sessao/pauta-sessao/1256/"
+        },
+        {
+         "nome": "Câmara Municipal, página oficial (horário das sessões e transmissão), consulta em 12/11/2026",
+         "url": "https://www.conselheirolafaiete.mg.leg.br/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "As perguntas tratam de coisas do dia a dia de quem trabalha: creche para deixar o filho, rua asfaltada e iluminada no caminho de casa. Por enquanto são só perguntas; nada muda até a Prefeitura responder e agir.",
+        "baixa": "Creches, exames no posto de saúde e iluminação de bairro pesam mais para quem depende só do serviço público. Vale acompanhar a resposta sobre os exames, que pode mudar a forma de marcar.",
+        "media": "Asfalto, drenagem e iluminação mexem com o valor do imóvel e o gasto com o carro. As respostas vão dizer se há prazo e dinheiro previsto.",
+        "alta": "A reforma das secretarias e o destino de verbas federais e de emendas mostram como o dinheiro público será gasto, o que interessa a quem investe e presta serviço na cidade. O efeito direto ainda é pequeno."
+       }
+      },
+      {
+       "titulo": "Projeto quer a hora de chegada na pulseira da UPA",
+       "selo": "Confirmado",
+       "texto": "O vereador Erivelton Jayme protocolou na Câmara um projeto de lei para que a pulseira de identificação entregue na UPA (Unidade de Pronto Atendimento) mostre a hora em que o paciente chegou. Hoje essa hora fica só no sistema da unidade. Segundo o vereador, o paciente saberia há quanto tempo espera, teria uma prova para reclamar na ouvidoria e a gestão veria onde o atendimento trava. “É uma medida simples, que não custa praticamente nada ao Município e respeita o cidadão”, disse ele ao Lafaiete Agora. O texto mantém a ordem de atendimento pela classificação de risco (casos graves primeiro) e manda afixar um aviso explicando isso, para que a hora não seja confundida com fila por ordem de chegada. O que falta saber: a reportagem não traz o número do projeto nem a opinião da Prefeitura, da Secretaria de Saúde ou da direção da UPA, e o jornal não encontrou manifestação delas. O projeto ainda passa pelas comissões e pelo plenário; se aprovado, depende da sanção do prefeito.",
+       "fontes": [
+        {
+         "nome": "Lafaiete Agora, 11/11/2026",
+         "url": "https://lafaieteagora.com.br/2026/11/11/chega-de-esperar-sem-saber-projeto-do-vereador-erivelton-jayme-garante-horario-de-entrada-na-pulseira-da-upa/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Quem sai do serviço para ir à UPA teria como mostrar quanto tempo esperou. O projeto não trata de atestado nem promete atendimento mais rápido.",
+        "baixa": "Para quem só tem a UPA, a hora na pulseira seria uma prova simples para reclamar na ouvidoria. A ordem continua sendo a da gravidade, não a de chegada.",
+        "media": "O efeito é indireto: os dados de espera podem ajudar a cobrar melhorias. Quem usa plano de saúde quase não sente diferença.",
+        "alta": "Efeito pequeno. Para quem administra serviços de saúde, a medida aumenta a transparência e a cobrança sobre o tempo de espera."
+       }
+      },
+      {
+       "titulo": "Buracos e taxa de iluminação: o que há de novo",
+       "selo": "Explicação",
+       "texto": "Não houve votação nem anúncio novo sobre a taxa de iluminação (CIP), que saiu de pauta na semana passada, nem data para a volta do tapa-buracos. A última posição da Prefeitura é a nota de 6/11 do secretário de Obras, Guilherme Albuquerque: a operação volta “o mais rápido possível”, a usina de asfalto parou por render pouco e o programa Asfalta Lafaiete retorna em 2027. A novidade está na pauta de hoje da Câmara, onde os dois temas reaparecem em forma de pergunta: um requerimento pede informações sobre as emendas parlamentares destinadas a asfalto e dois pedem o planejamento, os critérios de prioridade e os prazos para melhorar a iluminação da Vila Madalena e do Manoel Correia.",
+       "fontes": [
+        {
+         "nome": "Câmara Municipal (SAPL), pauta da 73ª sessão ordinária, 12/11/2026",
+         "url": "https://sapl.conselheirolafaiete.mg.leg.br/sessao/pauta-sessao/1256/"
+        },
+        {
+         "nome": "Lafaiete Agora, 06/11/2026",
+         "url": "https://lafaieteagora.com.br/2026/11/06/apos-convocacao-de-protesto-contra-buracos-nas-ruas-de-lafaiete-secretaria-de-obras-se-manifesta/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Com a chuva desta semana, buraco vira poça e risco para quem anda de moto e bicicleta. Sem data para o tapa-buracos, o jeito é redobrar a atenção.",
+        "baixa": "A conta de luz não muda por enquanto: nada foi votado sobre a taxa. Rua escura e esburacada pesa mais em quem anda a pé e de ônibus.",
+        "media": "Pneu e suspensão continuam sendo o gasto mais provável. A resposta sobre as emendas pode mostrar se há dinheiro reservado para asfalto.",
+        "alta": "Enquanto o projeto da taxa não voltar à pauta, não dá para calcular o custo para comércios e terrenos. O efeito hoje é nenhum."
+       }
+      }
+     ],
+     "caixa": {
+      "titulo": "O que é um requerimento?",
+      "texto": "É o pedido oficial que um vereador faz para a Prefeitura explicar alguma coisa: quanto custou, quando fica pronto, quem é o responsável. Fiscalizar o prefeito é uma das funções da Câmara, ao lado de fazer leis. Qualquer morador pode ver a pauta e as respostas no site da Câmara, na área chamada SAPL, e assistir às sessões às terças, às 19h, e às quintas, às 14h."
+     }
+    },
+    {
+     "id": "saude",
+     "titulo": "Saúde",
+     "abertura": "Uma semana inteira para falar de diabetes",
+     "aviso": "Estas notícias informam, mas não substituem o médico. Em emergência, ligue 192 (SAMU).",
+     "itens": [
+      {
+       "titulo": "Semana do Diabetes começa hoje e vai até quarta",
+       "selo": "Confirmado",
+       "texto": "De hoje (12/11) até quarta (18/11), Lafaiete tem a Semana Municipal de Orientação e Combate ao Diabetes, criada pela Lei Municipal 6.364, de 2024. O ponto alto é no sábado (14/11), Dia Mundial do Diabetes: das 9h às 16h, a Praça do Cristo recebe a ação gratuita com teste de glicose (o açúcar no sangue), medida de pressão e orientações, que o jornal já tinha anunciado. Para os outros dias, o Correio de Minas informa que as atividades dependem da programação de cada instituição participante, ainda não divulgada em detalhe. O diabetes é o excesso constante de açúcar no sangue e, sem tratamento, pode atingir coração, rins, nervos e olhos.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, 12/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/12/diabetes-entra-em-foco-em-lafaiete-com-semana-de-conscientizacao-entre-12-e-18-de-novembro/"
+        },
+        {
+         "nome": "Correio da Cidade, 07/11/2026",
+         "url": "https://www.jornalcorreiodacidade.com.br/noticias/51639-lafaiete-tera-acao-gratuita-de-prevencao-e-orientacao-sobre-diabetes"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "A ação de sábado, das 9h às 16h, permite fazer o teste sem faltar ao serviço. É rápido e de graça.",
+        "baixa": "Não precisa de plano nem de consulta marcada. Quem tiver o exame alterado pode pedir encaminhamento ali mesmo ou procurar o posto de saúde.",
+        "media": "Boa ocasião para levar pais e avós. A doença muitas vezes não dá sinal no começo.",
+        "alta": "O risco não depende de renda. O teste na praça dispensa a espera por consulta."
+       }
+      }
+     ],
+     "caixa": {
+      "titulo": "Sinais que pedem um exame",
+      "texto": "Muita sede, vontade de urinar toda hora, cansaço fora do normal, perda de peso sem motivo, visão embaçada e feridas que demoram a fechar são sinais para procurar o posto de saúde e pedir o exame de glicose. Quem tem parentes com diabetes, pressão alta ou está acima do peso deve fazer o exame mesmo sem sentir nada."
+     }
+    },
+    {
+     "id": "educacao",
+     "titulo": "Educação",
+     "abertura": "Prazo da creche acaba amanhã, e 400 crianças se formam no Proerd",
+     "itens": [
+      {
+       "titulo": "Cadastro de creche para 2027 termina amanhã",
+       "selo": "Confirmado",
+       "texto": "Sexta (13/11) é o último dia para cadastrar a criança que precisa de creche ou pré-escola municipal em 2027, pelo aplicativo Lafaiete Digital. O resultado está previsto para 2 de dezembro e as matrículas, para 9 a 15 de dezembro. O assunto também está na Câmara: um requerimento na pauta de hoje pede ao prefeito a previsão de término das obras das creches do Novo Horizonte e do Remonta. A Prefeitura ainda não respondeu a esse pedido.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, 04/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/04/lafaiete-abre-cadastro-para-creches-em-2027-mas-numero-de-criancas-na-fila-continua-sem-atualizacao-publica-identificada/"
+        },
+        {
+         "nome": "Câmara Municipal (SAPL), pauta da 73ª sessão ordinária, 12/11/2026",
+         "url": "https://sapl.conselheirolafaiete.mg.leg.br/sessao/pauta-sessao/1256/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Sem cadastro até amanhã, a criança fica fora da lista de 2027. Para quem trabalha o dia todo, a vaga decide quem cuida do filho.",
+        "baixa": "A creche pública é, para muitas famílias, a única opção. Quem não tem celular ou internet pode pedir ajuda a um parente ou vizinho para usar o aplicativo ainda hoje.",
+        "media": "Quem paga escolinha particular pode tentar a vaga pública e aliviar o orçamento. A resposta sobre as obras dirá se haverá mais vagas.",
+        "alta": "Efeito direto pequeno. Para empresas, mais creche significa menos faltas e mais mães e pais disponíveis para trabalhar."
+       }
+      },
+      {
+       "titulo": "Proerd forma cerca de 400 alunos",
+       "selo": "Confirmado",
+       "texto": "Na noite de terça (10/11), cerca de 400 estudantes de Lafaiete receberam o certificado do Proerd, na Paróquia Nossa Senhora de Lourdes. Proerd é o Programa Educacional de Resistência às Drogas e à Violência: policiais militares dão aulas nas escolas sobre como dizer não às drogas e resolver conflitos sem violência. A cerimônia, organizada pelo 31º Batalhão da PM, teve juramento dos alunos, premiações e a banda de música da polícia. A reportagem não informa quais escolas participaram.",
+       "fontes": [
+        {
+         "nome": "Correio da Cidade, 11/11/2026",
+         "url": "https://www.jornalcorreiodacidade.com.br/noticias/51719-proerd-forma-cerca-de-400-alunos-em-conselheiro-lafaiete"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Para pais que passam o dia fora, o programa é um apoio na conversa com os filhos sobre drogas e más companhias.",
+        "baixa": "As aulas acontecem dentro da escola e não custam nada à família.",
+        "media": "O curso abre a conversa, mas não substitui o acompanhamento em casa. Vale perguntar ao filho o que ele aprendeu.",
+        "alta": "Efeito indireto. O programa conta com patrocinadores e parceiros locais, citados pela PM no agradecimento."
+       }
+      }
+     ]
+    },
+    {
+     "id": "emprego",
+     "titulo": "Emprego e economia",
+     "abertura": "Obras e comércio seguem puxando as vagas",
+     "itens": [
+      {
+       "titulo": "Sine tem 88 vagas, 32 sem exigir experiência",
+       "selo": "Confirmado",
+       "texto": "A lista de quarta (11/11) do Sine de Lafaiete tem 88 vagas: 32 sem experiência, 55 com experiência e 1 só para pessoa com deficiência (separador de resíduos). Sem experiência há auxiliar de limpeza, ajudante e servente de obras, atendente de loja, operador de caixa, auxiliar de cozinha, auxiliar de estoque, fiscal de loja e lavador de ônibus, entre outras. Com experiência, carpinteiro, armador, pedreiro, montador de andaimes, soldador, mecânico, frentista, cozinheiro, enfermeiro, técnico de segurança do trabalho e médico do trabalho. A duplicação da BR-040 pede ajudante, carpinteiro, pedreiro, sinaleiro e motorista de caminhão; a obra do Hospital Regional, servente e sinaleiro. O Sine fica na Rua Marechal Floriano, 135 A, Centro. As vagas valem enquanto houver encaminhamento: vá ou ligue logo cedo.",
+       "fontes": [
+        {
+         "nome": "Lafaiete Agora, 11/11/2026",
+         "url": "https://lafaieteagora.com.br/2026/11/11/tem-vagas-confira-as-oportunidades-de-emprego-do-sine-lafaiete-desta-quarta-11-11/"
+        },
+        {
+         "nome": "Correio de Minas, 11/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/11/sine-abre-portas-para-quem-busca-emprego-em-lafaiete-vagas-em-diversas-areas-movimentam-o-mercado-de-trabalho-na-regiao/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "São 15 vagas a mais que na lista de segunda (73). Quem tem ofício de obra (carpinteiro, armador, pedreiro) encontra mais opções.",
+        "baixa": "As 32 vagas sem experiência são a porta de entrada para a carteira assinada. Leve documento com foto e a Carteira de Trabalho Digital no celular.",
+        "media": "Desta vez há vagas de nível técnico e superior: enfermeiro, técnico de segurança, auxiliar contábil, analista administrativo e médico do trabalho.",
+        "alta": "Empresas podem anunciar vagas de graça no Sine. A procura por pedreiro, carpinteiro e armador indica obra aquecida e mão de obra disputada."
+       }
+      }
+     ]
+    },
+    {
+     "id": "seguranca",
+     "titulo": "Segurança",
+     "abertura": "Fiscalização em bares, furto em prédio e uma queixa em supermercado",
+     "itens": [
+      {
+       "titulo": "Venda de bebida a adolescente leva comerciante à prisão",
+       "selo": "Confirmado",
+       "texto": "Na noite de terça (10/11), policiais militares encontraram um adolescente de 17 anos tomando uma bebida com uísque e energético em um comércio da Rua Monsenhor Barreto, no bairro Sion. Ele disse ter comprado ali. A responsável pelo local, de 26 anos, foi presa em flagrante: vender ou servir bebida alcoólica a menor de 18 anos é crime previsto no Estatuto da Criança e do Adolescente (ECA). A fiscalização da Prefeitura constatou que o comércio não tinha alvará nem a placa obrigatória sobre a proibição, e notificou o estabelecimento. A ação faz parte da Operação Guardião da Ordem, da PM com a Fiscalização de Posturas. A mãe do adolescente acompanhou o caso, que seguiu para a Polícia Civil. Como em toda prisão em flagrante, a responsabilidade ainda será apurada pela Justiça.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, 10/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/10/pm-aperta-fiscalizacao-em-bares-e-prende-responsavel-por-venda-de-alcool-a-adolescente-em-lafaiete/"
+        },
+        {
+         "nome": "Lafaiete Agora, 10/11/2026",
+         "url": "https://lafaieteagora.com.br/2026/11/10/proprietaria-de-adega-e-presa-apos-menor-ser-flagrado-consumindo-bebida-alcoolica-em-lafaiete/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Quem trabalha em bar, adega ou mercearia deve pedir documento sempre: o funcionário que serve também pode responder pelo crime.",
+        "baixa": "Pais podem denunciar pelo 190 ou ao Conselho Tutelar quem vende bebida a menores no bairro.",
+        "media": "Vale conversar com os filhos adolescentes: bebida misturada com energético disfarça o gosto e o efeito do álcool.",
+        "alta": "Donos de comércio devem manter alvará em dia e a placa de proibição à vista. A fiscalização conjunta tende a continuar."
+       }
+      },
+      {
+       "titulo": "Furto de bicicletas em prédio termina com três presos e notas falsas",
+       "selo": "Confirmado",
+       "texto": "Na segunda (9/11), o síndico de um prédio no Parque dos Bandeirantes viu pelas câmeras dois homens entrarem à noite e levarem três bicicletas. A PM localizou os suspeitos, que confessaram, e recuperou duas delas. Na mesma ocorrência, um homem tentou pagar uma compra com uma nota falsa de R$ 100 e disse tê-la recebido de um dos envolvidos; a polícia encontrou mais duas notas falsas. Foram presos três homens, de 18, 25 e 36 anos: dois por furto e um por moeda falsa.",
+       "fontes": [
+        {
+         "nome": "Correio da Cidade, 10/11/2026",
+         "url": "https://www.jornalcorreiodacidade.com.br/noticias/51687-pm-recupera-bicicletas-furtadas-e-apreende-notas-falsas-de-rs-100-em-lafaiete"
+        },
+        {
+         "nome": "Lafaiete Agora, 10/11/2026",
+         "url": "https://lafaieteagora.com.br/2026/11/10/pm-recupera-bicicletas-roubada-e-prende-tres-pessoas-por-furto-e-circulacao-de-moeda-falsa/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Quem recebe em dinheiro (caixa, feirante, motorista, entregador) deve conferir as notas de R$ 100: passe o dedo para sentir o relevo e olhe a marca-d’água contra a luz.",
+        "baixa": "Receber uma nota falsa é prejuízo certo: o banco não troca. Na dúvida, recuse e peça outra forma de pagamento.",
+        "media": "Câmeras e síndico atento resolveram o caso. Em prédios, bicicleta presa com cadeado mesmo na garagem dificulta o furto.",
+        "alta": "Comércios podem treinar os caixas e usar caneta ou luz de teste. Passar adiante uma nota sabendo que é falsa também é crime."
+       }
+      },
+      {
+       "titulo": "Cliente diz ter sido acusada de furto; supermercado abre apuração",
+       "selo": "Confirmado",
+       "texto": "Uma cliente publicou um vídeo nas redes sociais dizendo que, na manhã de terça (10/11), seguranças do Supermercado Brasil, em Lafaiete, a acusaram de furto. Foi registrado boletim de ocorrência. Em nota resumida pelo Correio da Cidade, a empresa afirma que trata o caso com seriedade, que não compactua com constrangimento, exposição ou acusações indevidas, que abriu apuração interna e prestou esclarecimentos à polícia, e pede que não haja julgamento antes do fim da apuração. A reportagem não detalha o relato da cliente nem identifica os envolvidos. Até agora há duas versões e nenhuma conclusão.",
+       "fontes": [
+        {
+         "nome": "Correio da Cidade, 11/11/2026",
+         "url": "https://www.jornalcorreiodacidade.com.br/noticias/51717-supermercado-brasil-se-manifesta-apos-cliente-relatar-acusacao-de-furto-em-lafaiete"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Vigilantes e fiscais de loja trabalham entre dois riscos: deixar passar um furto ou constranger um inocente. Treinamento e regra clara da empresa protegem o funcionário.",
+        "baixa": "Qualquer cliente pode pedir que a abordagem seja discreta e, se quiser, com a presença da polícia. Guardar a nota fiscal ajuda a esclarecer.",
+        "media": "Quem se sentir constrangido sem motivo pode registrar ocorrência e procurar o Procon ou a Justiça. Cada caso é decidido com base nas provas.",
+        "alta": "Para o comércio, uma abordagem errada pode virar processo e desgaste de imagem; um furto ignorado vira prejuízo. Procedimento escrito reduz os dois riscos."
+       }
+      }
+     ],
+     "caixa": {
+      "titulo": "Como reconhecer uma nota falsa",
+      "texto": "O Banco Central ensina três passos: sentir, olhar e inclinar. Sinta o relevo no papel, que é mais áspero que o comum. Olhe contra a luz e procure a marca-d’água com o animal e o valor da nota. Incline a nota e veja o número mudar de cor na de R$ 100. Se desconfiar, não aceite. Se já aceitou, leve a um banco para análise e não tente repassar."
+     }
+    },
+    {
+     "id": "cidade",
+     "titulo": "Cidade, chuva e trânsito",
+     "abertura": "Guarda-chuva na mão e atenção na BR-040",
+     "itens": [
+      {
+       "titulo": "Pedágio da BR-040 testa cabine sem atendente",
+       "selo": "Confirmado",
+       "texto": "A praça de pedágio da BR-040 em Itabirito, no caminho de Lafaiete para Belo Horizonte, começou a testar cabines de autoatendimento: a 4, no sentido BH, e a 14, no sentido Juiz de Fora. O motorista escolhe na tela como pagar (Pix, cartão de crédito ou de débito) e a cancela abre sozinha. Nesta fase há funcionários por perto para ajudar. A concessionária EPR Via Mineira prevê 16 equipamentos nas outras praças até o fim de dezembro. Quem usa TAG (o adesivo de cobrança automática) tem 5% de desconto. A reportagem não informa o valor da tarifa.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, 11/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/11/praca-de-pedagio-da-br-040-ganha-cabines-de-autoatendimento-veja-como-usar/"
+        },
+        {
+         "nome": "Lafaiete Agora, 11/11/2026",
+         "url": "https://lafaieteagora.com.br/2026/11/11/praca-de-pedagio-da-br-040-comeca-a-testar-cabines-de-autoatendimento-saiba-como-utilizar/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Caminhoneiros e motoristas ganham mais uma forma de pagar. Para quem trabalha nas cabines, a automação pode reduzir postos no futuro; a concessionária não falou em demissões.",
+        "baixa": "Quem viaja pouco e não tem cartão pode continuar nas cabines comuns, com dinheiro. O Pix passa a ser aceito no autoatendimento.",
+        "media": "Para quem vai a BH com frequência, a TAG dá 5% de desconto e evita fila.",
+        "alta": "Empresas com frota ganham agilidade e controle com TAG e pagamento eletrônico. O efeito no custo do frete é pequeno."
+       }
+      },
+      {
+       "titulo": "Chuva todo dia e BR-040 fechada por uma hora no sábado",
+       "selo": "Previsão",
+       "texto": "O frio da massa de ar polar passou, mas a chuva fica: a previsão indica chuva ou pancadas todos os dias pelo menos até terça (17/11). Com o solo encharcado, quem mora perto de barranco deve ficar atento a rachaduras e muros estufados e ligar para a Defesa Civil (199) se notar algo. E um lembrete: no sábado (14/11), das 15h às 16h, a BR-040 para nos dois sentidos no km 612, em Congonhas, para a detonação de rocha da obra de duplicação.",
+       "fontes": [
+        {
+         "nome": "HG Brasil, previsão atualizada em 11/11/2026",
+         "url": "https://hgbrasil.com/weather/places/brazil/mg/conselheiro-lafaiete"
+        },
+        {
+         "nome": "Correio de Minas, 09/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/09/epr-via-mineira-programa-desmonte-controlado-de-rocha-em-congonhas-para-avanco-das-obras-de-duplicacao-da-br-040/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Obra parada por chuva pode significar dia sem ganho para quem recebe por diária. Na estrada, programe o sábado para não ficar preso entre 15h e 16h.",
+        "baixa": "Casas em encosta ou com goteira sofrem mais. Em caso de risco, saia de casa e ligue 199 (Defesa Civil) ou 193 (Bombeiros).",
+        "media": "Chuva com buraco na rua é a combinação que mais estraga pneu: reduza a velocidade e evite poças fundas.",
+        "alta": "Produtores rurais e empresas com entregas devem contar com atrasos. Vale revisar calhas e telhados de galpões."
+       }
+      }
+     ]
+    },
+    {
+     "id": "esporte",
+     "titulo": "Esporte, cultura e fé",
+     "abertura": "Novembro da Consciência Negra",
+     "itens": [
+      {
+       "titulo": "Feriado de 20 de novembro ainda sem programação da cidade",
+       "selo": "Confirmado",
+       "texto": "Sexta da semana que vem (20/11) é o Dia da Consciência Negra, feriado nacional desde 2024. Em Lafaiete, a Lei Municipal 6.101, de 2022, faz de novembro o mês de valorização da Consciência e da Cultura Negra, com destaque para as guardas de congado, o samba e os grupos que mantêm essas tradições. Segundo o Correio de Minas, até quarta (11/11) não havia confirmação de programação da Prefeitura para o feriado deste ano. Se sair, o jornal avisa.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, 11/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/11/consciencia-negra-feriado-de-20-de-novembro-reforca-o-valor-das-tradicoes-afro-brasileiras-em-lafaiete/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Feriado nacional: quem trabalhar no dia tem direito a pagamento em dobro ou folga em outro dia, conforme a lei e o acordo da categoria.",
+        "baixa": "Sem programação confirmada, o feriado ainda não tem lazer gratuito anunciado. Vale conferir com as guardas de congado e as paróquias do bairro.",
+        "media": "A sexta de folga forma um fim de semana de três dias. Quem for viajar deve contar com chuva e movimento na BR-040.",
+        "alta": "Comércio e empresas devem checar a convenção coletiva antes de abrir no feriado, para evitar multa e ação trabalhista."
+       }
+      }
+     ]
+    }
+   ],
+   "tempo": {
+    "texto": "Chuva todos os dias. Hoje a máxima chega a 26 °C, com mínima de 15 °C. O fim de semana fica entre 16 °C e 28 °C, com pancadas, e a segunda volta a ser mais fresca, com máxima de 20 °C. Guarda-chuva na bolsa a semana inteira.",
+    "dias": [
+     {
+      "dia": "Qui 12",
+      "min": 15,
+      "max": 26,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Sex 13",
+      "min": 16,
+      "max": 24,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Sáb 14",
+      "min": 16,
+      "max": 25,
+      "ceu": "Pancadas"
+     },
+     {
+      "dia": "Dom 15",
+      "min": 16,
+      "max": 28,
+      "ceu": "Pancadas"
+     },
+     {
+      "dia": "Seg 16",
+      "min": 17,
+      "max": 20,
+      "ceu": "Pancadas"
+     },
+     {
+      "dia": "Ter 17",
+      "min": 17,
+      "max": 24,
+      "ceu": "Pancadas"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "HG Brasil, previsão atualizada em 11/11/2026",
+      "url": "https://hgbrasil.com/weather/places/brazil/mg/conselheiro-lafaiete"
+     }
+    ]
+   },
+   "historia": {
+    "titulo": "Quando Queluz era um município gigante",
+    "texto": "Há cem anos, a nossa cidade mandava em um território muito maior. No censo de 1920, o município de Queluz tinha 13 distritos. Em 1923 ainda recebeu Congonhas do Campo, que antes pertencia a Ouro Preto. Depois vieram as separações: em 1938 Congonhas virou município; em 1962 foi a vez de Itaverava, Cristiano Otoni, Catas Altas da Noruega e Queluzito, e Santana dos Montes também se emancipou. Desde 1963, Lafaiete tem só dois distritos: a sede e Buarque de Macedo. Outra marca daquele tempo é a ferrovia: a estação da Estrada de Ferro Central do Brasil, na parte baixa, foi batizada de Lafaiete, e o povo passou a chamar de Lafaiete a parte de baixo e de Queluz a de cima, antes mesmo de o nome mudar de vez, em 1934. O que isso tem a ver com o crescimento? Leitura do jornal: ficar no caminho entre o Rio e as minas, primeiro pela estrada e depois pelo trem e pela BR-040, sempre favoreceu o comércio e os serviços da cidade. Em compensação, com as emancipações, as grandes minas e a siderurgia da região ficaram em municípios vizinhos, como Congonhas, e é para lá que vai a maior parte dos impostos dessas atividades. Lafaiete cresceu como cidade de moradia, comércio e serviços para toda a região, com menos arrecadação própria da indústria. Essa é uma das raízes da discussão de hoje sobre falta de dinheiro para asfalto e iluminação.",
+    "linha": [
+     {
+      "ano": "1920",
+      "fato": "Censo registra o município de Queluz com 13 distritos"
+     },
+     {
+      "ano": "1923",
+      "fato": "Queluz recebe o distrito de Congonhas do Campo, vindo de Ouro Preto"
+     },
+     {
+      "ano": "1934",
+      "fato": "Em 27 de março, Queluz passa a se chamar Conselheiro Lafaiete"
+     },
+     {
+      "ano": "1938",
+      "fato": "Congonhas do Campo é desmembrada e vira município"
+     },
+     {
+      "ano": "1953",
+      "fato": "São criados os distritos de Buarque de Macedo e Joselândia"
+     },
+     {
+      "ano": "1962",
+      "fato": "Itaverava, Cristiano Otoni, Catas Altas da Noruega e Queluzito viram municípios"
+     },
+     {
+      "ano": "1963",
+      "fato": "Lafaiete fica com dois distritos: a sede e Buarque de Macedo"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "IBGE, histórico do município de Conselheiro Lafaiete (Biblioteca IBGE), consulta em 12/11/2026",
+      "url": "https://biblioteca.ibge.gov.br/visualizacao/dtb/minasgerais/conselheirolafaiete.pdf"
+     },
+     {
+      "nome": "Wikipédia, verbete da cidade, consulta em 12/11/2026",
+      "url": "https://pt.wikipedia.org/wiki/Conselheiro_Lafaiete"
+     }
+    ]
+   },
+   "palavrinhas": [
+    {
+     "termo": "Requerimento",
+     "def": "Pedido oficial de informação ou providência que o vereador faz à Prefeitura."
+    },
+    {
+     "termo": "Moção de aplauso",
+     "def": "Homenagem votada pela Câmara a uma pessoa ou entidade. Não cria lei nem gasto."
+    },
+    {
+     "termo": "Classificação de risco",
+     "def": "Triagem que define a ordem de atendimento na UPA pela gravidade, não pela hora de chegada."
+    },
+    {
+     "termo": "Emenda parlamentar",
+     "def": "Parte do orçamento que deputados, senadores ou vereadores indicam para uma obra ou serviço específico."
+    },
+    {
+     "termo": "Alvará",
+     "def": "Licença da Prefeitura para um comércio funcionar."
+    },
+    {
+     "termo": "Emancipação",
+     "def": "Quando um distrito se separa e vira município, com prefeito, Câmara e impostos próprios."
+    }
+   ],
+   "agenda": [
+    {
+     "quando": "Hoje, 12/11",
+     "oque": "Sessão da Câmara às 14h, com 12 requerimentos; começa a Semana do Diabetes (até 18/11)"
+    },
+    {
+     "quando": "Sex, 13/11",
+     "oque": "Último dia do cadastro de creche e pré-escola 2027 no app Lafaiete Digital"
+    },
+    {
+     "quando": "Sáb, 14/11",
+     "oque": "Ação sobre diabetes na Praça do Cristo (9h às 16h); BR-040 fechada das 15h às 16h em Congonhas"
+    },
+    {
+     "quando": "Seg, 16/11",
+     "oque": "Eleição da Liga de Desportos, às 19h, no Rosário"
+    },
+    {
+     "quando": "Ter, 17/11",
+     "oque": "Sessão da Câmara às 19h"
+    },
+    {
+     "quando": "Sex, 20/11",
+     "oque": "Feriado nacional da Consciência Negra"
+    },
+    {
+     "quando": "02/12",
+     "oque": "Resultado previsto do cadastro de creche"
+    },
+    {
+     "quando": "Até 06/12",
+     "oque": "Carreta de exames do SUS no Ginásio do Carijós (só para quem for chamado)"
+    }
+   ],
+   "conversa": [
+    "Doze vereadores e vereadoras perguntam hoje à Prefeitura sobre creches, exames, asfalto e iluminação. Perguntar já é fiscalizar, ou a fiscalização só acontece quando a resposta chega e alguém confere? Qual é a parte do morador nesse caminho?",
+    "A hora de chegada na pulseira da UPA daria ao paciente uma informação que hoje só a unidade tem. Mais informação resolve um problema de espera, ou apenas o torna visível? E tornar visível já tem valor?",
+    "Um comércio sem alvará vendeu bebida a um adolescente. De quem é o dever de proteger quem ainda não é adulto: da família, do comerciante, da fiscalização ou de todos ao mesmo tempo? O que acontece quando um deles falha?",
+    "Congonhas, Itaverava e outras cidades já fizeram parte do nosso município. Quando um distrito se emancipa, ganha autonomia; o município de origem perde território e receita. Como pesar o direito de uma comunidade se governar e o custo para os vizinhos?"
+   ],
+   "fechamento": "Amanhã a gente volta, com o que a Câmara decidiu. Leve o guarda-chuva e, se tiver criança para a creche, não deixe o cadastro para a última hora."
+  },
+  {
    "numero": 2,
    "data": "2026-11-10",
    "tempoLeitura": 11,
