@@ -2,7 +2,7 @@
 // As cartas que você ainda não sabe vêm primeiro. O que você marcou fica guardado no relógio.
 import { scrollTo } from "@zos/page";
 import { BasePage } from "@zeppos/zml/base-page";
-import { Folha, ANTON, SUAVE, ler, guardar } from "../comum/papel";
+import { Folha, ANTON, GOTICA, ITALICA, SUAVE, ler, guardar } from "../comum/papel";
 
 let id = "";
 let folha = null;
@@ -18,7 +18,7 @@ function topo() {
 function folhaNova() {
   if (folha) folha.apagar();
   folha = Folha();
-  folha.texto(nome.toUpperCase(), { tam: 24, centro: true, depois: 4 });
+  folha.texto(nome, { tam: 40, fonte: GOTICA, centro: true, depois: 0 });
   return folha;
 }
 
@@ -54,6 +54,7 @@ function frente() {
   f.texto("CARTA " + (pos + 1) + " DE " + fila.length, { tam: 20, centro: true, cor: SUAVE, depois: 8 });
   f.filete(true);
   f.texto(c.f, { tam: 34, depois: 18 });
+  f.estrelas();
   f.botao("VER RESPOSTA", () => verso());
   f.pintar();
   topo();
@@ -62,7 +63,7 @@ function frente() {
 function verso() {
   const c = fila[pos];
   const f = folhaNova();
-  f.texto(c.f, { tam: 24, cor: SUAVE, depois: 10 });
+  f.texto(c.f, { tam: 24, cor: SUAVE, fonte: ITALICA, depois: 10 });
   f.filete(true);
   f.texto(c.v, { tam: 32, depois: 18 });
   f.botao("SABIA", () => {

@@ -1,15 +1,14 @@
 // Capa: os baralhos do dia. Tocar num baralho abre as cartas.
 import { push } from "@zos/router";
 import { BasePage } from "@zeppos/zml/base-page";
-import { Folha, ANTON, SUAVE, ler, guardar } from "../comum/papel";
+import { Folha, ITALICA, SUAVE, ler, guardar } from "../comum/papel";
 
 let folha = null;
 
 function capa(lista, aviso) {
   if (folha) folha.apagar();
   const f = (folha = Folha());
-  f.texto("XEQUE CARDS", { tam: 56, fonte: ANTON, centro: true, depois: 6 });
-  f.filete(true);
+  f.cabeca("Xeque Cards", "Ano I ✱ Cartas de estudo");
   if (!lista || !lista.length) {
     f.texto(aviso || "Buscando os flashcards pelo celular…", { tam: 30, centro: true, cor: SUAVE });
     f.pintar();
@@ -20,7 +19,8 @@ function capa(lista, aviso) {
     const sabidas = (ler("sabe-" + b.id) || []).length;
     f.botao(String(b.nome).toUpperCase(), () => push({ url: "page/carta", params: b.id }));
     f.texto(b.n + " cartas · " + Math.min(sabidas, b.n) + " sabidas", { tam: 24, centro: true, depois: 2 });
-    f.texto(b.de, { tam: 22, centro: true, cor: SUAVE, depois: 20 });
+    f.texto(b.de, { tam: 22, centro: true, cor: SUAVE, fonte: ITALICA, depois: 6 });
+    f.estrelas();
   });
   f.filete(false);
   f.texto(aviso || "Jornais do Xeque News e apostilas do 8º período.", { tam: 22, centro: true, cor: SUAVE });

@@ -9,6 +9,9 @@ export const PAPEL = 0xece3d4;
 export const TINTA = 0x3a2d2b;
 export const SUAVE = 0x5e4e48;
 export const ANTON = "fonts/Anton.ttf";
+export const GOTICA = "fonts/Gotica.ttf"; // UnifrakturMaguntia: o cabeçalho dos jornais antigos
+export const SERIFA = "fonts/Serifa.ttf"; // Old Standard TT: letra de texto da imprensa do século XIX
+export const ITALICA = "fonts/SerifaItalica.ttf";
 export const MARGEM = px(58); // tela redonda: folga dos lados
 export const LARGURA = L - 2 * MARGEM;
 
@@ -40,9 +43,11 @@ export function Folha() {
       if (!t) return;
       const tam = px(o.tam || 30);
       const w = o.w || LARGURA;
+      const fonte = o.fonte === null ? null : o.fonte || SERIFA; // sem indicação: serifa de jornal
       let h = tam * 1.3;
       try {
-        const m = hmUI.getTextLayout(String(t), { text_size: tam, text_width: w, wrap: true });
+        // mede com a largura um pouco menor: a serifa é mais larga que a letra do sistema
+        const m = hmUI.getTextLayout(String(t), { text_size: tam, text_width: Math.floor(w * (fonte ? 0.86 : 1)), wrap: true });
         if (m && m.height) h = m.height;
       } catch (e) {
         h = Math.ceil((String(t).length * tam * 0.52) / w) * tam * 1.3;
@@ -55,7 +60,7 @@ export function Folha() {
         align_v: hmUI.align.TOP,
         text_style: hmUI.text_style.WRAP,
       };
-      if (o.fonte) p.font = o.fonte;
+      if (fonte) p.font = fonte;
       pecas.push([hmUI.widget.TEXT, p]);
       y += h + px(o.depois == null ? 8 : o.depois);
     },
@@ -70,6 +75,16 @@ export function Folha() {
         y += px(2);
       }
       y += px(12);
+    },
+    // Cabeçalho de jornal de banca: nome em letra gótica, filete duplo e a linha da edição.
+    cabeca(nome, linha) {
+      this.texto(nome, { tam: 60, fonte: GOTICA, centro: true, depois: 0 });
+      this.filete(true);
+      if (linha) this.texto(String(linha).toUpperCase(), { tam: 20, centro: true, cor: SUAVE, depois: 0 });
+      this.filete(false);
+    },
+    estrelas() {
+      this.texto("✱   ✱   ✱", { tam: 22, centro: true, cor: SUAVE, fonte: null, depois: 10 });
     },
     botao(t, aoTocar) {
       const h = px(76);

@@ -88,7 +88,7 @@ html[data-tema="escuro"] .banca-volta .tema-alternador:hover,html[data-tema="esc
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="O mundo, o Brasil, Conselheiro Lafaiete e a medicina num aplicativo só, em abas, no desenho de jornal impresso.">
+<meta name="description" content="O mundo, o Brasil, Conselheiro Lafaiete e a medicina num aplicativo só, em cadernos, no desenho de jornal de banca.">
 <meta name="theme-color" content="#3A2D2B">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -97,55 +97,70 @@ html[data-tema="escuro"] .banca-volta .tema-alternador:hover,html[data-tema="esc
 <link rel="manifest" href="../manifest.webmanifest">
 <link rel="icon" type="image/png" sizes="192x192" href="../icone-192.png">
 <link rel="apple-touch-icon" href="../icone-180.png">
-<title>Xeque News: Mundo, Brasil e Medicina</title>
+<title>Xeque News</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Newsreader:ital,opsz,wght@1,6..72,400&family=Archivo:wght@500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=UnifrakturMaguntia&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap">
 </head>
 <body>
 <style>
-:root{--papel:#ECE3D4;--tinta:#3A2D2B}
+/* Capa de jornal de banca (12/11/2026): cabeçalho em letra gótica entre filetes, orelhas nos cantos
+   (como o preço e o número da edição nos jornais de antigamente) e os cadernos A a D como abas. */
+:root{--papel:#ECE3D4;--tinta:#3A2D2B;--suave:#5E4E48;--fio:#B9A993;--retícula:rgba(58,45,43,.16)}
 html,body{height:100%;margin:0}
-body{display:flex;flex-direction:column;height:100dvh;background:var(--papel);color:var(--tinta);overflow:hidden}
-.abas{display:flex;flex:none;background:var(--papel);border-top:5px solid var(--tinta);border-bottom:5px solid var(--tinta);
-  box-shadow:inset 0 2px 0 var(--papel),inset 0 3px 0 var(--tinta),inset 0 -2px 0 var(--papel),inset 0 -3px 0 var(--tinta);
-  padding:3px max(0px, env(safe-area-inset-right, 0px)) 3px max(0px, env(safe-area-inset-left, 0px))}
-.abas button{flex:1;min-width:0;min-height:58px;border:0;border-left:1px solid var(--tinta);background:none;color:inherit;cursor:pointer;
-  padding:8px 4px 7px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+body{display:flex;flex-direction:column;height:100%;background:var(--papel);color:var(--tinta);overflow:hidden;
+  font-family:"Old Standard TT","Newsreader",Georgia,"Times New Roman",serif;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .35  0 0 0 0 .27  0 0 0 0 .2  0 0 0 .10 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.capa{flex:none;padding:max(6px, env(safe-area-inset-top, 0px)) max(12px, env(safe-area-inset-right, 0px)) 0 max(12px, env(safe-area-inset-left, 0px))}
+.cabeca{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:8px}
+.orelha{display:flex;flex-direction:column;gap:3px;border:1.5px solid var(--tinta);padding:4px 6px;min-width:0;
+  font:700 10px/1.15 "Old Standard TT",Georgia,serif;letter-spacing:.06em;text-transform:uppercase;text-align:center}
+.orelha.dir{justify-self:end}.orelha.esq{justify-self:start}
+.orelha a{color:inherit;text-decoration:none;border-bottom:1px solid currentColor}
+.orelha .tema-alternador{min-height:28px;min-width:28px;padding:2px 6px;font:inherit;background:transparent;color:inherit;border:1px solid currentColor}
+.orelha .tema-alternador svg{width:13px;height:13px}
+.orelha .tema-rot{display:none}
+.titulo{font:400 clamp(34px,11vw,64px)/1 "UnifrakturMaguntia","Old English Text MT",serif;margin:0;white-space:nowrap;text-align:center}
+.fios{border-top:3px solid var(--tinta);border-bottom:1px solid var(--tinta);height:3px;margin-top:4px}
+.linha{display:flex;justify-content:space-between;gap:8px;padding:4px 2px;border-bottom:1px solid var(--tinta);
+  font:700 10.5px/1.2 "Old Standard TT",Georgia,serif;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;overflow:hidden}
+.linha span{overflow:hidden;text-overflow:ellipsis}
+.linha .meio{flex:none}
+@media (max-width:420px){.linha .lado{display:none}.linha{justify-content:center}}
+.abas{display:flex;flex:none;margin:6px max(12px, env(safe-area-inset-right, 0px)) 0 max(12px, env(safe-area-inset-left, 0px));
+  border-top:1px solid var(--tinta);border-bottom:3px double var(--tinta)}
+.abas button{flex:1;min-width:0;min-height:62px;border:0;border-left:1px solid var(--tinta);background:none;color:inherit;cursor:pointer;
+  padding:5px 2px 6px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;font:inherit}
 .abas button:first-child{border-left:0}
-.abas b{font:400 clamp(17px,4.9vw,30px)/1 "Anton",Impact,"Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.03em}
-.abas small{font:italic 400 13px/1.1 "Newsreader",Georgia,serif;opacity:.85;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
-.abas button[aria-selected="true"]{background:var(--tinta);color:var(--papel)}
+.abas i{font:italic 400 10px/1 "Old Standard TT",Georgia,serif;letter-spacing:.12em;text-transform:uppercase;opacity:.8}
+.abas b{font:400 clamp(16px,4.7vw,28px)/1.02 "Anton",Impact,"Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.02em}
+.abas small{font:italic 400 12px/1.1 "Old Standard TT",Georgia,serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.abas button[aria-selected="true"]{background-color:var(--tinta);color:var(--papel);
+  background-image:radial-gradient(rgba(236,227,212,.14) 1px, transparent 1.3px);background-size:4px 4px}
+.abas button:not([aria-selected="true"]):hover{background-image:radial-gradient(var(--retícula) 1px, transparent 1.3px);background-size:4px 4px}
 .abas button:focus-visible{outline:3px solid var(--tinta);outline-offset:-6px}
 .abas button[aria-selected="true"]:focus-visible{outline-color:var(--papel)}
-.folhas{flex:1;min-height:0;position:relative}
+.folhas{flex:1;min-height:0;position:relative;margin-top:4px;border-top:1px solid var(--tinta)}
 .folhas iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:var(--papel)}
-.folhas iframe[hidden]{display:none}
+html[data-tema="escuro"] body{background-color:#191714}
+html[data-tema="escuro"] .abas button[aria-selected="true"]{background-image:radial-gradient(rgba(25,23,20,.18) 1px, transparent 1.3px)}
+@media (prefers-reduced-motion:no-preference){.folhas iframe{transition:opacity .18s ease}.folhas iframe.chegando{opacity:0}}
 </style>
-
-<style>
-.banca-volta{position:sticky;top:0;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:12px;
-  background:#3A2D2B;color:#ECE3D4;padding:8px max(14px, env(safe-area-inset-right, 0px)) 8px max(14px, env(safe-area-inset-left, 0px));
-  padding-top:max(8px, env(safe-area-inset-top, 0px));font:600 15px/1.2 "Archivo","Archivo Narrow","Helvetica Neue",Arial,sans-serif;
-  letter-spacing:.08em;text-transform:uppercase}
-.banca-volta a{color:inherit;text-decoration:none;display:inline-flex;align-items:center;gap:8px;padding:8px 14px 8px 10px;
-  border:1.5px solid #ECE3D4;min-height:44px}
-.banca-volta a:hover,.banca-volta a:focus-visible{background:#ECE3D4;color:#3A2D2B;outline:none}
-.banca-volta a.banca-fontes{padding:8px 12px;flex:none}
-.banca-volta span{flex:1;text-align:right;opacity:.85;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-@media (max-width:430px){.banca-volta span{display:none}}
-@media print{.banca-volta{display:none}}
-html.em-app .banca-volta{display:none}
-</style>
-<script>try{if(self!==top&&/[?&]app=1/.test(location.search))document.documentElement.classList.add("em-app")}catch(e){}</script>
-<nav class="banca-volta" aria-label="Xeque News"><a href="../">&#8249;&nbsp;Todos os jornais</a><span>Mundo, Brasil, Lafaiete e Medicina</span><a href="../fontes/" class="banca-fontes">Fontes</a></nav>
-
-<div class="abas" role="tablist" aria-label="Jornais">
-<button type="button" role="tab" id="aba-mundo" aria-controls="folha-mundo" aria-selected="false"><b>Mundo</b><small>Observatório</small></button>
-<button type="button" role="tab" id="aba-brasil" aria-controls="folha-brasil" aria-selected="false"><b>Brasil</b><small>Terra Brasilis</small></button>
-<button type="button" role="tab" id="aba-lafaiete" aria-controls="folha-lafaiete" aria-selected="false"><b>Lafaiete</b><small>O Carijó</small></button>
-<button type="button" role="tab" id="aba-medicina" aria-controls="folha-medicina" aria-selected="false"><b>Medicina</b><small>Xeque-Mate</small></button>
-</div>
+<header class="capa">
+  <div class="cabeca">
+    <div class="orelha esq"><a href="../">&#8249; Banca</a><span>Ano I</span><span>Nº 3</span></div>
+    <h1 class="titulo">Xeque News</h1>
+    <div class="orelha dir banca-volta"><span>Grátis</span><a href="../fontes/" class="banca-fontes">Fontes</a></div>
+  </div>
+  <div class="fios" aria-hidden="true"></div>
+  <div class="linha"><span class="lado">Cons. Lafaiete, MG</span><span class="meio">quinta-feira, 12 de novembro de 2026</span><span class="lado">4 cadernos</span></div>
+</header>
+<nav class="abas" role="tablist" aria-label="Cadernos">
+<button type="button" role="tab" id="aba-mundo" aria-controls="folha-mundo" aria-selected="false"><i>Caderno A</i><b>Mundo</b><small>Observatório</small></button>
+<button type="button" role="tab" id="aba-brasil" aria-controls="folha-brasil" aria-selected="false"><i>Caderno B</i><b>Brasil</b><small>Terra Brasilis</small></button>
+<button type="button" role="tab" id="aba-lafaiete" aria-controls="folha-lafaiete" aria-selected="false"><i>Caderno C</i><b>Lafaiete</b><small>O Carijó</small></button>
+<button type="button" role="tab" id="aba-medicina" aria-controls="folha-medicina" aria-selected="false"><i>Caderno D</i><b>Medicina</b><small>Xeque-Mate</small></button>
+</nav>
 <div class="folhas">
 <iframe id="folha-mundo" role="tabpanel" aria-labelledby="aba-mundo" title="Observatório" data-src="../mundo/?app=1" hidden></iframe>
 <iframe id="folha-brasil" role="tabpanel" aria-labelledby="aba-brasil" title="Terra Brasilis" data-src="../brasil/?app=1" hidden></iframe>
@@ -161,7 +176,7 @@ html.em-app .banca-volta{display:none}
     ids.forEach(function(x){
       var b=document.getElementById("aba-"+x),f=document.getElementById("folha-"+x),on=x===id;
       b.setAttribute("aria-selected",on?"true":"false");b.tabIndex=on?0:-1;f.hidden=!on;
-      if(on&&!f.src){f.addEventListener("load",function(){tema(f)});f.src=f.getAttribute("data-src")}
+      if(on&&!f.src){f.classList.add("chegando");f.addEventListener("load",function(){tema(f);f.classList.remove("chegando")});f.src=f.getAttribute("data-src")}
     });
     if(guardar){try{localStorage.setItem("xeque-aba",id)}catch(e){} history.replaceState(null,"","#"+id)}
   }

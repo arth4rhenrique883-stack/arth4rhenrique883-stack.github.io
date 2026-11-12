@@ -1,6 +1,1015 @@
 {
- "atualizadoEm": "2026-11-10T06:55:00-03:00",
+ "atualizadoEm": "2026-11-12T06:40:00-03:00",
  "edicoes": [
+  {
+   "id": "2026-11-12",
+   "numero": 3,
+   "data": "2026-11-12",
+   "tempoLeitura": 26,
+   "fechamento": "Fechamento: quinta-feira, 12/11/2026, 6h30 (Brasília). Não houve edição em 11/11; esta cobre o que saiu de 8 a 11/11. Dados conferidos nas fontes de cada nota. Até o fechamento, a OPAS não havia divulgado a decisão sobre o status de eliminação do sarampo nos EUA.",
+   "ticker": [
+    {
+     "area": "NEJM",
+     "texto": "RACE-CARS: treinar comunidade, atendentes do 911 e socorristas não aumentou a sobrevida após parada cardíaca (9,0% vs 9,4%)",
+     "url": "https://newsroom.heart.org/news/community-cpr-and-ems-intervention-program-did-not-increase-survival-after-cardiac-arrest"
+    },
+    {
+     "area": "Hepatologia",
+     "texto": "Cinco sociedades fecham a primeira definição global de ACLF: bilirrubina ≥ 5 mg/dL, INR ≥ 1,5 e ao menos um órgão extra-hepático",
+     "url": "https://www.hcplive.com/view/acute-on-chronic-liver-failure-gets-unified-global-definition-grading"
+    },
+    {
+     "area": "DPOC",
+     "texto": "GOLD 2027 sai em 18/11: LAMA no grupo A, seis tipos de pré-DPOC e TC ao menos uma vez",
+     "url": "https://www.healio.com/news/pulmonology/20261109/2027-gold-report-discusses-ct-use-nonpharmacological-treatments-cvd-in-copd"
+    },
+    {
+     "area": "FDA",
+     "texto": "Pimicotinibe (Pimjetmi) aprovado para tumor tenossinovial de células gigantes sintomático",
+     "url": "https://www.onclive.com/view/fda-approves-pimicotinib-for-symptomatic-tgct"
+    },
+    {
+     "area": "Ebola",
+     "texto": "Bundibugyo: 10.772 casos confirmados e 5.234 mortes, segundo o CDC (dados de 6/11)",
+     "url": "https://contagionlive.com/view/ebola-update-drc-outbreak-tops-10000-cases-as-kenya-nigeria-report-spread"
+    },
+    {
+     "area": "Sarampo",
+     "texto": "EUA passam de 5,1 mil casos e 8 mortes em 2026; OPAS reavalia o status de eliminação",
+     "url": "https://www.healio.com/news/infectious-disease/20261109/states-report-first-measles-deaths-in-decades-ahead-of-paho-meeting"
+    },
+    {
+     "area": "IA",
+     "texto": "Dois modelos de linguagem erraram cânceres de pele em pele escura com confiança alta, mostra estudo de congresso",
+     "url": "https://www.healio.com/news/dermatology/20261110/claude-chatgpt-confidently-missed-skin-cancers-in-darker-skin"
+    }
+   ],
+   "capa": {
+    "kicker": "NEJM · AHA 2026 · parada cardíaca fora do hospital",
+    "titulo": "Treinar não bastou.",
+    "linhaFina": "O maior ensaio já feito sobre resposta comunitária à parada cardíaca randomizou 60 condados da Carolina do Norte e acompanhou 22.459 paradas em cinco anos. A sobrevida com boa função neurológica ficou em 9% nos dois braços.",
+    "texto": [
+     "A parada cardiorrespiratória (PCR) fora do hospital mata nove em cada dez vítimas nos Estados Unidos, e o que mais muda o desfecho acontece antes da ambulância: alguém reconhecer a parada, iniciar compressões e usar um desfibrilador externo automático (DEA). O ensaio RACE-CARS, apresentado em 8/11 no congresso da American Heart Association (AHA) e publicado no mesmo dia no New England Journal of Medicine, testou se um pacote de treinamento consegue melhorar esses elos.",
+     "O desenho foi um ensaio randomizado por conglomerados (a unidade sorteada é o condado, não o paciente). Dos 60 condados, que somam cerca de 8,5 milhões de habitantes, 31 receberam a intervenção e 29 seguiram a prática usual. O pacote tinha três frentes: treinar atendentes do 911 para reconhecer a parada e orientar a reanimação por telefone; preparar socorristas não médicos (bombeiros, policiais) para desfibrilar antes da chegada da ambulância; e ensinar reanimação à população em empresas, igrejas e repartições. Foram 5.724 eventos de treinamento, que alcançaram 201.586 pessoas, e 405 desfibriladores distribuídos.",
+     "Entre julho de 2021 e junho de 2026 houve 22.459 paradas em adultos (11.615 nos condados da intervenção e 10.844 nos de controle; idade mediana de 64 anos, 37% mulheres, 29% em área rural). O desfecho primário, sobrevida até a alta com função neurológica favorável, foi de cerca de 9,0% com a intervenção e 9,4% com o cuidado usual. A reanimação por leigos foi de 44,8% contra 42,3%, e a desfibrilação antes da ambulância, de 13,5% contra 15,3%. Os comunicados da AHA e do American College of Cardiology não trazem razão de chances nem intervalo de confiança; esses números estão no artigo completo.",
+     "[ANÁLISE] O resultado é neutro, mas a leitura exige cuidado. O treinamento alcançou 4,8% dos moradores, a implementação foi desigual entre condados, 5 dos 31 não instalaram os desfibriladores, e o estudo atravessou a pandemia de covid-19 e o furacão Helene. Numa análise exploratória do último ano, os condados da intervenção tiveram chance 33% maior de reanimação por leigos, o que sugere um efeito tardio. Os autores citam a Dinamarca, onde o treinamento em massa levou décadas e a sobrevida é de cerca de 16%, contra 10% nos EUA (dado observacional). A equipe vai acompanhar a população por pelo menos mais um ano. O financiamento é público (NIH e NHLBI)."
+    ],
+    "camada": "FATO",
+    "evidencia": "ECR por conglomerados (60 condados; n = 22.459)",
+    "confianca": "Alta",
+    "confiancaMotivo": "Ensaio grande, pragmático, com desfecho clínico duro e financiamento público, publicado no NEJM. A incerteza está na interpretação: a intervenção chegou a poucos, e o resultado não diz que reanimação por leigos não funciona.",
+    "citacao": "“A sobrevida permaneceu baixa e inalterada.” (Carolina Malta Hansen, autora principal, ao STAT)",
+    "fontes": [
+     {
+      "nome": "AHA Newsroom, 8/11/2026",
+      "url": "https://newsroom.heart.org/news/community-cpr-and-ems-intervention-program-did-not-increase-survival-after-cardiac-arrest"
+     },
+     {
+      "nome": "STAT News, 8/11/2026",
+      "url": "https://www.statnews.com/2026/11/08/sudden-cardiac-arrest-survival-cpr-defibrillation-training/"
+     },
+     {
+      "nome": "American College of Cardiology, 8/11/2026",
+      "url": "https://www.acc.org/latest-in-cardiology/articles/2026/11/06/14/37/sun-515pm-race-cars-aha-2026"
+     },
+     {
+      "nome": "NEJM, 8/11/2026 (artigo original)",
+      "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2612757"
+     }
+    ]
+   },
+   "numeros": [
+    {
+     "val": "9,0% × 9,4%",
+     "lab": "RACE-CARS · sobrevida com boa função neurológica",
+     "nota": "intervenção vs cuidado usual; 22.459 paradas",
+     "src": {
+      "nome": "AHA Newsroom, 8/11/2026",
+      "url": "https://newsroom.heart.org/news/community-cpr-and-ems-intervention-program-did-not-increase-survival-after-cardiac-arrest"
+     }
+    },
+    {
+     "val": "85% × 23%",
+     "lab": "ELSPIRE · fosfatase alcalina normalizada",
+     "nota": "elafibranor vs placebo na colangite biliar primária; n = 92",
+     "src": {
+      "nome": "HCPLive, 10/11/2026",
+      "url": "https://www.hcplive.com/view/elspire-elafibranor-normalizes-alp-in-pbc-below-the-1-67-threshold"
+     }
+    },
+    {
+     "val": "63% × 13%",
+     "lab": "Efinopegdutida 7 mg · resolução de MASH",
+     "nota": "52 semanas, fase 2b, biópsia; n = 381",
+     "src": {
+      "nome": "HCPLive, 9/11/2026",
+      "url": "https://www.hcplive.com/view/efinopegdutide-improves-mash-resolution-fibrosis-in-phase-2b-trial"
+     }
+    },
+    {
+     "val": "10.772",
+     "lab": "Ebola Bundibugyo · casos confirmados",
+     "nota": "5.234 mortes; dados do CDC de 6/11",
+     "src": {
+      "nome": "Contagion Live, 9/11/2026",
+      "url": "https://contagionlive.com/view/ebola-update-drc-outbreak-tops-10000-cases-as-kenya-nigeria-report-spread"
+     }
+    },
+    {
+     "val": "5.100+",
+     "lab": "Sarampo nos EUA em 2026",
+     "nota": "47 estados, 8 mortes; maior número desde 1991",
+     "src": {
+      "nome": "Healio, 9/11/2026",
+      "url": "https://www.healio.com/news/infectious-disease/20261109/states-report-first-measles-deaths-in-decades-ahead-of-paho-meeting"
+     }
+    }
+   ],
+   "cadernos": [
+    {
+     "id": "cardio",
+     "nome": "Coração e pulmão",
+     "itens": [
+      {
+       "titulo": "HD-PCI: 70 U/kg de heparina bastam na angioplastia eletiva",
+       "camada": "FATO",
+       "evidencia": "ECR por conglomerados com cruzamento (apresentado em congresso)",
+       "confianca": "Média",
+       "data": "10/11/2026",
+       "texto": "A heparina não fracionada é o anticoagulante padrão da intervenção coronária percutânea (ICP), mas a dose ideal nunca foi bem testada. O HD-PCI sorteou 11 centros canadenses para alternar períodos com 100 U/kg ou 70 U/kg e incluiu 11.619 pacientes de ICP eletiva (idade média de 68 anos; acesso radial em cerca de 85%). Em 30 dias, morte, infarto ou revascularização do vaso-alvo ocorreram em 1,2% com a dose alta e 1,0% com a baixa (HR 1,29; IC 95% 0,89 a 1,87), e sangramento maior em 1,0% nos dois grupos (HR 1,03; IC 95% 0,70 a 1,52). Sanjit Jolly, que apresentou os dados no TCT 2026 (1º/11), concluiu que 70 U/kg “provavelmente são suficientes”. Limitações: menos eventos do que o previsto (poder reduzido), trombose de cateter não foi medida e o tempo de coagulação ativado (TCA) só foi registrado em 39,6% dos procedimentos. Financiamento acadêmico (PHRI). Ainda sem publicação em revista.",
+       "prova": "Revise a heparina não fracionada: potencializa a antitrombina (inibe IIa e Xa), é monitorada por TTPa ou, na sala de hemodinâmica, pelo TCA, e é revertida com protamina. Lembre a trombocitopenia induzida por heparina (queda de plaquetas ≥ 50% entre o 5º e o 10º dia, com trombose).",
+       "fontes": [
+        {
+         "nome": "TCTMD, 10/11/2026",
+         "url": "https://www.tctmd.com/news/during-elective-pci-high-and-low-dose-heparin-provide-similar-outcomes"
+        }
+       ]
+      },
+      {
+       "titulo": "GOLD 2027: LAMA para o grupo A, seis tipos de pré-DPOC e tomografia ao menos uma vez",
+       "camada": "FATO",
+       "evidencia": "Documento de estratégia (prévia apresentada em conferência)",
+       "confianca": "Média",
+       "data": "9/11/2026",
+       "texto": "A GOLD (Global Initiative for Chronic Obstructive Lung Disease) publica todo ano o documento que orienta o manejo da doença pulmonar obstrutiva crônica (DPOC). A versão 2027 foi antecipada na conferência da entidade, na Filadélfia, e sai completa em 18/11, Dia Mundial da DPOC. Principais mudanças relatadas: (1) no grupo A, a recomendação inicial deixa de ser “um broncodilatador” e passa a ser um antimuscarínico de longa ação (LAMA), com base sobretudo em um ensaio de 2017 com tiotrópio; (2) seis situações com espirometria normal passam a ser chamadas de pré-DPOC, entre elas PRISm (relação preservada com espirometria alterada), enfisema ou espessamento de via aérea na tomografia e fumantes com bronquite crônica; o termo “DPOC precoce” não deve ser usado na clínica; (3) tomografia de tórax deve ser considerada ao menos uma vez em todo paciente, onde houver acesso, e os tampões de muco entram na avaliação; (4) reabilitação pulmonar e cessação do tabagismo são “essenciais” nos grupos B e E; (5) capítulo cardiovascular mais específico: betabloqueador cardiosseletivo e inibidor de SGLT2 na insuficiência cardíaca valem com ou sem DPOC, e não há contraindicação a betabloqueador na fibrilação atrial. Tanto a relação fixa VEF1/CVF < 0,7 quanto o limite inferior da normalidade são aceitos. Como é uma prévia, confira o texto final no dia 18.",
+       "prova": "Classificação ABE: A = 0 a 1 exacerbação moderada sem internação e poucos sintomas (mMRC 0 a 1, CAT < 10); B = mesmos critérios de exacerbação, com mais sintomas (mMRC ≥ 2 ou CAT ≥ 10); E = ≥ 2 exacerbações moderadas ou ≥ 1 com internação. B e E começam com LABA + LAMA; no E, considere corticoide inalatório se eosinófilos ≥ 300/µL. Diagnóstico exige VEF1/CVF < 0,7 após broncodilatador.",
+       "fontes": [
+        {
+         "nome": "Healio, 9/11/2026",
+         "url": "https://www.healio.com/news/pulmonology/20261109/2027-gold-report-discusses-ct-use-nonpharmacological-treatments-cvd-in-copd"
+        },
+        {
+         "nome": "HCPLive, 9/11/2026",
+         "url": "https://www.hcplive.com/view/what-s-new-in-2027-gold-report-copd"
+        }
+       ]
+      }
+     ],
+     "box": {
+      "titulo": "E o Brasil?",
+      "texto": "A reanimação por telefone existe no SAMU 192, mas o Brasil não tem um registro nacional de paradas cardíacas fora do hospital comparável ao americano. Sem medir, não dá para saber onde a cadeia de sobrevivência falha."
+     }
+    },
+    {
+     "id": "hepato",
+     "nome": "Fígado: o que saiu do congresso da AASLD",
+     "itens": [
+      {
+       "titulo": "ACLF ganha a primeira definição global",
+       "camada": "FATO",
+       "evidencia": "Consenso de cinco sociedades (documento de posição)",
+       "confianca": "Alta",
+       "data": "9/11/2026",
+       "texto": "A insuficiência hepática crônica agudizada (ACLF, na sigla em inglês) é a piora aguda de uma doença hepática crônica, com falência de órgãos e mortalidade alta em 30 dias. Até agora, Europa, América do Norte e Ásia usavam definições diferentes, o que atrapalhava ensaios e a transferência de pacientes. Em 30/10, cinco sociedades (AASLD, EASL, APASL, ALEH e SOLDA) publicaram uma definição única em quatro revistas ao mesmo tempo, tema de debate no congresso da AASLD (5 a 9/11). Critérios: doença hepática crônica avançada (fibrose ≥ F3) + falência hepática (bilirrubina ≥ 5 mg/dL e INR ≥ 1,5) + ao menos uma disfunção ou falência extra-hepática. Tipo A: sem descompensação prévia; tipo B: cirrose já descompensada. Grau 1: uma disfunção extra-hepática; grau 2: uma falência; grau 3: duas ou mais. Falências: renal (lesão renal aguda KDIGO 2 ou 3, ou diálise), cerebral (encefalopatia West Haven 3 ou 4), circulatória (vasopressor) e respiratória (ventilação mecânica ou PaO2/FiO2 ≤ 225). Os critérios foram calibrados pela mortalidade em 30 dias. Ficaram para depois a disfunção imune e a intestinal.",
+       "prova": "Diferencie de insuficiência hepática aguda (fígado previamente normal, encefalopatia + INR ≥ 1,5 em menos de 26 semanas). Precipitantes de ACLF: infecção bacteriana (pense em peritonite bacteriana espontânea), álcool, reativação de hepatite B, hemorragia digestiva e drogas. Revise West Haven e os estágios KDIGO.",
+       "fontes": [
+        {
+         "nome": "HCPLive, 30/10/2026",
+         "url": "https://www.hcplive.com/view/acute-on-chronic-liver-failure-gets-unified-global-definition-grading"
+        },
+        {
+         "nome": "AASLD, 30/10/2026",
+         "url": "https://www.aasld.org/aasld-joins-global-liver-societies-establish-unified-definition-acute-chronic-liver-failure"
+        },
+        {
+         "nome": "STAT News, 9/11/2026",
+         "url": "https://www.statnews.com/2026/11/09/acute-on-chronic-liver-failure-new-definition/"
+        }
+       ]
+      },
+      {
+       "titulo": "ELSPIRE: elafibranor normaliza a fosfatase alcalina em 85% na colangite biliar primária",
+       "camada": "FATO",
+       "evidencia": "ECR fase 3 (apresentado em congresso)",
+       "confianca": "Média",
+       "data": "10/11/2026",
+       "texto": "Na colangite biliar primária (CBP), doença autoimune dos pequenos ductos biliares, a segunda linha costuma ser reservada a quem mantém fosfatase alcalina (FA) acima de 1,67 vez o limite superior da normalidade (LSN) apesar do ácido ursodesoxicólico. O ELSPIRE testou o elafibranor 80 mg (agonista de PPAR alfa e delta) justamente em quem fica abaixo desse corte, com FA entre 1 e 1,67 vez o LSN: 92 adultos randomizados. A FA normalizou em 85,3% com o fármaco contra 23,3% com placebo; resposta bioquímica completa em 64,3% contra 16,7%. Eventos adversos leves a moderados, com um pouco mais de fraturas e ganho de peso no braço ativo (sem taxas divulgadas). Limitações: amostra pequena, desfecho bioquímico (substituto), sem dados de prurido ou de eventos clínicos na reportagem e sem publicação em revista. O elafibranor é da Ipsen; a reportagem não informa o financiador do estudo.",
+       "prova": "CBP: mulher de meia-idade, prurido e fadiga, FA elevada, anticorpo antimitocôndria positivo (não precisa de biópsia se FA ≥ 1,5 vez o LSN + AMA). Primeira linha: ácido ursodesoxicólico 13 a 15 mg/kg/dia. Associações: Sjögren, tireoidite, osteoporose e hipercolesterolemia.",
+       "fontes": [
+        {
+         "nome": "HCPLive, 10/11/2026",
+         "url": "https://www.hcplive.com/view/elspire-elafibranor-normalizes-alp-in-pbc-below-the-1-67-threshold"
+        }
+       ]
+      },
+      {
+       "titulo": "Efinopegdutida: resolução de MASH em 63% na biópsia",
+       "camada": "FATO",
+       "evidencia": "ECR fase 2b (apresentado em congresso)",
+       "confianca": "Média",
+       "data": "9/11/2026",
+       "texto": "A esteato-hepatite associada à disfunção metabólica (MASH, antiga NASH) é a forma inflamatória da gordura no fígado e pode evoluir para cirrose. A efinopegdutida, agonista duplo de GLP-1 e glucagon de aplicação semanal, foi testada em 381 adultos com MASH comprovada por biópsia e fibrose F2 (63%) ou F3 (37%), sorteados para 4, 7 ou 10 mg, placebo ou semaglutida 2,4 mg em braço aberto. Em 52 semanas, a resolução de MASH sem piora da fibrose ocorreu em 56%, 63% e 61% com as três doses, contra 13% com placebo (p < 0,001) e 53% com semaglutida. A melhora de ao menos um estágio de fibrose foi de 43%, 52% e 34% contra 21% (a dose de 10 mg não atingiu significância; p = 0,072). Abandono por evento adverso: 11% com 10 mg, 3 a 4% nas outras doses, 1% com placebo. Os investigadores apontam 7 mg como a dose de melhor equilíbrio. O braço de semaglutida era aberto e não serve de comparação formal. A molécula é desenvolvida pela MSD (Merck).",
+       "prova": "Nomenclatura atual: MASLD (esteatose + ao menos um fator cardiometabólico) e MASH. Rastreie fibrose com FIB-4 (idade, AST, ALT, plaquetas) e, se ≥ 1,3, elastografia. Tratamentos aprovados nos EUA para MASH com fibrose F2 e F3: resmetirom e semaglutida. A base continua sendo perda de 7 a 10% do peso.",
+       "fontes": [
+        {
+         "nome": "HCPLive, 9/11/2026",
+         "url": "https://www.hcplive.com/view/efinopegdutide-improves-mash-resolution-fibrosis-in-phase-2b-trial"
+        }
+       ]
+      }
+     ],
+     "box": {
+      "titulo": "Por que isso interessa ao plantão",
+      "texto": "A definição de ACLF foi escrita para ser usada por quem não é hepatologista: clínico, emergencista e intensivista. A ideia é reconhecer cedo e transferir para centro transplantador."
+     }
+    },
+    {
+     "id": "onco",
+     "nome": "Oncologia e ginecologia",
+     "itens": [
+      {
+       "titulo": "FDA aprova pimicotinibe para tumor tenossinovial de células gigantes",
+       "camada": "FATO",
+       "evidencia": "Decisão regulatória + ECR fase 3",
+       "confianca": "Média",
+       "data": "10/11/2026",
+       "texto": "O tumor tenossinovial de células gigantes (TGCT, antes chamado sinovite vilonodular pigmentada) é benigno, mas destrói articulações como joelho e quadril, e a cirurgia pode deixar sequelas. A doença depende da via do CSF1, e o pimicotinibe (Pimjetmi) é um inibidor oral do receptor CSF1R, 50 mg uma vez ao dia. O FDA aprovou o fármaco para TGCT sintomático quando a ressecção pioraria a função ou traria morbidade grave, segundo o OncLive (10/11; a reportagem não informa o dia exato da decisão). No ensaio MANEUVER (fase 3, controle com placebo por 24 semanas), a taxa de resposta objetiva por revisão central foi de 76,2% (IC 95% 63,8 a 86,0) em 63 pacientes, com duração mediana de resposta não atingida. Eventos mais comuns (≥ 20%): prurido, exantema, edema facial e periorbitário, fadiga, náusea e cefaleia.",
+       "prova": "TGCT difuso: monoartrite crônica com derrame hemorrágico de repetição em adulto jovem; a ressonância mostra sinal baixo em T2 e artefato de hemossiderina. É exemplo clássico de tumor benigno localmente agressivo.",
+       "fontes": [
+        {
+         "nome": "OncLive, 10/11/2026",
+         "url": "https://www.onclive.com/view/fda-approves-pimicotinib-for-symptomatic-tgct"
+        }
+       ]
+      },
+      {
+       "titulo": "Bexiga: Anktiva com BCG bate BCG isolado, diz a empresa (ainda sem números)",
+       "camada": "FATO",
+       "evidencia": "Comunicado de empresa (fase 2b randomizada, aberta)",
+       "confianca": "Baixa",
+       "data": "9/11/2026",
+       "texto": "No câncer de bexiga não músculo-invasivo de alto risco, o tratamento padrão após a ressecção transuretral é o BCG intravesical. A ImmunityBio informou em 9/11 que a combinação de nogapendekin alfa inbakicept (Anktiva, um superagonista de IL-15) com BCG teve melhora “estatisticamente significativa” sobre o BCG isolado na coorte A do QUILT-2.005, em pacientes com carcinoma in situ que nunca haviam recebido BCG. O desfecho primário era resposta completa em seis meses. O comunicado não traz tamanho da amostra, taxas de resposta, valor de p nem dados de segurança em números. O estudo é aberto, e a resposta é avaliada por cistoscopia, o que abre espaço para viés de aferição. A empresa promete os dados em congresso e um pedido ao FDA até o fim de 2026. Enquanto isso, não há como avaliar o tamanho do efeito.",
+       "prova": "Carcinoma in situ de bexiga é lesão plana de alto grau: o tratamento é BCG com indução (6 semanas) e manutenção, não cistectomia de início. Hematúria macroscópica indolor em fumante pede cistoscopia. O fármaco já é aprovado nos EUA para doença que não respondeu ao BCG.",
+       "fontes": [
+        {
+         "nome": "OncLive, 9/11/2026",
+         "url": "https://www.onclive.com/view/nogapendekin-alfa-inbakicept-plus-bcg-meets-primary-end-point-in-bcg-naive-nmibc"
+        }
+       ]
+      },
+      {
+       "titulo": "Vacina terapêutica de DNA faz regredir NIC 2 e 3 por HPV 16 e 18 em fase 3",
+       "camada": "FATO",
+       "evidencia": "ECR fase 3, duplo-cego (apresentado em congresso)",
+       "confianca": "Média",
+       "data": "6/11/2026",
+       "texto": "As lesões intraepiteliais de alto grau do colo do útero (NIC 2 e NIC 3) são tratadas com excisão, que aumenta o risco de parto prematuro em gestações futuras. A VGX-3100 é uma vacina terapêutica de DNA (não preventiva) que codifica as oncoproteínas E6 e E7 dos HPV 16 e 18, aplicada no músculo com eletroporação em três doses (dia 1, semana 4 e semana 12). No ensaio HPV-303CHN, em 22 centros da China, com randomização 2:1, o desfecho primário composto (regressão histológica + eliminação do vírus na semana 36) ocorreu em 52,5% de 139 mulheres vacinadas contra 35,3% de 68 no placebo: diferença de 17,2 pontos (IC 95% 2,7 a 30,6; p = 0,025). Eventos graves em 3,6% contra 2,9%, nenhum atribuído ao tratamento. Limitações: um só país, regressão espontânea alta no placebo (um terço), subgrupos de NIC 2 e NIC 3 sem significância isolada e apresentação em congresso (SITC 2026), sem artigo publicado. Estudo patrocinado pela Inovio, dona do produto.",
+       "prova": "A regressão espontânea de NIC 2 é frequente, sobretudo em jovens; por isso diretrizes aceitam conduta conservadora em mulheres abaixo de 25 anos. No SUS, o rastreamento passa a ser por teste de DNA-HPV dos 25 aos 64 anos, a cada cinco anos se negativo. Vacina preventiva: dose única aos 9 a 14 anos.",
+       "fontes": [
+        {
+         "nome": "OncLive, 6/11/2026",
+         "url": "https://www.onclive.com/view/vgx-3100-elicits-regression-and-clearance-in-hpv-16-18-associated-cervical-hsils"
+        }
+       ]
+      }
+     ],
+     "box": {
+      "titulo": "Como ler um comunicado de empresa",
+      "texto": "“Atingiu o desfecho primário” sem números é uma promessa, não um resultado. Espere o tamanho do efeito, o intervalo de confiança e a segurança antes de formar opinião. Por isso a nota do Anktiva leva confiança baixa."
+     }
+    },
+    {
+     "id": "infecto",
+     "nome": "Infectologia e saúde global",
+     "itens": [
+      {
+       "titulo": "Ebola Bundibugyo: 10.772 casos, com registros em Nairóbi e na Nigéria",
+       "camada": "FATO",
+       "evidencia": "Vigilância (CDC)",
+       "confianca": "Média",
+       "data": "9/11/2026",
+       "texto": "O surto de doença por vírus Ebola da espécie Bundibugyo, que começou na República Democrática do Congo (RDC), já é o segundo maior da história. Segundo o resumo do CDC com dados de 6/11, são 10.772 casos confirmados e 5.234 mortes confirmadas, letalidade de cerca de 49% (cálculo desta edição). A RDC concentra 10.741 casos em oito províncias. O Quênia soma 9 casos e 2 mortes, todos em Nairóbi (dados de 23/10): o caso-índice viajou da RDC por Uganda e morreu em 6/10; os demais são familiares e profissionais de saúde que já estavam em quarentena, e o governo queniano diz não haver transmissão comunitária. A Nigéria confirmou um caso em 20/10. Uganda (20 casos) não tem casos ativos desde julho. Desde 3/11, passageiros internacionais com destino aos EUA precisam declarar que não estiveram na RDC nos 21 dias anteriores. Atenção: a própria reportagem traz dois totais (10.772 e 10.910); usamos o que bate com a soma por país. A edição de 10/11 citou 10,5 mil casos, com dados anteriores.",
+       "prova": "Período de incubação de 2 a 21 dias (daí os 21 dias de monitoramento). Transmissão por contato com sangue e fluidos de doentes ou cadáveres, não por via aérea. A vacina licenciada (rVSV-ZEBOV) cobre só a espécie Zaire. No Brasil, caso suspeito é de notificação imediata.",
+       "fontes": [
+        {
+         "nome": "Contagion Live, 9/11/2026",
+         "url": "https://contagionlive.com/view/ebola-update-drc-outbreak-tops-10000-cases-as-kenya-nigeria-report-spread"
+        },
+        {
+         "nome": "CDC: situação do surto, 6/11/2026",
+         "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
+        }
+       ]
+      },
+      {
+       "titulo": "Sarampo nos EUA: oito mortes no ano e o status de eliminação em julgamento",
+       "camada": "FATO",
+       "evidencia": "Vigilância (CDC) e reportagem",
+       "confianca": "Alta",
+       "data": "9/11/2026",
+       "texto": "Os Estados Unidos, que eliminaram a circulação endêmica do sarampo em 2000, somam mais de 5,1 mil casos em 47 estados em 2026, o maior número desde 1991, e quase 7,5 mil desde o início de 2025, segundo o CDC. São oito mortes neste ano. As duas últimas, na semana passada, foram de lactentes: um em Wisconsin (primeira morte no estado em 36 anos) e um bebê de 7 meses não vacinado em Nova York (primeira em 30 anos). A Pensilvânia registrou seis mortes desde agosto. A cobertura com duas doses de tríplice viral nas crianças que entraram na pré-escola ficou em 92,4%, abaixo dos 95% necessários; só dez estados passam desse patamar. Um comitê da Organização Pan-Americana da Saúde (OPAS) começou em 10/11 uma reunião de quatro dias que deve decidir se o país perde o certificado de eliminação. O Departamento de Saúde americano afirma que o CDC destinou cerca de 100 milhões de dólares adicionais e enviou equipes aos estados; especialistas ouvidos pelo Healio, como Paul Offit, falam em fracasso da proteção da população.",
+       "prova": "Perde-se a eliminação quando a mesma cadeia de transmissão dura 12 meses ou mais. Clínica: febre, tosse, coriza, conjuntivite, manchas de Koplik e exantema craniocaudal. Complicações: pneumonia (principal causa de morte), encefalite e panencefalite esclerosante subaguda. Lactentes abaixo da idade vacinal dependem da imunidade de quem está em volta.",
+       "fontes": [
+        {
+         "nome": "Healio, 9/11/2026",
+         "url": "https://www.healio.com/news/infectious-disease/20261109/states-report-first-measles-deaths-in-decades-ahead-of-paho-meeting"
+        }
+       ]
+      }
+     ],
+     "box": {
+      "titulo": "Na aba Brasil",
+      "texto": "O sarampo também pressiona a fronteira amazônica: o Brasil tem 65 casos importados em 2026, 21 deles no Amazonas. Veja o caderno de vigilância da aba Brasil."
+     }
+    },
+    {
+     "id": "mental",
+     "nome": "Neurologia e saúde mental",
+     "itens": [
+      {
+       "titulo": "Estrogênio e pequenos vasos do cérebro: associação favorável, sem prova de causa",
+       "camada": "FATO",
+       "evidencia": "Coorte populacional (observacional)",
+       "confianca": "Baixa",
+       "data": "11/11/2026",
+       "texto": "A doença de pequenos vasos cerebrais (hiperintensidades de substância branca, lacunas, microssangramentos) é a base da maior parte do comprometimento cognitivo vascular. Um estudo publicado na revista Neurology avaliou 352 mulheres de 70 anos, sem déficit cognitivo, da coorte sueca Gothenburg H70, com ressonância (205 repetiram o exame cerca de cinco anos depois). Quem usou terapia hormonal da menopausa teve menor chance de carga alta de doença de pequenos vasos (OR 0,41; IC 95% 0,20 a 0,81); com contraceptivo oral e terapia hormonal, OR 0,31 (IC 95% 0,12 a 0,83). Vida reprodutiva mais longa também se associou a menos lesão (OR 0,92 por ano). Limitações importantes: exposição autorrelatada e binária (sem dose, tipo ou duração), perda de seguimento, muitos desfechos testados e, sobretudo, o viés da usuária saudável: quem recebeu hormônio tende a ter melhor saúde e renda. A própria autora, Giulia Lorenzon (Yale), diz que os achados “não provam” proteção e que não há evidência para indicar hormônio com esse fim. Em 2003, o ensaio randomizado WHIMS mostrou mais demência em mulheres que começaram a terapia depois dos 65 anos.",
+       "prova": "Indicação de terapia hormonal: sintomas vasomotores e síndrome geniturinária, de preferência iniciada antes dos 60 anos ou com menos de 10 anos de menopausa (janela de oportunidade). Não se indica para prevenir doença cardiovascular ou demência. Contraindicações: câncer de mama, tromboembolismo, sangramento não esclarecido e doença hepática grave.",
+       "fontes": [
+        {
+         "nome": "Healio, 11/11/2026",
+         "url": "https://www.healio.com/news/neurology/20261111/estrogen-use-linked-to-better-brain-health-less-damage-to-small-blood-vessels"
+        }
+       ]
+      },
+      {
+       "titulo": "Psilocibina para depressão resistente: pedido de registro chega completo ao FDA",
+       "camada": "FATO",
+       "evidencia": "Comunicado de empresa + 2 ECRs fase 3",
+       "confianca": "Média",
+       "data": "9/11/2026",
+       "texto": "A Compass Pathways informou em 9/11 que concluiu a submissão ao FDA do COMP360, uma formulação sintética de psilocibina, para depressão resistente ao tratamento (falha de ao menos dois antidepressivos). O pedido se apoia em dois ensaios de fase 3 e um de fase 2b, com mais de mil participantes, e ganhou um voucher de prioridade que pode encurtar a análise. No COMP005 (n = 258), uma dose única de 25 mg reduziu a escala MADRS em 3,6 pontos a mais do que o placebo na semana 6 (IC 95% −5,7 a −1,5). No COMP006 (n = 581), duas doses de 25 mg com três semanas de intervalo reduziram 3,8 pontos a mais do que 1 mg (IC 95% −5,8 a −1,8). Eventos adversos graves em torno de 5 a 6% nos dois braços; ideação suicida abaixo de 1%. Para ponderar: a diferença de 3 a 4 pontos na MADRS é modesta, o cegamento é difícil com um psicodélico, e os dados vêm da empresa. Mesmo aprovado, o produto dependeria de reclassificação pela agência antidrogas americana (DEA) e pelos estados; a empresa fala em lançamento no primeiro semestre de 2027.",
+       "prova": "Depressão resistente: sem resposta a dois antidepressivos em dose e tempo adequados. Opções com evidência: potencialização com lítio ou antipsicótico atípico, escetamina intranasal e eletroconvulsoterapia (a mais eficaz, sobretudo com sintomas psicóticos ou risco de suicídio).",
+       "fontes": [
+        {
+         "nome": "HCPLive, 9/11/2026",
+         "url": "https://www.hcplive.com/view/comp360-psilocybin-nda-fda-treatment-resistant-depression"
+        }
+       ]
+      }
+     ],
+     "box": {
+      "titulo": "Viés da usuária saudável",
+      "texto": "Estudos observacionais dos anos 1990 mostravam que hormônio protegia o coração. O ensaio WHI, de 2002, mostrou o contrário em mulheres mais velhas. É o exemplo de livro de por que associação favorável em coorte não basta para indicar tratamento."
+     }
+    },
+    {
+     "id": "ia",
+     "nome": "IA médica",
+     "itens": [
+      {
+       "titulo": "Chatbots erram câncer de pele em pele escura e não sabem que erraram",
+       "camada": "FATO",
+       "evidencia": "Estudo de acurácia diagnóstica (apresentado em congresso)",
+       "confianca": "Baixa",
+       "data": "10/11/2026",
+       "texto": "Modelos de linguagem que leem imagens já são usados por pacientes para perguntar sobre lesões de pele. Um estudo apresentado no congresso da American Society for Dermatologic Surgery (5 a 8/11) submeteu 656 lesões com diagnóstico por biópsia a dois modelos comerciais, Claude Opus 4.8 (Anthropic) e ChatGPT 5.5 (OpenAI), e pediu que cada um desse o diagnóstico e o próprio grau de confiança. A área sob a curva (AUC) caiu nos fototipos V e VI de Fitzpatrick: 0,56 para um e 0,68 para o outro, contra 0,77 e 0,81 nos fototipos III e IV. O primeiro acertou 82% dos cânceres em pele clara e 48% em pele escura. A confiança declarada quase não separou acerto de erro (65% contra 60%; 70% contra 65%), e cada modelo chamou de benignos 13 dos 48 cânceres em pele escura com confiança de 70% ou mais. Limitações: resumo de congresso, sem revisão por pares; apenas 48 cânceres em pele escura; uma imagem por lesão, sem história clínica; especificidade não informada. Os autores declaram não ter conflitos. Conclusão do apresentador: por ora, a IA não deve ser usada para triar câncer de pele.",
+       "prova": "Em pele negra, o melanoma mais comum é o acral lentiginoso (palmas, plantas e unhas), sem relação com o sol e com diagnóstico tardio. Regra ABCDE e, na unha, o sinal de Hutchinson (pigmento na prega ungueal). Em bioestatística: AUC de 0,5 equivale ao acaso.",
+       "fontes": [
+        {
+         "nome": "Healio, 10/11/2026",
+         "url": "https://www.healio.com/news/dermatology/20261110/claude-chatgpt-confidently-missed-skin-cancers-in-darker-skin"
+        }
+       ]
+      },
+      {
+       "titulo": "Resposta certa também pode fazer mal: a proposta de medir comportamento",
+       "camada": "ANÁLISE",
+       "evidencia": "Artigo de opinião (com literatura citada)",
+       "confianca": "Média",
+       "data": "10/11/2026",
+       "texto": "As avaliações de segurança de IA em saúde medem quase só acurácia: a resposta está correta? Dois pesquisadores da Universidade da Pensilvânia, Jessica Fishman e John L. Jackson Jr., defendem no STAT que isso não basta. A comunicação em saúde tem exemplos de mensagens verdadeiras que saíram pela culatra: campanhas contra o consumo excessivo de álcool em universidades e contra drogas em adolescentes aumentaram o comportamento que queriam reduzir, e dizer que algo é comum pode incentivá-lo. Eles citam um estudo do Hospital Infantil da Filadélfia com a Penn em que respostas de chatbots sobre vacinas eram muito precisas, mas traziam frases capazes de enfraquecer a intenção de vacinar. A proposta é o “benchmark comportamental”: ensaios randomizados que meçam se a resposta deixa a pessoa mais ou menos propensa a se proteger, começando por temas de consenso (parar de fumar, vacinação infantil), com resultados públicos, como nos testes de colisão de automóveis. É opinião, não estudo novo; o texto não traz dados originais.",
+       "prova": "Vale para o consultório: o modo de dizer muda a decisão (efeito de enquadramento). Risco relativo impressiona mais do que risco absoluto; prefira frequências naturais (“3 em cada 100”) e apresente benefício e dano no mesmo formato.",
+       "fontes": [
+        {
+         "nome": "STAT News (opinião), 10/11/2026",
+         "url": "https://www.statnews.com/2026/11/10/ai-health-advice-accuracy-messaging-risk-behavioral-benchmarking/"
+        }
+       ]
+      }
+     ],
+     "box": {
+      "titulo": "Calibração",
+      "texto": "Um modelo calibrado erra mais quando diz ter menos certeza. Se a confiança é quase igual no acerto e no erro, o número de confiança não protege ninguém."
+     }
+    }
+   ],
+   "leituraCritica": [
+    {
+     "titulo": "Ensaio neutro ou intervenção que não chegou? O RACE-CARS",
+     "texto": [
+      "1. O que foi testado. Não foi “reanimação por leigos funciona?”, e sim “este pacote de treinamento, do jeito que foi entregue, muda a sobrevida de um condado?”. São perguntas diferentes. A primeira tem evidência observacional forte; a segunda é de ciência da implementação.",
+      "2. A dose. O treinamento alcançou 4,8% dos moradores, e 5 de 31 condados não instalaram os desfibriladores. A reanimação por leigos subiu 2,5 pontos (44,8% contra 42,3%) e a desfibrilação precoce nem subiu. Se o processo mal mudou, não havia por onde o desfecho mudar. Chama-se isso de falha de implementação, diferente de falha de teoria.",
+      "3. A análise. Em ensaio por conglomerados, analisa-se por intenção de tratar no nível do condado, e o número efetivo de unidades é 60, não 22.459. Poder estatístico depende muito mais do número de conglomerados e da correlação dentro deles.",
+      "4. O sinal do último ano. Chance 33% maior de reanimação por leigos é análise exploratória: serve para gerar hipótese (o efeito demora), não para concluir.",
+      "5. O que levar. Um resultado neutro bem feito também orienta política pública: programas curtos e de baixo alcance não bastam. A comparação com a Dinamarca é observacional e mistura muitas diferenças entre os países."
+     ]
+    },
+    {
+     "titulo": "Fosfatase alcalina normal é o mesmo que fígado protegido?",
+     "texto": [
+      "No ELSPIRE, 85% normalizaram a fosfatase alcalina. O número é grande, mas é um desfecho substituto: na colangite biliar primária, FA e bilirrubina se associam a sobrevida livre de transplante em coortes, e agências aceitam esses marcadores para aprovação acelerada. Associação em coorte não garante que baixar o marcador com um fármaco específico traga o mesmo benefício.",
+      "A hepatologia já viveu isso: o ácido obeticólico melhorou a FA, ganhou aprovação acelerada e depois não confirmou benefício clínico de forma convincente. Três perguntas para qualquer substituto: o marcador está no caminho causal da doença? O efeito sobre ele prevê o efeito sobre o desfecho clínico em ensaios anteriores? Há dano fora desse caminho (aqui, fraturas e ganho de peso)?",
+      "Com 92 pacientes e sem tempo de seguimento informado, o estudo mostra que o fármaco mexe no exame em doença mais leve. Se isso muda a história natural, só um estudo maior e mais longo dirá. O mesmo raciocínio vale para a MASH: resolução histológica em 52 semanas ainda não é cirrose evitada."
+     ]
+    }
+   ],
+   "aprovacoes": {
+    "fda": [
+     {
+      "farmaco": "Pimicotinibe (Pimjetmi)",
+      "indicacao": "Tumor tenossinovial de células gigantes sintomático, quando a cirurgia traria perda funcional ou morbidade grave",
+      "data": "noticiado em 10/11/2026",
+      "status": "Aprovado"
+     },
+     {
+      "farmaco": "OncoMate MSI Dx (teste diagnóstico)",
+      "indicacao": "Teste por PCR para identificar tumores sólidos com instabilidade de microssatélites elegíveis a pembrolizumabe",
+      "data": "noticiado em 10/11/2026",
+      "status": "Aprovado (diagnóstico complementar)"
+     },
+     {
+      "farmaco": "COMP360 (psilocibina)",
+      "indicacao": "Depressão resistente ao tratamento",
+      "data": "9/11/2026",
+      "status": "Pedido de registro submetido"
+     },
+     {
+      "farmaco": "Gedatolisibe",
+      "indicacao": "Câncer de mama avançado RH+/HER2− com mutação de PIK3CA",
+      "data": "9/11/2026",
+      "status": "Pedido aceito; decisão prevista para 25/6/2027"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "OncLive, 10/11/2026 (pimicotinibe)",
+      "url": "https://www.onclive.com/view/fda-approves-pimicotinib-for-symptomatic-tgct"
+     },
+     {
+      "nome": "OncLive, 10/11/2026 (teste MSI)",
+      "url": "https://www.onclive.com/view/fda-approves-companion-diagnostic-for-pembrolizumab-in-msi-h-solid-tumors"
+     },
+     {
+      "nome": "HCPLive, 9/11/2026 (COMP360)",
+      "url": "https://www.hcplive.com/view/comp360-psilocybin-nda-fda-treatment-resistant-depression"
+     },
+     {
+      "nome": "OncLive, 9/11/2026 (gedatolisibe)",
+      "url": "https://www.onclive.com/view/gedatolisib-snda-accepted-by-fda-for-pik3ca-mutated-hr-her2-advanced-breast-cancer"
+     }
+    ]
+   },
+   "historia": [
+    {
+     "titulo": "1960: duas mãos sobre o esterno",
+     "texto": "Em julho de 1960, William Kouwenhoven, James Jude e Guy Knickerbocker, da Universidade Johns Hopkins, publicaram no JAMA o artigo “Closed-chest cardiac massage”. Até então, reanimar um coração parado exigia abrir o tórax e massageá-lo com a mão. Kouwenhoven, engenheiro eletricista que estudava desfibrilação, e seus colegas mostraram que comprimir o esterno bastava para gerar pulso. A frase que ficou do artigo é que qualquer pessoa, em qualquer lugar, pode iniciar a reanimação: tudo o que é preciso são duas mãos. Sessenta e seis anos depois, o RACE-CARS mostra que a técnica é simples, mas fazer uma população inteira usá-la continua difícil."
+    },
+    {
+     "titulo": "Instituto Evandro Chagas, 90 anos",
+     "texto": "Em novembro de 1936, o médico Evandro Chagas, filho de Carlos Chagas, fundou em Belém o Instituto de Patologia Experimental do Norte para estudar a leishmaniose visceral e outras doenças da Amazônia. Evandro morreu em 1940, aos 35 anos, em um acidente de avião, e o instituto passou a levar seu nome. A partir dos anos 1950, com o laboratório de vírus criado em parceria com a Fundação Rockefeller, a casa tornou-se referência mundial em arbovírus e isolou dezenas de vírus amazônicos, entre eles o Oropouche em território brasileiro. O instituto, hoje ligado ao Ministério da Saúde, comemora os 90 anos com um congresso científico de 10 a 12/11."
+    }
+   ],
+   "fronteiras": [
+    {
+     "pergunta": "Quanto treinamento é preciso para mudar a sobrevida de uma cidade?",
+     "texto": "O RACE-CARS alcançou 4,8% da população e não mudou o desfecho. Não se sabe qual é o limiar: 20%? 50%? Nem quais componentes pesam mais (telefone, desfibrilador público, aplicativos que chamam voluntários). A Dinamarca sugere que é coisa de décadas, mas é dado observacional."
+    },
+    {
+     "pergunta": "Vale tratar a colangite biliar primária com exame “quase normal”?",
+     "texto": "O corte de 1,67 vez o limite da fosfatase alcalina veio de estudos de prognóstico, não de biologia. Não se sabe se normalizar o exame em doença leve reduz transplante e morte, nem se o benefício compensa fraturas e custo por décadas."
+    },
+    {
+     "pergunta": "Pré-DPOC deve ser tratada?",
+     "texto": "A GOLD 2027 nomeia seis situações com espirometria normal. Não há ensaio mostrando que broncodilatador ou qualquer fármaco mude a evolução nesses grupos; por enquanto, o que tem evidência é parar de fumar. O risco é rotular e medicar milhões de pessoas sem benefício demonstrado."
+    },
+    {
+     "pergunta": "Dá para ensinar um modelo de linguagem a saber quando não sabe?",
+     "texto": "A confiança declarada pelos modelos no estudo de pele quase não diferiu entre acerto e erro. Não está claro se isso se corrige com mais imagens de pele escura no treino, com outro método de estimar incerteza ou se é limite da tecnologia atual."
+    },
+    {
+     "pergunta": "Por que o Bundibugyo se espalhou tanto desta vez?",
+     "texto": "Os surtos anteriores dessa espécie (2007 e 2012) tiveram menos de 200 casos cada. Não se sabe quanto do salto para mais de 10 mil se deve ao vírus, à ausência de vacina licenciada ou ao contexto de conflito e mobilidade no leste da RDC."
+    }
+   ],
+   "estudo": {
+    "temas": [
+     {
+      "tema": "Suporte básico de vida e cadeia de sobrevivência",
+      "porque": "Reconhecimento, compressões de 5 a 6 cm a 100 a 120 por minuto, desfibrilação precoce. Ritmos chocáveis (FV e TV sem pulso) e não chocáveis. Cai em toda prova."
+     },
+     {
+      "tema": "DPOC: diagnóstico, classificação ABE e tratamento inicial",
+      "porque": "A GOLD 2027 sai em 18/11 e muda o grupo A. Saiba a versão vigente e o que muda."
+     },
+     {
+      "tema": "Cirrose descompensada e suas emergências",
+      "porque": "Ascite, peritonite bacteriana espontânea, síndrome hepatorrenal, encefalopatia e, agora, a definição global de ACLF."
+     },
+     {
+      "tema": "Sarampo: clínica, vacinação e bloqueio",
+      "porque": "Surtos nas Américas e casos importados no Amazonas. Calendário do PNI, dose zero em surtos e bloqueio vacinal em até 72 horas."
+     },
+     {
+      "tema": "Avaliação de testes diagnósticos",
+      "porque": "Sensibilidade, especificidade, AUC e calibração. O estudo dos chatbots em dermatologia é um bom exercício."
+     }
+    ],
+    "leituras": [
+     {
+      "titulo": "Ensaio RACE-CARS (NEJM, 2026)",
+      "autor": "Malta Hansen C, Granger CB et al.",
+      "porque": "Para treinar a leitura de ensaio por conglomerados e a diferença entre falha de implementação e falha de teoria."
+     },
+     {
+      "titulo": "Definição global de ACLF (Hepatology, Journal of Hepatology e outras, 2026)",
+      "autor": "AASLD, EASL, APASL, ALEH e SOLDA",
+      "porque": "Leia a tabela de critérios e de graus; é curta e vai virar referência de prova."
+     },
+     {
+      "titulo": "Closed-chest cardiac massage (JAMA, 1960)",
+      "autor": "Kouwenhoven WB, Jude JR, Knickerbocker GG",
+      "porque": "Três páginas que mudaram a medicina de emergência. Vale pela clareza."
+     }
+    ],
+    "diretrizes": [
+     {
+      "titulo": "GOLD Report 2026 (vigente) e 2027 (a partir de 18/11)",
+      "nota": "Documento de estratégia para DPOC. Compare o tratamento inicial do grupo A nas duas versões."
+     },
+     {
+      "titulo": "Diretrizes de RCP e atendimento cardiovascular de emergência (AHA, 2025)",
+      "nota": "Algoritmos de suporte básico e avançado. Confira também a versão da Sociedade Brasileira de Cardiologia."
+     },
+     {
+      "titulo": "Guia de Vigilância em Saúde (Ministério da Saúde): capítulo de sarampo",
+      "nota": "Definição de caso suspeito, notificação imediata, coleta de amostras e bloqueio vacinal."
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "AHA Newsroom, 8/11/2026",
+      "url": "https://newsroom.heart.org/news/community-cpr-and-ems-intervention-program-did-not-increase-survival-after-cardiac-arrest"
+     },
+     {
+      "nome": "HCPLive, 30/10/2026 (ACLF)",
+      "url": "https://www.hcplive.com/view/acute-on-chronic-liver-failure-gets-unified-global-definition-grading"
+     },
+     {
+      "nome": "Healio, 9/11/2026 (GOLD 2027)",
+      "url": "https://www.healio.com/news/pulmonology/20261109/2027-gold-report-discusses-ct-use-nonpharmacological-treatments-cvd-in-copd"
+     }
+    ]
+   },
+   "agenda": [
+    {
+     "data": "10–13/11",
+     "evento": "Reunião do comitê da OPAS que reavalia a eliminação do sarampo nos EUA"
+    },
+    {
+     "data": "14/11",
+     "evento": "Dia Mundial do Diabetes · decisão do FDA sobre ivonescimabe"
+    },
+    {
+     "data": "18/11",
+     "evento": "Dia Mundial da DPOC · publicação do relatório GOLD 2027"
+    },
+    {
+     "data": "22/11",
+     "evento": "FDA: deramiocel (Duchenne) e molgramostim (proteinose alveolar)"
+    },
+    {
+     "data": "27/11",
+     "evento": "FDA: neladalquibe (NSCLC ALK+) e saroglitazar (colangite biliar primária)"
+    },
+    {
+     "data": "30/11",
+     "evento": "FDA: povetacicept, giredestranto e bezuclastinibe"
+    },
+    {
+     "data": "1º sem/27",
+     "evento": "Lançamento pretendido do COMP360 nos EUA, se aprovado e reclassificado"
+    }
+   ],
+   "quiz": [
+    {
+     "p": "No RACE-CARS, a unidade de randomização foi o condado. Por que isso muda o cálculo de poder estatístico?",
+     "r": "Porque pacientes do mesmo condado se parecem (correlação intraconglomerado). O tamanho efetivo da amostra fica mais perto do número de conglomerados (60) do que do número de pacientes (22.459)."
+    },
+    {
+     "p": "Pela nova definição global, quais são os critérios mínimos de ACLF?",
+     "r": "Doença hepática crônica avançada (fibrose ≥ F3) + falência hepática (bilirrubina ≥ 5 mg/dL e INR ≥ 1,5) + ao menos uma disfunção ou falência extra-hepática (rim, cérebro, circulação ou respiração)."
+    },
+    {
+     "p": "Paciente com DPOC, CAT de 8, uma exacerbação moderada no último ano, sem internação. Qual o grupo GOLD e o que a versão 2027 recomenda para começar?",
+     "r": "Grupo A. A prévia da GOLD 2027 recomenda um antimuscarínico de longa ação (LAMA), em vez de “um broncodilatador” qualquer."
+    },
+    {
+     "p": "Um teste tem AUC de 0,56 em um subgrupo. O que isso significa?",
+     "r": "Que ele discrimina doentes de não doentes pouco melhor do que o acaso (0,5) naquele subgrupo. Foi o que ocorreu com um dos modelos de linguagem em lesões de pele dos fototipos V e VI."
+    },
+    {
+     "p": "Pela Lei 15.527/2026, quem precisa comprovar proficiência no Enamed para obter o CRM?",
+     "r": "Quem ingressou no curso de medicina a partir de 19/6/2026. Quem já estava matriculado segue fazendo as provas, mas sem essa exigência para o registro. Veja a capa da aba Brasil."
+    }
+   ],
+   "glossario": [
+    {
+     "termo": "ACLF",
+     "def": "Insuficiência hepática crônica agudizada: piora aguda de doença hepática crônica com falência de órgãos e alta mortalidade em 30 dias."
+    },
+    {
+     "termo": "Ensaio por conglomerados",
+     "def": "Ensaio em que se sorteiam grupos (hospitais, cidades, condados), e não indivíduos. Exige análise que leve em conta a semelhança dentro de cada grupo."
+    },
+    {
+     "termo": "DEA",
+     "def": "Desfibrilador externo automático: aparelho que analisa o ritmo e orienta o choque, feito para uso por leigos."
+    },
+    {
+     "termo": "LAMA",
+     "def": "Antimuscarínico de longa ação (tiotrópio, umeclidínio, glicopirrônio): broncodilatador inalatório usado na DPOC."
+    },
+    {
+     "termo": "PRISm",
+     "def": "Relação VEF1/CVF preservada com VEF1 reduzido: espirometria alterada sem critério de obstrução. Uma das seis situações de pré-DPOC."
+    },
+    {
+     "termo": "MASH",
+     "def": "Esteato-hepatite associada à disfunção metabólica: gordura no fígado com inflamação e lesão do hepatócito, com ou sem fibrose. Antiga NASH."
+    },
+    {
+     "termo": "Desfecho substituto",
+     "def": "Marcador (exame, imagem) usado no lugar de um desfecho clínico, na expectativa de que o represente. Nem sempre representa."
+    },
+    {
+     "termo": "CSF1R",
+     "def": "Receptor do fator estimulador de colônias 1, que recruta macrófagos. É o alvo dos fármacos para tumor tenossinovial de células gigantes."
+    },
+    {
+     "termo": "Calibração",
+     "def": "Concordância entre a probabilidade que um modelo declara e a frequência real de acerto. Diferente de discriminação (AUC)."
+    },
+    {
+     "termo": "IEM",
+     "def": "Inscrição de Egresso de Medicina: registro previsto na Lei 15.527/2026 para quem se formou e ainda não comprovou proficiência; não permite atender pacientes."
+    }
+   ],
+   "brasil": {
+    "ticker": [
+     {
+      "area": "Formação",
+      "texto": "Lei 15.527 torna a proficiência no Enamed requisito para o CRM de quem entrou no curso a partir de 19/6/2026",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/lula-sanciona-lei-que-fortalece-avaliacao-da-formacao-medica-e-torna-enamed-requisito-para-exercicio-da-profissao"
+     },
+     {
+      "area": "Sarampo",
+      "texto": "Brasil tem 65 casos importados em 2026, 21 no Amazonas; Saúde repassa R$ 524 mil a três municípios da fronteira",
+      "url": "https://www.acessa.com/noticias/2026/11/343877-saude-repassa-rs-524-mil-para-conter-casos-de-sarampo-no-amazonas.html"
+     },
+     {
+      "area": "Mpox",
+      "texto": "Ministério garante 25 mil doses de vacina, com entrega em três semanas; 832 casos e 1 morte no ano",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/mpox-ministerio-da-saude-garante-25-mil-doses-de-vacina-apos-negociacao-internacional"
+     },
+     {
+      "area": "Covid-19",
+      "texto": "Casos graves caem 63% e mortes, 69% em 2026; casos leves sobem em 18 estados, Minas entre eles",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/covid-19-casos-e-obitos-seguem-em-queda-no-brasil"
+     },
+     {
+      "area": "Anvisa",
+      "texto": "Registrados um genérico e um similar de semaglutida para diabetes tipo 2 (10/11)",
+      "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/anvisa-registra-duas-novas-canetas-emagrecedoras-de-semaglutida"
+     },
+     {
+      "area": "Genômica",
+      "texto": "Genomas SUS abre consulta pública a 3,7 milhões de variantes de 15,9 mil brasileiros",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/pesquisa-financiada-pelo-ministerio-da-saude-disponibiliza-plataforma-com-dados-geneticos-nacionais-que-qualificam-diagnosticos-de-doencas"
+     }
+    ],
+    "capa": {
+     "kicker": "Formação médica · Lei nº 15.527, de 6/11/2026",
+     "titulo": "Sem prova, sem CRM.",
+     "linhaFina": "A lei sancionada em 6/11 transforma o Enamed em exame de proficiência em três etapas. Vale para quem entrou na faculdade a partir de 19 de junho de 2026. O governo fala em consenso; o CFM, que criticou a medida provisória em junho, agora a chama de histórica; pesquisadores veem um paliativo.",
+     "texto": [
+      "O Exame Nacional de Avaliação da Formação Médica (Enamed), criado em 2025 para avaliar cursos e estudantes, virou requisito para exercer a medicina. A Lei nº 15.527, sancionada pelo presidente Lula na sexta-feira (6/11), converte a Medida Provisória nº 1.370, de junho. A regra central: quem ingressou no curso a partir de 19/6/2026 só obtém o registro no Conselho Regional de Medicina (CRM) se comprovar proficiência. Quem já estava matriculado antes continua fazendo as provas, mas não depende delas para o registro.",
+      "Como funciona. A prova, aplicada pelo MEC por meio do Inep, com participação do Ministério da Saúde e do Conselho Federal de Medicina (CFM), ocorre ao fim do 4º, do 8º (antes do internato) e do 12º semestres. A nota final é uma média ponderada, com peso maior para a última etapa. A nota mínima, os pesos e os critérios ainda serão definidos por uma Comissão Nacional de Avaliação da Formação Médica; segundo o CFM, o conselho indica quatro dos oito integrantes. Quem não atingir o mínimo pode refazer a terceira etapa e, enquanto isso, pedir a Inscrição de Egresso de Medicina (IEM), que permite atividades técnico-científicas, mas não atender, prescrever ou assinar documentos assistenciais.",
+      "O que mais muda. A etapa teórica do Revalida passa a ser a terceira prova do Enamed; a prova de habilidades clínicas continua. A nota pode ser usada no acesso direto à residência, inclusive pelo Enare. A lei cria o Sistema Nacional de Avaliação da Residência Médica (Sinares). Cursos com conceito insatisfatório ficam sujeitos a supervisão do MEC, com redução de vagas ou suspensão de ingresso. Foi vetada a contrapartida de 2% do faturamento líquido das faculdades que usam a rede do SUS para estágios; a justificativa foi a dificuldade de definir o valor com critérios objetivos.",
+      "Os lados. O ministro da Saúde, Alexandre Padilha, afirma que a lei é “fruto de um consenso construído com o CFM, com as entidades médicas, com o Congresso Nacional” e que não se trata de “OAB da medicina”, mas de “um teste de progresso”. O presidente do CFM, José Hiran Gallo, disse: “Estamos vivendo um momento histórico”. Em junho, o mesmo CFM havia criticado a medida provisória (“A MP não avalia proficiência médica”) e defendido um exame próprio, o ProfiMed; o texto aprovado deu ao conselho assento na comissão. Do lado crítico, Elda Bussinguer, presidente da Sociedade Brasileira de Bioética, chama o exame de “medida paliativa, mas necessária”, alerta para uma indústria de cursinhos e diz que “os exames são o demonstrativo do fracasso das instituições”. Pesquisadores de saúde coletiva ouvidos pelo Outra Saúde avaliam que a prova não ataca a raiz do problema: a abertura de cursos sem estrutura e a falta de vagas de residência.",
+      "[ANÁLISE] Para quem já está no curso, nada muda no registro. Mudam duas coisas práticas: a nota do Enamed pesa na residência de acesso direto e a prova teórica do Revalida deixa de existir como exame separado. O efeito sobre o CRM só aparece com a turma que entrou no segundo semestre de 2026, ou seja, por volta de 2032. Na primeira edição, em 2025, 107 dos 351 cursos avaliados tiveram conceito 1 ou 2, e cerca de 13 mil concluintes não atingiram a proficiência, segundo o Ministério da Saúde."
+     ],
+     "camada": "FATO",
+     "evidencia": "Lei federal + posições públicas",
+     "confianca": "Alta",
+     "confiancaMotivo": "Texto legal publicado e comunicado oficial, com reportagens independentes. A nota mínima e os pesos ainda dependem de regulamentação.",
+     "citacao": "“Os exames são o demonstrativo do fracasso das instituições.” (Elda Bussinguer, Sociedade Brasileira de Bioética, ao Outra Saúde)",
+     "fontes": [
+      {
+       "nome": "Ministério da Saúde, 6/11/2026",
+       "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/lula-sanciona-lei-que-fortalece-avaliacao-da-formacao-medica-e-torna-enamed-requisito-para-exercicio-da-profissao"
+      },
+      {
+       "nome": "Lei nº 15.527, de 6/11/2026 (texto, Lex)",
+       "url": "https://www.lex.com.br/lei-no-15-527-de-6-de-novembro-de-2026/"
+      },
+      {
+       "nome": "Diário do Grande ABC, 6/11/2026",
+       "url": "https://www.dgabc.com.br/Noticia/4367377/lula-sanciona-lei-que-cria-exame-para-formados-em-medicina"
+      },
+      {
+       "nome": "Estratégia MED, 6/11/2026",
+       "url": "https://med.estrategia.com/portal/noticias/lei-enamed-sancionada-oab-da-medicina/"
+      },
+      {
+       "nome": "Outra Saúde, 9/11/2026",
+       "url": "https://outraspalavras.net/outrasaude/enamed-vira-lei-conseguira-atacar-a-raiz-da-crise-no-ensino-privado/"
+      },
+      {
+       "nome": "CFM, 26/6/2026 (crítica à MP)",
+       "url": "https://portal.cfm.org.br/noticias/presidente-do-cfm-critica-mp-do-enamed-e-reafirma-profimed-como-solucao-para-garantir-medicos-qualificados"
+      }
+     ]
+    },
+    "numeros": [
+     {
+      "val": "19/6/2026",
+      "lab": "Data de corte do Enamed",
+      "nota": "quem entrou no curso a partir daí precisa de proficiência para o CRM",
+      "src": {
+       "nome": "Ministério da Saúde, 6/11/2026",
+       "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/lula-sanciona-lei-que-fortalece-avaliacao-da-formacao-medica-e-torna-enamed-requisito-para-exercicio-da-profissao"
+      }
+     },
+     {
+      "val": "107 de 351",
+      "lab": "Cursos com conceito 1 ou 2",
+      "nota": "primeira edição do Enamed (2025)",
+      "src": {
+       "nome": "Diário do Grande ABC, 6/11/2026",
+       "url": "https://www.dgabc.com.br/Noticia/4367377/lula-sanciona-lei-que-cria-exame-para-formados-em-medicina"
+      }
+     },
+     {
+      "val": "65",
+      "lab": "Casos de sarampo em 2026",
+      "nota": "todos importados; 21 no Amazonas",
+      "src": {
+       "nome": "Agência Brasil (via Acessa), 9/11/2026",
+       "url": "https://www.acessa.com/noticias/2026/11/343877-saude-repassa-rs-524-mil-para-conter-casos-de-sarampo-no-amazonas.html"
+      }
+     },
+     {
+      "val": "832",
+      "lab": "Casos de mpox em 2026",
+      "nota": "até 6/11; 1 morte, 54 internações",
+      "src": {
+       "nome": "Ministério da Saúde, 8/11/2026",
+       "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/mpox-ministerio-da-saude-garante-25-mil-doses-de-vacina-apos-negociacao-internacional"
+      }
+     },
+     {
+      "val": "−69%",
+      "lab": "Mortes por covid-19",
+      "nota": "437 em 2026 contra 1,4 mil no mesmo período de 2025",
+      "src": {
+       "nome": "Ministério da Saúde, 10/11/2026",
+       "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/covid-19-casos-e-obitos-seguem-em-queda-no-brasil"
+      }
+     }
+    ],
+    "cadernos": [
+     {
+      "id": "br-formacao",
+      "nome": "Formação médica",
+      "itens": [
+       {
+        "titulo": "Revalida e residência: o que a lei do Enamed muda na prática",
+        "camada": "FATO",
+        "evidencia": "Lei federal",
+        "confianca": "Alta",
+        "data": "6/11/2026",
+        "texto": "Além do registro profissional (tema da capa), a Lei 15.527 mexe em duas portas de entrada. Revalida: para médicos formados no exterior, a etapa teórica passa a ser a terceira avaliação do Enamed; a etapa de habilidades clínicas segue existindo. Quem foi aprovado na primeira etapa do Revalida até 19/6/2026 pode fazer a prova prática nas duas edições seguintes sem passar pelo Enamed. Residência: a nota de quem for considerado proficiente pode ser aproveitada nos programas de acesso direto, conforme o edital de cada seleção; no Enare 2026/2027 vale um resultado proficiente de edição anterior dentro da validade e, havendo mais de um, a maior nota. A segunda edição do exame, em 2026, teve 152,9 mil inscritos, 58% a mais do que em 2025, já com alunos do 4º ano. As faculdades terão de publicar os resultados das três edições mais recentes.",
+        "prova": "A matriz do Enamed cobre clínica médica, cirurgia geral, pediatria, ginecologia e obstetrícia, medicina de família e comunidade, saúde mental e saúde coletiva. É a mesma base das provas de residência de acesso direto: estudar para uma é estudar para a outra.",
+        "fontes": [
+         {
+          "nome": "Estratégia MED, 6/11/2026",
+          "url": "https://med.estrategia.com/portal/noticias/lei-enamed-sancionada-oab-da-medicina/"
+         },
+         {
+          "nome": "Ministério da Saúde, 6/11/2026",
+          "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/lula-sanciona-lei-que-fortalece-avaliacao-da-formacao-medica-e-torna-enamed-requisito-para-exercicio-da-profissao"
+         }
+        ]
+       }
+      ],
+      "box": {
+       "titulo": "O que ainda falta definir",
+       "texto": "A nota mínima, o peso de cada etapa e as regras da Inscrição de Egresso (a cargo do CFM) dependem de regulamentação. Até o fechamento, não localizamos nota oficial do CFM sobre o I Encontro com Estudantes de Medicina, marcado para 11/11."
+      }
+     },
+     {
+      "id": "br-vig",
+      "nome": "Vigilância e vacinas",
+      "itens": [
+       {
+        "titulo": "Sarampo: 65 casos importados no ano e reforço na tríplice fronteira",
+        "camada": "FATO",
+        "evidencia": "Vigilância (Ministério da Saúde) e portaria",
+        "confianca": "Alta",
+        "data": "9/11/2026",
+        "texto": "O Brasil não tem circulação endêmica de sarampo desde 2024, mas o avanço da doença nas Américas pressiona as fronteiras. Em 2026 foram confirmados 65 casos, todos importados, 21 deles no Amazonas: Tabatinga (9), Benjamin Constant (6), São Paulo de Olivença (4) e Atalaia do Norte (2), na divisa com Peru e Colômbia. Portaria publicada em 9/11 autoriza o repasse de R$ 524 mil, em parcela única do Fundo Nacional de Saúde, para vacinação, vigilância e controle da transmissão em Atalaia do Norte, Benjamin Constant e Tabatinga. No sábado (7/11), um Dia D conjunto com Peru e Colômbia vacinou em portos, comunidades ribeirinhas e áreas indígenas. Para comparar: em 2019, o país teve mais de 20 mil casos e perdeu o certificado de eliminação. A reportagem não informa a cobertura vacinal local nem o país de origem dos casos.",
+        "prova": "PNI: tríplice viral aos 12 meses e segunda dose aos 15 meses (tetra viral ou tríplice + varicela). Em surto, dose zero dos 6 aos 11 meses, que não conta para o esquema. Caso suspeito (febre + exantema + tosse, coriza ou conjuntivite): notificação em até 24 horas, coleta de sorologia e bloqueio vacinal dos contatos em até 72 horas. Vacina de vírus vivo: contraindicada em gestantes e imunossuprimidos graves.",
+        "fontes": [
+         {
+          "nome": "Agência Brasil (reproduzida pelo Acessa), 9/11/2026",
+          "url": "https://www.acessa.com/noticias/2026/11/343877-saude-repassa-rs-524-mil-para-conter-casos-de-sarampo-no-amazonas.html"
+         },
+         {
+          "nome": "Agência Brasil, 9/11/2026 (original)",
+          "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/saude-repassa-r-524-mil-para-conter-casos-de-sarampo-no-amazonas"
+         },
+         {
+          "nome": "Ministério da Saúde, 7/11/2026 (Dia D)",
+          "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/dia-d-de-vacinacao-contra-o-sarampo-mobiliza-a-triplice-fronteira-neste-sabado-7"
+         }
+        ]
+       },
+       {
+        "titulo": "Mpox: 25 mil doses a caminho, para grupos definidos",
+        "camada": "FATO",
+        "evidencia": "Comunicado oficial",
+        "confianca": "Alta",
+        "data": "8/11/2026",
+        "texto": "A edição de 10/11 registrou a falta de vacina contra mpox e o inquérito aberto pelo Ministério Público Federal. Em 8/11, o Ministério da Saúde informou ter garantido 25 mil doses (20 mil iniciais mais 5 mil) com o único fabricante, um laboratório dinamarquês, com entrega prevista em três semanas. Já foram distribuídas 3.650 doses do estoque a nove unidades da Federação. Em 2026, até 6/11, o país tem 832 casos confirmados, 54 internações e uma morte, 16,8% menos casos do que em 2025 e 92,1% menos do que em 2022. A vacinação não é em massa. O público inclui pessoas vivendo com HIV (com prioridade para CD4 abaixo de 200), usuários de profilaxia pré-exposição (PrEP), profissionais de laboratório que manipulam o vírus e contatos de risco médio ou alto. O esquema é de duas doses com 28 dias de intervalo; a via intradérmica permite vacinar até cinco vezes mais pessoas por frasco. O comunicado não informa o clado em circulação.",
+        "prova": "Mpox: pródromo febril com linfadenopatia (o que ajuda a diferenciar da varicela) e lesões no mesmo estágio evolutivo em cada região. Transmissão por contato próximo. Em pessoa com HIV e CD4 baixo, o quadro pode ser necrosante e disseminado. Isolamento até a queda de todas as crostas.",
+        "fontes": [
+         {
+          "nome": "Ministério da Saúde, 8/11/2026",
+          "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/mpox-ministerio-da-saude-garante-25-mil-doses-de-vacina-apos-negociacao-internacional"
+         }
+        ]
+       },
+       {
+        "titulo": "Covid-19: gravidade em queda, casos leves em alta em 18 estados",
+        "camada": "FATO",
+        "evidencia": "Informe epidemiológico (Ministério da Saúde)",
+        "confianca": "Alta",
+        "data": "10/11/2026",
+        "texto": "O informe do Ministério com dados até 31/10 mostra 2026 bem abaixo de 2025: 118.851 notificações de síndrome gripal por covid-19 (queda de 68,8%), 3,4 mil casos de síndrome respiratória aguda grave (SRAG) contra 9,2 mil (queda de 63%) e 437 mortes contra 1,4 mil (queda de 69%). Há, porém, alta de casos leves nas últimas seis semanas em 18 unidades da Federação, entre elas Minas Gerais, São Paulo e Rio de Janeiro, todas ainda em baixo risco; a SRAG por covid cresce em Mato Grosso, Distrito Federal, Rio de Janeiro, São Paulo e Santa Catarina, em níveis baixos. Foram distribuídas 20,3 milhões de doses de vacina no ano e aplicadas 7,4 milhões. O informe não traz as variantes em circulação.",
+        "prova": "Desde 2024 a vacina de covid-19 está no calendário de rotina para crianças de 6 meses a menos de 5 anos, gestantes e idosos a partir de 60 anos. SRAG: síndrome gripal + dispneia ou saturação menor que 95% ou desconforto respiratório; é de notificação obrigatória no SIVEP-Gripe. O antiviral para grupos de risco deve começar em até cinco dias de sintomas.",
+        "fontes": [
+         {
+          "nome": "Ministério da Saúde, 10/11/2026",
+          "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/covid-19-casos-e-obitos-seguem-em-queda-no-brasil"
+         }
+        ]
+       }
+      ],
+      "box": {
+       "titulo": "Minas Gerais e Conselheiro Lafaiete",
+       "texto": "Minas está entre os 18 estados com alta recente de casos leves de covid-19. Não encontramos notícia nova de saúde sobre Conselheiro Lafaiete nas últimas 72 horas; a previsão de abertura do Hospital Regional segue sendo o fim de 2026."
+      }
+     },
+     {
+      "id": "br-sus",
+      "nome": "SUS e pesquisa",
+      "itens": [
+       {
+        "titulo": "Genomas SUS abre banco de variantes genéticas de brasileiros",
+        "camada": "FATO",
+        "evidencia": "Comunicado oficial (plataforma de dados)",
+        "confianca": "Média",
+        "data": "6/11/2026",
+        "texto": "Para saber se uma variante genética encontrada em um paciente causa doença, o laboratório consulta com que frequência ela aparece em pessoas saudáveis. Até agora, os exames feitos no Brasil dependiam de bancos estrangeiros, sobretudo de populações europeias, o que gera erros em uma população miscigenada. O projeto Genomas SUS, financiado pelo Ministério da Saúde e executado pela fundação de apoio do Hospital das Clínicas de Ribeirão Preto (USP) com nove centros nas cinco regiões, publicou um navegador de variantes com 15,9 mil genomas completos e mais de 3,7 milhões de variantes, com frequência por região. O investimento foi de cerca de R$ 272 milhões desde 2023. A fase 1 sequenciou 21 mil genomas; a fase 2 prevê mais 50 mil. O comunicado não cita artigo científico revisado por pares descrevendo o banco, e 15,9 mil genomas ainda é pouco para variantes muito raras.",
+        "prova": "Classificação de variantes pelo ACMG: patogênica, provavelmente patogênica, de significado incerto (VUS), provavelmente benigna e benigna. Frequência alta na população é argumento forte de benignidade. Uma VUS não deve orientar conduta clínica.",
+        "fontes": [
+         {
+          "nome": "Ministério da Saúde, 6/11/2026",
+          "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/pesquisa-financiada-pelo-ministerio-da-saude-disponibiliza-plataforma-com-dados-geneticos-nacionais-que-qualificam-diagnosticos-de-doencas"
+         }
+        ]
+       },
+       {
+        "titulo": "Saúde auditiva: cerca de 1 milhão de tecnologias fornecidas desde 2023",
+        "camada": "FATO",
+        "evidencia": "Comunicado oficial",
+        "confianca": "Média",
+        "data": "10/11/2026",
+        "texto": "No Dia Nacional de Prevenção e Combate à Surdez (10/11), o Ministério da Saúde informou que o SUS forneceu cerca de 1 milhão de tecnologias auditivas desde 2023, entre aparelhos de amplificação sonora individual, implantes cocleares e sistemas FM, além de consultas especializadas e acompanhamento multiprofissional. O número é do próprio governo e soma itens de natureza e custo muito diferentes; o comunicado não detalha a fila de espera nem a distribuição por região.",
+        "prova": "Triagem auditiva neonatal (teste da orelhinha): emissões otoacústicas até o primeiro mês; com fator de risco (UTI por mais de cinco dias, ototóxicos, infecção congênita), usa-se o potencial evocado auditivo de tronco encefálico. Meta 1-3-6: triar até 1 mês, diagnosticar até 3, intervir até 6.",
+        "fontes": [
+         {
+          "nome": "Ministério da Saúde, 10/11/2026",
+          "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/dia-nacional-de-prevencao-e-combate-a-surdez-sus-forneceu-cerca-de-1-milhao-de-tecnologias-auditivas-desde-2023"
+         }
+        ]
+       }
+      ],
+      "box": {
+       "titulo": "Também na semana",
+       "texto": "O Ministério apresentou o Novo PAC Saúde, com economia estimada em R$ 3,37 bilhões por projetos padronizados e compras em escala (10/11), e, na COP31, um marco de financiamento para o Plano de Ação em Saúde de Belém (9/11). São anúncios do governo, ainda sem avaliação independente."
+      }
+     },
+     {
+      "id": "br-reg",
+      "nome": "Anvisa e regulação",
+      "itens": [
+       {
+        "titulo": "Anvisa registra um genérico e um similar de semaglutida",
+        "camada": "FATO",
+        "evidencia": "Decisão regulatória",
+        "confianca": "Alta",
+        "data": "10/11/2026",
+        "texto": "A semaglutida é o agonista de GLP-1 do Ozempic e do Wegovy. Em 10/11, a Anvisa registrou dois novos produtos injetáveis com a molécula, ambos da Ávita Care: um genérico e um similar de nome Loryvia. Segundo a Agência Brasil, os dois têm como matriz o produto Owozy e foram registrados por comparação com o Ozempic. A indicação aprovada é diabetes tipo 2 insuficientemente controlado em adultos, não obesidade, embora o noticiário os chame de “canetas emagrecedoras”. Com eles, são 22 canetas dessa classe registradas no país em 2026. A reportagem não informa preço nem data de chegada às farmácias. A primeira semaglutida oral para obesidade foi registrada em 4/11 (edição de 10/11).",
+        "prova": "Genérico: mesmo princípio ativo, dose e forma, sem marca, com bioequivalência comprovada, intercambiável com o referência. Similar: tem marca e, desde 2014, também precisa comprovar equivalência. Agonistas de GLP-1: contraindicados com história pessoal ou familiar de carcinoma medular de tireoide ou NEM 2; atenção a pancreatite e, desde esta semana nos EUA, ao alerta de NAION.",
+        "fontes": [
+         {
+          "nome": "Agência Brasil, 10/11/2026",
+          "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/anvisa-registra-duas-novas-canetas-emagrecedoras-de-semaglutida"
+         }
+        ]
+       }
+      ],
+      "box": {
+       "titulo": "Outras decisões",
+       "texto": "A Anvisa também proibiu um saneante e um pó descolorante (10/11) e determinou a apreensão de suplementos alimentares, segundo a Agência Brasil. Não detalhamos porque não conseguimos ler as íntegras até o fechamento."
+      }
+     }
+    ],
+    "aprovacoes": {
+     "anvisa": [
+      {
+       "farmaco": "Semaglutida genérica (Ávita Care)",
+       "indicacao": "Diabetes tipo 2 insuficientemente controlado em adultos",
+       "data": "10/11/2026",
+       "status": "Registrado"
+      },
+      {
+       "farmaco": "Loryvia (semaglutida, similar)",
+       "indicacao": "Diabetes tipo 2 insuficientemente controlado em adultos",
+       "data": "10/11/2026",
+       "status": "Registrado"
+      }
+     ],
+     "fontes": [
+      {
+       "nome": "Agência Brasil, 10/11/2026",
+       "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/anvisa-registra-duas-novas-canetas-emagrecedoras-de-semaglutida"
+      }
+     ]
+    },
+    "agenda": [
+     {
+      "data": "10–12/11",
+      "evento": "Congresso dos 90 anos do Instituto Evandro Chagas (Belém)"
+     },
+     {
+      "data": "14/11",
+      "evento": "Dia Mundial do Diabetes"
+     },
+     {
+      "data": "17–18/11",
+      "evento": "XIII Congresso Brasileiro de Direito Médico (CFM)"
+     },
+     {
+      "data": "24–27/11",
+      "evento": "Sessão plenária do CFM"
+     },
+     {
+      "data": "fim de nov",
+      "evento": "Entrega prevista das 25 mil doses de vacina contra mpox"
+     },
+     {
+      "data": "dez",
+      "evento": "Prazo do Ministério para os 23 oncológicos no SUS"
+     },
+     {
+      "data": "fim/26",
+      "evento": "Previsão de abertura do Hospital Regional de Conselheiro Lafaiete"
+     }
+    ]
+   }
+  },
   {
    "id": "2026-11-10-2",
    "numero": 2,
