@@ -5,13 +5,14 @@ import { Folha, ANTON, ITALICA, SUAVE, ler, guardar } from "../comum/papel";
 
 let folha = null;
 
-function capa(dados, aviso) {
+function capa(dados, aviso, tentar) {
   if (folha) folha.apagar();
   const f = (folha = Folha());
   const d0 = dados && dados.jornais && dados.jornais[0] ? dados.jornais[0].quando : "";
   f.cabeca("Xeque News", "Ano I ✱ " + (d0 ? "Edição de " + d0 : "Edição do dia"));
   if (!dados || !dados.jornais || !dados.jornais.length) {
     f.texto(aviso || "Buscando as edições do dia pelo celular…", { tam: 30, centro: true, cor: SUAVE });
+    if (tentar) f.botao("TENTAR DE NOVO", tentar);
     f.pintar();
     return;
   }
@@ -24,26 +25,36 @@ function capa(dados, aviso) {
     f.estrelas();
   });
   f.texto(aviso || "O jornal inteiro está no celular.", { tam: 22, centro: true, cor: SUAVE });
+  if (tentar) f.botao("ATUALIZAR", tentar);
   f.pintar();
+}
+
+function agora() {
+  const d = new Date();
+  return String(d.getHours()).padStart(2, "0") + "h" + String(d.getMinutes()).padStart(2, "0");
 }
 
 Page(
   BasePage({
     build() {
+      this.atualizar();
+    },
+    // Busca o resumo do dia pelo celular. Mostra sempre, no pé da capa, se atualizou ou por que não.
+    atualizar() {
       const guardado = ler("xeque-relogio");
-      capa(guardado);
+      capa(guardado, "Buscando a edição do dia pelo celular…", () => this.atualizar());
       this.request({ method: "RELOGIO" })
         .then((r) => {
           if (r && r.ok && r.dados) {
-            const mudou = JSON.stringify(r.dados) !== JSON.stringify(guardado);
             guardar("xeque-relogio", r.dados);
-            if (mudou) capa(r.dados);
-          } else if (!guardado) {
-            capa(null, "Não consegui buscar as edições. Confira a internet do celular e abra de novo.");
+            capa(r.dados, "Atualizado às " + agora() + ".", () => this.atualizar());
+          } else {
+            const erro = (r && r.erro) || "resposta vazia";
+            capa(guardado, "O celular não conseguiu baixar a edição (" + erro + "). Confira a internet do celular.", () => this.atualizar());
           }
         })
-        .catch(() => {
-          if (!guardado) capa(null, "Sem ligação com o celular. Abra o app Zepp no telefone e tente de novo.");
+        .catch((e) => {
+          capa(guardado, "Sem resposta do celular (" + String((e && e.message) || e || "tempo esgotado") + "). Abra o app Zepp no telefone, com o Bluetooth ligado.", () => this.atualizar());
         });
     },
     onDestroy() {
