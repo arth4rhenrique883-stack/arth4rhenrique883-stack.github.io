@@ -52,6 +52,11 @@ PUBS = [
     ("lafaiete", "jornal-lafaiete", "O Carijó",
      "O jornal de Conselheiro Lafaiete: Prefeitura e Câmara, saúde, emprego, segurança, cidade e esporte. Toda notícia diz como afeta o trabalhador e cada classe.",
      {"oculto": True}),
+    # Manchester Mineira (12/11/2026, pedido de Arthur): jornal de Juiz de Fora, no molde do O Carijó.
+    # Rotina própria às 7h13 (trig_01QQDRqQnvNW4x62AdViCLXS). Fora da capa; aparece como caderno no app.
+    ("juizdefora", "jornal-juizdefora", "Manchester Mineira",
+     "O jornal de Juiz de Fora: Prefeitura e Câmara, saúde, emprego, segurança, cidade e esporte. Toda notícia diz como afeta o trabalhador e cada classe.",
+     {"oculto": True}),
 ]
 
 # Dossiês de estudo: páginas avulsas (sem edicoes.json), cada uma com seu próprio
@@ -407,6 +412,7 @@ ABAS = [
     ("mundo", "mundo", "Mundo", "Observatório"),
     ("brasil", "brasil", "Brasil", "Terra Brasilis"),
     ("lafaiete", "lafaiete", "Lafaiete", "O Carijó"),
+    ("juizdefora", "juizdefora", "Juiz de Fora", "Manchester Mineira"),
     ("medicina", "xequemate", "Medicina", "Xeque-Mate"),
 ]
 
@@ -442,7 +448,7 @@ body{display:flex;flex-direction:column;height:100%;background:var(--papel);colo
   padding:5px 2px 6px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;font:inherit}
 .abas button:first-child{border-left:0}
 .abas i{font:italic 400 10px/1 "Old Standard TT",Georgia,serif;letter-spacing:.12em;text-transform:uppercase;opacity:.8}
-.abas b{font:400 clamp(16px,4.7vw,28px)/1.02 "Anton",Impact,"Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.02em}
+.abas b{font:400 clamp(14px,4.1vw,26px)/1.02 "Anton",Impact,"Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.02em}
 .abas small{font:italic 400 12px/1.1 "Old Standard TT",Georgia,serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
 .abas button[aria-selected="true"]{background-color:var(--tinta);color:var(--papel);
   background-image:radial-gradient(rgba(236,227,212,.14) 1px, transparent 1.3px);background-size:4px 4px}
@@ -462,7 +468,7 @@ html[data-tema="escuro"] .abas button[aria-selected="true"]{background-image:rad
     <div class="orelha dir banca-volta"><span>Grátis</span><a href="../fontes/" class="banca-fontes">Fontes</a></div>
   </div>
   <div class="fios" aria-hidden="true"></div>
-  <div class="linha"><span class="lado">Cons. Lafaiete, MG</span><span class="meio">__DATA__</span><span class="lado">4 cadernos</span></div>
+  <div class="linha"><span class="lado">Cons. Lafaiete, MG</span><span class="meio">__DATA__</span><span class="lado">__CADERNOS__</span></div>
 </header>
 <nav class="abas" role="tablist" aria-label="Cadernos">
 __BOTOES__
@@ -517,21 +523,22 @@ def montar_app():
         dia = date.today()
     data_capa = f"{DIAS[dia.weekday()]}, {dia.day} de {MESES[dia.month - 1]} de {dia.year}"
     numero = f"Nº {(dia - date(2026, 11, 10)).days + 1}"
+    abas = [x for x in ABAS if os.path.exists(os.path.join(BANCA, x[1], "edicoes.json"))]
     letras = "ABCDEFGH"
     botoes = "\n".join(
         f'<button type="button" role="tab" id="aba-{i}" aria-controls="folha-{i}" aria-selected="false"><i>Caderno {letras[k]}</i><b>{H.escape(r)}</b><small>{H.escape(n)}</small></button>'
-        for k, (i, _, r, n) in enumerate(ABAS))
+        for k, (i, _, r, n) in enumerate(abas))
     folhas = "\n".join(
         f'<iframe id="folha-{i}" role="tabpanel" aria-labelledby="aba-{i}" title="{H.escape(n)}" data-src="../{pasta}/?app=1" hidden></iframe>'
-        for i, pasta, _, n in ABAS)
-    desc = "O mundo, o Brasil, Conselheiro Lafaiete e a medicina num aplicativo só, em cadernos, no desenho de jornal de banca."
+        for i, pasta, _, n in abas)
+    desc = "O mundo, o Brasil, Conselheiro Lafaiete, Juiz de Fora e a medicina num aplicativo só, em cadernos, no desenho de jornal de banca."
     cab = (CABECA.format(desc=H.escape(desc), tinta=TINTA, raiz="../")
            + "<title>Xeque News</title>\n"
            + '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
            + '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=UnifrakturMaguntia&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap">\n')
     corpo = (APP.replace("__BOTOES__", botoes).replace("__FOLHAS__", folhas)
-             .replace("__IDS__", json.dumps([a[0] for a in ABAS]))
-             .replace("__DATA__", H.escape(data_capa)).replace("__NUMERO__", numero))
+             .replace("__IDS__", json.dumps([a[0] for a in abas]))
+             .replace("__CADERNOS__", f"{len(abas)} cadernos").replace("__DATA__", H.escape(data_capa)).replace("__NUMERO__", numero))
     open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(
         com_tema(cab + corpo + REGISTRO.replace("{raiz}", "../") + "</body>\n</html>\n"))
     print("app: atualizado", data_capa, numero)
@@ -562,7 +569,7 @@ def montar_relogio():
         capa = e.get("capa", {})
         if i == "mundo":
             itens = pares(e.get("chamadas"), "rotulo", 4) + pares(e.get("ticker"), "regiao", 8)
-        elif i in ("brasil", "lafaiete"):
+        elif i in ("brasil", "lafaiete", "juizdefora"):
             itens = pares(e.get("resumo"), "tema", 10)
         else:
             itens = pares(e.get("ticker"), "area", 8) + pares((e.get("brasil") or {}).get("ticker"), "area", 4)
@@ -702,6 +709,8 @@ open(os.path.join(BANCA, "manifest.webmanifest"), "w", encoding="utf-8").write(
 
 base = ["./", "index.html", "manifest.webmanifest"] + ICONES
 for pasta, _, _, _, opts in PUBS:
+    if not os.path.exists(os.path.join(BANCA, pasta, "edicoes.json")):
+        continue  # jornal ainda sem edição: um arquivo que falta derrubaria a instalação do app
     base += [f"{pasta}/", f"{pasta}/index.html", f"{pasta}/edicoes.json", f"{pasta}/icone-192.png"]
     base += [f"{pasta}/{x}" for x in opts.get("extras", {})]
 base += ["fontes/", "fontes/index.html"]
