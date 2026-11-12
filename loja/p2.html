@@ -585,7 +585,7 @@ html[data-caneta] .gf-bar{gap:8px}
 @keyframes xm-out{to{opacity:0;transform:translateY(-5px)}}
 @keyframes xm-in{from{opacity:0;transform:translateY(9px)}}
 @keyframes xm-fade{from{opacity:0}}
-</style></head>
+</style><style data-plano>.plano{margin:.2rem 0 .9rem}.plano ol{margin:.35rem 0 0;padding-left:1.4rem;opacity:.72;font-size:.93em;line-height:1.55}.plano li{margin:.12rem 0}</style></head>
 <body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -690,7 +690,7 @@ html[data-caneta] .gf-bar{gap:8px}
   </footer>
 </div>
 
-<script>const PER={"id":"p2","site":"","aulas":[],"grade":[["Anatomia",[["",[]]]],["Anatomia prática",[["",[]]]],["Embriologia",[["",[]]]],["Farmacologia",[["",[]]]],["Fisiologia",[["",[]]]],["Genética",[["",[]]]],["Histologia",[["",[]]]],["Histologia prática",[["",[]]]]],"cards":[],"provas":[],"datas":{},"soon":"As apostilas do 2º período entram aqui quando chegarem os slides."};</script>
+<script>const PER={"id":"p2","site":"","aulas":[],"grade":[["Anatomia",[["",[]]]],["Anatomia prática",[["",[]]]],["Embriologia",[["",[]]]],["Farmacologia",[["",[]]]],["Fisiologia",[["",[]]]],["Genética",[["",[]]]],["Histologia",[["",[]]]],["Histologia prática",[["",[]]]]],"cards":[],"provas":[],"datas":{},"soon":"As apostilas do 2º período entram aqui quando chegarem os slides.","plano":[["Histologia prática","","","Atlas de histologia"],["Histologia prática","","","Sistema urinário"],["Histologia prática","","","Urotélio e tecido conjuntivo"],["Histologia prática","","","Sistema reprodutor masculino"],["Histologia prática","","","Sistema reprodutor feminino"],["Histologia prática","","","Sistema linfoide"],["Histologia prática","","","Adrenal"],["Histologia prática","","","Tireoide e hipófise"],["Anatomia prática","","","Olho"],["Anatomia prática","","","Sistema urinário"],["Anatomia prática","","","Sistema reprodutor feminino"],["Anatomia prática","","","Sistema reprodutor masculino"],["Anatomia prática","","","Suprarrenal"],["Anatomia prática","","","Sistema endócrino"],["Anatomia","","","Anatomia do sistema reprodutor feminino"],["Anatomia","","","Anatomia do sistema urinário"],["Anatomia","","","Anatomia da orelha"],["Fisiologia","","","Fisiologia prática"],["Fisiologia","","","Síndrome dos ovários policísticos"]]};</script>
 <script>
 const APOSTILA="bloco1.html";
 const CHAPTERS={};
@@ -908,6 +908,7 @@ function renderHoje(){
 const AKEY="medaj-"+PER.id+"-av";let ABERTA={};
 document.addEventListener("toggle",ev=>{const d=ev.target;if(d.matches&&d.matches("details.mat"))ABERTA[d.dataset.mat]=d.open},true);
 let AV=(()=>{let v=null;return v})();
+/*plano*/const PLN=(m,s)=>{if(AV==="TO")return"";const L=(PER.plano||[]).filter(x=>x[0]===m&&x[1]===s&&(!x[2]||x[2]===AV));return L.length?`<div class="plano"><span class="disc">Próximas apostilas</span><ol>${L.map(x=>`<li>${e_(x[3])}</li>`).join("")}</ol></div>`:""};
 function renderApostilas(){
   const el=document.getElementById("v-apostilas");
   if(!PER.grade.length){el.innerHTML=`<p class="soon">${e_(PER.soon)}</p>`;return}
@@ -921,10 +922,10 @@ function renderApostilas(){
     const nomes=subs.map(x=>x[0]).filter(Boolean),de=sub=>PER.aulas.filter(a=>a.mat===mat&&a.sub===sub&&a.av===AV);
     if(nomes.length>1){let cur=ESP[mat];if(!nomes.includes(cur))cur=nomes.find(x=>de(x).length)||nomes[0];
       h+=`<div class="espbar">${nomes.map(x=>`<button class="chip" type="button" data-esp="${e_(x)}" data-espmat="${e_(mat)}" aria-pressed="${x===cur}">${e_(x)}<span class="n">${de(x).length}</span></button>`).join("")}</div>`;
-      const L=de(cur);h+=L.length?`<div class="blist">${L.map(item).join("")}</div>`:`<p class="soon">${e_(cur)} da ${AV}: em breve.</p>`}
+      const L=de(cur);h+=(L.length?`<div class="blist">${L.map(item).join("")}</div>`:`<p class="soon">${e_(cur)} da ${AV}: em breve.</p>`)+PLN(mat,cur)}
     else for(const [sub] of subs){const L=de(sub);
       if(sub)h+=`<span class="disc">${e_(sub)}</span>`;
-      h+=L.length?`<div class="blist">${L.map(item).join("")}</div>`:`<p class="soon">Em breve</p>`}
+      h+=(L.length?`<div class="blist">${L.map(item).join("")}</div>`:`<p class="soon">Em breve</p>`)+PLN(mat,sub)}
     h+=`</details>`}
   el.innerHTML=h;renderLidas();
 }
