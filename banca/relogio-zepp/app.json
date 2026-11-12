@@ -1,0 +1,34 @@
+{
+  "configVersion": "v3",
+  "app": {
+    "appId": 1088812,
+    "appName": "Xeque News",
+    "appType": "app",
+    "version": { "code": 1, "name": "1.0.0" },
+    "icon": "icon.png",
+    "vender": "Xeque News",
+    "description": "As manchetes do dia do Observatório, do Terra Brasilis e do Xeque-Mate no pulso."
+  },
+  "permissions": ["data:os.device.info", "device:os.local_storage"],
+  "runtime": {
+    "apiVersion": { "compatible": "3.0", "target": "3.0", "minVersion": "3.0" }
+  },
+  "targets": {
+    "common": {
+      "module": {
+        "page": { "pages": ["page/index", "page/ler"] },
+        "app-side": { "path": "app-side/index" }
+      },
+      "platforms": [
+        { "st": "r", "dw": 480 },
+        { "st": "r", "dw": 466 },
+        { "st": "s", "dw": 390 }
+      ]
+    }
+  },
+  "i18n": {
+    "en-US": { "appName": "Xeque News" },
+    "pt-BR": { "appName": "Xeque News" }
+  },
+  "defaultLanguage": "en-US"
+}

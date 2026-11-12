@@ -1,0 +1,9 @@
+{
+  "name": "xeque-news-relogio",
+  "version": "1.0.0",
+  "description": "Xeque News no relógio (Zepp OS)",
+  "main": "app.js",
+  "private": true,
+  "devDependencies": { "@zeppos/device-types": "^3.0.0" },
+  "dependencies": { "@zeppos/zml": "^0.0.9" }
+}
