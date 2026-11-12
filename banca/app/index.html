@@ -88,7 +88,7 @@ html[data-tema="escuro"] .banca-volta .tema-alternador:hover,html[data-tema="esc
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="O mundo, o Brasil e a medicina num aplicativo só, em três abas, no desenho de jornal impresso.">
+<meta name="description" content="O mundo, o Brasil, Conselheiro Lafaiete e a medicina num aplicativo só, em abas, no desenho de jornal impresso.">
 <meta name="theme-color" content="#3A2D2B">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -113,7 +113,7 @@ body{display:flex;flex-direction:column;height:100dvh;background:var(--papel);co
 .abas button{flex:1;min-width:0;min-height:58px;border:0;border-left:1px solid var(--tinta);background:none;color:inherit;cursor:pointer;
   padding:8px 4px 7px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
 .abas button:first-child{border-left:0}
-.abas b{font:400 clamp(21px,6.2vw,30px)/1 "Anton",Impact,"Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.03em}
+.abas b{font:400 clamp(17px,4.9vw,30px)/1 "Anton",Impact,"Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.03em}
 .abas small{font:italic 400 13px/1.1 "Newsreader",Georgia,serif;opacity:.85;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
 .abas button[aria-selected="true"]{background:var(--tinta);color:var(--papel)}
 .abas button:focus-visible{outline:3px solid var(--tinta);outline-offset:-6px}
@@ -138,21 +138,23 @@ body{display:flex;flex-direction:column;height:100dvh;background:var(--papel);co
 html.em-app .banca-volta{display:none}
 </style>
 <script>try{if(self!==top&&/[?&]app=1/.test(location.search))document.documentElement.classList.add("em-app")}catch(e){}</script>
-<nav class="banca-volta" aria-label="Xeque News"><a href="../">&#8249;&nbsp;Todos os jornais</a><span>Mundo, Brasil e Medicina</span><a href="../fontes/" class="banca-fontes">Fontes</a></nav>
+<nav class="banca-volta" aria-label="Xeque News"><a href="../">&#8249;&nbsp;Todos os jornais</a><span>Mundo, Brasil, Lafaiete e Medicina</span><a href="../fontes/" class="banca-fontes">Fontes</a></nav>
 
 <div class="abas" role="tablist" aria-label="Jornais">
 <button type="button" role="tab" id="aba-mundo" aria-controls="folha-mundo" aria-selected="false"><b>Mundo</b><small>Observatório</small></button>
 <button type="button" role="tab" id="aba-brasil" aria-controls="folha-brasil" aria-selected="false"><b>Brasil</b><small>Terra Brasilis</small></button>
+<button type="button" role="tab" id="aba-lafaiete" aria-controls="folha-lafaiete" aria-selected="false"><b>Lafaiete</b><small>O Carijó</small></button>
 <button type="button" role="tab" id="aba-medicina" aria-controls="folha-medicina" aria-selected="false"><b>Medicina</b><small>Xeque-Mate</small></button>
 </div>
 <div class="folhas">
 <iframe id="folha-mundo" role="tabpanel" aria-labelledby="aba-mundo" title="Observatório" data-src="../mundo/?app=1" hidden></iframe>
 <iframe id="folha-brasil" role="tabpanel" aria-labelledby="aba-brasil" title="Terra Brasilis" data-src="../brasil/?app=1" hidden></iframe>
+<iframe id="folha-lafaiete" role="tabpanel" aria-labelledby="aba-lafaiete" title="O Carijó" data-src="../lafaiete/?app=1" hidden></iframe>
 <iframe id="folha-medicina" role="tabpanel" aria-labelledby="aba-medicina" title="Xeque-Mate" data-src="../xequemate/?app=1" hidden></iframe>
 </div>
 <script>
 (function(){
-  var ids=["mundo", "brasil", "medicina"], R=document.documentElement;
+  var ids=["mundo", "brasil", "lafaiete", "medicina"], R=document.documentElement;
   function tema(f){try{var t=R.getAttribute("data-tema");if(t&&f.contentDocument)f.contentDocument.documentElement.setAttribute("data-tema",t)}catch(e){}}
   function abrir(id,guardar){
     if(ids.indexOf(id)<0)id=ids[0];

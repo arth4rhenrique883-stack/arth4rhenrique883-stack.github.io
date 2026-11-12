@@ -365,7 +365,7 @@ a.outro:hover,a.outro:focus-visible{{background:rgba(255,255,255,.4)}}
   <p class="sub">Toque num jornal para ler a edição de hoje.</p>
   <a class="pub" href="app/">
     <img src="icone-192.png" alt="" width="84" height="84">
-    <div class="txt"><small>Três jornais em abas</small><b>Mundo, Brasil e Medicina</b><span>O Observatório, o Terra Brasilis e o Xeque-Mate num lugar só. Troque de jornal pelas abas no alto.</span></div>
+    <div class="txt"><small>Quatro jornais em abas</small><b>Mundo, Brasil, Lafaiete e Medicina</b><span>O Observatório, o Terra Brasilis, O Carijó e o Xeque-Mate num lugar só. Troque de jornal pelas abas no alto.</span></div>
     <i aria-hidden="true">&#8250;</i>
   </a>
 {chr(10).join(itens)}
@@ -406,6 +406,7 @@ ABAS = [
     # id da aba, pasta do jornal, rótulo, nome do jornal
     ("mundo", "mundo", "Mundo", "Observatório"),
     ("brasil", "brasil", "Brasil", "Terra Brasilis"),
+    ("lafaiete", "lafaiete", "Lafaiete", "O Carijó"),
     ("medicina", "xequemate", "Medicina", "Xeque-Mate"),
 ]
 
@@ -421,7 +422,7 @@ body{display:flex;flex-direction:column;height:100dvh;background:var(--papel);co
 .abas button{flex:1;min-width:0;min-height:58px;border:0;border-left:1px solid var(--tinta);background:none;color:inherit;cursor:pointer;
   padding:8px 4px 7px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
 .abas button:first-child{border-left:0}
-.abas b{font:400 clamp(21px,6.2vw,30px)/1 "Anton",Impact,"Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.03em}
+.abas b{font:400 clamp(17px,4.9vw,30px)/1 "Anton",Impact,"Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.03em}
 .abas small{font:italic 400 13px/1.1 "Newsreader",Georgia,serif;opacity:.85;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
 .abas button[aria-selected="true"]{background:var(--tinta);color:var(--papel)}
 .abas button:focus-visible{outline:3px solid var(--tinta);outline-offset:-6px}
@@ -473,12 +474,12 @@ def montar_app():
     folhas = "\n".join(
         f'<iframe id="folha-{i}" role="tabpanel" aria-labelledby="aba-{i}" title="{H.escape(n)}" data-src="../{pasta}/?app=1" hidden></iframe>'
         for i, pasta, _, n in ABAS)
-    desc = "O mundo, o Brasil e a medicina num aplicativo só, em três abas, no desenho de jornal impresso."
+    desc = "O mundo, o Brasil, Conselheiro Lafaiete e a medicina num aplicativo só, em abas, no desenho de jornal impresso."
     cab = (CABECA.format(desc=H.escape(desc), tinta=TINTA, raiz="../")
            + "<title>Xeque News: Mundo, Brasil e Medicina</title>\n"
            + '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
            + '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Newsreader:ital,opsz,wght@1,6..72,400&family=Archivo:wght@500;600&display=swap">\n')
-    corpo = (APP.replace("__BARRA__", BARRA.replace("{nome}", "Mundo, Brasil e Medicina"))
+    corpo = (APP.replace("__BARRA__", BARRA.replace("{nome}", "Mundo, Brasil, Lafaiete e Medicina"))
              .replace("__BOTOES__", botoes).replace("__FOLHAS__", folhas)
              .replace("__IDS__", json.dumps([a[0] for a in ABAS])))
     open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(
@@ -511,7 +512,7 @@ def montar_relogio():
         capa = e.get("capa", {})
         if i == "mundo":
             itens = pares(e.get("chamadas"), "rotulo", 4) + pares(e.get("ticker"), "regiao", 8)
-        elif i == "brasil":
+        elif i in ("brasil", "lafaiete"):
             itens = pares(e.get("resumo"), "tema", 10)
         else:
             itens = pares(e.get("ticker"), "area", 8) + pares((e.get("brasil") or {}).get("ticker"), "area", 4)
@@ -522,7 +523,12 @@ def montar_relogio():
         jornais.append({"id": i, "aba": rotulo, "jornal": nome, "data": e.get("data", ""), "quando": data_bonita(e.get("data", "")),
                         "numero": str(e.get("numero", "")), "chapeu": corta(capa.get("chapeu") or capa.get("kicker") or "", 40),
                         "manchete": corta(capa.get("titulo", ""), 110), "resumo": corta(capa.get("linhaFina", ""), 300),
-                        "itens": unicos[:12]})
+                        "itens": unicos[:12],
+                        "numeros": [{"r": corta(n.get("rotulo") or n.get("lab") or "", 30), "v": corta(n.get("valor") or n.get("val") or "", 24),
+                                     "n": corta(n.get("nota") or "", 90)} for n in (e.get("numeros") or [])[:6] if isinstance(n, dict)],
+                        "agenda": [{"q": corta(g.get("quando") or g.get("data") or "", 24), "o": corta(g.get("oque") or g.get("evento") or "", 140)}
+                                   for g in (e.get("agenda") or e.get("acompanhar") or [])[:5] if isinstance(g, dict)],
+                        "pensar": corta(((e.get("pensar") or e.get("conversa") or [""])[:1] or [""])[0], 220)})
     open(os.path.join(BANCA, "relogio.json"), "w", encoding="utf-8").write(
         json.dumps({"v": 1, "casa": "Xeque News", "jornais": jornais}, ensure_ascii=False, separators=(",", ":")) + "\n")
     print("relogio.json:", os.path.getsize(os.path.join(BANCA, "relogio.json")), "bytes")
@@ -603,7 +609,7 @@ manifest = {
         {"src": "icone-512.png", "sizes": "512x512", "type": "image/png"},
         {"src": "icone-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
     ],
-    "shortcuts": [{"name": "Mundo, Brasil e Medicina", "url": "app/", "icons": [{"src": "icone-192.png", "sizes": "192x192"}]}] + [{"name": nome, "url": f"{pasta}/", "icons": [{"src": f"{pasta}/icone-192.png", "sizes": "192x192"}]}
+    "shortcuts": [{"name": "Mundo, Brasil, Lafaiete e Medicina", "url": "app/", "icons": [{"src": "icone-192.png", "sizes": "192x192"}]}] + [{"name": nome, "url": f"{pasta}/", "icons": [{"src": f"{pasta}/icone-192.png", "sizes": "192x192"}]}
                   for pasta, _, nome, _, opts in PUBS if opts.get("destaque")],
 }
 open(os.path.join(BANCA, "manifest.webmanifest"), "w", encoding="utf-8").write(
