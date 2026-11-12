@@ -527,8 +527,45 @@ def montar_relogio():
         json.dumps({"v": 1, "casa": "Xeque News", "jornais": jornais}, ensure_ascii=False, separators=(",", ":")) + "\n")
     print("relogio.json:", os.path.getsize(os.path.join(BANCA, "relogio.json")), "bytes")
 
+# Flashcards para o relógio (12/11/2026): /banca/cartoes.json, tirado do que os jornais já trazem
+# (quiz e glossário do Xeque-Mate, glossário de IA do Observatório, "palavrinhas" do Terra Brasilis).
+# Junta todas as edições guardadas, as mais novas primeiro, sem repetir, até 30 cartas por baralho.
+def montar_cartoes():
+    def edicoes(pasta):
+        try:
+            return json.load(open(os.path.join(BANCA, pasta, "edicoes.json"), encoding="utf-8"))["edicoes"]
+        except Exception:
+            return []
+    def baralho(i, nome, de, pares):
+        vistos, cartas = set(), []
+        for f, v in pares:
+            f, v = corta(f, 230), corta(v, 330)
+            if f and v and f.lower() not in vistos:
+                vistos.add(f.lower())
+                cartas.append({"k": hashlib.sha256(f.encode("utf-8")).hexdigest()[:8], "f": f, "v": v})
+        return {"id": i, "nome": nome, "de": de, "cartas": cartas[:30]}
+    def termos(lista):
+        return [("O que é: " + str(x.get("termo", "")).strip() + "?", x.get("def", ""))
+                for x in (lista or []) if isinstance(x, dict) and x.get("termo")]
+    med, mundo, brasil = [], [], []
+    for e in edicoes("xequemate"):
+        med += [(q.get("p", ""), q.get("r", "")) for q in e.get("quiz", []) if isinstance(q, dict)]
+    for e in edicoes("xequemate"):
+        med += termos(e.get("glossario"))
+    for e in edicoes("mundo"):
+        mundo += termos((e.get("ia") or {}).get("glossario")) + termos(e.get("glossario"))
+    for e in edicoes("brasil"):
+        brasil += termos(e.get("palavrinhas"))
+    bs = [b for b in (baralho("medicina", "Medicina", "Quiz e glossário do Xeque-Mate", med),
+                      baralho("mundo", "Mundo", "Glossário do Observatório", mundo),
+                      baralho("brasil", "Brasil", "Palavrinhas do Terra Brasilis", brasil)) if b["cartas"]]
+    open(os.path.join(BANCA, "cartoes.json"), "w", encoding="utf-8").write(
+        json.dumps({"v": 1, "casa": "Xeque News", "baralhos": bs}, ensure_ascii=False, separators=(",", ":")) + "\n")
+    print("cartoes.json:", ", ".join(f'{b["nome"]} {len(b["cartas"])}' for b in bs))
+
 montar_app()
 montar_relogio()
+montar_cartoes()
 
 open(os.path.join(BANCA, "index.html"), "w", encoding="utf-8").write(com_tema(tela_inicial(cards)))
 
