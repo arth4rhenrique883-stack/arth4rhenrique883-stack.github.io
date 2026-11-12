@@ -502,7 +502,30 @@ html[data-caneta] .gf-bar{gap:8px}
 @keyframes xm-out{to{opacity:0;transform:translateY(-5px)}}
 @keyframes xm-in{from{opacity:0;transform:translateY(9px)}}
 @keyframes xm-fade{from{opacity:0}}
-</style></head>
+</style>
+<style id="as-v101">/*as:v101*/
+html{-webkit-tap-highlight-color:transparent;scrollbar-color:#3a3d47 transparent;scrollbar-width:thin}
+::selection{background:rgba(201,163,95,.32);color:inherit}
+:where(a,button,summary,input,select,textarea,[tabindex]):focus-visible{outline:2px solid #C9A35F;outline-offset:3px}
+:where(a,button,summary):focus:not(:focus-visible){outline:none}
+.asmed,.xm-cont,.nv-beta{-webkit-user-select:none;user-select:none}
+.nv-beta{opacity:.5!important;transition:opacity .25s ease}
+body.xm-rolando .nv-beta{opacity:0!important;pointer-events:none}
+:where(button,.chip,.item,.mat summary,.pages button,.tabs a){transition:transform .16s ease,background-color .2s ease,border-color .2s ease,opacity .2s ease,box-shadow .2s ease}
+:where(button,.chip,.item,.mat summary):active{transform:scale(.985)}
+@media (hover:hover){
+  :where(.item,.mat summary):hover{border-color:rgba(201,163,95,.5)}
+  :where(.chip,.tabs a):hover{border-color:rgba(201,163,95,.55)}
+}
+.wrap,.gf-in{padding-bottom:max(76px,calc(env(safe-area-inset-bottom,0px) + 76px))}
+:where(.count,.n,.badge,.pages button,.xm-seq b,.chip b,.chip span){font-variant-numeric:tabular-nums}
+:where(p,li,figcaption){text-wrap:pretty}
+@keyframes xm101In{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+:where(.view,#app article,#app .head){animation:xm101In .28s ease both}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth;scroll-padding-top:72px}}
+@media print{#as-v101{display:none}}
+</style>
+</head>
 <body class="xm-vc">
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
