@@ -529,6 +529,17 @@ def montar_relogio():
                         "agenda": [{"q": corta(g.get("quando") or g.get("data") or "", 24), "o": corta(g.get("oque") or g.get("evento") or "", 140)}
                                    for g in (e.get("agenda") or e.get("acompanhar") or [])[:5] if isinstance(g, dict)],
                         "pensar": corta(((e.get("pensar") or e.get("conversa") or [""])[:1] or [""])[0], 220)})
+    # "secoes": blocos genéricos que o relógio desenha como vierem (título + linhas). Para pôr seção nova
+    # no relógio basta acrescentar aqui: não precisa reinstalar o app (12/11/2026).
+    for j in jornais:
+        sec = []
+        if j["numeros"]:
+            sec.append({"titulo": "Os números", "linhas": [{"r": n["r"], "g": n["v"], "t": n["n"]} for n in j["numeros"]]})
+        if j["agenda"]:
+            sec.append({"titulo": "Agenda", "linhas": [{"r": g["q"], "t": g["o"]} for g in j["agenda"]]})
+        if j["pensar"]:
+            sec.append({"titulo": "Para pensar", "linhas": [{"t": j["pensar"]}]})
+        j["secoes"] = sec
     open(os.path.join(BANCA, "relogio.json"), "w", encoding="utf-8").write(
         json.dumps({"v": 1, "casa": "Xeque News", "jornais": jornais}, ensure_ascii=False, separators=(",", ":")) + "\n")
     print("relogio.json:", os.path.getsize(os.path.join(BANCA, "relogio.json")), "bytes")

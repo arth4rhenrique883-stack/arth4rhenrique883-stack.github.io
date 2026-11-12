@@ -4,7 +4,7 @@
     "appId": 1088812,
     "appName": "Xeque News",
     "appType": "app",
-    "version": { "code": 2, "name": "1.1.0" },
+    "version": { "code": 3, "name": "1.2.0" },
     "icon": "icon.png",
     "vender": "Xeque News",
     "description": "As manchetes do dia do Observatório, do Terra Brasilis, do O Carijó e do Xeque-Mate no pulso."

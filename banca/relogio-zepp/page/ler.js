@@ -28,28 +28,17 @@ Page({
       f.texto(it.t, { tam: 30, depois: 10 });
       f.filete(false);
     });
-    if (j.numeros && j.numeros.length) {
-      f.texto("OS NÚMEROS", { tam: 34, fonte: ANTON, centro: true, depois: 6 });
-      j.numeros.forEach((n) => {
-        f.texto(String(n.r).toUpperCase(), { tam: 20, cor: SUAVE, depois: 0 });
-        f.texto(n.v, { tam: 40, fonte: ANTON, depois: 0 });
-        if (n.n) f.texto(n.n, { tam: 22, cor: SUAVE, depois: 8 });
+    // Seções genéricas: o relógio desenha o que vier no resumo do dia, então seções novas
+    // chegam pela internet sem reinstalar o app.
+    (j.secoes || []).forEach((sec) => {
+      f.texto(String(sec.titulo || "").toUpperCase(), { tam: 34, fonte: ANTON, centro: true, depois: 6 });
+      (sec.linhas || []).forEach((l) => {
+        if (l.r) f.texto(String(l.r).toUpperCase(), { tam: 20, cor: SUAVE, depois: 0 });
+        if (l.g) f.texto(l.g, { tam: 40, fonte: ANTON, depois: 0 });
+        if (l.t) f.texto(l.t, { tam: l.g ? 22 : 28, cor: l.g ? SUAVE : undefined, depois: 8 });
       });
       f.filete(true);
-    }
-    if (j.agenda && j.agenda.length) {
-      f.texto("AGENDA", { tam: 34, fonte: ANTON, centro: true, depois: 6 });
-      j.agenda.forEach((g) => {
-        f.texto(String(g.q).toUpperCase(), { tam: 20, cor: SUAVE, depois: 0 });
-        f.texto(g.o, { tam: 26, depois: 8 });
-      });
-      f.filete(true);
-    }
-    if (j.pensar) {
-      f.texto("PARA PENSAR", { tam: 34, fonte: ANTON, centro: true, depois: 6 });
-      f.texto(j.pensar, { tam: 28, depois: 10 });
-      f.filete(true);
-    }
+    });
     f.espaco(6);
     f.texto("O jornal inteiro, com as fontes, está no celular.", { tam: 22, centro: true, cor: SUAVE });
     f.texto("XEQUE NEWS", { tam: 30, fonte: ANTON, centro: true });
