@@ -250,7 +250,9 @@ select{max-width:100%}
 .banca-volta span{flex:1;text-align:right;opacity:.85;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media (max-width:430px){.banca-volta span{display:none}}
 @media print{.banca-volta{display:none}}
+html.em-app .banca-volta{display:none}
 </style>
+<script>try{if(self!==top&&/[?&]app=1/.test(location.search))document.documentElement.classList.add("em-app")}catch(e){}</script>
 <nav class="banca-volta" aria-label="Xeque News"><a href="../">&#8249;&nbsp;Todos os jornais</a><span>Jornal de Cada Dia</span><a href="../fontes/" class="banca-fontes">Fontes</a></nav>
 <div class="folha" lang="pt-BR">
   <div class="controles">
@@ -279,7 +281,7 @@ select{max-width:100%}
   </header>
   <main id="conteudo"><p class="erro">Abrindo o jornal…</p></main>
   <hr class="duplo">
-  <p class="nota-fim" id="notaFim">Jornal de Cada Dia ✱ feito com a ajuda do Claude, uma inteligência artificial ✱ cada notícia traz a fonte e a data</p>
+  <p class="nota-fim" id="notaFim">Jornal de Cada Dia ✱ cada notícia traz a fonte e a data</p>
 </div>
 
 <script>
@@ -337,7 +339,7 @@ function render(e){
   h += `</section>`;
   if(e.conversa?.length) h += `<section class="conversa">${cab("Para conversar no almoço","")}<ul style="padding-top:18px">${e.conversa.map(q=>`<li>${esc(q)}</li>`).join("")}</ul></section>`;
   document.getElementById("conteudo").innerHTML = h;
-  document.getElementById("notaFim").textContent = `${e.fechamento||""} Selos: “Confirmado” é fato checado; “Explicação” é a leitura do jornal; “Previsão” é uma possibilidade. ✱ Feito com a ajuda do Claude, uma inteligência artificial.`;
+  document.getElementById("notaFim").textContent = `${e.fechamento||""} Selos: “Confirmado” é fato checado; “Explicação” é a leitura do jornal; “Previsão” é uma possibilidade.`;
 }
 
 fetch("edicoes.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
@@ -395,7 +397,7 @@ fetch("edicoes.json",{cache:"no-store"}).then(r=>r.json()).then(d=>{
    </div>
   </div>
 
-  <div class="ce-limite">Limites, com honestidade: os jornais do Xeque News são escritos com a ajuda do Claude, uma inteligência artificial da Anthropic, a partir de pesquisa na internet. Nenhum jornal é livre de vieses, e uma IA também pode errar, resumir mal ou escolher mal os assuntos. Por isso o nosso compromisso é com a neutralidade, e não uma promessa de perfeição: mostrar as fontes para que você mesmo possa conferir.</div>
+  <div class="ce-limite">Limites, com honestidade: os jornais do Xeque News são feitos a partir de pesquisa na internet, em fontes públicas. Nenhum jornal é livre de vieses, e este também pode errar, resumir mal ou escolher mal os assuntos. Por isso o nosso compromisso é com a neutralidade, e não uma promessa de perfeição: mostrar as fontes para que você mesmo possa conferir.</div>
 
   <details>
    <summary>Ver todas as fontes de referência e como corrigimos erros</summary>

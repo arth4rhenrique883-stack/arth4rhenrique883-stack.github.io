@@ -1,0 +1,1023 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<!--tema:inicio-->
+<style id="tema-xeque">
+/* Modo claro e escuro (10/11/2026). Claro = o papel bege de sempre. Escuro = jornal impresso em negativo:
+   papel grafite quente, tinta marfim, filetes claros. Na primeira visita segue o aparelho; depois lembra a escolha.
+   Fonte única: banca/ferramentas/tema.html (o montar.py injeta onde faltar). Não apague nas rotinas. */
+html[data-tema="escuro"]{
+  color-scheme:dark;
+  --papel:#191714;--papel-escuro:#221F1B;--papel2:#221F1B;--paper:#191714;--paper-2:#221F1B;--sheet:#1E1B18;
+  --tinta:#ECE3D4;--tinta-suave:#BFB4A4;--tinta2:#BFB4A4;--ink:#ECE3D4;--ink-2:#DDD3C3;--muted:#B5A999;--suave:#BFB4A4;
+  --fio:#D9CFBF;--rule:#D9CFBF;--hair:rgba(236,227,212,.32);--filete:#9D8F80;
+  --realce:#2C2823;--soft:#26221E;--signal:#E39A84;
+  --tinta-forte:#F3ECDF;--tinta-hover:#CFC5B5;--tarja-suave:#3A342D;--veu:rgba(255,244,226,.035);
+  --fato:#9CC9AA;--alega:#E0B072;--analise:#A9B6E0;--cenario:#D4A3C1;
+}
+html[data-tema="escuro"],html[data-tema="escuro"] body{background-color:#191714}
+html[data-tema="escuro"] body{
+  background-image:
+    radial-gradient(ellipse at 50% 35%, rgba(255,236,205,.045), rgba(0,0,0,0) 70%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .93  0 0 0 0 .89  0 0 0 0 .83  0 0 0 .05 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>") !important}
+/* véus claros sobre o papel: no escuro, quase transparentes */
+html[data-tema="escuro"] :is(.plate,.cad-head .eng,.esc-card,.impacto,.box,.opcao,.aviso,.jornais article,a.pub,li.sug-item){background:rgba(255,244,226,.035)!important}
+html[data-tema="escuro"] :is(.opcao:hover,a.pub:hover,a.pub:focus-visible,a.outro:hover,a.outro:focus-visible){background:rgba(255,244,226,.08)!important}
+html[data-tema="escuro"] .sug :is(input[type=text],input[type=email],input[type=password],textarea,select){background:rgba(255,244,226,.05);color:var(--tinta)}
+html[data-tema="escuro"] :is(.item,.dia,.linha-tempo li){border-color:rgba(236,227,212,.4)}
+html[data-tema="escuro"] .passos li.trava{background:repeating-linear-gradient(-45deg,transparent 0 6px,rgba(224,176,114,.14) 6px 8px)}
+/* gravuras: as desenhadas viram negativo (traço marfim); a foto antiga fica como prancha colada, um pouco mais baixa */
+html[data-tema="escuro"] svg[aria-label^="Gravura"]{filter:invert(1) hue-rotate(180deg) sepia(.12)}
+html[data-tema="escuro"] .gravura{background:#D8CFBF!important}
+html[data-tema="escuro"] .gravura img{filter:contrast(1.05) sepia(.25) brightness(.86)}
+/* expediente "Fontes e compromisso editorial" */
+html[data-tema="escuro"] body .compromisso-editorial,html[data-tema="escuro"] body .compromisso-editorial :is(h2.ce-titulo,h3,a){color:var(--tinta)}
+html[data-tema="escuro"] body .compromisso-editorial :is(.ce-linha,.ce-pe){color:var(--tinta-suave)}
+html[data-tema="escuro"] body .compromisso-editorial :is(.ce-caixa,.ce-chapeu,h3,.ce-selos span,details,.ce-limite){border-color:var(--tinta);outline-color:var(--tinta)}
+html[data-tema="escuro"] body .compromisso-editorial .ce-caixa{background:rgba(255,244,226,.035)}
+/* logo da rainha: o mesmo selo, em marfim sobre grafite */
+html[data-tema="escuro"] body .rainha-canto{background:#191714;border-color:#ECE3D4;outline-color:#ECE3D4}
+html[data-tema="escuro"] body .rainha-canto svg g{stroke:#ECE3D4}
+html[data-tema="escuro"] body .rainha-canto svg circle{fill:#191714}
+/* barra da Banca */
+html[data-tema="escuro"] .banca-volta{background:#0F0E0C;color:#ECE3D4;border-bottom:1px solid rgba(236,227,212,.35)}
+html[data-tema="escuro"] .banca-volta a:hover,html[data-tema="escuro"] .banca-volta a:focus-visible{background:#ECE3D4;color:#0F0E0C}
+html[data-tema="escuro"] .banca-mini a{color:#ECE3D4}
+/* o botão */
+.tema-alternador{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:44px;min-height:44px;padding:6px 10px;
+  font:600 13px/1 "Archivo","Archivo Narrow","Helvetica Neue",Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;
+  cursor:pointer;border-radius:0;background:#ECE3D4;color:#3A2D2B;border:1.5px solid #3A2D2B;outline:1px solid #3A2D2B;outline-offset:2px}
+.tema-alternador svg{width:18px;height:18px;flex:none}
+.tema-alternador:focus-visible{outline-width:3px}
+.tema-alternador.solto{position:fixed;left:max(12px,env(safe-area-inset-left,0px));bottom:max(12px,env(safe-area-inset-bottom,0px));z-index:9998}
+html[data-tema="escuro"] .tema-alternador{background:#191714;color:#ECE3D4;border-color:#ECE3D4;outline-color:#ECE3D4}
+.banca-volta .tema-alternador{background:transparent;color:inherit;border-color:currentColor;outline:0;flex:none;padding:8px 10px}
+.banca-volta .tema-alternador:hover,.banca-volta .tema-alternador:focus-visible{background:#ECE3D4;color:#3A2D2B}
+html[data-tema="escuro"] .banca-volta .tema-alternador:hover,html[data-tema="escuro"] .banca-volta .tema-alternador:focus-visible{color:#0F0E0C}
+@media (max-width:430px){.tema-alternador .tema-rot{display:none}}
+@media print{.tema-alternador{display:none}}
+</style>
+<script id="tema-xeque-js">
+(function(){
+  var CHAVE="xeque-tema", R=document.documentElement;
+  function guardado(){try{var v=localStorage.getItem(CHAVE);return v==="claro"||v==="escuro"?v:null}catch(e){return null}}
+  function sistema(){try{return matchMedia("(prefers-color-scheme: dark)").matches?"escuro":"claro"}catch(e){return "claro"}}
+  function cor(t){var m=document.querySelectorAll('meta[name="theme-color"]');for(var i=0;i<m.length;i++)m[i].setAttribute("content",t==="escuro"?"#0F0E0C":"#3A2D2B")}
+  var LUA='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="currentColor"/></svg>';
+  var SOL='<svg viewBox="0 0 24 24" aria-hidden="true"><g stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>';
+  function pintar(t){
+    R.setAttribute("data-tema",t);cor(t);
+    var b=document.querySelector(".tema-alternador");
+    if(b){var e=t==="escuro";b.innerHTML=(e?SOL:LUA)+'<span class="tema-rot">'+(e?"Claro":"Escuro")+"</span>";
+      b.setAttribute("aria-label",e?"Mudar para o modo claro":"Mudar para o modo escuro");b.setAttribute("aria-pressed",e?"true":"false");b.title=b.getAttribute("aria-label")}
+  }
+  pintar(guardado()||sistema());
+  try{matchMedia("(prefers-color-scheme: dark)").addEventListener("change",function(){if(!guardado())pintar(sistema())})}catch(e){}
+  function botao(){
+    if(document.querySelector(".tema-alternador"))return;
+    var b=document.createElement("button");b.type="button";b.className="tema-alternador";
+    b.addEventListener("click",function(){var n=R.getAttribute("data-tema")==="escuro"?"claro":"escuro";try{localStorage.setItem(CHAVE,n)}catch(e){}pintar(n)});
+    var barra=document.querySelector(".banca-volta");
+    if(barra){var f=barra.querySelector(".banca-fontes");barra.insertBefore(b,f||null)}else{b.className+=" solto";document.body.appendChild(b)}
+    pintar(R.getAttribute("data-tema")||"claro");
+  }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",botao);else botao();
+})();
+</script>
+<!--tema:fim-->
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="O mundo para estudar: geopolítica, guerras, energia, clima, IA e espaço, com história e filosofia.">
+<meta name="theme-color" content="#3A2D2B">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Xeque News">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="../icone-192.png">
+<link rel="apple-touch-icon" href="../icone-180.png">
+<meta name="robots" content="noindex, nofollow">
+<title>Observatório Diário</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,500&display=swap">
+<style>
+/* Visual: jornal antigo impresso. Papel bege texturizado, tinta marrom-escura,
+   cabeça em letra condensada enorme entre filetes duplos, linha de edição com
+   asteriscos, títulos em serifa, gravuras em preto e branco e citação em caixa. */
+:root{
+  --paper:#EEE5D6;
+  --paper-2:#E7DCC9;
+  --ink:#3A2E2A;
+  --ink-2:#4E403A;
+  --muted:#6E5D53;
+  --rule:#3A2E2A;
+  --hair:rgba(58,46,42,.32);
+  --mast:"Anton", "Oswald", Impact, "Arial Narrow", sans-serif;
+  --head:"Playfair Display", Georgia, "Times New Roman", serif;
+  --body:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --label:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{background:var(--paper)}
+body{
+  margin:0;color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.5;
+  background-color:var(--paper);
+  background-image:
+    radial-gradient(ellipse at 50% 40%, rgba(255,250,240,.55), rgba(255,250,240,0) 60%),
+    radial-gradient(ellipse at 50% 50%, rgba(0,0,0,0) 55%, rgba(110,80,50,.16) 100%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .32  0 0 0 0 .25  0 0 0 0 .18  0 0 0 .09 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='900' height='900'><filter id='m'><feTurbulence type='fractalNoise' baseFrequency='.012' numOctaves='2'/><feColorMatrix values='0 0 0 0 .45  0 0 0 0 .34  0 0 0 0 .22  0 0 0 .07 0'/></filter><rect width='100%' height='100%' filter='url(%23m)'/></svg>");
+}
+a{color:inherit;text-underline-offset:3px;text-decoration-thickness:1px}
+a:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+img,svg{max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+
+/* filetes duplos: grosso + fino */
+.dbl{border:0;height:9px;margin:0;background:
+  linear-gradient(var(--rule),var(--rule)) top/100% 4px no-repeat,
+  linear-gradient(var(--rule),var(--rule)) bottom/100% 2px no-repeat}
+.dbl.rev{background:
+  linear-gradient(var(--rule),var(--rule)) top/100% 2px no-repeat,
+  linear-gradient(var(--rule),var(--rule)) bottom/100% 4px no-repeat}
+.thin{border:0;height:2px;margin:0;background:var(--rule)}
+
+/* faixa de últimas */
+.ticker{padding-bottom:6px}
+.ticker .thin{height:4px}
+.ticker-in{display:grid;grid-template-columns:auto minmax(0,1fr);gap:0 18px;align-items:start;padding-block:8px}
+.ticker-label{font-family:var(--label);font-weight:800;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:6px 10px;border:2px solid var(--ink);margin-top:4px}
+.ticker-track{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:0 22px}
+.tick{display:flex;align-items:baseline;gap:8px;padding:6px 0;text-decoration:none;line-height:1.35;font-size:14.5px;border-bottom:1px solid var(--hair)}
+.tick:hover span:last-child{text-decoration:underline}
+.tick .reg{flex:none;font-family:var(--label);font-weight:700;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.tick .reg::after{content:" ✱";font-weight:400}
+@media (max-width:560px){.ticker-in{grid-template-columns:1fr;gap:6px}.ticker-label{justify-self:start}}
+
+/* cabeçalho */
+.mast{padding-top:18px;text-align:center}
+.mast .dbl{margin-bottom:14px}
+.wordmark{font-family:var(--mast);font-weight:400;text-transform:uppercase;font-size:clamp(58px, 15.5vw, 176px);line-height:.98;letter-spacing:-.005em;margin:0 0 6px;padding-top:.1em;color:var(--ink)}
+.motto{font-family:var(--head);font-style:italic;font-size:clamp(15px,1.8vw,18px);color:var(--ink-2);margin:0 0 12px}
+.dateline{display:flex;justify-content:space-between;align-items:center;gap:8px 14px;flex-wrap:wrap;padding:14px 4px;font-family:var(--label);font-weight:800;font-size:clamp(11.5px,1.5vw,15px);letter-spacing:.11em;text-transform:uppercase}
+.dateline .ast{font-family:var(--label);font-weight:400;font-size:1.6em;line-height:.6}
+@media (max-width:560px){.dateline{justify-content:center}.dateline .ast{display:none}.dateline span{flex-basis:100%}}
+.toolbar{display:flex;justify-content:space-between;align-items:center;gap:10px 18px;flex-wrap:wrap;padding-block:10px;font-family:var(--label);font-size:12px}
+.legend{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.updated{font-family:var(--label);font-weight:600;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+select{font-family:var(--label);font-weight:600;font-size:12.5px;letter-spacing:.04em;background:transparent;color:var(--ink);border:2px solid var(--ink);border-radius:0;padding:6px 8px}
+.pick{display:flex;gap:8px;align-items:center;font-family:var(--label);font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+
+/* camadas */
+.chip{display:inline-block;font-family:var(--label);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:2px 7px;vertical-align:middle;white-space:nowrap}
+.chip.FATO{background:var(--ink);color:var(--paper)}
+.chip.ANALISE{border:1.5px solid var(--ink);color:var(--ink)}
+.chip.CENARIO{border:1.5px dashed var(--ink);color:var(--ink);font-style:italic}
+.conf{font-family:var(--label);font-weight:600;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+
+/* índice */
+.toc{display:flex;flex-wrap:wrap;gap:4px 8px;justify-content:center;align-items:center;font-family:var(--label);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding-block:10px}
+.toc a{text-decoration:none}
+.toc a:hover{text-decoration:underline}
+.toc a + a::before{content:"✱";font-weight:400;margin-right:8px;text-decoration:none;display:inline-block}
+.toc span{color:var(--muted)}
+.toc span::after{content:":";margin-right:4px}
+
+/* chapéu gigante (o "BREAKING NEWS") */
+.banner{font-family:var(--head);font-weight:400;text-transform:uppercase;text-align:center;font-size:clamp(30px, 6.2vw, 74px);line-height:1;letter-spacing:-.01em;margin:0;padding:14px 0 16px;text-wrap:balance}
+
+/* capa */
+.front{display:grid;grid-template-columns:minmax(0,1fr);gap:0 34px;padding-block:24px 26px}
+@media (min-width:900px){.front{grid-template-columns:minmax(0,1fr) minmax(0,1.08fr)}}
+.cover{display:grid;gap:14px;align-content:start}
+.cover h2{font-family:var(--head);font-weight:600;text-transform:uppercase;font-size:clamp(28px, 4vw, 44px);line-height:1.04;letter-spacing:-.005em;margin:0;text-wrap:balance}
+.cover p.deck{font-family:var(--head);font-style:italic;font-size:clamp(18px, 2vw, 21px);line-height:1.38;margin:0;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.cover .meta{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.fecha{font-family:var(--label);font-weight:600;font-size:11px;letter-spacing:.04em;color:var(--muted)}
+.quote{margin:10px 0 0;border:2px solid var(--ink);padding:14px 18px;text-align:center;font-family:var(--head);font-weight:500;text-transform:uppercase;font-size:clamp(16px,1.9vw,19px);line-height:1.22;text-wrap:balance}
+.quote::before{content:"“"}
+.quote::after{content:"”"}
+.side{display:grid;gap:14px;align-content:start}
+@media (max-width:899px){.side{margin-top:24px}}
+.plate{margin:0;border:2px solid var(--ink);padding:6px;background:rgba(255,252,244,.35)}
+.plate svg{display:block;width:100%;height:auto}
+.plate figcaption{font-family:var(--head);font-style:italic;font-size:13.5px;text-align:center;padding-top:6px;color:var(--ink-2)}
+.calls{display:grid;align-content:start}
+.calls .ct{font-family:var(--label);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;padding-bottom:6px;border-bottom:2px solid var(--ink)}
+.call{display:grid;grid-template-columns:auto minmax(0,1fr);gap:2px 10px;padding-block:9px;border-bottom:1px solid var(--hair);text-decoration:none}
+.call:last-child{border-bottom:0}
+.call .r{grid-column:2;font-family:var(--label);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.call::before{content:"✱";grid-row:1 / span 2;font-family:var(--label);font-size:17px;line-height:1.1}
+.call .x{grid-column:2;font-family:var(--head);font-style:italic;font-size:18px;line-height:1.25}
+.call:hover .x{text-decoration:underline}
+
+/* números */
+.nums{display:grid;grid-template-columns:repeat(auto-fit, minmax(170px, 1fr))}
+.num{padding:16px 16px 16px 0;display:grid;gap:3px;align-content:start;min-width:0}
+.num + .num{padding-left:16px;border-left:1px solid var(--ink)}
+.num .lab{font-family:var(--label);font-weight:700;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase}
+.num .val{font-family:var(--mast);font-size:38px;line-height:1.05;font-variant-numeric:tabular-nums}
+.num .note{font-family:var(--head);font-style:italic;font-size:14.5px;line-height:1.35;color:var(--ink-2)}
+.num .src{font-family:var(--label);font-size:10px;font-weight:600;color:var(--muted)}
+@media (max-width:560px){
+  .nums{grid-template-columns:1fr 1fr;gap:0 16px}
+  .num{padding:14px 0;border-left:0 !important;padding-left:0 !important;border-top:1px solid var(--hair)}
+  .num:nth-child(-n+2){border-top:0}
+}
+
+/* itens de texto */
+.item{display:grid;gap:7px;margin-bottom:22px;min-width:0}
+.item h4{font-family:var(--head);font-weight:600;font-size:23px;line-height:1.16;margin:0;text-wrap:balance}
+.item p{margin:0;font-size:17px;line-height:1.5;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.item .foot{display:flex;gap:6px 10px;flex-wrap:wrap;align-items:center}
+.item .srcs{font-family:var(--label);font-weight:600;font-size:12px;color:var(--ink-2);display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}
+.item .srcs::before{content:"Leia na fonte:";font-weight:800;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink)}
+.srcs a,.ampliar a{text-decoration:underline;text-decoration-thickness:1px;padding-block:3px}
+.srcs a::after,.ampliar a::after{content:" ↗";text-decoration:none;display:inline-block;margin-left:2px}
+.casa{font-family:var(--label);font-weight:800;font-size:12px;letter-spacing:.3em;text-transform:uppercase;margin:0 0 2px}
+.casa::before,.casa::after{content:" ✱ ";font-weight:400}
+.intro{border:2px solid var(--ink);outline:1px solid var(--ink);outline-offset:3px;margin:6px 4px 24px;padding:16px 18px;display:grid;gap:8px}
+.intro .it{font-family:var(--label);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;text-align:center}
+.intro .it::before,.intro .it::after{content:" ✱ ";font-weight:400}
+.intro p{margin:0;font-size:18px;line-height:1.55;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.intro p:first-of-type::first-letter{font-family:var(--mast);float:left;font-size:3.4em;line-height:.86;padding:4px 8px 0 0}
+.ampliar{padding-block:18px 40px;display:grid;gap:14px}
+.ampliar .st{font-family:var(--mast);font-weight:400;text-transform:uppercase;font-size:clamp(28px,4.4vw,40px);line-height:1;text-align:center}
+.ampliar .sub{font-family:var(--head);font-style:italic;text-align:center;margin:0;color:var(--ink-2)}
+.amp-grupos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:4px 32px}
+.amp-g h3{font-family:var(--label);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin:12px 0 6px;padding:6px 0;border-top:4px solid var(--ink);border-bottom:1px solid var(--ink)}
+.amp-g ul{margin:0;padding:0;list-style:none}
+.amp-g li{padding:7px 0;border-bottom:1px solid var(--hair);font-size:15px;line-height:1.4}
+.amp-g li b{display:block;font-family:var(--head);font-weight:600;font-size:16px}
+.amp-g li a{display:block;font-family:var(--label);font-weight:600;font-size:12.5px}
+.ampliar .aviso{font-family:var(--head);font-style:italic;font-size:14px;text-align:center}
+
+/* cadernos */
+.caderno{padding-block:8px 6px;scroll-margin-top:12px}
+.cad-head{display:grid;grid-template-columns:minmax(0,1fr);gap:0 24px;align-items:center;padding-block:16px 18px;margin-bottom:20px;border-bottom:2px solid var(--ink)}
+.cad-head.has-eng{grid-template-columns:minmax(0,1fr) 112px}
+.cad-tag{font-family:var(--label);font-size:12.5px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;display:flex;gap:10px;align-items:center}
+.cad-tag::before,.cad-tag::after{content:"✱";font-weight:400;font-size:16px}
+.cad-head h2{font-family:var(--mast);font-weight:400;text-transform:uppercase;font-size:clamp(36px,6.4vw,74px);line-height:1;letter-spacing:0;margin:8px 0 6px;text-wrap:balance}
+.cad-head p{margin:0;font-family:var(--head);font-style:italic;font-size:19px;line-height:1.42;color:var(--ink-2);max-width:72ch;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.cad-head .eng{grid-row:1 / span 3;grid-column:2;border:2px solid var(--ink);padding:4px;background:rgba(255,252,244,.35)}
+.cad-head .eng svg{display:block;width:100%;height:auto}
+@media (max-width:560px){.cad-head.has-eng{grid-template-columns:minmax(0,1fr) 72px}}
+
+/* giro das potências: colunas de jornal */
+.press{column-width:280px;column-gap:32px;column-rule:1px solid var(--ink)}
+.press article{break-inside:avoid;display:grid;gap:6px;padding-bottom:16px;margin-bottom:16px;border-bottom:1px solid var(--hair)}
+.press .pais{display:flex;align-items:center;gap:8px;font-family:var(--label);font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.press .pais i{font-style:normal;border:1.5px solid var(--ink);padding:1px 5px;font-size:10px}
+.press h3{font-family:var(--head);font-weight:600;font-size:24px;line-height:1.14;margin:0;text-wrap:balance}
+.press article:first-child h3{font-size:30px;text-transform:uppercase;line-height:1.05}
+.press p{margin:0;font-size:16.5px;line-height:1.5;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.press p::first-line{font-style:italic}
+
+/* IA e medicina por frentes */
+.fronts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0 28px}
+.front-col{min-width:0}
+.front-col h3{font-family:var(--label);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin:0 0 12px;padding:7px 0 6px;border-top:4px solid var(--ink);border-bottom:1px solid var(--ink)}
+.front-col .item h4{font-size:21px}
+.front-col .item p{font-size:16.5px}
+.gloss{margin:6px 0 26px;border:2px solid var(--ink);outline:1px solid var(--ink);outline-offset:3px;padding:16px 18px;display:grid;gap:10px}
+.gloss .gt{font-family:var(--label);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;text-align:center}
+.gloss .gt::before,.gloss .gt::after{content:" ✱ ";font-weight:400}
+.gloss dl{margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px 26px}
+.gloss dt{font-family:var(--head);font-weight:600;font-size:17px}
+.gloss dd{margin:0;font-family:var(--head);font-style:italic;font-size:15.5px;line-height:1.4}
+
+/* dossiês com box */
+.dossie{display:grid;grid-template-columns:minmax(0,1fr);gap:8px 36px}
+@media (min-width:900px){.dossie{grid-template-columns:minmax(0,1fr) 320px}}
+.dossie .its{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0 28px;align-content:start}
+.box{align-self:start;border:2px solid var(--ink);outline:1px solid var(--ink);outline-offset:3px;padding:14px 16px 6px;margin:4px 4px 26px}
+.box .bt{font-family:var(--head);font-weight:600;text-transform:uppercase;font-size:20px;line-height:1.15;text-align:center;margin:0 0 10px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.box dl{margin:0}
+.box dt{font-family:var(--label);font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding-top:10px;border-top:1px solid var(--hair)}
+.box dt:first-of-type{border-top:0;padding-top:0}
+.box dd{margin:3px 0 10px;font-family:var(--head);font-style:italic;font-size:15.5px;line-height:1.42}
+
+/* mais do dia */
+.mais-t{font-family:var(--mast);font-weight:400;text-transform:uppercase;text-align:center;font-size:clamp(30px,5vw,54px);line-height:1;padding:16px 0 12px}
+.axes{display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:0 36px;padding-block:6px 14px}
+.axis{padding-block:18px 4px;border-bottom:1px solid var(--hair);min-width:0}
+.axis h3{font-family:var(--label);font-weight:800;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;margin:0 0 14px;padding-bottom:6px;border-bottom:2px solid var(--ink)}
+
+/* ensaio */
+.essay{display:grid;grid-template-columns:minmax(0, 1fr);gap:18px;padding-block:28px}
+@media (min-width:860px){.essay{grid-template-columns:300px minmax(0, 1fr);gap:40px}}
+.essay .tag{font-family:var(--label);font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+.essay h3{font-family:var(--head);font-weight:500;text-transform:uppercase;font-size:clamp(30px, 4vw, 44px);line-height:1.04;margin:0 0 16px;text-wrap:balance}
+.essay .plate{max-width:300px}
+.essay .text{display:grid;gap:12px;column-width:300px;column-gap:32px;column-rule:1px solid var(--hair);display:block}
+.essay .text p{margin:0 0 12px;font-size:18px;line-height:1.52;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.essay .text p:first-child::first-letter{font-family:var(--mast);float:left;font-size:4.1em;line-height:.86;padding:4px 10px 0 0}
+
+/* leituras e reflexão */
+.trio{display:grid;grid-template-columns:repeat(auto-fit, minmax(290px, 1fr));gap:32px;padding-block:28px}
+.trio h3{font-family:var(--mast);font-weight:400;text-transform:uppercase;font-size:32px;line-height:1;margin:0 0 12px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.books{display:grid;gap:0}
+.book{border-bottom:1px solid var(--hair);padding:12px 0;display:grid;gap:4px}
+.book .t{font-family:var(--head);font-weight:600;font-size:19px;line-height:1.2}
+.book .a{font-family:var(--label);font-weight:600;font-size:11px;letter-spacing:.04em;color:var(--muted)}
+.book p{margin:4px 0 0;font-size:16px;line-height:1.45}
+.qs{display:grid;gap:14px;margin:0;padding:0;list-style:none}
+.qs li{font-family:var(--head);font-style:italic;font-size:19px;line-height:1.38;border:2px solid var(--ink);padding:12px 14px;text-align:center}
+.watch{display:grid;margin:0;padding:0;list-style:none}
+.watch li{display:grid;grid-template-columns:92px minmax(0, 1fr);gap:12px;padding-block:10px;border-top:1px solid var(--hair);font-size:16px;line-height:1.4}
+.watch li:first-child{border-top:0}
+.watch .w{font-family:var(--label);font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding-top:3px}
+
+/* rodapé */
+.sources{padding-block:16px 40px;font-family:var(--label);font-size:11.5px;color:var(--ink-2);display:grid;gap:10px}
+.sources .st{font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+.sources ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px 18px}
+.sources .aviso{font-family:var(--head);font-style:italic;font-size:14px}
+main [id]{scroll-margin-top:12px}
+*{animation:none!important;transition:none!important}
+.empty{padding-block:80px;font-family:var(--head);font-style:italic;color:var(--muted);text-align:center}
+</style>
+
+
+<style>
+.banca-volta{position:sticky;top:0;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:12px;
+  background:#3A2D2B;color:#ECE3D4;padding:8px max(14px, env(safe-area-inset-right, 0px)) 8px max(14px, env(safe-area-inset-left, 0px));
+  padding-top:max(8px, env(safe-area-inset-top, 0px));font:600 15px/1.2 "Archivo","Archivo Narrow","Helvetica Neue",Arial,sans-serif;
+  letter-spacing:.08em;text-transform:uppercase}
+.banca-volta a{color:inherit;text-decoration:none;display:inline-flex;align-items:center;gap:8px;padding:8px 14px 8px 10px;
+  border:1.5px solid #ECE3D4;min-height:44px}
+.banca-volta a:hover,.banca-volta a:focus-visible{background:#ECE3D4;color:#3A2D2B;outline:none}
+.banca-volta a.banca-fontes{padding:8px 12px;flex:none}
+.banca-volta span{flex:1;text-align:right;opacity:.85;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:430px){.banca-volta span{display:none}}
+@media print{.banca-volta{display:none}}
+html.em-app .banca-volta{display:none}
+</style>
+<script>try{if(self!==top&&/[?&]app=1/.test(location.search))document.documentElement.classList.add("em-app")}catch(e){}</script>
+<nav class="banca-volta" aria-label="Xeque News"><a href="../">&#8249;&nbsp;Todos os jornais</a><span>Observatório, o mundo</span><a href="../fontes/" class="banca-fontes">Fontes</a></nav>
+<div lang="pt-BR">
+<div class="wrap">
+  <div class="ticker" id="ticker" aria-label="Últimas notícias">
+    <hr class="thin">
+    <div class="ticker-in">
+      <div class="ticker-label">Últimas</div>
+      <div class="ticker-track" id="track"></div>
+    </div>
+  </div>
+
+  <header class="mast">
+    <hr class="dbl">
+    <p class="casa">Xeque News</p>
+    <h1 class="wordmark">Observatório</h1>
+    <p class="motto">Geopolítica, história e estratégia para entender o dia</p>
+    <hr class="dbl rev">
+    <div class="dateline">
+      <span id="issue">Carregando a edição…</span>
+      <span class="ast" aria-hidden="true">✱</span>
+      <span id="issue-site">Observatório Diário</span>
+      <span class="ast" aria-hidden="true">✱</span>
+      <span id="issue-date"></span>
+    </div>
+    <hr class="thin">
+    <div class="toolbar">
+      <div class="legend" aria-label="Legenda das camadas">
+        <span class="chip FATO">Fato</span>
+        <span class="chip ANALISE">Análise</span>
+        <span class="chip CENARIO">Cenário</span>
+      </div>
+      <span class="updated" id="updated"></span>
+      <label class="pick">Edição
+        <select id="picker" aria-label="Escolher edição"></select>
+      </label>
+    </div>
+    <hr class="thin">
+  </header>
+
+  <nav class="toc" id="toc" aria-label="Nesta edição" hidden></nav>
+
+  <main id="edition">
+    <div class="empty">A edição do dia aparece aqui assim que carregar.</div>
+  </main>
+</div>
+</div>
+
+<script>
+(function(){
+  const $ = (s) => document.querySelector(s);
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const layerKey = (c) => ({"FATO":"FATO","ANÁLISE":"ANALISE","ANALISE":"ANALISE","CENÁRIO":"CENARIO","CENARIO":"CENARIO"})[(c||"").toUpperCase()] || "";
+  const layerName = {FATO:"Fato", ANALISE:"Análise", CENARIO:"Cenário"};
+  const months = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
+  const weekdays = ["domingo","segunda-feira","terça-feira","quarta-feira","quinta-feira","sexta-feira","sábado"];
+  function longDate(iso){
+    const [y,m,d] = iso.split("-").map(Number);
+    const dt = new Date(Date.UTC(y, m-1, d, 12));
+    return `${weekdays[dt.getUTCDay()]}, ${d} de ${months[m-1]} de ${y}`;
+  }
+  function chip(c){ const k = layerKey(c); return k ? `<span class="chip ${k}">${layerName[k]||esc(c)}</span>` : ""; }
+  function link(f){ return f.url ? `<a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.nome)}</a>` : esc(f.nome); }
+
+  /* gravuras em preto e branco (SVG desenhado à mão, estilo buril) */
+  const INK = "#3A2E2A", PAP = "#EEE5D6";
+  let engN = 0;
+  function hatchDefs(k){
+    return `<defs>
+      <pattern id="bg${k}" width="3" height="3" patternUnits="userSpaceOnUse"><line x1="0" y1="1.5" x2="3" y2="1.5" stroke="${INK}" stroke-width=".55"/></pattern>
+      <pattern id="ha${k}" width="3.4" height="3.4" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><line x1="0" y1="0" x2="0" y2="3.4" stroke="${INK}" stroke-width="1.05"/></pattern>
+      <pattern id="hb${k}" width="2.6" height="2.6" patternUnits="userSpaceOnUse" patternTransform="rotate(-42)"><line x1="0" y1="0" x2="0" y2="2.6" stroke="${INK}" stroke-width=".95"/></pattern>
+    </defs>`;
+  }
+  const ENG = {
+    globo(k){
+      return `<svg viewBox="0 0 240 200" role="img" aria-label="Gravura de um globo terrestre">${hatchDefs(k)}
+      <clipPath id="cg${k}"><circle cx="120" cy="92" r="66"/></clipPath>
+      <rect width="240" height="200" fill="url(#bg${k})" opacity=".55"/>
+      <ellipse cx="120" cy="188" rx="58" ry="8" fill="url(#hb${k})"/>
+      <path d="M100 170 L140 170 L134 182 L106 182Z" fill="${PAP}" stroke="${INK}" stroke-width="1.6"/>
+      <path d="M100 170 L140 170 L134 182 L106 182Z" fill="url(#ha${k})"/>
+      <ellipse cx="120" cy="186" rx="44" ry="7" fill="${PAP}" stroke="${INK}" stroke-width="1.6"/>
+      <line x1="120" y1="158" x2="120" y2="170" stroke="${INK}" stroke-width="5"/>
+      <g transform="rotate(-20 120 92)">
+        <circle cx="120" cy="92" r="66" fill="${PAP}" stroke="${INK}" stroke-width="2"/>
+        <g clip-path="url(#cg${k})">
+          <circle cx="146" cy="112" r="74" fill="url(#ha${k})"/>
+          <circle cx="98" cy="72" r="70" fill="${PAP}"/>
+          <circle cx="160" cy="126" r="60" fill="url(#hb${k})" opacity=".9"/>
+          <circle cx="104" cy="80" r="76" fill="none"/>
+          <path d="M84 52 q14-12 28-4 q8 10-3 18 q-12 5-8 17 q3 13-10 16 q-10-8-12-22 q-6-14 5-25z" fill="url(#hb${k})" stroke="${INK}" stroke-width="1.1"/>
+          <path d="M128 64 q18-8 30 4 q9 13-2 24 q-4 15-15 26 q-9-7-7-22 q-13-7-6-32z" fill="url(#hb${k})" stroke="${INK}" stroke-width="1.1"/>
+          <path d="M104 128 q10-4 16 4 q2 10-8 14 q-10-2-8-18z" fill="url(#hb${k})" stroke="${INK}" stroke-width="1.1"/>
+          <g fill="none" stroke="${INK}" stroke-width=".9">
+            <ellipse cx="120" cy="92" rx="48" ry="66"/><ellipse cx="120" cy="92" rx="26" ry="66"/><line x1="120" y1="26" x2="120" y2="158"/>
+            <ellipse cx="120" cy="92" rx="66" ry="11"/><ellipse cx="120" cy="62" rx="59" ry="9"/><ellipse cx="120" cy="122" rx="59" ry="9"/>
+            <ellipse cx="120" cy="38" rx="38" ry="5"/><ellipse cx="120" cy="146" rx="38" ry="5"/>
+          </g>
+        </g>
+        <circle cx="120" cy="92" r="74" fill="none" stroke="${INK}" stroke-width="5"/>
+        <circle cx="120" cy="92" r="74" fill="none" stroke="${PAP}" stroke-width="1.2" stroke-dasharray="1.2 4"/>
+        <line x1="120" y1="10" x2="120" y2="174" stroke="${INK}" stroke-width="2"/>
+        <circle cx="120" cy="12" r="3.5" fill="${INK}"/>
+      </g>
+    </svg>`;
+    },
+    rosa(k){
+      const pts = [0,90,180,270].map(a=>`<g transform="rotate(${a} 60 60)"><polygon points="60,6 53,60 60,60" fill="${INK}"/><polygon points="60,6 67,60 60,60" fill="${PAP}" stroke="${INK}" stroke-width="1"/></g>`).join("")
+        + [45,135,225,315].map(a=>`<g transform="rotate(${a} 60 60)"><polygon points="60,22 55,60 60,60" fill="url(#hb${k})" stroke="${INK}" stroke-width=".8"/><polygon points="60,22 65,60 60,60" fill="${PAP}" stroke="${INK}" stroke-width=".8"/></g>`).join("");
+      return `<svg viewBox="0 0 120 120" role="img" aria-label="Gravura de uma rosa dos ventos">${hatchDefs(k)}
+      <rect width="120" height="120" fill="url(#bg${k})" opacity=".55"/>
+      <circle cx="60" cy="60" r="50" fill="${PAP}" stroke="${INK}" stroke-width="2"/>
+      <circle cx="60" cy="60" r="45" fill="none" stroke="${INK}" stroke-width="3.5" stroke-dasharray=".9 3.1"/>
+      <circle cx="60" cy="60" r="40" fill="none" stroke="${INK}" stroke-width=".8"/>
+      <circle cx="60" cy="60" r="28" fill="url(#ha${k})" opacity=".6"/>
+      ${pts}<circle cx="60" cy="60" r="4" fill="${PAP}" stroke="${INK}" stroke-width="1.4"/>
+    </svg>`;
+    },
+    espadas(k){
+      const sword = (a) => `<g transform="rotate(${a} 60 62)">
+        <polygon points="60,6 64,16 64,86 56,86 56,16" fill="${PAP}" stroke="${INK}" stroke-width="1.2"/>
+        <polygon points="60,6 64,16 64,86 60,86" fill="url(#ha${k})"/>
+        <line x1="60" y1="14" x2="60" y2="84" stroke="${INK}" stroke-width=".8"/>
+        <rect x="44" y="86" width="32" height="6" fill="${INK}"/>
+        <rect x="57" y="92" width="6" height="16" fill="url(#hb${k})" stroke="${INK}" stroke-width="1"/>
+        <circle cx="60" cy="111" r="4.5" fill="${INK}"/></g>`;
+      return `<svg viewBox="0 0 120 120" role="img" aria-label="Gravura de duas espadas cruzadas">${hatchDefs(k)}
+      <rect width="120" height="120" fill="url(#bg${k})" opacity=".55"/>
+      <circle cx="60" cy="62" r="34" fill="${PAP}" stroke="${INK}" stroke-width="1.6"/>
+      <circle cx="60" cy="62" r="34" fill="url(#hb${k})" opacity=".35"/>
+      ${sword(-38)}${sword(38)}
+    </svg>`;
+    },
+    engrenagem(k){
+      const teeth = Array.from({length:12},(_,i)=>`<rect x="55" y="14" width="10" height="14" fill="${PAP}" stroke="${INK}" stroke-width="1.3" transform="rotate(${i*30} 60 60)"/>`).join("");
+      const traces = [0,60,120,180,240,300].map(a=>`<g transform="rotate(${a} 60 60)"><path d="M60 46 L60 36 L66 30" fill="none" stroke="${INK}" stroke-width="1.2"/><circle cx="66" cy="30" r="1.8" fill="${INK}"/></g>`).join("");
+      return `<svg viewBox="0 0 120 120" role="img" aria-label="Gravura de uma engrenagem com circuitos">${hatchDefs(k)}
+      <rect width="120" height="120" fill="url(#bg${k})" opacity=".55"/>
+      ${teeth}
+      <circle cx="60" cy="60" r="34" fill="${PAP}" stroke="${INK}" stroke-width="1.6"/>
+      <clipPath id="cc${k}"><circle cx="60" cy="60" r="34"/></clipPath><circle cx="70" cy="70" r="36" fill="url(#ha${k})" opacity=".85" clip-path="url(#cc${k})"/>
+      <circle cx="60" cy="60" r="34" fill="none" stroke="${INK}" stroke-width="1.6"/>
+      ${traces}
+      <circle cx="60" cy="60" r="13" fill="${PAP}" stroke="${INK}" stroke-width="1.6"/>
+      <circle cx="60" cy="60" r="5" fill="${INK}"/>
+    </svg>`;
+    },
+    asclepio(k){
+      return `<svg viewBox="0 0 120 120" role="img" aria-label="Gravura do bastão de Asclépio">${hatchDefs(k)}
+      <rect width="120" height="120" fill="url(#bg${k})" opacity=".55"/>
+      <circle cx="60" cy="60" r="50" fill="${PAP}" stroke="${INK}" stroke-width="2"/>
+      <circle cx="60" cy="60" r="45" fill="none" stroke="${INK}" stroke-width=".8"/>
+      <rect x="56.5" y="14" width="7" height="94" rx="2" fill="url(#ha${k})" stroke="${INK}" stroke-width="1.3"/>
+      <path d="M60 100 C38 93 38 81 60 75 C82 69 82 57 60 51 C38 45 38 33 60 29 C72 26 76 21 71 16" fill="none" stroke="${INK}" stroke-width="5.5" stroke-linecap="round"/>
+      <path d="M60 100 C38 93 38 81 60 75 C82 69 82 57 60 51 C38 45 38 33 60 29 C72 26 76 21 71 16" fill="none" stroke="${PAP}" stroke-width="1.3" stroke-dasharray="2 2.4" stroke-linecap="round"/>
+      <ellipse cx="70" cy="15" rx="5" ry="3.6" fill="${INK}"/>
+    </svg>`;
+    },
+    livro(k){
+      let lines = "";
+      for (let y = 50; y <= 118; y += 7){
+        lines += `<path d="M40 ${y} C60 ${y-5} 92 ${y-5} 112 ${y+2}" fill="none" stroke="${INK}" stroke-width=".8"/>`;
+        lines += `<path d="M128 ${y+2} C148 ${y-5} 180 ${y-5} 200 ${y}" fill="none" stroke="${INK}" stroke-width=".8"/>`;
+      }
+      return `<svg viewBox="0 0 240 170" role="img" aria-label="Gravura de um livro aberto e uma pena">${hatchDefs(k)}
+      <rect width="240" height="170" fill="url(#bg${k})" opacity=".55"/>
+      <ellipse cx="120" cy="146" rx="104" ry="12" fill="url(#hb${k})"/>
+      <path d="M120 44 C95 30 60 30 26 38 L26 138 C60 128 95 128 120 142 C145 128 180 128 214 138 L214 38 C180 30 145 30 120 44Z" fill="url(#ha${k})" stroke="${INK}" stroke-width="1.6"/>
+      <path d="M120 40 C95 26 60 26 30 34 L30 132 C60 122 95 122 120 136 Z" fill="${PAP}" stroke="${INK}" stroke-width="1.6"/>
+      <path d="M120 40 C145 26 180 26 210 34 L210 132 C180 122 145 122 120 136 Z" fill="${PAP}" stroke="${INK}" stroke-width="1.6"/>
+      <path d="M120 40 C112 60 112 116 120 136 L120 40Z" fill="url(#hb${k})"/>
+      ${lines}
+      <path d="M150 8 C176 30 192 62 198 100 L193 102 C182 70 168 40 150 8Z" fill="url(#hb${k})" stroke="${INK}" stroke-width="1.2"/>
+      <path d="M150 8 C170 34 184 66 196 112" fill="none" stroke="${INK}" stroke-width="1.6"/>
+    </svg>`;
+    }
+  };
+  function eng(name){ engN++; return ENG[name] ? ENG[name]("e"+engN) : ""; }
+
+  let data = null;
+
+  function renderTicker(ed){
+    const items = (ed.ticker||[]).map(t => {
+      const br = /brasil/i.test(t.regiao);
+      const inner = `<span class="reg ${br?"br":""}">${esc(t.regiao)}</span><span>${esc(t.texto)}</span>`;
+      return t.url ? `<a class="tick" href="${esc(t.url)}" target="_blank" rel="noopener">${inner}</a>` : `<span class="tick">${inner}</span>`;
+    }).join("");
+    const track = $("#track");
+    track.innerHTML = items;
+  }
+
+  function render(ed){
+    { const tk = $("#ticker"), ed0 = $("#edition"); if (tk && ed0 && ed0.contains(tk)) ed0.before(tk); }
+    renderTicker(ed);
+    engN = 0;
+    const yr = ed.data.slice(0,4);
+    $("#issue").textContent = `Vol. ${Number(yr)-2025}, Nº ${ed.numero}`;
+    $("#issue-site").textContent = `${longDate(ed.data).split(",")[0]} · ${ed.tempoLeitura} min de leitura`;
+    $("#issue-date").textContent = ed.data.split("-").reverse().join("/");
+    const c = ed.capa || {};
+    const nums = (ed.numeros||[]).map(n => `
+      <div class="num">
+        <span class="lab">${esc(n.rotulo)}</span>
+        <span class="val">${esc(n.valor)}</span>
+        <span class="note">${esc(n.nota)}</span>
+        <span class="src">${esc(n.fonte)}</span>
+      </div>`).join("");
+    const itemHTML = (i) => `
+          <article class="item">
+            <h4>${esc(i.titulo)}</h4>
+            <p>${esc(i.texto)}</p>
+            <div class="foot">${chip(i.camada)}${i.confianca?`<span class="conf">Confiança ${esc(i.confianca).toLowerCase()}</span>`:""}
+              ${(i.fontes||[]).length?`<span class="srcs">${i.fontes.map(link).join("")}</span>`:""}
+            </div>
+          </article>`;
+    const head = (tag, title, deck, g) => `<hr class="dbl"><div class="cad-head${g?" has-eng":""}"><div class="cad-tag">${esc(tag)}</div>${title?`<h2>${esc(title)}</h2>`:""}${deck?`<p>${esc(deck)}</p>`:""}${g?`<div class="eng" aria-hidden="true">${eng(g)}</div>`:""}</div>`;
+    const boxHTML = (b) => b ? `<aside class="box"><p class="bt">${esc(b.titulo)}</p><dl>${(b.linhas||[]).map(l=>`<dt>${esc(l.area)}</dt><dd>${esc(l.texto)}</dd>`).join("")}</dl></aside>` : "";
+    const dossie = (id, tag, d) => d ? `
+      <section class="caderno" id="${id}" aria-label="${esc(tag)}">
+        ${head(tag, d.titulo, d.linhaFina, "espadas")}
+        <div class="dossie"><div class="its">${(d.itens||[]).map(itemHTML).join("")}</div>${boxHTML(d.box)}</div>
+      </section>` : "";
+    const pot = (ed.potencias||[]).length ? `
+      <section class="caderno" id="potencias" aria-label="Giro das potências">
+        ${head("Giro das potências", "O que fizeram as grandes potências", "", "rosa")}
+        <div class="press">${ed.potencias.map(p => `
+          <article>
+            <span class="pais"><i>${esc(p.sigla||"")}</i>${esc(p.pais)}</span>
+            <h3>${esc(p.titulo)}</h3>
+            <p>${esc(p.texto)}</p>
+            <div class="item"><div class="foot">${chip(p.camada)}${p.confianca?`<span class="conf">Confiança ${esc(p.confianca).toLowerCase()}</span>`:""}${(p.fontes||[]).length?`<span class="srcs">${p.fontes.map(link).join("")}</span>`:""}</div></div>
+          </article>`).join("")}</div>
+      </section>` : "";
+    const frentesCad = (id, tag, title, o, gtitle, g) => o ? `
+      <section class="caderno" id="${id}" aria-label="${esc(tag)}">
+        ${head(tag, title, o.abertura, g)}
+        <div class="fronts">${(o.frentes||[]).map(f => `
+          <div class="front-col"><h3>${esc(f.area)}</h3>${(f.itens||[]).map(itemHTML).join("")}</div>`).join("")}</div>
+        ${(o.glossario||[]).length?`<div class="gloss"><span class="gt">${esc(gtitle)}</span><dl>${o.glossario.map(g=>`<div><dt>${esc(g.termo)}</dt><dd>${esc(g.def)}</dd></div>`).join("")}</dl></div>`:""}
+      </section>` : "";
+    const ia = frentesCad("ia", "Evolução das IAs", "Inteligência artificial em quatro frentes", ed.ia, "Glossário da IA", "engrenagem");
+    const med = frentesCad("medicina", "Medicina", "Saúde, ciência e o SUS", ed.medicina, "Glossário da medicina", "asclepio");
+    const ri = dossie("russia-ira", "Rússia–Irã", ed.russiaIra);
+    const nk = dossie("coreia", "Coreia do Norte", ed.coreiaNorte);
+    const calls = (ed.chamadas||[]).length ? `<nav class="calls" aria-label="Chamadas"><span class="ct">Nesta edição</span>${ed.chamadas.map(c=>`<a class="call" href="#${esc(c.secao)}"><span class="r">${esc(c.rotulo)}</span><span class="x">${esc(c.texto)}</span></a>`).join("")}</nav>` : "";
+    const tocItems = [["potencias","Potências",pot],["ia","IA",ia],["medicina","Medicina",med],["russia-ira","Rússia–Irã",ri],["coreia","Coreia do Norte",nk],["mais","Mais do dia",(ed.secoes||[]).length],["ensaio","Ensaio",ed.analise],["ampliar","Fontes",1]].filter(x=>x[2]);
+    const toc = $("#toc");
+    if (pot || ia || med || ri || nk){ toc.hidden = false; toc.innerHTML = `<span>Nesta edição</span>` + tocItems.map(([id,l])=>`<a href="#${id}">${l}</a>`).join(""); } else { toc.hidden = true; toc.innerHTML = ""; }
+    const axes = (ed.secoes||[]).map(s => `
+      <section class="axis" aria-label="${esc(s.eixo)}">
+        <h3>${esc(s.eixo)}</h3>
+        ${(s.itens||[]).map(i => `
+          <article class="item">
+            <h4>${esc(i.titulo)}</h4>
+            <p>${esc(i.texto)}</p>
+            <div class="foot">${chip(i.camada)}${i.confianca?`<span class="conf">Confiança ${esc(i.confianca).toLowerCase()}</span>`:""}
+              ${(i.fontes||[]).length?`<span class="srcs">${i.fontes.map(link).join("")}</span>`:""}
+            </div>
+          </article>`).join("")}
+      </section>`).join("");
+    const a = ed.analise;
+    const essay = a ? `
+      <hr class="dbl"><section class="essay" id="ensaio" aria-label="Ensaio do dia">
+        <div><div class="tag">✱ Ensaio do dia · história e filosofia ✱</div><h3>${esc(a.titulo)}</h3><figure class="plate" aria-hidden="true">${eng("livro")}</figure></div>
+        <div class="text">${(a.texto||[]).map(p=>`<p>${esc(p)}</p>`).join("")}</div>
+      </section>` : "";
+    const books = (ed.ler||[]).map(b => `
+      <div class="book">
+        <span class="t">${b.url?`<a href="${esc(b.url)}" target="_blank" rel="noopener">${esc(b.titulo)}</a>`:esc(b.titulo)}</span>
+        <span class="a">${esc(b.tipo)} · ${esc(b.autor)} · ${esc(b.nivel)}</span>
+        <p>${esc(b.porque)}</p>
+      </div>`).join("");
+    const qs = (ed.pensar||[]).map(q=>`<li>${esc(q)}</li>`).join("");
+    const watch = (ed.acompanhar||[]).map(w=>`<li><span class="w">${esc(w.quando)}</span><span>${esc(w.oque)}</span></li>`).join("");
+    const vistas = new Set();
+    const grupo = (nome, its) => { const li = (its||[]).filter(i => (i.fontes||[]).length).map(i => { i.fontes.forEach(f => vistas.add(f.url||f.nome)); return `<li><b>${esc(i.titulo)}</b>${i.fontes.map(link).join("")}</li>`; }).join(""); return li ? `<div class="amp-g"><h3>${esc(nome)}</h3><ul>${li}</ul></div>` : ""; };
+    let grupos = grupo("Giro das potências", (ed.potencias||[]).map(p => ({titulo: `${p.pais}: ${p.titulo}`, fontes: p.fontes})))
+      + grupo("Evolução das IAs", ((ed.ia||{}).frentes||[]).flatMap(f => f.itens||[]))
+      + grupo("Medicina", ((ed.medicina||{}).frentes||[]).flatMap(f => f.itens||[]))
+      + grupo("Rússia–Irã", (ed.russiaIra||{}).itens) + grupo("Coreia do Norte", (ed.coreiaNorte||{}).itens)
+      + (ed.secoes||[]).map(s => grupo(s.eixo, s.itens)).join("");
+    const resto = (ed.fontes||[]).filter(f => !vistas.has(f.url||f.nome));
+    if (resto.length) grupos += `<div class="amp-g"><h3>Outras fontes desta edição</h3><ul>${resto.map(f=>`<li>${link(f)}</li>`).join("")}</ul></div>`;
+    const intro = ed.introducao ? `<section class="intro" aria-label="Para começar"><span class="it">Para começar</span>${[].concat(ed.introducao).map(p=>`<p>${esc(p)}</p>`).join("")}</section>` : "";
+
+    $("#edition").innerHTML = `
+      ${c.chapeu?`<p class="banner">${esc(c.chapeu)}</p>`:""}
+      <hr class="dbl">
+      <div class="front">
+      <section class="cover" aria-label="Manchete">
+        <h2>${esc(c.titulo)}</h2>
+        <p class="deck">${esc(c.linhaFina)}</p>
+        <div class="meta">${chip(c.camada)}${c.confianca?`<span class="conf">Confiança ${esc(c.confianca).toLowerCase()}</span>`:""}</div>
+        ${(ed.pensar||[])[0]?`<blockquote class="quote">${esc(ed.pensar[0])}</blockquote>`:""}
+        ${ed.fechamento?`<span class="fecha">${esc(ed.fechamento)}</span>`:""}
+      </section>
+      <div class="side">
+        <figure class="plate" aria-hidden="true">${eng("globo")}<figcaption>O mundo em observação · edição nº ${esc(ed.numero)}</figcaption></figure>
+        ${calls}
+      </div>
+      </div>
+      ${intro}
+      ${nums?`<hr class="dbl"><section class="nums" aria-label="Números do dia">${nums}</section>`:""}
+      ${pot}${ia}${med}${ri}${nk}
+      ${(pot||ia||med||ri||nk)&&axes?`<hr class="dbl"><div class="mais-t" id="mais">Mais do dia</div><hr class="thin">`:""}
+      <div class="axes${(pot||ia||med||ri||nk)?" mais":""}">${axes}</div>
+      ${essay}
+      <hr class="dbl"><section class="trio">
+        <div><h3>Para ler</h3><div class="books">${books}</div></div>
+        <div><h3>Para pensar</h3><ul class="qs">${qs}</ul></div>
+        <div><h3>Para acompanhar</h3><ul class="watch">${watch}</ul></div>
+      </section>
+      <hr class="dbl rev"><footer class="ampliar" id="ampliar">
+        <span class="st">Para ampliar o conhecimento</span>
+        <p class="sub">Todas as fontes desta edição, organizadas por assunto. Toque no nome para ler a matéria ou o documento original.</p>
+        <div class="amp-grupos">${grupos}</div>
+        <span class="aviso">Números de baixas e alegações de governos em guerra aparecem sempre identificados como alegação. Probabilidades em cenários são estimativas do Observatório. Uma publicação Xeque News.</span>
+      </footer>`;
+    const fr = $("#edition .front"); if (fr) fr.after($("#ticker"));
+  }
+
+  function pick(id){
+    const eds = data.edicoes;
+    const ed = eds.find(e => e.id === id) || eds[0];
+    $("#picker").value = ed.id;
+    render(ed);
+  }
+
+  function hashId(){ const h = location.hash.replace(/^#/, ""); return h.startsWith("e-") ? h.slice(2) : null; }
+
+  fetch("edicoes.json", {cache:"no-store"}).then(r => { if(!r.ok) throw new Error(r.status); return r.json(); }).then(d => {
+    data = d;
+    data.edicoes.sort((a,b) => b.data.localeCompare(a.data));
+    $("#picker").innerHTML = data.edicoes.map(e => `<option value="${esc(e.id)}">nº ${e.numero} · ${esc(e.data.split("-").reverse().join("/"))}</option>`).join("");
+    if (data.atualizadoEm){
+      const t = new Date(data.atualizadoEm);
+      $("#updated").textContent = "Atualizado em " + t.toLocaleString("pt-BR", {day:"2-digit", month:"2-digit", hour:"2-digit", minute:"2-digit", timeZone:"America/Sao_Paulo"}) + " (Brasília)";
+    }
+    pick(hashId());
+    const h = location.hash.slice(1);
+    if (h && !h.startsWith("e-")) { const el = document.getElementById(h); if (el) el.scrollIntoView(); }
+  }).catch(() => {
+    $("#issue").textContent = "Edição indisponível";
+    $("#edition").innerHTML = `<div class="empty">Não foi possível carregar a edição. Recarregue a página em alguns instantes.</div>`;
+  });
+
+  $("#picker").addEventListener("change", e => {
+    const id = e.target.value;
+    if (data.edicoes[0].id === id) { history.replaceState(null, "", location.pathname); } else { location.hash = "e-" + id; }
+    pick(id);
+    window.scrollTo(0,0);
+  });
+  window.addEventListener("hashchange", () => { if (data && hashId()) pick(hashId()); });
+})();
+</script>
+
+<!--brasil:inicio-->
+<style>
+/* Caderno Brasil (10/11/2026): ao abrir, o leitor escolhe "Mundo + Brasil"
+   ou "Apenas Brasil". O conteúdo vem de brasil.json, o caderno Brasil do Terra Brasilis
+   (mesmos dados, sem Lafaiete). Sem brasil.json ao lado da página, nada muda. */
+.modo-escolha #edition,.modo-escolha #toc,.modo-escolha #ticker,.modo-escolha .mast .dateline,.modo-escolha .mast .toolbar,.modo-escolha .mast > hr.thin,
+.modo-brasil #edition,.modo-brasil #toc,.modo-brasil #ticker,.modo-brasil .mast .dateline,.modo-brasil .mast .toolbar,.modo-brasil .mast > hr.thin{display:none}
+#escolha,#so-brasil{display:none}
+.modo-escolha #escolha,.modo-brasil #so-brasil{display:block}
+.esc-t{font-family:var(--head);font-weight:500;text-transform:uppercase;text-align:center;font-size:clamp(26px,5vw,52px);line-height:1.04;margin:0;padding:18px 0 6px;text-wrap:balance}
+.esc-l{font-family:var(--head);font-style:italic;text-align:center;font-size:18px;color:var(--ink-2);margin:0 0 18px}
+.esc-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px;padding-block:8px 30px}
+.esc-card{display:grid;gap:10px;align-content:start;text-align:left;font:inherit;color:inherit;cursor:pointer;background:rgba(255,252,244,.35);border:2px solid var(--ink);outline:1px solid var(--ink);outline-offset:3px;padding:18px 18px 16px;margin:4px;min-height:44px}
+.esc-card:hover .esc-n{text-decoration:underline}
+.esc-k{font-family:var(--label);font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.esc-k::before{content:"✱ ";font-weight:400}
+.esc-n{font-family:var(--mast);font-weight:400;text-transform:uppercase;font-size:clamp(34px,5.2vw,52px);line-height:1}
+.esc-d{font-family:var(--head);font-style:italic;font-size:17px;line-height:1.42;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.esc-m{font-family:var(--label);font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--muted);border-top:1px solid var(--hair);padding-top:8px}
+.troca{font-family:var(--label);font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:transparent;color:var(--ink);border:2px solid var(--ink);border-radius:0;padding:7px 10px;cursor:pointer;min-height:36px}
+.br-nota{font-family:var(--head);font-style:italic;font-size:16.5px;line-height:1.45;border:1.5px dashed var(--ink);padding:12px 14px;margin:0 0 22px;text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.br-aviso{font-family:var(--label);font-weight:600;font-size:12px;letter-spacing:.04em;border-left:4px solid var(--ink);padding:6px 10px;margin:0 0 16px}
+.impacto{border-top:1.5px dashed var(--ink);border-bottom:1.5px dashed var(--ink);background:rgba(255,252,244,.4);padding:9px 10px 10px;margin-top:2px}
+.impacto .im-t{margin:0 0 6px;font-family:var(--label);font-weight:800;font-size:11px;letter-spacing:.14em;text-transform:uppercase;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;text-align:left}
+.impacto .im-t small{font-weight:600;letter-spacing:.06em;color:var(--muted)}
+.impacto dl{margin:0;display:grid;grid-template-columns:7.6em minmax(0,1fr);gap:6px 10px}
+.impacto dt{font-family:var(--label);font-weight:800;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding-top:3px}
+.impacto dd{margin:0;font-size:15px;line-height:1.42;text-align:left}
+.impacto .im-g{font-size:15px;line-height:1.42;margin:0 0 6px;text-align:left}
+@media (max-width:480px){.impacto dl{grid-template-columns:1fr;gap:0}.impacto dd{margin-bottom:8px}}
+.caderno-brasil .fronts,#so-brasil .fronts{grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:0 34px}
+.caderno-brasil .front-col,#so-brasil .front-col{margin-bottom:10px}
+#so-brasil .front{padding-block:18px 22px}
+#so-brasil .resumo{display:grid;align-content:start}
+#so-brasil .resumo .ct{font-family:var(--label);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;padding-bottom:6px;border-bottom:2px solid var(--ink)}
+#so-brasil .resumo .call{cursor:default}
+#so-brasil .historia .text p:first-child::first-letter{font-family:var(--mast);float:left;font-size:4.1em;line-height:.86;padding:4px 10px 0 0}
+#so-brasil .linha{display:grid;margin:14px 0 0;padding:0;list-style:none}
+#so-brasil .linha li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:10px;padding-block:7px;border-top:1px solid var(--hair);font-size:15.5px;line-height:1.4}
+#so-brasil .linha b{font-family:var(--mast);font-weight:400;font-size:20px}
+</style>
+<section id="escolha" class="wrap" aria-labelledby="esc-titulo">
+  <h2 class="esc-t" id="esc-titulo">Como você quer ler hoje?</h2>
+  <p class="esc-l">Escolha a sua edição. Dá para trocar a qualquer momento.</p>
+  <hr class="dbl">
+  <div class="esc-cards">
+    <button type="button" class="esc-card" data-modo="mundo">
+      <span class="esc-k">O mundo e o país</span>
+      <span class="esc-n">Mundo + Brasil</span>
+      <span class="esc-d">O Observatório completo: geopolítica, guerras, energia, clima, IA e espaço, com história e filosofia, e mais o caderno do Brasil, com o efeito de cada notícia na vida do trabalhador e de cada classe.</span>
+      <span class="esc-m" id="esc-m-mundo"></span>
+    </button>
+    <button type="button" class="esc-card" data-modo="brasil">
+      <span class="esc-k">Só o país</span>
+      <span class="esc-n">Apenas Brasil</span>
+      <span class="esc-d">Só o Brasil e Minas Gerais: Brasília, o bolso, a saúde, a escola e o Estado, com o quadro “Como isso afeta você” em toda notícia.</span>
+      <span class="esc-m" id="esc-m-brasil"></span>
+    </button>
+  </div>
+</section>
+<section id="so-brasil" class="wrap" aria-label="Apenas Brasil"></section>
+<script>
+(function(){
+  var esc = function(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); };
+  var CHAVE = "observatorio-leitura";
+  var body = document.body, edition = document.getElementById("edition");
+  var escolha = document.getElementById("escolha"), soBr = document.getElementById("so-brasil");
+  if (!edition || !escolha || !soBr) return;
+  var wrap = edition.closest(".wrap"); if (wrap) { wrap.after(escolha); escolha.after(soBr); }
+  var dados = null, modo = null, edBr = null;
+  var IMPACTO = [["trabalhador","Trabalhador e operário"],["baixa","Classe baixa"],["media","Classe média"],["alta","Classe alta"]];
+  var SELO = {"confirmado":["FATO","Confirmado"],"explicação":["ANALISE","Explicação"],"explicacao":["ANALISE","Explicação"],"previsão":["CENARIO","Previsão"],"previsao":["CENARIO","Previsão"]};
+  var semLafa = function(t){ return !/lafaiete|carij/i.test(t); };
+  function curta(iso){ var p = String(iso||"").split("-"); return p.length === 3 ? p[2] + "/" + p[1] + "/" + p[0] : ""; }
+  function lista(){ return ((dados && dados.edicoes) || []).slice().sort(function(a,b){ return String(b.data).localeCompare(String(a.data)) || (b.numero||0) - (a.numero||0); }); }
+  function escolhe(iso){
+    var eds = lista(); if (!eds.length) return null; if (!iso) return eds[0];
+    for (var i = 0; i < eds.length; i++) if (String(eds[i].data) <= iso) return eds[i];
+    var ult = eds[eds.length-1]; return (Date.parse(ult.data) - Date.parse(iso)) / 864e5 <= 2 ? ult : null;
+  }
+  function dataDaPagina(){ var el = document.getElementById("issue-date"); var m = el ? el.textContent.match(/(\d{2})\/(\d{2})\/(\d{4})/) : null; return m ? m[3]+"-"+m[2]+"-"+m[1] : ""; }
+  function selo(s){ var k = SELO[String(s||"").toLowerCase()]; return s ? '<span class="chip ' + (k ? k[0] : "ANALISE") + '">' + esc(k ? k[1] : s) + "</span>" : ""; }
+  function fontes(fs){ return (fs||[]).length ? '<span class="srcs">' + fs.map(function(f){ return f.url ? '<a href="' + esc(f.url) + '" target="_blank" rel="noopener">' + esc(f.nome) + "</a>" : esc(f.nome); }).join("") + "</span>" : ""; }
+  function impacto(im){
+    if (!im) return "";
+    var l = IMPACTO.filter(function(p){ return im[p[0]]; }).map(function(p){ return "<dt>" + p[1] + "</dt><dd>" + esc(im[p[0]]) + "</dd>"; }).join("");
+    if (!l && !im.geral) return "";
+    return '<aside class="impacto"><p class="im-t">Como isso afeta você <small>Explicação do jornal</small></p>' + (im.geral ? '<p class="im-g">' + esc(im.geral) + "</p>" : "") + (l ? "<dl>" + l + "</dl>" : "") + "</aside>";
+  }
+  function item(it){ return '<article class="item"><h4>' + esc(it.titulo) + "</h4><p>" + esc(it.texto) + "</p>" + impacto(it.impacto) + '<div class="foot">' + selo(it.selo) + fontes(it.fontes) + "</div></article>"; }
+  function cadernos(e, pref){
+    return (e.cadernos||[]).filter(function(c){ return c.id !== "lafaiete"; }).map(function(c){
+      return '<div class="front-col" id="' + pref + esc(c.id) + '"><h3>' + esc(c.titulo) + "</h3>" + (c.aviso ? '<p class="br-aviso">' + esc(c.aviso) + "</p>" : "")
+        + (c.itens||[]).map(item).join("") + (c.caixa ? '<aside class="box"><p class="bt">' + esc(c.caixa.titulo) + "</p><dl><dd>" + esc(c.caixa.texto) + "</dd></dl></aside>" : "") + "</div>";
+    }).join("");
+  }
+  var EXPLICA = "Em toda notícia do Brasil, o quadro “Como isso afeta você” explica o efeito na vida do trabalhador e do operário, da classe baixa, da classe média e da classe alta. É uma explicação do jornal, sem tomar partido. Selos: “Confirmado” é fato checado; “Explicação” é leitura do jornal; “Previsão” é possibilidade.";
+
+  /* Mundo + Brasil: o caderno entra no Observatório, antes de "Mais do dia" */
+  var ocupado = false;
+  function insere(){
+    if (modo !== "mundo" || !dados || ocupado || edition.querySelector(".caderno-brasil")) return;
+    var e = escolhe(dataDaPagina()); if (!e) return;
+    ocupado = true;
+    var h = '<section class="caderno caderno-brasil" id="brasil" aria-label="Brasil"><hr class="dbl"><div class="cad-head"><div class="cad-tag">Caderno Brasil</div><h2>O país e como ele chega até você</h2><p>'
+      + esc((e.capa||{}).titulo) + ". Edição de " + esc(curta(e.data)) + ", do jornal Terra Brasilis.</p></div>"
+      + '<p class="br-nota">' + esc(EXPLICA) + '</p><div class="fronts">' + cadernos(e, "br-") + "</div></section>";
+    var ref = edition.querySelector("#mais") || edition.querySelector(".axes") || edition.querySelector("section.trio");
+    if (ref && ref.previousElementSibling && /\bdbl\b/.test(ref.previousElementSibling.className)) ref = ref.previousElementSibling;
+    if (ref) ref.insertAdjacentHTML("beforebegin", h); else edition.insertAdjacentHTML("beforeend", h);
+    var toc = document.getElementById("toc");
+    if (toc && !toc.hidden && !toc.querySelector('a[href="#brasil"]')) {
+      var antes = toc.querySelector('a[href="#mais"]') || toc.querySelector('a[href="#ensaio"]');
+      var a = document.createElement("a"); a.href = "#brasil"; a.textContent = "Brasil";
+      if (antes) toc.insertBefore(a, antes); else toc.appendChild(a);
+    }
+    ocupado = false;
+  }
+  new MutationObserver(insere).observe(edition, {childList: true});
+
+  /* Apenas Brasil: edição própria, só com o país */
+  function renderBrasil(e){
+    edBr = e;
+    var c = e.capa || {};
+    var resumo = (e.resumo||[]).filter(function(r){ return semLafa(r.tema + " " + r.texto); });
+    var nums = (e.numeros||[]).filter(function(n){ return semLafa(n.rotulo + " " + n.nota); });
+    var agenda = (e.agenda||[]).filter(function(a){ return semLafa(a.oque); });
+    var perg = (e.conversa||[]).filter(semLafa);
+    var hist = e.historia;
+    var todas = [], vistas = {};
+    (e.cadernos||[]).forEach(function(cd){ if (cd.id === "lafaiete") return; (cd.itens||[]).forEach(function(it){ (it.fontes||[]).forEach(function(f){ if (!vistas[f.url||f.nome]) { vistas[f.url||f.nome] = 1; todas.push(f); } }); }); });
+    (e.numeros||[]).forEach(function(n){ if (n.fonte && semLafa(n.rotulo + " " + n.nota)) todas.push({nome: n.fonte}); });
+    var opts = lista().map(function(x, i){ return '<option value="' + i + '"' + (x === e ? " selected" : "") + ">nº " + esc(x.numero) + " · " + esc(curta(x.data)) + "</option>"; }).join("");
+    soBr.innerHTML = '<div class="dateline"><span>Caderno Brasil, Nº ' + esc(e.numero) + '</span><span class="ast" aria-hidden="true">✱</span><span>' + esc(e.tempoLeitura ? e.tempoLeitura + " min de leitura" : "Brasil e Minas Gerais") + '</span><span class="ast" aria-hidden="true">✱</span><span>' + esc(curta(e.data)) + "</span></div>"
+      + '<hr class="thin"><div class="toolbar"><div class="legend"><span class="chip FATO">Confirmado</span><span class="chip ANALISE">Explicação</span><span class="chip CENARIO">Previsão</span></div>'
+      + '<button type="button" class="troca" data-troca>Trocar leitura</button><label class="pick">Edição <select id="br-picker" aria-label="Escolher edição do Brasil">' + opts + "</select></label></div><hr class=\"thin\">"
+      + (c.chapeu ? '<p class="banner">' + esc(c.chapeu) + "</p>" : "") + '<hr class="dbl">'
+      + '<div class="front"><section class="cover" aria-label="Manchete"><h2>' + esc(c.titulo) + '</h2><p class="deck">' + esc((String(c.linhaFina||"").match(/[^.!?]+[.!?]*/g) || [""]).filter(semLafa).join("").trim()) + "</p>"
+      + (function(){ if (!e.citacao) return ""; var m = String(e.citacao).match(/^\s*[“"]?(.*?)[”"]?\s*(?:\(([^)]+)\))?\s*$/); return '<blockquote class="quote">' + esc(m ? m[1].replace(/[“”"]/g, "") : e.citacao) + "</blockquote>" + (m && m[2] ? '<span class="fecha" style="text-align:center">' + esc(m[2]) + "</span>" : ""); })()
+      + (e.recado ? '<span class="fecha">' + esc(e.recado) + "</span>" : "") + "</section>"
+      + (resumo.length ? '<div class="side"><nav class="resumo calls" aria-label="Resumo"><span class="ct">O Brasil em poucas linhas</span>' + resumo.map(function(r){ return '<span class="call"><span class="r">' + esc(r.tema) + '</span><span class="x">' + esc(r.texto) + "</span></span>"; }).join("") + "</nav></div>" : "")
+      + "</div>"
+      + (nums.length ? '<hr class="dbl"><section class="nums" aria-label="Números do dia">' + nums.map(function(n){ return '<div class="num"><span class="lab">' + esc(n.rotulo) + '</span><span class="val">' + esc(n.valor) + '</span><span class="note">' + esc(n.nota) + '</span><span class="src">' + esc(n.fonte) + "</span></div>"; }).join("") + "</section>" : "")
+      + '<section class="caderno" id="brasil" aria-label="Brasil"><hr class="dbl"><div class="cad-head"><div class="cad-tag">Caderno Brasil</div><h2>O país e como ele chega até você</h2><p>Brasília, o bolso, a saúde, a escola e Minas Gerais.</p></div>'
+      + '<p class="br-nota">' + esc(EXPLICA) + '</p><div class="fronts">' + cadernos(e, "br-") + "</div></section>"
+      + ((e.palavrinhas||[]).length ? '<div class="gloss"><span class="gt">Palavras do dia</span><dl>' + e.palavrinhas.map(function(g){ return "<div><dt>" + esc(g.termo) + "</dt><dd>" + esc(g.def) + "</dd></div>"; }).join("") + "</dl></div>" : "")
+      + (hist && semLafa(hist.titulo + " " + hist.texto) ? '<hr class="dbl"><section class="essay historia" aria-label="História"><div><div class="tag">✱ Um pouco de história ✱</div><h3>' + esc(hist.titulo) + "</h3>"
+          + ((hist.linha||[]).length ? '<ul class="linha">' + hist.linha.map(function(l){ return "<li><b>" + esc(l.ano) + "</b><span>" + esc(l.fato) + "</span></li>"; }).join("") + "</ul>" : "")
+          + '</div><div class="text"><p>' + esc(hist.texto) + "</p>" + ((hist.fontes||[]).length ? '<div class="item"><div class="foot">' + fontes(hist.fontes) + "</div></div>" : "") + "</div></section>" : "")
+      + '<hr class="dbl"><section class="trio">'
+      + (perg.length ? '<div><h3>Perguntas para refletir</h3><ul class="qs">' + perg.map(function(q){ return "<li>" + esc(q) + "</li>"; }).join("") + "</ul></div>" : "")
+      + (agenda.length ? '<div><h3>Para acompanhar</h3><ul class="watch">' + agenda.map(function(w){ return '<li><span class="w">' + esc(w.quando) + "</span><span>" + esc(w.oque) + "</span></li>"; }).join("") + "</ul></div>" : "")
+      + '</section><hr class="dbl rev"><footer class="ampliar" id="br-ampliar"><span class="st">Para ampliar o conhecimento</span><p class="sub">Todas as fontes do caderno Brasil, organizadas por assunto. Toque no nome para ler a matéria ou o documento original.</p><div class="amp-grupos">'
+      + (e.cadernos||[]).filter(function(cd){ return cd.id !== "lafaiete"; }).map(function(cd){ var li = (cd.itens||[]).filter(function(it){ return (it.fontes||[]).length; }).map(function(it){ return "<li><b>" + esc(it.titulo) + "</b>" + it.fontes.map(function(f){ return f.url ? '<a href="' + esc(f.url) + '" target="_blank" rel="noopener">' + esc(f.nome) + "</a>" : esc(f.nome); }).join("") + "</li>"; }).join(""); return li ? '<div class="amp-g"><h3>' + esc(cd.titulo) + "</h3><ul>" + li + "</ul></div>" : ""; }).join("")
+      + (hist && (hist.fontes||[]).length && semLafa(hist.titulo + " " + hist.texto) ? '<div class="amp-g"><h3>Um pouco de história</h3><ul><li><b>' + esc(hist.titulo) + "</b>" + hist.fontes.map(function(f){ return f.url ? '<a href="' + esc(f.url) + '" target="_blank" rel="noopener">' + esc(f.nome) + "</a>" : esc(f.nome); }).join("") + "</li></ul></div>" : "")
+      + '</div><span class="aviso">' + esc(e.fechamento || "") + " O caderno Brasil é o mesmo do jornal Terra Brasilis. Uma publicação Xeque News, feita a partir da imprensa e de fontes oficiais.</span></footer>";
+    var pk = document.getElementById("br-picker");
+    if (pk) pk.addEventListener("change", function(){ renderBrasil(lista()[Number(pk.value)]); window.scrollTo(0, 0); });
+  }
+
+  function aplica(m, rolar){
+    modo = m;
+    body.classList.remove("modo-escolha", "modo-brasil", "modo-mundo");
+    body.classList.add("modo-" + (m === "brasil" ? "brasil" : m === "mundo" ? "mundo" : "escolha"));
+    try { if (m) sessionStorage.setItem(CHAVE, m); else sessionStorage.removeItem(CHAVE); } catch (e) {}
+    var cad = edition.querySelector(".caderno-brasil"); if (m !== "mundo" && cad) cad.remove();
+    var tl = document.querySelector('#toc a[href="#brasil"]'); if (m !== "mundo" && tl) tl.remove();
+    if (m === "mundo") insere();
+    if (m === "brasil") renderBrasil(escolhe("") );
+    if (rolar !== false) window.scrollTo(0, 0);
+  }
+
+  // botão "Trocar leitura" na barra do Observatório
+  var tb = document.querySelector(".mast .toolbar");
+  if (tb && !tb.querySelector("[data-troca]")) tb.insertAdjacentHTML("beforeend", '<button type="button" class="troca" data-troca hidden>Trocar leitura</button>');
+  document.addEventListener("click", function(ev){
+    var b = ev.target.closest && ev.target.closest("[data-modo],[data-troca]"); if (!b) return;
+    if (b.hasAttribute("data-troca")) { aplica(null); return; }
+    aplica(b.getAttribute("data-modo"));
+    if (location.hash === "#escolher") history.replaceState(null, "", location.pathname);
+  });
+
+  window.addEventListener("hashchange", function(){ if (!dados) return; var h = location.hash; if (h === "#apenas-brasil") aplica("brasil"); else if (h === "#mundo-brasil") aplica("mundo"); else if (h === "#escolher") aplica(null); });
+  fetch("brasil.json", {cache: "no-store"}).then(function(r){ if (!r.ok) throw 0; return r.json(); }).then(function(d){
+    if (!d || !(d.edicoes||[]).length) return;
+    dados = d;
+    var t = document.querySelector(".mast [data-troca]"); if (t) t.hidden = false;
+    var u = lista()[0];
+    var mb = document.getElementById("esc-m-brasil"); if (mb) mb.textContent = "Edição nº " + u.numero + " de " + curta(u.data) + ": " + ((u.capa||{}).titulo || "");
+    var mm = document.getElementById("esc-m-mundo"), it = document.getElementById("issue");
+    var h = location.hash.replace(/^#/, ""), salvo = null;
+    try { salvo = sessionStorage.getItem(CHAVE); } catch (e) {}
+    var m = h === "apenas-brasil" ? "brasil" : (h === "mundo-brasil" || h === "brasil" || /^br-/.test(h) || /^e-/.test(h) || (h && h !== "escolher" && document.getElementById(h))) ? "mundo" : h === "escolher" ? null : salvo;
+    aplica(m === "brasil" || m === "mundo" ? m : null, false);
+    var poe = function(){ var dt = document.getElementById("issue-date"); if (mm && dt && dt.textContent) mm.textContent = (it ? it.textContent + ", " : "") + dt.textContent; };
+    poe(); new MutationObserver(poe).observe(document.getElementById("issue-date"), {childList: true, characterData: true, subtree: true});
+  }).catch(function(){});
+})();
+</script>
+<!--brasil:fim-->
+
+<!--compromisso:inicio-->
+<style>
+/* Fontes e compromisso editorial (10/11/2026): expediente impresso no pé de todos os jornais */
+.compromisso-editorial{max-width:860px;margin:36px auto 84px;padding:0 16px;color:#3A2D2B;font-family:"Newsreader","Source Serif 4","Libre Caslon Text",Georgia,"Times New Roman",serif;box-sizing:border-box}
+.compromisso-editorial *{box-sizing:border-box}
+.compromisso-editorial .ce-caixa{border:2px solid #3A2D2B;outline:1px solid #3A2D2B;outline-offset:3px;padding:18px 18px 14px;background:rgba(255,255,255,.18)}
+.compromisso-editorial .ce-chapeu{font:800 12px/1.2 "Archivo","Archivo Narrow","Helvetica Neue",Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;text-align:center;border-top:6px solid #3A2D2B;border-bottom:2px solid #3A2D2B;padding:7px 0;margin:0 0 12px}
+.compromisso-editorial h2.ce-titulo{font-family:"Anton",Impact,"Arial Narrow",sans-serif;font-weight:400;font-size:clamp(28px,7vw,44px);line-height:1;text-transform:uppercase;text-align:center;margin:4px 0 6px;letter-spacing:.01em;color:#3A2D2B}
+.compromisso-editorial .ce-linha{font-style:italic;text-align:center;font-size:18px;line-height:1.4;margin:0 0 14px;color:#5E4E48}
+.compromisso-editorial p,.compromisso-editorial li{font-size:17px;line-height:1.5;text-align:justify;hyphens:auto}
+.compromisso-editorial p{margin:0 0 10px}
+.compromisso-editorial ul{margin:0 0 10px;padding-left:20px}
+.compromisso-editorial li{margin:0 0 6px}
+.compromisso-editorial h3{font:800 13px/1.2 "Archivo","Archivo Narrow",Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;margin:16px 0 8px;padding-top:8px;border-top:1px solid #3A2D2B;color:#3A2D2B}
+.compromisso-editorial .ce-cols{display:grid;grid-template-columns:1fr 1fr;gap:0 22px}
+@media (max-width:640px){.compromisso-editorial .ce-cols{grid-template-columns:1fr}}
+.compromisso-editorial .ce-selos{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 10px}
+.compromisso-editorial .ce-selos span{border:1px solid #3A2D2B;padding:3px 8px;font:700 12px/1.3 "Archivo",Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase}
+.compromisso-editorial details{border-top:2px solid #3A2D2B;margin-top:12px;padding-top:4px}
+.compromisso-editorial summary{cursor:pointer;font:800 13px/1.2 "Archivo",Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:12px 0;min-height:44px;list-style-position:inside}
+.compromisso-editorial a{color:#3A2D2B;text-underline-offset:2px}
+.compromisso-editorial .ce-limite{border:1.5px dashed #3A2D2B;padding:10px 12px;margin:12px 0 4px;font-style:italic}
+.compromisso-editorial .ce-pe{font:600 12px/1.4 "Archivo",Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;text-align:center;margin:12px 0 0;color:#5E4E48}
+@media print{.compromisso-editorial details{display:block}.compromisso-editorial{margin-bottom:20px}}
+</style>
+<section class="compromisso-editorial" id="fontes-e-compromisso" aria-labelledby="ce-titulo">
+ <div class="ce-caixa">
+  <div class="ce-chapeu">Xeque News ✱ Expediente ✱ Fontes de referência ✱ Linha editorial</div>
+  <h2 class="ce-titulo" id="ce-titulo">Fontes e compromisso editorial</h2>
+  <p class="ce-linha">De onde vêm as notícias, como elas são escolhidas e qual é o nosso compromisso com quem lê.</p>
+
+  <div class="ce-cols">
+   <div>
+    <h3>Sem partido</h3>
+    <p>Estes jornais não pertencem a partido, governo, candidato, empresa ou igreja, e não recebem dinheiro de nenhum deles. Não fazem campanha, não pedem voto e não escolhem lado.</p>
+    <h3>Fato separado de opinião</h3>
+    <p>Cada notícia leva um selo que diz o que ela é:</p>
+    <div class="ce-selos"><span>Fato / Confirmado</span><span>Análise / Explicação</span><span>Cenário / Previsão</span></div>
+    <p>O fato vem de fonte checada. A explicação é a leitura do jornal, e está marcada como tal. A previsão é uma possibilidade, nunca uma certeza.</p>
+   </div>
+   <div>
+    <h3>Os dois lados</h3>
+    <p>Em política e em guerras, mostramos o que diz o governo e o que diz a oposição, o que diz cada país e o que dizem fontes independentes. Números disputados, como baixas em guerra, aparecem como alegação de quem os divulgou.</p>
+    <h3>Toda notícia com fonte</h3>
+    <p>Cada nota traz o nome da fonte, o link para conferir e a data. Nada de número, nome ou frase inventados: se não há fonte confiável, a notícia não entra ou é dito que não há confirmação.</p>
+   </div>
+  </div>
+
+  <div class="ce-limite">Limites, com honestidade: os jornais do Xeque News são feitos a partir de pesquisa na internet, em fontes públicas. Nenhum jornal é livre de vieses, e este também pode errar, resumir mal ou escolher mal os assuntos. Por isso o nosso compromisso é com a neutralidade, e não uma promessa de perfeição: mostrar as fontes para que você mesmo possa conferir.</div>
+
+  <details>
+   <summary>Ver todas as fontes de referência e como corrigimos erros</summary>
+   <h3>Fontes de referência, por ordem de confiança</h3>
+   <ul>
+    <li><b>Dados e documentos oficiais:</b> gov.br, Agência Brasil, Câmara e Senado, STF, TSE, IBGE, Banco Central, Ipea; Agência Minas, ALMG; Prefeitura e Câmara de Conselheiro Lafaiete; ONU, OMS, FMI, Banco Mundial e governos estrangeiros.</li>
+    <li><b>Agências de notícias e grande imprensa:</b> Reuters, AP, AFP, BBC, Financial Times, The Economist; Folha de S.Paulo, Estadão, g1, O Tempo, Estado de Minas.</li>
+    <li><b>Imprensa local de Lafaiete:</b> Lafaiete Agora, Correio de Minas, Jornal Correio da Cidade, Voz Ativa. Notícia só local é marcada como tal.</li>
+    <li><b>Ciência e medicina:</b> NEJM, The Lancet, JAMA, BMJ, Nature, Science, PubMed; Ministério da Saúde, Anvisa, Conitec, Fiocruz, Butantan, Inca; FDA, EMA, CDC.</li>
+    <li><b>Energia, clima e espaço:</b> IEA, EIA, OPEP, ANP, EPE; NOAA, Bureau of Meteorology da Austrália, Copernicus, INPE, Inmet; NASA, ESA, NASA/CNEOS e ESA/NEOCC (risco de asteroides pelas escalas de Turim e Palermo).</li>
+    <li><b>Defesa e relações internacionais:</b> SIPRI, IISS, RUSI, CSIS, RAND, ACLED, Oryx (perdas confirmadas por imagem, contagem mínima); Chatham House, Brookings, Carnegie, CFR, CEBRI.</li>
+    <li><b>Mídia estatal</b> (TASS, RT, Xinhua, Global Times, Press TV, KCNA): só para mostrar a versão oficial de um governo, sempre identificada como tal, nunca como fato.</li>
+   </ul>
+   <h3>Como as fontes são escolhidas</h3>
+   <ul>
+    <li>Primeiro o documento original (lei, decisão, estudo, boletim oficial); depois agências e jornais que o noticiaram.</li>
+    <li>Assunto polêmico: pelo menos duas fontes independentes, de linhas diferentes, sempre que existirem.</li>
+    <li>Estudo científico: diz se foi publicado em revista, apresentado em congresso ou só anunciado por empresa, e quais são os limites.</li>
+    <li>Cada afirmação importante leva o grau de confiança (alta, média ou baixa) quando o jornal usa esse selo.</li>
+   </ul>
+   <h3>Erros e correções</h3>
+   <p>Quando um erro é encontrado, a correção sai na edição seguinte, dizendo o que estava errado e o que é o certo. Achou um erro, uma fonte fraca ou um texto que pareceu tomar partido? Avise a redação do Xeque News pela aba “Sugestões” do Terra Brasilis ou por quem compartilhou este link com você; a próxima edição corrige e explica.</p>
+   <p>Saúde: nada aqui substitui a consulta com médico ou profissional de saúde.</p>
+  </details>
+  <p class="ce-pe">Leia o compromisso completo do Xeque News em <a href="https://arth4rhenrique883-stack.github.io/banca/fontes/">Fontes e compromisso editorial</a></p>
+ </div>
+</section>
+<!--compromisso:fim-->
+
+<!--rainha:inicio-->
+<style>
+/* Logo da rainha (o mesmo traço de batimento com coroa do Xeque-Mate), parada e em tinta, como selo impresso no canto */
+.rainha-canto{position:fixed;right:max(12px,env(safe-area-inset-right,0px));bottom:max(12px,env(safe-area-inset-bottom,0px));z-index:9998;
+  width:48px;height:48px;padding:5px;box-sizing:border-box;background:#ECE3D4;border:1.5px solid #3A2D2B;outline:1px solid #3A2D2B;outline-offset:2px;
+  line-height:0;pointer-events:none;animation:none}
+.rainha-canto svg{width:100%;height:100%;display:block;overflow:hidden}
+@media print{.rainha-canto{position:absolute;top:8px;right:8px;bottom:auto}}
+</style>
+<div class="rainha-canto" role="img" aria-label="Logo da rainha"><svg viewBox="97 -1 46 46" aria-hidden="true"><g fill="none" stroke="#3A2D2B" stroke-linejoin="round" stroke-linecap="round"><path d="M0 34H62L66 30H70L74 34H100L104 38L109 15L115 25L120 6L125 25L131 15L136 42L140 34H160L166 28H172L178 34H240" stroke-width="3.2"/><g stroke-width="2.2" fill="#ECE3D4"><circle cx="109" cy="12.4" r="2.6"/><circle cx="120" cy="3.4" r="2.6"/><circle cx="131" cy="12.4" r="2.6"/></g></g></svg></div>
+<!--rainha:fim-->
+</body></html>
+<script>
+/* Banca: guarda os jornais para ler sem internet e recarrega quando chega edição nova */
+if ("serviceWorker" in navigator) {
+  addEventListener("load", function () {
+    navigator.serviceWorker.register("../sw.js", {scope: "../"}).then(function (r) {
+      r.addEventListener("updatefound", function () {
+        var w = r.installing; if (!w) return;
+        w.addEventListener("statechange", function () {
+          if (w.state === "activated" && navigator.serviceWorker.controller) location.reload();
+        });
+      });
+    }).catch(function () {});
+  });
+}
+</script>

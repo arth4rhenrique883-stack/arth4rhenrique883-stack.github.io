@@ -30,6 +30,16 @@
   ],
   "shortcuts": [
     {
+      "name": "Mundo, Brasil e Medicina",
+      "url": "app/",
+      "icons": [
+        {
+          "src": "icone-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
       "name": "Jornal de Cada Dia",
       "url": "jornal/",
       "icons": [

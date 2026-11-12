@@ -293,7 +293,7 @@
     }
    ],
    "ia": {
-    "abertura": "A IA em quatro frentes. Aviso de transparência: o Observatório, do Xeque News, é escrito com a ajuda do Claude, modelo da Anthropic, e a Anthropic está entre as empresas que assinaram o Apelo de Paris citado abaixo; por isso usamos o texto oficial do Eliseu e a cobertura da imprensa, não comunicados da empresa.",
+    "abertura": "A IA em quatro frentes.",
     "frentes": [
      {
       "area": "Científica",
@@ -1267,7 +1267,7 @@
     }
    ],
    "ia": {
-    "abertura": "A IA em quatro frentes. Aviso de transparência: esta revista é escrita com o Claude, modelo da Anthropic; hoje um modelo da Anthropic aparece só como ferramenta de teste citada por terceiros.",
+    "abertura": "A IA em quatro frentes.",
     "frentes": [
      {
       "area": "Científica",
@@ -2217,7 +2217,7 @@
     }
    ],
    "ia": {
-    "abertura": "A IA em quatro frentes. Aviso de transparência: esta revista é escrita com o Claude, modelo da Anthropic; hoje a Anthropic não é citada.",
+    "abertura": "A IA em quatro frentes.",
     "frentes": [
      {
       "area": "Científica",
@@ -3113,7 +3113,7 @@
     }
    ],
    "ia": {
-    "abertura": "A IA em quatro frentes. Aviso de transparência: esta revista é escrita com o Claude, modelo da Anthropic, citada duas vezes abaixo. Nesses casos, usamos o relato de terceiros e apontamos o que não foi verificado de forma independente.",
+    "abertura": "A IA em quatro frentes.",
     "frentes": [
      {
       "area": "Científica",

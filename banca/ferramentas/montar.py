@@ -34,6 +34,11 @@ PUBS = [
     ("observatorio", "revista", "Observatório Diário",
      "O mundo para estudar (geopolítica, guerras, energia, clima, IA e espaço, com história e filosofia) e o caderno do Brasil. Ao abrir, escolha Mundo + Brasil ou Apenas Brasil.",
      {"destaque": True, "semMedicina": True, "extras": {"brasil.json": "jornal-brasil/edicoes.json"}}),
+    # Aba "Mundo" do app em abas (12/11/2026): o Observatório só com o mundo, sem a tela de escolha
+    # (não recebe brasil.json), sem medicina e sem encarte. Fora da capa; quem o mostra é /banca/app/.
+    ("mundo", "revista", "Observatório, o mundo",
+     "O mundo para estudar: geopolítica, guerras, energia, clima, IA e espaço, com história e filosofia.",
+     {"oculto": True, "semMedicina": True}),
     ("xequemate", "medicina", "Xeque-Mate",
      "Só medicina, para estudantes: estudos, ensaios clínicos, aprovações e saúde pública.",
      {"destaque": True}),
@@ -120,7 +125,9 @@ BARRA = """
 .banca-volta span{flex:1;text-align:right;opacity:.85;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media (max-width:430px){.banca-volta span{display:none}}
 @media print{.banca-volta{display:none}}
+html.em-app .banca-volta{display:none}
 </style>
+<script>try{if(self!==top&&/[?&]app=1/.test(location.search))document.documentElement.classList.add("em-app")}catch(e){}</script>
 <nav class="banca-volta" aria-label="Xeque News"><a href="../">&#8249;&nbsp;Todos os jornais</a><span>{nome}</span><a href="../fontes/" class="banca-fontes">Fontes</a></nav>
 """
 
@@ -356,6 +363,11 @@ a.outro:hover,a.outro:focus-visible{{background:rgba(255,255,255,.4)}}
   <div class="linha"><span>{len(cards)} jornais</span><span>✱</span><span class="larga">Edição todo dia</span><span class="larga">✱</span><span>{hoje.strftime('%d/%m/%Y')}</span></div>
   <h2>Escolha o seu jornal</h2>
   <p class="sub">Toque num jornal para ler a edição de hoje.</p>
+  <a class="pub" href="app/">
+    <img src="icone-192.png" alt="" width="84" height="84">
+    <div class="txt"><small>Três jornais em abas</small><b>Mundo, Brasil e Medicina</b><span>O Observatório, o Terra Brasilis e o Xeque-Mate num lugar só. Troque de jornal pelas abas no alto.</span></div>
+    <i aria-hidden="true">&#8250;</i>
+  </a>
 {chr(10).join(itens)}
   {('<h3 class="tamb">Também no Xeque News</h3>' + chr(10) + chr(10).join(outros)) if outros else ""}
   {('<h3 class="tamb">Dossiês de estudo</h3>' + chr(10) + chr(10).join(f'  <a class="outro" href="{p}/"><img src="{p}/icone-192.png" alt="" width="44" height="44"><span><b>{H.escape(n)}</b> {H.escape(ds)}</span></a>' for p, _, n, ds in DOSSIES)) if DOSSIES else ""}
@@ -386,6 +398,137 @@ open(os.path.join(_f, "index.html"), "w", encoding="utf-8").write(com_tema(
     CABECA.format(desc="As fontes de referência dos jornais do Xeque News e o compromisso editorial: sem partido, fato separado de opinião, os dois lados, correção pública.", tinta=TINTA, raiz="../")
     + com_rainha(_corpo + "\n" + COMPROMISSO.replace("<details>", "<details open>")) + REGISTRO.replace("{raiz}", "../") + "</body>\n</html>\n"))
 print("fontes: atualizado")
+
+# ---------------------------------------------------------------------------
+# App em abas (12/11/2026): Mundo, Brasil e Medicina numa página só (/banca/app/).
+# Cada aba mostra o jornal inteiro, no desenho dele, dentro de uma moldura; nada é escrito duas vezes.
+ABAS = [
+    # id da aba, pasta do jornal, rótulo, nome do jornal
+    ("mundo", "mundo", "Mundo", "Observatório"),
+    ("brasil", "brasil", "Brasil", "Terra Brasilis"),
+    ("medicina", "xequemate", "Medicina", "Xeque-Mate"),
+]
+
+APP = """</head>
+<body>
+<style>
+:root{--papel:#ECE3D4;--tinta:#3A2D2B}
+html,body{height:100%;margin:0}
+body{display:flex;flex-direction:column;height:100dvh;background:var(--papel);color:var(--tinta);overflow:hidden}
+.abas{display:flex;flex:none;background:var(--papel);border-top:5px solid var(--tinta);border-bottom:5px solid var(--tinta);
+  box-shadow:inset 0 2px 0 var(--papel),inset 0 3px 0 var(--tinta),inset 0 -2px 0 var(--papel),inset 0 -3px 0 var(--tinta);
+  padding:3px max(0px, env(safe-area-inset-right, 0px)) 3px max(0px, env(safe-area-inset-left, 0px))}
+.abas button{flex:1;min-width:0;min-height:58px;border:0;border-left:1px solid var(--tinta);background:none;color:inherit;cursor:pointer;
+  padding:8px 4px 7px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+.abas button:first-child{border-left:0}
+.abas b{font:400 clamp(21px,6.2vw,30px)/1 "Anton",Impact,"Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.03em}
+.abas small{font:italic 400 13px/1.1 "Newsreader",Georgia,serif;opacity:.85;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.abas button[aria-selected="true"]{background:var(--tinta);color:var(--papel)}
+.abas button:focus-visible{outline:3px solid var(--tinta);outline-offset:-6px}
+.abas button[aria-selected="true"]:focus-visible{outline-color:var(--papel)}
+.folhas{flex:1;min-height:0;position:relative}
+.folhas iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:var(--papel)}
+.folhas iframe[hidden]{display:none}
+</style>
+__BARRA__
+<div class="abas" role="tablist" aria-label="Jornais">
+__BOTOES__
+</div>
+<div class="folhas">
+__FOLHAS__
+</div>
+<script>
+(function(){
+  var ids=__IDS__, R=document.documentElement;
+  function tema(f){try{var t=R.getAttribute("data-tema");if(t&&f.contentDocument)f.contentDocument.documentElement.setAttribute("data-tema",t)}catch(e){}}
+  function abrir(id,guardar){
+    if(ids.indexOf(id)<0)id=ids[0];
+    ids.forEach(function(x){
+      var b=document.getElementById("aba-"+x),f=document.getElementById("folha-"+x),on=x===id;
+      b.setAttribute("aria-selected",on?"true":"false");b.tabIndex=on?0:-1;f.hidden=!on;
+      if(on&&!f.src){f.addEventListener("load",function(){tema(f)});f.src=f.getAttribute("data-src")}
+    });
+    if(guardar){try{localStorage.setItem("xeque-aba",id)}catch(e){} history.replaceState(null,"","#"+id)}
+  }
+  ids.forEach(function(x){document.getElementById("aba-"+x).addEventListener("click",function(){abrir(x,true)})});
+  document.querySelector(".abas").addEventListener("keydown",function(e){
+    if(e.key!=="ArrowRight"&&e.key!=="ArrowLeft")return;
+    var i=ids.indexOf(document.querySelector('.abas [aria-selected="true"]').id.slice(4));
+    i=(i+(e.key==="ArrowRight"?1:ids.length-1))%ids.length;abrir(ids[i],true);document.getElementById("aba-"+ids[i]).focus();
+  });
+  addEventListener("hashchange",function(){abrir(location.hash.slice(1),false)});
+  new MutationObserver(function(){ids.forEach(function(x){tema(document.getElementById("folha-"+x))})}).observe(R,{attributes:true,attributeFilter:["data-tema"]});
+  var salvo=null;try{salvo=localStorage.getItem("xeque-aba")}catch(e){}
+  abrir(location.hash.slice(1)||salvo||ids[0],false);
+})();
+</script>
+"""
+
+def montar_app():
+    d = os.path.join(BANCA, "app")
+    os.makedirs(d, exist_ok=True)
+    botoes = "\n".join(
+        f'<button type="button" role="tab" id="aba-{i}" aria-controls="folha-{i}" aria-selected="false"><b>{H.escape(r)}</b><small>{H.escape(n)}</small></button>'
+        for i, _, r, n in ABAS)
+    folhas = "\n".join(
+        f'<iframe id="folha-{i}" role="tabpanel" aria-labelledby="aba-{i}" title="{H.escape(n)}" data-src="../{pasta}/?app=1" hidden></iframe>'
+        for i, pasta, _, n in ABAS)
+    desc = "O mundo, o Brasil e a medicina num aplicativo só, em três abas, no desenho de jornal impresso."
+    cab = (CABECA.format(desc=H.escape(desc), tinta=TINTA, raiz="../")
+           + "<title>Xeque News: Mundo, Brasil e Medicina</title>\n"
+           + '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
+           + '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Newsreader:ital,opsz,wght@1,6..72,400&family=Archivo:wght@500;600&display=swap">\n')
+    corpo = (APP.replace("__BARRA__", BARRA.replace("{nome}", "Mundo, Brasil e Medicina"))
+             .replace("__BOTOES__", botoes).replace("__FOLHAS__", folhas)
+             .replace("__IDS__", json.dumps([a[0] for a in ABAS])))
+    open(os.path.join(d, "index.html"), "w", encoding="utf-8").write(
+        com_tema(cab + corpo + REGISTRO.replace("{raiz}", "../") + "</body>\n</html>\n"))
+    print("app: atualizado")
+
+# Resumo para o relógio (12/11/2026): /banca/relogio.json, pequeno (poucos KB), só manchetes e
+# frases curtas das mesmas três edições. É o que o aplicativo do relógio baixa pelo celular.
+def corta(t, n):
+    t = re.sub(r"\s+", " ", str(t or "")).strip()
+    if len(t) <= n:
+        return t
+    c = t[:n - 1]
+    return (c[:c.rfind(" ")] if " " in c[n // 2:] else c).rstrip(" ,;:.") + "…"
+
+def montar_relogio():
+    def edicao(pasta):
+        try:
+            return json.load(open(os.path.join(BANCA, pasta, "edicoes.json"), encoding="utf-8"))["edicoes"][0]
+        except Exception:
+            return None
+    def pares(lista, rot, n):
+        return [{"r": corta(x.get(rot, ""), 24), "t": corta(x.get("texto", ""), 170)}
+                for x in (lista or [])[:n] if isinstance(x, dict) and x.get("texto")]
+    jornais = []
+    for i, pasta, rotulo, nome in ABAS:
+        e = edicao(pasta)
+        if not e:
+            continue
+        capa = e.get("capa", {})
+        if i == "mundo":
+            itens = pares(e.get("chamadas"), "rotulo", 4) + pares(e.get("ticker"), "regiao", 8)
+        elif i == "brasil":
+            itens = pares(e.get("resumo"), "tema", 10)
+        else:
+            itens = pares(e.get("ticker"), "area", 8) + pares((e.get("brasil") or {}).get("ticker"), "area", 4)
+        vistos, unicos = set(), []
+        for it in itens:
+            if it["t"] not in vistos:
+                vistos.add(it["t"]); unicos.append(it)
+        jornais.append({"id": i, "aba": rotulo, "jornal": nome, "data": e.get("data", ""), "quando": data_bonita(e.get("data", "")),
+                        "numero": str(e.get("numero", "")), "chapeu": corta(capa.get("chapeu") or capa.get("kicker") or "", 40),
+                        "manchete": corta(capa.get("titulo", ""), 110), "resumo": corta(capa.get("linhaFina", ""), 300),
+                        "itens": unicos[:12]})
+    open(os.path.join(BANCA, "relogio.json"), "w", encoding="utf-8").write(
+        json.dumps({"v": 1, "casa": "Xeque News", "jornais": jornais}, ensure_ascii=False, separators=(",", ":")) + "\n")
+    print("relogio.json:", os.path.getsize(os.path.join(BANCA, "relogio.json")), "bytes")
+
+montar_app()
+montar_relogio()
 
 open(os.path.join(BANCA, "index.html"), "w", encoding="utf-8").write(com_tema(tela_inicial(cards)))
 
@@ -423,7 +566,7 @@ manifest = {
         {"src": "icone-512.png", "sizes": "512x512", "type": "image/png"},
         {"src": "icone-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
     ],
-    "shortcuts": [{"name": nome, "url": f"{pasta}/", "icons": [{"src": f"{pasta}/icone-192.png", "sizes": "192x192"}]}
+    "shortcuts": [{"name": "Mundo, Brasil e Medicina", "url": "app/", "icons": [{"src": "icone-192.png", "sizes": "192x192"}]}] + [{"name": nome, "url": f"{pasta}/", "icons": [{"src": f"{pasta}/icone-192.png", "sizes": "192x192"}]}
                   for pasta, _, nome, _, opts in PUBS if opts.get("destaque")],
 }
 open(os.path.join(BANCA, "manifest.webmanifest"), "w", encoding="utf-8").write(
@@ -434,6 +577,7 @@ for pasta, _, _, _, opts in PUBS:
     base += [f"{pasta}/", f"{pasta}/index.html", f"{pasta}/edicoes.json", f"{pasta}/icone-192.png"]
     base += [f"{pasta}/{x}" for x in opts.get("extras", {})]
 base += ["fontes/", "fontes/index.html"]
+base += ["app/", "app/index.html", "relogio.json"]
 for pasta, *_ in DOSSIES:
     base += [f"{pasta}/", f"{pasta}/index.html", f"{pasta}/icone-192.png"]
 h = hashlib.sha256()

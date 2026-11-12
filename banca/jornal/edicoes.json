@@ -329,11 +329,11 @@
     }
    },
    "tecnologia": {
-    "abertura": "A inteligência artificial (IA) são programas de computador que conversam, escrevem e analisam imagens quase como uma pessoa. Ela já está no celular, no banco e no consultório. Aviso de transparência: este jornal é escrito com a ajuda do Claude, uma IA da empresa Anthropic.",
+    "abertura": "A inteligência artificial (IA) são programas de computador que conversam, escrevem e analisam imagens quase como uma pessoa. Ela já está no celular, no banco e no consultório.",
     "itens": [
      {
       "titulo": "Países e empresas prometem cuidar da segurança da IA",
-      "texto": "Em 9/11, o presidente da França, Emmanuel Macron, reuniu governos e empresas no chamado Apelo de Paris. Seis países (França, Canadá, Finlândia, Noruega, Países Baixos e Bahrein) e dez empresas, entre elas OpenAI, Microsoft, Mistral e a Anthropic (a mesma empresa do Claude, que ajuda a escrever este jornal), prometeram testar os riscos das IAs mais poderosas, ter como desligá-las e avisar rápido quando houver ataques ou falhas graves. EUA e China, as duas maiores potências da IA, não assinaram. A promessa é voluntária: ninguém é obrigado a cumprir.",
+      "texto": "Em 9/11, o presidente da França, Emmanuel Macron, reuniu governos e empresas no chamado Apelo de Paris. Seis países (França, Canadá, Finlândia, Noruega, Países Baixos e Bahrein) e dez empresas, entre elas OpenAI, Microsoft, Mistral e a Anthropic, prometeram testar os riscos das IAs mais poderosas, ter como desligá-las e avisar rápido quando houver ataques ou falhas graves. EUA e China, as duas maiores potências da IA, não assinaram. A promessa é voluntária: ninguém é obrigado a cumprir.",
       "selo": "Confirmado",
       "fontes": [
        {

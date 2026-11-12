@@ -436,7 +436,9 @@ html body .rainha-canto svg g{stroke:var(--tinta)}
 .banca-volta span{flex:1;text-align:right;opacity:.85;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media (max-width:430px){.banca-volta span{display:none}}
 @media print{.banca-volta{display:none}}
+html.em-app .banca-volta{display:none}
 </style>
+<script>try{if(self!==top&&/[?&]app=1/.test(location.search))document.documentElement.classList.add("em-app")}catch(e){}</script>
 <nav class="banca-volta" aria-label="Xeque News"><a href="../">&#8249;&nbsp;Todos os jornais</a><span>Terra Brasilis</span><a href="../fontes/" class="banca-fontes">Fontes</a></nav>
 <div class="folha" lang="pt-BR">
   <div class="controles">
@@ -461,7 +463,7 @@ html body .rainha-canto svg g{stroke:var(--tinta)}
   </header>
   <main id="conteudo"><p class="erro">Abrindo o jornal…</p></main>
   <hr class="duplo">
-  <p class="nota-fim" id="notaFim">Terra Brasilis ✱ jornal do Brasil e de Minas Gerais feito com a ajuda do Claude, uma inteligência artificial ✱ cada notícia traz a fonte e a data</p>
+  <p class="nota-fim" id="notaFim">Terra Brasilis ✱ jornal do Brasil e de Minas Gerais cada notícia traz a fonte e a data</p>
 </div>
 
 <script>
@@ -536,7 +538,7 @@ function mostraEscolha(){
     <div class="explica-impacto">Em toda notícia, o quadro “Como isso afeta você” explica o efeito na vida do trabalhador e do operário, da classe baixa, da classe média e da classe alta. É uma explicação do jornal, sem tomar partido.</div>
   </section>`;
   document.querySelectorAll(".opcao").forEach(b=>b.onclick=()=>{location.hash=b.dataset.qual;});
-  $("notaFim").textContent = "Terra Brasilis ✱ jornal do Brasil e de Minas Gerais feito com a ajuda do Claude, uma inteligência artificial ✱ cada notícia traz a fonte e a data";
+  $("notaFim").textContent = "Terra Brasilis ✱ jornal do Brasil e de Minas Gerais cada notícia traz a fonte e a data";
 }
 
 function render(qual, e){
@@ -581,7 +583,7 @@ function render(qual, e){
   if(CADERNOS[outro]) h += `<p style="text-align:center;padding-block:8px 18px"><button class="btn" type="button" id="irOutro">Ler também o caderno ${esc(CADERNOS[outro].nome)} &#8250;</button></p>`;
   $("conteudo").innerHTML = h;
   if($("irOutro")) $("irOutro").onclick=()=>{location.hash=outro;};
-  $("notaFim").textContent = `${e.fechamento||""} Selos: “Confirmado” é fato checado; “Explicação” é a leitura do jornal; “Previsão” é uma possibilidade. O quadro “Como isso afeta você” é explicação do jornal, sem tomar partido. ✱ Terra Brasilis é feito com a ajuda do Claude, uma inteligência artificial, a partir da imprensa e de fontes oficiais.`;
+  $("notaFim").textContent = `${e.fechamento||""} Selos: “Confirmado” é fato checado; “Explicação” é a leitura do jornal; “Previsão” é uma possibilidade. O quadro “Como isso afeta você” é explicação do jornal, sem tomar partido. ✱ Terra Brasilis é feito a partir da imprensa e de fontes oficiais.`;
 }
 
 function abre(qual){
@@ -677,7 +679,7 @@ function abreSugestoes(){
   $("meio").textContent="Carta dos leitores"; $("chamada").textContent="A palavra é sua";
   ["edicao","rotEdicao","indice","fioIndice"].forEach(id=>$(id).classList.add("oculto"));
   $("trocar").classList.remove("oculto"); if(UNICO) $("trocar").innerHTML="&#8249; Voltar ao jornal";
-  $("notaFim").textContent="Terra Brasilis ✱ as sugestões são lidas pela redação; os dados de quem escreve servem só para responder ✱ feito com a ajuda do Claude, uma inteligência artificial";
+  $("notaFim").textContent="Terra Brasilis ✱ as sugestões são lidas pela redação; os dados de quem escreve servem só para responder";
   const naBanca = /github\.io$/.test(location.hostname) || location.hostname==="localhost" || location.hostname==="127.0.0.1";
   if(!naBanca){
     $("conteudo").innerHTML=`<section class="sug">${sugCab()}<div class="sug-grade"><div><p class="it">A caixa de sugestões funciona no endereço público do jornal, onde dá para entrar com a conta do Google ou com e-mail.</p><p class="linha-bt" style="margin-top:14px"><a class="btn cheio" href="${SUG_SITE}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;text-decoration:none">Abrir a caixa de sugestões &#8250;</a></p></div><div>${sugAvisoPriv()}</div></div></section>`;
@@ -910,7 +912,7 @@ function sugDesenhaFormulario(area,u){
    </div>
   </div>
 
-  <div class="ce-limite">Limites, com honestidade: os jornais do Xeque News são escritos com a ajuda do Claude, uma inteligência artificial da Anthropic, a partir de pesquisa na internet. Nenhum jornal é livre de vieses, e uma IA também pode errar, resumir mal ou escolher mal os assuntos. Por isso o nosso compromisso é com a neutralidade, e não uma promessa de perfeição: mostrar as fontes para que você mesmo possa conferir.</div>
+  <div class="ce-limite">Limites, com honestidade: os jornais do Xeque News são feitos a partir de pesquisa na internet, em fontes públicas. Nenhum jornal é livre de vieses, e este também pode errar, resumir mal ou escolher mal os assuntos. Por isso o nosso compromisso é com a neutralidade, e não uma promessa de perfeição: mostrar as fontes para que você mesmo possa conferir.</div>
 
   <details>
    <summary>Ver todas as fontes de referência e como corrigimos erros</summary>

@@ -355,7 +355,9 @@ main [id]{scroll-margin-top:12px}
 .banca-volta span{flex:1;text-align:right;opacity:.85;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media (max-width:430px){.banca-volta span{display:none}}
 @media print{.banca-volta{display:none}}
+html.em-app .banca-volta{display:none}
 </style>
+<script>try{if(self!==top&&/[?&]app=1/.test(location.search))document.documentElement.classList.add("em-app")}catch(e){}</script>
 <nav class="banca-volta" aria-label="Xeque News"><a href="../">&#8249;&nbsp;Todos os jornais</a><span>Do Mundo a Lafaiete</span><a href="../fontes/" class="banca-fontes">Fontes</a></nav>
 <div lang="pt-BR">
 <div class="wrap">
@@ -867,7 +869,7 @@ main [id]{scroll-margin-top:12px}
       + '</section><hr class="dbl rev"><footer class="ampliar" id="br-ampliar"><span class="st">Para ampliar o conhecimento</span><p class="sub">Todas as fontes do caderno Brasil, organizadas por assunto. Toque no nome para ler a matéria ou o documento original.</p><div class="amp-grupos">'
       + (e.cadernos||[]).filter(function(cd){ return cd.id !== "lafaiete"; }).map(function(cd){ var li = (cd.itens||[]).filter(function(it){ return (it.fontes||[]).length; }).map(function(it){ return "<li><b>" + esc(it.titulo) + "</b>" + it.fontes.map(function(f){ return f.url ? '<a href="' + esc(f.url) + '" target="_blank" rel="noopener">' + esc(f.nome) + "</a>" : esc(f.nome); }).join("") + "</li>"; }).join(""); return li ? '<div class="amp-g"><h3>' + esc(cd.titulo) + "</h3><ul>" + li + "</ul></div>" : ""; }).join("")
       + (hist && (hist.fontes||[]).length && semLafa(hist.titulo + " " + hist.texto) ? '<div class="amp-g"><h3>Um pouco de história</h3><ul><li><b>' + esc(hist.titulo) + "</b>" + hist.fontes.map(function(f){ return f.url ? '<a href="' + esc(f.url) + '" target="_blank" rel="noopener">' + esc(f.nome) + "</a>" : esc(f.nome); }).join("") + "</li></ul></div>" : "")
-      + '</div><span class="aviso">' + esc(e.fechamento || "") + " O caderno Brasil é o mesmo do jornal Terra Brasilis. Uma publicação Xeque News, feita com a ajuda do Claude, uma inteligência artificial, a partir da imprensa e de fontes oficiais.</span></footer>";
+      + '</div><span class="aviso">' + esc(e.fechamento || "") + " O caderno Brasil é o mesmo do jornal Terra Brasilis. Uma publicação Xeque News, feita a partir da imprensa e de fontes oficiais.</span></footer>";
     var pk = document.getElementById("br-picker");
     if (pk) pk.addEventListener("change", function(){ renderBrasil(lista()[Number(pk.value)]); window.scrollTo(0, 0); });
   }
@@ -961,7 +963,7 @@ main [id]{scroll-margin-top:12px}
    </div>
   </div>
 
-  <div class="ce-limite">Limites, com honestidade: os jornais do Xeque News são escritos com a ajuda do Claude, uma inteligência artificial da Anthropic, a partir de pesquisa na internet. Nenhum jornal é livre de vieses, e uma IA também pode errar, resumir mal ou escolher mal os assuntos. Por isso o nosso compromisso é com a neutralidade, e não uma promessa de perfeição: mostrar as fontes para que você mesmo possa conferir.</div>
+  <div class="ce-limite">Limites, com honestidade: os jornais do Xeque News são feitos a partir de pesquisa na internet, em fontes públicas. Nenhum jornal é livre de vieses, e este também pode errar, resumir mal ou escolher mal os assuntos. Por isso o nosso compromisso é com a neutralidade, e não uma promessa de perfeição: mostrar as fontes para que você mesmo possa conferir.</div>
 
   <details>
    <summary>Ver todas as fontes de referência e como corrigimos erros</summary>
