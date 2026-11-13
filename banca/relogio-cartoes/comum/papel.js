@@ -6,8 +6,9 @@ import { LocalStorage } from "@zos/storage";
 
 export const { width: L, height: A } = getDeviceInfo();
 export const PAPEL = 0xece3d4;
-export const TINTA = 0x3a2d2b;
-export const SUAVE = 0x5e4e48;
+export const TINTA = 0x111111;
+export const SUAVE = 0x47413b;
+export const DESTAQUE = 0xa51d1d; // vermelho de manchete, para chamar atenção
 export const ANTON = "fonts/Anton.ttf";
 export const GOTICA = "fonts/Gotica.ttf"; // UnifrakturMaguntia: o cabeçalho dos jornais antigos
 export const SERIFA = "fonts/Serifa.ttf"; // Old Standard TT: letra de texto da imprensa do século XIX
@@ -80,11 +81,11 @@ export function Folha() {
     cabeca(nome, linha) {
       this.texto(nome, { tam: 60, fonte: GOTICA, centro: true, depois: 0 });
       this.filete(true);
-      if (linha) this.texto(String(linha).toUpperCase(), { tam: 20, centro: true, cor: SUAVE, depois: 0 });
+      if (linha) this.texto(String(linha).toUpperCase(), { tam: 20, centro: true, cor: DESTAQUE, depois: 0 });
       this.filete(false);
     },
     estrelas() {
-      this.texto("✱   ✱   ✱", { tam: 22, centro: true, cor: SUAVE, fonte: null, depois: 10 });
+      this.texto("✱   ✱   ✱", { tam: 22, centro: true, cor: DESTAQUE, fonte: null, depois: 10 });
     },
     botao(t, aoTocar) {
       const h = px(76);

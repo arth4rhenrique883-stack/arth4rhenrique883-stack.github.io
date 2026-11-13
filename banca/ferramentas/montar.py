@@ -14,7 +14,7 @@ from datetime import date
 
 ORIGEM = sys.argv[1] if len(sys.argv) > 1 else "/mnt/project-files"
 BANCA = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PAPEL, TINTA = "#ECE3D4", "#3A2D2B"
+PAPEL, TINTA = "#ECE3D4", "#111111"
 ICONES = ["icone-180.png", "icone-192.png", "icone-512.png", "icone-maskable-512.png"]
 
 PUBS = [
@@ -120,7 +120,7 @@ CABECA = """<!doctype html>
 BARRA = """
 <style>
 .banca-volta{position:sticky;top:0;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:12px;
-  background:#3A2D2B;color:#ECE3D4;padding:8px max(14px, env(safe-area-inset-right, 0px)) 8px max(14px, env(safe-area-inset-left, 0px));
+  background:#111;color:#ECE3D4;padding:8px max(14px, env(safe-area-inset-right, 0px)) 8px max(14px, env(safe-area-inset-left, 0px));
   padding-top:max(8px, env(safe-area-inset-top, 0px));font:600 15px/1.2 "Archivo","Archivo Narrow","Helvetica Neue",Arial,sans-serif;
   letter-spacing:.08em;text-transform:uppercase}
 .banca-volta a{color:inherit;text-decoration:none;display:inline-flex;align-items:center;gap:8px;padding:8px 14px 8px 10px;
@@ -421,7 +421,7 @@ APP = """</head>
 <style>
 /* Capa de jornal de banca (12/11/2026): cabeçalho em letra gótica entre filetes, orelhas nos cantos
    (como o preço e o número da edição nos jornais de antigamente) e os cadernos A a D como abas. */
-:root{--papel:#ECE3D4;--tinta:#3A2D2B;--suave:#5E4E48;--fio:#B9A993;--retícula:rgba(58,45,43,.16)}
+:root{--papel:#ECE3D4;--tinta:#111;--suave:#47413B;--fio:#B9A993;--destaque:#A51D1D;--retícula:rgba(17,17,17,.16)}
 html,body{height:100%;margin:0}
 body{display:flex;flex-direction:column;height:100%;background:var(--papel);color:var(--tinta);overflow:hidden;
   font-family:"Old Standard TT","Newsreader",Georgia,"Times New Roman",serif;
@@ -440,14 +440,15 @@ body{display:flex;flex-direction:column;height:100%;background:var(--papel);colo
 .linha{display:flex;justify-content:space-between;gap:8px;padding:4px 2px;border-bottom:1px solid var(--tinta);
   font:700 10.5px/1.2 "Old Standard TT",Georgia,serif;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;overflow:hidden}
 .linha span{overflow:hidden;text-overflow:ellipsis}
-.linha .meio{flex:none}
+.linha .meio{flex:none;color:var(--destaque)}
 @media (max-width:420px){.linha .lado{display:none}.linha{justify-content:center}}
 .abas{display:flex;flex:none;margin:6px max(12px, env(safe-area-inset-right, 0px)) 0 max(12px, env(safe-area-inset-left, 0px));
   border-top:1px solid var(--tinta);border-bottom:3px double var(--tinta)}
 .abas button{flex:1;min-width:0;min-height:62px;border:0;border-left:1px solid var(--tinta);background:none;color:inherit;cursor:pointer;
   padding:5px 2px 6px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;font:inherit}
 .abas button:first-child{border-left:0}
-.abas i{font:italic 400 10px/1 "Old Standard TT",Georgia,serif;letter-spacing:.12em;text-transform:uppercase;opacity:.8}
+.abas i{font:400 15px/1 "UnifrakturMaguntia","Old English Text MT",serif;color:var(--destaque)}
+.abas button[aria-selected="true"] i{color:inherit}
 .abas b{font:400 clamp(14px,4.1vw,26px)/1.02 "Anton",Impact,"Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.02em}
 .abas small{font:italic 400 12px/1.1 "Old Standard TT",Georgia,serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
 .abas button[aria-selected="true"]{background-color:var(--tinta);color:var(--papel);
@@ -468,7 +469,7 @@ html[data-tema="escuro"] .abas button[aria-selected="true"]{background-image:rad
     <div class="orelha dir banca-volta"><span>Grátis</span><a href="../fontes/" class="banca-fontes">Fontes</a></div>
   </div>
   <div class="fios" aria-hidden="true"></div>
-  <div class="linha"><span class="lado">Cons. Lafaiete, MG</span><span class="meio">__DATA__</span><span class="lado">__CADERNOS__</span></div>
+  <div class="linha"><span class="lado">Minas Gerais</span><span class="meio">__DATA__</span><span class="lado">__CADERNOS__</span></div>
 </header>
 <nav class="abas" role="tablist" aria-label="Cadernos">
 __BOTOES__
@@ -526,7 +527,7 @@ def montar_app():
     abas = [x for x in ABAS if os.path.exists(os.path.join(BANCA, x[1], "edicoes.json"))]
     letras = "ABCDEFGH"
     botoes = "\n".join(
-        f'<button type="button" role="tab" id="aba-{i}" aria-controls="folha-{i}" aria-selected="false"><i>Caderno {letras[k]}</i><b>{H.escape(r)}</b><small>{H.escape(n)}</small></button>'
+        f'<button type="button" role="tab" id="aba-{i}" aria-controls="folha-{i}" aria-selected="false"><i>{letras[k]}</i><b>{H.escape(r)}</b><small>{H.escape(n)}</small></button>'
         for k, (i, _, r, n) in enumerate(abas))
     folhas = "\n".join(
         f'<iframe id="folha-{i}" role="tabpanel" aria-labelledby="aba-{i}" title="{H.escape(n)}" data-src="../{pasta}/?app=1" hidden></iframe>'

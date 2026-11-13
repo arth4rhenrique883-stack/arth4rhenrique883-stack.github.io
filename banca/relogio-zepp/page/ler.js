@@ -1,5 +1,5 @@
 // Um jornal: chapéu, manchete, resumo da capa e as chamadas do dia, numa folha rolável.
-import { Folha, ANTON, GOTICA, ITALICA, SUAVE, LARGURA, ler } from "../comum/papel";
+import { Folha, ANTON, GOTICA, ITALICA, SUAVE, DESTAQUE, LARGURA, ler } from "../comum/papel";
 
 let qual = "";
 
@@ -17,7 +17,7 @@ Page({
       return;
     }
     f.cabeca(j.jornal, "Nº " + j.numero + " ✱ " + j.quando);
-    if (j.chapeu) f.texto(String(j.chapeu).toUpperCase(), { tam: 22, centro: true, cor: SUAVE, depois: 4 });
+    if (j.chapeu) f.texto(String(j.chapeu).toUpperCase(), { tam: 22, centro: true, cor: DESTAQUE, depois: 4 });
     f.texto(j.manchete, { tam: 46, fonte: ANTON, centro: true, depois: 12 });
     f.filete(false, Math.floor(LARGURA / 3));
     f.texto(j.resumo, { tam: 30, fonte: ITALICA, depois: 16 });

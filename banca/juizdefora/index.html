@@ -3,6 +3,16 @@
 <head>
 <!--tema:inicio-->
 <style id="tema-xeque">
+/* Modo claro (13/11/2026, pedido de Arthur): tinta PRETA no texto e vermelho de manchete nos destaques
+   (chapéus, asteriscos, "breaking"), como os jornais de banca impressos em preto e vermelho. */
+html:not([data-tema="escuro"]){
+  --ink:#111;--ink-2:#1E1C1A;--tinta:#111;--tinta-suave:#3F3A35;--tinta2:#3F3A35;--muted:#47413B;--suave:#47413B;
+  --tinta-forte:#000;--destaque:#A51D1D}
+html:not([data-tema="escuro"]) body{color:#111}
+html:not([data-tema="escuro"]) :is(.ast,.chapeu,.kicker,.banner){color:var(--destaque)!important}
+html:not([data-tema="escuro"]) :is(.chapeu,.kicker,.banner){border-color:var(--destaque)}
+html[data-tema="escuro"]{--destaque:#E58A7E}
+html[data-tema="escuro"] :is(.ast,.chapeu,.kicker,.banner){color:var(--destaque)!important}
 /* Modo claro e escuro (10/11/2026). Claro = o papel bege de sempre. Escuro = jornal impresso em negativo:
    papel grafite quente, tinta marfim, filetes claros. Na primeira visita segue o aparelho; depois lembra a escolha.
    Fonte única: banca/ferramentas/tema.html (o montar.py injeta onde faltar). Não apague nas rotinas. */
@@ -62,7 +72,7 @@ html[data-tema="escuro"] .banca-volta .tema-alternador:hover,html[data-tema="esc
   var CHAVE="xeque-tema", R=document.documentElement;
   function guardado(){try{var v=localStorage.getItem(CHAVE);return v==="claro"||v==="escuro"?v:null}catch(e){return null}}
   function sistema(){try{return matchMedia("(prefers-color-scheme: dark)").matches?"escuro":"claro"}catch(e){return "claro"}}
-  function cor(t){var m=document.querySelectorAll('meta[name="theme-color"]');for(var i=0;i<m.length;i++)m[i].setAttribute("content",t==="escuro"?"#0F0E0C":"#3A2D2B")}
+  function cor(t){var m=document.querySelectorAll('meta[name="theme-color"]');for(var i=0;i<m.length;i++)m[i].setAttribute("content",t==="escuro"?"#0F0E0C":"#111111")}
   var LUA='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="currentColor"/></svg>';
   var SOL='<svg viewBox="0 0 24 24" aria-hidden="true"><g stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>';
   function pintar(t){
@@ -71,8 +81,8 @@ html[data-tema="escuro"] .banca-volta .tema-alternador:hover,html[data-tema="esc
     if(b){var e=t==="escuro";b.innerHTML=(e?SOL:LUA)+'<span class="tema-rot">'+(e?"Claro":"Escuro")+"</span>";
       b.setAttribute("aria-label",e?"Mudar para o modo claro":"Mudar para o modo escuro");b.setAttribute("aria-pressed",e?"true":"false");b.title=b.getAttribute("aria-label")}
   }
-  pintar(guardado()||sistema());
-  try{matchMedia("(prefers-color-scheme: dark)").addEventListener("change",function(){if(!guardado())pintar(sistema())})}catch(e){}
+  // 13/11/2026 (pedido de Arthur): o modo claro é o padrão; o escuro só com o botão.
+  pintar(guardado()||"claro");
   function botao(){
     if(document.querySelector(".tema-alternador"))return;
     var b=document.createElement("button");b.type="button";b.className="tema-alternador";
@@ -89,7 +99,7 @@ html[data-tema="escuro"] .banca-volta .tema-alternador:hover,html[data-tema="esc
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="O jornal de Juiz de Fora: Prefeitura e Câmara, saúde, emprego, segurança, cidade e esporte. Toda notícia diz como afeta o trabalhador e cada classe.">
-<meta name="theme-color" content="#3A2D2B">
+<meta name="theme-color" content="#111111">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -427,7 +437,7 @@ html body .rainha-canto svg g{stroke:var(--tinta)}
 
 <style>
 .banca-volta{position:sticky;top:0;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:12px;
-  background:#3A2D2B;color:#ECE3D4;padding:8px max(14px, env(safe-area-inset-right, 0px)) 8px max(14px, env(safe-area-inset-left, 0px));
+  background:var(--tinta);color:#ECE3D4;padding:8px max(14px, env(safe-area-inset-right, 0px)) 8px max(14px, env(safe-area-inset-left, 0px));
   padding-top:max(8px, env(safe-area-inset-top, 0px));font:600 15px/1.2 "Archivo","Archivo Narrow","Helvetica Neue",Arial,sans-serif;
   letter-spacing:.08em;text-transform:uppercase}
 .banca-volta a{color:inherit;text-decoration:none;display:inline-flex;align-items:center;gap:8px;padding:8px 14px 8px 10px;

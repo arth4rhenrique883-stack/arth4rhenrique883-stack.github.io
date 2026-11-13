@@ -3,6 +3,16 @@
 <head>
 <!--tema:inicio-->
 <style id="tema-xeque">
+/* Modo claro (13/11/2026, pedido de Arthur): tinta PRETA no texto e vermelho de manchete nos destaques
+   (chapéus, asteriscos, "breaking"), como os jornais de banca impressos em preto e vermelho. */
+html:not([data-tema="escuro"]){
+  --ink:#111;--ink-2:#1E1C1A;--tinta:#111;--tinta-suave:#3F3A35;--tinta2:#3F3A35;--muted:#47413B;--suave:#47413B;
+  --tinta-forte:#000;--destaque:#A51D1D}
+html:not([data-tema="escuro"]) body{color:#111}
+html:not([data-tema="escuro"]) :is(.ast,.chapeu,.kicker,.banner){color:var(--destaque)!important}
+html:not([data-tema="escuro"]) :is(.chapeu,.kicker,.banner){border-color:var(--destaque)}
+html[data-tema="escuro"]{--destaque:#E58A7E}
+html[data-tema="escuro"] :is(.ast,.chapeu,.kicker,.banner){color:var(--destaque)!important}
 /* Modo claro e escuro (10/11/2026). Claro = o papel bege de sempre. Escuro = jornal impresso em negativo:
    papel grafite quente, tinta marfim, filetes claros. Na primeira visita segue o aparelho; depois lembra a escolha.
    Fonte única: banca/ferramentas/tema.html (o montar.py injeta onde faltar). Não apague nas rotinas. */
@@ -62,7 +72,7 @@ html[data-tema="escuro"] .banca-volta .tema-alternador:hover,html[data-tema="esc
   var CHAVE="xeque-tema", R=document.documentElement;
   function guardado(){try{var v=localStorage.getItem(CHAVE);return v==="claro"||v==="escuro"?v:null}catch(e){return null}}
   function sistema(){try{return matchMedia("(prefers-color-scheme: dark)").matches?"escuro":"claro"}catch(e){return "claro"}}
-  function cor(t){var m=document.querySelectorAll('meta[name="theme-color"]');for(var i=0;i<m.length;i++)m[i].setAttribute("content",t==="escuro"?"#0F0E0C":"#3A2D2B")}
+  function cor(t){var m=document.querySelectorAll('meta[name="theme-color"]');for(var i=0;i<m.length;i++)m[i].setAttribute("content",t==="escuro"?"#0F0E0C":"#111111")}
   var LUA='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="currentColor"/></svg>';
   var SOL='<svg viewBox="0 0 24 24" aria-hidden="true"><g stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>';
   function pintar(t){
@@ -71,8 +81,8 @@ html[data-tema="escuro"] .banca-volta .tema-alternador:hover,html[data-tema="esc
     if(b){var e=t==="escuro";b.innerHTML=(e?SOL:LUA)+'<span class="tema-rot">'+(e?"Claro":"Escuro")+"</span>";
       b.setAttribute("aria-label",e?"Mudar para o modo claro":"Mudar para o modo escuro");b.setAttribute("aria-pressed",e?"true":"false");b.title=b.getAttribute("aria-label")}
   }
-  pintar(guardado()||sistema());
-  try{matchMedia("(prefers-color-scheme: dark)").addEventListener("change",function(){if(!guardado())pintar(sistema())})}catch(e){}
+  // 13/11/2026 (pedido de Arthur): o modo claro é o padrão; o escuro só com o botão.
+  pintar(guardado()||"claro");
   function botao(){
     if(document.querySelector(".tema-alternador"))return;
     var b=document.createElement("button");b.type="button";b.className="tema-alternador";
@@ -89,7 +99,7 @@ html[data-tema="escuro"] .banca-volta .tema-alternador:hover,html[data-tema="esc
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="O mundo, o Brasil, Conselheiro Lafaiete, Juiz de Fora e a medicina num aplicativo só, em cadernos, no desenho de jornal de banca.">
-<meta name="theme-color" content="#3A2D2B">
+<meta name="theme-color" content="#111111">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -106,7 +116,7 @@ html[data-tema="escuro"] .banca-volta .tema-alternador:hover,html[data-tema="esc
 <style>
 /* Capa de jornal de banca (12/11/2026): cabeçalho em letra gótica entre filetes, orelhas nos cantos
    (como o preço e o número da edição nos jornais de antigamente) e os cadernos A a D como abas. */
-:root{--papel:#ECE3D4;--tinta:#3A2D2B;--suave:#5E4E48;--fio:#B9A993;--retícula:rgba(58,45,43,.16)}
+:root{--papel:#ECE3D4;--tinta:#111;--suave:#47413B;--fio:#B9A993;--destaque:#A51D1D;--retícula:rgba(17,17,17,.16)}
 html,body{height:100%;margin:0}
 body{display:flex;flex-direction:column;height:100%;background:var(--papel);color:var(--tinta);overflow:hidden;
   font-family:"Old Standard TT","Newsreader",Georgia,"Times New Roman",serif;
@@ -125,14 +135,15 @@ body{display:flex;flex-direction:column;height:100%;background:var(--papel);colo
 .linha{display:flex;justify-content:space-between;gap:8px;padding:4px 2px;border-bottom:1px solid var(--tinta);
   font:700 10.5px/1.2 "Old Standard TT",Georgia,serif;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;overflow:hidden}
 .linha span{overflow:hidden;text-overflow:ellipsis}
-.linha .meio{flex:none}
+.linha .meio{flex:none;color:var(--destaque)}
 @media (max-width:420px){.linha .lado{display:none}.linha{justify-content:center}}
 .abas{display:flex;flex:none;margin:6px max(12px, env(safe-area-inset-right, 0px)) 0 max(12px, env(safe-area-inset-left, 0px));
   border-top:1px solid var(--tinta);border-bottom:3px double var(--tinta)}
 .abas button{flex:1;min-width:0;min-height:62px;border:0;border-left:1px solid var(--tinta);background:none;color:inherit;cursor:pointer;
   padding:5px 2px 6px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;font:inherit}
 .abas button:first-child{border-left:0}
-.abas i{font:italic 400 10px/1 "Old Standard TT",Georgia,serif;letter-spacing:.12em;text-transform:uppercase;opacity:.8}
+.abas i{font:400 15px/1 "UnifrakturMaguntia","Old English Text MT",serif;color:var(--destaque)}
+.abas button[aria-selected="true"] i{color:inherit}
 .abas b{font:400 clamp(14px,4.1vw,26px)/1.02 "Anton",Impact,"Arial Narrow",sans-serif;text-transform:uppercase;letter-spacing:.02em}
 .abas small{font:italic 400 12px/1.1 "Old Standard TT",Georgia,serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
 .abas button[aria-selected="true"]{background-color:var(--tinta);color:var(--papel);
@@ -153,14 +164,14 @@ html[data-tema="escuro"] .abas button[aria-selected="true"]{background-image:rad
     <div class="orelha dir banca-volta"><span>Grátis</span><a href="../fontes/" class="banca-fontes">Fontes</a></div>
   </div>
   <div class="fios" aria-hidden="true"></div>
-  <div class="linha"><span class="lado">Cons. Lafaiete, MG</span><span class="meio">quinta-feira, 12 de novembro de 2026</span><span class="lado">5 cadernos</span></div>
+  <div class="linha"><span class="lado">Minas Gerais</span><span class="meio">quinta-feira, 12 de novembro de 2026</span><span class="lado">5 cadernos</span></div>
 </header>
 <nav class="abas" role="tablist" aria-label="Cadernos">
-<button type="button" role="tab" id="aba-mundo" aria-controls="folha-mundo" aria-selected="false"><i>Caderno A</i><b>Mundo</b><small>Observatório</small></button>
-<button type="button" role="tab" id="aba-brasil" aria-controls="folha-brasil" aria-selected="false"><i>Caderno B</i><b>Brasil</b><small>Terra Brasilis</small></button>
-<button type="button" role="tab" id="aba-lafaiete" aria-controls="folha-lafaiete" aria-selected="false"><i>Caderno C</i><b>Lafaiete</b><small>O Carijó</small></button>
-<button type="button" role="tab" id="aba-juizdefora" aria-controls="folha-juizdefora" aria-selected="false"><i>Caderno D</i><b>Juiz de Fora</b><small>Manchester Mineira</small></button>
-<button type="button" role="tab" id="aba-medicina" aria-controls="folha-medicina" aria-selected="false"><i>Caderno E</i><b>Medicina</b><small>Xeque-Mate</small></button>
+<button type="button" role="tab" id="aba-mundo" aria-controls="folha-mundo" aria-selected="false"><i>A</i><b>Mundo</b><small>Observatório</small></button>
+<button type="button" role="tab" id="aba-brasil" aria-controls="folha-brasil" aria-selected="false"><i>B</i><b>Brasil</b><small>Terra Brasilis</small></button>
+<button type="button" role="tab" id="aba-lafaiete" aria-controls="folha-lafaiete" aria-selected="false"><i>C</i><b>Lafaiete</b><small>O Carijó</small></button>
+<button type="button" role="tab" id="aba-juizdefora" aria-controls="folha-juizdefora" aria-selected="false"><i>D</i><b>Juiz de Fora</b><small>Manchester Mineira</small></button>
+<button type="button" role="tab" id="aba-medicina" aria-controls="folha-medicina" aria-selected="false"><i>E</i><b>Medicina</b><small>Xeque-Mate</small></button>
 </nav>
 <div class="folhas">
 <iframe id="folha-mundo" role="tabpanel" aria-labelledby="aba-mundo" title="Observatório" data-src="../mundo/?app=1" hidden></iframe>
