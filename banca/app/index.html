@@ -153,23 +153,25 @@ html[data-tema="escuro"] .abas button[aria-selected="true"]{background-image:rad
     <div class="orelha dir banca-volta"><span>Grátis</span><a href="../fontes/" class="banca-fontes">Fontes</a></div>
   </div>
   <div class="fios" aria-hidden="true"></div>
-  <div class="linha"><span class="lado">Cons. Lafaiete, MG</span><span class="meio">quinta-feira, 12 de novembro de 2026</span><span class="lado">4 cadernos</span></div>
+  <div class="linha"><span class="lado">Cons. Lafaiete, MG</span><span class="meio">quinta-feira, 12 de novembro de 2026</span><span class="lado">5 cadernos</span></div>
 </header>
 <nav class="abas" role="tablist" aria-label="Cadernos">
 <button type="button" role="tab" id="aba-mundo" aria-controls="folha-mundo" aria-selected="false"><i>Caderno A</i><b>Mundo</b><small>Observatório</small></button>
 <button type="button" role="tab" id="aba-brasil" aria-controls="folha-brasil" aria-selected="false"><i>Caderno B</i><b>Brasil</b><small>Terra Brasilis</small></button>
 <button type="button" role="tab" id="aba-lafaiete" aria-controls="folha-lafaiete" aria-selected="false"><i>Caderno C</i><b>Lafaiete</b><small>O Carijó</small></button>
-<button type="button" role="tab" id="aba-medicina" aria-controls="folha-medicina" aria-selected="false"><i>Caderno D</i><b>Medicina</b><small>Xeque-Mate</small></button>
+<button type="button" role="tab" id="aba-juizdefora" aria-controls="folha-juizdefora" aria-selected="false"><i>Caderno D</i><b>Juiz de Fora</b><small>Manchester Mineira</small></button>
+<button type="button" role="tab" id="aba-medicina" aria-controls="folha-medicina" aria-selected="false"><i>Caderno E</i><b>Medicina</b><small>Xeque-Mate</small></button>
 </nav>
 <div class="folhas">
 <iframe id="folha-mundo" role="tabpanel" aria-labelledby="aba-mundo" title="Observatório" data-src="../mundo/?app=1" hidden></iframe>
 <iframe id="folha-brasil" role="tabpanel" aria-labelledby="aba-brasil" title="Terra Brasilis" data-src="../brasil/?app=1" hidden></iframe>
 <iframe id="folha-lafaiete" role="tabpanel" aria-labelledby="aba-lafaiete" title="O Carijó" data-src="../lafaiete/?app=1" hidden></iframe>
+<iframe id="folha-juizdefora" role="tabpanel" aria-labelledby="aba-juizdefora" title="Manchester Mineira" data-src="../juizdefora/?app=1" hidden></iframe>
 <iframe id="folha-medicina" role="tabpanel" aria-labelledby="aba-medicina" title="Xeque-Mate" data-src="../xequemate/?app=1" hidden></iframe>
 </div>
 <script>
 (function(){
-  var ids=["mundo", "brasil", "lafaiete", "medicina"], R=document.documentElement;
+  var ids=["mundo", "brasil", "lafaiete", "juizdefora", "medicina"], R=document.documentElement;
   function tema(f){try{var t=R.getAttribute("data-tema");if(t&&f.contentDocument)f.contentDocument.documentElement.setAttribute("data-tema",t)}catch(e){}}
   function abrir(id,guardar){
     if(ids.indexOf(id)<0)id=ids[0];
