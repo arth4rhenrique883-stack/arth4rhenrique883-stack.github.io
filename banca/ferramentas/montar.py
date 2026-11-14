@@ -52,11 +52,6 @@ PUBS = [
     ("lafaiete", "jornal-lafaiete", "O Carijó",
      "O jornal de Conselheiro Lafaiete: Prefeitura e Câmara, saúde, emprego, segurança, cidade e esporte. Toda notícia diz como afeta o trabalhador e cada classe.",
      {"oculto": True}),
-    # Manchester Mineira (12/11/2026, pedido de Arthur): jornal de Juiz de Fora, no molde do O Carijó.
-    # Rotina própria às 7h13 (trig_01QQDRqQnvNW4x62AdViCLXS). Fora da capa; aparece como caderno no app.
-    ("juizdefora", "jornal-juizdefora", "Manchester Mineira",
-     "O jornal de Juiz de Fora: Prefeitura e Câmara, saúde, emprego, segurança, cidade e esporte. Toda notícia diz como afeta o trabalhador e cada classe.",
-     {"oculto": True}),
 ]
 
 # Dossiês de estudo: páginas avulsas (sem edicoes.json), cada uma com seu próprio
@@ -379,7 +374,7 @@ a.outro:hover,a.outro:focus-visible{{background:rgba(255,255,255,.4)}}
   <h3 class="tamb">Fontes e compromisso editorial</h3>
   <a class="outro" href="fontes/"><span><b>Sem partido, com fonte</b> Todos os jornais seguem a mesma linha: nenhum vínculo com partido ou governo, fato separado de opinião, os dois lados, cada notícia com fonte, link e data, e erros corrigidos às claras. Veja as fontes de cada jornal.</span></a>
   <div class="caixa">"Cada página impressa aproximava o mundo"</div>
-  <p class="nota">Para ter o Xeque News como aplicativo no celular: no Android, abra no Chrome, toque nos três pontinhos e em "Instalar app" ou "Adicionar à tela inicial"; no iPhone, abra no Safari, toque em Compartilhar e em "Adicionar à Tela de Início". Depois da primeira visita, os jornais abrem até sem internet. Textos escritos com a ajuda do Claude, IA da Anthropic; não substituem orientação médica.</p>
+  <p class="nota">Para ter o Xeque News como aplicativo no celular: no Android, abra no Chrome, toque nos três pontinhos e em "Instalar app" ou "Adicionar à tela inicial"; no iPhone, abra no Safari, toque em Compartilhar e em "Adicionar à Tela de Início". Depois da primeira visita, os jornais abrem até sem internet. O conteúdo de saúde não substitui orientação médica.</p>
 </div>
 {REGISTRO.replace("{raiz}", "./")}
 </body>
@@ -412,7 +407,6 @@ ABAS = [
     ("mundo", "mundo", "Mundo", "Observatório"),
     ("brasil", "brasil", "Brasil", "Terra Brasilis"),
     ("lafaiete", "lafaiete", "Lafaiete", "O Carijó"),
-    ("juizdefora", "juizdefora", "Juiz de Fora", "Manchester Mineira"),
     ("medicina", "xequemate", "Medicina", "Xeque-Mate"),
 ]
 
@@ -532,7 +526,7 @@ def montar_app():
     folhas = "\n".join(
         f'<iframe id="folha-{i}" role="tabpanel" aria-labelledby="aba-{i}" title="{H.escape(n)}" data-src="../{pasta}/?app=1" hidden></iframe>'
         for i, pasta, _, n in abas)
-    desc = "O mundo, o Brasil, Conselheiro Lafaiete, Juiz de Fora e a medicina num aplicativo só, em cadernos, no desenho de jornal de banca."
+    desc = "O mundo, o Brasil, Conselheiro Lafaiete e a medicina num aplicativo só, em cadernos, no desenho de jornal de banca."
     cab = (CABECA.format(desc=H.escape(desc), tinta=TINTA, raiz="../")
            + "<title>Xeque News</title>\n"
            + '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
@@ -570,7 +564,7 @@ def montar_relogio():
         capa = e.get("capa", {})
         if i == "mundo":
             itens = pares(e.get("chamadas"), "rotulo", 4) + pares(e.get("ticker"), "regiao", 8)
-        elif i in ("brasil", "lafaiete", "juizdefora"):
+        elif i in ("brasil", "lafaiete"):
             itens = pares(e.get("resumo"), "tema", 10)
         else:
             itens = pares(e.get("ticker"), "area", 8) + pares((e.get("brasil") or {}).get("ticker"), "area", 4)

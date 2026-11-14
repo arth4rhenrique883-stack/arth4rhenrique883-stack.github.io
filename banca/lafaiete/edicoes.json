@@ -1,6 +1,499 @@
 {
  "edicoes": [
   {
+   "numero": 4,
+   "data": "2026-11-13",
+   "tempoLeitura": 10,
+   "capa": {
+    "chapeu": "Prefeitura e Câmara",
+    "titulo": "Vereadores pedem mais conversa com a Prefeitura",
+    "linhaFina": "Na sessão de quinta, vereadores de partidos diferentes disseram que falta diálogo com o governo municipal; a Prefeitura não se manifestou na reportagem. Hoje é o último dia do cadastro de creche e da inscrição em cursos gratuitos no Paulo VI. O Sine tem 89 oportunidades, moradores do São Sebastião cobram a obra de drenagem e amanhã tem teste de glicose de graça na Praça do Cristo."
+   },
+   "citacao": "“São Poderes da União, independentes e harmônicos entre si, o Legislativo, o Executivo e o Judiciário.” (Constituição Federal de 1988, artigo 2º)",
+   "recado": "A edição de hoje sai mais tarde que o normal. O assunto principal é a relação entre a Câmara e a Prefeitura: mostramos o que os vereadores disseram e avisamos que a Prefeitura ainda não falou sobre o tema. A partir desta edição, o jornal não escreve nomes de pessoas nem de empresas; usa o cargo ou a instituição, e o nome fica no documento ou na reportagem do link. Correção: na edição de 12/11, uma das perguntas para refletir dizia que doze vereadores e vereadoras perguntavam à Prefeitura; o certo é que eram doze requerimentos, apresentados por oito vereadores (fonte: pauta da 73ª sessão, no SAPL da Câmara).",
+   "resumo": [
+    {
+     "tema": "Câmara",
+     "texto": "Vereadores disseram em plenário que falta diálogo com a Prefeitura. A líder do governo ficou de ver data para uma reunião com secretários."
+    },
+    {
+     "tema": "Educação",
+     "texto": "Cadastro de creche e pré-escola termina hoje. Resultado em 2/12 e matrícula de 9 a 15/12."
+    },
+    {
+     "tema": "Cursos",
+     "texto": "Escola estadual do Paulo VI tem técnico e EJA gratuitos para 2027. Inscrição também acaba hoje."
+    },
+    {
+     "tema": "Emprego",
+     "texto": "Sine com 89 oportunidades na lista desta sexta, 34 sem exigir experiência."
+    },
+    {
+     "tema": "Cidade",
+     "texto": "Moradores do São Sebastião cobram rapidez na obra de drenagem perto da Praça Rui Barbosa."
+    },
+    {
+     "tema": "Saúde",
+     "texto": "Amanhã, das 9h às 16h, teste de glicose e medida de pressão de graça na Praça do Cristo."
+    },
+    {
+     "tema": "Tempo",
+     "texto": "Chuva hoje e nos próximos dias, com máximas entre 22 °C e 27 °C."
+    }
+   ],
+   "numeros": [
+    {
+     "rotulo": "Oportunidades no Sine",
+     "valor": "89",
+     "nota": "34 sem exigir experiência e 1 para pessoa com deficiência",
+     "fonte": "Correio de Minas, 13/11/2026"
+    },
+    {
+     "rotulo": "Mortes em rodovias",
+     "valor": "−40%",
+     "nota": "queda informada pela Polícia Militar Rodoviária no Campo das Vertentes; o período comparado não foi divulgado",
+     "fonte": "Lafaiete Agora, 12/11/2026"
+    },
+    {
+     "rotulo": "Novos requerimentos",
+     "valor": "16",
+     "nota": "pedidos de números 716 a 731, apresentados na sessão de 12/11",
+     "fonte": "Câmara Municipal (SAPL), consulta em 13/11/2026"
+    },
+    {
+     "rotulo": "Máxima de hoje",
+     "valor": "25 °C",
+     "nota": "mínima de 17 °C, com chuva",
+     "fonte": "HG Brasil, 13/11/2026"
+    }
+   ],
+   "cadernos": [
+    {
+     "id": "politica",
+     "titulo": "Prefeitura e Câmara",
+     "abertura": "O que os vereadores disseram, o que a Prefeitura ainda não disse",
+     "itens": [
+      {
+       "titulo": "Vereadores dizem que falta diálogo com a Prefeitura",
+       "selo": "Confirmado",
+       "texto": "Na sessão da Câmara Municipal de quinta (12/11), vereadores de partidos diferentes disseram em plenário que falta conversa entre a Prefeitura e a Câmara. Segundo o Lafaiete Agora, o incômodo vem de vetos do prefeito a projetos de vereadores e de pedidos que ficam sem atendimento; a reportagem não diz quantos vetos nem quais projetos. O que cada um falou: uma vereadora contou ter participado de uma única reunião com o secretariado, afirmou que não há oposição ao governo na Câmara, mas há divergências, e pediu aproximação. Um vereador do mesmo partido do prefeito comparou com a gestão anterior, que, segundo ele, tinha oposição e mesmo assim conversava com a Câmara: “Hoje a gente vê essa falta de aproximação. Essa falta de diálogo e isso é ruim”. Outro relatou dificuldade para marcar uma reunião na Secretaria Municipal de Educação para duas mães de crianças com deficiência. Um quarto disse que o prefeito precisa ouvir mais quem o critica. O encaminhamento: uma vereadora informou que a líder do governo na Câmara ficou de verificar uma data para reunir vereadores e secretários. O outro lado: a reportagem não traz manifestação da Prefeitura, e o jornal não encontrou nota ou resposta oficial até o começo da tarde desta sexta. Só uma fonte publicou o assunto até agora; quando a Prefeitura falar, a resposta sai aqui com o mesmo espaço.",
+       "fontes": [
+        {
+         "nome": "Lafaiete Agora, 12/11/2026",
+         "url": "https://lafaieteagora.com.br/2026/11/12/vereadores-de-lafaiete-cobram-dialogo-com-poder-executivo/"
+        },
+        {
+         "nome": "Câmara Municipal, página oficial (sessões e transmissão), consulta em 13/11/2026",
+         "url": "https://www.conselheirolafaiete.mg.leg.br/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Nada muda de imediato. O efeito tende a aparecer aos poucos: quando Prefeitura e Câmara não conversam, projetos e pedidos sobre creche, asfalto e posto de saúde podem demorar mais a andar.",
+        "baixa": "Quem depende só do serviço público pode sentir mais a demora em respostas sobre exames, creches e iluminação. Se a reunião com os secretários sair, é um caminho para destravar esses pedidos.",
+        "media": "O efeito é indireto. Vale acompanhar se os vetos serão mantidos ou derrubados, porque isso define quais leis aprovadas pela Câmara passam a valer.",
+        "alta": "Efeito pequeno no curto prazo. Para quem investe ou presta serviço na cidade, a relação entre os dois poderes pode influenciar o ritmo de votação de projetos e do orçamento."
+       }
+      },
+      {
+       "titulo": "Os 12 pedidos de quinta ainda não têm resultado publicado",
+       "selo": "Confirmado",
+       "texto": "A edição de ontem mostrou os 12 requerimentos (pedidos oficiais de informação à Prefeitura) que estavam na pauta da 73ª sessão ordinária, sobre creches, exames nos postos, iluminação, asfalto e a reforma das secretarias. Até o começo da tarde desta sexta, o sistema da Câmara (SAPL) mostrava todos com a situação “proposição apresentada em Plenário”, sem registro de votação, e a ata ainda não estava publicada. A mesma pauta registra que outros 16 requerimentos, de números 716 a 731, foram apresentados na sessão e que sete respostas da Prefeitura a pedidos antigos chegaram à Câmara; o conteúdo dessas respostas não aparece na pauta. A próxima sessão ordinária é na terça (17/11), às 19h.",
+       "fontes": [
+        {
+         "nome": "Câmara Municipal (SAPL), pauta da 73ª sessão ordinária, consulta em 13/11/2026",
+         "url": "https://sapl.conselheirolafaiete.mg.leg.br/sessao/pauta-sessao/1256/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Por enquanto são só perguntas registradas. Creche, asfalto e iluminação só mudam se a Prefeitura responder e agir.",
+        "baixa": "Qualquer morador pode abrir o SAPL e conferir se o pedido sobre o seu bairro foi respondido. Não custa nada e não exige cadastro.",
+        "media": "As respostas podem trazer prazos de obras e de serviços. Enquanto não chegam, não há data oficial para o que foi perguntado.",
+        "alta": "Efeito pequeno. As respostas sobre verbas e sobre a reforma das secretarias podem mostrar como o dinheiro público será distribuído."
+       }
+      }
+     ],
+     "caixa": {
+      "titulo": "O que é um veto?",
+      "texto": "Quando a Câmara aprova um projeto de lei, ele vai para o prefeito, que tem duas opções: sancionar (aceitar, e o projeto vira lei) ou vetar (recusar, no todo ou em parte). O veto precisa vir com os motivos por escrito e volta para a Câmara, que vota se mantém ou se derruba. Para derrubar, é preciso o voto da maioria absoluta, ou seja, mais da metade de todos os vereadores, e não só dos presentes. O modelo vem do artigo 66 da Constituição Federal; os prazos de cada cidade ficam na Lei Orgânica do município."
+     }
+    },
+    {
+     "id": "saude",
+     "titulo": "Saúde",
+     "abertura": "Amanhã é o dia do teste de glicose na praça",
+     "aviso": "Estas notícias informam, mas não substituem o médico. Em emergência, ligue 192 (SAMU).",
+     "itens": [
+      {
+       "titulo": "Sábado tem teste gratuito de diabetes na Praça do Cristo",
+       "selo": "Confirmado",
+       "texto": "Amanhã (14/11) é o Dia Mundial do Diabetes, doença em que o açúcar no sangue fica alto o tempo todo. Em Lafaiete, a data é o ponto principal da Semana Municipal de Orientação e Combate ao Diabetes, que vai até quarta (18/11). Das 9h às 16h, a Praça do Cristo recebe a ação gratuita com teste de glicose (uma picada no dedo que mede o açúcar no sangue), medida de pressão e orientações. Não precisa marcar. A programação dos outros dias da semana continua sem divulgação detalhada, segundo o Correio de Minas.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, 12/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/12/diabetes-entra-em-foco-em-lafaiete-com-semana-de-conscientizacao-entre-12-e-18-de-novembro/"
+        },
+        {
+         "nome": "Correio da Cidade, 07/11/2026",
+         "url": "https://www.jornalcorreiodacidade.com.br/noticias/51639-lafaiete-tera-acao-gratuita-de-prevencao-e-orientacao-sobre-diabetes"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Como a ação é no sábado, dá para fazer o teste sem faltar ao serviço. Leva poucos minutos.",
+        "baixa": "É de graça e sem consulta marcada. Se o resultado vier alterado, o caminho é procurar o posto de saúde do bairro para confirmar com exame.",
+        "media": "Pode ser uma ocasião para levar pais e avós. No começo, a doença muitas vezes não dá sinal.",
+        "alta": "O risco não depende de renda. O teste na praça não substitui o acompanhamento com o médico de confiança."
+       }
+      }
+     ]
+    },
+    {
+     "id": "educacao",
+     "titulo": "Educação",
+     "abertura": "Dois prazos acabam hoje",
+     "itens": [
+      {
+       "titulo": "Cadastro de creche acaba hoje; matrícula será de 9 a 15 de dezembro",
+       "selo": "Confirmado",
+       "texto": "Termina nesta sexta (13/11) o cadastro para creches e pré-escolas municipais em 2027. Ele é gratuito e feito só pelo aplicativo Lafaiete Digital: na área de serviços, escolha Educação e depois o cadastramento escolar, e informe o CPF da criança e um e-mail que funcione. Cada criança entra em uma escola só; se houver dois cadastros para o mesmo CPF, vale o último. A novidade de hoje são as datas seguintes: o resultado sai na quarta, 2 de dezembro, e a matrícula vai de 9 a 15 de dezembro, na unidade indicada. A Secretaria Municipal de Educação avisa que o cadastro não garante vaga automática; ele serve para medir a procura. A reportagem não informa o número de vagas nem o tamanho da fila.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, 13/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/13/cadastro-para-creches-de-lafaiete-termina-sexta-feira-familias-devem-usar-aplicativo-municipal/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Quem precisa da creche para trabalhar em 2027 e ainda não fez o cadastro tem até hoje. Sem ele, a criança pode ficar fora da lista de dezembro.",
+        "baixa": "Para quem não tem como pagar escola particular ou cuidadora, este é o único caminho para a vaga pública. Quem não tem celular com internet pode pedir ajuda a um parente ou vizinho para usar o aplicativo.",
+        "media": "Mesmo quem ainda está em dúvida entre a rede pública e a particular pode fazer o cadastro, já que ele não obriga a matricular.",
+        "alta": "Efeito pequeno para quem usa a rede particular. O número de cadastros tende a orientar onde o município abre turmas."
+       }
+      },
+      {
+       "titulo": "Escola estadual do Paulo VI oferece curso técnico e EJA gratuitos",
+       "selo": "Confirmado",
+       "texto": "A Escola Estadual Monsenhor Antônio José Ferreira, no bairro Paulo VI, tem três opções gratuitas para 2027: ensino médio em tempo integral com formação profissional em Recursos Humanos; curso técnico em Segurança do Trabalho; e EJA (Educação de Jovens e Adultos, para quem não terminou os estudos na idade certa) junto com formação em Administração. O técnico e a EJA duram cerca de um ano e meio. Para a EJA do ensino médio é preciso ter pelo menos 18 anos. A inscrição termina hoje (13/11), pelo site do cadastro escolar do Estado (cadastroescolar.educacao.mg.gov.br). O resultado está previsto para 15 de dezembro. A escola fica na Rua João Martins Pereira, 80, telefone (31) 3761-1373. O número de vagas não foi informado.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, 12/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/12/cursos-gratuitos-em-lafaiete-oferecem-formacao-tecnica-e-oportunidade-de-voltar-a-estudar/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Técnico em segurança do trabalho é uma das funções pedidas na lista do Sine desta semana. O curso pode abrir caminho para vagas em obras e na mineração da região.",
+        "baixa": "A EJA permite terminar o ensino médio e sair com uma formação em Administração, sem mensalidade. O prazo é curto: acaba hoje.",
+        "media": "Para o jovem que vai entrar no ensino médio, o tempo integral com Recursos Humanos junta diploma e formação profissional na mesma escola.",
+        "alta": "Efeito indireto. Mais gente formada em segurança do trabalho e administração tende a facilitar a contratação por empresas da cidade."
+       }
+      }
+     ]
+    },
+    {
+     "id": "emprego",
+     "titulo": "Emprego e economia",
+     "abertura": "Obras, comércio e oficinas na lista do Sine",
+     "itens": [
+      {
+       "titulo": "Sine tem 89 oportunidades, 34 sem exigir experiência",
+       "selo": "Confirmado",
+       "texto": "A lista do Sine (o posto público de emprego) de Lafaiete desta sexta (13/11) traz 89 oportunidades: 34 sem experiência, 54 com experiência e 1 só para pessoa com deficiência (separador de resíduos, com ensino fundamental completo). Sem experiência há, entre outras, ajudante e servente de obras, atendente de loja, operador de caixa, vendedor interno, auxiliar de estoque, auxiliar de limpeza, fiscal de loja, empregada doméstica, tratorista e auxiliar de mecânico. Com experiência, pedreiro, carpinteiro, armador, soldador, mecânico, motorista de ônibus e de caminhão, operador de empilhadeira, técnico de segurança do trabalho, técnico de meio ambiente e médico do trabalho. Parte das vagas é para a duplicação da BR-040, de segunda a sexta, das 7h às 17h, e há vaga na obra do Hospital Regional. A lista não informa quantas pessoas cada função contrata. O Sine fica na Rua Marechal Floriano, 135 A, Centro, e as vagas valem enquanto houver encaminhamento.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, 13/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/13/pode-ser-a-chance-que-faltava-sine-lafaiete-anuncia-oportunidades-para-quem-sonha-com-novo-emprego/"
+        },
+        {
+         "nome": "Lafaiete Agora, 12/11/2026",
+         "url": "https://lafaieteagora.com.br/2026/11/12/procurando-emprego-veja-as-oportunidades-do-sine-lafaiete-desta-quinta-12-11/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "O número ficou quase igual ao de quarta (88). Quem tem ofício de obra ou de oficina continua com mais opções; vale ir cedo, porque o encaminhamento tem limite.",
+        "baixa": "As 34 oportunidades sem experiência são a porta de entrada para quem busca o primeiro emprego ou quer voltar ao mercado. Leve documento com foto, CPF e carteira de trabalho (pode ser a digital).",
+        "media": "Há vagas técnicas e de nível superior, como técnico de meio ambiente e médico do trabalho, mas em número pequeno.",
+        "alta": "Para quem emprega, a lista mostra que obras e comércio disputam a mesma mão de obra, o que pode dificultar contratações no fim do ano."
+       }
+      }
+     ]
+    },
+    {
+     "id": "seguranca",
+     "titulo": "Segurança",
+     "abertura": "Duas prisões por tráfico e um balanço das rodovias",
+     "itens": [
+      {
+       "titulo": "Polícia Militar faz duas prisões por tráfico na quarta-feira",
+       "selo": "Confirmado",
+       "texto": "A Polícia Militar registrou duas prisões por tráfico de drogas em Lafaiete na quarta (11/11), segundo o Correio de Minas. À tarde, na Vila Resende, depois da denúncia de um morador, um jovem de 18 anos foi preso perto de uma creche municipal, no horário de saída das crianças; a PM informou ter apreendido 22 pedras de crack, três porções de maconha, R$ 125 e um celular. À noite, no bairro Santa Cruz, um homem de 28 anos foi preso com 54 pedras de crack embaladas, dinheiro e dois celulares. Os dois foram levados à Polícia Civil. As informações são da PM; as reportagens não trazem a versão das defesas, e a prisão em flagrante não é condenação.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, 12/11/2026 (Vila Resende)",
+         "url": "https://correiodeminas.com.br/2026/11/12/pm-prende-jovem-de-18-anos-com-crack-e-maconha-perto-de-creche-em-conselheiro-lafaiete/"
+        },
+        {
+         "nome": "Correio de Minas, 12/11/2026 (Santa Cruz)",
+         "url": "https://correiodeminas.com.br/2026/11/12/pm-apreende-54-pedras-de-crack-e-prende-homem-de-28-anos-durante-operacao-em-lafaiete/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "O efeito no dia a dia é pequeno. Uma das prisões começou com a denúncia de um morador; o 181 (Disque Denúncia) recebe informações sem pedir o nome.",
+        "baixa": "Para famílias que usam a creche da Vila Resende, a ocorrência foi na rua, não dentro da unidade. Não há registro de criança envolvida.",
+        "media": "Efeito indireto, ligado à sensação de segurança no bairro.",
+        "alta": "Efeito pequeno."
+       }
+      },
+      {
+       "titulo": "Polícia Rodoviária informa queda de 40% nas mortes em rodovias da região",
+       "selo": "Confirmado",
+       "texto": "A Polícia Militar Rodoviária, pelo 3º Pelotão, informou que as mortes nas rodovias estaduais e federais delegadas sob sua responsabilidade no Campo das Vertentes caíram 40%, que os acidentes com vítimas diminuíram 6,86% e que outubro de 2026 terminou sem nenhuma morte no trânsito nessa área. A corporação atribui o resultado ao uso de radares móveis e drones e à fiscalização de excesso de velocidade e de ultrapassagens proibidas. Dois avisos ao leitor: a nota não diz com qual período os números foram comparados, e não lista as rodovias nem as cidades, de modo que não dá para afirmar que os trechos de Lafaiete estão incluídos. São dados da própria polícia, sem conferência independente.",
+       "fontes": [
+        {
+         "nome": "Lafaiete Agora, 12/11/2026",
+         "url": "https://lafaieteagora.com.br/2026/11/12/tecnologia-e-prevencao-policiamento-rodoviario-reduz-em-40-os-obitos-nas-rodovias-do-campo-das-vertentes/"
+        },
+        {
+         "nome": "Correio de Minas, 12/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/12/radares-e-drones-nas-rodovias-mortes-caem-40-e-outubro-termina-sem-obitos-na-regiao/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Quem viaja todo dia para trabalhar em cidades vizinhas pode encontrar mais radar móvel nas estradas estaduais. Respeitar o limite evita multa e acidente.",
+        "baixa": "Efeito indireto, para quem usa ônibus intermunicipal ou carona nas estradas da região.",
+        "media": "Quem dirige nos fins de semana e feriados tende a ver mais fiscalização, inclusive com drone em pontos de ultrapassagem proibida.",
+        "alta": "Efeito pequeno. Para transportadoras, mais fiscalização pode significar mais multas para frotas que excedem a velocidade."
+       }
+      }
+     ]
+    },
+    {
+     "id": "cidade",
+     "titulo": "Cidade, chuva e trânsito",
+     "abertura": "Obra parada na conversa dos moradores e BR-040 com acidente",
+     "itens": [
+      {
+       "titulo": "Moradores do São Sebastião cobram rapidez na obra de drenagem",
+       "selo": "Confirmado",
+       "texto": "Moradores da Rua Valério Eugênio, no bairro São Sebastião, cobram mais rapidez na obra da nova rede de drenagem pluvial (os canos que levam a água da chuva) na região da Praça Rui Barbosa. Ao Lafaiete Agora, eles reclamaram da terra acumulada e da poeira. Um morador disse que está sem acesso à própria garagem desde agosto e que, em alguns dias, não viu trabalhadores no local. A preocupação cresce com a chuva: no sábado (7/11), a área da obra alagou. O outro lado: a reportagem não traz manifestação da Prefeitura nem informa valor, prazo ou empresa responsável, e o jornal não encontrou esses dados em publicação oficial até o começo da tarde desta sexta.",
+       "fontes": [
+        {
+         "nome": "Lafaiete Agora, 12/11/2026",
+         "url": "https://lafaieteagora.com.br/2026/11/12/moradores-cobram-celeridade-em-obra-de-drenagem-em-lafaiete/"
+        },
+        {
+         "nome": "HG Brasil, previsão atualizada em 13/11/2026",
+         "url": "https://hgbrasil.com/weather/places/brazil/mg/conselheiro-lafaiete"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Quem passa a pé, de moto ou de bicicleta pela região da praça pode encontrar lama e desvio nos dias de chuva, que vão até a semana que vem.",
+        "baixa": "Moradores do entorno podem conviver com terra e alagamento enquanto a rede não fica pronta. Reclamações podem ser registradas na ouvidoria da Prefeitura.",
+        "media": "Para quem tem garagem ou comércio na rua, o acesso pode seguir limitado. Sem prazo oficial divulgado, não há como planejar a data de volta ao normal.",
+        "alta": "Efeito pequeno e localizado. Depois de pronta, uma rede de drenagem tende a reduzir alagamentos na área."
+       }
+      },
+      {
+       "titulo": "Colisão fechou a BR-040 em Itabirito; sábado tem bloqueio em Congonhas",
+       "selo": "Confirmado",
+       "texto": "Uma batida de frente entre uma carreta e uma caminhonete fechou os dois sentidos da BR-040 na tarde de quinta (12/11), no km 585, em Itabirito, no trecho conhecido como Reta da Loira, caminho de quem vai de Lafaiete a Belo Horizonte. Equipes da concessionária da rodovia atenderam a ocorrência. A reportagem, publicada às 14h53, não informa o estado de saúde dos envolvidos nem a hora da liberação da pista. Para o fim de semana, continua valendo o aviso já publicado: no sábado (14/11), a rodovia fecha das 15h às 16h em Congonhas, para o desmonte controlado de rocha da obra de duplicação. Com chuva prevista para todos os dias, a pista tende a ficar escorregadia.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, 12/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/12/br-040-parada-colisao-frontal-entre-carreta-e-caminhonete-fecha-rodovia-nos-2-sentidos/"
+        },
+        {
+         "nome": "Correio de Minas, 09/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/09/epr-via-mineira-programa-desmonte-controlado-de-rocha-em-congonhas-para-avanco-das-obras-de-duplicacao-da-br-040/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Quem trabalha em Congonhas ou viaja a Belo Horizonte no sábado deve evitar o trecho entre 15h e 16h ou sair mais cedo.",
+        "baixa": "Passageiros de ônibus intermunicipal podem enfrentar atraso no sábado à tarde.",
+        "media": "Quem pega a estrada no fim de semana deve contar com chuva, pista molhada e uma hora de bloqueio em Congonhas.",
+        "alta": "Transportadoras e empresas com entregas podem ajustar a rota e o horário de sábado para não ficar com carga parada."
+       }
+      }
+     ]
+    },
+    {
+     "id": "esporte",
+     "titulo": "Esporte, cultura e fé",
+     "abertura": "Rock hoje à noite e dois feriados à vista",
+     "itens": [
+      {
+       "titulo": "Banda da cidade grava DVD de 15 anos nesta sexta",
+       "selo": "Confirmado",
+       "texto": "Uma banda de rock de Lafaiete grava hoje (13/11), a partir das 19h, o DVD que comemora seus 15 anos, em um clube na Rua Floriano Lopes Franco, 10, no bairro Carijós, com duas cantoras convidadas. Às 22h, o grupo faz um segundo show, de clássicos do rock, em uma casa noturna da cidade. A reportagem não informa o preço dos ingressos e orienta a consultar os organizadores. No calendário: domingo (15/11) é o feriado da Proclamação da República, que neste ano não rende folga extra, e sexta (20/11) é o feriado nacional da Consciência Negra.",
+       "fontes": [
+        {
+         "nome": "Correio de Minas, 12/11/2026",
+         "url": "https://correiodeminas.com.br/2026/11/12/quinze-anos-de-rock-ganham-registro-especial-nesta-sexta-feira-em-lafaiete/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "É uma opção de lazer para depois do expediente. Como o preço não foi divulgado, convém confirmar antes de sair de casa.",
+        "baixa": "Sem o valor do ingresso, não dá para dizer se cabe no orçamento. O feriado do dia 20 é folga para quem trabalha com carteira assinada, salvo escalas.",
+        "media": "Gravações ao vivo costumam movimentar bares e restaurantes do entorno.",
+        "alta": "Efeito pequeno. Para o comércio, o feriado de sexta (20/11) pode pedir ajuste de escala e de horário."
+       }
+      }
+     ]
+    }
+   ],
+   "tempo": {
+    "texto": "Sexta de chuva, com máxima de 25 °C e mínima de 17 °C; a previsão indica cerca de 13 mm ao longo do dia. No sábado, pancadas esparsas e os mesmos 25 °C. O domingo de feriado é o dia mais quente, com 27 °C, e ainda com chuva. Segunda e terça ficam mais frescas, com máxima de 22 °C, e a terça promete a chuva mais forte da semana.",
+    "dias": [
+     {
+      "dia": "Sex 13",
+      "min": 17,
+      "max": 25,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Sáb 14",
+      "min": 16,
+      "max": 25,
+      "ceu": "Pancadas"
+     },
+     {
+      "dia": "Dom 15",
+      "min": 16,
+      "max": 27,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Seg 16",
+      "min": 16,
+      "max": 22,
+      "ceu": "Pancadas"
+     },
+     {
+      "dia": "Ter 17",
+      "min": 17,
+      "max": 22,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Qua 18",
+      "min": 16,
+      "max": 24,
+      "ceu": "Pancadas"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "HG Brasil, previsão atualizada em 13/11/2026",
+      "url": "https://hgbrasil.com/weather/places/brazil/mg/conselheiro-lafaiete"
+     }
+    ]
+   },
+   "historia": {
+    "titulo": "1842: quando Queluz entrou em uma revolta contra o governo",
+    "texto": "Vereadores pedindo para ser ouvidos pelo governo é assunto antigo por aqui. Em 1842, quando o Brasil era um Império, políticos do Partido Liberal de São Paulo e de Minas pegaram em armas contra o governo central, comandado pelos conservadores, depois que a Câmara dos Deputados eleita foi dissolvida antes mesmo de tomar posse. Em Minas, a revolta começou em Barbacena, em 10 de junho. A Vila de Queluz, que hoje é Conselheiro Lafaiete, ficava no caminho: em 4 de julho, segundo o registro consultado, as tropas do governo foram derrotadas aqui pelos revoltosos. A vitória durou pouco. Em 20 de agosto, as forças imperiais venceram em Santa Luzia e a revolta acabou na província. Dois anos depois, em 1844, o Imperador concedeu anistia (perdão oficial) aos envolvidos, e muitos voltaram à vida política. Leitura do jornal: o episódio lembra que a disputa entre quem governa e quem representa já foi resolvida à bala, e que hoje ela passa por plenário, veto, requerimento e reunião. A data do combate em Queluz varia entre os livros; usamos a do verbete citado abaixo.",
+    "linha": [
+     {
+      "ano": "1790",
+      "fato": "Em 19 de setembro, o arraial é elevado a Vila Real de Queluz"
+     },
+     {
+      "ano": "1842",
+      "fato": "Em 10 de junho, a revolta liberal começa em Barbacena"
+     },
+     {
+      "ano": "1842",
+      "fato": "Em 4 de julho, revoltosos vencem as tropas do governo em Queluz"
+     },
+     {
+      "ano": "1842",
+      "fato": "Em 20 de agosto, as forças imperiais vencem em Santa Luzia e a revolta termina em Minas"
+     },
+     {
+      "ano": "1844",
+      "fato": "O Imperador concede anistia aos envolvidos"
+     },
+     {
+      "ano": "1866",
+      "fato": "Queluz é elevada à categoria de cidade pela Lei Provincial nº 1.276"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "Wikipédia, verbete Revoltas liberais de 1842, consulta em 13/11/2026",
+      "url": "https://pt.wikipedia.org/wiki/Revoltas_liberais_de_1842"
+     },
+     {
+      "nome": "Wikipédia, verbete da cidade, consulta em 13/11/2026",
+      "url": "https://pt.wikipedia.org/wiki/Conselheiro_Lafaiete"
+     }
+    ]
+   },
+   "palavrinhas": [
+    {
+     "termo": "Veto",
+     "def": "Recusa do prefeito a um projeto aprovado pela Câmara, no todo ou em parte. A Câmara pode manter ou derrubar."
+    },
+    {
+     "termo": "Maioria absoluta",
+     "def": "Mais da metade de todos os vereadores da Câmara, e não só dos que estão presentes na sessão."
+    },
+    {
+     "termo": "Líder do governo",
+     "def": "Vereador ou vereadora que fala em nome do prefeito na Câmara e leva os recados de um lado para o outro."
+    },
+    {
+     "termo": "Drenagem pluvial",
+     "def": "Rede de bocas de lobo e canos que leva a água da chuva para longe das ruas."
+    },
+    {
+     "termo": "EJA",
+     "def": "Educação de Jovens e Adultos: ensino para quem não concluiu os estudos na idade certa."
+    },
+    {
+     "termo": "Anistia",
+     "def": "Perdão oficial dado pelo governo a quem participou de um crime político, como uma revolta."
+    }
+   ],
+   "agenda": [
+    {
+     "quando": "Hoje, 13/11",
+     "oque": "Último dia do cadastro de creche (app Lafaiete Digital) e da inscrição nos cursos da escola estadual do Paulo VI; gravação de DVD de rock às 19h, no Carijós"
+    },
+    {
+     "quando": "Sáb, 14/11",
+     "oque": "Dia Mundial do Diabetes: testes gratuitos na Praça do Cristo, das 9h às 16h; BR-040 fechada das 15h às 16h em Congonhas"
+    },
+    {
+     "quando": "Dom, 15/11",
+     "oque": "Feriado da Proclamação da República"
+    },
+    {
+     "quando": "Ter, 17/11",
+     "oque": "Sessão da Câmara às 19h"
+    },
+    {
+     "quando": "Qua, 18/11",
+     "oque": "Fim da Semana Municipal do Diabetes"
+    },
+    {
+     "quando": "Sex, 20/11",
+     "oque": "Feriado nacional da Consciência Negra"
+    },
+    {
+     "quando": "Qua, 02/12",
+     "oque": "Resultado do cadastro de creche e pré-escola"
+    },
+    {
+     "quando": "09 a 15/12",
+     "oque": "Matrícula nas creches e pré-escolas municipais; em 15/12 sai o resultado dos cursos da escola estadual"
+    }
+   ],
+   "conversa": [
+    "Vereadores disseram que falta diálogo com a Prefeitura, e a Prefeitura ainda não respondeu. Em uma cidade, conversar com a Câmara é uma gentileza de quem governa ou parte do dever de governar? E o que cabe aos vereadores fazer para que a conversa aconteça?",
+    "O prefeito pode vetar um projeto, e a Câmara pode derrubar o veto. Por que a lei dá a cada poder uma forma de frear o outro? O que se ganha e o que se perde quando esse freio é muito usado?",
+    "Uma obra de drenagem atrapalha hoje para evitar alagamento amanhã. Quanto incômodo é razoável pedir a quem mora ao lado de uma obra pública, e que informação (prazo, custo, responsável) o morador tem o direito de receber enquanto espera?",
+    "O cadastro de creche mede a procura, mas não garante vaga. Quando há mais crianças do que lugares, que critério parece mais justo para decidir quem entra primeiro: a renda da família, o trabalho dos pais, a ordem de inscrição ou a distância de casa?"
+   ],
+   "fechamento": "Amanhã a gente volta. Se tem criança para a creche, o cadastro fecha hoje; e no sábado, passe na Praça do Cristo para medir a glicose."
+  },
+  {
    "numero": 3,
    "data": "2026-11-12",
    "tempoLeitura": 11,

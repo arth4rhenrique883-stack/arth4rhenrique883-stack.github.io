@@ -1,6 +1,515 @@
 {
- "atualizadoEm": "2026-11-10T08:05:00-03:00",
+ "atualizadoEm": "2026-11-13T18:40:00-03:00",
  "edicoes": [
+  {
+   "id": "2026-11-13",
+   "numero": 2,
+   "data": "2026-11-13",
+   "tempoLeitura": 12,
+   "fechamento": "Edição de sexta-feira, 13/11, fechada no fim da tarde de 13/11 (horário de Brasília).",
+   "recado": "Boa tarde! Hoje a notícia principal é do trabalho: um ministro do Supremo manteve para 16 de dezembro o começo da jornada menor e das duas folgas por semana, e o tribunal confirma ou não a decisão até segunda. Também tem a inflação de outubro, que veio baixa, o Senado aprovando o pacote de contas do governo e, na saúde, um remédio novo para o coração no SUS e o avanço da vacina contra o cobreiro.",
+   "citacao": "Duas folgas por semana a partir de 16 de dezembro",
+   "capa": {
+    "chapeu": "Trabalho e bolso",
+    "titulo": "Supremo mantém a jornada menor para dezembro",
+    "linhaFina": "Na quinta (12/11), o ministro Flávio Dino negou o pedido de empresários para adiar a mudança. A partir de 16/12, quem tem carteira assinada passa a trabalhar no máximo 42 horas por semana, com duas folgas, sem perder salário. O plenário do STF vota se confirma a decisão de sexta (13/11) a segunda (16/11).",
+    "selo": "Confirmado"
+   },
+   "resumo": [
+    {
+     "tema": "Brasil",
+     "texto": "O ministro Flávio Dino, do STF, manteve para 16/12 o início da jornada de 42 horas e das duas folgas semanais. O plenário decide até 16/11 se confirma."
+    },
+    {
+     "tema": "Brasil",
+     "texto": "A inflação de outubro foi de 0,14%, bem menor que a de setembro (0,82%). Em 12 meses, os preços subiram 4,63%."
+    },
+    {
+     "tema": "Brasil",
+     "texto": "O Senado aprovou por 45 a 31 o texto principal do pacote do governo para equilibrar as contas. Ainda faltam votações na terça (17/11) e na Câmara."
+    },
+    {
+     "tema": "Saúde",
+     "texto": "O SUS vai oferecer a eplerenona, remédio para insuficiência cardíaca, a quem não se dá bem com a espironolactona. O prazo é de até 180 dias."
+    },
+    {
+     "tema": "Saúde",
+     "texto": "Uma comissão do Senado aprovou o projeto que põe no SUS a vacina contra o herpes-zóster, o “cobreiro”, para quem tem 60 anos ou mais. Agora vai à Câmara."
+    },
+    {
+     "tema": "Saúde",
+     "texto": "A Fiocruz viu alta de casos graves de covid em seis estados, Minas entre eles. Idosos devem tomar reforço a cada seis meses."
+    },
+    {
+     "tema": "Mundo",
+     "texto": "A agência americana NOAA diz que o El Niño virou “super” e tem 60% de chance de ser o mais forte já medido."
+    }
+   ],
+   "numeros": [
+    {
+     "rotulo": "Horas por semana",
+     "valor": "42",
+     "nota": "novo limite para quem tem carteira assinada, a partir de 16/12; cai para 40 em dezembro de 2027",
+     "fonte": "Tribuna do Sertão, 12/11/2026"
+    },
+    {
+     "rotulo": "Inflação de outubro",
+     "valor": "0,14%",
+     "nota": "em setembro tinha sido 0,82%; o mercado esperava cerca de 0,25%",
+     "fonte": "O Povo/Estadão, 12/11/2026"
+    },
+    {
+     "rotulo": "Inflação em 12 meses",
+     "valor": "4,63%",
+     "nota": "quanto os preços subiram, em média, de novembro de 2025 a outubro de 2026",
+     "fonte": "O Povo/Estadão, 12/11/2026"
+    },
+    {
+     "rotulo": "Placar no Senado",
+     "valor": "45 a 31",
+     "nota": "votos a favor e contra o texto principal do ajuste fiscal",
+     "fonte": "Agência Senado, 12/11/2026"
+    },
+    {
+     "rotulo": "Prazo do SUS",
+     "valor": "180 dias",
+     "nota": "tempo máximo para a eplerenona chegar à rede pública",
+     "fonte": "JD1 Notícias, 12/11/2026"
+    },
+    {
+     "rotulo": "Chance de El Niño recorde",
+     "valor": "60%",
+     "nota": "de superar todos os El Niños medidos desde 1950",
+     "fonte": "NOAA, via WUFT, 12/11/2026"
+    }
+   ],
+   "politica": {
+    "abertura": "O que acontece em Brasília e como isso chega na vida da gente.",
+    "itens": [
+     {
+      "titulo": "Jornada menor começa mesmo em 16 de dezembro",
+      "texto": "A mudança na Constituição que acaba com a escala 6x1 (seis dias de trabalho para um de folga) foi questionada no Supremo pela CNC, que representa o comércio, e pela CNI, da indústria. Elas pediam mais prazo para as empresas se adaptarem. Na quinta (12/11), o ministro Flávio Dino negou o adiamento. Fica assim: a partir de 16/12, no máximo 42 horas por semana e duas folgas remuneradas. Onde não houver acordo com o sindicato, a empresa pode distribuir as horas em cinco dias de até 8h24, sem hora extra pelos 24 minutos a mais. Empresas e sindicatos terão 90 dias para renegociar os acordos. O plenário do STF vota de sexta (13/11) a segunda (16/11) se mantém a decisão.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "Tribuna do Sertão, decisão de Dino e transição, 12/11/2026",
+        "url": "https://www.tribunadosertao.com.br/financas/2026/11/12/1020533-fim-da-escala-6x1-stf-analisa-a-partir-de-sexta-feira-decisao-de-dino"
+       },
+       {
+        "nome": "Brasil 247, plenário do STF julga a decisão, 12/11/2026",
+        "url": "https://www.brasil247.com/brasil/plenario-do-stf-abre-nesta-sexta-feira-o-julgamento-da-decisao-de-dino-sobre-o-fim-da-escala-6x1/"
+       }
+      ]
+     },
+     {
+      "titulo": "E o decreto do governo?",
+      "texto": "O governo prepara um decreto com os detalhes da nova escala. Segundo o ministro do Trabalho, Luiz Marinho, ele deve prever pelo menos oito folgas a cada 30 dias e regras para quem trabalha em setores que não param, como saúde, transporte, segurança e limpeza urbana. Marinho disse que o objetivo é “proteger os trabalhadores” na transição “sem prejudicar a atividade econômica”. O decreto era esperado para 9/11, mas foi adiado porque o presidente ainda não tinha aprovado o texto. Até o fechamento desta edição, não havia nova data oficial.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "Agência Brasil, o que o decreto deve trazer, 4/11/2026",
+        "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/governo-preve-decreto-do-fim-da-escala-6x1-para-segunda-feira"
+       },
+       {
+        "nome": "CNN Brasil, governo adia o decreto, nov. 2026",
+        "url": "https://www.cnnbrasil.com.br/politica/governo-lula-adia-publicacao-de-decreto-que-regulamenta-fim-da-escala-6x1/"
+       }
+      ]
+     },
+     {
+      "titulo": "Senado aprova o pacote para equilibrar as contas",
+      "texto": "Na quinta (12/11), o Senado aprovou por 45 votos a 31 o texto principal do projeto de ajuste fiscal do governo. Ele corta parte das isenções de impostos que algumas empresas têm, limita o crescimento dos gastos a 2% acima da inflação nos anos de aperto e reduz, de 2027 a 2030, um repasse da União a estados e cidades (a Lei Kandir), pagando a diferença até 2037. Compra de carro por pessoa com deficiência ou autismo continua com desconto. O relator, Eduardo Braga (MDB-AM), disse: “Queremos um país que possa crescer com a redução de desigualdades”. O líder da oposição, Rogério Marinho (PL-RN), disse que o texto aumenta impostos sem ser um “ajuste efetivo” e que a votação não podia ser “de afogadilho”. Faltam quatro votações na terça (17/11); depois, o texto vai à Câmara.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "Agência Senado, texto principal aprovado, 12/11/2026",
+        "url": "https://www12.senado.leg.br/noticias/materias/2026/11/12/texto-principal-do-ajuste-fiscal-e-aprovado-pelo-senado"
+       },
+       {
+        "nome": "Diario de Pernambuco, críticas da oposição, 12/11/2026",
+        "url": "https://www.diariodepernambuco.com.br/economia/2026/11/11729020-oposicao-no-senado-critica-pacote-fiscal-e-cobra-cortes-maiores-nas-contas-publicas.html"
+       }
+      ]
+     },
+     {
+      "titulo": "Dinheiro garantido para aposentadorias e Bolsa Família",
+      "texto": "Também na quinta (12/11), deputados e senadores, reunidos juntos, aprovaram 26 projetos que remanejam cerca de R$ 152 bilhões do Orçamento de 2026. O maior deles libera cerca de R$ 120 bilhões para aposentadorias e pensões do INSS, R$ 26 bilhões para o Bolsa Família e R$ 4,4 bilhões para o BPC. Teve apoio quase total: 402 a 12 na Câmara. O governo diz que o dinheiro já estava previsto e só precisava da autorização do Congresso. Outro projeto, de R$ 290 milhões para a usina nuclear Angra 3, dividiu mais: 261 a 155 na Câmara. Os textos vão à sanção do presidente.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "NC News, Congresso aprova remanejamento, 12/11/2026",
+        "url": "https://ncnews.com.br/2026/11/12/congresso-aprova/"
+       },
+       {
+        "nome": "Agência Câmara, sessão do Congresso, 12/11/2026",
+        "url": "https://www.camara.leg.br/noticias/1318646-comeca-sessao-do-congresso-nacional-para-votacao-de-creditos-ao-orcamento-2026"
+       }
+      ]
+     },
+     {
+      "titulo": "Inflação de outubro veio baixa",
+      "texto": "O IPCA, a inflação oficial medida pelo IBGE, subiu só 0,14% em outubro, depois de 0,82% em setembro. Ficou abaixo do que o mercado esperava (cerca de 0,25%). No ano, a alta é de 4,1%; em 12 meses, de 4,63%. Na prática, os preços continuam subindo, mas mais devagar. Esse número é um dos que o Banco Central olha para decidir se baixa os juros, hoje em 13,75% ao ano. A próxima reunião é em dezembro.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "O Povo/Estadão Conteúdo, IPCA de outubro, 12/11/2026",
+        "url": "https://www.opovo.com.br/noticias/economia/2026/11/12/ipca-de-outubro-sobe-014-ante-alta-de-082-em-setembro-revela-ibge.html"
+       },
+       {
+        "nome": "Jornal de Brasília, IPCA de outubro, 12/11/2026",
+        "url": "https://jornaldebrasilia.com.br/noticias/economia/ipca-de-outubro-sobe-014-ante-alta-de-082-em-setembro-revela-ibge/"
+       }
+      ]
+     }
+    ],
+    "explica": {
+     "titulo": "Entenda: o que é “ajuste fiscal”",
+     "texto": "É como arrumar o orçamento de casa: quando a conta do mês não fecha, ou se gasta menos ou se ganha mais. O governo pode cortar despesas ou cobrar mais impostos, por exemplo tirando descontos que algumas empresas têm. O governo diz que isso ajuda o país a pagar menos juros e crescer. A oposição diz que o certo seria cortar mais gastos em vez de aumentar a cobrança. As duas visões existem em quase todo país, e é isso que o Congresso está votando."
+    }
+   },
+   "saude": {
+    "abertura": "O caderno mais recheado da casa: estudos importantes, remédios novos e o que muda no SUS.",
+    "aviso": "Importante: estas notícias servem para informar e para levar perguntas à consulta. Nunca comece, pare ou troque um remédio sem conversar com o seu médico.",
+    "frentes": [
+     {
+      "area": "Vacinas e doenças",
+      "itens": [
+       {
+        "titulo": "Covid volta a subir em Minas e mais cinco estados",
+        "texto": "A Fiocruz acompanha toda semana as internações por problemas respiratórios graves. No boletim divulgado em 12/11, com dados de 1º a 7/11, os casos graves de covid voltaram a crescer na Bahia, em São Paulo, em Minas Gerais, no Rio de Janeiro, no Paraná e no Distrito Federal. O nível ainda é baixo, mas a covid já responde por quase 27% das mortes por vírus respiratórios. A recomendação: idosos e pessoas com a imunidade baixa devem tomar a vacina de reforço a cada seis meses. Quem estiver gripado deve evitar contato ou usar máscara boa, como a PFF2.",
+        "selo": "Confirmado",
+        "fontes": [
+         {
+          "nome": "Agência Brasil, boletim InfoGripe da Fiocruz, 12/11/2026",
+          "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/fiocruz-aumentam-casos-de-sindrome-respiratoria-aguda-por-covid-19"
+         }
+        ]
+       },
+       {
+        "titulo": "Vacina contra o cobreiro pode entrar no SUS",
+        "texto": "O herpes-zóster, o “cobreiro”, é a volta do vírus da catapora anos depois. Causa bolhas e uma dor que pode durar meses, sobretudo em idosos. Hoje a vacina só existe na rede particular, por cerca de R$ 1,7 mil as duas doses. Em 12/11, a Comissão de Assuntos Sociais do Senado aprovou o projeto que manda o SUS oferecer a vacina de graça a quem tem 60 anos ou mais. O texto vai à Câmara e depois à sanção. Atenção: em janeiro, o grupo técnico do Ministério (a Conitec) disse não à vacina por causa do preço, e um especialista da USP lembrou que o ideal é essa decisão ser técnica, não do Congresso. Ainda não há data.",
+        "selo": "Confirmado",
+        "fontes": [
+         {
+          "nome": "O Globo, via Tribuna do Sertão, 12/11/2026",
+          "url": "https://www.tribunadosertao.com.br/vida-e-saude/2026/11/12/1020224-vacina-herpes-zoster-apos-aval-do-senado-projeto-que-inclui-dose-no-sus-vai-a-camara-entenda"
+         },
+         {
+          "nome": "InfoMoney, projeto vai à Câmara, 12/11/2026",
+          "url": "https://www.infomoney.com.br/politica/vacina-para-herpes-apos-aval-do-senado-projeto-que-inclui-dose-no-sus-vai-a-camara/"
+         }
+        ]
+       },
+       {
+        "titulo": "Mpox: chegam 25 mil doses de vacina",
+        "texto": "Na edição de 10/11 contamos que faltava vacina contra a mpox, doença que causa febre e feridas na pele. Em 8/11, o Ministério da Saúde informou que garantiu 25 mil doses, com entrega prevista em cerca de três semanas, e já mandou 3.650 doses do estoque para nove estados. Pelos números do Ministério, o país tem 832 casos confirmados em 2026 (até 6/11) e uma morte. A vacina não é para todo mundo: é para grupos de maior risco, definidos pelos serviços de saúde.",
+        "selo": "Confirmado",
+        "fontes": [
+         {
+          "nome": "Ministério da Saúde, 25 mil doses, 8/11/2026",
+          "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/mpox-ministerio-da-saude-garante-25-mil-doses-de-vacina-apos-negociacao-internacional"
+         }
+        ]
+       },
+       {
+        "titulo": "Sarampo bate à porta pela fronteira",
+        "texto": "O Brasil não tem sarampo circulando por aqui desde 2024, mas a doença avança em países vizinhos e nos EUA. Em 2026, foram 65 casos no país, todos vindos de fora, 21 deles no Amazonas, perto do Peru e da Colômbia. Em 9/11, o Ministério mandou R$ 524 mil para vacinar e vigiar três cidades da fronteira. O sarampo é muito contagioso e pode ser grave em crianças. A proteção é a vacina tríplice viral, de graça no posto: vale conferir a caderneta da família.",
+        "selo": "Confirmado",
+        "fontes": [
+         {
+          "nome": "Agência Brasil, reforço no Amazonas, 9/11/2026",
+          "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/saude-repassa-r-524-mil-para-conter-casos-de-sarampo-no-amazonas"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Coração e longevidade",
+      "itens": [
+       {
+        "titulo": "Remédio novo para o coração cansado no SUS",
+        "texto": "A insuficiência cardíaca é quando o coração não consegue bombear o sangue com força. Um dos remédios usados é a espironolactona, mas parte dos pacientes não se dá bem com ela (nos homens, por exemplo, pode fazer crescer as mamas). Em 12/11, uma portaria do Ministério da Saúde no Diário Oficial incluiu no SUS a eplerenona, que age parecido, para quem tem insuficiência cardíaca com o coração fraco e não tolera a espironolactona. A rede pública tem até 180 dias para começar a oferecer. Quem acha que se encaixa deve conversar com o cardiologista.",
+        "selo": "Confirmado",
+        "fontes": [
+         {
+          "nome": "JD1 Notícias, portaria do Ministério da Saúde, 12/11/2026",
+          "url": "https://www.jd1noticias.com/saude/2026/11/12/sus-vai-oferecer-novo-medicamento-para-tratar-insuficiencia-cardiaca.html"
+         },
+         {
+          "nome": "Atlas Público, eplerenona no SUS, nov. 2026",
+          "url": "https://atlaspublico.com.br/noticias/ministerio-da-saude-incorpora-eplerenona-ao-sus-para-101253"
+         }
+        ]
+       },
+       {
+        "titulo": "O exame melhorou, mas o coração não",
+        "texto": "A lipoproteína(a), ou Lp(a), é um tipo de gordura no sangue que vem de família e aumenta o risco de infarto e derrame. Um grande estudo com 8.323 pacientes de 42 países testou uma injeção mensal, o pelacarsen. Ela baixou a Lp(a) em 78%, mas, para surpresa dos médicos, não diminuiu infartos, derrames nem mortes. O resultado foi apresentado em 7/11 no congresso da Associação Americana do Coração. O coordenador, Steven Nissen, disse: “não funcionou”. Ele ainda recomenda medir a Lp(a) uma vez na vida, e outros três remédios estão em teste.",
+        "selo": "Confirmado",
+        "fontes": [
+         {
+          "nome": "American Heart Association, estudo Lp(a) HORIZON, 7/11/2026",
+          "url": "https://newsroom.heart.org/news/lp-a-horizon-trial-lp-a-fell-by-78-but-cardiovascular-outcomes-unexpectedly-neutral"
+         },
+         {
+          "nome": "NEJM, artigo do estudo, nov. 2026",
+          "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2610159"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Remédios novos",
+      "itens": [
+       {
+        "titulo": "Anvisa aprova mais duas canetas de semaglutida",
+        "texto": "A semaglutida é o remédio do Ozempic. Em 10/11, a Anvisa, a agência que libera remédios no Brasil, registrou mais dois produtos com ela, um genérico e um similar. Um detalhe importante: eles foram aprovados para diabetes tipo 2 em adultos, e não para emagrecer, embora muita notícia os chame de “canetas emagrecedoras”. Ainda não há preço nem data para chegar às farmácias. Esses remédios só devem ser usados com receita e acompanhamento médico.",
+        "selo": "Confirmado",
+        "fontes": [
+         {
+          "nome": "Agência Brasil, Anvisa registra duas canetas, 10/11/2026",
+          "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/anvisa-registra-duas-novas-canetas-emagrecedoras-de-semaglutida"
+         },
+         {
+          "nome": "Tribuna de Minas, o detalhe da indicação, nov. 2026",
+          "url": "https://tribunademinas.com.br/maistendencias/anvisa-aprova-duas-novas-canetas-de-semaglutida-mas-a-indicacao-autorizada-traz-um-detalhe-importante"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "Mulher",
+      "itens": [
+       {
+        "titulo": "Hormônio da menopausa e o cérebro: pista, não prova",
+        "texto": "Pesquisadores olharam exames de ressonância de 352 suecas de 70 anos. As que tinham usado reposição hormonal na menopausa tinham menos sinais de desgaste nos vasinhos do cérebro, ligados à perda de memória. Mas atenção: o estudo só observou, não testou o hormônio. Quem usa reposição costuma ter mais saúde e mais renda, o que pode explicar a diferença. A própria autora disse que os achados “não provam” proteção e que não há motivo para tomar hormônio com esse fim. O estudo saiu na revista Neurology.",
+        "selo": "Confirmado",
+        "fontes": [
+         {
+          "nome": "Healio, estrogênio e vasos do cérebro, 11/11/2026",
+          "url": "https://www.healio.com/news/neurology/20261111/estrogen-use-linked-to-better-brain-health-less-damage-to-small-blood-vessels"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "area": "SUS mais perto de você",
+      "itens": [
+       {
+        "titulo": "Um banco de genes com a cara do Brasil",
+        "texto": "Quando um exame genético encontra uma alteração, o laboratório compara com pessoas saudáveis para saber se ela causa doença. Até agora, a comparação era feita quase só com bancos de europeus, o que pode errar num povo misturado como o nosso. O projeto Genomas SUS, do Ministério da Saúde com a USP de Ribeirão Preto e centros das cinco regiões, abriu em 6/11 um banco com 15,9 mil genomas completos de brasileiros. A ideia é ajudar no diagnóstico de doenças raras e hereditárias. Ainda é um começo: a próxima fase prevê mais 50 mil genomas.",
+        "selo": "Confirmado",
+        "fontes": [
+         {
+          "nome": "Ministério da Saúde, Genomas SUS, 6/11/2026",
+          "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/pesquisa-financiada-pelo-ministerio-da-saude-disponibiliza-plataforma-com-dados-geneticos-nacionais-que-qualificam-diagnosticos-de-doencas"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "explica": {
+     "titulo": "Como ler notícia de saúde: melhorar o exame não é o mesmo que curar",
+     "texto": "Muitos remédios são testados primeiro pelo efeito num exame: baixar o colesterol, a glicose, a pressão. Mas o que importa para a gente é viver mais e com menos infarto, derrame ou internação. O estudo do Lp(a) desta edição mostra a diferença: o exame caiu 78%, e os problemas do coração não diminuíram. Por isso, quando ler “remédio baixa tal taxa”, vale perguntar: e as pessoas ficaram mais saudáveis? Estudos que só observam (como o do hormônio) dão pistas; a prova vem quando se sorteia quem toma e quem não toma."
+    }
+   },
+   "tecnologia": {
+    "abertura": "A inteligência artificial (IA) são programas de computador que conversam, escrevem e analisam imagens quase como uma pessoa. Ela já está no celular, no banco e no consultório.",
+    "itens": [
+     {
+      "titulo": "IA erra câncer de pele em pele negra, e com confiança",
+      "texto": "Muita gente já manda foto de pinta ou mancha para um chatbot perguntar se é grave. Um estudo apresentado num congresso de dermatologia nos EUA (5 a 8/11) testou dois desses programas, o ChatGPT (da OpenAI) e o Claude (da Anthropic), com 656 fotos de lesões já confirmadas por biópsia. Em pele clara, um deles acertou 82% dos cânceres; em pele escura, só 48%. E os programas diziam estar seguros quase igual quando acertavam e quando erravam. O estudo ainda não foi revisado por outros cientistas, mas o recado do pesquisador foi claro: por enquanto, a IA não deve ser usada para avaliar câncer de pele.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "Healio, chatbots e câncer de pele, 10/11/2026",
+        "url": "https://www.healio.com/news/dermatology/20261110/claude-chatgpt-confidently-missed-skin-cancers-in-darker-skin"
+       }
+      ]
+     },
+     {
+      "titulo": "IA conversa com o paciente antes da consulta",
+      "texto": "Um estudo publicado na revista médica The Lancet testou o AMIE, um programa do Google que conversa com o paciente antes de ele ver o médico, num hospital de Boston, nos EUA. Foram 100 adultos. Na lista de sete possíveis doenças que o programa montou, o diagnóstico final estava presente em 90% dos casos. Ressalva importante: um médico acompanhou cada conversa ao vivo, e o resultado não vale para uso sem supervisão.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "The Lancet, estudo do AMIE, nov. 2026",
+        "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(26)01535-7/abstract"
+       }
+      ]
+     },
+     {
+      "titulo": "Relatório de Stanford: foto e vídeo já não são prova",
+      "texto": "A cada cinco anos, um grupo de professores ligado à Universidade Stanford, nos EUA, publica um balanço da inteligência artificial, o AI100. O de 2026 saiu em 10/11. Entre as conclusões: a IA encurta pesquisas que levavam anos para meses, e fotos e vídeos deixaram de ser prova confiável, porque é fácil fabricá-los. O relatório também diz que bilhões de pessoas são afetadas pela IA sem ter voz sobre ela. São recomendações de acadêmicos: não obrigam governos nem empresas.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "Stanford HAI, resumo do AI100, 10/11/2026",
+        "url": "https://hai.stanford.edu/news/the-world-has-changed-insights-from-the-new-ai100-report"
+       },
+       {
+        "nome": "AI100, relatório completo em PDF, 10/11/2026",
+        "url": "https://ai100.stanford.edu/sites/g/files/sbiybj36086/files/media/file/ai100_report_2026.pdf"
+       }
+      ]
+     }
+    ],
+    "protejase": {
+     "titulo": "Proteja-se: como usar a IA para dúvidas de saúde sem cair em armadilha",
+     "intro": "Os chatbots podem ajudar a entender uma palavra difícil da bula ou a preparar perguntas para a consulta. Mas, como mostram os estudos desta edição, eles erram e às vezes erram com toda a certeza do mundo.",
+     "dicas": [
+      "Use a IA para entender, não para decidir: diagnóstico e tratamento são com o médico.",
+      "Não mande foto de pinta ou mancha para o chatbot achando que ele vai dizer se é câncer. Mancha que muda de cor, tamanho ou sangra é caso de consulta.",
+      "Desconfie da resposta muito segura. Peça: “de onde vem essa informação?” e confira num site oficial, como o do Ministério da Saúde.",
+      "Não informe CPF, número do cartão do SUS, exames com seu nome ou dados do plano de saúde.",
+      "Foto e vídeo de médico famoso vendendo remédio milagroso na internet podem ser montagem feita por IA. Não compre."
+     ],
+     "fontes": [
+      {
+       "nome": "Healio, chatbots e câncer de pele, 10/11/2026",
+       "url": "https://www.healio.com/news/dermatology/20261110/claude-chatgpt-confidently-missed-skin-cancers-in-darker-skin"
+      },
+      {
+       "nome": "STAT, resposta certa também pode fazer mal, 10/11/2026",
+       "url": "https://www.statnews.com/2026/11/10/ai-health-advice-accuracy-messaging-risk-behavioral-benchmarking/"
+      },
+      {
+       "nome": "Stanford HAI, fotos e vídeos falsos, 10/11/2026",
+       "url": "https://hai.stanford.edu/news/the-world-has-changed-insights-from-the-new-ai100-report"
+      }
+     ]
+    }
+   },
+   "mundo": {
+    "abertura": "Só o essencial do que acontece lá fora, e por que pode chegar até aqui.",
+    "itens": [
+     {
+      "titulo": "El Niño vira “super”",
+      "texto": "O El Niño é o aquecimento das águas do Oceano Pacífico que bagunça as chuvas no mundo. No boletim de 12/11, a agência americana NOAA disse que ele é forte ou muito forte, deve durar pelo menos até março de 2027 e tem cerca de 60% de chance de ser o mais forte já medido. Para o Brasil, o padrão costuma ser chuva demais no Sul e seca no Norte.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "NOAA/CPC, boletim do El Niño, 12/11/2026",
+        "url": "https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml"
+       },
+       {
+        "nome": "WUFT, El Niño chega a “super”, 12/11/2026",
+        "url": "https://www.wuft.org/weather/2026-11-12/el-nino-event-reaches-super-status-among-strongest-on-record"
+       }
+      ]
+     },
+     {
+      "titulo": "Petróleo segue perto de US$ 90",
+      "texto": "O barril de petróleo Brent, referência mundial, ficou perto de US$ 92 na manhã de 12/11, depois de tocar US$ 89 no dia 10. A guerra entre EUA e Irã continua sem acordo, e o Estreito de Ormuz, por onde passa muito petróleo, segue com ataques a navios. Para nós, o preço da gasolina e do diesel depende disso, do dólar e da Petrobras.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "Trading Economics, cotação do Brent, 12/11/2026",
+        "url": "https://tradingeconomics.com/commodity/brent-crude-oil"
+       }
+      ]
+     },
+     {
+      "titulo": "Rússia e Ucrânia vão trocar prisioneiros",
+      "texto": "As conversas em Abu Dhabi, nos Emirados Árabes, terminaram em 11/11 com um acordo para uma grande troca de prisioneiros de guerra, prevista para as próximas semanas. Sobre território, o ponto mais difícil, não houve avanço. A Rússia quer que a Ucrânia saia da região do Donbass; a Ucrânia não aceita. Os ataques com drones continuaram dos dois lados.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "Al Jazeera, fim das conversas em Abu Dhabi, 11/11/2026",
+        "url": "https://www.aljazeera.com/amp/news/2026/11/11/russia-ukraine-talks-in-abu-dhabi-end-with-prisoner-exchange-agreement"
+       },
+       {
+        "nome": "Meduza, troca sim, território não, 11/11/2026",
+        "url": "https://meduza.io/en/feature/2026/11/11/russia-ukraine-peace-talks-conclude-in-abu-dhabi-with-prisoner-exchange-agreement-but-no-breakthrough-on-territory"
+       }
+      ]
+     },
+     {
+      "titulo": "Sonda chega ao asteroide “empurrado”",
+      "texto": "Na edição de 10/11 contamos que a sonda europeia Hera ia visitar o asteroide Dimorphos, que a NASA desviou de propósito em 2022. Ela já tinha chegado em 5/11 e fez a primeira foto de perto. Vai medir a cratera deixada pela batida, para aprender a proteger a Terra de pedras espaciais no futuro. Esse asteroide não oferece risco. As imagens completas saem em 25/11.",
+      "selo": "Confirmado",
+      "fontes": [
+       {
+        "nome": "Tech Times, Hera chega a Didymos, 5/11/2026",
+        "url": "https://www.techtimes.com/articles/330121/20261105/esa-hera-reaches-asteroid-didymos-first-close-image-shows-side-dart-never-photographed.htm"
+       },
+       {
+        "nome": "ESA, missão Hera",
+        "url": "https://www.esa.int/Space_Safety/Hera/ESA_s_Hera_targets_early_arrival_at_Didymos_asteroids"
+       }
+      ]
+     }
+    ]
+   },
+   "palavrinhas": [
+    {
+     "termo": "Escala 6x1",
+     "def": "Seis dias de trabalho para um de folga. A nova regra garante duas folgas por semana."
+    },
+    {
+     "termo": "Liminar",
+     "def": "Decisão rápida e provisória de um juiz, que vale até o julgamento final."
+    },
+    {
+     "termo": "Plenário virtual",
+     "def": "Quando os ministros do STF votam pelo computador, durante alguns dias, sem sessão ao vivo."
+    },
+    {
+     "termo": "IPCA",
+     "def": "A inflação oficial do Brasil, calculada pelo IBGE: quanto os preços subiram, em média."
+    },
+    {
+     "termo": "Ajuste fiscal",
+     "def": "Conjunto de medidas para o governo gastar menos ou arrecadar mais e fechar as contas."
+    },
+    {
+     "termo": "Herpes-zóster",
+     "def": "O “cobreiro”: o vírus da catapora que volta anos depois e causa bolhas e dor."
+    },
+    {
+     "termo": "Insuficiência cardíaca",
+     "def": "Quando o coração não consegue bombear o sangue com a força necessária."
+    },
+    {
+     "termo": "Conitec",
+     "def": "Grupo técnico do Ministério da Saúde que avalia se um remédio ou vacina deve entrar no SUS."
+    }
+   ],
+   "conversa": [
+    "Na sua época de trabalho, quantas folgas por semana você tinha? O que mudaria na vida da família com duas folgas?",
+    "Você já perguntou alguma coisa de saúde para o celular ou para um chatbot? Confiou na resposta?"
+   ],
+   "agenda": [
+    {
+     "quando": "13 a 16/11",
+     "oque": "STF vota no plenário virtual se mantém a decisão sobre a jornada menor"
+    },
+    {
+     "quando": "14/11",
+     "oque": "Dia Mundial do Diabetes"
+    },
+    {
+     "quando": "17/11",
+     "oque": "Senado conclui a votação do ajuste fiscal, que depois vai à Câmara"
+    },
+    {
+     "quando": "Até 18/11",
+     "oque": "Prazo para recurso no Senado sobre a vacina do cobreiro; sem recurso, o projeto vai à Câmara"
+    },
+    {
+     "quando": "16/12",
+     "oque": "Começa a jornada de 42 horas e duas folgas semanais"
+    },
+    {
+     "quando": "24/11 a 7/12",
+     "oque": "INSS paga o 13º de quem se aposentou a partir de maio"
+    }
+   ]
+  },
   {
    "id": "2026-11-10",
    "numero": 1,
