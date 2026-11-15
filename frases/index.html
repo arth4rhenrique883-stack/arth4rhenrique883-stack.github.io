@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sophia · frases</title>
+<style>
+:root{--bg:#000;--card:#111;--line:#2a2a2a;--tx:#f5efe6;--mut:#9a9388;--am:#f0b429;--red:#d9534f;--ok:#4caf7a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.45 Lato,system-ui,sans-serif;padding:16px;max-width:760px;margin:0 auto}
+h1{font:700 24px Georgia,serif;margin:8px 0 2px}h1 span{color:var(--am)}
+p.s{color:var(--mut);margin:0 0 14px;font-size:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin:10px 0}
+input,textarea,button{font:inherit;color:var(--tx);background:#000;border:1px solid var(--line);border-radius:10px;padding:10px;width:100%}
+textarea{min-height:72px;resize:vertical}
+button{width:auto;cursor:pointer;background:#1a1a1a}button:hover{border-color:var(--am)}
+button.p{background:var(--am);color:#000;border-color:var(--am);font-weight:700}
+button.d{color:var(--red)}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.row>*{flex:1 1 140px}.row>button{flex:0 0 auto}
+.q{display:flex;gap:10px;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--line);padding:10px 0}
+.q:last-child{border:0}.q b{color:var(--am)}.q small{color:var(--mut)}
+.q .b{display:flex;gap:6px;flex:0 0 auto}
+#msg{position:sticky;bottom:8px;padding:10px;border-radius:10px;background:#1a1a1a;border:1px solid var(--line);display:none}
+.mut{color:var(--mut);font-size:13px}
+details summary{cursor:pointer;color:var(--am)}
+</style>
+</head>
+<body>
+<h1>☾ <span>Sophia</span> · banco de frases</h1>
+<p class="s">O relógio busca esta lista pelo celular. Edite aqui e toque em <b>Publicar</b>; na próxima abertura do app o relógio atualiza.</p>
+
+<div class="card">
+  <div class="row">
+    <input id="busca" placeholder="Buscar por frase ou autor…">
+    <span class="mut" id="cont"></span>
+  </div>
+</div>
+
+<div class="card" id="form">
+  <b id="ftit">Nova frase</b>
+  <textarea id="t" placeholder="Frase (até ~140 caracteres fica melhor na tela do relógio)"></textarea>
+  <div class="row" style="margin-top:8px">
+    <input id="a" placeholder="Autor (ex.: Sêneca)">
+    <input id="o" placeholder="Obra / fonte (ex.: Cartas a Lucílio 13)">
+    <button class="p" id="salvar">Adicionar</button>
+    <button id="cancelar" style="display:none">Cancelar</button>
+  </div>
+  <div class="mut" style="margin-top:6px">Use só frases com autoria confiável. Se a autoria for tradicional mas incerta, escreva “frase atribuída” na fonte.</div>
+</div>
+
+<div class="card" id="lista"></div>
+
+<div class="card">
+  <details>
+    <summary>Publicar no GitHub (precisa do token uma vez)</summary>
+    <p class="mut">Crie em GitHub → Settings → Developer settings → Fine-grained tokens, com acesso só ao repositório <code>arth4rhenrique883-stack.github.io</code> e permissão <i>Contents: Read and write</i>. O token fica guardado apenas neste navegador.</p>
+    <input id="tok" type="password" placeholder="Token do GitHub" autocomplete="off">
+  </details>
+  <div class="row" style="margin-top:10px">
+    <button class="p" id="pub">Publicar alterações</button>
+    <button id="exp">Baixar JSON</button>
+    <button id="imp">Importar JSON</button>
+    <input type="file" id="file" accept=".json" style="display:none">
+  </div>
+  <div class="mut" id="est" style="margin-top:6px"></div>
+</div>
+<div id="msg"></div>
+
+<script>
+const REPO="arth4rhenrique883-stack/arth4rhenrique883-stack.github.io",PATH="frases/frases.json",BR="main";
+const $=s=>document.querySelector(s);
+let banco={versao:1,frases:[]},edit=null,sujo=false;
+const store={get:k=>{try{return localStorage.getItem(k)||""}catch(e){return ""}},set:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}}};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function msg(t,ok){const m=$("#msg");m.textContent=t;m.style.display="block";m.style.borderColor=ok===false?"var(--red)":ok?"var(--ok)":"var(--line)";clearTimeout(msg.h);msg.h=setTimeout(()=>m.style.display="none",5000)}
+function marca(){sujo=true;$("#est").textContent="Alterações ainda não publicadas."}
+function desenha(){
+  const q=$("#busca").value.toLowerCase(),L=banco.frases.filter(f=>(f.t+" "+f.a+" "+(f.o||"")).toLowerCase().includes(q));
+  $("#cont").textContent=banco.frases.length+" frases";
+  $("#lista").innerHTML=L.length?L.map(f=>`<div class="q"><div>“${esc(f.t)}”<br><b>${esc(f.a)}</b> <small>${esc(f.o||"")}</small></div><div class="b"><button data-e="${f.id}">Editar</button><button class="d" data-d="${f.id}">Remover</button></div></div>`).join(""):'<span class="mut">Nada encontrado.</span>';
+}
+function limpa(){edit=null;$("#t").value=$("#a").value=$("#o").value="";$("#ftit").textContent="Nova frase";$("#salvar").textContent="Adicionar";$("#cancelar").style.display="none"}
+$("#salvar").onclick=()=>{
+  const t=$("#t").value.trim(),a=$("#a").value.trim(),o=$("#o").value.trim();
+  if(!t||!a)return msg("Preencha a frase e o autor.",false);
+  if(edit){const f=banco.frases.find(x=>x.id===edit);f.t=t;f.a=a;f.o=o}
+  else{const id=banco.frases.reduce((m,x)=>Math.max(m,x.id),0)+1;banco.frases.unshift({id,t,a,o})}
+  limpa();marca();desenha()
+};
+$("#cancelar").onclick=limpa;
+$("#busca").oninput=desenha;
+$("#lista").onclick=e=>{
+  const d=e.target.dataset.d,ed=e.target.dataset.e;
+  if(d){if(confirm("Remover esta frase?")){banco.frases=banco.frases.filter(x=>x.id!=d);marca();desenha()}}
+  if(ed){const f=banco.frases.find(x=>x.id==ed);edit=f.id;$("#t").value=f.t;$("#a").value=f.a;$("#o").value=f.o||"";$("#ftit").textContent="Editar frase";$("#salvar").textContent="Salvar";$("#cancelar").style.display="";scrollTo({top:0,behavior:"smooth"})}
+};
+$("#tok").value=store.get("tok");$("#tok").onchange=()=>store.set("tok",$("#tok").value.trim());
+const b64=s=>btoa(unescape(encodeURIComponent(s)));
+$("#pub").onclick=async()=>{
+  const tok=$("#tok").value.trim();if(!tok)return msg("Cole o token do GitHub (seção acima) antes de publicar.",false);
+  if(!banco.frases.length)return msg("O banco não pode ficar vazio.",false);
+  store.set("tok",tok);const H={Authorization:"Bearer "+tok,Accept:"application/vnd.github+json"},u=`https://api.github.com/repos/${REPO}/contents/${PATH}`;
+  try{
+    $("#pub").disabled=true;
+    const r=await fetch(u+"?ref="+BR,{headers:H});let sha;if(r.ok)sha=(await r.json()).sha;else if(r.status!==404)throw new Error("GitHub respondeu "+r.status);
+    const novo={versao:Math.floor(Date.now()/1000),frases:banco.frases};
+    const p=await fetch(u,{method:"PUT",headers:H,body:JSON.stringify({message:"Sophia: atualiza frases ("+banco.frases.length+")",content:b64(JSON.stringify(novo,null,1)),sha,branch:BR})});
+    if(!p.ok)throw new Error("Falha ao publicar ("+p.status+"). Confira o token e a permissão.");
+    banco.versao=novo.versao;sujo=false;$("#est").textContent="Publicado (versão "+novo.versao+"). O GitHub Pages leva cerca de 1 minuto para refletir.";msg("Publicado!",true)
+  }catch(e){msg(e.message,false)}finally{$("#pub").disabled=false}
+};
+$("#exp").onclick=()=>{const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([JSON.stringify(banco,null,1)],{type:"application/json"}));a.download="frases.json";a.click()};
+$("#imp").onclick=()=>$("#file").click();
+$("#file").onchange=async e=>{try{const j=JSON.parse(await e.target.files[0].text());if(!Array.isArray(j.frases))throw 0;banco={versao:j.versao||1,frases:j.frases.map((f,i)=>({id:f.id||i+1,t:f.t,a:f.a,o:f.o||""}))};marca();desenha()}catch(x){msg("Arquivo inválido.",false)}};
+addEventListener("beforeunload",e=>{if(sujo){e.preventDefault();e.returnValue=""}});
+fetch("frases.json?t="+Date.now()).then(r=>r.json()).then(j=>{banco=j;desenha()}).catch(()=>msg("Não consegui carregar frases.json",false));
+</script>
+</body>
+</html>
