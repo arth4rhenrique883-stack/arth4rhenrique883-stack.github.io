@@ -1,6 +1,1700 @@
 {
- "atualizadoEm": "2026-11-12T06:40:00-03:00",
+ "atualizadoEm": "2026-11-15T07:30:00-03:00",
  "edicoes": [
+  {
+   "id": "2026-11-15",
+   "numero": 6,
+   "data": "2026-11-15",
+   "tempoLeitura": 26,
+   "fechamento": "Fechamento: domingo, 15/11/2026 (Brasília). Edição semanal: resume a semana de 9 a 15/11 por especialidade, com leitura crítica, diretrizes, história, quiz e agenda. Dados conferidos nas fontes de cada nota. O anúncio formal da OPAS sobre o sarampo nos EUA está previsto para 17/11; até o fechamento, a notícia vem de reportagens com fontes da organização. A decisão do FDA sobre o ivonescimabe, prevista para 14/11, não havia sido divulgada até o fechamento.",
+   "ticker": [
+    {
+     "area": "Saúde pública",
+     "texto": "EUA perdem o status de eliminação do sarampo após 26 anos, segundo fontes da OPAS ouvidas pela imprensa; anúncio formal previsto para 17/11",
+     "url": "https://kffhealthnews.org/public-health/us-measles-elimination-status-lost-outbreaks-continuous-spread-year-paho-cdc/"
+    },
+    {
+     "area": "FDA",
+     "texto": "Asundexian, primeiro inibidor do fator XIa, aprovado para prevenção secundária após AVC isquêmico não cardioembólico",
+     "url": "https://www.tctmd.com/news/asundexian-first-factor-xia-inhibitor-gain-fda-approval"
+    },
+    {
+     "area": "NEJM",
+     "texto": "OptimPacing: pacing do ramo esquerdo reduziu o composto de morte, internação por IC e cardiomiopatia por pacing (8,5% vs 19,2%)",
+     "url": "https://www.tctmd.com/news/better-outcomes-lbb-vs-rv-pacing-atrioventricular-block"
+    },
+    {
+     "area": "FDA",
+     "texto": "Alerta de NAION passa a constar na bula de todos os agonistas de GLP-1",
+     "url": "https://www.pharmacytimes.com/view/fda-requires-class-wide-glp-1-ra-labeling-changes-for-potential-naion-risk"
+    },
+    {
+     "area": "Oncologia",
+     "texto": "Durvalumabe + enfortumabe vedotina aprovados no câncer de bexiga musculoinvasivo inelegível à cisplatina (VOLGA)",
+     "url": "https://www.onclive.com/view/fda-approves-durvalumab-plus-enfortumab-vedotin-for-cisplatin-ineligible-mibc"
+    },
+    {
+     "area": "Ebola",
+     "texto": "Surto por Bundibugyo soma 11.145 casos confirmados e 5.437 mortes, quase todos na RD Congo (CDC, 10/11)",
+     "url": "https://www.cdc.gov/ebola/situation-summary/"
+    },
+    {
+     "area": "JAMA",
+     "texto": "ATTAIN-OSA: GLP-1 oral reduziu o índice de apneia-hipopneia em cerca de 17 eventos/h em 52 semanas",
+     "url": "https://www.tctmd.com/news/attain-osa-oral-glp-1-linked-fewer-breathing-interruptions"
+    }
+   ],
+   "capa": {
+    "kicker": "Saúde pública · Américas · sarampo",
+    "titulo": "O sarampo voltou a morar nos EUA.",
+    "linhaFina": "Segundo reportagens com fontes da Organização Pan-Americana da Saúde (OPAS), o país perdeu nesta semana o status de eliminação do sarampo que mantinha desde 2000. Mais de 7,6 mil casos foram confirmados desde janeiro de 2025. O anúncio oficial está previsto para 17/11.",
+    "texto": [
+     "Eliminação não é erradicação. Um país é considerado livre do sarampo quando não há transmissão contínua de uma mesma cadeia por 12 meses ou mais; casos importados podem continuar acontecendo, desde que os surtos se apaguem antes de um ano. Os EUA tinham esse certificado desde 2000. Em 13 e 14/11, CNN, NPR e KFF Health News informaram, com fontes da OPAS, que a organização concluiu que o país voltou a ter transmissão endêmica. A decisão se apoiou em duas análises, uma do CDC (Centros de Controle e Prevenção de Doenças) e outra de um grupo independente de especialistas.",
+     "Os números ajudam a entender. Segundo o rastreador da Universidade Johns Hopkins citado pela KFF, foram mais de 7,6 mil casos confirmados desde janeiro de 2025, com cerca de 3% em vacinados e mais de 830 internações em dois anos; os estados relatam 13 mortes associadas, quatro a mais do que o painel do CDC registra neste ano. Só em 2026, os estados somavam quase 5,2 mil casos até 11/11, mais que o dobro dos 2.289 de 2025. O surto do oeste do Texas, de 2025, chegou ao México. Um surto em Utah completou um ano de transmissão em junho, o marco técnico que pesquisadores já esperavam.",
+     "Para recuperar o status, os surtos atuais precisam acabar, e as novas introduções não podem se manter por um ano. O CDC disse que manterá a mesma resposta mesmo com a perda. O porta-voz do Departamento de Saúde atribuiu a alta a lacunas de vacinação anteriores ao governo atual; a Casa Branca afirmou que o presidente e o secretário de Saúde incentivam a vacina. Um ex-dirigente do CDC resumiu a dinâmica: incêndios maiores soltam mais brasas, e qualquer brasa pode acender outro foco.",
+     "[ANÁLISE] O sarampo é a doença mais transmissível conhecida (R0, o número básico de reprodução, entre 12 e 18), e por isso é o primeiro alarme quando a cobertura vacinal cai: a imunidade de rebanho exige cerca de 95% com duas doses. Para o Brasil, que perdeu o certificado em 2019 e o recuperou em 2024, o efeito é direto: mais viagens com origem em áreas endêmicas aumentam a chance de importação. A aba Brasil traz os 65 casos importados deste ano. Confiança: Alta para a transmissão contínua nos EUA, que é documentada; Média para a data e a forma do anúncio, ainda não publicado pela OPAS."
+    ],
+    "camada": "FATO",
+    "evidencia": "Vigilância epidemiológica (CDC, estados, Johns Hopkins) e decisão de organismo regional relatada pela imprensa; anúncio oficial pendente",
+    "confianca": "Alta",
+    "confiancaMotivo": "Três veículos independentes confirmam com fontes da OPAS, e a transmissão por mais de 12 meses é documentada desde junho. Falta o comunicado oficial, previsto para 17/11.",
+    "citacao": "Mais de 7,6 mil casos confirmados desde janeiro de 2025; cerca de 3% em vacinados; 13 mortes relatadas pelos estados.",
+    "fontes": [
+     {
+      "nome": "KFF Health News, 14/11/2026",
+      "url": "https://kffhealthnews.org/public-health/us-measles-elimination-status-lost-outbreaks-continuous-spread-year-paho-cdc/"
+     },
+     {
+      "nome": "NPR, 14/11/2026",
+      "url": "https://www.npr.org/2026/11/14/nx-s1-6041119/us-measles-elimination-status-vaccines-cdc-paho"
+     },
+     {
+      "nome": "CNN, 13/11/2026",
+      "url": "https://www.cnn.com/2026/11/13/health/us-measles-elimination-status"
+     },
+     {
+      "nome": "TheGrio (Reuters), 11/11/2026",
+      "url": "https://thegrio.com/2026/11/11/cdc-measles-response-us-elimination-status/"
+     }
+    ]
+   },
+   "numeros": [
+    {
+     "val": "> 7,6 mil",
+     "lab": "Casos de sarampo nos EUA desde jan/2025",
+     "nota": "cerca de 3% em vacinados; 13 mortes relatadas pelos estados",
+     "src": {
+      "nome": "KFF Health News, 14/11/2026",
+      "url": "https://kffhealthnews.org/public-health/us-measles-elimination-status-lost-outbreaks-continuous-spread-year-paho-cdc/"
+     }
+    },
+    {
+     "val": "11.145",
+     "lab": "Ebola Bundibugyo · casos confirmados",
+     "nota": "5.437 mortes; 11.114 casos na RD Congo; dados até 10/11",
+     "src": {
+      "nome": "CDC, 12/11/2026",
+      "url": "https://www.cdc.gov/ebola/situation-summary/"
+     }
+    },
+    {
+     "val": "8,5% × 19,2%",
+     "lab": "OptimPacing · desfecho composto",
+     "nota": "ramo esquerdo vs ventrículo direito; n = 685",
+     "src": {
+      "nome": "TCTMD, 9/11/2026",
+      "url": "https://www.tctmd.com/news/better-outcomes-lbb-vs-rv-pacing-atrioventricular-block"
+     }
+    },
+    {
+     "val": "HR 0,51",
+     "lab": "VOLGA · sobrevida livre de eventos",
+     "nota": "durvalumabe + enfortumabe vs cistectomia isolada",
+     "src": {
+      "nome": "OncLive, 13/11/2026",
+      "url": "https://www.onclive.com/view/fda-approves-durvalumab-plus-enfortumab-vedotin-for-cisplatin-ineligible-mibc"
+     }
+    },
+    {
+     "val": "−17,8 × −4,5",
+     "lab": "ATTAIN-OSA · eventos/h no IAH",
+     "nota": "orforglipron vs placebo, 52 semanas (1º ensaio)",
+     "src": {
+      "nome": "TCTMD, 9/11/2026",
+      "url": "https://www.tctmd.com/news/attain-osa-oral-glp-1-linked-fewer-breathing-interruptions"
+     }
+    },
+    {
+     "val": "1,0% × 1,2%",
+     "lab": "HD-PCI · morte, IAM ou revascularização",
+     "nota": "heparina 70 vs 100 U/kg; n = 11.619; diferença não significativa",
+     "src": {
+      "nome": "TCTMD, 10/11/2026",
+      "url": "https://www.tctmd.com/news/during-elective-pci-high-and-low-dose-heparin-provide-similar-outcomes"
+     }
+    }
+   ],
+   "cadernos": [
+    {
+     "id": "cardio",
+     "nome": "Coração, vasos e AVC",
+     "itens": [
+      {
+       "titulo": "Asundexian chega ao mercado: o fator XIa vira alvo terapêutico",
+       "camada": "FATO",
+       "evidencia": "Aprovação regulatória com base no ECR de fase 3 OCEANIC-STROKE (dados da empresa)",
+       "confianca": "Média",
+       "data": "9/11/2026",
+       "texto": "Foi a aprovação da semana em cardiologia e neurologia. O fator XI participa da amplificação do trombo e pouco da hemostasia normal, o que torna o seu bloqueio uma promessa de antitrombótico com menos sangramento. O FDA aprovou o asundexian 50 mg/dia para adultos com AVC isquêmico não cardioembólico recente ou AIT (ataque isquêmico transitório) de alto risco, associado ao antiplaquetário. Segundo a reportagem, no OCEANIC-STROKE houve redução relativa de 26% (absoluta de 2,2%) no AVC isquêmico em dois anos, sem aumento de sangramento maior pelo critério ISTH, mas com um pouco mais de sangramento gastrointestinal (2,7 contra 2,1 por 100 pacientes-ano) e elevação de enzimas hepáticas. A fonte não traz n, HR nem intervalos de confiança. Na fibrilação atrial, o mesmo fármaco perdeu para a apixabana em 2023 (OCEANIC-AF).",
+       "prova": "Prevenção secundária do AVC não cardioembólico: antiagregação (AAS, clopidogrel; dupla por 21 a 90 dias em casos selecionados), estatina, controle pressórico. Distinga do AVC cardioembólico por fibrilação atrial, que pede anticoagulação.",
+       "fontes": [
+        {
+         "nome": "TCTMD, 10/11/2026",
+         "url": "https://www.tctmd.com/news/asundexian-first-factor-xia-inhibitor-gain-fda-approval"
+        }
+       ]
+      },
+      {
+       "titulo": "OptimPacing: estimular o ramo esquerdo evita a cardiomiopatia do marca-passo",
+       "camada": "FATO",
+       "evidencia": "ECR aberto, interrompido por superioridade (n = 685); publicado no NEJM",
+       "confianca": "Média",
+       "data": "9/11/2026",
+       "texto": "No bloqueio atrioventricular, o marca-passo clássico estimula o ventrículo direito e produz uma contração dessincronizada que, com o tempo, pode dilatar o coração. O OptimPacing comparou o pacing do ramo esquerdo do feixe de His (que usa o sistema de condução natural) com o do ventrículo direito. O composto de morte, internação por insuficiência cardíaca ou cardiomiopatia induzida por pacing ocorreu em 8,5% contra 19,2% (HR 0,41). O ganho veio quase todo da cardiomiopatia (0% contra 11,7%), um desfecho de imagem; a morte foi semelhante (7,4% contra 7,7%). Estudo aberto e parado cedo, o que tende a superestimar o efeito.",
+       "prova": "Bloqueios AV: 1º grau (PR > 200 ms), 2º grau Mobitz I e II, 3º grau. Indicação classe I de marca-passo: BAV de 2º grau Mobitz II, BAV avançado e BAV total, mesmo assintomáticos.",
+       "fontes": [
+        {
+         "nome": "TCTMD, 9/11/2026",
+         "url": "https://www.tctmd.com/news/better-outcomes-lbb-vs-rv-pacing-atrioventricular-block"
+        }
+       ]
+      },
+      {
+       "titulo": "HD-PCI: dose menor de heparina na angioplastia eletiva teve resultado semelhante",
+       "camada": "FATO",
+       "evidencia": "ECR por conglomerados com cruzamento (n = 11.619); apresentado em congresso, sem publicação",
+       "confianca": "Média",
+       "data": "10/11/2026",
+       "texto": "A heparina não fracionada é o anticoagulante padrão da intervenção coronária percutânea (ICP), mas a dose ideal nunca foi bem testada. Onze centros canadenses alternaram períodos com 100 U/kg e 70 U/kg. Em 30 dias, morte, infarto ou revascularização do vaso-alvo ocorreram em 1,2% e 1,0% (HR 1,29; IC 95% 0,89 a 1,87), e sangramento maior em 1,0% nos dois grupos. Houve menos eventos do que o previsto (poder reduzido), e o tempo de coagulação ativado só foi registrado em 39,6% dos procedimentos. Financiamento acadêmico. A leitura honesta é de não inferioridade provável, não provada.",
+       "prova": "Anticoagulação na ICP: heparina não fracionada guiada pelo TCA (tempo de coagulação ativado); bivalirrudina como alternativa. Acesso radial reduz sangramento em relação ao femoral.",
+       "fontes": [
+        {
+         "nome": "TCTMD, 10/11/2026",
+         "url": "https://www.tctmd.com/news/during-elective-pci-high-and-low-dose-heparin-provide-similar-outcomes"
+        }
+       ]
+      }
+     ],
+     "box": {
+      "titulo": "E o Brasil?",
+      "texto": "O Brasil esteve no centro da semana em cardiologia, com os estudos Optimal-Stroke e Optimal-Diabetes, tema da capa da aba Brasil. O asundexian ainda não tem registro na Anvisa; o pacing do ramo esquerdo exige equipe treinada e está concentrado em centros de referência."
+     }
+    },
+    {
+     "id": "metab",
+     "nome": "Metabolismo e obesidade",
+     "itens": [
+      {
+       "titulo": "GLP-1: alerta de neuropatia óptica isquêmica vai para a bula de toda a classe",
+       "camada": "FATO",
+       "evidencia": "Decisão regulatória baseada em coortes observacionais e metanálise de ECRs com poucos eventos",
+       "confianca": "Média",
+       "data": "9/11/2026",
+       "texto": "O FDA exigiu que as bulas de todos os agonistas do receptor de GLP-1, da exenatida ao orforglipron, incluam o risco potencial de neuropatia óptica isquêmica anterior não arterítica (NAION), uma perda visual súbita e indolor por isquemia do nervo óptico. As evidências são heterogêneas: uma coorte de centro único sugeriu risco várias vezes maior; uma metanálise de 126 ECRs encontrou 6,4 contra 3,8 eventos por 100 mil pessoas-ano, com só 15 eventos; e uma coorte do sistema Sentinel não mostrou diferença significativa contra iSGLT2 (HR 1,19; IC 0,91 a 1,54). O risco absoluto é baixo, mas a classe é usada por milhões.",
+       "prova": "NAION: perda visual monocular súbita e indolor, edema de disco óptico, defeito pupilar aferente relativo. Diferencie da neurite óptica (dor à movimentação ocular, mais jovens) e da arterite de células gigantes (VHS e PCR altos, idosos; urgência).",
+       "fontes": [
+        {
+         "nome": "Pharmacy Times, 9/11/2026",
+         "url": "https://www.pharmacytimes.com/view/fda-requires-class-wide-glp-1-ra-labeling-changes-for-potential-naion-risk"
+        }
+       ]
+      },
+      {
+       "titulo": "ATTAIN-OSA: GLP-1 em comprimido reduz a apneia do sono",
+       "camada": "FATO",
+       "evidencia": "Dois ECR de fase 3 (n = 363 e 349); publicado no JAMA; financiado pelo fabricante",
+       "confianca": "Alta",
+       "data": "9/11/2026",
+       "texto": "A apneia obstrutiva do sono moderada a grave é comum na obesidade, e muitos pacientes não aderem à pressão positiva (CPAP). O orforglipron, agonista oral não peptídico do GLP-1, reduziu o índice de apneia-hipopneia (IAH) em 17,8 eventos/h contra 4,5 com placebo no ensaio sem CPAP, e 17,3 contra 5,3 no ensaio com CPAP, em 52 semanas; o peso caiu 10% a 11%. Centros brasileiros participaram. Limitações: exclusão de diabéticos, poucos participantes negros, efeito menor na apneia moderada e financiamento do fabricante. O desfecho é o IAH, e não eventos cardiovasculares.",
+       "prova": "Apneia obstrutiva do sono: IAH 5–15 leve, 15–30 moderada, ≥ 30 grave. Tratamento: CPAP, perda de peso, dispositivo intraoral, cirurgia em casos selecionados. Questionário STOP-Bang para rastreio.",
+       "fontes": [
+        {
+         "nome": "TCTMD, 9/11/2026",
+         "url": "https://www.tctmd.com/news/attain-osa-oral-glp-1-linked-fewer-breathing-interruptions"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "onco",
+     "nome": "Oncologia",
+     "itens": [
+      {
+       "titulo": "Bexiga musculoinvasiva: imunoterapia com conjugado antes e depois da cirurgia",
+       "camada": "FATO",
+       "evidencia": "Aprovação regulatória; ECR fase 3 aberto VOLGA (n = 695)",
+       "confianca": "Alta",
+       "data": "13/11/2026",
+       "texto": "Quem tem câncer de bexiga musculoinvasivo e não tolera cisplatina costumava ir direto à cistectomia. O FDA aprovou durvalumabe (anti-PD-L1) com enfortumabe vedotina (conjugado anticorpo-fármaco anti-nectina-4) antes da cirurgia, seguidos de durvalumabe adjuvante. No VOLGA, o braço aprovado reduziu o risco de evento (HR 0,51; IC 95% 0,38 a 0,67) e de morte (HR 0,58; IC 95% 0,40 a 0,83) em relação à cistectomia isolada. O custo foi mais toxicidade: eventos de grau 3 ou 4 em 64% contra 44%, neuropatia periférica em 18% e um óbito relacionado ao tratamento.",
+       "prova": "Câncer de bexiga: hematúria indolor no tabagista é câncer até prova em contrário. Não musculoinvasivo: RTU + BCG intravesical. Musculoinvasivo: quimioterapia neoadjuvante com cisplatina + cistectomia radical.",
+       "fontes": [
+        {
+         "nome": "OncLive, 13/11/2026",
+         "url": "https://www.onclive.com/view/fda-approves-durvalumab-plus-enfortumab-vedotin-for-cisplatin-ineligible-mibc"
+        }
+       ]
+      },
+      {
+       "titulo": "Rim: agência europeia recomenda belzutifan com lenvatinibe após imunoterapia",
+       "camada": "FATO",
+       "evidencia": "Parecer regulatório (CHMP); ECR fase 3 aberto LITESPARK-011 (n = 747)",
+       "confianca": "Média",
+       "data": "13/11/2026",
+       "texto": "O belzutifan inibe o HIF-2α, fator que se acumula quando o gene VHL falha, o que é típico do carcinoma renal de células claras. O comitê científico da Agência Europeia de Medicamentos recomendou a combinação com lenvatinibe após falha de anti-PD-(L)1. A sobrevida livre de progressão subiu de 10,6 para 14,6 meses contra cabozantinibe (HR 0,74), mas a sobrevida global não teve diferença significativa (HR 0,85; IC 95% 0,70 a 1,03). Anemia em 69% e hipóxia em 15% no braço da combinação. A decisão da Comissão Europeia sai em até dois meses.",
+       "prova": "Carcinoma renal de células claras: associação com doença de von Hippel-Lindau; tríade clássica (hematúria, dor lombar, massa palpável) é rara; síndromes paraneoplásicas (policitemia, hipercalcemia).",
+       "fontes": [
+        {
+         "nome": "OncLive, 13/11/2026",
+         "url": "https://www.onclive.com/view/chmp-recommends-approval-of-belzutifan-plus-lenvatinib-for-advanced-ccrcc-after-pd--l-1-inhibition"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "infecto",
+     "nome": "Infecções e saúde global",
+     "itens": [
+      {
+       "titulo": "Ebola Bundibugyo passa de 11 mil casos confirmados",
+       "camada": "FATO",
+       "evidencia": "Vigilância oficial (CDC)",
+       "confianca": "Alta",
+       "data": "12/11/2026",
+       "texto": "O surto causado pelo vírus Bundibugyo, espécie de ebolavírus sem vacina licenciada, soma 11.145 casos confirmados e 5.437 mortes até 10/11, segundo o CDC: 11.114 casos na RD Congo, 20 em Uganda (sem casos ativos), 9 no Quênia, 1 na Nigéria e 1 na França (sem casos ativos). A letalidade entre confirmados passa de 48%. Na edição de 12/11 citamos 10.772 casos, número divulgado em 9/11. Nenhum caso ligado ao surto foi confirmado nos EUA.",
+       "prova": "Doença pelo vírus Ebola: incubação de 2 a 21 dias, transmissão por fluidos corporais; febre, vômitos, diarreia, hemorragia tardia. A vacina rVSV-ZEBOV protege contra a espécie Zaire, não contra Bundibugyo.",
+       "fontes": [
+        {
+         "nome": "CDC, 12/11/2026",
+         "url": "https://www.cdc.gov/ebola/situation-summary/"
+        }
+       ]
+      }
+     ],
+     "box": {
+      "titulo": "Pendente",
+      "texto": "A decisão do FDA sobre o ivonescimabe (anticorpo biespecífico anti-PD-1/VEGF) com quimioterapia no câncer de pulmão EGFR mutado após inibidor de tirosina quinase estava prevista para 14/11 e não havia sido divulgada até o fechamento."
+     }
+    }
+   ],
+   "aprovacoes": {
+    "fda": [
+     {
+      "farmaco": "Asundexian (Sunharbo)",
+      "indicacao": "Prevenção secundária após AVC isquêmico não cardioembólico ou AIT de alto risco",
+      "data": "anunciado em 9/11/2026",
+      "status": "Aprovado"
+     },
+     {
+      "farmaco": "Agonistas de GLP-1 (classe)",
+      "indicacao": "Alerta de NAION em Advertências e Precauções",
+      "data": "9/11/2026",
+      "status": "Alerta de segurança"
+     },
+     {
+      "farmaco": "Pimicotinibe (Pimjetmi)",
+      "indicacao": "Tumor tenossinovial de células gigantes sintomático",
+      "data": "noticiado em 10/11/2026",
+      "status": "Aprovado"
+     },
+     {
+      "farmaco": "COMP360 (psilocibina)",
+      "indicacao": "Depressão resistente ao tratamento",
+      "data": "9/11/2026",
+      "status": "Pedido de registro submetido"
+     },
+     {
+      "farmaco": "Durvalumabe + enfortumabe vedotina",
+      "indicacao": "Câncer de bexiga musculoinvasivo inelegível à cisplatina",
+      "data": "13/11/2026",
+      "status": "Aprovado"
+     },
+     {
+      "farmaco": "Belzutifan + lenvatinibe (EMA)",
+      "indicacao": "Carcinoma renal de células claras após anti-PD-(L)1",
+      "data": "13/11/2026",
+      "status": "Parecer favorável do CHMP"
+     },
+     {
+      "farmaco": "Ivonescimabe + quimioterapia",
+      "indicacao": "CPNPC não escamoso EGFR mutado após TKI",
+      "data": "prevista para 14/11/2026",
+      "status": "Em análise; sem decisão divulgada até o fechamento"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "TCTMD, 10/11/2026",
+      "url": "https://www.tctmd.com/news/asundexian-first-factor-xia-inhibitor-gain-fda-approval"
+     },
+     {
+      "nome": "Pharmacy Times, 9/11/2026",
+      "url": "https://www.pharmacytimes.com/view/fda-requires-class-wide-glp-1-ra-labeling-changes-for-potential-naion-risk"
+     },
+     {
+      "nome": "OncLive, 10/11/2026",
+      "url": "https://www.onclive.com/view/fda-approves-pimicotinib-for-symptomatic-tgct"
+     },
+     {
+      "nome": "HCPLive, 9/11/2026",
+      "url": "https://www.hcplive.com/view/comp360-psilocybin-nda-fda-treatment-resistant-depression"
+     },
+     {
+      "nome": "OncLive, 13/11/2026",
+      "url": "https://www.onclive.com/view/fda-approves-durvalumab-plus-enfortumab-vedotin-for-cisplatin-ineligible-mibc"
+     },
+     {
+      "nome": "OncLive, 13/11/2026",
+      "url": "https://www.onclive.com/view/chmp-recommends-approval-of-belzutifan-plus-lenvatinib-for-advanced-ccrcc-after-pd--l-1-inhibition"
+     },
+     {
+      "nome": "CancerNetwork (pedido aceito)",
+      "url": "https://www.cancernetwork.com/view/fda-accepts-bla-for-ivonescimab-regimen-in-pretreated-egfr-mutated-nsclc"
+     }
+    ]
+   },
+   "agenda": [
+    {
+     "data": "17/11",
+     "evento": "Anúncio oficial previsto da OPAS sobre o status de eliminação do sarampo nos EUA"
+    },
+    {
+     "data": "17/11",
+     "evento": "Dia Mundial da Prematuridade"
+    },
+    {
+     "data": "18/11",
+     "evento": "Dia Mundial da DPOC e publicação completa do relatório GOLD 2027"
+    },
+    {
+     "data": "18 a 24/11",
+     "evento": "Semana Mundial de Conscientização sobre a Resistência Antimicrobiana (OMS)"
+    },
+    {
+     "data": "27/11",
+     "evento": "Decisão prevista do FDA sobre neladalquibe (CPNPC ALK+ pré-tratado)"
+    },
+    {
+     "data": "30/11",
+     "evento": "Decisões previstas do FDA: povetacicept (nefropatia por IgA) e giredestranto (mama inicial RE+/HER2−)"
+    }
+   ],
+   "brasil": {
+    "ticker": [
+     {
+      "area": "Pesquisa",
+      "texto": "Optimal-Stroke e Optimal-Diabetes, feitos no Brasil: meta sistólica < 120 mmHg ajudou após AVC, mas não no diabetes tipo 2",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/pesquisa-apoiada-pelo-ministerio-da-saude-aponta-reducao-de-eventos-cardiovasculares-apos-avc-isquemico-com-controle-intensivo-da-pressao-arterial"
+     },
+     {
+      "area": "Sarampo",
+      "texto": "Brasil tem 65 casos importados em 2026, 21 no Amazonas; R$ 524 mil para a tríplice fronteira",
+      "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/saude-repassa-r-524-mil-para-conter-casos-de-sarampo-no-amazonas"
+     },
+     {
+      "area": "Mpox",
+      "texto": "Ministério garante 25 mil doses de vacina; 832 casos no ano até 6/11",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/mpox-ministerio-da-saude-garante-25-mil-doses-de-vacina-apos-negociacao-internacional"
+     },
+     {
+      "area": "Anvisa",
+      "texto": "Genérico e similar de semaglutida registrados para diabetes tipo 2; 22 canetas da classe no ano",
+      "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/anvisa-registra-duas-novas-canetas-emagrecedoras-de-semaglutida"
+     },
+     {
+      "area": "SUS",
+      "texto": "Câncer de próstata: mais de 1 milhão de procedimentos em 2025; abiraterona e prostatectomia robótica no SUS",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/sus-ultrapassa-1-milhao-de-procedimentos-para-tratamento-do-cancer-de-prostata"
+     },
+     {
+      "area": "Saúde mental",
+      "texto": "Meu SUS Digital passa a oferecer teleatendimento para mulheres vulneráveis e pessoas com problemas com apostas",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/ministerio-da-saude-facilita-acesso-a-teleatendimento-de-saude-mental-no-meu-sus-digital"
+     }
+    ],
+    "capa": {
+     "kicker": "Pesquisa brasileira · NEJM · hipertensão",
+     "titulo": "Uma meta, dois resultados.",
+     "linhaFina": "Os dois maiores ensaios brasileiros sobre metas de pressão, com mais de 13,8 mil participantes somados, chegaram a respostas opostas: abaixo de 120 mmHg ajudou quem já teve AVC, mas não mudou o desfecho no diabetes tipo 2.",
+     "texto": [
+      "Há mais de uma década a medicina discute até onde baixar a pressão arterial. Em 2010, o ensaio ACCORD não mostrou benefício da meta sistólica abaixo de 120 mmHg em diabéticos; em 2015, o SPRINT mostrou benefício em não diabéticos de alto risco, mas excluiu quem tinha AVC prévio ou diabetes. Os estudos Optimal, conduzidos no Brasil com financiamento público do Proadi-SUS e apresentados no congresso da American Heart Association, foram desenhados para esses dois buracos.",
+      "No Optimal-Stroke, 4.368 pessoas com AVC prévio, em 30 centros, foram sorteadas para meta abaixo de 120 ou abaixo de 140 mmHg por cerca de quatro anos. Eventos cardiovasculares graves ocorreram em 10,9% contra 13,5%, e novo AVC em 4,7% contra 6,4%. No Optimal-Diabetes, 9.476 pessoas com diabetes tipo 2, em 33 centros, tiveram eventos em 6,0% contra 6,7%, sem diferença significativa.",
+      "[ANÁLISE] O resultado do diabetes repete o ACCORD, e o do AVC completa o SPRINT. Uma hipótese é que o cérebro com doença vascular já instalada ganhe mais com cada mmHg retirado, enquanto no diabetes o risco é espalhado por vários leitos (rim, coronárias, microvasos). Outra é de poder estatístico: o evento foi menos frequente no estudo de diabetes. Só o artigo completo, com HR, intervalos de confiança e eventos adversos (hipotensão, queda, lesão renal aguda), permite separar as duas explicações. A fonte consultada é o comunicado do Ministério da Saúde, que apoia o estudo.",
+      "Para quem estuda: o par é um exemplo de como o mesmo alvo terapêutico pode ter efeitos diferentes conforme a população, e de por que diretrizes evitam generalizar um ensaio para pacientes que ele não incluiu. As diretrizes brasileiras ainda não foram revistas com base nesses resultados."
+     ],
+     "camada": "FATO",
+     "evidencia": "Dois ECR (n = 4.368 e 9.476); Optimal-Stroke publicado no NEJM; dados do comunicado oficial",
+     "confianca": "Média",
+     "confiancaMotivo": "Estudos grandes e brasileiros, mas a fonte disponível é o comunicado do financiador, sem HR, intervalos de confiança nem segurança detalhada.",
+     "citacao": "Optimal-Stroke: 10,9% contra 13,5% de eventos graves. Optimal-Diabetes: 6,0% contra 6,7%, sem redução significativa.",
+     "fontes": [
+      {
+       "nome": "Ministério da Saúde, 11/11/2026",
+       "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/pesquisa-apoiada-pelo-ministerio-da-saude-aponta-reducao-de-eventos-cardiovasculares-apos-avc-isquemico-com-controle-intensivo-da-pressao-arterial"
+      }
+     ]
+    },
+    "numeros": [
+     {
+      "val": "10,9% × 13,5%",
+      "lab": "Optimal-Stroke · eventos cardiovasculares graves",
+      "nota": "sistólica < 120 vs < 140 mmHg; n = 4.368",
+      "src": {
+       "nome": "Ministério da Saúde, 11/11/2026",
+       "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/pesquisa-apoiada-pelo-ministerio-da-saude-aponta-reducao-de-eventos-cardiovasculares-apos-avc-isquemico-com-controle-intensivo-da-pressao-arterial"
+      }
+     },
+     {
+      "val": "6,0% × 6,7%",
+      "lab": "Optimal-Diabetes · eventos cardiovasculares",
+      "nota": "sem diferença significativa; n = 9.476",
+      "src": {
+       "nome": "Ministério da Saúde, 11/11/2026",
+       "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/pesquisa-apoiada-pelo-ministerio-da-saude-aponta-reducao-de-eventos-cardiovasculares-apos-avc-isquemico-com-controle-intensivo-da-pressao-arterial"
+      }
+     },
+     {
+      "val": "65",
+      "lab": "Casos de sarampo em 2026, todos importados",
+      "nota": "21 no Amazonas, na divisa com Peru e Colômbia",
+      "src": {
+       "nome": "Agência Brasil, 9/11/2026",
+       "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/saude-repassa-r-524-mil-para-conter-casos-de-sarampo-no-amazonas"
+      }
+     },
+     {
+      "val": "25 mil",
+      "lab": "Doses de vacina contra mpox garantidas",
+      "nota": "832 casos confirmados no ano até 6/11",
+      "src": {
+       "nome": "Ministério da Saúde, 8/11/2026",
+       "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/mpox-ministerio-da-saude-garante-25-mil-doses-de-vacina-apos-negociacao-internacional"
+      }
+     },
+     {
+      "val": "−69%",
+      "lab": "Mortes por covid-19 em 2026 vs 2025",
+      "nota": "437 contra 1,4 mil, dados até 31/10",
+      "src": {
+       "nome": "Ministério da Saúde, 10/11/2026",
+       "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/covid-19-casos-e-obitos-seguem-em-queda-no-brasil"
+      }
+     },
+     {
+      "val": "> 1 milhão",
+      "lab": "Procedimentos para câncer de próstata no SUS em 2025",
+      "nota": "alta de 32,6% sobre 2022",
+      "src": {
+       "nome": "Ministério da Saúde, 12/11/2026",
+       "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/sus-ultrapassa-1-milhao-de-procedimentos-para-tratamento-do-cancer-de-prostata"
+      }
+     }
+    ],
+    "cadernos": [
+     {
+      "id": "br-vig",
+      "nome": "Vigilância e vacinas",
+      "itens": [
+       {
+        "titulo": "Sarampo: o Brasil tem 65 casos importados e reforça a tríplice fronteira",
+        "camada": "FATO",
+        "evidencia": "Vigilância (Ministério da Saúde) e portaria de repasse",
+        "confianca": "Alta",
+        "data": "9/11/2026",
+        "texto": "Com a perda do status de eliminação nos EUA (capa da aba Mundo), a vigilância nas fronteiras ganha peso. Em 2026, o Brasil confirmou 65 casos de sarampo, todos importados, 21 deles no Amazonas, em Tabatinga, Benjamin Constant, São Paulo de Olivença e Atalaia do Norte. Portaria de 9/11 repassa R$ 524 mil para vacinação e vigilância em três desses municípios, e um Dia D conjunto com Peru e Colômbia vacinou em portos e comunidades ribeirinhas em 7/11. O país perdeu o certificado em 2019 e o recuperou em 2024.",
+        "prova": "Sarampo: pródromo com febre, tosse, coriza e conjuntivite; manchas de Koplik; exantema maculopapular craniocaudal. Notificação imediata. Vacina tríplice viral aos 12 meses e tetraviral aos 15 meses; bloqueio vacinal até 72 horas após a exposição.",
+        "fontes": [
+         {
+          "nome": "Agência Brasil, 9/11/2026",
+          "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/saude-repassa-r-524-mil-para-conter-casos-de-sarampo-no-amazonas"
+         }
+        ]
+       },
+       {
+        "titulo": "Mpox: 25 mil doses garantidas, para grupos definidos",
+        "camada": "FATO",
+        "evidencia": "Comunicado oficial",
+        "confianca": "Alta",
+        "data": "8/11/2026",
+        "texto": "Depois de semanas de falta de vacina e de um inquérito do Ministério Público Federal, o Ministério da Saúde garantiu 25 mil doses com o único fabricante, com entrega em cerca de três semanas. O público é restrito: pessoas vivendo com HIV (prioridade para CD4 abaixo de 200), usuários de PrEP, profissionais de laboratório que manipulam o vírus e contatos de risco. São duas doses com 28 dias de intervalo. O país tem 832 casos e uma morte em 2026 até 6/11, menos do que em 2025.",
+        "prova": "Mpox: lesões cutâneas que evoluem de mácula a pústula umbilicada e crosta, linfadenopatia, proctite. Diagnóstico por PCR da lesão. Isolamento até a queda das crostas.",
+        "fontes": [
+         {
+          "nome": "Ministério da Saúde, 8/11/2026",
+          "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/mpox-ministerio-da-saude-garante-25-mil-doses-de-vacina-apos-negociacao-internacional"
+         }
+        ]
+       },
+       {
+        "titulo": "Covid-19: menos casos graves no ano, mas alta de casos leves em 18 estados",
+        "camada": "FATO",
+        "evidencia": "Informe epidemiológico do Ministério da Saúde",
+        "confianca": "Alta",
+        "data": "10/11/2026",
+        "texto": "Com dados até 31/10, 2026 tem 63% menos casos de síndrome respiratória aguda grave por covid e 69% menos mortes do que 2025 (437 contra 1,4 mil). Nas últimas seis semanas, porém, os casos leves subiram em 18 unidades da Federação, entre elas Minas Gerais, São Paulo e Rio de Janeiro, todas em baixo risco. Das 20,3 milhões de doses distribuídas no ano, 7,4 milhões foram aplicadas. O informe não traz as variantes em circulação.",
+        "prova": "SRAG: síndrome gripal com dispneia, saturação < 95% ou desconforto respiratório. Notificação compulsória. Grupos prioritários para vacina de covid: idosos, imunossuprimidos e gestantes.",
+        "fontes": [
+         {
+          "nome": "Ministério da Saúde, 10/11/2026",
+          "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/covid-19-casos-e-obitos-seguem-em-queda-no-brasil"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "br-sus",
+      "nome": "SUS, regulação e atenção à saúde",
+      "itens": [
+       {
+        "titulo": "Optimal-Diabetes: a meta intensiva não reduziu eventos no diabetes tipo 2",
+        "camada": "FATO",
+        "evidencia": "ECR (n = 9.476); dados do comunicado oficial",
+        "confianca": "Média",
+        "data": "11/11/2026",
+        "texto": "Resumo e análise na capa. Ponto a reter: o resultado neutro em 9.476 diabéticos, em 33 centros, vai na mesma direção do ACCORD (2010), e a meta individual continua definida pelas diretrizes vigentes.",
+        "prova": "Hipertensão no diabetes: meta geralmente abaixo de 130/80 mmHg; IECA ou BRA na presença de albuminúria. Lembre que o ACCORD-BP não mostrou benefício no desfecho primário com sistólica < 120 mmHg.",
+        "fontes": [
+         {
+          "nome": "Ministério da Saúde, 11/11/2026",
+          "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/pesquisa-apoiada-pelo-ministerio-da-saude-aponta-reducao-de-eventos-cardiovasculares-apos-avc-isquemico-com-controle-intensivo-da-pressao-arterial"
+         }
+        ]
+       },
+       {
+        "titulo": "Anvisa registra genérico e similar de semaglutida para diabetes tipo 2",
+        "camada": "FATO",
+        "evidencia": "Ato regulatório",
+        "confianca": "Alta",
+        "data": "10/11/2026",
+        "texto": "Os dois produtos injetáveis foram registrados por comparação com o medicamento de referência e têm indicação para diabetes tipo 2 em adultos, não para obesidade, embora o noticiário os chame de canetas emagrecedoras. São 22 canetas da classe registradas no país em 2026. A reportagem não informa preço nem data de chegada às farmácias. Vale lembrar o alerta de NAION do FDA para toda a classe (aba Mundo).",
+        "prova": "Genérico x similar: o genérico é intercambiável e leva o nome do princípio ativo; o similar tem nome comercial e, desde 2014, também pode ser intercambiável se comprovar equivalência. Para biológicos e peptídeos, a via regulatória é diferente da dos sintéticos simples.",
+        "fontes": [
+         {
+          "nome": "Agência Brasil, 10/11/2026",
+          "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/anvisa-registra-duas-novas-canetas-emagrecedoras-de-semaglutida"
+         }
+        ]
+       },
+       {
+        "titulo": "Câncer de próstata: SUS amplia procedimentos e incorpora abiraterona e cirurgia robótica",
+        "camada": "FATO",
+        "evidencia": "Balanço oficial do Ministério da Saúde",
+        "confianca": "Média",
+        "data": "12/11/2026",
+        "texto": "Os procedimentos de quimioterapia, radioterapia e cirurgia para câncer de próstata passaram de 781,5 mil em 2022 para mais de 1 milhão em 2025. O SUS passou a oferecer prostatectomia radical assistida por robô na doença localizada ou localmente avançada e abiraterona na doença metastática sensível à castração. O Inca estima 77.920 casos novos por ano em 2026–2028. Os números de produção não medem filas, tempo até o tratamento nem resultados clínicos.",
+        "prova": "Câncer de próstata: rastreio com PSA por decisão compartilhada; estratificação por Gleason/ISUP; abiraterona inibe a CYP17 e exige prednisona para evitar excesso mineralocorticoide.",
+        "fontes": [
+         {
+          "nome": "Ministério da Saúde, 12/11/2026",
+          "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/sus-ultrapassa-1-milhao-de-procedimentos-para-tratamento-do-cancer-de-prostata"
+         }
+        ]
+       },
+       {
+        "titulo": "Meu SUS Digital oferece teleatendimento em saúde mental para dois públicos",
+        "camada": "FATO",
+        "evidencia": "Anúncio oficial",
+        "confianca": "Alta",
+        "data": "13/11/2026",
+        "texto": "O aplicativo passou a dar acesso ao Acolhe Mais, para mulheres em situação de vulnerabilidade, e ao Não Aposte Sua Saúde, para pessoas com problemas relacionados a jogos e apostas. Cada ciclo tem até 10 sessões por videochamada, com reavaliação no fim. O atendimento presencial segue pela atenção básica e pelos CAPS. A fonte não traz avaliação de eficácia do serviço.",
+        "prova": "Transtorno do jogo: classificado entre os transtornos aditivos no DSM-5 e na CID-11. Rastreie ideação suicida e endividamento; a terapia cognitivo-comportamental é a abordagem com mais evidência.",
+        "fontes": [
+         {
+          "nome": "Ministério da Saúde, 13/11/2026",
+          "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/ministerio-da-saude-facilita-acesso-a-teleatendimento-de-saude-mental-no-meu-sus-digital"
+         }
+        ]
+       },
+       {
+        "titulo": "Fragilidade do idoso: IVCF-20 entra no aplicativo dos agentes comunitários",
+        "camada": "FATO",
+        "evidencia": "Nota oficial",
+        "confianca": "Alta",
+        "data": "11/11/2026",
+        "texto": "Agentes comunitários poderão aplicar o Índice de Vulnerabilidade Clínico-Funcional (IVCF-20) no aplicativo e-SUS Território, durante as visitas domiciliares. São 20 perguntas em oito dimensões, de atividades de vida diária a cognição, humor e mobilidade. É um rastreio que orienta quem precisa de avaliação geriátrica ampla, e não um diagnóstico.",
+        "prova": "Grandes síndromes geriátricas: incapacidade cognitiva, instabilidade postural, imobilidade, incontinência e insuficiência familiar. Fragilidade pelo fenótipo de Fried: perda de peso, exaustão, fraqueza, lentidão e baixa atividade.",
+        "fontes": [
+         {
+          "nome": "Ministério da Saúde, 11/11/2026",
+          "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/ferramenta-digital-para-avaliar-vulnerabilidade-clinico-funcional-de-pessoas-idosas-e-incorporada-ao-trabalho-de-agentes-comunitarios-de-saude"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "aprovacoes": {
+     "anvisa": [
+      {
+       "farmaco": "Semaglutida (genérico e similar Loryvia)",
+       "indicacao": "Diabetes tipo 2 insuficientemente controlado em adultos",
+       "data": "10/11/2026",
+       "status": "Registrados"
+      }
+     ],
+     "fontes": [
+      {
+       "nome": "Agência Brasil, 10/11/2026",
+       "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-11/anvisa-registra-duas-novas-canetas-emagrecedoras-de-semaglutida"
+      }
+     ]
+    },
+    "agenda": [
+     {
+      "data": "17/11",
+      "evento": "Dia Mundial da Prematuridade (Novembro Roxo)"
+     },
+     {
+      "data": "18/11",
+      "evento": "Dia Mundial da DPOC; relatório GOLD 2027 completo"
+     },
+     {
+      "data": "18 a 24/11",
+      "evento": "Semana Mundial de Conscientização sobre a Resistência Antimicrobiana"
+     },
+     {
+      "data": "Novembro",
+      "evento": "Novembro Azul (saúde do homem e câncer de próstata)"
+     },
+     {
+      "data": "até 30/12",
+      "evento": "Prazo prorrogado da avaliação nacional dos laboratórios de microbiologia"
+     }
+    ]
+   },
+   "leituraCritica": [
+    {
+     "titulo": "Desfecho composto: quando um componente carrega o resto (OptimPacing)",
+     "texto": [
+      "1. O que o número diz. O composto caiu de 19,2% para 8,5% (HR 0,41), um efeito enorme para um dispositivo. Mas abra o composto: a morte ficou igual (7,4% contra 7,7%) e quase todo o ganho veio da cardiomiopatia induzida por pacing, que foi de 11,7% para 0%.",
+      "2. Por que isso pesa. A cardiomiopatia foi definida por exame de imagem (queda da fração de ejeção), num estudo aberto, em que o avaliador pode saber o braço do paciente. Desfechos “moles” em estudo aberto são os mais sujeitos a viés de aferição. Além disso, o ensaio foi interrompido cedo por superioridade, o que costuma inflar o tamanho do efeito.",
+      "3. O que ainda vale. O resultado é biologicamente plausível, porque a estimulação pelo sistema de condução preserva a sincronia ventricular, e a cardiomiopatia por pacing tem consequências reais. A pergunta certa é se a diferença na fração de ejeção vai virar menos internação e morte no seguimento longo. Até lá, a conclusão é: melhor no desfecho de imagem, sem prova em mortalidade.",
+      "4. Como ler qualquer composto. Pergunte: os componentes têm importância parecida para o paciente? O efeito vai na mesma direção em todos? O componente mais frequente é o menos grave? Se a resposta à última for sim, desconfie do título."
+     ]
+    }
+   ],
+   "historia": [
+    {
+     "titulo": "1963: a vacina do sarampo e a primeira eliminação",
+     "texto": "A vacina com vírus atenuado contra o sarampo foi licenciada nos EUA em 1963, a partir da cepa Edmonston, isolada em 1954 por John Enders e Thomas Peebles. Antes dela, o país registrava milhões de infecções por ano. A segunda dose foi recomendada em 1989, após surtos em vacinados com dose única, e em 2000 o país declarou a eliminação. As Américas foram a primeira região do mundo certificada livre do sarampo, em 2016; o certificado caiu em 2018, com a Venezuela, e o Brasil perdeu o seu em 2019. A história mostra que a eliminação é um estado que se mantém com cobertura, não um ponto de chegada."
+    },
+    {
+     "titulo": "2010 e 2015: ACCORD, SPRINT e a disputa pela meta de pressão",
+     "texto": "O ACCORD-BP (2010) testou sistólica abaixo de 120 mmHg em diabéticos e não reduziu o desfecho primário. O SPRINT (2015), em não diabéticos de alto risco, reduziu eventos e mortes e foi parado cedo. As diretrizes americanas de 2017 baixaram a meta para 130/80 mmHg. Os estudos Optimal, desta semana, testam exatamente os grupos que o SPRINT deixou de fora."
+    }
+   ],
+   "fronteiras": [
+    {
+     "pergunta": "Os inibidores do fator XI vão substituir os anticoagulantes atuais?",
+     "texto": "O asundexian venceu na prevenção secundária do AVC não cardioembólico, em cima do antiplaquetário, mas perdeu para a apixabana na fibrilação atrial. Outros fármacos da classe, incluindo anticorpos monoclonais de aplicação mensal, estão em fase 3. A pergunta é se o menor sangramento compensa uma eficácia possivelmente menor em situações de alto risco trombótico."
+    },
+    {
+     "pergunta": "Quanto tempo leva para um país recuperar a eliminação do sarampo?",
+     "texto": "O Brasil perdeu o certificado em 2019 e o recuperou em 2024, depois de interromper a transmissão e retomar a cobertura. Nos EUA, a recuperação exige que os surtos atuais terminem e que nenhuma nova cadeia dure um ano."
+    },
+    {
+     "pergunta": "O pacing do sistema de condução vai virar o padrão?",
+     "texto": "Diretrizes já admitem o pacing fisiológico em pacientes com previsão de alta carga de estimulação ventricular. O OptimPacing reforça essa tendência, mas a curva de aprendizado, o tempo de procedimento e a durabilidade dos eletrodos ainda limitam a adoção."
+    }
+   ],
+   "estudo": {
+    "temas": [
+     {
+      "tema": "Sarampo e imunização",
+      "porque": "Clínica, notificação, bloqueio vacinal, calendário (tríplice e tetraviral), imunidade de rebanho e o conceito de eliminação. Caiu em provas de residência após a perda do certificado brasileiro em 2019."
+     },
+     {
+      "tema": "Metas pressóricas",
+      "porque": "ACCORD, SPRINT e agora os Optimal: saiba quem foi estudado em cada ensaio e a meta recomendada para AVC prévio, diabetes e idosos."
+     },
+     {
+      "tema": "Anticoagulantes e antiagregantes",
+      "porque": "Mecanismos (anti-Xa, antitrombina, anti-XIa, inibidores de P2Y12), indicações e manejo de sangramento."
+     },
+     {
+      "tema": "Câncer de bexiga",
+      "porque": "Hematúria, estadiamento, BCG intravesical e o papel crescente dos conjugados anticorpo-fármaco."
+     },
+     {
+      "tema": "Leitura de desfechos compostos",
+      "porque": "Tema clássico de medicina baseada em evidências: veja a leitura crítica desta edição."
+     }
+    ],
+    "leituras": [
+     {
+      "titulo": "SPRINT Research Group. A Randomized Trial of Intensive versus Standard Blood-Pressure Control (NEJM, 2015)",
+      "autor": "SPRINT Research Group",
+      "porque": "Base para entender o que os estudos Optimal acrescentam."
+     },
+     {
+      "titulo": "ACCORD Study Group. Effects of Intensive Blood-Pressure Control in Type 2 Diabetes Mellitus (NEJM, 2010)",
+      "autor": "ACCORD Study Group",
+      "porque": "O precedente direto do Optimal-Diabetes."
+     },
+     {
+      "titulo": "OptimPacing (NEJM, 2026)",
+      "autor": "Investigadores do OptimPacing",
+      "porque": "Bom exercício para abrir um desfecho composto, componente por componente."
+     }
+    ],
+    "diretrizes": [
+     {
+      "titulo": "Relatório GOLD 2027 (DPOC)",
+      "nota": "Sai completo em 18/11. Prévia: LAMA como início no grupo A, seis situações de pré-DPOC (entre elas PRISm) e tomografia de tórax ao menos uma vez em cada paciente, onde houver acesso."
+     },
+     {
+      "titulo": "Definição global de ACLF (AASLD, EASL, APASL, ALEH e SOLDA)",
+      "nota": "Primeira definição única de insuficiência hepática crônica agudizada: doença hepática crônica avançada + falência hepática (bilirrubina ≥ 5 mg/dL e INR ≥ 1,5) + ao menos uma disfunção extra-hepática; tipos A e B e graus 1 a 3."
+     },
+     {
+      "titulo": "Bula de agonistas de GLP-1 (FDA)",
+      "nota": "Inclusão do risco potencial de NAION em Advertências e Precauções para toda a classe."
+     },
+     {
+      "titulo": "Diretriz Brasileira de Hipertensão Arterial (SBC)",
+      "nota": "Compare as metas vigentes com os resultados dos estudos Optimal; ainda não houve atualização."
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "Healio, 9/11/2026",
+      "url": "https://www.healio.com/news/pulmonology/20261109/2027-gold-report-discusses-ct-use-nonpharmacological-treatments-cvd-in-copd"
+     },
+     {
+      "nome": "AASLD, 30/10/2026",
+      "url": "https://www.aasld.org/aasld-joins-global-liver-societies-establish-unified-definition-acute-chronic-liver-failure"
+     },
+     {
+      "nome": "Pharmacy Times, 9/11/2026",
+      "url": "https://www.pharmacytimes.com/view/fda-requires-class-wide-glp-1-ra-labeling-changes-for-potential-naion-risk"
+     },
+     {
+      "nome": "Ministério da Saúde, 11/11/2026",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/pesquisa-apoiada-pelo-ministerio-da-saude-aponta-reducao-de-eventos-cardiovasculares-apos-avc-isquemico-com-controle-intensivo-da-pressao-arterial"
+     }
+    ]
+   },
+   "quiz": [
+    {
+     "p": "Qual é o critério técnico para um país perder o status de eliminação do sarampo?",
+     "r": "Transmissão contínua de uma mesma cadeia do vírus por 12 meses ou mais. Casos importados isolados não bastam."
+    },
+    {
+     "p": "Por que o asundexian poderia sangrar menos do que os anticoagulantes atuais?",
+     "r": "Porque o fator XI atua sobretudo na amplificação do trombo e pouco na hemostasia normal. Ainda assim, houve mais sangramento gastrointestinal do que com placebo no OCEANIC-STROKE."
+    },
+    {
+     "p": "No OptimPacing, qual componente explicou quase todo o benefício?",
+     "r": "A cardiomiopatia induzida por pacing (0% contra 11,7%). A mortalidade foi semelhante entre os grupos."
+    },
+    {
+     "p": "Os estudos Optimal-Stroke e Optimal-Diabetes chegaram ao mesmo resultado?",
+     "r": "Não. A meta < 120 mmHg reduziu eventos graves após AVC (10,9% contra 13,5%), mas não no diabetes tipo 2 (6,0% contra 6,7%, sem significância), como no ACCORD."
+    },
+    {
+     "p": "Qual é o quadro clínico típico da NAION?",
+     "r": "Perda visual monocular súbita e indolor, com edema de disco óptico e defeito pupilar aferente relativo."
+    },
+    {
+     "p": "No VOLGA, qual foi o custo do benefício de sobrevida?",
+     "r": "Mais toxicidade: eventos de grau 3 ou 4 em 64% contra 44%, neuropatia periférica em 18% e um óbito relacionado ao tratamento."
+    },
+    {
+     "p": "A vacina rVSV-ZEBOV protege contra o surto atual de Ebola?",
+     "r": "Não. Ela é contra a espécie Zaire; o surto atual é do vírus Bundibugyo, sem vacina licenciada."
+    }
+   ],
+   "glossario": [
+    {
+     "termo": "Eliminação",
+     "def": "Ausência de transmissão endêmica de uma doença em uma região por pelo menos 12 meses, com vigilância adequada. Diferente de erradicação, que é o fim global do agente."
+    },
+    {
+     "termo": "R0",
+     "def": "Número básico de reprodução: quantas pessoas, em média, um caso infecta numa população sem imunidade. No sarampo, de 12 a 18."
+    },
+    {
+     "termo": "Fator XIa",
+     "def": "Forma ativada do fator XI da coagulação, que amplifica a geração de trombina. Alvo de uma nova classe de antitrombóticos."
+    },
+    {
+     "termo": "Pacing do ramo esquerdo",
+     "def": "Estimulação cardíaca com o eletrodo na região do ramo esquerdo do feixe de His, que usa o sistema de condução natural e preserva a sincronia dos ventrículos."
+    },
+    {
+     "termo": "NAION",
+     "def": "Neuropatia óptica isquêmica anterior não arterítica: infarto da cabeça do nervo óptico, com perda visual súbita e indolor."
+    },
+    {
+     "termo": "IAH",
+     "def": "Índice de apneia-hipopneia: número de pausas respiratórias por hora de sono; mede a gravidade da apneia."
+    },
+    {
+     "termo": "Conjugado anticorpo-fármaco",
+     "def": "Anticorpo ligado a um quimioterápico, que entrega a droga à célula que expressa o alvo (no enfortumabe, a nectina-4)."
+    },
+    {
+     "termo": "Desfecho composto",
+     "def": "Desfecho que soma eventos diferentes (por exemplo, morte, internação e achado de imagem). Aumenta o poder estatístico, mas pode esconder um componente que carrega o resultado."
+    },
+    {
+     "termo": "IVCF-20",
+     "def": "Índice de Vulnerabilidade Clínico-Funcional, questionário de 20 itens para rastrear fragilidade em idosos na atenção básica."
+    }
+   ]
+  },
+  {
+   "id": "2026-11-14",
+   "numero": 5,
+   "data": "2026-11-14",
+   "tempoLeitura": 24,
+   "fechamento": "Fechamento: sábado, 14/11/2026, 6h50 (Brasília). Não houve edição em 13/11; esta cobre de 12 a 13/11. Esclarecimento: na edição de 12/11 citamos 5,1 mil casos e 8 mortes de sarampo nos EUA em 2026; a reportagem de 11/11 soma quase 7.500 casos e 11 mortes desde o início de 2025, ou seja, são recortes diferentes e não houve erro. Dados conferidos nas fontes de cada nota. Não encontramos, até o fechamento, notícia nova com fonte oficial sobre Minas Gerais ou Conselheiro Lafaiete para esta edição.",
+   "ticker": [
+    {
+     "area": "NEJM",
+     "texto": "OptimPacing: marca-passo no ramo esquerdo reduziu morte, internação por IC e cardiomiopatia induzida por pacing (8,5% vs 19,2%; HR 0,41)",
+     "url": "https://www.tctmd.com/news/better-outcomes-lbb-vs-rv-pacing-atrioventricular-block"
+    },
+    {
+     "area": "FDA",
+     "texto": "Asundexian (Sunharbo), primeiro inibidor do fator XIa, aprovado para prevenção secundária de AVC isquêmico não cardioembólico",
+     "url": "https://www.tctmd.com/news/asundexian-first-factor-xia-inhibitor-gain-fda-approval"
+    },
+    {
+     "area": "Oncologia",
+     "texto": "FDA aprova durvalumabe + enfortumabe vedotina antes da cistectomia no câncer de bexiga inelegível à cisplatina (VOLGA: EFS HR 0,51)",
+     "url": "https://www.onclive.com/view/fda-approves-durvalumab-plus-enfortumab-vedotin-for-cisplatin-ineligible-mibc"
+    },
+    {
+     "area": "Metabolismo",
+     "texto": "Orforglipron oral reduz o IAH em cerca de 13 eventos/h além do placebo na apneia do sono (ATTAIN-OSA, JAMA)",
+     "url": "https://www.tctmd.com/news/attain-osa-oral-glp-1-linked-fewer-breathing-interruptions"
+    },
+    {
+     "area": "Lípides",
+     "texto": "MAR001 (anti-ANGPTL4) reduziu triglicerídeos em até 45,5% em fase 2a, sem desfecho clínico",
+     "url": "https://www.tctmd.com/news/angptl4-targeting-drug-high-triglycerides-moves-ahead-tydal-timi-78"
+    },
+    {
+     "area": "Ebola",
+     "texto": "Bundibugyo: 11.145 casos e 5.437 mortes confirmados, segundo o CDC (dados até 10/11)",
+     "url": "https://www.cdc.gov/ebola/situation-summary/"
+    },
+    {
+     "area": "Sarampo",
+     "texto": "Painel da OPAS delibera a portas fechadas se os EUA perderam o status de eliminação; anúncio esperado no início da semana de 16/11",
+     "url": "https://www.newstribune.com/news/2026/nov/11/us-faces-loss-of-measles-free-status-as-experts-meet-for-review/"
+    }
+   ],
+   "capa": {
+    "kicker": "NEJM · AHA 2026 · bloqueio atrioventricular",
+    "titulo": "Estimular pelo ramo esquerdo.",
+    "linhaFina": "No OptimPacing, 685 pacientes com bloqueio atrioventricular foram sorteados entre marca-passo no ramo esquerdo do feixe de His e estimulação clássica do ventrículo direito. O desfecho composto caiu de 19,2% para 8,5%. A diferença veio quase toda de uma complicação evitável: a cardiomiopatia induzida por pacing.",
+    "texto": [
+     "O marca-passo trata a bradicardia, mas a forma de estimular o coração importa. A estimulação tradicional do ventrículo direito (VD) ativa o músculo cardíaco de célula em célula, em vez de usar o sistema de condução, e produz um QRS largo e uma contração dessincronizada. Em parte dos pacientes, com o tempo, isso derruba a fração de ejeção: é a cardiomiopatia induzida por pacing. O pacing do ramo esquerdo do feixe de His (LBB, de left bundle branch) leva o eletrodo ao septo interventricular e captura o sistema de condução, mantendo a ativação mais fisiológica.",
+     "O OptimPacing, apresentado em 9/11 no congresso da American Heart Association (AHA) em Chicago e publicado ao mesmo tempo no New England Journal of Medicine, foi um ensaio randomizado e aberto em 17 centros na China, em Hong Kong, no Reino Unido, na Polônia e nos EUA. Foram 685 pacientes com indicação de marca-passo por bloqueio atrioventricular (idade média de 68,4 anos; 57,5% homens), a maioria com fração de ejeção normal. O desfecho primário foi a soma de morte por qualquer causa, internação por insuficiência cardíaca (IC) ou cardiomiopatia induzida por pacing, em mediana de 35,1 meses.",
+     "O composto ocorreu em 8,5% com LBB e 19,2% com VD (HR 0,41; IC 95% 0,23 a 0,75). A cardiomiopatia induzida por pacing foi de 0% contra 11,7%, e foi ela que puxou a diferença. A internação por IC foi de 1,5% contra 2,9%, e a morte por qualquer causa, de 7,4% contra 7,7%, sem diferença. Conta do jornal: diferença absoluta de 10,7 pontos percentuais no composto, o que dá um NNT próximo de 9 em quase três anos.",
+     "[ANÁLISE] O resultado é forte, mas pede cautela. O comitê independente recomendou parar o ensaio por superioridade na análise interina planejada, e a interrupção precoce tende a superestimar o efeito. O desenho é aberto, alguns ecocardiogramas estavam ausentes e o desfecho depende de medir a fração de ejeção, o que admite viés de observador. Mortalidade e internação por IC, que são os desfechos que mais importam ao paciente, não mostraram diferença relevante. O financiamento é público e acadêmico (programas de ciência e hospitais de Jiangsu, Fundação Nacional de Ciências Naturais da China e West China Hospital)."
+    ],
+    "camada": "FATO",
+    "evidencia": "ECR aberto, interrompido por superioridade (n = 685); publicado no NEJM",
+    "confianca": "Média",
+    "confiancaMotivo": "Desfecho composto robusto no papel, mas puxado por um componente de imagem; parada precoce e desenho aberto. Falta ver mortalidade e IC em seguimento mais longo e em outras populações.",
+    "citacao": "Os componentes do desfecho: cardiomiopatia induzida por pacing 0% (LBB) contra 11,7% (VD); morte por qualquer causa 7,4% contra 7,7%.",
+    "fontes": [
+     {
+      "nome": "TCTMD, 9/11/2026",
+      "url": "https://www.tctmd.com/news/better-outcomes-lbb-vs-rv-pacing-atrioventricular-block"
+     }
+    ]
+   },
+   "numeros": [
+    {
+     "val": "8,5% × 19,2%",
+     "lab": "OptimPacing · morte, internação por IC ou cardiomiopatia por pacing",
+     "nota": "LBB vs VD; HR 0,41; n = 685",
+     "src": {
+      "nome": "TCTMD, 9/11/2026",
+      "url": "https://www.tctmd.com/news/better-outcomes-lbb-vs-rv-pacing-atrioventricular-block"
+     }
+    },
+    {
+     "val": "HR 0,51",
+     "lab": "VOLGA · sobrevida livre de eventos",
+     "nota": "durvalumabe + enfortumabe vs cistectomia isolada; n = 695 (3 braços)",
+     "src": {
+      "nome": "OncLive, 13/11/2026",
+      "url": "https://www.onclive.com/view/fda-approves-durvalumab-plus-enfortumab-vedotin-for-cisplatin-ineligible-mibc"
+     }
+    },
+    {
+     "val": "−45,5%",
+     "lab": "MAR001 900 mg · triglicerídeos em jejum, semana 12",
+     "nota": "ajustado ao placebo; fase 2a; n = 236; sem desfecho clínico",
+     "src": {
+      "nome": "TCTMD, 9/11/2026",
+      "url": "https://www.tctmd.com/news/angptl4-targeting-drug-high-triglycerides-moves-ahead-tydal-timi-78"
+     }
+    },
+    {
+     "val": "−17,8 × −4,5",
+     "lab": "ATTAIN-OSA 1 · variação do IAH em 52 semanas",
+     "nota": "orforglipron vs placebo; n = 363; financiado pela Eli Lilly",
+     "src": {
+      "nome": "TCTMD, 9/11/2026",
+      "url": "https://www.tctmd.com/news/attain-osa-oral-glp-1-linked-fewer-breathing-interruptions"
+     }
+    },
+    {
+     "val": "11.145",
+     "lab": "Ebola Bundibugyo · casos confirmados",
+     "nota": "5.437 mortes; CDC, dados até 10/11 (RD Congo: 11.114)",
+     "src": {
+      "nome": "CDC, 12/11/2026",
+      "url": "https://www.cdc.gov/ebola/situation-summary/"
+     }
+    }
+   ],
+   "cadernos": [
+    {
+     "id": "cardio",
+     "nome": "Coração e lipídios",
+     "itens": [
+      {
+       "titulo": "TYDAL-TIMI 78: anticorpo anti-ANGPTL4 derruba triglicerídeos em até 45%",
+       "camada": "FATO",
+       "evidencia": "ECR fase 2a, duplo-cego (n = 236); publicado no NEJM",
+       "confianca": "Média",
+       "data": "9/11/2026",
+       "texto": "A hipertrigliceridemia é um fator de risco residual pouco tratado, e a ANGPTL4 inibe a lipase de lipoproteínas, a enzima que remove triglicerídeos do sangue. O MAR001 é um anticorpo que bloqueia essa proteína. O TYDAL-TIMI 78, apresentado no AHA 2026 e publicado no NEJM, sorteou 236 adultos (idade média de 60,4 anos; triglicerídeos basais medianos de 249,5 mg/dL) para 300, 450 ou 900 mg por via subcutânea a cada 4 semanas, ou placebo. Na semana 12, a redução dos triglicerídeos em jejum, ajustada ao placebo, foi de 39,1%, 40,9% e 45,5% (todos com P < 0,001); em quem partia de 500 mg/dL ou mais, de 57,4% a 72,2%. Eventos adversos graves ocorreram em 3% com o fármaco e 7% com placebo, sem pancreatite. Limitações: só marcadores lipídicos, exposição humana curta e triglicerídeos ainda sem validação como alvo causal de eventos aterotrombóticos. Financiamento: Marea Therapeutics, empresa desenvolvedora; a investigadora principal declara apoio de pesquisa da empresa. Só a parte A foi publicada.",
+       "prova": "Classifique as hipertrigliceridemias: ≥ 150 mg/dL é alterado; ≥ 500 mg/dL exige tratamento para prevenir pancreatite aguda (fibratos, ômega-3 em dose alta). Lembre que triglicerídeos altos sem pancreatite são marcador de risco, e o benefício cardiovascular de reduzi-los depende do fármaco.",
+       "fontes": [
+        {
+         "nome": "TCTMD, 9/11/2026",
+         "url": "https://www.tctmd.com/news/angptl4-targeting-drug-high-triglycerides-moves-ahead-tydal-timi-78"
+        }
+       ]
+      },
+      {
+       "titulo": "OptimPacing: pacing do ramo esquerdo evita a cardiomiopatia induzida por pacing",
+       "camada": "FATO",
+       "evidencia": "ECR aberto, interrompido por superioridade (n = 685); publicado no NEJM",
+       "confianca": "Média",
+       "data": "9/11/2026",
+       "texto": "Resumo na capa. Aqui vale o gancho clínico: em pacientes com bloqueio atrioventricular que vão ficar muito tempo estimulados no VD, a dessincronia pode causar queda da fração de ejeção. Nenhum paciente do grupo LBB teve cardiomiopatia induzida por pacing, contra 11,7% no grupo VD, mas a mortalidade foi igual (7,4% contra 7,7%).",
+       "prova": "Marca-passo: indicações da classe I incluem bloqueio AV total ou de 2º grau avançado sintomático e doença do nó sinusal sintomática. Saiba que ressincronização (CRT) é outra indicação, e que a cardiomiopatia por pacing costuma aparecer com mais de 20% a 40% de estimulação ventricular.",
+       "fontes": [
+        {
+         "nome": "TCTMD, 9/11/2026",
+         "url": "https://www.tctmd.com/news/better-outcomes-lbb-vs-rv-pacing-atrioventricular-block"
+        }
+       ]
+      }
+     ],
+     "box": {
+      "titulo": "E o Brasil?",
+      "texto": "O pacing do ramo esquerdo exige eletrodos e equipe treinada, o que concentra o método em centros de referência. O Optimal-Stroke, da aba Brasil, foi feito em 30 centros brasileiros e mostra que ensaio de grande porte aqui é possível."
+     }
+    },
+    {
+     "id": "neuro",
+     "nome": "Cérebro e nervos",
+     "itens": [
+      {
+       "titulo": "FDA aprova asundexian, o primeiro inibidor do fator XIa, após AVC isquêmico",
+       "camada": "FATO",
+       "evidencia": "Aprovação regulatória, com base no ECR de fase 3 OCEANIC-STROKE (comunicado da empresa)",
+       "confianca": "Média",
+       "data": "9/11/2026",
+       "texto": "O fator XI da coagulação participa da amplificação do trombo, mas pouco da hemostasia normal; por isso, bloqueá-lo poderia reduzir trombose com menos sangramento. A Bayer anunciou em 9/11 a aprovação do asundexian (Sunharbo) nos EUA, 50 mg uma vez ao dia, para adultos com AVC isquêmico não cardioembólico recente (NIHSS até 15) ou AIT de alto risco, em uso de antiplaquetário. Segundo a reportagem, no OCEANIC-STROKE houve redução relativa de 26% e absoluta de 2,2% no AVC isquêmico em 2 anos, sem aumento de sangramento maior pelo critério ISTH. Os números de n, HR e IC não constam da fonte consultada, e o jornal não os publica. Pontos de atenção: sangramento gastrointestinal um pouco maior (2,7 contra 2,1 por 100 pacientes-ano), enzimas hepáticas elevadas (cerca de três quartos leves, segundo a empresa), não recomendado em insuficiência hepática moderada ou grave e com indutores fortes de P-gp e CYP3A4. Não está aprovado para fibrilação atrial. Preço de lista de US$ 748,50 por 30 dias. Já aprovado na China; em análise na Europa e no Japão.",
+       "prova": "Prevenção secundária do AVC isquêmico: antiplaquetário (AAS, clopidogrel; dupla antiagregação por 21 dias em AVC leve ou AIT de alto risco), estatina de alta potência e controle pressórico. Saiba distinguir AVC cardioembólico (FA, anticoagulante) de não cardioembólico.",
+       "fontes": [
+        {
+         "nome": "TCTMD, 10/11/2026",
+         "url": "https://www.tctmd.com/news/asundexian-first-factor-xia-inhibitor-gain-fda-approval"
+        }
+       ]
+      },
+      {
+       "titulo": "Plixorafenib: respostas duradouras em gliomas com BRAF V600E, em amostra pequena",
+       "camada": "ANÁLISE",
+       "evidencia": "Fase 1/2a, braço único (n = 9 na análise de eficácia); apresentado em congresso (SNO 2026)",
+       "confianca": "Baixa",
+       "data": "13/11/2026",
+       "texto": "Gliomas com mutação BRAF V600E têm opções limitadas quando resistem a inibidores de BRAF e MEK. O plixorafenib (PLX8394) é um inibidor de BRAF desenhado para evitar a ativação paradoxal da via. No estudo PLX120-03 (fase 1/2a), em 9 pacientes com tumores BRAF V600E do sistema nervoso central sem exposição prévia a inibidores da via MAPK (5 gliomas de alto grau e 4 de baixo grau ou glioneuronais), a taxa de resposta foi de 67% (6 respostas parciais; 80% no alto grau e 50% no baixo grau). A sobrevida livre de progressão foi de 56% em 12 meses e 33% em 24 meses; a duração mediana do tratamento, de 13,8 meses. Limitações: n muito pequeno, sem controle, histologias heterogêneas, dados de congresso sem revisão por pares, e parte das elevações hepáticas de grau 3 ou mais ocorreu com cobicistate, o que dificulta atribuir a toxicidade. A fonte não nomeia o patrocinador.",
+       "prova": "Classificação dos tumores do SNC (OMS 2021) usa marcadores moleculares: IDH, 1p/19q, BRAF. Lembre que o glioblastoma é IDH-selvagem e que BRAF V600E aparece sobretudo em gliomas pediátricos de baixo grau e xantoastrocitoma pleomórfico.",
+       "fontes": [
+        {
+         "nome": "OncLive, 13/11/2026",
+         "url": "https://www.onclive.com/view/plixorafenib-elicits-durable-responses-in-braf-altered-cns-tumors"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "metab",
+     "nome": "Obesidade e metabolismo",
+     "itens": [
+      {
+       "titulo": "ATTAIN-OSA: orforglipron oral reduz o índice de apneia-hipopneia em 52 semanas",
+       "camada": "FATO",
+       "evidencia": "Dois ECR de fase 3 (n = 363 e 349); publicado no JAMA",
+       "confianca": "Alta",
+       "data": "9/11/2026",
+       "texto": "A apneia obstrutiva do sono (AOS) moderada a grave, comum na obesidade, é tratada com pressão positiva (PAP), mas muitos não aderem. O orforglipron é um agonista oral do receptor de GLP-1, não peptídico. O ATTAIN-OSA incluiu adultos com AOS moderada a grave e IMC ≥ 27 kg/m², em 66 centros de nove países (inclusive o Brasil): 363 sem PAP e 349 que já usavam PAP. Em 52 semanas, o índice de apneia-hipopneia (IAH) caiu em média 17,8 eventos/h contra 4,5 com placebo no primeiro ensaio, e 17,3 contra 5,3 no segundo (P < 0,001). O peso caiu 10% a 11%, contra 1% a 2%. Houve mais náusea, diarreia e constipação, na maioria leves a moderadas. Limitações levantadas no editorial: critério subjetivo para quem “não podia usar PAP”, exclusão de diabéticos, menos de 4% de participantes negros, efeito aparentemente menor na AOS moderada e comparação indireta desfavorável com a tirzepatida (queda percentual do IAH de cerca de 26% a 35% contra cerca de 50% no SURMOUNT-OSA). Não há dados cardiovasculares. Financiamento: Eli Lilly. O orforglipron foi aprovado nos EUA em abril de 2026 para perda de peso, mas não para apneia. A fonte não informa os intervalos de confiança.",
+       "prova": "AOS: IAH de 5 a 14 é leve, 15 a 29 moderada e ≥ 30 grave. Tratamento: perda de peso, PAP, aparelho de avanço mandibular, cirurgia e, nos EUA, tirzepatida para AOS moderada a grave com obesidade.",
+       "fontes": [
+        {
+         "nome": "TCTMD, 9/11/2026",
+         "url": "https://www.tctmd.com/news/attain-osa-oral-glp-1-linked-fewer-breathing-interruptions"
+        }
+       ]
+      },
+      {
+       "titulo": "Orforglipron e pressão arterial: queda de 5 a 6 mmHg na sistólica, em análise post hoc",
+       "camada": "ANÁLISE",
+       "evidencia": "Análise post hoc combinada de dois ECR fase 3 (n = 3.127 e 1.613); resumo de congresso",
+       "confianca": "Média",
+       "data": "8/11/2026",
+       "texto": "Uma análise de ATTAIN-1 (obesidade sem diabetes) e ATTAIN-2 (diabetes tipo 2), apresentada no AHA 2026, comparou a pressão arterial ao longo de 72 semanas. A sistólica caiu 6,1 contra 0,8 mmHg (ATTAIN-1) e 4,9 contra 1,5 mmHg (ATTAIN-2), ambos com P < 0,001; a diastólica caiu em ATTAIN-1 (2,5 contra 0,9 mmHg), mas não houve diferença em ATTAIN-2 (P = 0,87). A perda de peso explicou cerca de 58% do efeito sistólico no ATTAIN-1 e cerca de 81% no ATTAIN-2. Limitações: análise post hoc, pressão aferida só no consultório, sem dados sobre ajuste de anti-hipertensivos e redução expressiva também no placebo nos subgrupos de hipertensão estágio 2. A fonte não informa o financiamento; os ensaios de origem são da Eli Lilly.",
+       "prova": "Análise post hoc gera hipótese, não confirma. Saiba apontar essa limitação em questões de interpretação de estudos, e lembre que a perda de peso reduz a pressão arterial de forma dose-dependente.",
+       "fontes": [
+        {
+         "nome": "Pharmacy Times, 8/11/2026 (atualizado em 11/11)",
+         "url": "https://www.pharmacytimes.com/view/orforglipron-lowers-systolic-bp-in-attain-1-attain-2-analyses"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "onco",
+     "nome": "Oncologia",
+     "itens": [
+      {
+       "titulo": "FDA aprova durvalumabe com enfortumabe vedotina no câncer de bexiga musculoinvasivo",
+       "camada": "FATO",
+       "evidencia": "Aprovação regulatória; ECR fase 3 aberto VOLGA (n = 695)",
+       "confianca": "Alta",
+       "data": "13/11/2026",
+       "texto": "O câncer de bexiga musculoinvasivo (MIBC) é tratado com cistectomia radical, precedida de quimioterapia com cisplatina; quem não tolera cisplatina tem poucas opções. Em 13/11, o FDA aprovou, para esses pacientes, durvalumabe (anti-PD-L1) com enfortumabe vedotina (conjugado anticorpo-fármaco anti-nectina-4) antes da cirurgia, seguidos de durvalumabe adjuvante. No VOLGA (n = 695, três braços de 1:1:1), o braço aprovado (n = 233) reduziu o risco de evento: HR 0,51 para sobrevida livre de eventos (IC 95% 0,38 a 0,67) e HR 0,58 para sobrevida global (IC 95% 0,40 a 0,83) contra cistectomia isolada; a mediana de sobrevida global não foi atingida. Eventos adversos de grau 3 ou 4 em 64% contra 44%, eventos imunomediados em 33% (grau 3 ou 4 em 11%), neuropatia periférica em 18% e um óbito relacionado ao tratamento (0,4%). O braço com tremelimumabe melhorou a EFS (HR 0,61), mas sem significância na sobrevida global interina, e não foi aprovado. Limitação: ensaio aberto.",
+       "prova": "MIBC (T2–T4a, N0–N1): quimioterapia neoadjuvante à base de cisplatina e cistectomia radical é o padrão. Saiba os critérios de inelegibilidade à cisplatina (por exemplo, TFG < 60 mL/min, neuropatia, ECOG 2).",
+       "fontes": [
+        {
+         "nome": "OncLive, 13/11/2026",
+         "url": "https://www.onclive.com/view/fda-approves-durvalumab-plus-enfortumab-vedotin-for-cisplatin-ineligible-mibc"
+        }
+       ]
+      },
+      {
+       "titulo": "CHMP recomenda belzutifan com lenvatinibe no carcinoma renal pós-imunoterapia",
+       "camada": "FATO",
+       "evidencia": "Parecer regulatório europeu; ECR fase 3 aberto LITESPARK-011 (n = 747)",
+       "confianca": "Média",
+       "data": "13/11/2026",
+       "texto": "O belzutifan inibe o HIF-2α, vinculado à via VHL, central no carcinoma de células claras renal (ccRCC). O comitê de medicamentos da Agência Europeia (CHMP) recomendou a combinação com lenvatinibe para adultos com ccRCC avançado após inibidor de PD-1 ou PD-L1; a decisão da Comissão Europeia é esperada em até dois meses. No LITESPARK-011 (n = 747; 371 contra 376 com cabozantinibe), a sobrevida livre de progressão mediana foi de 14,6 contra 10,6 meses (HR 0,74; IC 95% 0,61 a 0,89) na primeira análise interina e HR 0,70 (IC 95% 0,59 a 0,84) na segunda. Na análise final de sobrevida global, HR 0,85 (IC 95% 0,70 a 1,03), sem significância. Anemia em 69,2% contra 25,6%, hipóxia em 15,4% contra 0% e disfunção cardíaca em 7,0% contra 1,1%; dois óbitos relacionados ao tratamento no braço da combinação. Empresa: Merck.",
+       "prova": "Carcinoma renal de células claras: síndrome de von Hippel-Lindau (VHL) predispõe a ccRCC, hemangioblastoma e feocromocitoma. Lembre que benefício em sobrevida livre de progressão sem ganho de sobrevida global exige avaliação do custo-benefício.",
+       "fontes": [
+        {
+         "nome": "OncLive, 13/11/2026",
+         "url": "https://www.onclive.com/view/chmp-recommends-approval-of-belzutifan-plus-lenvatinib-for-advanced-ccrcc-after-pd--l-1-inhibition"
+        }
+       ]
+      },
+      {
+       "titulo": "Detalimogene: 56% de resposta completa no câncer de bexiga não musculoinvasivo, segundo a empresa",
+       "camada": "FATO",
+       "evidencia": "Fase 1/2 de braço único (n = 120 avaliáveis); comunicado de empresa, sem revisão por pares",
+       "confianca": "Baixa",
+       "data": "12/11/2026",
+       "texto": "No câncer de bexiga não musculoinvasivo de alto risco com carcinoma in situ, refratário ao BCG, a alternativa à cistectomia é limitada. O detalimogene (EG-70) é uma terapia gênica não viral intravesical. A enGene divulgou em 11/11 dados da coorte 1 do estudo LEGEND (corte em 29/10): resposta completa em algum momento em 56% (IC 95% 47% a 65%) de 120 pacientes avaliáveis, e em 24% aos 12 meses (IC 95% 16% a 33%); 43% dos respondedores mantinham a resposta por 12 meses ou mais. Eventos adversos relacionados de grau 3 em 4%, sem grau 4 ou 5. Estudo aberto e sem comparador, com muitos pacientes ainda sem avaliação de 12 meses; a empresa pretende iniciar o pedido de registro (BLA) até o fim de 2026. Dado de comunicado, não de publicação.",
+       "prova": "Câncer de bexiga não musculoinvasivo: RTU, BCG intravesical e quando falha o BCG (cistectomia ou terapias de resgate). Saiba definir “refratário ao BCG” e que o carcinoma in situ tem alto risco de progressão.",
+       "fontes": [
+        {
+         "nome": "OncLive, 12/11/2026",
+         "url": "https://www.onclive.com/view/detalimogene-responses-improve-with-longer-follow-up-in-bcg-unresponsive-nmibc-ahead-of-bla-submission"
+        }
+       ]
+      }
+     ],
+     "box": {
+      "titulo": "Lembrete de método",
+      "texto": "Comunicado de empresa, resumo de congresso e artigo revisado por pares não têm o mesmo peso. Nesta edição, o plixorafenib (congresso) e o detalimogene (comunicado) entram com confiança baixa por isso."
+     }
+    },
+    {
+     "id": "infecto",
+     "nome": "Infecções e saúde global",
+     "itens": [
+      {
+       "titulo": "Ebola Bundibugyo: 11.145 casos confirmados e 5.437 mortes, quase todos na RD Congo",
+       "camada": "FATO",
+       "evidencia": "Vigilância oficial (CDC)",
+       "confianca": "Alta",
+       "data": "12/11/2026",
+       "texto": "O vírus Bundibugyo (BDBV) é um dos ortoebolavírus que causam doença hemorrágica, com letalidade menor que a do Zaire, mas ainda alta. Em atualização de 12/11 (dados de casos até 10/11), o CDC contabilizava 11.145 casos confirmados e 5.437 mortes, sendo 11.114 casos e 5.433 mortes na República Democrática do Congo. Uganda teve 20 casos confirmados e 2 mortes, sem casos ativos; o Quênia, 9 casos e 2 mortes; a Nigéria, 1 caso; a França, 1 caso, sem casos ativos. Na edição de 12/11 trouxemos 10.772 casos e 5.234 mortes (dados de 6/11): em quatro dias, a contagem subiu cerca de 370 casos e 200 mortes. O CDC adverte que os números podem mudar, e o Ministério da Saúde congolês não inclui casos prováveis ou suspeitos nos relatórios oficiais, o que afeta comparações.",
+       "prova": "Febres hemorrágicas virais: ebola, Marburg, Lassa, febre amarela, dengue grave. Lembre transmissão por contato com fluidos corporais, isolamento, uso de EPI completo e o fato de que a vacina e os anticorpos monoclonais aprovados são específicos para o ebolavírus Zaire, sem equivalente licenciado para Bundibugyo, até onde as fontes consultadas mostram.",
+       "fontes": [
+        {
+         "nome": "CDC, 12/11/2026",
+         "url": "https://www.cdc.gov/ebola/situation-summary/"
+        }
+       ]
+      },
+      {
+       "titulo": "Sarampo nos EUA: a OPAS decide nos próximos dias se o país perdeu a eliminação",
+       "camada": "FATO",
+       "evidencia": "Notícia de processo regulatório e vigilância; decisão ainda não divulgada",
+       "confianca": "Média",
+       "data": "11/11/2026",
+       "texto": "Um painel de especialistas externos da Organização Pan-Americana da Saúde (OPAS) delibera a portas fechadas em Washington, até 13/11, se os EUA interromperam a eliminação do sarampo (transmissão contínua por 12 meses ou mais; o país tinha o status desde 2000). A decisão final cabe ao diretor da OPAS, e o anúncio público é esperado no início da semana de 16/11. Segundo a reportagem, são quase 7.500 casos e 11 mortes desde o início de 2025 (na edição anterior citamos 5,1 mil casos e 8 mortes só em 2026; são recortes diferentes). A diretora do CDC afirma trabalhar com os estados para conter surtos em comunidades de baixa vacinação, e o Departamento de Saúde (HHS) diz que as coberturas já caíam antes da atual gestão. Especialistas em saúde pública criticam a política de vacinação do secretário de Saúde e atribuem a ela a hesitação vacinal; um deles avalia que o surto do Arizona e de Utah provavelmente cumpre o critério de 12 meses. O Canadá, a Espanha e o Reino Unido já perderam o status. O jornal apresenta as duas posições como declarações de cada parte, sem tomar partido.",
+       "prova": "Sarampo: período de incubação de 10 a 14 dias, exantema com manchas de Koplik, complicações (pneumonia, encefalite, PEESS), notificação compulsória imediata e bloqueio vacinal. Esquema PNI: tríplice viral aos 12 meses e tetraviral aos 15 meses.",
+       "fontes": [
+        {
+         "nome": "News Tribune, 11/11/2026",
+         "url": "https://www.newstribune.com/news/2026/nov/11/us-faces-loss-of-measles-free-status-as-experts-meet-for-review/"
+        },
+        {
+         "nome": "Healio, 9/11/2026",
+         "url": "https://www.healio.com/news/infectious-disease/20261109/states-report-first-measles-deaths-in-decades-ahead-of-paho-meeting"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "aprovacoes": {
+    "fda": [
+     {
+      "farmaco": "Asundexian (Sunharbo)",
+      "indicacao": "Prevenção secundária de AVC isquêmico não cardioembólico recente ou AIT de alto risco",
+      "data": "anunciado em 9/11/2026",
+      "status": "Aprovado"
+     },
+     {
+      "farmaco": "Durvalumabe + enfortumabe vedotina",
+      "indicacao": "Câncer de bexiga musculoinvasivo inelegível à cisplatina (neoadjuvante e adjuvante)",
+      "data": "13/11/2026",
+      "status": "Aprovado"
+     },
+     {
+      "farmaco": "Zipalertinibe + quimioterapia",
+      "indicacao": "CPNPC com inserção no éxon 20 do EGFR, primeira linha",
+      "data": "13/11/2026",
+      "status": "Pedido de registro (NDA) completo"
+     },
+     {
+      "farmaco": "64Cu-SAR-bisPSMA",
+      "indicacao": "PET de PSMA em câncer de próstata com recidiva bioquímica",
+      "data": "12/11/2026",
+      "status": "Designação de terapia inovadora"
+     },
+     {
+      "farmaco": "Belzutifan + lenvatinibe (EMA)",
+      "indicacao": "Carcinoma renal de células claras avançado após inibidor de PD-(L)1",
+      "data": "13/11/2026",
+      "status": "Parecer favorável do CHMP; decisão da Comissão Europeia em até 2 meses"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "OncLive, 13/11/2026",
+      "url": "https://www.onclive.com/view/fda-approves-durvalumab-plus-enfortumab-vedotin-for-cisplatin-ineligible-mibc"
+     },
+     {
+      "nome": "TCTMD, 10/11/2026",
+      "url": "https://www.tctmd.com/news/asundexian-first-factor-xia-inhibitor-gain-fda-approval"
+     },
+     {
+      "nome": "OncLive, 13/11/2026",
+      "url": "https://www.onclive.com/view/nda-submission-completed-for-zipalertinib-plus-chemotherapy-in-frontline-egfr-exon-20-insertion"
+     },
+     {
+      "nome": "OncLive, 12/11/2026",
+      "url": "https://www.onclive.com/view/fda-grants-breakthrough-therapy-designation-to-64cu-sar-bispsma-for-psma-pet-in-biochemically"
+     },
+     {
+      "nome": "OncLive, 13/11/2026",
+      "url": "https://www.onclive.com/view/chmp-recommends-approval-of-belzutifan-plus-lenvatinib-for-advanced-ccrcc-after-pd--l-1-inhibition"
+     }
+    ]
+   },
+   "agenda": [
+    {
+     "data": "14/11",
+     "evento": "Dia Mundial do Diabetes · decisão do FDA sobre ivonescimabe prevista (sem confirmação até o fechamento)"
+    },
+    {
+     "data": "semana de 16/11",
+     "evento": "OPAS deve anunciar se os EUA perderam o status de eliminação do sarampo"
+    },
+    {
+     "data": "18/11",
+     "evento": "Dia Mundial da DPOC · publicação do relatório GOLD 2027"
+    },
+    {
+     "data": "22/11",
+     "evento": "FDA: deramiocel (Duchenne) e molgramostim (proteinose alveolar), conforme a edição de 12/11"
+    },
+    {
+     "data": "27/11",
+     "evento": "FDA: neladalquibe (NSCLC ALK+) e saroglitazar (colangite biliar primária)"
+    },
+    {
+     "data": "30/11",
+     "evento": "FDA: povetacicept, giredestranto e bezuclastinibe"
+    },
+    {
+     "data": "jan/27",
+     "evento": "Decisão da Comissão Europeia sobre belzutifan + lenvatinibe"
+    }
+   ],
+   "brasil": {
+    "ticker": [
+     {
+      "area": "Pesquisa",
+      "texto": "Optimal-Stroke (NEJM), feito em 30 centros brasileiros: pressão sistólica < 120 mmHg após AVC reduziu eventos cardiovasculares graves (10,9% vs 13,5%)",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/pesquisa-apoiada-pelo-ministerio-da-saude-aponta-reducao-de-eventos-cardiovasculares-apos-avc-isquemico-com-controle-intensivo-da-pressao-arterial"
+     },
+     {
+      "area": "Oncologia",
+      "texto": "SUS passa de 1 milhão de procedimentos para câncer de próstata em 2025, alta de 32,6% desde 2022",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/sus-ultrapassa-1-milhao-de-procedimentos-para-tratamento-do-cancer-de-prostata"
+     },
+     {
+      "area": "Saúde mental",
+      "texto": "Meu SUS Digital passa a oferecer teleatendimento em saúde mental: ciclos de até 10 sessões de cerca de 50 minutos",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/ministerio-da-saude-facilita-acesso-a-teleatendimento-de-saude-mental-no-meu-sus-digital"
+     },
+     {
+      "area": "Atenção primária",
+      "texto": "IVCF-20, instrumento de 20 perguntas para fragilidade em idosos, chega ao aplicativo dos agentes comunitários",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/ferramenta-digital-para-avaliar-vulnerabilidade-clinico-funcional-de-pessoas-idosas-e-incorporada-ao-trabalho-de-agentes-comunitarios-de-saude"
+     },
+     {
+      "area": "Anvisa",
+      "texto": "Cinco novas canetas de GLP-1 (liraglutida e semaglutida) registradas em 29/10; já são 20 em 2026",
+      "url": "https://www.correio24horas.com.br/brasil/anvisa-aprova-cinco-novas-canetas-de-glp-1-para-tratamento-de-diabetes-e-obesidade-1126"
+     }
+    ],
+    "capa": {
+     "kicker": "Pesquisa brasileira · NEJM · AVC e pressão arterial",
+     "titulo": "Menos de 120 depois do AVC.",
+     "linhaFina": "O Optimal-Stroke, coordenado pelo Hospital Israelita Albert Einstein e financiado pelo Proadi-SUS, acompanhou 4.368 pacientes com AVC prévio por cerca de quatro anos. Mirar pressão sistólica abaixo de 120 mmHg reduziu AVC e eventos graves. O estudo-irmão em diabetes tipo 2 foi neutro.",
+     "texto": [
+      "A pressão alta é o principal fator de risco modificável do AVC, e quem já teve um AVC tem risco elevado de outro. A dúvida é até onde baixar: as diretrizes costumam falar em metas abaixo de 130/80 mmHg, e a meta de sistólica abaixo de 120 mmHg é mais agressiva. O Optimal-Stroke, apresentado em 7/11 no congresso da American Heart Association (AHA) e publicado no New England Journal of Medicine, testou essa pergunta no Brasil.",
+      "O ensaio randomizado incluiu 4.368 pessoas com história de AVC, em 30 centros das cinco regiões do país, e comparou controle intensivo (sistólica abaixo de 120 mmHg) com controle padrão (abaixo de 140 mmHg), por cerca de quatro anos. Eventos cardiovasculares graves ocorreram em 10,9% do grupo intensivo e 13,5% do padrão; novo AVC, em 4,7% e 6,4%, uma redução de 27%. Conta do jornal: diferença absoluta de 2,6 pontos percentuais em eventos graves, o que dá um NNT próximo de 38 ao longo de quatro anos.",
+      "O comunicado do Ministério da Saúde fala em redução relativa de 21% nos eventos graves; a divisão simples das taxas dá cerca de 19%. A diferença deve vir da razão de risco (HR) do artigo, que a fonte consultada não traz, e o jornal não a reproduz sem confirmar. O comunicado também não menciona limitações. O estudo-irmão, Optimal-Diabetes, incluiu 9.476 pessoas com diabetes tipo 2 em 33 centros e mostrou eventos em 6,0% contra 6,7%, sem redução significativa.",
+      "[ANÁLISE] A leitura que vale é a combinada: metas mais baixas parecem ajudar quem teve AVC, mas não ficou provado no diabetes, e o risco de hipotensão, queda e lesão renal em quem é tratado intensivamente precisa ser lido no artigo completo. O financiamento é público, via Proadi-SUS, que é executado por hospitais de excelência. A pesquisa foi conduzida por um desses hospitais, e a notícia é do próprio Ministério da Saúde; por isso, confira o artigo original antes de mudar condutas."
+     ],
+     "camada": "FATO",
+     "evidencia": "ECR (n = 4.368); publicado no NEJM; dados do comunicado oficial",
+     "confianca": "Média",
+     "confiancaMotivo": "Estudo grande, brasileiro e publicado no NEJM, mas a fonte consultada é o comunicado do Ministério, sem HR, IC nem eventos adversos; a diferença entre 21% e 19% mostra que falta o artigo.",
+     "citacao": "Eventos graves: 10,9% (sistólica < 120 mmHg) contra 13,5% (< 140 mmHg). Novo AVC: 4,7% contra 6,4%.",
+     "fontes": [
+      {
+       "nome": "Ministério da Saúde, 11/11/2026",
+       "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/pesquisa-apoiada-pelo-ministerio-da-saude-aponta-reducao-de-eventos-cardiovasculares-apos-avc-isquemico-com-controle-intensivo-da-pressao-arterial"
+      }
+     ]
+    },
+    "numeros": [
+     {
+      "val": "10,9% × 13,5%",
+      "lab": "Optimal-Stroke · eventos cardiovasculares graves",
+      "nota": "sistólica < 120 vs < 140 mmHg; n = 4.368",
+      "src": {
+       "nome": "Ministério da Saúde, 11/11/2026",
+       "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/pesquisa-apoiada-pelo-ministerio-da-saude-aponta-reducao-de-eventos-cardiovasculares-apos-avc-isquemico-com-controle-intensivo-da-pressao-arterial"
+      }
+     },
+     {
+      "val": "6,0% × 6,7%",
+      "lab": "Optimal-Diabetes · eventos cardiovasculares",
+      "nota": "estudo-irmão em diabetes tipo 2; n = 9.476; sem redução significativa",
+      "src": {
+       "nome": "Ministério da Saúde, 11/11/2026",
+       "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/pesquisa-apoiada-pelo-ministerio-da-saude-aponta-reducao-de-eventos-cardiovasculares-apos-avc-isquemico-com-controle-intensivo-da-pressao-arterial"
+      }
+     },
+     {
+      "val": "+32,6%",
+      "lab": "Procedimentos para câncer de próstata no SUS",
+      "nota": "de 781,5 mil (2022) para mais de 1 milhão (2025); radioterapia +44,9%",
+      "src": {
+       "nome": "Ministério da Saúde, 12/11/2026",
+       "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/sus-ultrapassa-1-milhao-de-procedimentos-para-tratamento-do-cancer-de-prostata"
+      }
+     },
+     {
+      "val": "77.920",
+      "lab": "Casos novos de câncer de próstata por ano",
+      "nota": "estimativa do Inca para 2026–2028",
+      "src": {
+       "nome": "Ministério da Saúde, 12/11/2026",
+       "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/sus-ultrapassa-1-milhao-de-procedimentos-para-tratamento-do-cancer-de-prostata"
+      }
+     },
+     {
+      "val": "20",
+      "lab": "Canetas de GLP-1 registradas pela Anvisa em 2026",
+      "nota": "cinco novas em 29/10 (liraglutida e semaglutida)",
+      "src": {
+       "nome": "Correio, 1º/11/2026",
+       "url": "https://www.correio24horas.com.br/brasil/anvisa-aprova-cinco-novas-canetas-de-glp-1-para-tratamento-de-diabetes-e-obesidade-1126"
+      }
+     }
+    ],
+    "cadernos": [
+     {
+      "id": "br-pesq",
+      "nome": "Pesquisa brasileira",
+      "itens": [
+       {
+        "titulo": "Optimal-Stroke: controle intensivo da pressão após AVC reduz novo AVC em 27%",
+        "camada": "FATO",
+        "evidencia": "ECR (n = 4.368), publicado no NEJM; dados do comunicado oficial",
+        "confianca": "Média",
+        "data": "11/11/2026",
+        "texto": "Resumo na capa. Para a prática: o resultado favorece metas mais baixas em sobreviventes de AVC, mas as diretrizes brasileiras ainda não foram atualizadas com base nele; a decisão individual depende de tolerância, quedas, função renal e idade. Novo AVC: 4,7% contra 6,4%. Eventos graves: 10,9% contra 13,5%.",
+        "prova": "Prevenção secundária do AVC: meta pressórica, estatina, antiagregação e controle do diabetes. Saiba que o benefício do controle intensivo não foi demonstrado em diabetes tipo 2 no estudo-irmão.",
+        "fontes": [
+         {
+          "nome": "Ministério da Saúde, 11/11/2026",
+          "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/pesquisa-apoiada-pelo-ministerio-da-saude-aponta-reducao-de-eventos-cardiovasculares-apos-avc-isquemico-com-controle-intensivo-da-pressao-arterial"
+         }
+        ]
+       },
+       {
+        "titulo": "Optimal-Diabetes: meta intensiva de pressão não reduziu eventos em diabetes tipo 2",
+        "camada": "FATO",
+        "evidencia": "ECR (n = 9.476); dados do comunicado oficial",
+        "confianca": "Média",
+        "data": "11/11/2026",
+        "texto": "O Optimal-Diabetes randomizou 9.476 pessoas com diabetes tipo 2 em 33 centros. Eventos cardiovasculares ocorreram em 6,0% e 6,7%, sem redução significativa. O resultado lembra o ensaio ACCORD (2010), em que a meta sistólica abaixo de 120 mmHg também não reduziu o desfecho primário em diabéticos. A fonte não informa o desenho detalhado, o seguimento nem os intervalos de confiança.",
+        "prova": "Hipertensão no diabetes: meta geral de 130/80 mmHg e preferência por IECA ou BRA com albuminúria. Resultados neutros também entram na prova: saiba descrevê-los sem concluir que “não funciona”.",
+        "fontes": [
+         {
+          "nome": "Ministério da Saúde, 11/11/2026",
+          "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/pesquisa-apoiada-pelo-ministerio-da-saude-aponta-reducao-de-eventos-cardiovasculares-apos-avc-isquemico-com-controle-intensivo-da-pressao-arterial"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "br-sus",
+      "nome": "SUS e atenção à saúde",
+      "itens": [
+       {
+        "titulo": "Câncer de próstata: SUS passa de 1 milhão de procedimentos e amplia o tratamento",
+        "camada": "FATO",
+        "evidencia": "Balanço oficial do Ministério da Saúde",
+        "confianca": "Média",
+        "data": "12/11/2026",
+        "texto": "Segundo o Ministério, os procedimentos de quimioterapia, radioterapia e cirurgia para câncer de próstata no SUS passaram de 781,5 mil em 2022 para mais de 1 milhão em 2025 (alta de 32,6%): radioterapia +44,9%, quimioterapia +32,4% e cirurgia +28,2%; de janeiro a agosto de 2026 foram mais de 710 mil. O Inca estima 77.920 casos novos por ano em 2026–2028. O SUS passou a oferecer prostatectomia radical assistida por robô para doença localizada ou localmente avançada e abiraterona na doença metastática sensível à castração, isolada ou com docetaxel. O Ministério cita o programa Agora Tem Especialistas para reduzir filas. Os números de produção não medem filas, tempo até o tratamento nem resultados clínicos; são o balanço do órgão responsável pelo serviço.",
+        "prova": "Câncer de próstata: rastreamento com PSA e toque retal discutido caso a caso (decisão compartilhada); estratificação por Gleason/ISUP; tratamento com cirurgia, radioterapia, vigilância ativa e hormonioterapia. Saiba o papel da abiraterona (inibidor de CYP17).",
+        "fontes": [
+         {
+          "nome": "Ministério da Saúde, 12/11/2026",
+          "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/sus-ultrapassa-1-milhao-de-procedimentos-para-tratamento-do-cancer-de-prostata"
+         }
+        ]
+       },
+       {
+        "titulo": "Meu SUS Digital oferece teleatendimento em saúde mental para dois públicos",
+        "camada": "FATO",
+        "evidencia": "Anúncio oficial",
+        "confianca": "Alta",
+        "data": "13/11/2026",
+        "texto": "O aplicativo Meu SUS Digital passou a dar acesso a dois programas: o Acolhe Mais, para mulheres em situação de vulnerabilidade, e o Não Aposte Sua Saúde, para pessoas com problemas relacionados a jogos e apostas, que inclui um autoteste com mais de 170 mil acessos. Cada ciclo inicial tem até 10 sessões de cerca de 50 minutos, por videochamada; ao fim, uma nova avaliação define continuidade ou encaminhamento presencial. O Ministério diz ter habilitado 867 novos serviços da Rede de Atenção Psicossocial (RAPS) desde 2023, e a rede soma 6.488 pontos. O atendimento presencial segue pela unidade básica de saúde e pelos CAPS. A fonte não traz avaliação de eficácia do serviço.",
+        "prova": "RAPS: CAPS I, II, III, CAPS AD, CAPS i, unidades de acolhimento e leitos em hospital geral. Saiba que o jogo patológico é classificado como transtorno aditivo no CID-11 e no DSM-5.",
+        "fontes": [
+         {
+          "nome": "Ministério da Saúde, 13/11/2026",
+          "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/ministerio-da-saude-facilita-acesso-a-teleatendimento-de-saude-mental-no-meu-sus-digital"
+         }
+        ]
+       },
+       {
+        "titulo": "IVCF-20 entra no aplicativo dos agentes comunitários para rastrear fragilidade em idosos",
+        "camada": "FATO",
+        "evidencia": "Nota oficial",
+        "confianca": "Alta",
+        "data": "11/11/2026",
+        "texto": "Agentes comunitários e técnicos de saúde poderão aplicar o Índice de Vulnerabilidade Clínico-Funcional (IVCF-20) direto no aplicativo e-SUS Território, nas visitas domiciliares; o instrumento já estava no prontuário e-SUS APS desde 2025. São 20 perguntas em oito dimensões: idade, saúde autopercebida, atividades de vida diária, cognição, humor, mobilidade, comunicação e múltiplas doenças. O Ministério publicou um guia prático. A fonte não traz os pontos de corte. O programa de atenção domiciliar Padi Brasil, lançado em junho, tem mais de mil equipes.",
+        "prova": "Idoso frágil: síndrome geriátrica, avaliação geriátrica ampla, grandes síndromes (incapacidade cognitiva, instabilidade postural, imobilidade, incontinência, insuficiência familiar). O IVCF-20 é um rastreio, não um diagnóstico.",
+        "fontes": [
+         {
+          "nome": "Ministério da Saúde, 11/11/2026",
+          "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/ferramenta-digital-para-avaliar-vulnerabilidade-clinico-funcional-de-pessoas-idosas-e-incorporada-ao-trabalho-de-agentes-comunitarios-de-saude"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "id": "br-reg",
+      "nome": "Regulação e rastreamento",
+      "itens": [
+       {
+        "titulo": "Anvisa registra cinco novas canetas de GLP-1; são 20 em 2026",
+        "camada": "FATO",
+        "evidencia": "Ato regulatório (Resolução 4.244/2026)",
+        "confianca": "Alta",
+        "data": "29/10/2026",
+        "texto": "Em 29/10, a Anvisa registrou cinco medicamentos: dois com semaglutida (Embeltah, da Dr. Reddy’s, e Sevema, do Aché) para diabetes, um com liraglutida (Aribet) para diabetes e dois com liraglutida (Lyrza e Wylovol) para obesidade; os princípios ativos são fabricados na Índia. Com eles, chegam a 20 as canetas de GLP-1 aprovadas no ano. A análise prioritária de semaglutida e liraglutida começou em agosto de 2025, a pedido do Ministério da Saúde, para atender ao SUS e ao mercado, e foi formalizada pelo Edital de Chamamento 12/2025. Registro não é incorporação ao SUS: quem recebe depende de decisão da Conitec e de oferta pelo Ministério. Notícia complementar ao registro de 10/11 trazido na edição anterior.",
+        "prova": "Registro na Anvisa (segurança, eficácia, qualidade) é diferente de incorporação pela Conitec (custo-efetividade) e de precificação pela CMED. Saiba a diferença entre medicamento genérico, similar e biológico.",
+        "fontes": [
+         {
+          "nome": "Correio, 1º/11/2026",
+          "url": "https://www.correio24horas.com.br/brasil/anvisa-aprova-cinco-novas-canetas-de-glp-1-para-tratamento-de-diabetes-e-obesidade-1126"
+         }
+        ]
+       },
+       {
+        "titulo": "Mamografia dos 40 aos 74 anos: balanço do SUS mostra 4,4 milhões de exames em 2025",
+        "camada": "FATO",
+        "evidencia": "Balanço oficial do Ministério da Saúde (publicado em 29/10)",
+        "confianca": "Média",
+        "data": "29/10/2026",
+        "texto": "A faixa do rastreamento mamográfico no SUS passou de 50 a 69 para 40 a 74 anos em 2025. O Ministério informa 4,4 milhões de mamografias em 2025 (alta de quase 30% em cinco anos), sendo 2,66 milhão de rastreamento a partir dos 50 anos; as de mulheres de 41 a 49 anos subiram 25,3%. Também cita 63,6 mil cirurgias de câncer de mama (+13,7% sobre 2023) e 19,4 mil reconstruções mamárias, e promete 23 novos medicamentos oncológicos no SUS até dezembro. É balanço do governo; a mudança de faixa etária é debatida por sociedades médicas. Número de exames não mede ganho de sobrevida. A fonte consultada é uma republicação da notícia oficial.",
+        "prova": "Rastreamento do câncer de mama: a Sociedade Brasileira de Mastologia e o Colégio Brasileiro de Radiologia recomendam mamografia anual a partir dos 40 anos; o Inca recomenda bienal dos 50 aos 69 anos. Saiba os argumentos de cada um (benefício, falso-positivo, sobrediagnóstico).",
+        "fontes": [
+         {
+          "nome": "Sanar, 1º/11/2026 (republica balanço do Ministério da Saúde de 29/10)",
+          "url": "https://sanarmed.com/noticias/sus-amplia-mamografia-faixa-40-74-23-medicamentos-oncologicos/"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "aprovacoes": {
+     "anvisa": [
+      {
+       "farmaco": "Liraglutida (Aribet)",
+       "indicacao": "Diabetes tipo 2",
+       "data": "29/10/2026",
+       "status": "Registrado"
+      },
+      {
+       "farmaco": "Semaglutida (Embeltah e Sevema)",
+       "indicacao": "Diabetes tipo 2",
+       "data": "29/10/2026",
+       "status": "Registrados"
+      },
+      {
+       "farmaco": "Liraglutida (Lyrza e Wylovol)",
+       "indicacao": "Obesidade, com exercícios e mudanças na alimentação",
+       "data": "29/10/2026",
+       "status": "Registrados"
+      }
+     ],
+     "fontes": [
+      {
+       "nome": "Correio, 1º/11/2026",
+       "url": "https://www.correio24horas.com.br/brasil/anvisa-aprova-cinco-novas-canetas-de-glp-1-para-tratamento-de-diabetes-e-obesidade-1126"
+      }
+     ]
+    },
+    "agenda": [
+     {
+      "data": "14/11",
+      "evento": "Dia Mundial do Diabetes"
+     },
+     {
+      "data": "17–18/11",
+      "evento": "XIII Congresso Brasileiro de Direito Médico (CFM)"
+     },
+     {
+      "data": "24–27/11",
+      "evento": "Sessão plenária do CFM"
+     },
+     {
+      "data": "fim de nov",
+      "evento": "Entrega prevista das 25 mil doses de vacina contra mpox"
+     },
+     {
+      "data": "dez",
+      "evento": "Prazo do Ministério para os 23 oncológicos no SUS"
+     }
+    ]
+   },
+   "leituraCritica": [
+    {
+     "titulo": "Quando o marcador é bonito e o desfecho é desconhecido: TYDAL-TIMI 78",
+     "texto": [
+      "1. O que foi medido. O MAR001 derrubou os triglicerídeos em 39% a 46% (semana 12), um efeito grande e dose-resposta. Mas o estudo durou 24 semanas, teve 236 pessoas e só media lípides. Não há morte, infarto ou AVC no desfecho.",
+      "2. A lição dos marcadores. Triglicerídeos altos andam com risco cardiovascular, mas os fibratos reduziram triglicerídeos por décadas com benefício cardiovascular inconsistente. Quando o fármaco mexe no triglicerídeo por vias diferentes, o resultado clínico pode mudar. A mesma dúvida vale para o colesterol remanescente.",
+      "3. O que pedir. Um ensaio de desfechos, longo e grande. Até lá, o MAR001 é uma hipótese farmacológica forte, e a fase 2a é um bom exercício de leitura crítica: quem financiou (a empresa), quem comenta e o que os comentaristas independentes ressalvam."
+     ]
+    },
+    {
+     "titulo": "Interromper por superioridade: o que o OptimPacing pode estar inflando",
+     "texto": [
+      "1. O mecanismo. Ensaios que param cedo por benefício tendem a superestimar o efeito, porque são interrompidos quando a diferença está no pico estatístico, e a flutuação aleatória ajuda a atravessar o limite de parada.",
+      "2. O componente que manda. A cardiomiopatia por pacing foi 0% contra 11,7% e explica quase todo o composto. Morte foi igual. Um composto vale tanto quanto seus componentes: se um deles pesa mais e é de imagem em estudo aberto, o leitor deve olhar o viés de detecção.",
+      "3. Como ler. HR 0,41 com IC 95% 0,23 a 0,75 indica efeito grande, mas com intervalo largo. A decisão clínica pede confirmação em seguimento maior e em pacientes com fração de ejeção reduzida, que são justamente os que mais se beneficiam de ressincronização."
+     ]
+    }
+   ],
+   "historia": [
+    {
+     "titulo": "1958: o primeiro marca-passo implantável",
+     "texto": "Em outubro de 1958, no Instituto Karolinska, em Estocolmo, o cirurgião Åke Senning implantou o aparelho projetado pelo engenheiro Rune Elmqvist em Arne Larsson, paciente com bloqueio atrioventricular total e crises de Stokes-Adams. O primeiro dispositivo falhou em horas, e o segundo durou poucos dias; Larsson recebeu, ao longo da vida, mais de duas dezenas de aparelhos e morreu em 2001, aos 86 anos. Sessenta e oito anos depois, o OptimPacing discute onde colocar o eletrodo: a engenharia do ritmo passou de “garantir que o coração bata” a “garantir que bata de modo sincronizado”."
+    }
+   ],
+   "fronteiras": [
+    {
+     "pergunta": "Os inibidores do fator XIa podem ser úteis fora do AVC não cardioembólico?",
+     "texto": "O asundexian foi aprovado após AVC isquêmico não cardioembólico; na fibrilação atrial, o primeiro ensaio de fase 3 (OCEANIC-AF, 2023) foi interrompido por eficácia inferior à do apixabana. Não se sabe quais populações têm a melhor relação entre menos sangramento e proteção suficiente, nem como o fármaco se compara à dupla antiagregação, que é o padrão em AVC leve."
+    },
+    {
+     "pergunta": "Pacing do ramo esquerdo vale para todos os que precisam de marca-passo?",
+     "texto": "O OptimPacing incluiu sobretudo pacientes com fração de ejeção normal e bloqueio atrioventricular. Não se sabe o efeito em fibrilação atrial com bloqueio, em disfunção ventricular prévia nem a longevidade dos eletrodos no septo, nem se a vantagem em morte e IC aparece com seguimento mais longo."
+    },
+    {
+     "pergunta": "Meta de pressão abaixo de 120 mmHg deve virar regra após o AVC?",
+     "texto": "O Optimal-Stroke sugere benefício, e o Optimal-Diabetes, neutralidade. Faltam, na fonte consultada, o HR, os eventos adversos (hipotensão, queda, lesão renal) e a aplicabilidade a idosos frágeis. Até o artigo completo ser analisado, a meta deve ser individualizada."
+    },
+    {
+     "pergunta": "Vacina e tratamento para o ebolavírus Bundibugyo",
+     "texto": "Com mais de 11 mil casos confirmados, a pergunta aberta é se há vacina eficaz e imunoterapia licenciada para esta espécie viral, e quão confiável é a contagem quando casos prováveis e suspeitos ficam de fora dos números oficiais da RD Congo."
+    }
+   ],
+   "estudo": {
+    "temas": [
+     {
+      "tema": "Bradiarritmias e marca-passo",
+      "porque": "Bloqueios atrioventriculares (1º, 2º tipos I e II, 3º grau), indicações classe I, modos de estimulação e a cardiomiopatia induzida por pacing. Entra em clínica médica e cardiologia."
+     },
+     {
+      "tema": "AVC isquêmico: tratamento agudo e prevenção secundária",
+      "porque": "Janela de trombólise, trombectomia, dupla antiagregação, anticoagulação na FA e meta pressórica. O Optimal-Stroke dá contexto atual."
+     },
+     {
+      "tema": "Dislipidemias e hipertrigliceridemia",
+      "porque": "Triglicerídeos ≥ 500 mg/dL e pancreatite, estatinas, fibratos, ômega-3 e o papel dos novos alvos (ANGPTL3, ANGPTL4, ApoC-III)."
+     },
+     {
+      "tema": "Câncer de bexiga e de rim",
+      "porque": "Estadiamento do câncer de bexiga, papel do BCG e da cisplatina; carcinoma renal de células claras, VHL e a lógica da imunoterapia combinada."
+     },
+     {
+      "tema": "Apneia obstrutiva do sono e obesidade",
+      "porque": "Classificação por IAH, relação com hipertensão e arritmias, tratamento com PAP e o papel dos análogos de GLP-1."
+     }
+    ],
+    "leituras": [
+     {
+      "titulo": "TYDAL-TIMI 78 (NEJM, 2026), fase 2a do MAR001",
+      "autor": "O’Donoghue ML et al.",
+      "porque": "Bom exemplo para treinar o desfecho primário percentual ajustado ao placebo e a distinção entre marcador e desfecho clínico."
+     },
+     {
+      "titulo": "OptimPacing (NEJM, 2026)",
+      "autor": "Zou e colaboradores",
+      "porque": "Leia o desfecho composto e peça os componentes: o resultado depende de um deles."
+     },
+     {
+      "titulo": "ACCORD BP (NEJM, 2010)",
+      "autor": "ACCORD Study Group",
+      "porque": "O ensaio clássico de meta sistólica < 120 mmHg em diabéticos; contextualiza o Optimal-Diabetes."
+     }
+    ],
+    "diretrizes": [
+     {
+      "titulo": "Diretriz de Hipertensão Arterial (Sociedade Brasileira de Cardiologia)",
+      "nota": "Compare as metas pressóricas gerais com a meta do Optimal-Stroke e veja se há recomendação específica pós-AVC."
+     },
+     {
+      "titulo": "Diretriz de manejo do AVC isquêmico (AHA/ASA)",
+      "nota": "Prevenção secundária e dupla antiagregação; compare com a indicação do asundexian."
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "TCTMD, 9/11/2026",
+      "url": "https://www.tctmd.com/news/better-outcomes-lbb-vs-rv-pacing-atrioventricular-block"
+     },
+     {
+      "nome": "Ministério da Saúde, 11/11/2026",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/pesquisa-apoiada-pelo-ministerio-da-saude-aponta-reducao-de-eventos-cardiovasculares-apos-avc-isquemico-com-controle-intensivo-da-pressao-arterial"
+     }
+    ]
+   },
+   "quiz": [
+    {
+     "p": "No OptimPacing, o composto foi 8,5% contra 19,2%, mas a morte por qualquer causa foi igual. Por que isso importa?",
+     "r": "Porque o ganho veio da cardiomiopatia induzida por pacing (0% contra 11,7%), um componente de imagem em estudo aberto. O composto não prova menor mortalidade; o leitor deve olhar cada componente."
+    },
+    {
+     "p": "Calcule a redução absoluta e o NNT de eventos cardiovasculares graves no Optimal-Stroke (10,9% contra 13,5%).",
+     "r": "Redução absoluta de 2,6 pontos percentuais; NNT ≈ 1/0,026 ≈ 38, ao longo de cerca de quatro anos."
+    },
+    {
+     "p": "O MAR001 reduziu triglicerídeos em 45,5% (900 mg, semana 12). Por que isso não prova menos infartos?",
+     "r": "Porque triglicerídeo é marcador, não desfecho clínico. O estudo teve 236 pessoas e 24 semanas, e a redução do marcador pode não se traduzir em menos eventos, como mostram fibratos e outros fármacos que baixam triglicerídeos."
+    },
+    {
+     "p": "Um paciente tem IAH de 22 eventos por hora. Como é classificada a apneia do sono?",
+     "r": "Moderada (IAH de 15 a 29 por hora). Leve é de 5 a 14, e grave é ≥ 30."
+    },
+    {
+     "p": "O VOLGA mostrou HR 0,51 para sobrevida livre de eventos. O que isso quer dizer, e por que o tremelimumabe não foi aprovado?",
+     "r": "HR 0,51 indica risco instantâneo de evento cerca de 49% menor com a combinação do que com cistectomia isolada. O braço com tremelimumabe melhorou a EFS (HR 0,61), mas a sobrevida global interina não foi significativa (HR 0,77; IC 95% 0,54 a 1,07), e a aprovação cobre só o esquema duplo."
+    }
+   ],
+   "glossario": [
+    {
+     "termo": "IAH",
+     "def": "Índice de apneia-hipopneia: número de pausas respiratórias por hora de sono. Define a gravidade da apneia."
+    },
+    {
+     "termo": "Fator XIa",
+     "def": "Enzima da via intrínseca da coagulação que amplifica a formação do trombo, com papel menor na hemostasia normal."
+    },
+    {
+     "termo": "Cardiomiopatia induzida por pacing",
+     "def": "Queda da fração de ejeção atribuída à estimulação crônica do ventrículo direito, que dessincroniza a contração."
+    },
+    {
+     "termo": "EFS",
+     "def": "Sobrevida livre de eventos (event-free survival): tempo até recidiva, progressão ou outro evento definido."
+    },
+    {
+     "termo": "NNT",
+     "def": "Número necessário para tratar: quantos pacientes precisam receber a intervenção para evitar um evento (1 dividido pela redução absoluta)."
+    },
+    {
+     "termo": "Marcador substituto",
+     "def": "Medida de laboratório ou imagem usada no lugar de um desfecho clínico; só vale se o efeito nele prever o efeito no desfecho."
+    },
+    {
+     "termo": "CHMP",
+     "def": "Comitê de Medicamentos de Uso Humano da Agência Europeia de Medicamentos; seu parecer antecede a decisão da Comissão Europeia."
+    },
+    {
+     "termo": "Post hoc",
+     "def": "Análise decidida depois de ver os dados, que gera hipóteses e não as confirma."
+    }
+   ]
+  },
   {
    "id": "2026-11-12",
    "numero": 3,

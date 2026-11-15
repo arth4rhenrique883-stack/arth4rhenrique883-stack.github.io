@@ -1,6 +1,853 @@
 {
  "edicoes": [
   {
+   "numero": 3,
+   "data": "2026-11-14",
+   "tempoLeitura": 9,
+   "capa": {
+    "chapeu": "Contas da cidade",
+    "titulo": "Creches desistem de parar, Prefeitura republica licitação dos ônibus e suspende verba do carnaval",
+    "linhaFina": "As creches conveniadas suspenderam a paralisação de segunda-feira porque a Prefeitura começou a pagar, mas o prazo final é 17h de 16/11. O edital do transporte coletivo, de R$ 7,5 bilhões, voltou a ser publicado depois que o TCE-MG derrubou a suspensão. Também nesta edição: fim do fomento ao carnaval de 2027, 98 casos de Covid-19 no ano e corrida com trânsito alterado hoje à noite."
+   },
+   "citacao": "Dinheiro público tem calendário; quem depende dele precisa conhecer a data.",
+   "recado": "Bom sábado. Nesta edição só entram fatos publicados até a sexta-feira, 13/11, porque a imprensa local ainda não trouxe notícias datadas de hoje. Do Legislativo, nenhuma reportagem consultada noticia votação em plenário nos últimos dias; por isso o caderno de política traz apenas atos da Prefeitura e do Tribunal de Contas do Estado. Quando a Câmara votar algo, entra aqui com a posição de governo e oposição. Não há correção a fazer na edição de ontem.",
+   "resumo": [
+    {
+     "tema": "Creches",
+     "texto": "As creches conveniadas suspenderam a paralisação marcada para segunda (16/11) depois que a Prefeitura começou a pagar o repasse de outubro. O Município tem até as 17h de segunda para quitar tudo."
+    },
+    {
+     "tema": "Ônibus",
+     "texto": "A Prefeitura republicou o edital do Novo Transporte Público, estimado em R$ 7,5 bilhões, dois dias depois de o TCE-MG revogar a suspensão. As propostas devem ser abertas em 22 de dezembro."
+    },
+    {
+     "tema": "Carnaval",
+     "texto": "A Prefeitura não vai repassar verba ao carnaval de 2027 e cancelou editais de festas de fim de ano. A Liga das escolas de samba diz que foi pega de surpresa."
+    },
+    {
+     "tema": "Covid-19",
+     "texto": "Juiz de Fora tem 98 casos confirmados e 4 mortes em 2026, todas de pessoas com 80 anos ou mais. A Fiocruz vê alta de casos graves em MG, ainda com hospitalizações baixas."
+    },
+    {
+     "tema": "Trânsito",
+     "texto": "A 4ª Bahamas Night Run altera o trânsito no entorno do Estádio Municipal hoje; a largada principal é às 19h."
+    },
+    {
+     "tema": "Tempo",
+     "texto": "Sábado de chuvas esparsas, entre 16 °C e 24 °C. Domingo (feriado) esquenta até 27 °C, com chuva."
+    }
+   ],
+   "numeros": [
+    {
+     "rotulo": "Crianças em creches conveniadas",
+     "valor": "5.600",
+     "nota": "em 44 creches que estavam com o repasse de outubro pendente",
+     "fonte": "Tribuna de Minas, 12/11/2026"
+    },
+    {
+     "rotulo": "Licitação dos ônibus",
+     "valor": "R$ 7,5 bi",
+     "nota": "valor estimado do edital republicado em 13/11; abertura das propostas prevista para 22/12",
+     "fonte": "Tribuna de Minas, 13/11/2026"
+    },
+    {
+     "rotulo": "Casos de Covid-19 em 2026",
+     "valor": "98",
+     "nota": "confirmados até 12/11, com 4 mortes em pessoas de 80 anos ou mais",
+     "fonte": "Tribuna de Minas, 13/11/2026"
+    },
+    {
+     "rotulo": "Máxima de hoje",
+     "valor": "24 °C",
+     "nota": "mínima de 16 °C, com chuvas esparsas",
+     "fonte": "HG Brasil, 13/11/2026"
+    }
+   ],
+   "cadernos": [
+    {
+     "id": "politica",
+     "titulo": "Prefeitura e Câmara",
+     "abertura": "Três decisões do Executivo em dois dias: pagar as creches, relançar a licitação dos ônibus e não financiar o carnaval de 2027. Da Câmara Municipal, nenhuma votação noticiada.",
+     "itens": [
+      {
+       "titulo": "Creches recuam da paralisação; Prefeitura tem até 17h de segunda para pagar tudo",
+       "selo": "Confirmado",
+       "texto": "As creches conveniadas são entidades sem fins lucrativos que cuidam de crianças em nome da Prefeitura, mediante repasse mensal. A associação que as representa, a ABA-EB, anunciou na sexta (13/11) que suspendeu a paralisação prevista para segunda (16/11), porque a Prefeitura começou a pagar os repasses atrasados. O prazo dado ao Município é até as 17h de segunda para quitar todos os pagamentos. Segundo a presidente da associação, nem todas as creches tinham recebido até o momento; as que receberam foram pagas integralmente na parcela de outubro, que deveria ter saído até 9/11, quinto dia útil. Eram 44 creches com repasse pendente, o que poderia afetar cerca de 5.600 crianças. A associação disse que a falta de dinheiro compromete despesas básicas, como material de higiene e manutenção. A Prefeitura, em nota, atribui o atraso ao feriado de Finados (2/11), que “afetou o cronograma”, e diz que os dois pagamentos, feitos na quinta (12/11) e na sexta, são de outubro. O que falta saber: nenhuma das reportagens informa quais instituições receberam nem os valores totais.",
+       "impacto": {
+        "trabalhador": "Quem tem filho em creche conveniada tende a não precisar procurar outro lugar na segunda-feira. Quem trabalha nas creches depende de o repasse chegar para o pagamento de salários, mas as reportagens não informam atraso de salários.",
+        "baixa": "É o grupo que mais usa creche pública; uma paralisação obrigaria a faltar ao trabalho ou pagar cuidador. O risco só se encerra quando o pagamento total for confirmado.",
+        "media": "Efeito direto pequeno, pois muitas famílias usam creche particular. A pressão sobre vagas privadas tende a ficar como estava.",
+        "alta": "Efeito direto pequeno. Fornecedores das creches podem se beneficiar da regularização do pagamento."
+       },
+       "fontes": [
+        {
+         "nome": "Tribuna de Minas, 13/11/2026",
+         "url": "https://tribunademinas.com.br/noticias/cidade/13-11-2026/creches-recuam-de-paralisacao-apos-pjf-iniciar-pagamento-de-repasses-atrasados.html"
+        },
+        {
+         "nome": "Acessa.com, 13/11/2026",
+         "url": "https://www.acessa.com/cidade/2026/11/344160-prefeitura-de-juiz-de-fora-inicia-pagamento-de-repasses-a-creches-apos-ameaca-de-paralisacao.html"
+        }
+       ]
+      },
+      {
+       "titulo": "Prefeitura republica o edital da licitação dos ônibus, avaliado em R$ 7,5 bilhões",
+       "selo": "Confirmado",
+       "texto": "Licitação é o processo pelo qual o poder público escolhe, por concorrência, a empresa que vai prestar um serviço; aqui, o transporte coletivo da cidade por 15 anos. Em 27 de março, o TCE-MG (Tribunal de Contas do Estado, que fiscaliza o dinheiro público) suspendeu o processo, apontando problemas na modelagem econômico-financeira, na divisão de riscos, na bilhetagem eletrônica e no valor da garantia de proposta. Em 11/11, o tribunal revogou essa suspensão e, na sexta (13/11), a Prefeitura republicou o edital, que passa a trazer estudos de fluxo de caixa para os 15 anos, mais detalhes sobre custos de veículos, garagens e pontos de parada, e regras para falhas na bilhetagem. O desconto dos licitantes passa a incidir só sobre a remuneração do capital próprio. Com a republicação, as etapas anteriores ficam anuladas e a abertura das propostas está prevista para 22/12. A Prefeitura deve enviar ao TCE, em até cinco dias, o edital completo; o tribunal avisa que diferenças em relação ao que analisou podem gerar multa. A gestão diz que trabalhou nos ajustes pedidos e fala em “avanço na construção de um transporte público mais moderno”. Em setembro, a Prefeitura prorrogou por 12 meses o contrato atual com o Consórcio Via JF. A reportagem não traz posição de oposição ou de entidades de usuários.",
+       "impacto": {
+        "trabalhador": "Nada muda de imediato no ônibus que o trabalhador pega: o contrato atual segue por 12 meses. O que o novo contrato fixar sobre tarifa, linhas e bilhetagem só valerá depois da escolha da empresa, e as reportagens não informam o valor da tarifa futura.",
+        "baixa": "Quem depende do ônibus todo dia é o mais exposto às regras de tarifa e de horários que vierem. Por ora, não há mudança.",
+        "media": "Efeito indireto: a qualidade do sistema afeta quem usa ônibus de vez em quando e o trânsito em geral, a longo prazo.",
+        "alta": "Efeito direto pequeno para o morador. Empresas interessadas na concessão acompanham prazos e regras do edital."
+       },
+       "fontes": [
+        {
+         "nome": "Tribuna de Minas, 13/11/2026",
+         "url": "https://tribunademinas.com.br/noticias/cidade/13-11-2026/pjf-republica-edital-licitacao-onibus.html"
+        }
+       ]
+      },
+      {
+       "titulo": "Prefeitura não repassará verba ao carnaval de 2027; Liga das escolas de samba diz ter sido pega de surpresa",
+       "selo": "Confirmado",
+       "texto": "A Prefeitura anunciou, em 11/11, que não haverá fomento público (dinheiro do Município para ajudar a organizar a festa) ao carnaval de 2027 e cancelou editais para as festividades de fim de ano. O motivo dado é que o carnaval de 2027 cai perto do primeiro aniversário da tragédia das chuvas de fevereiro de 2026. A prefeita Margarida Salomão (PT) disse, em vídeo, que não se trata de economia e que houve “perdas de vida, de bens, de moradia, do nosso sossego”. O superintendente da Funalfa (fundação de cultura do Município), Rogério Freitas, afirmou que o planejamento antecipado permitirá um evento mais organizado e que a gestão abrirá o calendário cultural em março com um grande evento. Blocos de rua podem desfilar de forma independente, com orientação da Prefeitura sobre os trâmites, e as escolas de samba terão edital específico para 2028. A Liga Independente das Escolas de Samba (Liesjuf) disse ter sido pega de surpresa, afirmou que a Funalfa havia prometido posição oficial após as eleições e questionou: “Se o motivo fosse realmente o luto, ele deveria valer para todos os eventos”. A Liga buscava patrocínio privado. Dois blocos pediram esclarecimentos.",
+       "impacto": {
+        "trabalhador": "Quem vive de trabalho temporário no carnaval, como costureiros, músicos e ambulantes, tende a ter menos renda nesse período se os desfiles forem menores. As reportagens não informam números de empregos.",
+        "baixa": "Integrantes das escolas, em geral de bairros populares, podem perder um dos principais momentos de renda e de encontro do ano, se não houver patrocínio.",
+        "media": "Efeito indireto no comércio de bairro e em bares nos dias de desfile; o tamanho depende de os blocos desfilarem por conta própria.",
+        "alta": "Efeito pequeno. Patrocinadores privados podem ser procurados pelas escolas, que já faziam isso."
+       },
+       "fontes": [
+        {
+         "nome": "Tribuna de Minas, 11/11/2026",
+         "url": "https://tribunademinas.com.br/noticias/cultura/11-11-2026/prefeitura-nao-fara-repasse-de-recursos-para-o-carnaval-de-2027-em-juiz-de-fora.html"
+        }
+       ]
+      }
+     ],
+     "caixa": {
+      "titulo": "O que é uma licitação de ônibus?",
+      "texto": "A Prefeitura é dona do serviço de ônibus urbano, mas quem o opera é uma empresa escolhida por concorrência. O edital é o “regulamento” dessa disputa: diz o que a empresa deve cumprir e como será paga. O Tribunal de Contas confere se as contas fazem sentido antes de o contrato ser assinado."
+     }
+    },
+    {
+     "id": "saude",
+     "titulo": "Saúde",
+     "aviso": "Informação geral. Não substitui a orientação de um médico ou de uma unidade de saúde.",
+     "abertura": "Covid-19 volta ao noticiário com sinais de alta em Minas, mas ainda com poucos casos na cidade.",
+     "itens": [
+      {
+       "titulo": "Juiz de Fora tem 98 casos de Covid-19 em 2026; Fiocruz vê alta de casos graves em Minas",
+       "selo": "Confirmado",
+       "texto": "Até 12/11, a Prefeitura registra 98 casos confirmados de Covid-19 no ano na cidade, com 4 mortes, todas de pessoas com 80 anos ou mais, e 580 notificações de casos suspeitos. Por mês: 40 casos em fevereiro, 15 em janeiro, 15 em março, 6 em outubro e 1 em novembro. A Fiocruz (fundação federal de pesquisa em saúde) identificou tendência de alta de SRAG (síndrome respiratória aguda grave) associada à Covid-19 em MG, DF, SP, RJ, PR e BA, com hospitalizações ainda em níveis baixos. Em Belo Horizonte, a positividade dos testes subiu de 1% para 7% no fim de outubro. A cobertura vacinal em Juiz de Fora é de 84,91% com duas doses e 17,53% com quatro. Há doses para menores de 5 anos; novas doses para pessoas a partir de 12 anos têm previsão de chegada em 19/11. A Fiocruz recomenda conferir se a vacinação está em dia, reforço anual para grupos prioritários, a cada seis meses para idosos e imunocomprometidos, higiene das mãos e isolamento com sintomas gripais.",
+       "impacto": {
+        "trabalhador": "Quem tem sintomas gripais pode precisar se afastar, e quem trabalha com atendimento ao público fica mais exposto. As reportagens não indicam medida que afete o trabalho.",
+        "baixa": "Quem depende do SUS pode ter que esperar por doses até a chegada do lote previsto para 19/11. A busca por posto ou pelo Departamento da Criança, para menores, fica por conta da família.",
+        "media": "Efeito pequeno enquanto os casos graves seguem baixos. Vale conferir a caderneta de vacinação de idosos da família.",
+        "alta": "Efeito pequeno. Quem pode, tende a acessar vacina em clínica particular, se houver dose."
+       },
+       "fontes": [
+        {
+         "nome": "Tribuna de Minas, 13/11/2026",
+         "url": "https://tribunademinas.com.br/noticias/cidade/13-11-2026/juiz-de-fora-registra-98-casos-de-covid-19-em-2026-fiocruz-identifica-crescimento-em-mg.html"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cidade",
+     "titulo": "Cidade, obras e ônibus",
+     "abertura": "Hoje à noite, o trânsito muda ao redor do Estádio Municipal.",
+     "itens": [
+      {
+       "titulo": "Bahamas Night Run muda o trânsito perto do Estádio Municipal neste sábado",
+       "selo": "Confirmado",
+       "texto": "A 4ª Bahamas Night Run, corrida de rua, tem provas infantis às 15h e largada principal às 19h, no entorno do Estádio Municipal, com alteração no trânsito. A retirada de kits ocorreu até sexta. A edição anterior do jornal informou 4.944 inscritos, conforme o Acessa.com de 12/11. Quem precisa passar pela região no fim de tarde e à noite deve buscar rota alternativa e conferir os desvios na reportagem. Com chuva prevista, a organização não informou, nas fontes consultadas, mudança no horário.",
+       "impacto": {
+        "trabalhador": "Quem trabalha no sábado perto do Estádio, como em bares e comércio, pode enfrentar trânsito travado e dificuldade de estacionar; o ônibus que passa pela região pode atrasar.",
+        "baixa": "Quem depende de ônibus na região pode ter atrasos, e as reportagens não informam desvio de linhas.",
+        "media": "Efeito pequeno, restrito a quem passa pelo trecho no horário da prova.",
+        "alta": "Efeito pequeno. Moradores do entorno podem ter dificuldade para sair de carro."
+       },
+       "fontes": [
+        {
+         "nome": "Acessa.com, 12/11/2026",
+         "url": "https://www.acessa.com/cidade/2026/11/344146-4-bahamas-night-run-altera-transito-no-entorno-do-estadio-municipal-neste-sabado-em-jf.html"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "tempo": {
+    "texto": "Sábado de chuvas esparsas, com temperatura entre 16 °C e 24 °C. Domingo (15/11, feriado da Proclamação da República) esquenta até 27 °C, com chuva. A semana segue chuvosa. A previsão do HG Brasil usada aqui foi atualizada em 13/11 às 6h e pode mudar, principalmente nos dias mais distantes. Em temporal, não se abrigue sob árvores. Defesa Civil: 199. Bombeiros: 193.",
+    "dias": [
+     {
+      "dia": "Sáb 14",
+      "min": 16,
+      "max": 24,
+      "ceu": "Chuvas esparsas"
+     },
+     {
+      "dia": "Dom 15",
+      "min": 17,
+      "max": 27,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Seg 16",
+      "min": 18,
+      "max": 22,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Ter 17",
+      "min": 17,
+      "max": 24,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Qua 18",
+      "min": 18,
+      "max": 25,
+      "ceu": "Chuvas esparsas"
+     },
+     {
+      "dia": "Qui 19",
+      "min": 19,
+      "max": 28,
+      "ceu": "Chuvas esparsas"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "HG Brasil, previsão atualizada em 13/11/2026",
+      "url": "https://hgbrasil.com/weather/places/brazil/mg/juiz-de-fora"
+     }
+    ]
+   },
+   "historia": {
+    "titulo": "A estrada de pedra moída que ligou Juiz de Fora a Petrópolis",
+    "texto": "Antes da ferrovia, o caminho entre o interior de Minas e o litoral do Rio era de terra. Em 23 de junho de 1861, com a presença do imperador Dom Pedro II e da família imperial, foi inaugurada a Estrada União e Indústria, ligando Petrópolis (RJ) a Juiz de Fora (MG). Segundo o Estado de Minas, ela foi idealizada e executada pelo comendador Mariano Procópio Ferreira Lage. Tinha 144 km, percorridos em doze horas de diligência (carruagem), com estações para trocar os cavalos. O Estado de Minas a chama de primeira estrada de rodagem macadamizada do Brasil. Macadame é uma camada de pedra britada compactada que permitia trafegar também na época de chuva. A via ajudou a cidade a se tornar polo industrial, que lhe deu o apelido de Manchester Mineira, e parte do traçado hoje é rua urbana. A edição nº 2 tratou da Villa Ferreira Lage, ligada ao mesmo empresário.",
+    "linha": [
+     {
+      "ano": "1861",
+      "fato": "Inauguração da Estrada União e Indústria, em 23 de junho, com Dom Pedro II"
+     },
+     {
+      "ano": "1861",
+      "fato": "Trajeto Petrópolis–Juiz de Fora: 144 km em doze horas de diligência"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "Estado de Minas, 05/08/2026",
+      "url": "https://www.em.com.br/emfoco/2026/08/05/a-cidade-mineira-que-acendeu-a-primeira-grande-hidreletrica-da-america-do-sul-em-1889-e-recebeu-a-estrada-pavimentada-mais-antiga-do-brasil/"
+     }
+    ]
+   },
+   "palavrinhas": [
+    {
+     "termo": "Licitação",
+     "def": "Disputa pública para escolher quem presta um serviço ou vende algo ao governo, com regras fixadas em edital."
+    },
+    {
+     "termo": "TCE-MG",
+     "def": "Tribunal de Contas do Estado de Minas Gerais, órgão que fiscaliza como Estado e municípios gastam dinheiro público."
+    },
+    {
+     "termo": "Fomento",
+     "def": "Dinheiro público para ajudar a realizar uma atividade, como o carnaval."
+    },
+    {
+     "termo": "SRAG",
+     "def": "Síndrome respiratória aguda grave: falta de ar e outros sinais que costumam levar à internação."
+    },
+    {
+     "termo": "Macadame",
+     "def": "Pavimento de pedra britada compactada, usado em estradas antigas."
+    }
+   ],
+   "agenda": [
+    {
+     "quando": "Hoje, 14/11",
+     "oque": "4ª Bahamas Night Run: provas infantis às 15h, largada principal às 19h, trânsito alterado no entorno do Estádio Municipal"
+    },
+    {
+     "quando": "Dom, 15/11",
+     "oque": "Feriado da Proclamação da República; final da Copa Matias, às 12h"
+    },
+    {
+     "quando": "Seg, 16/11",
+     "oque": "Prazo até 17h para a Prefeitura quitar o repasse às creches; começam as reuniões da Secretaria de Saúde com cada hospital"
+    },
+    {
+     "quando": "Qui, 19/11",
+     "oque": "Previsão de novas doses de vacina contra Covid-19 para pessoas a partir de 12 anos"
+    },
+    {
+     "quando": "Sex, 20/11",
+     "oque": "Feriado da Consciência Negra; data prometida para o repasse mensal aos hospitais"
+    },
+    {
+     "quando": "Ter, 24/11",
+     "oque": "Mutirão de Empregos, das 9h às 13h, no Independência Shopping"
+    },
+    {
+     "quando": "Ter, 22/12",
+     "oque": "Previsão de abertura das propostas da licitação dos ônibus"
+    }
+   ],
+   "conversa": [
+    "A Prefeitura atribuiu o atraso das creches ao feriado de 2 de novembro. Que informação pública mostraria, mês a mês, se os repasses seguem o calendário?",
+    "A licitação dos ônibus foi suspensa por mais de sete meses e voltou com ajustes pedidos pelo TCE. O que o morador precisaria saber do novo edital para entender como ele afeta a tarifa e as linhas?",
+    "O carnaval de 2027 ficará sem apoio da Prefeitura por causa do luto das chuvas, e a Liga diz que o motivo deveria valer para todos os eventos. Como uma cidade pode decidir, com transparência, quais festas recebem dinheiro público?",
+    "A Estrada União e Indústria foi uma obra de iniciativa privada que mudou a economia da cidade. Que obras de hoje poderiam ter esse efeito, e quem deveria pagá-las?"
+   ],
+   "fechamento": "Manchester Mineira, edição nº 3, fechada na manhã de 14/11/2026."
+  },
+  {
+   "numero": 2,
+   "data": "2026-11-13",
+   "tempoLeitura": 13,
+   "capa": {
+    "chapeu": "Dinheiro público",
+    "titulo": "Hospitais voltam a atender, e agora são as creches que cobram",
+    "linhaFina": "A paralisação dos hospitais do SUS foi suspensa depois que a Prefeitura prometeu repasse todo dia 20. No mesmo dia, 44 creches conveniadas avisaram que podem parar na segunda por atraso do pagamento de outubro; a Prefeitura diz que começou a pagar. Também nesta edição: Município assume reparos das delegacias, R$ 3,46 milhões para conter encosta no Dom Bosco e alerta de tempestade até a noite."
+   },
+   "citacao": "Combinado só vale quando tem data para ser cumprido.",
+   "recado": "Esta edição saiu com atraso: foi fechada na noite de sexta-feira, e não de manhã, como é o costume. Dois avisos de transparência. Esclarecimento: na edição de ontem dissemos que cinco hospitais tinham reduzido o atendimento (Santa Casa, Ascomcer, São Vicente de Paulo, IBG Saúde e Maternidade Therezinha de Jesus), conforme a reportagem de 10/11; a Tribuna de Minas de 12/11 lista seis (Santa Casa, Therezinha de Jesus, Ana Nery, São Vicente de Paulo, Instituto Oncológico e Ascomcer). As listas das fontes não coincidem, e o jornal não conseguiu confirmar qual está completa. Segundo aviso: o site da Câmara Municipal continua fora do alcance do jornal, e a imprensa local não noticiou votação em plenário nos últimos dias; por isso, do Legislativo, só há a CPI da Saúde.",
+   "resumo": [
+    {
+     "tema": "Hospitais",
+     "texto": "A paralisação parcial foi suspensa “por enquanto”. A Prefeitura prometeu repasse todo dia 20 e reuniões com cada hospital a partir de segunda (16/11)."
+    },
+    {
+     "tema": "Creches",
+     "texto": "Segundo a associação das entidades, 44 creches conveniadas, com cerca de 5.600 crianças, podem parar na segunda por atraso do repasse de outubro. A Prefeitura diz que começou a pagar na quinta."
+    },
+    {
+     "tema": "Delegacias",
+     "texto": "Um acordo põe a Prefeitura a cargo de reparos e internet dos prédios da Polícia Civil até o fim de 2028. O custo não foi informado."
+    },
+    {
+     "tema": "Encosta",
+     "texto": "O governo federal autorizou R$ 3,46 milhões para conter um barranco no Dom Bosco. A obra tem até 365 dias para ser feita."
+    },
+    {
+     "tema": "CPI da Saúde",
+     "texto": "A comissão da Câmara espera documentos da Prefeitura até 20/11 e volta a se reunir em 23/11."
+    },
+    {
+     "tema": "Ruas",
+     "texto": "Uma obra particular foi notificada por lama na Avenida JK, e árvores com risco de queda foram cortadas no Centro."
+    },
+    {
+     "tema": "Tempo",
+     "texto": "Alerta de tempestade do Inmet vale até 23h59 desta sexta. O fim de semana segue com chuva."
+    }
+   ],
+   "numeros": [
+    {
+     "rotulo": "Crianças em creches conveniadas",
+     "valor": "5.600",
+     "nota": "em 44 creches com repasse de outubro pendente, segundo a associação das entidades",
+     "fonte": "Tribuna de Minas, 12/11/2026"
+    },
+    {
+     "rotulo": "Dia do repasse aos hospitais",
+     "valor": "Dia 20",
+     "nota": "data prometida pela Prefeitura para o pagamento mensal, a partir de novembro",
+     "fonte": "Tribuna de Minas, 12/11/2026"
+    },
+    {
+     "rotulo": "Contenção no Dom Bosco",
+     "valor": "R$ 3,46 mi",
+     "nota": "autorizados pelo governo federal para uma encosta na Rua José Claro Dia",
+     "fonte": "Rádio Itatiaia, 12/11/2026"
+    },
+    {
+     "rotulo": "Máxima de hoje",
+     "valor": "24 °C",
+     "nota": "mínima de 18 °C, com chuva e alerta de tempestade",
+     "fonte": "HG Brasil, 13/11/2026"
+    }
+   ],
+   "cadernos": [
+    {
+     "id": "politica",
+     "titulo": "Prefeitura e Câmara",
+     "abertura": "Uma semana de contas a acertar: hospitais com promessa de data fixa, delegacias sob cuidado do Município, dinheiro federal para uma encosta e a CPI à espera de papéis",
+     "itens": [
+      {
+       "titulo": "Hospitais suspendem a paralisação; Prefeitura promete repasse todo dia 20",
+       "selo": "Confirmado",
+       "texto": "Os hospitais filantrópicos (particulares sem fins lucrativos que atendem pelo SUS, a rede pública de saúde) suspenderam “por enquanto” a paralisação parcial iniciada na terça-feira (10/11). A decisão veio depois de uma reunião com a secretária municipal de Saúde, Cidinha Louzada, e foi comunicada pelo Sindisaúde-JF, a entidade que fala pelos hospitais na negociação. O combinado, segundo a Tribuna de Minas e o Acessa.com: os repasses ordinários, que são o dinheiro mensal que a Prefeitura transfere aos hospitais, voltam a ser pagos todo dia 20, já a partir de novembro. A partir de segunda-feira (16/11), a Secretaria recebe cada hospital, um por um, para conferir valores, metas de contrato e atendimentos feitos, e montar um cronograma para o que está atrasado, incluindo emendas parlamentares ainda não repassadas. O que diz cada lado: o Sindisaúde chamou a suspensão de “gesto de boa-fé” e afirma, em ofício, que há recursos “retidos indevidamente pelo gestor municipal” e que a falta de regularização “compromete a continuidade dos serviços prestados à população”. A Prefeitura considerou a reunião “produtiva”, disse ter apresentado uma proposta para regularizar os pagamentos e declarou que “o centro dessa discussão é o usuário do SUS”. O que falta saber: nenhuma das reportagens informa quanto está em atraso nem o valor do acordo, e não há prazo para a suspensão; se o repasse do dia 20 não sair, a paralisação pode voltar. As fontes também divergem em um detalhe: o Acessa.com cita um ofício datado de 11/11, e a Tribuna de Minas situa a reunião na tarde de quinta (12/11). Quem teve consulta, exame ou cirurgia adiada nesta semana deve procurar o hospital para remarcar.",
+       "impacto": {
+        "trabalhador": "Consultas e exames pelo SUS nesses hospitais tendem a voltar ao normal, mas quem foi desmarcado precisa remarcar, o que pode exigir outra folga. Para quem trabalha nos hospitais, a data fixa de repasse dá mais previsibilidade ao caixa que paga salários; as reportagens não informam atraso de salários.",
+        "baixa": "É o grupo mais beneficiado pela volta do atendimento, porque depende só do SUS. O risco continua: a paralisação foi suspensa, não encerrada, e depende do pagamento do dia 20.",
+        "media": "Efeito direto pequeno para quem usa plano de saúde. A pressão extra sobre o HPS (pronto-socorro municipal) e as UPAs tende a diminuir com a volta dos atendimentos marcados.",
+        "alta": "Efeito direto pequeno. Para gestores e fornecedores de hospitais, um calendário fixo reduz a incerteza, mas os valores atrasados ainda serão conciliados caso a caso."
+       },
+       "fontes": [
+        {
+         "nome": "Tribuna de Minas, 12/11/2026",
+         "url": "https://tribunademinas.com.br/noticias/cidade/12-11-2026/hospitais-de-juiz-de-fora-suspendem-paralisacao-apos-acordo-sobre-repasses-do-sus.html"
+        },
+        {
+         "nome": "Acessa.com, 12/11/2026",
+         "url": "https://www.acessa.com/cidade/2026/11/344136-hospitais-que-atendem-pelo-sus-em-juiz-de-fora-suspendem-paralisacao-parcial-apos-compromisso-da-prefeitura.html"
+        },
+        {
+         "nome": "Rádio Itatiaia, 12/11/2026",
+         "url": "https://www.itatiaia.com.br/juizdefora/hospitais-que-atendem-pelo-sus-suspendem-paralisacao-dos-atendimentos-em-juiz-de-fora/"
+        }
+       ]
+      },
+      {
+       "titulo": "Prefeitura vai cuidar de reparos e internet das delegacias da Polícia Civil até 2028",
+       "selo": "Confirmado",
+       "texto": "A Prefeitura e a Polícia Civil de Minas Gerais assinaram na quarta-feira (11/11) um Acordo de Cooperação Técnica, publicado no diário oficial do Município na quinta (12/11). Acordo de cooperação é um contrato entre órgãos públicos para dividir tarefas. Por ele, o Município fica responsável pela manutenção dos prédios, por pequenos reparos e pelo fornecimento de internet às unidades da Polícia Civil na cidade, até 31 de dezembro de 2028. A investigação continua sendo tarefa só da Polícia Civil, que é um órgão do governo do estado. Assinaram a prefeita Margarida Salomão (PT) e a delegada-geral Andrea Mendes de Souza Abood, superintendente de Planejamento, Gestão e Finanças da corporação. O que dizem os envolvidos: o delegado regional Bruno Wink afirmou que o acordo serve para “somar esforços e estabelecer responsabilidades para melhorar a infraestrutura”. A Prefeitura, em nota, falou em “forte cooperação institucional entre o Executivo municipal e as forças de segurança” e disse que não haverá repasse de dinheiro, pois os serviços usarão estrutura que o Município já tem. O que falta saber: o Acessa.com perguntou quanto isso deve custar até 2028 e se o gasto está previsto no orçamento, e relata que a resposta foi genérica. A reportagem não lista quais delegacias serão atendidas nem traz posição contrária ao acordo. O jornal só encontrou uma reportagem sobre o assunto.",
+       "impacto": {
+        "trabalhador": "Quem precisa registrar ocorrência ou tirar documento em delegacia pode encontrar prédios em melhor estado e sistema mais estável, se o acordo for cumprido. O efeito no dia a dia tende a ser pequeno e demorado.",
+        "baixa": "Efeito indireto. Como equipes e serviços do Município passam a atender prédios do estado, vale acompanhar se isso disputa espaço com a manutenção de postos de saúde e escolas; o custo não foi informado.",
+        "media": "Efeito pequeno. Quem paga IPTU e outros tributos municipais passa a custear parte de uma estrutura que é do estado, sem valor divulgado até aqui.",
+        "alta": "Efeito direto quase nulo. Para empresas de manutenção e de internet que prestam serviço ao Município, o volume de trabalho contratado pode crescer, a depender de como o acordo for executado."
+       },
+       "fontes": [
+        {
+         "nome": "Acessa.com, 12/11/2026",
+         "url": "https://www.acessa.com/cidade/2026/11/344140-prefeitura-de-juiz-de-fora-vai-custear-manutencao-e-internet-de-delegacias-da-policia-civil-ate-2028.html"
+        }
+       ]
+      },
+      {
+       "titulo": "Governo federal autoriza R$ 3,46 milhões para conter encosta no Dom Bosco",
+       "selo": "Confirmado",
+       "texto": "O Ministério da Integração e do Desenvolvimento Regional autorizou o repasse de R$ 3.459.223,25 à Prefeitura para a contenção de uma encosta (barranco com risco de deslizar) na Rua José Claro Dia, no Bairro Dom Bosco. A autorização saiu em portaria da Secretaria Nacional de Proteção e Defesa Civil publicada na quarta-feira (11/11), com base em um plano de trabalho apresentado pelo Município. Segundo a Rádio Itatiaia, é a mais cara de três obras emergenciais previstas em um acordo. O dinheiro vem em parcela única, só pode ser usado nessa obra, e o prazo de execução é de 365 dias a partir da publicação; depois, a Prefeitura tem 30 dias para prestar contas. A reportagem não informa quando a obra começa nem qual empresa vai executá-la. Atenção ao título da Itatiaia, que fala em “mais de R$ 3.400 milhões”: o valor que está no texto é de cerca de R$ 3,46 milhões. O contexto é o das chuvas iniciadas em 23 de fevereiro, que deixaram 66 mortos, mais de 2.200 casas destruídas e mais de 8 mil desalojados; a cidade segue em estado de calamidade pública.",
+       "impacto": {
+        "trabalhador": "Para quem mora ou passa pelo Dom Bosco, a obra tende a reduzir o risco de novos deslizamentos, mas pode levar até um ano. Durante a execução, pode haver interdição de trechos; a reportagem não detalha.",
+        "baixa": "É quem mais ganha, porque as áreas de encosta concentram moradias mais simples. Até a obra ficar pronta, o risco continua em dias de chuva forte: Defesa Civil, 199.",
+        "media": "Efeito indireto: menos risco de interdições na região e nos caminhos que passam por ela.",
+        "alta": "Efeito direto pequeno. Para empresas de engenharia, é mais uma obra pública a ser contratada pela Prefeitura."
+       },
+       "fontes": [
+        {
+         "nome": "Rádio Itatiaia, 12/11/2026",
+         "url": "https://www.itatiaia.com.br/juizdefora/governo-federal-autoriza-repasse-de-mais-de-r-3-400-milhoes-para-obra-em-juiz-de-fora/"
+        }
+       ]
+      },
+      {
+       "titulo": "CPI da Saúde marca a sexta reunião para 23 de novembro e lista o que pediu à Prefeitura",
+       "selo": "Confirmado",
+       "texto": "A CPI das Emendas Impositivas da Saúde, comissão de vereadores que investiga se o dinheiro de emendas parlamentares para a saúde chegou ao destino, confirmou a sexta reunião de trabalho para 23 de novembro. Até 20 de novembro, que é feriado da Consciência Negra, a Prefeitura deve entregar quatro conjuntos de documentos: a relação das emendas e dos recursos recebidos, os extratos das contas bancárias do Município, os dados da execução do orçamento e a comprovação do que foi repassado a hospitais e entidades ligadas ao SUS. O presidente da comissão, Dr. Marcelo Condé (Avante), disse que o intervalo de três dias foi pensado para a leitura do material: “Precisamos ter tempo para analisar todos os documentos que serão encaminhados”. A vereadora Letícia Delgado (PT), integrante da CPI, afirmou que “os membros da comissão estão comprometidos com a investigação” e que só com os papéis em mãos será decidido quem será chamado a depor e se haverá visitas aos hospitais. O requerimento que criou a CPI tem como primeiro signatário o vereador Sargento Mello Casal (PL). A comissão foi instalada em 19 de outubro e tem 120 dias para concluir o relatório. A reportagem não traz manifestação da Prefeitura sobre o pedido. As reuniões passam ao vivo na JFTV Câmara (canal 35.1 da TV aberta) e no canal da Câmara no YouTube.",
+       "impacto": {
+        "trabalhador": "Nada muda de imediato. A CPI pode esclarecer, nas próximas semanas, parte da disputa sobre os repasses aos hospitais que atendem o trabalhador pelo SUS.",
+        "baixa": "Efeito indireto: se a comissão apontar onde o dinheiro travou, isso pode ajudar a destravar pagamentos de hospitais dos quais essa população depende. Por ora, é só apuração.",
+        "media": "Efeito indireto. Para quem acompanha as contas públicas, os documentos pedidos mostram por onde passou o dinheiro das emendas.",
+        "alta": "Efeito direto pequeno. Hospitais e entidades que recebem emendas podem ser chamados a prestar informações."
+       },
+       "fontes": [
+        {
+         "nome": "Acessa.com, 12/11/2026",
+         "url": "https://www.acessa.com/cidade/2026/11/344139-cpi-da-saude-em-juiz-de-fora-aguarda-documentos-da-prefeitura-e-marca-reuniao-para-23-de-novembro.html"
+        },
+        {
+         "nome": "Rádio Itatiaia, 11/11/2026",
+         "url": "https://www.itatiaia.com.br/juizdefora/cpi-da-saude-aguarda-envio-de-documentos-pela-prefeitura-de-juiz-de-fora-para-sequencia-dos-trabalhos/"
+        }
+       ]
+      }
+     ],
+     "caixa": {
+      "titulo": "O que é um Termo de Colaboração?",
+      "texto": "É o contrato que a Prefeitura assina com uma entidade sem fins lucrativos para que ela preste um serviço público, como cuidar de uma creche. O documento traz metas (quantas crianças atender, por exemplo), o valor mensal e a data do pagamento. A entidade presta contas do que gastou. Quando o pagamento atrasa, a entidade segue obrigada a pagar salários e fornecedores; por isso atrasos curtos já causam aperto. É esse tipo de contrato que está no centro da notícia das creches nesta edição."
+     }
+    },
+    {
+     "id": "educacao",
+     "titulo": "Educação",
+     "abertura": "Creches conveniadas cobram o repasse de outubro, e a UFJF ergue um prédio para a Veterinária",
+     "itens": [
+      {
+       "titulo": "Creches conveniadas ameaçam parar na segunda; Prefeitura diz que começou a pagar",
+       "selo": "Confirmado",
+       "texto": "As creches parceiras da Prefeitura, que são entidades sem fins lucrativos pagas pelo Município para atender crianças, avisaram que podem suspender o atendimento presencial a partir de segunda-feira (16/11). O motivo é o atraso do repasse de outubro, que pelos Termos de Colaboração (os contratos entre as entidades e a Prefeitura) deveria ser pago até o quinto dia útil do mês. A condição posta pelas entidades era o pagamento integral até o meio-dia desta sexta (13/11). Segundo a ABA-EB, associação que representa as instituições, são 44 creches com repasse pendente e cerca de 5.600 crianças atendidas. O que diz cada lado: a ABA-EB, presidida por Cristina Bittencourt, afirma que a paralisação não seria uma escolha, mas consequência da falta de dinheiro para higiene, manutenção e obrigações trabalhistas, e que o atendimento volta assim que o valor cair na conta; a entidade também cobra um acordo de reequilíbrio financeiro firmado em 2023. A Prefeitura informou que começou a pagar parte das instituições na quinta (12/11), que outra parcela sairia nesta sexta e que a mudança no calendário se deve ao feriado de Finados (2/11). Uma mãe ouvida pela Tribuna de Minas resumiu o efeito em casa: “Eu vou ter que faltar o meu serviço, sendo descontada depois, porque não tenho nenhuma rede de apoio aqui na cidade”. O que falta saber: a Prefeitura não informou valores nem quais creches já receberam, e até o fechamento desta edição o jornal não encontrou confirmação de que o pagamento desta sexta quitou tudo, nem de que a paralisação foi cancelada. Quem tem filho em creche conveniada deve confirmar com a unidade antes de segunda.",
+       "impacto": {
+        "trabalhador": "É o grupo mais atingido: sem creche, pai ou mãe pode ter de faltar ao serviço e ter o dia descontado. Vale combinar com antecedência um plano para segunda-feira e confirmar com a creche no fim de semana.",
+        "baixa": "Além do cuidado, a creche garante refeições que, para parte das famílias, pesam na alimentação da criança. Uma paralisação, mesmo curta, tende a ser sentida no orçamento e na rotina.",
+        "media": "Quem paga creche particular não é afetado diretamente. Pode haver efeito indireto em equipes de trabalho com colegas que dependem da rede conveniada.",
+        "alta": "Efeito direto pequeno. Empregadores podem ter faltas na segunda-feira se o atendimento parar."
+       },
+       "fontes": [
+        {
+         "nome": "Tribuna de Minas, 12/11/2026",
+         "url": "https://tribunademinas.com.br/noticias/cidade/12-11-2026/atraso-em-repasses-pode-deixar-cerca-de-5-600-criancas-sem-creche-em-juiz-de-fora.html"
+        },
+        {
+         "nome": "Acessa.com, 13/11/2026",
+         "url": "https://www.acessa.com/cidade/2026/11/344160-prefeitura-de-juiz-de-fora-inicia-pagamento-de-repasses-a-creches-apos-ameaca-de-paralisacao.html"
+        }
+       ]
+      },
+      {
+       "titulo": "UFJF constrói prédio de R$ 10,6 milhões para clínica veterinária de ensino",
+       "selo": "Confirmado",
+       "texto": "A Universidade Federal de Juiz de Fora (UFJF) está construindo um prédio de dois andares para a Clínica Veterinária de Ensino e os laboratórios do curso de Medicina Veterinária. O contrato, de R$ 10.689.423,84, foi assinado em junho de 2026 e prevê 27 meses de obra, que já começou. O prédio fica no Setor H do campus, perto das faculdades de Farmácia, Enfermagem e Odontologia. Segundo o vice-diretor da Faculdade de Medicina Veterinária, Leonardo Lanna, o primeiro andar terá consultórios, laboratório de patologia clínica, salas de exames de imagem, centro cirúrgico e internação de pequenos animais; o segundo, a administração e laboratórios como os de anatomia, microbiologia e inspeção de alimentos de origem animal. A universidade espera mais aulas práticas e a possibilidade de ampliar o atendimento veterinário à população e a vigilância de zoonoses, que são doenças transmitidas entre animais e pessoas. A reportagem não informa a origem do dinheiro, o nome da construtora nem se o atendimento ao público será gratuito.",
+       "impacto": {
+        "trabalhador": "Nada muda agora: a obra leva mais de dois anos. Depois, pode haver mais uma opção de atendimento para animais de estimação, em condições que ainda não foram informadas.",
+        "baixa": "Pode ser útil no futuro para quem não consegue pagar clínica particular, se houver atendimento gratuito ou barato; isso ainda não está definido.",
+        "media": "Efeito pequeno e futuro: mais oferta de serviços veterinários especializados na cidade.",
+        "alta": "Efeito direto pequeno. Para o setor da construção e para clínicas veterinárias, é uma obra e, depois, um novo polo de formação de profissionais."
+       },
+       "fontes": [
+        {
+         "nome": "Acessa.com, 12/11/2026",
+         "url": "https://www.acessa.com/cidade/2026/11/344116-ufjf-assina-contrato-de-rs106-milhoes-para-construir-clinica-veterinaria-e-laboratorios.html"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "emprego",
+     "titulo": "Emprego e economia",
+     "abertura": "Uma decisão da Justiça do Trabalho sobre quem dirige as ambulâncias do Samu",
+     "itens": [
+      {
+       "titulo": "Tribunal reconhece adicional de insalubridade máximo a condutor do Samu da região",
+       "selo": "Confirmado",
+       "texto": "A 11ª Turma do Tribunal Regional do Trabalho de Minas Gerais (TRT-MG) reconheceu a um condutor socorrista do Samu o direito ao adicional de insalubridade em grau máximo, de 40%. Adicional de insalubridade é um valor a mais no salário de quem trabalha exposto a agentes que fazem mal à saúde. O trabalhador recebia o grau médio, de 20%. O processo começou na Vara do Trabalho de Ubá, que tinha concedido os 40% apenas para o período da pandemia (abril de 2021 a maio de 2023); o tribunal entendeu que o risco de contaminação no transporte de pacientes faz parte da rotina e estendeu o direito a todo o contrato ainda não prescrito. A ação é contra o Cisdeste, consórcio de municípios que administra o Samu na macrorregião Sudeste de Minas. A decisão vale para esse trabalhador, não para toda a categoria, e ainda não é definitiva: o caso foi ao Tribunal Superior do Trabalho (TST). Em nota, o consórcio disse que a ação será discutida em instância superior e que aguardará a decisão para se manifestar.",
+       "impacto": {
+        "trabalhador": "Para condutores e outros profissionais do Samu na região, a decisão indica um caminho possível na Justiça, mas cada caso é julgado separadamente e este ainda depende do TST.",
+        "baixa": "Efeito direto nenhum no atendimento do Samu, que segue gratuito pelo 192.",
+        "media": "Efeito indireto: se decisões parecidas se repetirem, o custo do consórcio, pago pelos municípios, tende a subir.",
+        "alta": "Efeito direto pequeno. Para empregadores da saúde, o caso sinaliza como o tribunal tem lido o risco biológico fora do período da pandemia."
+       },
+       "fontes": [
+        {
+         "nome": "Rádio Itatiaia, 12/11/2026",
+         "url": "https://www.itatiaia.com.br/juizdefora/justica-do-trabalho-reconhece-direito-de-condutor-socorrista-do-samu-a-adicional-de-insalubridade/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "seguranca",
+     "titulo": "Segurança",
+     "abertura": "Réplica de arma apreendida na Feira Noturna",
+     "itens": [
+      {
+       "titulo": "Guarda Municipal apreende réplica de arma após denúncia de ameaça na Feira Noturna",
+       "selo": "Confirmado",
+       "texto": "Na noite de quarta-feira (11/11), a Guarda Municipal abordou um homem na Feira Noturna, no Centro, depois de uma denúncia de ameaça feita pelo coordenador da feira. Com ele foram encontrados um simulacro de revólver (réplica que imita uma arma de verdade), um canivete e um bastão. As câmeras de videomonitoramento ajudaram a localizá-lo. O homem foi levado à delegacia para o registro da ocorrência; a pessoa que teria sido ameaçada não foi localizada. A Prefeitura afirmou que a Guarda faz patrulhamento regular nas feiras, inclusive nas noturnas. A reportagem não informa se ele ficou preso.",
+       "impacto": {
+        "trabalhador": "Para feirantes e para quem faz compras na feira à noite, o caso mostra que a coordenação pode acionar a Guarda e que há câmeras na área. Em situação de ameaça, ligue 153 (Guarda Municipal) ou 190 (Polícia Militar).",
+        "baixa": "Efeito pequeno. A feira é opção de compra mais barata para muitas famílias, e a presença da Guarda tende a dar mais tranquilidade.",
+        "media": "Efeito pequeno, o mesmo de qualquer frequentador do Centro à noite.",
+        "alta": "Efeito direto quase nulo."
+       },
+       "fontes": [
+        {
+         "nome": "Tribuna de Minas, 12/11/2026",
+         "url": "https://tribunademinas.com.br/noticias/cidade/12-11-2026/homem-e-abordado-com-simulacro-de-arma-apos-ameaca-na-feira-noturna-de-juiz-de-fora.html"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cidade",
+     "titulo": "Cidade, obras e ônibus",
+     "abertura": "Lama na JK, entulho que ficou das chuvas, árvores cortadas no Centro e um debate sobre quem vive na rua",
+     "itens": [
+      {
+       "titulo": "Obra particular é notificada após lama de barranco chegar à Avenida JK",
+       "selo": "Confirmado",
+       "texto": "Um talude (barranco cortado para uma construção) de uma obra particular deslizou e, com as chuvas, a terra desceu até a pista da Avenida Presidente Juscelino Kubitschek, na altura do Bairro Nova Era, na Zona Norte, perto do 27º Batalhão da Polícia Militar. A fiscalização da Prefeitura notificou os responsáveis na segunda-feira (9/11): eles devem limpar a via, impedir que a terra continue descendo e entupindo as galerias de água da chuva, e estabilizar o barranco com acompanhamento de um profissional habilitado, com registro no Crea (o conselho de engenharia). Na manhã de quinta (12/11), tratores trabalhavam no local. A reportagem não informa interdição da avenida, feridos, prazo para o serviço nem multa.",
+       "impacto": {
+        "trabalhador": "Quem usa a JK para ir ao trabalho, de ônibus, carro ou moto, pode encontrar lama e trânsito lento no trecho, principalmente com chuva. Motociclistas devem redobrar a atenção.",
+        "baixa": "Efeito parecido para quem mora na Zona Norte e depende dos ônibus que passam pela avenida.",
+        "media": "Efeito pequeno: mais tempo no trânsito em dias de chuva enquanto o barranco não for estabilizado.",
+        "alta": "Para quem constrói, o caso lembra que o dono da obra responde pela terra que chega à rua e pela segurança do barranco, com responsável técnico registrado."
+       },
+       "fontes": [
+        {
+         "nome": "Tribuna de Minas, 12/11/2026",
+         "url": "https://tribunademinas.com.br/noticias/cidade/12-11-2026/obra-particular-e-notificada-apos-deslizamento-de-terra-atingir-a-avenida-jk-em-juiz-de-fora.html"
+        }
+       ]
+      },
+      {
+       "titulo": "Nove meses depois, escombros de casa que desabou seguem em terreno no Mundo Novo",
+       "selo": "Confirmado",
+       "texto": "Os restos de um imóvel que desabou nas chuvas de fevereiro continuam em um terreno da Rua Dr. Luiz Antônio Vieira Pena, no Bairro Mundo Novo. Um morador de um prédio vizinho, que pediu para não ser identificado, contou à Rádio Itatiaia que encontrou ratos e um escorpião vindos do terreno, que reclamou pela primeira vez em agosto, quando foi aplicado veneno, e que o problema voltou. O que diz a Prefeitura: em nota, afirmou que a retirada de entulho em terreno particular cabe ao proprietário, que ele já foi intimado a fazer a limpeza e que agora está sujeito a autuação (multa) pela Fiscalização. O que falta saber: a rádio perguntou se o Município vai usar a Lei 15.451, de 21 de julho de 2026, que permite à Prefeitura agir em áreas atingidas por eventos climáticos, inclusive retirando entulho, e não teve resposta até a publicação. Não há prazo para a limpeza.",
+       "impacto": {
+        "trabalhador": "Quem mora perto de terreno com entulho convive com risco de escorpiões e ratos. Em caso de picada de escorpião, procure atendimento de urgência na hora.",
+        "baixa": "Tende a pesar mais em bairros atingidos pelas chuvas, onde há mais imóveis destruídos e os donos nem sempre têm dinheiro para a limpeza.",
+        "media": "Efeito localizado: vizinhos de imóveis destruídos, em qualquer bairro, enfrentam o mesmo impasse entre a obrigação do dono e a ação da Prefeitura.",
+        "alta": "Proprietários de terrenos com escombros podem ser intimados e multados se não fizerem a limpeza."
+       },
+       "fontes": [
+        {
+         "nome": "Rádio Itatiaia, 12/11/2026",
+         "url": "https://www.itatiaia.com.br/juizdefora/escombros-de-imovel-que-desabou-na-chuva-causa-problemas-para-vizinhanca-em-juiz-de-fora/"
+        }
+       ]
+      },
+      {
+       "titulo": "Prefeitura corta árvores com risco de queda no Parque Halfeld e em duas ruas",
+       "selo": "Confirmado",
+       "texto": "A Empav, empresa municipal de pavimentação e serviços urbanos, cortou na quinta-feira (12/11) árvores com risco de queda em três pontos da região central: no Parque Halfeld, na Rua Barão de Santa Helena (altura do número 833, no Granbery) e na Rua Marechal Deodoro (perto do número 300). Segundo a avaliação da Secretaria de Meio Ambiente, duas tinham a estrutura interna comprometida e a da Marechal estava muito inclinada. A Prefeitura informou que novas árvores serão plantadas no mesmo lugar ou perto. A reportagem não informa quantas foram cortadas nem como o morador pede vistoria de uma árvore.",
+       "impacto": {
+        "trabalhador": "Menos risco de queda de galhos e troncos sobre quem passa a pé ou espera ônibus no Centro, sobretudo nesta semana de chuva e vento.",
+        "baixa": "Efeito igual para todos os que circulam a pé pelo Centro.",
+        "media": "Menos risco de dano a carros estacionados e de falta de luz por queda de árvore sobre a rede elétrica nesses pontos.",
+        "alta": "Efeito direto pequeno; para o comércio do entorno, menos risco de interdição da calçada depois de temporal."
+       },
+       "fontes": [
+        {
+         "nome": "Rádio Itatiaia, 12/11/2026",
+         "url": "https://www.itatiaia.com.br/juizdefora/prefeitura-realiza-cortes-preventivos-de-arvores-em-risco-de-queda-em-juiz-de-fora/"
+        }
+       ]
+      },
+      {
+       "titulo": "Encontro reúne propostas da cidade para o plano nacional da população de rua",
+       "selo": "Confirmado",
+       "texto": "Juiz de Fora recebe nesta sexta-feira (13/11) a etapa local do Encontro Nacional de Políticas para a População em Situação de Rua, no Centro Público de Economia Solidária, em frente à Praça da Estação. A organização é da Secretaria Especial de Direitos Humanos e do Comitê Pop Rua-JF, com participação de pessoas que vivem na rua, movimentos sociais, trabalhadores dos serviços de atendimento, gestores e um representante do Ministério dos Direitos Humanos e da Cidadania. Os debates são divididos em oito temas, entre eles habitação, saúde, trabalho e renda e combate à violência. As propostas serão levadas ao encontro nacional, de 8 a 10 de dezembro. A reportagem não informa quantas pessoas vivem na rua em Juiz de Fora, e o resultado do encontro ainda não foi divulgado.",
+       "impacto": {
+        "trabalhador": "Efeito indireto e de longo prazo: o encontro produz propostas, não decisões. Para quem trabalha nos serviços de acolhimento, é um canal para apontar o que falta.",
+        "baixa": "É o grupo a que o debate se dirige, especialmente quem está na rua ou em risco de perder a moradia. Nada muda de imediato.",
+        "media": "Efeito indireto: as propostas podem orientar, no futuro, como a cidade lida com o tema no Centro e nos bairros.",
+        "alta": "Efeito direto pequeno; comerciantes do Centro podem ser afetados pelas políticas que saírem desse processo."
+       },
+       "fontes": [
+        {
+         "nome": "Rádio Itatiaia, 13/11/2026",
+         "url": "https://www.itatiaia.com.br/juizdefora/juiz-de-fora-sedia-etapa-de-encontro-nacional-de-politicas-para-pessoas-em-situacao-de-rua/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "esporte",
+     "titulo": "Esporte, cultura e lazer",
+     "abertura": "Corrida noturna no sábado e palco municipal aberto a propostas",
+     "itens": [
+      {
+       "titulo": "Corrida com 4.944 inscritos muda o trânsito perto do Estádio Municipal no sábado",
+       "selo": "Confirmado",
+       "texto": "A 4ª Bahamas Night Run acontece no sábado (14/11) na região do Estádio Municipal Radialista Mário Helênio, no Bairro Aeroporto, com 4.944 inscritos. As provas infantis começam às 15h, no estacionamento do estádio, e a largada principal é às 19h. O trânsito será afetado nas ruas Dirceu Barbosa e José Apolônio dos Reis, nas avenidas Eugênio do Nascimento e Paulo Botti e em trechos da Avenida Prefeito Mello Reis; a liberação é gradual, depois da passagem dos corredores. As linhas de ônibus 500, 510, 511, 512, 518, 519, 521, 523, 537, 539 e 542 atendem a região. Haverá agentes de trânsito no local e avisos no aplicativo Waze. A previsão é de chuvas esparsas no sábado.",
+       "impacto": {
+        "trabalhador": "Quem trabalha ou mora na região do Aeroporto e volta para casa no sábado à noite deve sair mais cedo ou contar com atraso nos ônibus da área.",
+        "baixa": "Efeito pequeno: possível atraso nas linhas que passam pela região durante a prova.",
+        "media": "Para quem vai correr ou assistir, vale chegar cedo; para quem só passa de carro, evitar a área entre o fim da tarde e a noite.",
+        "alta": "Efeito direto pequeno. Bares e restaurantes da região tendem a ter mais movimento."
+       },
+       "fontes": [
+        {
+         "nome": "Acessa.com, 12/11/2026",
+         "url": "https://www.acessa.com/cidade/2026/11/344146-4-bahamas-night-run-altera-transito-no-entorno-do-estadio-municipal-neste-sabado-em-jf.html"
+        }
+       ]
+      },
+      {
+       "titulo": "Teatro Paschoal Carlos Magno recebe propostas de espetáculos para 2027",
+       "selo": "Confirmado",
+       "texto": "Estão abertas até 30 de novembro as inscrições do edital de ocupação do Teatro Paschoal Carlos Magno, que é municipal. Podem se inscrever pessoas físicas ou jurídicas, como artistas, grupos, coletivos, produtoras, associações e cooperativas, de qualquer lugar, com até duas propostas cada. As datas em disputa vão de 2 de março a 18 de dezembro de 2027, menos agosto, reservado à Campanha de Popularização do Teatro e da Dança. Uma comissão escolhe as propostas, e o resultado está previsto para 19 de janeiro de 2027. O edital está no site da Funalfa, a fundação de cultura da Prefeitura. A reportagem não informa se há taxa de uso do teatro. No futebol, o jornal não encontrou notícia nova sobre Tupi e Tupynambás; a final da Copa Matias, do futebol amador, segue marcada para domingo (15/11), às 12h, entre Unidos da Penha e Osmar, conforme a edição de ontem.",
+       "impacto": {
+        "trabalhador": "Para artistas e técnicos que vivem de cultura, é a chance de garantir data em um palco público em 2027. Para o público, nada muda agora.",
+        "baixa": "Efeito indireto: a agenda de um teatro público costuma ter ingressos mais baratos ou gratuitos, mas isso depende das propostas escolhidas.",
+        "media": "Efeito pequeno: mais opções de lazer ao longo de 2027.",
+        "alta": "Para produtoras culturais, é uma seleção pública com prazo curto, até 30/11."
+       },
+       "fontes": [
+        {
+         "nome": "Rádio Itatiaia, 12/11/2026",
+         "url": "https://www.itatiaia.com.br/juizdefora/abertas-inscricoes-para-edital-de-ocupacao-do-teatro-paschoal-carlos-magno/"
+        },
+        {
+         "nome": "Tribuna de Minas, 11/11/2026 (Copa Matias)",
+         "url": "https://tribunademinas.com.br/especiais/da-jogo/11-11-2026/ao-vivo-thiaguinho-artilheiro-e-finalista-da-copa-matias-e-o-entrevistado-do-da-jogo.html"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "tempo": {
+    "texto": "Sexta-feira de chuva e atenção. O alerta de tempestade do Inmet (Instituto Nacional de Meteorologia), no nível de perigo potencial, vale até 23h59 de hoje: chuva de até 50 mm no dia, ventos de 40 a 60 km/h e possibilidade de granizo. Hoje a temperatura fica entre 18 °C e 24 °C. O sábado tem chuvas esparsas e o domingo esquenta um pouco, com 27 °C e mais chuva; o Acessa.com, com base no Inmet, fala em até 31 °C no domingo, e as previsões divergem. Em ventania, não se abrigue debaixo de árvores e não estacione perto de placas e torres. Defesa Civil: 199. Bombeiros: 193.",
+    "dias": [
+     {
+      "dia": "Sex 13",
+      "min": 18,
+      "max": 24,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Sáb 14",
+      "min": 16,
+      "max": 24,
+      "ceu": "Chuvas esparsas"
+     },
+     {
+      "dia": "Dom 15",
+      "min": 17,
+      "max": 27,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Seg 16",
+      "min": 18,
+      "max": 22,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Ter 17",
+      "min": 17,
+      "max": 24,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Qua 18",
+      "min": 18,
+      "max": 25,
+      "ceu": "Chuvas esparsas"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "HG Brasil, previsão atualizada em 13/11/2026",
+      "url": "https://hgbrasil.com/weather/places/brazil/mg/juiz-de-fora"
+     },
+     {
+      "nome": "Acessa.com, 13/11/2026 (alerta do Inmet)",
+      "url": "https://www.acessa.com/cidade/2026/11/344161-juiz-de-fora-tem-alerta-de-tempestade-e-previsao-de-chuva-no-fim-de-semana-confira-a-previsao-do-tempo.html"
+     }
+    ]
+   },
+   "historia": {
+    "titulo": "A casa feita para receber o imperador que virou museu da cidade",
+    "texto": "Quem passa pelo Bairro Mariano Procópio vê, no alto de um parque, uma casa do século XIX. É a Villa Ferreira Lage, construída entre 1856 e 1861 pelo engenheiro alemão Carlos Augusto Gambs, chefe dos engenheiros da Companhia União e Indústria. Quem encomendou a obra foi Mariano Procópio Ferreira Lage, o empresário da estrada União e Indústria, para hospedar o imperador Dom Pedro II. Mariano Procópio morreu em 1872. Seu filho Alfredo Ferreira Lage, colecionador, reuniu ali quadros, móveis, documentos e objetos e fundou o museu em 1915. A inauguração oficial foi em 23 de junho de 1921, centenário de nascimento do pai, e a abertura ao público, em 13 de maio de 1922, junto com um prédio novo construído para as coleções. Em 1936, Alfredo assinou a escritura que doou o conjunto ao Município, com uma condição: os objetos não poderiam ser retirados do museu. Ele morreu em 1944. Hoje o acervo tem cerca de 50 mil peças, entre elas mais de 18 mil fotografias. A história recente é de portas fechadas e reabertas: parte do museu foi interditada em 2008 para restauração, o prédio principal reabriu por completo em março de 2023, e a Villa, em 31 de maio do mesmo ano. As datas desta nota vêm do verbete da Wikipédia sobre o museu, que traz pequenas divergências internas sobre a abertura; ficamos com as que o texto repete de forma consistente.",
+    "linha": [
+     {
+      "ano": "1856–1861",
+      "fato": "Construção da Villa Ferreira Lage, encomendada por Mariano Procópio"
+     },
+     {
+      "ano": "1872",
+      "fato": "Morte de Mariano Procópio"
+     },
+     {
+      "ano": "1915",
+      "fato": "Alfredo Ferreira Lage funda o museu"
+     },
+     {
+      "ano": "1921",
+      "fato": "Inauguração oficial, em 23 de junho"
+     },
+     {
+      "ano": "1922",
+      "fato": "Abertura ao público, em 13 de maio"
+     },
+     {
+      "ano": "1936",
+      "fato": "Escritura de doação ao Município"
+     },
+     {
+      "ano": "2023",
+      "fato": "Reabertura completa do prédio principal (março) e da Villa (maio)"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "Wikipédia, verbete “Museu Mariano Procópio”, consulta em 13/11/2026",
+      "url": "https://pt.wikipedia.org/wiki/Museu_Mariano_Proc%C3%B3pio"
+     }
+    ]
+   },
+   "palavrinhas": [
+    {
+     "termo": "Termo de Colaboração",
+     "def": "Contrato entre a Prefeitura e uma entidade sem fins lucrativos para prestar um serviço público, com metas, valor e data de pagamento."
+    },
+    {
+     "termo": "Repasse ordinário",
+     "def": "Pagamento regular, de todo mês, que o governo transfere a quem presta um serviço, como hospitais e creches."
+    },
+    {
+     "termo": "Acordo de Cooperação Técnica",
+     "def": "Contrato entre órgãos públicos para dividir tarefas, em geral sem transferência de dinheiro de um para o outro."
+    },
+    {
+     "termo": "Encosta",
+     "def": "Terreno inclinado, como um morro ou barranco, que pode deslizar com chuva forte."
+    },
+    {
+     "termo": "Talude",
+     "def": "Barranco formado quando se corta ou aterra um terreno para uma obra."
+    },
+    {
+     "termo": "Portaria",
+     "def": "Ato escrito de um ministério ou secretaria que autoriza ou determina alguma coisa."
+    },
+    {
+     "termo": "Adicional de insalubridade",
+     "def": "Valor a mais no salário de quem trabalha exposto a agentes que fazem mal à saúde; pode ser de 10%, 20% ou 40%."
+    },
+    {
+     "termo": "Simulacro",
+     "def": "Réplica que imita uma arma de verdade, mas não dispara."
+    }
+   ],
+   "agenda": [
+    {
+     "quando": "Hoje, 13/11",
+     "oque": "Alerta de tempestade do Inmet até 23h59; retirada de kits da Night Run das 9h às 19h"
+    },
+    {
+     "quando": "Sáb, 14/11",
+     "oque": "4ª Bahamas Night Run no entorno do Estádio Municipal: provas infantis às 15h, largada principal às 19h, com trânsito alterado"
+    },
+    {
+     "quando": "Dom, 15/11",
+     "oque": "Feriado da Proclamação da República; final da Copa Matias às 12h, entre Unidos da Penha e Osmar"
+    },
+    {
+     "quando": "Seg, 16/11",
+     "oque": "Data em que as creches conveniadas podem parar, se o repasse não for quitado; começam as reuniões da Secretaria de Saúde com cada hospital"
+    },
+    {
+     "quando": "Sex, 20/11",
+     "oque": "Feriado da Consciência Negra; data prometida para o repasse mensal aos hospitais; fim do prazo para a Prefeitura entregar documentos à CPI da Saúde"
+    },
+    {
+     "quando": "Seg, 23/11",
+     "oque": "Sexta reunião da CPI da Saúde na Câmara"
+    },
+    {
+     "quando": "Ter, 24/11",
+     "oque": "Mutirão de Empregos de fim de ano, das 9h às 13h, no estacionamento do Independência Shopping"
+    },
+    {
+     "quando": "Seg, 30/11",
+     "oque": "Último dia para inscrever propostas no edital do Teatro Paschoal Carlos Magno"
+    }
+   ],
+   "conversa": [
+    "Hospitais e creches cobraram a Prefeitura na mesma semana pelo mesmo motivo: pagamento fora da data. O que o morador precisaria ver publicado, mês a mês, para saber se os repasses estão em dia sem depender de uma ameaça de paralisação?",
+    "A Prefeitura vai cuidar dos prédios da Polícia Civil, que é do estado. Quando um governo assume uma tarefa que é de outro, quem ganha, quem paga e como o cidadão fica sabendo o custo?",
+    "No Mundo Novo, o entulho de uma casa destruída pela chuva está há nove meses em um terreno particular. Até onde vai a obrigação do dono e a partir de que ponto o problema passa a ser da cidade inteira?",
+    "Alfredo Ferreira Lage doou o museu ao Município com a condição de que as peças nunca saíssem de lá. O que uma geração pode exigir das seguintes quando entrega um bem à cidade?"
+   ],
+   "fechamento": "Manchester Mineira, edição nº 2, fechada na noite de 13/11/2026."
+  },
+  {
    "numero": 1,
    "data": "2026-11-12",
    "tempoLeitura": 14,

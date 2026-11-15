@@ -1,6 +1,1395 @@
 {
  "edicoes": [
   {
+   "numero": 6,
+   "data": "2026-11-15",
+   "tempoLeitura": 11,
+   "capa": {
+    "chapeu": "Trabalho",
+    "titulo": "Fim da escala 6x1: STF tem 3 votos a 0 para manter as 42 horas a partir de 16 de dezembro",
+    "linhaFina": "A Câmara pede que o Supremo derrube seis pontos da decisão do ministro Flávio Dino; a AGU, do governo, pede que valham as regras aprovadas pelo Congresso. Hoje é o segundo dia do Enem, com portões fechando às 13h. Em Minas, a Assembleia tenta votar o reajuste anual da segurança ainda neste ano."
+   },
+   "citacao": "“O povo assistiu àquilo bestializado, atônito, surpreso, sem conhecer o que significava.” (Aristides Lobo, jornalista, sobre o 15 de novembro de 1889)",
+   "recado": "Domingo de feriado da Proclamação da República e de Enem. A notícia que mais mexe com o dia a dia é a da jornada de trabalho: o julgamento no STF andou na sexta (13/11) e já tem três votos para manter a decisão do ministro Flávio Dino. Esclarecimento: na edição de ontem dissemos que a liminar ainda aguardava os demais ministros; o voto de dois deles saiu na própria sexta e só foi noticiado depois do fechamento. Tudo o que ainda pode mudar está marcado como tal.",
+   "resumo": [
+    {
+     "tema": "Jornada de trabalho",
+     "texto": "STF tem 3 votos a 0 para manter a decisão de Dino: 42 horas semanais e duas folgas a partir de 16/12. Câmara contesta seis pontos; AGU defende as regras do Congresso."
+    },
+    {
+     "tema": "Pacote fiscal",
+     "texto": "Governo estima melhora de R$ 45,1 bi a R$ 56,1 bi nas contas de 2027. Quatro trechos ainda vão a voto no Senado; depois, a Câmara."
+    },
+    {
+     "tema": "Combustíveis",
+     "texto": "Preços quase parados na semana: gasolina a R$ 6,48 e diesel S-10 a R$ 7,29 o litro, em média, segundo a ANP."
+    },
+    {
+     "tema": "Caminhões e ônibus",
+     "texto": "Lei abre linha de até R$ 14,5 bilhões pelo BNDES para renovar a frota de transporte; juros ainda serão definidos."
+    },
+    {
+     "tema": "Covid-19",
+     "texto": "18 estados, Minas entre eles, têm alta de casos leves. O risco segue baixo; idosos, gestantes e crianças pequenas se vacinam de graça."
+    },
+    {
+     "tema": "Enem",
+     "texto": "Segundo dia hoje (15/11): Matemática e Ciências da Natureza; portões fecham às 13h e a prova vai até 18h30."
+    },
+    {
+     "tema": "Minas",
+     "texto": "ALMG tenta votar reajuste anual da segurança neste ano; redução do IPVA fica para 2027; escolhido o novo procurador-geral de Justiça."
+    }
+   ],
+   "numeros": [
+    {
+     "rotulo": "Gasolina comum",
+     "valor": "R$ 6,48/litro",
+     "nota": "média nacional da semana; alta de 0,15%",
+     "fonte": "ANP, via O Povo/Agência Estado, 13/11/2026"
+    },
+    {
+     "rotulo": "Gás de cozinha",
+     "valor": "R$ 115,33",
+     "nota": "botijão de 13 kg, média nacional; alta de 0,10% na semana",
+     "fonte": "ANP, via O Povo/Agência Estado, 13/11/2026"
+    },
+    {
+     "rotulo": "Crédito para renovar frota",
+     "valor": "até R$ 14,5 bi",
+     "nota": "caminhões, ônibus e implementos, pelo BNDES; depende de orçamento",
+     "fonte": "O Tempo, 13/11/2026"
+    },
+    {
+     "rotulo": "Máxima de hoje",
+     "valor": "28 °C",
+     "nota": "em Conselheiro Lafaiete, com chuva",
+     "fonte": "HG Brasil, 14/11/2026"
+    }
+   ],
+   "cadernos": [
+    {
+     "id": "brasilia",
+     "titulo": "Brasília",
+     "abertura": "O que o governo, o Congresso e o STF decidem, e como isso chega na vida da gente",
+     "itens": [
+      {
+       "titulo": "Fim da escala 6x1: STF tem 3 votos a 0 para manter as regras de Dino; Câmara e AGU divergem",
+       "selo": "Confirmado",
+       "texto": "A Emenda Constitucional 141/2026, aprovada pelo Congresso em outubro, reduz a jornada máxima de 44 para 42 horas semanais em dezembro, com duas folgas e sem corte de salário, e para 40 horas em dezembro de 2027. Confederações do comércio (CNC) e da indústria (CNI) pediram ao STF mais prazo. O relator, ministro Flávio Dino, negou o adiamento e, depois de uma audiência de conciliação em 10/11, ajustou a transição: **as 42 horas e as duas folgas começam em 16/12**; sem acordo coletivo até 15/12, as 42 horas podem ser divididas em cinco dias de até 8h24, sem pagamento de hora extra pelos 24 minutos a mais; sindicatos e empresas têm 90 dias para rever acordos, e contratos públicos, 180 dias. Segundo O Tempo, no plenário virtual os ministros Alexandre de Moraes e Cármen Lúcia acompanharam Dino na sexta (13/11), o que deixa o placar em 3 a 0; o julgamento continua. O que diz a Câmara: a Advocacia da Casa concorda com o calendário, mas pede que o STF derrube seis pontos, como a flexibilização das folgas, os dias de 8h24 e o prazo dado ao Congresso para regular regimes especiais, por entender que o ministro mudou regras que cabem ao Legislativo. O que diz o governo: a AGU, em manifestação preliminar assinada por Jorge Messias e noticiada no sábado (14/11), pede que o STF mantenha integralmente as regras de transição da emenda e afirma que divergências sobre cronograma não justificam interferência judicial. O que dizem as empresas: as confederações patronais consideram o prazo insuficiente; as centrais sindicais afirmam que os trabalhadores estão preparados, segundo o STF.",
+       "fontes": [
+        {
+         "nome": "O Tempo, 13/11/2026",
+         "url": "https://www.otempo.com.br/politica/congresso/2026/11/13/camara-pede-que-stf-derrube-parte-das-regras-de-flavio-dino-ao-fim-da-escala-6x1"
+        },
+        {
+         "nome": "STF, 10/11/2026",
+         "url": "https://noticias.stf.jus.br/postsnoticias/escala-5x2-relator-decidira-sobre-implementacao-da-nova-jornada-ate-sexta-feira-13/"
+        },
+        {
+         "nome": "Plantão Brasil, 14/11/2026 (manifestação da AGU)",
+         "url": "https://www.plantaobrasil.net/noticias/163595-governo-lula-entra-no-stf-para-blindar-transicao-da-jornada-de-40-horas"
+        },
+        {
+         "nome": "Planalto, texto da EC 141/2026",
+         "url": "https://planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc141.htm"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Se o placar se mantiver, a partir de 16/12 a jornada máxima cai para 42 horas por semana, com duas folgas e o mesmo salário. Sem acordo do sindicato, os dias podem ficar um pouco mais longos (até 8h24). Converse com o sindicato da sua categoria antes de 15/12.",
+        "baixa": "Quem trabalha no comércio e em serviços, onde a escala 6x1 é comum, deve sentir primeiro a mudança: mais um dia de folga por semana. Atenção à escala nova que a empresa apresentar.",
+        "media": "Pequenos empresários e profissionais liberais com funcionários precisam reorganizar turnos e escalas até dezembro. A Câmara ainda contesta pontos da regra, então detalhes podem mudar.",
+        "alta": "Empresas com muitos empregados têm de planejar contratações ou ajustes de turnos; contratos com o poder público ganham até 180 dias para se adaptar. O resultado final do STF define os custos."
+       }
+      },
+      {
+       "titulo": "Pacote fiscal: o que pode mudar nos gastos públicos em 2027, ponto a ponto",
+       "selo": "Explicação",
+       "texto": "O pacote fiscal (PLP 299/2026) é o conjunto de medidas para equilibrar as contas do governo em 2027. O texto principal passou no Senado em 12/11 por 45 a 31; quatro trechos destacados ainda serão votados e, depois, o projeto vai para a Câmara dos Deputados. Os principais pontos, segundo O Tempo: o limite de crescimento real dos gastos pode cair de 2,5% para 2% em anos de aperto; o corte de incentivos fiscais (descontos de impostos dados a setores) sobe de 10% para 20%, com estimativa de R$ 15 bilhões a mais em 2027, preservando a desoneração da folha, parte do setor de tecnologia e a compra de carros por pessoas com deficiência ou autismo; a receita extra com imposto sobre exportação de petróleo deixa de contar no cálculo do piso da saúde até 2030; e os repasses da Lei Kandir aos estados ficam limitados a R$ 1 bilhão por ano de 2027 a 2030. **O governo estima melhora de R$ 45,1 bilhões a R$ 56,1 bilhões nas contas de 2027.** O que diz o governo: o senador Camilo Santana afirmou que a proposta não corta programas sociais, e o relator Eduardo Braga fala em Orçamento “realista”. O que diz a oposição: o senador Rogerio Marinho afirma que o projeto transfere custos a estados e ao setor produtivo. Uma estimativa da Warren Investimentos, citada por O Tempo, calcula redução de cerca de R$ 9 bilhões no piso da saúde, o que não significa necessariamente corte igual no gasto efetivo.",
+       "fontes": [
+        {
+         "nome": "O Tempo, 13/11/2026",
+         "url": "https://www.otempo.com.br/politica/2026/11/13/pacote-fiscal-de-lula-veja-o-que-pode-mudar-nos-gastos-publicos-em-2027"
+        },
+        {
+         "nome": "Agência Senado, 12/11/2026",
+         "url": "https://www12.senado.leg.br/noticias/materias/2026/11/12/mesmo-com-urgencia-projeto-de-ajuste-fiscal-foi-alterado-por-emendas"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Nada muda no salário agora. O debate é sobre quanto o governo poderá gastar em 2027, o que pesa em concursos, reajustes de servidores e obras.",
+        "baixa": "A mudança no cálculo do piso da saúde é o ponto a acompanhar: o governo diz que programas sociais estão protegidos; a estimativa privada fala em piso menor, sem garantir corte no atendimento.",
+        "media": "Menos incentivos fiscais para empresas podem, com o tempo, chegar aos preços. A compra de carro por pessoas com deficiência ou autismo continua com desconto.",
+        "alta": "Setores que perdem incentivos e empresas que usam créditos tributários sentem o efeito mais direto. O texto ainda pode mudar na Câmara."
+       }
+      }
+     ]
+    },
+    {
+     "id": "bolso",
+     "titulo": "Bolso, emprego e preços",
+     "abertura": "O que entra e o que sai do orçamento da família",
+     "itens": [
+      {
+       "titulo": "Combustíveis ficam quase parados na semana; botijão passa de R$ 115 na média",
+       "selo": "Confirmado",
+       "texto": "O levantamento semanal da ANP (Agência Nacional do Petróleo, que fiscaliza o setor), divulgado na sexta (13/11), mostrou preços praticamente estáveis. A gasolina comum ficou em R$ 6,48 o litro, em média, alta de 0,15%. O diesel S-10 caiu 0,13%, para R$ 7,29. O botijão de gás de 13 kg subiu 0,10%, para R$ 115,33. O diesel mais caro do país, R$ 9,19 o litro, foi encontrado no Sudeste. O levantamento não traz números separados de Minas. A pesquisa ainda não mostra efeito do fim do subsídio de R$ 1,40 ao diesel importado, noticiado ontem; se houver, aparece nas próximas semanas.",
+       "fontes": [
+        {
+         "nome": "O Povo/Agência Estado, 13/11/2026",
+         "url": "https://www.opovo.com.br/noticias/economia/2026/11/13/anp-precos-dos-combustiveis-fecham-semana-praticamente-estaveis.html"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Para quem vai de moto ou carro ao trabalho, o custo da semana ficou praticamente igual. Vale comparar postos: a diferença entre eles costuma ser maior que a variação semanal.",
+        "baixa": "O botijão acima de R$ 115 pesa no orçamento. Quem está no CadÚnico pode verificar no CRAS se tem direito a auxílio para o gás de cozinha.",
+        "media": "Efeito pequeno nesta semana. O diesel estável ajuda a segurar fretes e, com isso, o preço de alimentos.",
+        "alta": "Impacto direto pequeno. Empresas de transporte e logística acompanham o diesel por causa do fim de parte do subsídio."
+       }
+      },
+      {
+       "titulo": "Lei abre linha de até R$ 14,5 bilhões no BNDES para renovar caminhões e ônibus",
+       "selo": "Confirmado",
+       "texto": "Foi sancionada sem vetos e publicada no Diário Oficial da União uma lei que cria financiamento de até R$ 14,5 bilhões, pelo BNDES (o banco público de desenvolvimento), para renovar a frota de transporte de cargas e passageiros. Podem pedir caminhoneiros autônomos, cooperados, MEIs, empresários individuais e empresas de transporte. Entram caminhões e cavalos mecânicos novos ou seminovos (seminovos só para autônomos, MEIs e cooperados), ônibus e micro-ônibus novos e implementos rodoviários novos, desde que fabricados no Brasil e credenciados no banco. **Os juros e prazos ainda serão definidos pelo Conselho Monetário Nacional**, e o dinheiro depende de disponibilidade no Orçamento.",
+       "fontes": [
+        {
+         "nome": "O Tempo, 13/11/2026",
+         "url": "https://www.otempo.com.br/economia/2026/11/13/nova-linha-do-bndes-saiba-quais-veiculos-entram-no-credito-de-r-14-5-bi-para-transportes"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Caminhoneiro autônomo ou MEI pode trocar um caminhão velho por um seminovo com esse crédito. Espere as regras de juros antes de fechar negócio.",
+        "baixa": "Efeito indireto: frota mais nova tende a quebrar menos e a gastar menos combustível, o que pode ajudar o transporte público no longo prazo.",
+        "media": "Pequenas transportadoras e cooperativas ganham uma opção de crédito; as condições finais ainda não saíram.",
+        "alta": "Fabricantes nacionais de caminhões, ônibus e carrocerias podem vender mais. O volume depende do Orçamento."
+       }
+      }
+     ]
+    },
+    {
+     "id": "saude",
+     "titulo": "Saúde no Brasil",
+     "aviso": "Estas notícias informam, mas não substituem o médico. Nunca comece, pare ou troque um remédio por conta própria. Em emergência, ligue 192 (SAMU).",
+     "abertura": "Cuidados da semana",
+     "itens": [
+      {
+       "titulo": "Covid-19: casos leves sobem em 18 estados, incluindo Minas; risco segue baixo",
+       "selo": "Confirmado",
+       "texto": "Dados do Ministério da Saúde de 10/11 apontam alta de casos leves de Covid-19 em 18 unidades da Federação, entre elas Minas Gerais. O risco continua classificado como baixo, e o país tem menos casos, casos graves e mortes do que em 2025. **A vacina é gratuita no SUS** para crianças de 6 meses a menores de 5 anos, gestantes e idosos de 60 anos ou mais; pessoas com comorbidades e imunocomprometidos também recebem doses periódicas. A frequência de doses para idosos aparece de forma diferente nas reportagens; confirme na Unidade Básica de Saúde (UBS). Idosos e imunocomprometidos com sintomas devem procurar atendimento logo: o antiviral do SUS para quem tem maior risco precisa começar nos primeiros cinco dias. Falta de ar ou pressão no peito pedem emergência.",
+       "fontes": [
+        {
+         "nome": "Correio Braziliense, 15/11/2026",
+         "url": "https://www.correiobraziliense.com.br/cbradar/covid-19-ministerio-da-saude-aponta-alta-de-casos-leves-em-18-ufs-e-lembra-quem-pode/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Com sintomas, use máscara e procure atendimento para ter atestado, em vez de ir trabalhar doente. Lave as mãos e mantenha o ambiente ventilado.",
+        "baixa": "A vacina é de graça na UBS para idosos, gestantes e crianças pequenas; leve a caderneta. O antiviral do SUS também é gratuito para quem tem maior risco.",
+        "media": "Quem não está nos grupos prioritários pode comprar a vacina em clínicas e farmácias autorizadas. Fique atento a idosos da família.",
+        "alta": "Efeito parecido para todos: atenção a familiares idosos ou com doenças crônicas, que devem buscar atendimento cedo se tiverem sintomas."
+       }
+      }
+     ]
+    },
+    {
+     "id": "escola",
+     "titulo": "Escola e Enem",
+     "abertura": "Data que a família precisa saber",
+     "itens": [
+      {
+       "titulo": "Enem: segundo dia é hoje; portões fecham às 13h e prova vai até 18h30",
+       "selo": "Confirmado",
+       "texto": "O segundo dia do Enem é neste domingo (15/11), com Matemática e Ciências da Natureza (Biologia, Física e Química): 90 questões em 5 horas. Pelo horário de Brasília, os portões abrem às 12h e fecham às 13h; a prova começa às 13h30 e termina às 18h30. Só é possível sair levando o caderno de questões a partir das 18h. Leve documento oficial com foto (versões digitais só pelos aplicativos oficiais, não vale print) e caneta esferográfica preta de corpo transparente. Quem faltou ao primeiro dia pode fazer a prova hoje. **O pedido de reaplicação, só para casos previstos como problemas de logística ou certas doenças infecciosas, vai de 16 a 20 de novembro** pela Página do Participante; a reaplicação está prevista para 15 e 16 de dezembro. O gabarito deve sair até 30/11, e as notas, em janeiro de 2027.",
+       "fontes": [
+        {
+         "nome": "Agência Gov, 10/11/2026",
+         "url": "https://agenciagov.ebc.com.br/noticias/202611/enem-quem-faltou-ao-primeiro-dia-pode-fazer-a-prova-no-segundo"
+        },
+        {
+         "nome": "TMC, 15/11/2026",
+         "url": "https://tmc.com.br/brasil/enem-segundo-dia-de-provas-desafia-candidatos-com-90-questoes-de-exatas-e-ciencias/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Se você vai fazer a prova ou levar alguém, chegue cedo: às 13h o portão fecha e não abre mais.",
+        "baixa": "A nota do Enem abre portas para Sisu (vagas em universidades públicas), Prouni (bolsas) e Fies (financiamento). Quem teve problema no local da prova pode pedir reaplicação de 16 a 20/11.",
+        "media": "Guarde o caderno de questões para conferir o gabarito, que sai até 30/11.",
+        "alta": "Mesmo para quem mira faculdade particular, a nota do Enem é usada em muitos processos seletivos e intercâmbios."
+       }
+      }
+     ]
+    },
+    {
+     "id": "minas",
+     "titulo": "Minas Gerais",
+     "abertura": "O que se decide em Belo Horizonte e chega até nós",
+     "itens": [
+      {
+       "titulo": "ALMG tenta votar reajuste anual da segurança neste ano; corte do IPVA fica para o próximo governo",
+       "selo": "Confirmado",
+       "texto": "O presidente da Assembleia Legislativa de Minas (ALMG), Tadeu Leite (MDB), que também está no exercício do governo, disse que busca acordo com os líderes para votar ainda em 2026 a proposta de emenda à Constituição (PEC) que garante reajuste anual aos servidores da segurança pública. A PEC foi enviada pelo governador Mateus Simões (PSD) depois das eleições; o texto não informa o percentual. Também foi lido em Plenário, em 10/11, um projeto de Tarifa Zero (ônibus gratuitos) no transporte metropolitano de Belo Horizonte aos domingos e feriados, que ainda não começou a tramitar nas comissões. Já o projeto que permite ao próximo governo reduzir o IPVA em até 75% não deve ser votado agora: a discussão fica para 2027, com o governador eleito Cleitinho Azevedo (Republicanos), que toma posse em 6/1/2027. Tadeu se diz favorável, mas alerta para perda de até R$ 11 bilhões na arrecadação do Estado, com reflexo nos municípios. A reportagem não traz a posição dos deputados de oposição.",
+       "fontes": [
+        {
+         "nome": "O Tempo, 13/11/2026",
+         "url": "https://www.otempo.com.br/politica/2026/11/13/reajuste-dos-servidores-da-seguranca-e-tarifa-zero-tadeu-leite-preve-votacao-neste-ano"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Policiais, bombeiros e agentes penitenciários são os diretamente afetados pela PEC do reajuste. Para os demais, o efeito é indireto, nas contas do Estado.",
+        "baixa": "A Tarifa Zero aos domingos e feriados, se aprovada, vale só para a Grande BH. Ainda é proposta, sem data de votação.",
+        "media": "Quem tem carro deve acompanhar a discussão do IPVA em 2027: a redução ainda não foi votada e não vale para o imposto de janeiro.",
+        "alta": "Donos de vários veículos seriam os mais beneficiados por um corte grande no IPVA; o Estado e as prefeituras perderiam receita. Por ora, nada mudou."
+       }
+      },
+      {
+       "titulo": "Escolhido o novo procurador-geral de Justiça de Minas para 2027 e 2028",
+       "selo": "Confirmado",
+       "texto": "O governador Mateus Simões anunciou em 12/11 a escolha de Carlos Eduardo Ferreira Pinto como procurador-geral de Justiça, o chefe do Ministério Público de Minas Gerais (MPMG), para o biênio 2027-2028. A escolha saiu de uma lista tríplice (três nomes) formada em eleição interna do MPMG em 10/11; os outros dois nomes eram o promotor Paulo de Tarso Morais Filho e o procurador José Carlos Fernandes Júnior. O Ministério Público é o órgão que fiscaliza o cumprimento das leis e defende os interesses da sociedade, inclusive contra o próprio governo. A data da posse não foi informada.",
+       "fontes": [
+        {
+         "nome": "Agência Minas, 12/11/2026",
+         "url": "https://www.agenciaminas.mg.gov.br/noticia/governador-de-minas-gerais-anuncia-carlos-eduardo-ferreira-pinto-como-novo-procurador-geral-de-justica"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Efeito indireto: o MP atua em temas como direitos trabalhistas coletivos, saúde e meio ambiente. A troca de comando define prioridades.",
+        "baixa": "O MP pode ser procurado de graça para denunciar falta de remédio, vaga em escola ou serviço público negado.",
+        "media": "O MP acompanha contratos e gastos públicos; a nova gestão vai fiscalizar os primeiros anos do governo Cleitinho.",
+        "alta": "Empresas que têm contratos com o Estado ou atividades com impacto ambiental lidam com o MP com frequência; a nova chefia pode mudar o ritmo das ações."
+       }
+      },
+      {
+       "titulo": "Sabará, na Grande BH, vai receber o maior projeto de biometano da Ultragaz em 2027",
+       "selo": "Confirmado",
+       "texto": "A Ultragaz anunciou um projeto de biometano em Sabará, previsto para 2027. Biometano é um gás combustível obtido da purificação do biogás, que vem da decomposição de resíduos orgânicos e agroindustriais; pode substituir o diesel e o gás natural. O projeto vai atender indústrias e frotas pesadas, e a empresa planeja 20 pontos de abastecimento em rodovias nos próximos dois a três anos, com foco nos corredores entre Belo Horizonte, São Paulo e Rio de Janeiro. A reportagem não informa o valor do investimento nem o número de empregos.",
+       "fontes": [
+        {
+         "nome": "O Tempo, 13/11/2026",
+         "url": "https://www.otempo.com.br/economia/2026/11/13/grande-bh-vai-receber-o-maior-projeto-de-biometano-da-ultragaz-no-pais-em-2027"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Obras e operação podem abrir vagas na Grande BH, mas o número não foi divulgado.",
+        "baixa": "Efeito pequeno e indireto no curto prazo.",
+        "media": "Mais uma opção de combustível para caminhões pode, no futuro, ajudar a reduzir custos de frete.",
+        "alta": "Indústrias que buscam reduzir emissões ganham fornecedor regional de gás renovável."
+       }
+      }
+     ],
+     "caixa": {
+      "titulo": "Transição em Minas: a semana",
+      "texto": "A equipe de Cleitinho Azevedo continua as reuniões de transição com o governo atual: Segov e Secretaria-Geral (16/11), Fazenda (17/11), Propag, o programa de renegociação da dívida com a União (18/11), e Planejamento e Gestão (19/11), segundo o Estado de Minas. Em reunião de 3/11, a equipe do governador eleito pediu pela terceira vez que a ata registrasse dados insuficientes; a reportagem não traz resposta do governo atual. O Tempo informou em 11/11 que o secretário da Fazenda deve ser anunciado até esta semana. Fontes: Estado de Minas (em.com.br, novembro de 2026) e O Tempo, 11/11/2026."
+     }
+    }
+   ],
+   "tempo": {
+    "texto": "Semana chuvosa. Domingo do Enem quente, com máxima de 28 °C e chuva. Segunda e terça esfriam (máximas de 23 °C e 21 °C) e trazem os maiores volumes, perto de 8 mm na terça. Na quarta, a chuva diminui.",
+    "dias": [
+     {
+      "dia": "Dom 15",
+      "min": 16,
+      "max": 28,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Seg 16",
+      "min": 16,
+      "max": 23,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Ter 17",
+      "min": 17,
+      "max": 21,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Qua 18",
+      "min": 16,
+      "max": 26,
+      "ceu": "Chuvas esparsas"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "HG Brasil, previsão atualizada em 14/11/2026",
+      "url": "https://hgbrasil.com/weather/places/brazil/mg/conselheiro-lafaiete"
+     }
+    ]
+   },
+   "historia": {
+    "titulo": "15 de novembro de 1889: como o Brasil virou República",
+    "texto": "Na manhã de 15 de novembro de 1889, tropas lideradas pelo marechal Deodoro da Fonseca, no Rio de Janeiro, depuseram o gabinete do Império. No mesmo dia, o Decreto nº 1 do Governo Provisório proclamou a República Federativa e transformou as antigas províncias em estados. A família imperial de D. Pedro II partiu para o exílio dias depois. A mudança veio sem participação popular ampla: o jornalista Aristides Lobo escreveu na época que o povo assistiu “bestializado”, sem entender o que se passava. Entre as causas apontadas pelos historiadores estão o desgaste da monarquia com o Exército após a Guerra do Paraguai, o afastamento da Igreja e a perda de apoio de fazendeiros depois da abolição da escravidão, em 1888. A primeira Constituição republicana, de 1891, separou Igreja e Estado e criou o voto direto, mas restrito: analfabetos e mulheres não votavam.",
+    "linha": [
+     {
+      "ano": "1888",
+      "fato": "Lei Áurea abole a escravidão em 13 de maio"
+     },
+     {
+      "ano": "1889",
+      "fato": "Em 15 de novembro, proclamação da República e Decreto nº 1"
+     },
+     {
+      "ano": "1891",
+      "fato": "Primeira Constituição republicana, em 24 de fevereiro"
+     },
+     {
+      "ano": "1988",
+      "fato": "Constituição atual, em 5 de outubro"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "Planalto, Constituição de 1891",
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao91.htm"
+     }
+    ]
+   },
+   "palavrinhas": [
+    {
+     "termo": "Escala 6x1",
+     "def": "Seis dias de trabalho para um de folga. A emenda aprovada pelo Congresso leva à escala com duas folgas por semana."
+    },
+    {
+     "termo": "Plenário virtual",
+     "def": "Julgamento do STF em que os ministros depositam os votos pela internet, num prazo, sem sessão ao vivo."
+    },
+    {
+     "termo": "AGU",
+     "def": "Advocacia-Geral da União: os advogados que defendem o governo federal na Justiça."
+    },
+    {
+     "termo": "Incentivo fiscal",
+     "def": "Desconto ou isenção de imposto que o governo concede a um setor ou atividade."
+    },
+    {
+     "termo": "Biometano",
+     "def": "Gás combustível renovável, tirado do lixo orgânico e de resíduos agrícolas depois de purificado."
+    },
+    {
+     "termo": "Lista tríplice",
+     "def": "Lista de três nomes, escolhidos por votação de uma categoria, da qual o governante escolhe um."
+    }
+   ],
+   "agenda": [
+    {
+     "quando": "Hoje (15/11)",
+     "oque": "Segundo dia do Enem (portões fecham às 13h) e feriado da Proclamação da República"
+    },
+    {
+     "quando": "16 a 20/11",
+     "oque": "Prazo para pedir reaplicação do Enem, na Página do Participante"
+    },
+    {
+     "quando": "17/11",
+     "oque": "Senado vota os quatro destaques do pacote fiscal; Câmara pode votar o projeto dos mercados digitais"
+    },
+    {
+     "quando": "17/11",
+     "oque": "Transição em Minas: reunião sobre a Fazenda"
+    },
+    {
+     "quando": "18/11",
+     "oque": "STF define os efeitos da decisão sobre crimes patrimoniais entre familiares"
+    },
+    {
+     "quando": "20/11",
+     "oque": "Feriado nacional da Consciência Negra"
+    },
+    {
+     "quando": "Até 30/11",
+     "oque": "Divulgação do gabarito do Enem"
+    },
+    {
+     "quando": "16/12",
+     "oque": "Começa a jornada de 42 horas com duas folgas, se o STF mantiver a decisão"
+    }
+   ],
+   "conversa": [
+    "O STF ajustou regras de uma emenda aprovada pelo Congresso, e a Câmara reclama que isso cabe ao Legislativo. Até onde um tribunal pode ir para fazer uma lei funcionar na prática sem tomar o lugar de quem a votou?",
+    "A jornada menor dá mais tempo livre a quem trabalha e exige reorganização de quem emprega. Como equilibrar o direito ao descanso com a sobrevivência dos pequenos negócios?",
+    "Em Minas, a redução do IPVA agradaria donos de veículos, mas tiraria até R$ 11 bilhões do Estado e das prefeituras. Quando cortar um imposto é justo, e quem deveria pagar a conta?",
+    "Neste 15 de novembro, a República faz 137 anos. O que separa uma república no papel de uma república em que o povo participa das decisões?"
+   ],
+   "fechamento": "Terra Brasilis, edição nº 6, fechada na manhã de 15/11/2026. Uma publicação do Xeque News."
+  },
+  {
+   "numero": 5,
+   "data": "2026-11-14",
+   "tempoLeitura": 12,
+   "capa": {
+    "chapeu": "Economia",
+    "titulo": "Dólar chega a R$ 5,65, maior valor em 17 meses, e confiança da indústria cai ao menor nível desde 2020",
+    "linhaFina": "A moeda americana subiu 2,63% na semana, com dúvidas sobre o ajuste fiscal, que o Senado muda e volta a votar na terça. O governo deixou de renovar o subsídio de R$ 1,40 ao diesel importado. O Enem termina neste domingo. Em Minas, prefeituras cancelam festas de fim de ano."
+   },
+   "citacao": "“Todo o poder emana do povo, que o exerce por meio de representantes eleitos ou diretamente, nos termos desta Constituição.” (Constituição Federal de 1988, art. 1º, parágrafo único)",
+   "recado": "Sábado de chuva e de números ruins na economia: dólar em alta, indústria pessimista e subsídio ao diesel menor. O pacote fiscal segue no Senado e volta a ser votado na terça (17/11). Sobre a jornada de 42 horas, a liminar do ministro Flávio Dino ainda aguarda o voto dos demais ministros do STF, e não há novidade confirmada desde a edição de ontem. O Enem termina amanhã. Tudo o que ainda pode mudar está marcado como tal.",
+   "resumo": [
+    {
+     "tema": "Dólar",
+     "texto": "Fechou a R$ 5,657, com alta de 2,63% na semana e o maior valor em 17 meses na quinta (12/11). O Ibovespa subiu 2,35% na semana."
+    },
+    {
+     "tema": "Ajuste fiscal",
+     "texto": "O Senado aprovou o texto principal por 45 a 31 e mudou o projeto com mais de 20 emendas. Quatro pontos serão votados na terça (17/11); depois, a Câmara."
+    },
+    {
+     "tema": "Indústria e varejo",
+     "texto": "A confiança da indústria caiu a 40,2 pontos, o menor nível desde maio de 2020. As vendas do comércio variaram 0,2% em setembro."
+    },
+    {
+     "tema": "Diesel",
+     "texto": "O subsídio de R$ 1,40 ao diesel importado não foi renovado; o de R$ 2,12 ao diesel rodoviário continua."
+    },
+    {
+     "tema": "MEI",
+     "texto": "Dívidas previdenciárias do DAS serão perdoadas a partir de 1º/1/2027, com a condição de pagar em dia de janeiro a junho."
+    },
+    {
+     "tema": "STF",
+     "texto": "Crime contra o patrimônio entre familiares deixa de ficar isento de pena; os efeitos sobre casos antigos serão definidos na quarta (18/11)."
+    },
+    {
+     "tema": "Minas",
+     "texto": "Prefeituras cancelam festas e cortam gastos; Medioli será secretário de Planejamento de Cleitinho; Rede questiona no STF lei dos cachês."
+    }
+   ],
+   "numeros": [
+    {
+     "rotulo": "Dólar",
+     "valor": "R$ 5,657",
+     "nota": "fechamento de sexta (13/11); alta de 2,63% na semana",
+     "fonte": "Agência Brasil, 13/11/2026"
+    },
+    {
+     "rotulo": "Confiança da indústria",
+     "valor": "40,2 pontos",
+     "nota": "menor nível desde maio de 2020; abaixo de 50 indica falta de confiança",
+     "fonte": "Agência Brasil, 13/11/2026"
+    },
+    {
+     "rotulo": "Economia prevista no ajuste fiscal",
+     "valor": "até R$ 60 bi",
+     "nota": "em 2027, segundo a estimativa citada no Senado; ainda depende de votações",
+     "fonte": "Agência Senado, 12/11/2026"
+    },
+    {
+     "rotulo": "Máxima de hoje",
+     "valor": "25 °C",
+     "nota": "em Conselheiro Lafaiete, com chuvas espalhadas",
+     "fonte": "HG Brasil, 13/11/2026"
+    }
+   ],
+   "cadernos": [
+    {
+     "id": "brasilia",
+     "titulo": "Brasília",
+     "abertura": "O que o governo, o Congresso e o STF decidem, e como isso chega na vida da gente",
+     "itens": [
+      {
+       "titulo": "Ajuste fiscal: Senado muda o texto com emendas e deixa quatro pontos para terça (17/11)",
+       "selo": "Confirmado",
+       "texto": "O ajuste fiscal é um conjunto de medidas do governo para equilibrar as contas de 2027, o ano em que um novo presidente assume. O projeto, chamado PLP 299/2026 (PLP é projeto de lei complementar), teve o texto principal aprovado pelo Senado na quinta (12/11) por 45 votos a 31; o pedido de urgência havia passado por 40 a 38. O relator, senador Eduardo Braga, aceitou mais de 20 emendas de governistas e de oposicionistas. A estimativa citada no Senado é de economia de até R$ 60 bilhões em 2027, e a Agência Brasil informa que o texto reduz de 2,5% para 2% o limite de crescimento real dos gastos em certos casos. **Quatro trechos destacados serão votados na terça (17/11)** e, depois, o projeto segue para a Câmara dos Deputados. O que diz o governo: Braga afirma que o ajuste busca um Orçamento “realista”; o líder do governo no Congresso, Randolfe Rodrigues, destacou que o relatório incorporou emendas da oposição; e o senador Camilo Santana disse que a proposta não corta programas sociais, cultura ou esporte. O que diz a oposição: o senador Rogerio Marinho afirma que o projeto transfere custos para estados e para o setor produtivo e que mudanças nos repasses da Lei Kandir (compensação a estados exportadores) podem reduzir em mais de R$ 3 bilhões por ano os recursos dos estados; o senador Marcos Pontes estimou perdas de R$ 2,3 bilhões para Minas Gerais entre 2027 e 2030; e o senador Carlos Portinho chamou a proposta de paliativo. Os números de perdas são estimativas dos próprios senadores.",
+       "fontes": [
+        {
+         "nome": "Agência Senado, 12/11/2026 (alterado por emendas)",
+         "url": "https://www12.senado.leg.br/noticias/materias/2026/11/12/mesmo-com-urgencia-projeto-de-ajuste-fiscal-foi-alterado-por-emendas"
+        },
+        {
+         "nome": "Agência Senado, 12/11/2026 (texto principal aprovado)",
+         "url": "https://www12.senado.leg.br/noticias/materias/2026/11/12/texto-principal-do-ajuste-fiscal-e-aprovado-pelo-senado"
+        },
+        {
+         "nome": "Agência Brasil, 13/11/2026",
+         "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/dolar-fecha-estavel-r-565-mas-sobe-263-na-semana"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Nada muda no seu contracheque por ora: o projeto ainda não virou lei. O que está em jogo é como o governo fecha as contas de 2027, o que pode afetar reajustes e concursos no futuro.",
+        "baixa": "O senador Camilo Santana disse que programas sociais não são cortados; a oposição questiona o impacto nos estados. Acompanhe a votação de terça: ela mostra o que muda nos repasses que sustentam saúde e escola locais.",
+        "media": "Mudanças em regras de benefícios fiscais e em impostos, se confirmadas, podem pesar em empresas e, adiante, em preços. Por ora são propostas; o efeito só aparece depois de a Câmara votar.",
+        "alta": "Quem tem negócio ou investimento deve acompanhar os trechos destacados, que mexem com incentivos ao setor produtivo. A dúvida do mercado sobre o texto aparece no dólar, que subiu na semana."
+       }
+      },
+      {
+       "titulo": "STF: crime contra o patrimônio entre familiares deixa de ficar sem pena",
+       "selo": "Confirmado",
+       "texto": "O Código Penal tem dois artigos antigos (181 e 182) que isentavam de pena certos crimes contra o patrimônio, como furto, cometidos entre cônjuges ou entre pais e filhos, e exigiam a autorização da vítima para processar em alguns casos. Na quinta (12/11), o Supremo Tribunal Federal (STF) decidiu por unanimidade que essas regras **não são compatíveis com a Constituição**. O relator, ministro Dias Toffoli, havia proposto limitar a decisão à violência doméstica contra a mulher, mas acolheu a proposta do ministro Alexandre de Moraes, que estende o entendimento a todas as vítimas da família e invalida o artigo 182. As ações foram propostas pela Conamp (associação de membros do Ministério Público) e pelo PV. Falta definir os efeitos sobre casos antigos: o ministro Flávio Dino defende aplicar só a fatos posteriores à decisão, e a proposta acolhida pelo relator preserva condenações definitivas. A conclusão está marcada para **quarta (18/11)**.",
+       "fontes": [
+        {
+         "nome": "STF, 12/11/2026",
+         "url": "https://noticias.stf.jus.br/postsnoticias/stf-forma-unanimidade-para-afastar-isencao-de-pena-em-crimes-patrimoniais-entre-familiares/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Se alguém da família tirou dinheiro ou bens seus, como um parente que usou seu salário ou seu cartão sem autorização, esse ato pode agora ser tratado como crime. Guarde extratos e mensagens.",
+        "baixa": "Idosos que dependem de parentes para sacar benefício costumam ser os mais expostos a esse tipo de abuso. A decisão dá base legal para denunciar; a Defensoria Pública orienta sem custo.",
+        "media": "Em heranças e negócios de família, desvios de bens entre parentes podem deixar de ser resolvidos só no campo cível. Convém registrar por escrito acordos sobre dinheiro e patrimônio.",
+        "alta": "Empresas familiares e patrimônio compartilhado ficam mais sujeitos a questionamento penal em caso de desvio. Vale rever contratos e a governança antes que os efeitos sobre casos antigos sejam definidos."
+       }
+      }
+     ]
+    },
+    {
+     "id": "bolso",
+     "titulo": "Bolso, emprego e preços",
+     "abertura": "O que entra e o que sai do orçamento da família",
+     "itens": [
+      {
+       "titulo": "Dólar fecha a R$ 5,65, maior valor em 17 meses, e sobe 2,63% na semana",
+       "selo": "Confirmado",
+       "texto": "O dólar é o preço da moeda americana em reais; quando sobe, ficam mais caros produtos importados e o que usa insumo de fora. Na sexta (13/11), fechou estável (alta de 0,11%) a R$ 5,657, depois de saltar 1,58% na quinta, quando chegou ao maior nível em 17 meses. **Na semana, a alta foi de 2,63%.** Segundo a Agência Brasil, pesaram dúvidas sobre o pacote fiscal aprovado no Senado e a turbulência internacional. O Ibovespa, principal índice da bolsa, fechou em 172.457 pontos (+0,66% no dia e +2,35% na semana). O petróleo tipo Brent fechou a US$ 95,84 por barril e perdeu cerca de 2,5% na semana, com a Agência Internacional de Energia apontando excesso de oferta e riscos ao redor do Estreito de Ormuz limitando a queda.",
+       "fontes": [
+        {
+         "nome": "Agência Brasil, 13/11/2026",
+         "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/dolar-fecha-estavel-r-565-mas-sobe-263-na-semana"
+        },
+        {
+         "nome": "Agência Brasil, 12/11/2026 (maior nível em 17 meses)",
+         "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/dolar-dispara-158-e-fecha-r-565-maior-nivel-em-17-meses"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Dólar alto tende a encarecer, aos poucos, alimentos e combustíveis que dependem de importação. Se sua categoria negocia reajuste, o dado reforça a pressão sobre o custo de vida, mas o repasse não é imediato.",
+        "baixa": "O efeito chega pelo mercado: trigo, fertilizante e diesel dependem de preços em dólar. Pesquisar preço e evitar compras grandes parceladas é o cuidado possível.",
+        "media": "Viagem ao exterior, eletrônicos importados e compras em dólar ficam mais caros. Quem tem dívida em moeda estrangeira deve ficar atento.",
+        "alta": "Quem tem investimento em dólar ou exporta ganha com a alta; quem importa insumos perde. A decisão de proteger ou não o patrimônio do câmbio depende do prazo de cada um."
+       }
+      },
+      {
+       "titulo": "Subsídio de R$ 1,40 ao diesel importado não é renovado; o de R$ 2,12 continua",
+       "selo": "Confirmado",
+       "texto": "O governo ajuda a segurar o preço do diesel pagando parte do custo por litro. Segundo a Agência Brasil, o subsídio de **R$ 1,40 por litro ao diesel importado não foi renovado** depois do vencimento da Portaria 3.082, de 13/10/2026, que valia por 30 dias. Continua o de **R$ 2,12 por litro** ao diesel A rodoviário, prorrogado pela Portaria 3.181, de 27/10/2026, também por 30 dias. O Ministério da Fazenda disse que “a possibilidade de reavaliar o benefício não está descartada” e que isso depende dos preços do petróleo. O governo calcula que mais de 25% do diesel consumido no país é importado. Tramita ainda um projeto que retiraria até R$ 10,5 bilhões em subsídios ao diesel do cálculo da meta fiscal de 2026; ele precisa passar pela Câmara. A matéria não informa o efeito exato no preço na bomba.",
+       "fontes": [
+        {
+         "nome": "Agência Brasil, 13/11/2026",
+         "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/governo-nao-renova-subsidio-de-r-140-ao-diesel-importado"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Caminhoneiro e motorista de aplicativo que usa diesel ou depende do frete devem acompanhar o preço nos postos nas próximas semanas. O efeito no valor final não foi informado.",
+        "baixa": "Frete mais caro pode chegar aos alimentos e ao transporte coletivo, mas de forma gradual. Se o preço da feira subir, compare mercados.",
+        "media": "Entrega e frete de compras online podem encarecer se o diesel subir. O efeito é indireto e pequeno no curto prazo.",
+        "alta": "Empresas de logística e do agro que dependem do diesel importado terão custo maior. A decisão sobre novo subsídio dependerá do petróleo, segundo a Fazenda."
+       }
+      },
+      {
+       "titulo": "Confiança da indústria cai ao menor nível desde maio de 2020; varejo fica estável em setembro",
+       "selo": "Confirmado",
+       "texto": "O Índice de Confiança do Empresário Industrial (Icei), medido pela Confederação Nacional da Indústria (CNI), caiu de 46,2 para **40,2 pontos** em novembro, o menor valor desde maio de 2020. Abaixo de 50 pontos indica falta de confiança, e o índice está nessa faixa há 23 meses. A CNI ouviu 1.104 empresas entre 3 e 9 de novembro. Um gerente da entidade disse que a falta de confiança já afeta contratações, produção e investimentos. Em sentido contrário, o IBGE informou que as vendas do comércio variaram 0,2% em setembro em relação a agosto, melhor que a queda esperada de 0,2%, e subiram 1,7% sobre setembro de 2025. Ou seja, o varejo segue estável enquanto a indústria está pessimista. O que ainda não se sabe é se o desânimo da indústria vai chegar às contratações.",
+       "fontes": [
+        {
+         "nome": "Agência Brasil, 13/11/2026 (confiança da indústria)",
+         "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/confianca-da-industria-atinge-menor-nivel-desde-maio-de-2020"
+        },
+        {
+         "nome": "Agência Brasil, 13/11/2026 (vendas no comércio)",
+         "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/vendas-no-comercio-variam-02-em-setembro-ibge-mostra-estabilidade"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Confiança baixa na indústria pode significar menos contratação ou menos hora extra nas fábricas. É um sinal de alerta, não uma demissão confirmada.",
+        "baixa": "Quem depende de trabalho na indústria ou de serviços ligados a ela deve manter documentos e contatos em dia. O comércio estável ajuda quem vive de vendas.",
+        "media": "Se você tem negócio ligado à indústria, vale rever estoques e prazos de pagamento. Para o consumidor, o comércio estável indica demanda sem queda.",
+        "alta": "O dado pesa nas decisões de investimento e expansão. Mercado e empresários devem comparar com os próximos índices antes de tirar conclusões."
+       }
+      },
+      {
+       "titulo": "MEIs: dívidas do INSS no DAS serão perdoadas a partir de 1º de janeiro de 2027",
+       "selo": "Confirmado",
+       "texto": "O Microempreendedor Individual (MEI) paga todo mês uma guia única, o DAS, que reúne a contribuição ao INSS e, conforme a atividade, ICMS e ISS. Pela Lei Complementar 238/2026, a Receita Federal vai cancelar **automaticamente**, sem pedido do MEI, as dívidas previdenciárias do DAS, com juros e multa. Vale a partir de **1º de janeiro de 2027**; até 31/12/2026 as dívidas continuam ativas. Para manter o benefício, o MEI precisa pagar em dia os boletos de **janeiro a junho de 2027**. ICMS e ISS continuam devidos, e valores já pagos não são devolvidos. Quem discute a dívida na Justiça precisa desistir da ação e fazer requerimento. A matéria cita duas datas de corte para o vencimento (13/10/2026 e “até esta sexta”); confira a data exata no portal da Receita.",
+       "fontes": [
+        {
+         "nome": "Agência Brasil, 13/11/2026",
+         "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/receita-cancelara-dividas-de-meis-vencidas-ate-esta-sexta-feira"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Se você é MEI, não pague de novo dívida do INSS que será cancelada, mas continue pagando o DAS em dia. A Receita vai mandar ao INSS a lista dos perdoados, que pode contar como tempo de contribuição.",
+        "baixa": "Para quem trabalha por conta própria com dívida acumulada, é um alívio e abre caminho para voltar a contribuir. O benefício se perde se faltar pagamento entre janeiro e junho.",
+        "media": "Pequenos negócios regularizados podem voltar a emitir nota e a contratar crédito. Mantenha a declaração anual (DASN-Simei) em dia, inclusive de anos anteriores.",
+        "alta": "Efeito pequeno para esse público, a não ser que haja MEIs entre fornecedores ou funcionários. O ganho de formalização pode ajudar cadeias com autônomos."
+       }
+      },
+      {
+       "titulo": "Voos para os EUA: Anac orienta passageiros após paralisação de decolagens nos Estados Unidos",
+       "selo": "Confirmado",
+       "texto": "A autoridade de aviação dos Estados Unidos (FAA) determinou na noite de sexta (13/11) uma **suspensão nacional de decolagens**, por “circunstância extraordinária e por motivos de segurança”, segundo a Agência Brasil. A Agência Nacional de Aviação Civil (Anac) pede que quem tem viagem marcada aos EUA consulte a companhia aérea. Até as 20h30, o impacto no Brasil foi pequeno: em Guarulhos, um voo para Nova York foi cancelado e um para Miami atrasou. A causa e a duração não foram informadas. Em caso de atraso acima de quatro horas ou cancelamento, a empresa deve oferecer reacomodação, reembolso integral ou outro meio de transporte.",
+       "fontes": [
+        {
+         "nome": "Agência Brasil, 13/11/2026",
+         "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/anac-orienta-passageiros-consultar-aereas-sobre-voos-para-os-eua"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Quem viaja a trabalho para os EUA deve confirmar o voo antes de ir ao aeroporto. A empresa aérea precisa dar assistência em caso de espera longa.",
+        "baixa": "O efeito para a maioria é nenhum. Quem tem parente ou compromisso nos EUA deve acompanhar o aviso da companhia.",
+        "media": "Viajantes a turismo têm direito a reacomodação ou reembolso integral. Guarde comprovantes de gastos com alimentação e hospedagem.",
+        "alta": "Voos internacionais e conexões podem sofrer atrasos em cadeia. Confirme alternativas diretamente com a companhia."
+       }
+      }
+     ]
+    },
+    {
+     "id": "saude",
+     "titulo": "Saúde no Brasil",
+     "abertura": "Cuidados da semana",
+     "aviso": "Estas notícias informam, mas não substituem o médico. Nunca comece, pare ou troque um remédio por conta própria. Em emergência, ligue 192 (SAMU).",
+     "itens": [
+      {
+       "titulo": "Saúde mental por videochamada: Meu SUS Digital abre atendimento com até dez sessões",
+       "selo": "Confirmado",
+       "texto": "O Ministério da Saúde facilitou o acesso ao teleatendimento de saúde mental pelo aplicativo Meu SUS Digital, sem necessidade de entrar pelo gov.br. Há dois serviços: o **Acolhe Mais**, para mulheres em situação de vulnerabilidade, e o **Não Aposte Sua Saúde**, para pessoas com problemas ligados a jogos e apostas; o autoteste deste último está aberto a toda a população. O primeiro ciclo tem **até dez sessões de cerca de 50 minutos**, por videochamada e com sigilo. Depois há nova avaliação para decidir se continua ou se a pessoa vai para atendimento presencial. Quem preferir pode procurar a UBS mais próxima, que encaminha à rede de atenção psicossocial, inclusive os CAPS. Segundo o ministério, o autoteste teve mais de 170 mil acessos.",
+       "fontes": [
+        {
+         "nome": "Ministério da Saúde, 13/11/2026",
+         "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/ministerio-da-saude-facilita-acesso-a-teleatendimento-de-saude-mental-no-meu-sus-digital"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Se o horário de trabalho impede de ir a um serviço presencial, a videochamada pode ajudar, desde que você tenha internet. O atendimento é gratuito pelo SUS.",
+        "baixa": "Quem não tem plano de saúde ganha uma porta de entrada sem sair de casa; a UBS segue como caminho presencial. Em crise, ligue 192 (SAMU) ou 188 (CVV).",
+        "media": "Serve como primeira avaliação, inclusive para dívidas de jogo e apostas. Não substitui acompanhamento contínuo, se ele for necessário.",
+        "alta": "Quem tem plano privado pode usar o serviço como alternativa e referência. O efeito direto é pequeno para esse grupo."
+       }
+      },
+      {
+       "titulo": "Novembro Azul: SUS passa de 1 milhão de procedimentos contra o câncer de próstata em 2025",
+       "selo": "Confirmado",
+       "texto": "Novembro Azul é a campanha de atenção à saúde do homem, com foco no câncer de próstata. Segundo o Ministério da Saúde, cirurgias, quimioterapia e radioterapia no SUS passaram de cerca de 781,5 mil em 2022 para **mais de 1 milhão em 2025** (alta de 32,6%); de janeiro a agosto de 2026 foram mais de 710 mil. O Instituto Nacional de Câncer (Inca) estima **77.920 casos novos por ano** em 2026–2028; é o câncer mais comum entre homens, fora os de pele não melanoma. O ministério destaca como sinais de alerta dificuldade para urinar, jato fraco, urinar com mais frequência e sangue na urina, que devem ser avaliados por um profissional de saúde. A matéria não detalha exames de rastreamento nem idade para começar; converse com um médico sobre isso.",
+       "fontes": [
+        {
+         "nome": "Ministério da Saúde, 12/11/2026",
+         "url": "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/novembro/sus-ultrapassa-1-milhao-de-procedimentos-para-tratamento-do-cancer-de-prostata"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Homem que trabalha e adia consulta pode ter direito a atestado para exames. Se houver algum sintoma urinário, procure a UBS em vez de esperar passar.",
+        "baixa": "O SUS oferece tratamento, e o programa Agora Tem Especialistas busca reduzir filas a partir da UBS. Comece pela UBS do bairro.",
+        "media": "Com ou sem plano, a conversa com o médico define quando fazer exames. Não comece nem pare tratamento por conta própria.",
+        "alta": "A informação vale para todos os homens, independentemente da renda. O custo de uma consulta de rotina é pequeno perto do benefício de descobrir cedo."
+       }
+      }
+     ]
+    },
+    {
+     "id": "escola",
+     "titulo": "Escola e Enem",
+     "abertura": "Data que a família precisa saber",
+     "itens": [
+      {
+       "titulo": "Enem: segundo dia de provas é neste domingo (15/11), com Matemática e Ciências da Natureza",
+       "selo": "Confirmado",
+       "texto": "O Exame Nacional do Ensino Médio (Enem) termina neste domingo, 15 de novembro, com as provas de **Matemática e Ciências da Natureza**. Os portões abrem às 12h e **fecham às 13h** (horário de Brasília); depois disso, ninguém entra. Os participantes têm cinco horas para concluir a prova, a permanência mínima na sala é de duas horas e a saída definitiva só vale nos últimos 30 minutos. Leve documento oficial com foto e caneta esferográfica de tinta preta de material transparente. Aparelhos eletrônicos, inclusive relógios digitais, devem ficar desligados no envelope porta-objetos. As provas são nos mesmos locais do primeiro dia.",
+       "fontes": [
+        {
+         "nome": "Inep/MEC, 12/11/2026",
+         "url": "https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/enem-segundo-dia-tera-itens-de-matematica-e-ciencias-da-natureza"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Quem faz o Enem para mudar de carreira ou voltar a estudar deve chegar bem antes das 13h. Quem trabalha no domingo deve avisar a empresa com antecedência.",
+        "baixa": "Estudante da escola pública deve conferir o local e o documento na véspera. A matéria não trata de auxílio de transporte; consulte a escola.",
+        "media": "Famílias podem planejar o deslocamento com folga: o portão não reabre. Confira se a caneta é a certa.",
+        "alta": "Efeito direto pequeno para esse público; para quem tem filho na prova, o importante é o horário e o documento."
+       }
+      }
+     ]
+    },
+    {
+     "id": "minas",
+     "titulo": "Minas Gerais",
+     "abertura": "O que se decide em Belo Horizonte e chega até nós",
+     "itens": [
+      {
+       "titulo": "Cleitinho: Vittorio Medioli será secretário de Planejamento e Gestão",
+       "selo": "Confirmado",
+       "texto": "O governador eleito de Minas, Cleitinho Azevedo (Republicanos), toma posse em 6 de janeiro de 2027, e a equipe começa a ser montada. O ex-prefeito de Betim e deputado estadual eleito Vittorio Medioli (PL) confirmou ao jornal O Tempo, em 13/11, que será o **secretário de Planejamento e Gestão**, pasta que controla orçamento, planos e metas. Ele disse que o estado “está lento, viciado, falta uma coordenação”, que pretende manter quase todos os atuais subsecretários e que as prioridades são incentivar a indústria e rever regras tributárias, conciliar mineração e meio ambiente e resolver gargalos de mobilidade na região metropolitana de Belo Horizonte, inclusive o Rodoanel. Medioli disse que o projeto da Via Expressa de Betim a Brumadinho teria a Vale como financiadora, com R$ 680 milhões; isso é declaração dele. Na terça (10/11), segundo o Estado de Minas, Cleitinho se reuniu na Assembleia com deputados do PT, a oposição, pediu que fiscalizem o governo e disse que terá “acertos e equívocos”; um deputado do PT disse que “o que nos une é muito maior do que o que nos separa”.",
+       "fontes": [
+        {
+         "nome": "O Tempo, 13/11/2026",
+         "url": "https://www.otempo.com.br/politica/2026/11/13/vittorio-medioli-sera-secretario-de-planejamento-e-gestao-no-governo-cleitinho"
+        },
+        {
+         "nome": "Estado de Minas, 11/11/2026",
+         "url": "https://www.em.com.br/politica/2026/11/7536617-cleitinho-a-deputado-do-pt-vamos-trabalhar-juntos.html"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "As prioridades citadas (indústria, mobilidade na Grande BH) podem afetar emprego e deslocamento, mas por ora são intenções. Nada muda antes da posse.",
+        "baixa": "A promessa de foco em infraestrutura e saúde em regiões como o Vale do Jequitinhonha foi dita por Cleitinho ao deputado do PT. Vale acompanhar o orçamento de 2027 para ver se vira verba.",
+        "media": "Revisão de regras tributárias e do Rodoanel pode mexer em impostos e trânsito, ainda sem proposta formal. O efeito depende do que for enviado à Assembleia.",
+        "alta": "Empresas de mineração e indústria devem observar a conversa sobre contrapartidas ambientais e regras tributárias. Ainda não há texto de lei."
+       }
+      },
+      {
+       "titulo": "Prefeituras de Minas cancelam festas de fim de ano e cortam gastos",
+       "selo": "Confirmado",
+       "texto": "Segundo O Tempo, prefeituras mineiras reduzem despesas no fim do ano. Sete Lagoas cancelou todos os eventos até o fim de 2026, incluindo Natal e Réveillon; Betim cancelou festejos natalinos e cortou cargos comissionados; Governador Valadares reduziu contratos e o Natal de Luz; Uberlândia editou decreto de contingenciamento, sem impacto previsto em saúde, educação e zeladoria. A Confederação Nacional de Municípios (CNM) diz que a União **bloqueou R$ 2,5 bilhões em repasses** às prefeituras (6,8% dos R$ 36,8 bilhões autorizados) e que o valor pode crescer. A Associação Mineira de Municípios (AMM) discorda de parte da leitura: afirma que comparar um mês isolado pode enganar e que o Fundo de Participação dos Municípios (FPM) acumulado até o primeiro decêndio de novembro subiu 10,36% em valores nominais e 5,70% descontada a inflação. O Ministério do Planejamento e o governo de Minas não responderam à reportagem.",
+       "fontes": [
+        {
+         "nome": "O Tempo, 13/11/2026",
+         "url": "https://www.otempo.com.br/politica/2026/11/13/prefeituras-de-minas-cancelam-festas-de-final-de-ano-e-limitam-orcamento-para-manter-contas-em-dia"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Servidor municipal e quem presta serviço à prefeitura devem acompanhar atrasos de pagamento e contratos. Nada indica atraso de salário nas cidades citadas.",
+        "baixa": "Cortes em festas atingem barracas e vendedores informais que contam com o movimento de dezembro. Saúde e educação foram preservadas em ao menos uma cidade.",
+        "media": "Comerciantes locais podem sentir menos movimento nas festas canceladas. O Natal de Luz menor muda o fluxo do centro.",
+        "alta": "Fornecedores de eventos e de obras que dependem de repasse federal correm risco de atraso. O dado de 2,5 bilhões é da CNM, e o governo não respondeu."
+       }
+      },
+      {
+       "titulo": "Lei mineira que limita cachês de shows vai ao STF",
+       "selo": "Confirmado",
+       "texto": "A Rede, partido político, entrou no Supremo Tribunal Federal com uma Ação Direta de Inconstitucionalidade (ADI, ação que questiona se uma lei respeita a Constituição) contra a Lei estadual 26.040/2026, sancionada em agosto. A lei, que veio de projeto de deputados estaduais aprovado em julho, limita o que as prefeituras gastam com cachês de artistas: **R$ 500 mil por show** para prefeituras (R$ 700 mil para o governo estadual) e 1% da receita corrente líquida do ano anterior, ou 2% para municípios com receita igual ou menor que R$ 45 milhões. O limite pode subir até 100% no Carnaval e no Ano Novo e até 10% em eventos turísticos reconhecidos por lei. Para a Rede, a lei viola a autonomia dos municípios e a separação dos Poderes. O relator, ministro Cristiano Zanin, pediu esclarecimentos ao governo de Minas e à Assembleia em dez dias; a Advocacia-Geral da União e a Procuradoria-Geral da República também devem opinar. O número da ação não consta na reportagem. A posição do governo e da Assembleia ainda não foi publicada.",
+       "fontes": [
+        {
+         "nome": "O Tempo, 13/11/2026",
+         "url": "https://www.otempo.com.br/politica/aparte/2026/11/13/rede-contesta-no-stf-lei-que-limita-gastos-de-prefeituras-com-caches-de-artistas-em-minas"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Quem vive de show e de eventos pode ter menos contratos de prefeituras se o teto valer. Se for derrubado, o efeito reverte.",
+        "baixa": "Festas públicas gratuitas podem ter atrações menores. A lei tenta evitar gasto alto com shows, e a Rede questiona se o estado pode impor esse limite.",
+        "media": "Shows e festivais em cidades pequenas podem mudar de porte. O efeito depende da decisão do STF.",
+        "alta": "Produtoras e artistas de grande cachê dependem de prefeituras e devem acompanhar a ação. Ainda não há decisão."
+       }
+      }
+     ]
+    }
+   ],
+   "tempo": {
+    "texto": "Chove todos os dias. No domingo do Enem a máxima chega a 27 °C, com chuva. A terça traz o maior volume da semana, perto de 19 mm. Guarda-chuva na bolsa.",
+    "dias": [
+     {
+      "dia": "Sáb 14",
+      "min": 16,
+      "max": 25,
+      "ceu": "Pancadas"
+     },
+     {
+      "dia": "Dom 15",
+      "min": 16,
+      "max": 27,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Seg 16",
+      "min": 16,
+      "max": 22,
+      "ceu": "Pancadas"
+     },
+     {
+      "dia": "Ter 17",
+      "min": 17,
+      "max": 22,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Qua 18",
+      "min": 16,
+      "max": 24,
+      "ceu": "Pancadas"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "HG Brasil, previsão atualizada em 13/11/2026",
+      "url": "https://hgbrasil.com/weather/places/brazil/mg/conselheiro-lafaiete"
+     }
+    ]
+   },
+   "historia": {
+    "titulo": "Do real fixo ao câmbio flutuante: como o dólar passou a oscilar",
+    "texto": "A cotação do dólar muda todos os dias desde 1999, mas nem sempre foi assim. O Plano Real começou em 1994, com a nova moeda circulando a partir de 1º de julho, e o câmbio ficou sob controle do governo. Em março de 1995 foi adotado o regime de bandas cambiais, em que o Banco Central deixava a moeda variar apenas dentro de limites. Em janeiro de 1999, com forte pressão do mercado e dúvidas sobre a sustentação das bandas, o Banco Central deixou o câmbio flutuar: o Comunicado 6.565, de 18/1/1999, estabeleceu a livre flutuação. Desde então, o preço do dólar é formado pelo mercado, e o Banco Central só atua em momentos específicos. Em cada fase houve o mesmo debate: moeda estável ajuda a controlar preços, mas segurar o câmbio custa reservas e pode terminar em ajuste brusco.",
+    "linha": [
+     {
+      "ano": "1994",
+      "fato": "Plano Real: o real passa a circular em 1º de julho"
+     },
+     {
+      "ano": "1995",
+      "fato": "Em março, regime de bandas cambiais"
+     },
+     {
+      "ano": "1999",
+      "fato": "Em 18 de janeiro, Banco Central adota a livre flutuação do câmbio"
+     },
+     {
+      "ano": "2026",
+      "fato": "O dólar chega a R$ 5,65, maior valor em 17 meses, em 12/11"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "Banco Central, Plano Real",
+      "url": "https://www.bcb.gov.br/en/monetarypolicy/realplan"
+     },
+     {
+      "nome": "Banco Central, Câmbio flutuante (Comunicado 6.565, 18/1/1999)",
+      "url": "https://www.bcb.gov.br/rex/MerCambio/Port/cambio991/1999-1Flutuante.asp?frame=1"
+     },
+     {
+      "nome": "Agência Brasil, 12/11/2026",
+      "url": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/dolar-dispara-158-e-fecha-r-565-maior-nivel-em-17-meses"
+     }
+    ]
+   },
+   "palavrinhas": [
+    {
+     "termo": "Câmbio",
+     "def": "Preço de uma moeda em outra; o dólar a R$ 5,65 quer dizer que cada dólar custa 5 reais e 65 centavos."
+    },
+    {
+     "termo": "Ibovespa",
+     "def": "Índice que acompanha o desempenho das ações mais negociadas na bolsa de valores de São Paulo."
+    },
+    {
+     "termo": "Subsídio",
+     "def": "Dinheiro do governo usado para reduzir o preço de um produto ou serviço para quem compra."
+    },
+    {
+     "termo": "DAS",
+     "def": "Documento de Arrecadação do Simples: guia mensal do MEI com impostos e contribuição ao INSS."
+    },
+    {
+     "termo": "ADI",
+     "def": "Ação Direta de Inconstitucionalidade: pedido ao STF para derrubar uma lei que contraria a Constituição."
+    },
+    {
+     "termo": "Destaque",
+     "def": "Pedido para votar em separado um trecho de um projeto, depois que o texto principal já foi aprovado."
+    }
+   ],
+   "agenda": [
+    {
+     "quando": "Hoje (14/11)",
+     "oque": "Dia Mundial do Diabetes"
+    },
+    {
+     "quando": "15/11",
+     "oque": "Segundo dia do Enem (portões fecham às 13h) e feriado da Proclamação da República"
+    },
+    {
+     "quando": "17/11",
+     "oque": "Senado vota os quatro destaques do ajuste fiscal"
+    },
+    {
+     "quando": "18/11",
+     "oque": "STF conclui o julgamento sobre crimes patrimoniais entre familiares e define os efeitos"
+    },
+    {
+     "quando": "20/11",
+     "oque": "Feriado nacional da Consciência Negra"
+    },
+    {
+     "quando": "1º/12",
+     "oque": "Relator entrega o parecer da PEC da maioridade penal"
+    },
+    {
+     "quando": "8 e 9/12",
+     "oque": "Reunião do Copom decide os juros"
+    },
+    {
+     "quando": "16/12",
+     "oque": "Data prevista para o início da jornada de 42 horas com duas folgas"
+    }
+   ],
+   "conversa": [
+    "O dólar subiu na semana em meio a dúvidas sobre o ajuste fiscal. Quando o governo precisa cortar ou arrecadar mais, quais gastos devem ser protegidos primeiro, e quem deve decidir isso?",
+    "O Senado aceitou emendas de governistas e de oposicionistas ao mesmo projeto. O que se ganha e o que se perde quando um texto muda muito na votação?",
+    "O STF decidiu que crimes patrimoniais entre familiares podem ser punidos, e discute se a regra vale para casos antigos. Quando uma decisão nova deve valer só dali para frente, e quando deve alcançar o passado?",
+    "Prefeituras cancelam festas por causa das contas, e uma lei estadual limita cachês. Quem deve decidir como uma cidade gasta com lazer e cultura: o município, o estado ou os dois?"
+   ],
+   "fechamento": "Terra Brasilis, edição nº 5, fechada na manhã de 14/11/2026. Uma publicação do Xeque News."
+  },
+  {
+   "numero": 4,
+   "data": "2026-11-13",
+   "tempoLeitura": 11,
+   "capa": {
+    "chapeu": "Trabalho",
+    "titulo": "Jornada de 42 horas começa em 16 de dezembro; STF decide até segunda se confirma",
+    "linhaFina": "O ministro Flávio Dino negou o pedido de empresários para adiar o fim da escala 6x1 e criou regras de passagem, como o dia de 8h24 sem hora extra. No Senado, o pacote de ajuste das contas passou por 45 a 31, mas ainda falta votar quatro pontos. A inflação de outubro foi de 0,14%, menor que a esperada. Em Minas, o governador escolheu o menos votado da lista para chefiar o Ministério Público."
+   },
+   "citacao": "“O trabalho não é uma mercadoria.” (Declaração de Filadélfia, da Organização Internacional do Trabalho, 1944)",
+   "recado": "A quinta-feira foi cheia, e três assuntos mexem direto com a vida de quem trabalha e paga contas: a decisão do STF sobre a nova jornada, a votação do ajuste fiscal no Senado e a inflação de outubro, que a edição de ontem tinha prometido trazer. Tudo o que ainda pode mudar está marcado como tal: a decisão sobre a jornada é provisória até os outros ministros votarem, e o pacote fiscal ainda passa pela Câmara. O Bolsa Família antecipado e o caso Banco Master seguem sem novidade.",
+   "resumo": [
+    {
+     "tema": "Jornada",
+     "texto": "Dino manteve para 16/12 a jornada de 42 horas com duas folgas e permitiu dia de até 8h24 sem hora extra quando não houver acordo. O plenário do STF vota de hoje até segunda (16/11)."
+    },
+    {
+     "tema": "Ajuste fiscal",
+     "texto": "O Senado aprovou o texto principal por 45 votos a 31. Quatro pontos ficam para terça (17/11); depois, o projeto vai à Câmara."
+    },
+    {
+     "tema": "Orçamento",
+     "texto": "O Congresso autorizou o remanejamento de cerca de R$ 152 bilhões no Orçamento de 2026, a maior parte para aposentadorias do INSS e Bolsa Família."
+    },
+    {
+     "tema": "Inflação",
+     "texto": "O IPCA de outubro ficou em 0,14%, com conta de luz e passagem aérea mais baratas e comida mais cara. Em 12 meses, 4,63%."
+    },
+    {
+     "tema": "Saúde",
+     "texto": "O país chegou a 1.023 casos de mpox no ano. O Ministério da Saúde pediu a inclusão no SUS de uma vacina seis em um para bebês, ainda sem registro na Anvisa."
+    },
+    {
+     "tema": "Minas",
+     "texto": "Mateus Simões escolheu Carlos Eduardo Ferreira Pinto para chefiar o Ministério Público. O Estado terá três trocas de governador em exercício até o fim do mês."
+    }
+   ],
+   "numeros": [
+    {
+     "rotulo": "Nova jornada semanal",
+     "valor": "42 horas",
+     "nota": "a partir de 16/12/2026, com duas folgas pagas; cai para 40 horas em 16/12/2027",
+     "fonte": "Consultor Jurídico, 12/11/2026"
+    },
+    {
+     "rotulo": "Inflação de outubro",
+     "valor": "0,14%",
+     "nota": "IPCA do mês; em 12 meses, 4,63%, acima do teto da meta (4,5%)",
+     "fonte": "O Tempo, com dados do IBGE, 12/11/2026"
+    },
+    {
+     "rotulo": "Placar no Senado",
+     "valor": "45 a 31",
+     "nota": "votos a favor e contra o texto principal do ajuste fiscal; eram necessários 41",
+     "fonte": "CNN Brasil, 12/11/2026"
+    },
+    {
+     "rotulo": "Máxima de hoje",
+     "valor": "25 °C",
+     "nota": "em Conselheiro Lafaiete, com chuva",
+     "fonte": "HG Brasil, 13/11/2026"
+    }
+   ],
+   "cadernos": [
+    {
+     "id": "brasilia",
+     "titulo": "Brasília",
+     "abertura": "O que o governo, o Congresso e o STF decidem, e como isso chega na vida da gente",
+     "itens": [
+      {
+       "titulo": "Fim da escala 6x1: Dino mantém a data e cria regras de passagem",
+       "selo": "Confirmado",
+       "texto": "A Emenda Constitucional 141, promulgada pelo Congresso em 16 de outubro, acaba com a escala 6x1 (seis dias de trabalho para um de folga) e reduz a jornada máxima de 44 para 40 horas por semana, em duas etapas: 42 horas com duas folgas pagas a partir de 16 de dezembro de 2026 e 40 horas a partir de 16 de dezembro de 2027. Duas entidades de empresários, a Confederação Nacional do Comércio (CNC) e a Confederação Nacional da Indústria (CNI), foram ao Supremo Tribunal Federal (STF) pedir mais prazo. Na quinta (12/11), o ministro Flávio Dino, relator das duas ações, negou o adiamento em uma liminar, que é uma decisão provisória e de efeito imediato. Ele escreveu que não vê violação às cláusulas pétreas (as partes da Constituição que não podem ser abolidas) e que o descanso é um “direito indisponível relacionado à proteção, à saúde e à vida familiar dos trabalhadores e das trabalhadoras”. Ao mesmo tempo, Dino criou regras de passagem: 1) onde não houver acordo coletivo (o acerto entre sindicato e empresa) até 15 de dezembro, as 42 horas podem ser divididas em cinco dias de até 8 horas e 24 minutos, e esses 24 minutos não contam como hora extra durante um ano; 2) o salário não pode ser reduzido, nem o piso da categoria; 3) cláusulas de acordos que contrariem a nova regra perdem a validade em 16 de dezembro, mas sindicatos e empresas têm 90 dias para renegociar as contrapartidas, e a empresa não pode cortar benefício por conta própria; 4) os dias de folga podem ser combinados em negociação coletiva, desde que as duas folgas semanais sejam mantidas; 5) o Congresso tem 180 dias para fazer regras para setores com regime especial e para micro e pequenas empresas; 6) empresas que prestam serviço ao poder público têm 180 dias para adaptar os contratos, e não mais um ano. O que dizem os empresários: a CNC afirma que não questiona o fim da 6x1, e sim o prazo de dois meses, que cai no pico de vendas do fim do ano; pedia que a primeira etapa ficasse para outubro de 2027. Depois da decisão, o presidente da entidade, José Roberto Tadros, disse que “o STF honra a Constituição e demonstra concordância com o setor produtivo”, por ter reduzido a rigidez das regras, embora o prazo tenha sido mantido. O que dizem os trabalhadores: na audiência de conciliação de 10/11, o presidente da Central Única dos Trabalhadores (CUT), Sergio Nobre, afirmou que “a negociação vale, o acordo vale, desde que cumpra o que tá na PEC”, ou seja, sem abrir mão das duas folgas. Não encontramos, até o fechamento, manifestação da CNI nem das centrais sindicais sobre o dia de 8h24. Os demais ministros votam em sessão virtual das 11h desta sexta (13/11) até as 11h de segunda (16/11) e podem manter ou mudar a liminar.",
+       "fontes": [
+        {
+         "nome": "Consultor Jurídico, 12/11/2026",
+         "url": "https://conjur.com.br/2026-nov-12/intervencao-de-dino-sobre-fim-da-escala-6x1-nao-fere-separacao-dos-poderes/"
+        },
+        {
+         "nome": "Tribuna do Sertão, com Agência O Globo, 12/11/2026",
+         "url": "https://www.tribunadosertao.com.br/financas/2026/11/12/1020263-fim-da-escala-6x1-dino-mantem-jornada-de-42-horas-a-partir-de-16-de-dezembro-mas-libera-dia-de-8h24-sem-hora-extra"
+        },
+        {
+         "nome": "Mix Vale (pedido da CNC), 12/11/2026",
+         "url": "https://www.mixvale.com.br/2026/11/12/cnc-questiona-prazo-da-escala-6x1-no-stf-e-pede-adiamento-em-2026/"
+        },
+        {
+         "nome": "O Estado Acre (falas da CNC e da CUT), 12/11/2026",
+         "url": "https://oestadoacre.com/2026/11/12/5x2-stf-flexibiliza-dias-de-folga-a-pedido-da-cnco-que-diz-a-cut/"
+        },
+        {
+         "nome": "Brasil 247 (calendário do julgamento), 12/11/2026",
+         "url": "https://www.brasil247.com/brasil/plenario-do-stf-abre-nesta-sexta-feira-o-julgamento-da-decisao-de-dino-sobre-o-fim-da-escala-6x1/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "É quem mais sente. Se a liminar for confirmada, a partir de 16/12 a semana passa a ter no máximo 42 horas e duas folgas pagas, sem corte de salário. Onde não houver acordo, o patrão pode pedir até 8h24 por dia, de segunda a sexta ou em outros cinco dias, sem pagar esses 24 minutos como extra. Vale procurar o sindicato para saber se a categoria já negociou a nova escala.",
+        "baixa": "Muitos empregos de menor salário estão no comércio, em serviços e em limpeza, onde a escala 6x1 é mais comum. A segunda folga fica garantida, e o piso da categoria não pode cair. Quem trabalha sem carteira assinada não é alcançado diretamente pela regra.",
+        "media": "Quem já trabalha de segunda a sexta sente pouco. Lojas, restaurantes e serviços podem mudar horários de atendimento. Donos de pequenos negócios precisam refazer as escalas até 15/12; a regra própria para micro e pequenas empresas depende do Congresso, que tem 180 dias para criá-la.",
+        "alta": "Empresas com muitos empregados em escala 6x1 terão de reorganizar turnos ou contratar, o que aumenta o custo. A decisão dá 90 dias para renegociar contrapartidas dos acordos e proíbe cortar benefícios sem negociação. Quem tem contrato com o poder público tem 180 dias para adaptá-lo."
+       }
+      },
+      {
+       "titulo": "Senado aprova o texto principal do ajuste fiscal por 45 a 31",
+       "selo": "Confirmado",
+       "texto": "O pacote do governo para arrumar as contas federais de 2027, apresentado na edição de ontem, passou pela primeira votação. Na noite de quinta (12/11), o Senado aprovou por 45 votos a 31 o texto principal do Projeto de Lei Complementar 299/2026; eram necessários 41 votos. Antes, o pedido de urgência (que leva o projeto direto ao plenário, sem passar pelas comissões) foi aprovado por 40 a 38. O texto votado é a versão do relator, senador Eduardo Braga (MDB-AM), que recebeu 74 sugestões e acatou 21, no todo ou em parte. O que ficou: o limite de crescimento dos gastos acima da inflação cai de 2,5% para 2% ao ano nos anos em que houver medidas de contenção; o governo pode bloquear despesas mirando o centro da meta das contas, e não só o piso; os incentivos fiscais (descontos de imposto) sofrem corte de cerca de 20%; e o Congresso tem 120 dias para analisar regras sobre os supersalários. O que mudou, segundo a CNN Brasil: o relator retirou a autorização para o governo usar até 40% das sobras de fundos com destino carimbado; protegeu o fundo que financia serviços do Distrito Federal; e ampliou a lista do que fica fora do corte de incentivos, como a desoneração da folha de pagamento, a indústria de semicondutores e a compra de veículos por pessoas com deficiência ou com autismo. Com as mudanças, o Executivo estima melhora de R$ 45,1 bilhões a R$ 56,1 bilhões nas contas de 2027. O que diz o relator: “Queremos um país que possa crescer com a redução de desigualdades.” A equipe econômica do governo afirma que rever incentivos dá mais segurança ao cumprimento das metas e à estabilização da dívida. O que diz a oposição: os senadores Magno Malta (PL-ES) e Damares Alves (Republicanos-DF) criticaram a pressa e pediram mais tempo para discutir um texto que consideram complexo; a oposição afirmou que o relatório foi apresentado “de última hora”. Fora do Congresso, a Ordem dos Advogados do Brasil (OAB) se opõe por temer aumento de imposto para escritórios, profissionais liberais e empresas de serviços. Faltam quatro destaques, que são pedidos para votar trechos em separado; o presidente do Senado, Davi Alcolumbre (União-AP), marcou a análise para terça (17/11). Depois, o projeto segue para a Câmara. Nada está em vigor.",
+       "fontes": [
+        {
+         "nome": "CNN Brasil, 12/11/2026",
+         "url": "https://www.cnnbrasil.com.br/politica/senado-aprova-plp-do-ajuste-fiscal/"
+        },
+        {
+         "nome": "Tribuna do Sertão, com Agência Senado, 12/11/2026",
+         "url": "https://www.tribunadosertao.com.br/politica/2026/11/12/1020683-texto-principal-do-ajuste-fiscal-e-aprovado-pelo-senado"
+        },
+        {
+         "nome": "Sampi, 12/11/2026",
+         "url": "https://sampi.net.br/nacional/noticias/3018360/brasil-e-mundo/2026/11/senado-aprova-pacote-de-ajuste-fiscal-de-ate-r-60-bilhoes"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Nada muda agora no salário nem nos direitos: falta terminar a votação no Senado e passar pela Câmara. O efeito esperado é indireto e demorado: contas mais arrumadas tendem a ajudar na queda dos juros.",
+        "baixa": "Segundo a CNN Brasil, saiu do texto a permissão para usar sobras de fundos com destino carimbado. Não há mudança anunciada em benefícios sociais. Vale acompanhar a votação dos destaques na terça e a passagem pela Câmara, onde o texto pode mudar.",
+        "media": "A compra de veículo por pessoa com deficiência ou com autismo ficou fora do corte de incentivos. Profissionais liberais e pequenas empresas de serviços devem acompanhar o ponto que a OAB critica, sobre o cálculo do imposto de quem usa o regime de lucro presumido.",
+        "alta": "Empresas que usam incentivos fiscais ou créditos tributários continuam sendo as mais atingidas, com cerca de 20% de corte e várias exceções. Servidores com ganhos acima do teto seguem na discussão dos supersalários, que tem prazo de 120 dias."
+       }
+      },
+      {
+       "titulo": "Congresso libera remanejamento de R$ 152 bilhões no Orçamento deste ano",
+       "selo": "Confirmado",
+       "texto": "Deputados e senadores aprovaram na quinta (12/11), em sessão conjunta, 26 projetos que reorganizam cerca de R$ 152 bilhões do Orçamento de 2026. O maior deles, de R$ 149,4 bilhões, cobre despesas obrigatórias: cerca de R$ 120 bilhões para aposentadorias e pensões do INSS, R$ 26 bilhões para o Bolsa Família e R$ 4,4 bilhões para o BPC (benefício pago a idosos e pessoas com deficiência de baixa renda). Passou por 402 votos a 12 na Câmara e com o apoio dos 55 senadores que votaram. A autorização era necessária por causa da “regra de ouro”, norma da Constituição que proíbe o governo de fazer dívida para pagar despesas do dia a dia sem aval do Congresso. Segundo o governo, os valores já estavam previstos e a aprovação não significa gasto novo. Outro projeto, de R$ 290,1 milhões para a Eletronuclear investir na usina de Angra 3, dividiu a Câmara: 261 votos a favor e 155 contra. O Congresso também aprovou mudança na lei do Orçamento que amplia os casos em que o governo pode remanejar verbas sem pedir nova autorização, como em fiscalização ambiental e projetos de defesa. Os textos vão à sanção do presidente.",
+       "fontes": [
+        {
+         "nome": "NC News, 12/11/2026",
+         "url": "https://ncnews.com.br/2026/11/12/congresso-aprova/"
+        },
+        {
+         "nome": "Senado Notícias, 12/11/2026",
+         "url": "https://www12.senado.leg.br/noticias/materias/2026/11/12/executivo-tera-novas-possibilidades-de-remanejamento-e-suplementacao-de-despesas"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Sem mudança no salário. A votação garante que aposentadorias e pensões do INSS continuem sendo pagas em dia até o fim do ano.",
+        "baixa": "É a notícia que mais toca este grupo: o dinheiro do Bolsa Família e do BPC até dezembro está autorizado. Os valores e as datas de pagamento não mudam.",
+        "media": "Aposentados e pensionistas não precisam fazer nada. Para os demais, o efeito é indireto: o governo evita atrasos em despesas obrigatórias.",
+        "alta": "Efeito direto pequeno. Investidores observam o uso da regra de ouro como sinal de quanto o governo depende de dívida para pagar despesas correntes."
+       }
+      }
+     ]
+    },
+    {
+     "id": "bolso",
+     "titulo": "Bolso, emprego e preços",
+     "abertura": "O que entra e o que sai do orçamento da família",
+     "itens": [
+      {
+       "titulo": "Inflação de outubro fica em 0,14%, menor que a esperada",
+       "selo": "Confirmado",
+       "texto": "O IBGE divulgou na quinta (12/11) o IPCA de outubro, o índice oficial de inflação do país: alta de 0,14%, bem abaixo do 0,82% de setembro e menor do que os analistas esperavam (em torno de 0,25%). O que segurou o índice: a conta de luz, que caiu 1,92% depois de ter subido 7,98% em setembro; as passagens aéreas, 9,21% mais baratas; e a gasolina, com queda de 0,56%. O que pesou: alimentação e bebidas, com alta de 1,04%, puxada por tomate e carnes; o diesel subiu 1,66% e o etanol, 1,02%. No acumulado de 12 meses, a inflação passou de 4,58% para 4,63%, acima do teto da meta, que é 4,5%. Isso acontece porque o outubro do ano passado, que saiu da conta, tinha sido ainda mais baixo (0,09%). Para o ano fechado de 2026, os analistas ouvidos pelo Banco Central projetam 5,22%, e o próprio BC, 5,6%.",
+       "fontes": [
+        {
+         "nome": "O Tempo, com dados do IBGE, 12/11/2026",
+         "url": "https://www.otempo.com.br/economia/2026/11/12/ibge-inflacao-fica-em-0-14-em-outubro-abaixo-das-expectativas"
+        },
+        {
+         "nome": "InfoMoney, 12/11/2026",
+         "url": "https://www.infomoney.com.br/economia/ipca-inflacao-outubro-2026-dados-ibge/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "O acumulado de 12 meses, de 4,63%, é a referência para pedir reajuste na data-base da categoria. A conta de luz de outubro veio mais leve, mas a comida subiu de novo.",
+        "baixa": "Para quem gasta a maior parte da renda com comida, a inflação sentida foi maior que a média: alimentos subiram 1,04% no mês. Trocar tomate e carne por itens da época e pesquisar preço ajuda a atravessar o mês.",
+        "media": "Passagem aérea e gasolina mais baratas aliviam quem viaja e usa carro. Aluguel e mensalidades reajustados pelo IPCA seguem o acumulado de 12 meses; confira o índice no contrato.",
+        "alta": "O número menor que o esperado mexe com as apostas para os juros na reunião do Banco Central de 8 e 9 de dezembro. Com a inflação de 12 meses ainda acima da meta, não há sinal oficial de corte."
+       }
+      },
+      {
+       "titulo": "Combustível em Belo Horizonte: preços parados no começo do mês",
+       "selo": "Confirmado",
+       "texto": "Quem abastece na capital mineira não teve sustos no início de novembro. Segundo levantamento da ANP, a agência federal que acompanha o setor, divulgado pelo sindicato dos postos de Minas (Minaspetro), o litro da gasolina comum custava em média R$ 6,48, com postos cobrando de R$ 6,09 a R$ 6,89. O etanol ficou em R$ 4,46 na média (de R$ 3,99 a R$ 4,69) e o diesel, em R$ 6,62 (de R$ 6,49 a R$ 6,99). A diferença entre o posto mais barato e o mais caro da gasolina chega a 80 centavos por litro. Regra prática para carro flex: o etanol costuma compensar quando custa até 70% do preço da gasolina; com as médias de Belo Horizonte, a conta dá cerca de 69%, praticamente no limite.",
+       "fontes": [
+        {
+         "nome": "Minaspetro, com Itatiaia e dados da ANP, 11/11/2026",
+         "url": "https://minaspetro.com.br/preco-dos-combustiveis-fica-estavel-em-belo-horizonte-no-inicio-de-novembro/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Motoboys, motoristas de aplicativo e quem vai de carro ou moto para o serviço ganham ao pesquisar: num tanque de 40 litros, a diferença entre o posto mais caro e o mais barato passa de R$ 30.",
+        "baixa": "Quem depende de ônibus não sente diretamente. O diesel estável ajuda a não pressionar o frete e, com ele, o preço da comida.",
+        "media": "Com o etanol perto de 70% do preço da gasolina, a escolha depende do consumo do carro. Vale fazer a conta com os preços do posto onde você abastece.",
+        "alta": "Efeito pequeno no orçamento pessoal. Para frotas e transportadoras, o diesel parado dá previsibilidade de custos no fim do ano."
+       }
+      }
+     ]
+    },
+    {
+     "id": "saude",
+     "titulo": "Saúde no Brasil",
+     "abertura": "Cuidados da semana",
+     "aviso": "Estas notícias informam, mas não substituem o médico. Nunca comece, pare ou troque um remédio por conta própria. Em emergência, ligue 192 (SAMU).",
+     "itens": [
+      {
+       "titulo": "Mpox passa de mil casos no ano; variante nova circula no país",
+       "selo": "Confirmado",
+       "texto": "O Brasil chegou a 1.023 casos de mpox em 2026, com uma morte, segundo o levantamento mais recente do Ministério da Saúde, divulgado na quinta (12/11). A mpox é uma doença causada por vírus que provoca feridas na pele e passa por contato próximo. Entre 18 de outubro e 12 de novembro foram 118 casos confirmados e prováveis, sem mortes; no mesmo período de 2025 tinham sido 333. O Rio de Janeiro soma 386 casos, 162 deles desde 25 de outubro; São Paulo tem 377; o Ceará, 59; e o Distrito Federal, 39, dos quais 29 nas últimas duas semanas. Autoridades estaduais identificaram a variante 1b do vírus; até março, só a variante 2 tinha sido encontrada no país. Para comparar: em 2022, ano do maior surto, foram cerca de 10,5 mil casos e 14 mortes. As 25 mil doses de vacina noticiadas ontem devem chegar em cerca de três semanas, e o ministério orientou estados e municípios a aplicar a dose na camada superficial da pele (via intradérmica), técnica que, segundo a pasta, permite vacinar até cinco vezes mais pessoas com o mesmo frasco. A vacina continua restrita aos grupos indicados. Sintomas: feridas na pele, ínguas, febre, dor no corpo e cansaço. Na dúvida, procure o posto de saúde.",
+       "fontes": [
+        {
+         "nome": "Tribuna do Sertão, com dados do Ministério da Saúde, 12/11/2026",
+         "url": "https://www.tribunadosertao.com.br/geral/2026/11/12/1020517-mpox-no-brasil-virus-que-causou-crise-na-africa-avanca-em-sp-e-outros-estados"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "O risco para a população em geral segue baixo. Com feridas suspeitas na pele, procure atendimento antes de voltar ao trabalho; o atestado vale como em qualquer doença.",
+        "baixa": "Exame, atendimento e vacina (para os grupos indicados) são gratuitos pelo SUS. Em casa, não dividir toalhas, roupas e roupa de cama com quem tem feridas.",
+        "media": "Quem está nos grupos indicados deve procurar o serviço onde já se trata. Para os demais, valem a higiene das mãos e evitar contato direto com feridas.",
+        "alta": "O vírus passa por contato próximo, em qualquer classe. A vacina não é vendida como rotina na rede particular."
+       }
+      },
+      {
+       "titulo": "Vacina seis em um para bebês: ministério pede inclusão no SUS antes do registro",
+       "selo": "Confirmado",
+       "texto": "O Programa Nacional de Imunizações, do Ministério da Saúde, pediu à Conitec (a comissão que avalia o que entra no SUS) a inclusão de uma vacina hexavalente para bebês de dois a seis meses. Ela protege, numa só injeção, contra seis doenças: difteria, tétano, coqueluche, hepatite B, poliomielite e a bactéria Haemophilus influenzae tipo B. Hoje o SUS usa duas vacinas para isso, a pentavalente e a da pólio. O ponto em discussão: o produto ainda não tem registro na Anvisa, nem nas agências dos Estados Unidos e da Europa, e seria comprado por meio do fundo da Organização Pan-Americana da Saúde (Opas). O que diz o ministério: o diretor do programa, Éder Gatti, afirma que a troca mantém a proteção atual, reduz o número de picadas (seriam 6 milhões de aplicações a menos por ano) e economiza cerca de R$ 50 milhões no primeiro ano; em nota, a pasta diz que a vacina está em análise na Anvisa e que a lei permite avaliar produtos comprados por organismos internacionais. O que dizem os críticos: Nelson Mussolini, suplente do Conselho Nacional de Saúde na comissão, disse que a medida “descaracteriza a atuação da agência sanitária”; Daniel Jarovsky, da Sociedade Brasileira de Pediatria, questionou os dados, porque os estudos, feitos na Índia, não incluíram bebês prematuros. Nada mudou no calendário: a consulta pública ainda não foi aberta, e as vacinas atuais continuam nos postos.",
+       "fontes": [
+        {
+         "nome": "Brasil em Folhas, 11/11/2026",
+         "url": "https://brasilemfolhas.com.br/2026/11/ministerio-da-saude-pede-incorporacao-de-vacina-sem-registro-na-anvisa/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Para quem tem bebê, nada muda por enquanto: leve a criança ao posto nas datas da caderneta. As vacinas atuais protegem contra as mesmas doenças.",
+        "baixa": "A vacinação infantil no SUS segue gratuita e completa. Se a troca for aprovada no futuro, a criança tomará menos injeções em cada visita.",
+        "media": "Vacinas hexavalentes de outros fabricantes já são vendidas em clínicas particulares; a discussão trata de um produto específico para a rede pública. Dúvidas sobre o esquema do bebê são com o pediatra.",
+        "alta": "Efeito direto pequeno. O debate interessa a quem atua no setor de saúde, porque trata de até onde o SUS pode comprar um produto antes do registro na Anvisa."
+       }
+      }
+     ]
+    },
+    {
+     "id": "escola",
+     "titulo": "Escola e Enem",
+     "abertura": "Data que a família precisa saber",
+     "itens": [
+      {
+       "titulo": "Pé-de-Meia paga R$ 200 a quem fizer os dois dias do Enem",
+       "selo": "Confirmado",
+       "texto": "O Pé-de-Meia é o programa do governo federal que deposita uma poupança para estudantes de baixa renda do ensino médio público. Segundo o Ministério da Educação (MEC), cerca de 1,2 milhão de beneficiários que estão terminando o ensino médio podem receber uma parcela extra de R$ 200 por participar do Enem. A condição é ter comparecido aos dois dias de prova: 8 de novembro, que já passou, e este domingo, 15 de novembro. O pagamento está previsto para o período de 22 de fevereiro a 1º de março de 2027 e depende de a escola informar ao MEC que o aluno concluiu o ensino médio. A consulta é feita na página do programa no site do MEC e no aplicativo Caixa Tem. Lembrete para domingo: os portões fecham às 13h, pelo horário de Brasília.",
+       "fontes": [
+        {
+         "nome": "Exame, com informações do MEC, 10/11/2026",
+         "url": "https://exame.com/brasil/pe-de-meia-12-milhao-de-alunos-podem-receber-parcela-extra-de-r-200-por-participacao-no-enem/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Jovem que estuda e trabalha e recebe o Pé-de-Meia só garante os R$ 200 se for à prova de domingo. Combine a folga com antecedência.",
+        "baixa": "É o público do programa. Faltar no domingo faz perder a parcela extra e elimina o candidato do Enem. Vale conferir o ônibus, que no feriado roda com menos horários.",
+        "media": "Sem efeito direto: o programa atende famílias inscritas no Cadastro Único. Para todos os candidatos, vale o mesmo cuidado com o horário.",
+        "alta": "Sem efeito direto. O custo do incentivo sai do orçamento federal da educação."
+       }
+      }
+     ]
+    },
+    {
+     "id": "minas",
+     "titulo": "Minas Gerais",
+     "abertura": "O que se decide em Belo Horizonte e chega até nós",
+     "itens": [
+      {
+       "titulo": "Ministério Público: Simões escolhe o terceiro da lista",
+       "selo": "Confirmado",
+       "texto": "O governador Mateus Simões (PSD) anunciou na quinta (12/11), pelas redes sociais, que o promotor Carlos Eduardo Ferreira Pinto será o procurador-geral de Justiça, o chefe do Ministério Público de Minas, em 2027 e 2028. Como mostramos ontem, ele foi o terceiro colocado na votação interna de terça (10/11), com 379 votos; o atual chefe, Paulo de Tarso Morais Filho, teve 797, e José Carlos Fernandes Júnior, 402. A Constituição do Estado permite ao governador escolher qualquer um dos três nomes. Carlos Eduardo é promotor desde 2004, coordenou por dois períodos o centro de apoio às promotorias de meio ambiente e chefiou a força-tarefa do órgão depois do rompimento da barragem de Fundão, em Mariana, em 2015. O que diz o governador: “Sinto-me honrado com a possibilidade de nomear ao cargo um profissional reconhecidamente competente”; ele agradeceu a Paulo de Tarso, “que tão bem conduziu o MP nos últimos anos”. O que diz o escolhido: prometeu “conduzir com responsabilidade e independência a nossa instituição”. O jornal O Tempo atribui a decisão, com base em fontes do Ministério Público que não quiseram se identificar, à proximidade de Paulo de Tarso com o ex-secretário Marcelo Aro (PP), que rompeu com Simões na eleição; o governador não confirmou essa leitura, e as reportagens consultadas não trazem manifestação de Paulo de Tarso. A nomeação formal deve ser assinada quando Simões reassumir o cargo, no sábado (14/11). O mandato cobre os dois primeiros anos do governo de Cleitinho Azevedo (Republicanos).",
+       "fontes": [
+        {
+         "nome": "Agência Minas, 12/11/2026",
+         "url": "https://www.agenciaminas.mg.gov.br/noticia/governador-de-minas-gerais-anuncia-carlos-eduardo-ferreira-pinto-como-novo-procurador-geral-de-justica"
+        },
+        {
+         "nome": "O Tempo, 12/11/2026",
+         "url": "https://www.otempo.com.br/politica/2026/11/12/simoes-escolhe-carlos-eduardo-ferreira-como-novo-chefe-do-mpmg-e-barra-reeleicao-de-indicado-de-aro"
+        },
+        {
+         "nome": "Estado de Minas, 12/11/2026",
+         "url": "https://www.em.com.br/politica/2026/11/7537496-simoes-nomeia-carlos-eduardo-pinto-para-procurador-geral-de-justica-de-mg.html"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Sem efeito imediato. O Ministério Público atua em segurança no trabalho e na cobrança de serviços públicos; quem chefia define prioridades ao longo do mandato.",
+        "baixa": "As promotorias continuam atendendo de graça quem precisa cobrar vaga em creche, remédio ou atendimento. A troca de chefe não muda esse serviço.",
+        "media": "O novo chefe tem trajetória na área ambiental. Para quem mora perto de barragens ou de áreas de mineração, é um tema a acompanhar a partir de 2027.",
+        "alta": "Mineradoras, construtoras e empresas com contratos públicos acompanham de perto, porque o órgão fiscaliza licenças ambientais e licitações."
+       }
+      },
+      {
+       "titulo": "Minas terá três trocas de governador em exercício até o fim do mês",
+       "selo": "Confirmado",
+       "texto": "O comando do Estado vai mudar de mãos três vezes em poucos dias, sem que isso altere o governo: são substituições temporárias previstas na Constituição estadual. Minas está sem vice-governador desde março, quando Mateus Simões assumiu no lugar de Romeu Zema (Novo), que renunciou para disputar a Presidência. Por isso, na ausência de Simões, quem responde é o presidente da Assembleia, deputado Tadeu Leite (MDB), no cargo desde 29/10. O calendário, segundo o jornal O Tempo: no sábado (14/11), Simões volta da viagem oficial, reassume e assina a nomeação do novo chefe do Ministério Público; depois segue para a COP31, a conferência do clima, na Turquia. No domingo (15/11), como Tadeu Leite estará de licença para o próprio casamento, assume o presidente do Tribunal de Justiça, desembargador Vicente de Oliveira Silva, o próximo na linha de substituição. No dia 23/11, Tadeu Leite volta ao exercício do governo, até 29/11. Não é a primeira vez: segundo o Tribunal, 11 presidentes do Judiciário mineiro já governaram o Estado de forma interina. O governador eleito, Cleitinho Azevedo, toma posse em 6 de janeiro.",
+       "fontes": [
+        {
+         "nome": "O Tempo, 12/11/2026",
+         "url": "https://www.otempo.com.br/politica/2026/11/12/tadeu-leite-se-casa-no-civil-e-minas-tera-ao-menos-tres-trocas-de-governador-em-menos-de-um-mes"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Nada muda no dia a dia: salários de servidores, escolas, hospitais e polícia seguem funcionando normalmente, seja quem for o governador em exercício.",
+        "baixa": "Sem efeito em benefícios e serviços do Estado. As trocas são formais e temporárias.",
+        "media": "Sem efeito prático. Serve para entender a regra: sem vice, a ordem é o presidente da Assembleia e, depois, o presidente do Tribunal de Justiça.",
+        "alta": "Quem depende de atos do governador, como nomeações e sanção de leis, acompanha o calendário, porque só o titular costuma tomar decisões de maior peso."
+       }
+      },
+      {
+       "titulo": "Fim de semana com chuva espalhada; tempestades podem voltar na virada da semana",
+       "selo": "Previsão",
+       "texto": "O Inmet, o instituto federal de meteorologia, prevê para a semana de 9 a 16 de novembro chuva acumulada de 20 a 40 milímetros no Sudeste, com pontos isolados acima de 50 mm no oeste e no leste de Minas. Segundo o boletim, publicado em 9/11, as chuvas diminuem ao longo da semana e as tempestades podem voltar na virada para a semana seguinte, ou seja, a partir do fim do domingo (15/11), dia do Enem. Avisos de tempestade são emitidos de um dia para o outro; para saber se há aviso para a sua cidade, consulte o portal de avisos do Inmet. Emergência: Defesa Civil (199) e Bombeiros (193).",
+       "fontes": [
+        {
+         "nome": "Inmet, Informativo Meteorológico nº 45, 9/11/2026",
+         "url": "https://portal.inmet.gov.br/noticias/inmet-divulga-previs%C3%A3o-para-semana-de-9-a-16-de-novembro-de-2026"
+        },
+        {
+         "nome": "Inmet, portal de avisos, consulta em 13/11/2026",
+         "url": "https://avisos.inmet.gov.br/"
+        }
+       ],
+       "impacto": {
+        "trabalhador": "Quem trabalha na rua, em obra ou na roça deve acompanhar a previsão do dia; com raios, a recomendação é parar o serviço ao ar livre.",
+        "baixa": "Moradores de encostas e de beira de córrego devem ficar atentos a rachaduras e à subida da água. Em caso de perigo, saia de casa e ligue 199.",
+        "media": "Candidatos do Enem e famílias devem sair com folga no domingo. Carro em garagem coberta evita prejuízo com granizo.",
+        "alta": "Produtores rurais acompanham os volumes, que ajudam o plantio da safra de verão, mas podem atrapalhar a colheita em áreas com excesso de chuva."
+       }
+      }
+     ]
+    }
+   ],
+   "tempo": {
+    "texto": "A chuva continua todos os dias. Hoje chove mais; no sábado, pancadas espalhadas. No domingo do Enem a tarde chega a 27 °C, com chuva. A terça promete o maior volume da semana. Guarda-chuva na bolsa.",
+    "dias": [
+     {
+      "dia": "Sex 13",
+      "min": 17,
+      "max": 25,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Sáb 14",
+      "min": 16,
+      "max": 25,
+      "ceu": "Pancadas"
+     },
+     {
+      "dia": "Dom 15",
+      "min": 16,
+      "max": 27,
+      "ceu": "Chuva"
+     },
+     {
+      "dia": "Seg 16",
+      "min": 16,
+      "max": 22,
+      "ceu": "Pancadas"
+     },
+     {
+      "dia": "Ter 17",
+      "min": 17,
+      "max": 22,
+      "ceu": "Chuva"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "HG Brasil, previsão atualizada em 13/11/2026",
+      "url": "https://hgbrasil.com/weather/places/brazil/mg/conselheiro-lafaiete"
+     }
+    ]
+   },
+   "historia": {
+    "titulo": "De 8 horas por dia a 40 por semana: a jornada nas leis do Brasil",
+    "texto": "A discussão desta semana no STF tem quase cem anos de história. A Constituição de 16 de julho de 1934 foi a primeira a pôr o assunto no texto maior do país: garantiu “trabalho diário não excedente de oito horas” e o repouso semanal, de preferência aos domingos. Como se trabalhava seis dias, a semana chegava a 48 horas. Em 1º de maio de 1943, no governo Getúlio Vargas, a Consolidação das Leis do Trabalho (CLT) reuniu as regras trabalhistas num só texto e manteve as oito horas diárias. A mudança seguinte demorou 45 anos: a Constituição de 5 de outubro de 1988 baixou o limite semanal de 48 para 44 horas, sem redução de salário, e é essa regra que vale até hoje. Em 2026, a Emenda Constitucional 141 fixou o caminho para 42 horas em dezembro deste ano e 40 horas em dezembro de 2027, com duas folgas por semana. Em cada etapa houve o mesmo debate: de um lado, a saúde e o tempo de quem trabalha; de outro, o custo para quem emprega. E em cada etapa a lei precisou de regras de passagem, como as que o Supremo discute agora.",
+    "linha": [
+     {
+      "ano": "1934",
+      "fato": "Constituição garante jornada diária de até oito horas e repouso semanal"
+     },
+     {
+      "ano": "1943",
+      "fato": "CLT (Decreto-Lei 5.452, de 1º/5) reúne as leis trabalhistas e mantém as oito horas por dia"
+     },
+     {
+      "ano": "1988",
+      "fato": "Constituição reduz o limite semanal de 48 para 44 horas"
+     },
+     {
+      "ano": "2026",
+      "fato": "Emenda Constitucional 141: 42 horas a partir de 16/12/2026 e 40 horas a partir de 16/12/2027, com duas folgas"
+     }
+    ],
+    "fontes": [
+     {
+      "nome": "Planalto, Constituição de 16/7/1934 (art. 121)",
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao34.htm"
+     },
+     {
+      "nome": "Planalto, Decreto-Lei nº 5.452, de 1º/5/1943 (CLT)",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del5452.htm"
+     },
+     {
+      "nome": "Planalto, Constituição de 5/10/1988 (art. 7º, XIII)",
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+     },
+     {
+      "nome": "Consultor Jurídico (Emenda Constitucional 141), 12/11/2026",
+      "url": "https://conjur.com.br/2026-nov-12/intervencao-de-dino-sobre-fim-da-escala-6x1-nao-fere-separacao-dos-poderes/"
+     }
+    ]
+   },
+   "palavrinhas": [
+    {
+     "termo": "Liminar",
+     "def": "Decisão provisória e rápida de um juiz, que vale de imediato, mas ainda pode ser mantida ou derrubada pelos demais."
+    },
+    {
+     "termo": "Acordo coletivo",
+     "def": "Combinado escrito entre o sindicato dos trabalhadores e a empresa (ou o sindicato das empresas) sobre salário, horário e benefícios."
+    },
+    {
+     "termo": "Cláusula pétrea",
+     "def": "Parte da Constituição que não pode ser abolida nem por emenda, como os direitos e garantias individuais."
+    },
+    {
+     "termo": "Destaque",
+     "def": "Pedido para votar em separado um trecho de um projeto, depois que o texto principal já foi aprovado."
+    },
+    {
+     "termo": "Regra de ouro",
+     "def": "Norma da Constituição que impede o governo de fazer dívida para pagar despesas do dia a dia, salvo com autorização do Congresso."
+    },
+    {
+     "termo": "Lista tríplice",
+     "def": "Lista com três nomes, votada pelos membros de um órgão, da qual o governador ou o presidente escolhe um."
+    }
+   ],
+   "agenda": [
+    {
+     "quando": "Hoje (13/11)",
+     "oque": "STF começa às 11h a votação virtual sobre a liminar da nova jornada"
+    },
+    {
+     "quando": "14/11",
+     "oque": "Dia Mundial do Diabetes; Mateus Simões reassume o governo de Minas e deve nomear o chefe do Ministério Público"
+    },
+    {
+     "quando": "15/11",
+     "oque": "Segundo dia do Enem (portões fecham às 13h); feriado da Proclamação da República; presidente do Tribunal de Justiça assume o governo de Minas de forma interina"
+    },
+    {
+     "quando": "16/11",
+     "oque": "Termina às 11h a votação no STF; Lula volta ao Brasil; começa o pagamento antecipado do Bolsa Família (até 18/11)"
+    },
+    {
+     "quando": "17/11",
+     "oque": "Senado vota os quatro destaques do ajuste fiscal"
+    },
+    {
+     "quando": "20/11",
+     "oque": "Feriado nacional da Consciência Negra"
+    },
+    {
+     "quando": "1º/12",
+     "oque": "Relator entrega o parecer da PEC da maioridade penal"
+    },
+    {
+     "quando": "8 e 9/12",
+     "oque": "Reunião do Copom decide os juros"
+    },
+    {
+     "quando": "16/12",
+     "oque": "Data prevista para o início da jornada de 42 horas com duas folgas"
+    }
+   ],
+   "conversa": [
+    "O Congresso aprovou a nova jornada e as empresas pediram mais prazo ao STF. Quando uma mudança beneficia muitos e custa a alguns, quanto tempo de adaptação é justo, e quem deve decidir isso?",
+    "A decisão permite 8h24 por dia sem hora extra onde não houver acordo. Regras de passagem como essa protegem o direito novo ou o enfraquecem? O que você precisaria saber para responder?",
+    "O Senado votou em um dia um projeto que mexe em dezenas de bilhões, e parte dos senadores disse não ter tido tempo de ler. Urgência nas contas justifica menos debate? Em que casos?",
+    "O governador podia escolher qualquer nome da lista do Ministério Público e escolheu o menos votado. O que deve pesar mais na escolha de quem fiscaliza o governo: o voto dos colegas ou a confiança de quem nomeia?"
+   ],
+   "fechamento": "Terra Brasilis, edição nº 4, fechada na manhã de 13/11/2026. Uma publicação do Xeque News."
+  },
+  {
    "numero": 3,
    "data": "2026-11-12",
    "tempoLeitura": 11,
