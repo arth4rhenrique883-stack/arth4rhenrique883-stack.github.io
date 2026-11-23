@@ -1,3 +1,3 @@
-# Caro-Kann Med: ckR (residência) e ckmed (períodos)
+# Caro-Kann Med: ckR (residência) e ckp (períodos)
 
-Apps de estudo instaláveis: ckR (residência) em https://arth4rhenrique883-stack.github.io/medaj/ e ckmed (períodos) em https://arth4rhenrique883-stack.github.io/periodos/
+Apps de estudo instaláveis: ckR (residência) em https://arth4rhenrique883-stack.github.io/medaj/ e ckp (períodos) em https://arth4rhenrique883-stack.github.io/periodos/
