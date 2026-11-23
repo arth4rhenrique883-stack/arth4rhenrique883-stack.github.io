@@ -5,9 +5,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#030303">
-<title>Apostilas · 8º período · xequemate med</title>
+<title>Apostilas · 8º período · Caro-Kann Med</title>
 <style>
-/* Design-modelo do xequemate med (o mesmo das apostilas da residência, bloco1.html): só as cores de tema mudam por período. */
+/* Design-modelo do Caro-Kann Med (o mesmo das apostilas da residência, bloco1.html): só as cores de tema mudam por período. */
 :root{
   --bg:#030303; --fg:#ebebeb; --muted:#9c9c9c; --line:#1b1b1b; --line-2:#2e2e2e; --raise:#0a0a0a; --surface:#0a0a0a; --surface-2:#101010;
   --red:#9446ff; --red-ink:#ffb3df; --red-soft:#110a1c; --blue:#7f97bd;
@@ -756,7 +756,7 @@ html[data-caneta] .gf-bar{gap:8px}
     <linearGradient id="av-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a1a1a"/><stop offset="1" stop-color="#2a0d10"/></linearGradient>
   </defs>
 </svg>
-<header class="top"><a class="back" href="../p8.html#apostilas" id="back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg><span>8º período</span></a><a class="brand" href="./" aria-label="Todas as apostilas do 8º período"><span class="asmed asmed-p xm" aria-label="xequemate med"><span class="t">xequemate <b>med</b></span><span class="qw"><svg class="xm-ecg" viewBox="0 0 240 46" aria-hidden="true"><defs><linearGradient id="xm-gt-p" x1="0" y1="0" x2="240" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff5d8f"/><stop offset="0.5" stop-color="#3fd6e6"/><stop offset="1" stop-color="#a77bff"/></linearGradient></defs><g fill="none" stroke="url(#xm-gt-p)" stroke-linejoin="round" stroke-linecap="round"><path class="xm-gl" d="M0 34H62L66 30H70L74 34H100L104 38L109 15L115 25L120 6L125 25L131 15L136 42L140 34H160L166 28H172L178 34H240" stroke-width="5"/><path class="xm-base" d="M0 34H62L66 30H70L74 34H100L104 38L109 15L115 25L120 6L125 25L131 15L136 42L140 34H160L166 28H172L178 34H240" stroke-width="1.4"/><path class="xm-sw" d="M0 34H62L66 30H70L74 34H100L104 38L109 15L115 25L120 6L125 25L131 15L136 42L140 34H160L166 28H172L178 34H240" pathLength="100" stroke-width="2"/><g class="xm-b" stroke-width="1.3"><circle cx="109" cy="12.4" r="2.3"/><circle cx="120" cy="3.4" r="2.3"/><circle cx="131" cy="12.4" r="2.3"/></g></g></svg></span></span></a></header>
+<header class="top"><a class="back" href="../p8.html#apostilas" id="back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg><span>8º período</span></a><a class="brand" href="./" aria-label="Todas as apostilas do 8º período"><span class="asmed asmed-p xm" aria-label="Caro-Kann Med"><span class="t">Caro-Kann <b>Med</b></span><span class="qw"><svg class="xm-ecg" viewBox="0 0 240 46" aria-hidden="true"><defs><linearGradient id="xm-gt-p" x1="0" y1="0" x2="240" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff5d8f"/><stop offset="0.5" stop-color="#3fd6e6"/><stop offset="1" stop-color="#a77bff"/></linearGradient></defs><g fill="none" stroke="url(#xm-gt-p)" stroke-linejoin="round" stroke-linecap="round"><path class="xm-gl" d="M0 34H62L66 30H70L74 34H100L104 38L109 15L115 25L120 6L125 25L131 15L136 42L140 34H160L166 28H172L178 34H240" stroke-width="5"/><path class="xm-base" d="M0 34H62L66 30H70L74 34H100L104 38L109 15L115 25L120 6L125 25L131 15L136 42L140 34H160L166 28H172L178 34H240" stroke-width="1.4"/><path class="xm-sw" d="M0 34H62L66 30H70L74 34H100L104 38L109 15L115 25L120 6L125 25L131 15L136 42L140 34H160L166 28H172L178 34H240" pathLength="100" stroke-width="2"/><g class="xm-b" stroke-width="1.3"><circle cx="109" cy="12.4" r="2.3"/><circle cx="120" cy="3.4" r="2.3"/><circle cx="131" cy="12.4" r="2.3"/></g></g></svg></span></span></a></header>
   <main id="app" aria-live="polite"></main>
 </div>
 <aside class="lado" id="lado" aria-label="Slide ao lado do texto"><div class="lt"><span class="k" id="ldN"></span><span class="b"><button type="button" id="ldP" aria-label="Slide anterior">‹</button><button type="button" id="ldF" aria-label="Próximo slide">›</button><button type="button" id="ldX" aria-label="Fechar o slide ao lado">✕</button></span></div><div class="lst"><div class="slimg" id="ldI" role="img" title="Ampliar o slide"></div></div></aside>
@@ -867,7 +867,7 @@ function wire(root){
 
 /* telas */
 let DOC=null;
-function home(){document.body.classList.remove("bookmode");onkey=null;onresize=null;document.title="Apostilas · "+P.nome+" · xequemate med";
+function home(){document.body.classList.remove("bookmode");onkey=null;onresize=null;document.title="Apostilas · "+P.nome+" · Caro-Kann Med";
   let h=`<section class="home"><span class="kick">${esc(P.nome)} · apostilas</span><h1>Apostilas</h1><p class="lede">Os slides de cada aula são a base. O que vem de fora aparece em quadro azul (atualização) ou dourado (divergência com a diretriz), sempre com a fonte.</p>`;
   for(const c of P.cat){h+=`<div class="disc"><span class="kick">${esc(c.av)}</span><h2>${esc(c.nome)}</h2><div class="list">`;
     c.secs.forEach((s,i)=>{h+=`<a class="item${LIDAS[s.id]?" lida":""}" href="#${c.id}/resumos/${i}"><span class="n">${String(i+1).padStart(2,"0")}</span><b>${strip(s.t)}</b>${s.s?`<span>${strip(s.s)}</span>`:""}</a>`});
@@ -968,7 +968,7 @@ async function aula(cid,bi,pi){const c=CAT(cid);if(!c)return home();const D=awai
   document.body.classList.remove("bookmode");
   DOC={tot:{}};if(s.deck&&s.nsl)DOC.tot[s.deck]=s.nsl;
   VISTO[s.id]=VISTO[s.id]||{};VISTO[s.id][pg.i]=1;VISTO[s.id].last=pg.i;save("vistas",VISTO);
-  document.title=strip(s.title)+" · xequemate med";
+  document.title=strip(s.title)+" · Caro-Kann Med";
   const sub=[c.nome+" · "+(s.av||c.av),pg.sl].filter(Boolean).join(" · ");
   let h=`<div class="bar"><i style="width:${((pi+1)/PG.length*100).toFixed(1)}%"></i></div><header class="head"><span class="kick">${esc(sub)}</span><h1>${strip(s.title)}</h1>${s.sub?`<p class="sub">${strip(s.sub)}</p>`:""}`;
   if(PG.length>1){h+=`<div class="pages" role="navigation" aria-label="Páginas">${PG.map((p,i)=>`<button type="button" data-pg="${p.i}"${i===pi?' aria-current="page"':""}${p.raw.some(r=>VISTO[s.id][r])?' class="seen"':""} aria-label="Página ${i+1}: ${esc(p.title)}">${i+1}</button>`).join("")}</div>`;
@@ -1012,7 +1012,7 @@ async function questoes(av,mat,gs){document.body.classList.remove("bookmode");on
   for(const g of G)for(const id of g.ids)for(const c of P.cat){const bi=c.secs.findIndex(s=>s.id===id);if(bi<0)continue;
     const D=await need(c),s=D.sections[bi];if(!s)continue;
     pages(s.blocks).forEach((p,pi)=>p.blocks.forEach(b=>{if(b.t==="mcq"||b.t==="prova")Q.push({b,esp:g.esp,cid:c.id,bi,pi:p.i,sid:s.id,aula:strip(s.title),pg:p.title,pa:QPA(b,s.id)})}))}
-  document.title="Questões · "+mat+" · xequemate med";
+  document.title="Questões · "+mat+" · Caro-Kann Med";
   const esps=[...new Set(G.map(g=>g.esp).filter(Boolean))];if(!esps.includes(QE))QE="";
   const draw=()=>{const L1=Q.filter(q=>!QE||q.esp===QE),L=L1.filter(q=>QF!=="pa"||q.pa),npa=L1.filter(q=>q.pa).length;
     let h=`<header class="head"><span class="kick">${esc(mat)} · ${esc(av)} · questões</span><h1>Questões</h1><p class="sub">${Q.length?`${Q.length} ${Q.length===1?"questão":"questões"} das apostilas desta matéria, com comentário. As de provas antigas levam o selo.`:"As questões desta matéria entram aqui junto com as apostilas."}</p>`;
@@ -1294,7 +1294,7 @@ function mistura(){var art=app.querySelector("article");if(!art)return;var its=[
 var FILA=null,POS=0,SES={n:0,ok:0};
 function telaRevisar(){document.body.classList.remove("bookmode");try{onkey=null;onresize=null}catch(e){}
   if(!FILA){FILA=devidos();POS=0;SES={n:0,ok:0}}
-  document.title="Revisar hoje · "+P.nome+" · xequemate med";
+  document.title="Revisar hoje · "+P.nome+" · Caro-Kann Med";
   var r=R(),t=hoje(),d=r.dia[t]||{n:0,ok:0},h='<header class="head"><span class="kick">'+P.nome+' · revisão espaçada</span><h1>Revisar hoje</h1><p class="sub">Perguntas que você errou voltam amanhã; a cada acerto, o intervalo cresce (3, 7, 21 e 60 dias).</p></header><div class="ap-fila">';
   if(POS>=FILA.length){var tot=Object.keys(r.it).filter(function(k){return !r.it[k].fim}).length;
     h+=FILA.length?'<div class="ap-card"><b>Revisão de hoje concluída.</b><div class="ap-sum"><div><b>'+SES.n+'</b><span>respostas</span></div><div><b>'+(SES.n?Math.round(100*SES.ok/SES.n):0)+'%</b><span>de acerto</span></div><div><b>'+tot+'</b><span>na fila nos próximos dias</span></div></div></div>'
