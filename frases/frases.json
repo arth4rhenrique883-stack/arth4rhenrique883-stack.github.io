@@ -1,5 +1,5 @@
 {
- "versao": 1,
+ "versao": 2,
  "frases": [
   {
    "id": 1,
@@ -576,6 +576,156 @@
    "t": "Onde estava o id, ali deve estar o ego.",
    "a": "Sigmund Freud",
    "o": "Novas Conferências Introdutórias, 31"
+  },
+  {
+   "id": 97,
+   "t": "O homem é a medida de todas as coisas.",
+   "a": "Protágoras",
+   "o": "Platão, Teeteto 152a"
+  },
+  {
+   "id": 98,
+   "t": "A coragem é saber o que se deve e o que não se deve temer.",
+   "a": "Platão",
+   "o": "Laques 199 (paráfrase)"
+  },
+  {
+   "id": 99,
+   "t": "A amizade é uma só alma habitando dois corpos.",
+   "a": "Aristóteles",
+   "o": "frase atribuída (Diógenes Laércio V, 20)"
+  },
+  {
+   "id": 100,
+   "t": "O caminho para cima e para baixo é um só e o mesmo.",
+   "a": "Heráclito",
+   "o": "fr. 60"
+  },
+  {
+   "id": 101,
+   "t": "Que ninguém, sendo jovem, hesite em filosofar, nem, sendo velho, se canse de filosofar.",
+   "a": "Epicuro",
+   "o": "Carta a Meneceu 122 (paráfrase)"
+  },
+  {
+   "id": 102,
+   "t": "Nada nasce do nada.",
+   "a": "Lucrécio",
+   "o": "Da Natureza das Coisas I, 150"
+  },
+  {
+   "id": 103,
+   "t": "Sou humano; nada do que é humano me é estranho.",
+   "a": "Terêncio",
+   "o": "Heautontimorumenos, v. 77"
+  },
+  {
+   "id": 104,
+   "t": "A vida, se sabes usá-la, é longa.",
+   "a": "Sêneca",
+   "o": "Sobre a brevidade da vida 2"
+  },
+  {
+   "id": 105,
+   "t": "A melhor vingança é não ser semelhante a quem te ofendeu.",
+   "a": "Marco Aurélio",
+   "o": "Meditações VI, 6"
+  },
+  {
+   "id": 106,
+   "t": "Não faças aos outros o que não queres que te façam.",
+   "a": "Confúcio",
+   "o": "Analectos XV, 24"
+  },
+  {
+   "id": 107,
+   "t": "A natureza só se comanda obedecendo-lhe.",
+   "a": "Francis Bacon",
+   "o": "Novum Organum I, 3"
+  },
+  {
+   "id": 108,
+   "t": "O homem não passa de um caniço, o mais fraco da natureza, mas é um caniço pensante.",
+   "a": "Blaise Pascal",
+   "o": "Pensamentos 347"
+  },
+  {
+   "id": 109,
+   "t": "O silêncio eterno desses espaços infinitos me apavora.",
+   "a": "Blaise Pascal",
+   "o": "Pensamentos 206"
+  },
+  {
+   "id": 110,
+   "t": "O sinal mais certo da sabedoria é uma alegria constante.",
+   "a": "Montaigne",
+   "o": "Ensaios I, 26 (paráfrase)"
+  },
+  {
+   "id": 111,
+   "t": "Vivemos no melhor dos mundos possíveis.",
+   "a": "Gottfried Leibniz",
+   "o": "Teodiceia (paráfrase)"
+  },
+  {
+   "id": 112,
+   "t": "Do tronco torto da humanidade jamais se fez algo inteiramente reto.",
+   "a": "Immanuel Kant",
+   "o": "Ideia de uma história universal, 6ª proposição"
+  },
+  {
+   "id": 113,
+   "t": "É preciso ter ainda caos dentro de si para dar à luz uma estrela dançante.",
+   "a": "Friedrich Nietzsche",
+   "o": "Assim falou Zaratustra, Prólogo 5"
+  },
+  {
+   "id": 114,
+   "t": "Torna-te quem tu és.",
+   "a": "Friedrich Nietzsche",
+   "o": "A Gaia Ciência 270"
+  },
+  {
+   "id": 115,
+   "t": "Quem luta com monstros deve cuidar para não se tornar também um monstro.",
+   "a": "Friedrich Nietzsche",
+   "o": "Além do Bem e do Mal 146"
+  },
+  {
+   "id": 116,
+   "t": "Às coisas mesmas!",
+   "a": "Edmund Husserl",
+   "o": "Investigações Lógicas"
+  },
+  {
+   "id": 117,
+   "t": "O inferno são os outros.",
+   "a": "Jean-Paul Sartre",
+   "o": "Entre Quatro Paredes"
+  },
+  {
+   "id": 118,
+   "t": "A própria luta em direção aos cumes basta para preencher um coração humano.",
+   "a": "Albert Camus",
+   "o": "O Mito de Sísifo"
+  },
+  {
+   "id": 119,
+   "t": "Viver é muito perigoso.",
+   "a": "Guimarães Rosa",
+   "o": "Grande Sertão: Veredas"
+  },
+  {
+   "id": 120,
+   "t": "É mais seguro ser temido do que amado.",
+   "a": "Nicolau Maquiavel",
+   "o": "O Príncipe XVII (paráfrase)"
+  },
+  {
+   "id": 121,
+   "t": "Ama, e faze o que quiseres.",
+   "a": "Santo Agostinho",
+   "o": "Comentário à Primeira Epístola de João 7, 8"
   }
  ]
 }
