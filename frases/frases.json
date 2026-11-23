@@ -1,0 +1,731 @@
+{
+ "versao": 2,
+ "frases": [
+  {
+   "id": 1,
+   "t": "Uma vida não examinada não vale a pena ser vivida.",
+   "a": "Sócrates",
+   "o": "Platão, Apologia 38a"
+  },
+  {
+   "id": 2,
+   "t": "Conhece-te a ti mesmo.",
+   "a": "Sócrates",
+   "o": "inscrição de Delfos, em Platão, Protágoras"
+  },
+  {
+   "id": 3,
+   "t": "O espanto é o princípio da filosofia.",
+   "a": "Platão",
+   "o": "Teeteto 155d"
+  },
+  {
+   "id": 4,
+   "t": "A primeira e melhor das vitórias é vencer a si mesmo.",
+   "a": "Platão",
+   "o": "Leis 626e"
+  },
+  {
+   "id": 5,
+   "t": "Ao toque do amor, todos se tornam poetas.",
+   "a": "Platão",
+   "o": "Banquete 196e"
+  },
+  {
+   "id": 6,
+   "t": "O começo é a parte mais importante de qualquer trabalho.",
+   "a": "Platão",
+   "o": "República 377a"
+  },
+  {
+   "id": 7,
+   "t": "Todos os homens desejam, por natureza, conhecer.",
+   "a": "Aristóteles",
+   "o": "Metafísica 980a"
+  },
+  {
+   "id": 8,
+   "t": "O homem é, por natureza, um animal político.",
+   "a": "Aristóteles",
+   "o": "Política 1253a"
+  },
+  {
+   "id": 9,
+   "t": "A virtude é um meio-termo entre dois vícios: um por excesso, outro por falta.",
+   "a": "Aristóteles",
+   "o": "Ética a Nicômaco II"
+  },
+  {
+   "id": 10,
+   "t": "A educação tem raízes amargas, mas seus frutos são doces.",
+   "a": "Aristóteles",
+   "o": "frase atribuída (Diógenes Laércio)"
+  },
+  {
+   "id": 11,
+   "t": "Quem não consegue viver em sociedade, ou não precisa de nada, é uma fera ou um deus.",
+   "a": "Aristóteles",
+   "o": "Política 1253a"
+  },
+  {
+   "id": 12,
+   "t": "Ninguém se banha duas vezes no mesmo rio.",
+   "a": "Heráclito",
+   "o": "frase atribuída (fr. 91)"
+  },
+  {
+   "id": 13,
+   "t": "O caráter é o destino do homem.",
+   "a": "Heráclito",
+   "o": "fr. 119"
+  },
+  {
+   "id": 14,
+   "t": "Tudo flui.",
+   "a": "Heráclito",
+   "o": "frase atribuída (Simplício)"
+  },
+  {
+   "id": 15,
+   "t": "Não se deve temer a morte: enquanto existimos, ela não está; quando ela chega, não existimos.",
+   "a": "Epicuro",
+   "o": "Carta a Meneceu"
+  },
+  {
+   "id": 16,
+   "t": "Nada é suficiente para quem o suficiente é pouco.",
+   "a": "Epicuro",
+   "o": "Sentenças Vaticanas 68"
+  },
+  {
+   "id": 17,
+   "t": "De tudo o que a sabedoria proporciona à felicidade da vida inteira, o maior bem é a amizade.",
+   "a": "Epicuro",
+   "o": "Máximas Principais 27"
+  },
+  {
+   "id": 18,
+   "t": "Algumas coisas dependem de nós; outras não dependem de nós.",
+   "a": "Epicteto",
+   "o": "Manual 1"
+  },
+  {
+   "id": 19,
+   "t": "Não são as coisas que perturbam os homens, mas as opiniões que têm sobre elas.",
+   "a": "Epicteto",
+   "o": "Manual 5"
+  },
+  {
+   "id": 20,
+   "t": "Não peça que os acontecimentos sejam como você quer; queira-os como são, e será feliz.",
+   "a": "Epicteto",
+   "o": "Manual 8"
+  },
+  {
+   "id": 21,
+   "t": "Primeiro diga a si mesmo o que você quer ser; depois faça o que tem de fazer.",
+   "a": "Epicteto",
+   "o": "Discursos III, 23"
+  },
+  {
+   "id": 22,
+   "t": "A alma é tingida pela cor dos seus pensamentos.",
+   "a": "Marco Aurélio",
+   "o": "Meditações V, 16"
+  },
+  {
+   "id": 23,
+   "t": "O que está no caminho torna-se o caminho.",
+   "a": "Marco Aurélio",
+   "o": "Meditações V, 20"
+  },
+  {
+   "id": 24,
+   "t": "Se não é correto, não o faça; se não é verdade, não o diga.",
+   "a": "Marco Aurélio",
+   "o": "Meditações XII, 17"
+  },
+  {
+   "id": 25,
+   "t": "Nada acontece a ninguém que ele não possa suportar.",
+   "a": "Marco Aurélio",
+   "o": "Meditações V, 18"
+  },
+  {
+   "id": 26,
+   "t": "Tudo é efêmero: tanto quem lembra quanto o que é lembrado.",
+   "a": "Marco Aurélio",
+   "o": "Meditações IV, 35"
+  },
+  {
+   "id": 27,
+   "t": "Não é que tenhamos pouco tempo, mas que perdemos muito.",
+   "a": "Sêneca",
+   "o": "Sobre a brevidade da vida I, 3"
+  },
+  {
+   "id": 28,
+   "t": "Sofremos mais na imaginação do que na realidade.",
+   "a": "Sêneca",
+   "o": "Cartas a Lucílio 13"
+  },
+  {
+   "id": 29,
+   "t": "Enquanto ensinamos, aprendemos.",
+   "a": "Sêneca",
+   "o": "Cartas a Lucílio 7"
+  },
+  {
+   "id": 30,
+   "t": "Nenhum vento sopra a favor de quem não sabe para qual porto navega.",
+   "a": "Sêneca",
+   "o": "Cartas a Lucílio 71 (atribuída)"
+  },
+  {
+   "id": 31,
+   "t": "Não é porque as coisas são difíceis que não ousamos; é porque não ousamos que são difíceis.",
+   "a": "Sêneca",
+   "o": "Cartas a Lucílio 104"
+  },
+  {
+   "id": 32,
+   "t": "Enquanto adiamos, a vida passa.",
+   "a": "Sêneca",
+   "o": "Cartas a Lucílio 1"
+  },
+  {
+   "id": 33,
+   "t": "Errar é humano; só o tolo persiste no erro.",
+   "a": "Cícero",
+   "o": "Filípicas XII, 5"
+  },
+  {
+   "id": 34,
+   "t": "Filosofar é aprender a morrer.",
+   "a": "Cícero",
+   "o": "Tusculanas I, 74"
+  },
+  {
+   "id": 35,
+   "t": "A mente não é um vaso a ser enchido, mas um fogo a ser aceso.",
+   "a": "Plutarco",
+   "o": "Sobre o ouvir (paráfrase)"
+  },
+  {
+   "id": 36,
+   "t": "Navegar é preciso; viver não é preciso.",
+   "a": "Plutarco",
+   "o": "Vida de Pompeu"
+  },
+  {
+   "id": 37,
+   "t": "Aprender sem pensar é inútil; pensar sem aprender é perigoso.",
+   "a": "Confúcio",
+   "o": "Analectos II, 15"
+  },
+  {
+   "id": 38,
+   "t": "Quem erra e não corrige comete outro erro.",
+   "a": "Confúcio",
+   "o": "Analectos XV, 30"
+  },
+  {
+   "id": 39,
+   "t": "Uma jornada de mil milhas começa com um único passo.",
+   "a": "Lao Tsé",
+   "o": "Tao Te Ching 64"
+  },
+  {
+   "id": 40,
+   "t": "Quem conhece os outros é sábio; quem conhece a si mesmo é iluminado.",
+   "a": "Lao Tsé",
+   "o": "Tao Te Ching 33"
+  },
+  {
+   "id": 41,
+   "t": "A mente precede todas as coisas; tudo é feito pela mente.",
+   "a": "Buda",
+   "o": "Dhammapada 1"
+  },
+  {
+   "id": 42,
+   "t": "O ódio nunca cessa pelo ódio, mas pelo amor.",
+   "a": "Buda",
+   "o": "Dhammapada 5"
+  },
+  {
+   "id": 43,
+   "t": "Já não sei se sou Zhuang Zhou sonhando ser borboleta, ou uma borboleta sonhando ser Zhuang Zhou.",
+   "a": "Zhuangzi",
+   "o": "Zhuangzi 2"
+  },
+  {
+   "id": 44,
+   "t": "A vida é breve, a arte é longa, a ocasião fugidia, a experiência enganosa, o julgamento difícil.",
+   "a": "Hipócrates",
+   "o": "Aforismos I, 1"
+  },
+  {
+   "id": 45,
+   "t": "Ajudar ou, ao menos, não causar dano.",
+   "a": "Hipócrates",
+   "o": "Epidemias I"
+  },
+  {
+   "id": 46,
+   "t": "A dose faz o veneno.",
+   "a": "Paracelso",
+   "o": "Sete Defensões (paráfrase)"
+  },
+  {
+   "id": 47,
+   "t": "Que é, pois, o tempo? Se ninguém me pergunta, sei; se quero explicá-lo, não sei.",
+   "a": "Santo Agostinho",
+   "o": "Confissões XI, 14"
+  },
+  {
+   "id": 48,
+   "t": "Nosso coração está inquieto até que repouse em Ti.",
+   "a": "Santo Agostinho",
+   "o": "Confissões I, 1"
+  },
+  {
+   "id": 49,
+   "t": "Que sei eu?",
+   "a": "Montaigne",
+   "o": "Ensaios II, 12"
+  },
+  {
+   "id": 50,
+   "t": "Conhecimento é poder.",
+   "a": "Francis Bacon",
+   "o": "Meditationes Sacrae"
+  },
+  {
+   "id": 51,
+   "t": "O homem é o lobo do homem.",
+   "a": "Thomas Hobbes",
+   "o": "De Cive (a partir de Plauto)"
+  },
+  {
+   "id": 52,
+   "t": "O bom senso é a coisa mais bem distribuída do mundo.",
+   "a": "René Descartes",
+   "o": "Discurso do Método I"
+  },
+  {
+   "id": 53,
+   "t": "Penso, logo existo.",
+   "a": "René Descartes",
+   "o": "Discurso do Método IV"
+  },
+  {
+   "id": 54,
+   "t": "O coração tem razões que a própria razão desconhece.",
+   "a": "Blaise Pascal",
+   "o": "Pensamentos 277"
+  },
+  {
+   "id": 55,
+   "t": "Toda a infelicidade dos homens vem de uma só coisa: não saber ficar quieto num quarto.",
+   "a": "Blaise Pascal",
+   "o": "Pensamentos 139"
+  },
+  {
+   "id": 56,
+   "t": "Não rir, não lamentar, não detestar, mas compreender.",
+   "a": "Baruch Spinoza",
+   "o": "Tratado Político I, 4"
+  },
+  {
+   "id": 57,
+   "t": "Todas as coisas excelentes são tão difíceis quanto raras.",
+   "a": "Baruch Spinoza",
+   "o": "Ética V, prop. 42"
+  },
+  {
+   "id": 58,
+   "t": "Cultivemos o nosso jardim.",
+   "a": "Voltaire",
+   "o": "Cândido"
+  },
+  {
+   "id": 59,
+   "t": "O homem nasce livre, e por toda parte encontra-se a ferros.",
+   "a": "Jean-Jacques Rousseau",
+   "o": "Do Contrato Social I, 1"
+  },
+  {
+   "id": 60,
+   "t": "A razão é, e deve ser, escrava das paixões.",
+   "a": "David Hume",
+   "o": "Tratado da Natureza Humana II, 3"
+  },
+  {
+   "id": 61,
+   "t": "Se vi mais longe, foi por estar sobre os ombros de gigantes.",
+   "a": "Isaac Newton",
+   "o": "Carta a Robert Hooke, 1675"
+  },
+  {
+   "id": 62,
+   "t": "Ousa saber! Tem coragem de usar o teu próprio entendimento.",
+   "a": "Immanuel Kant",
+   "o": "Resposta à pergunta: o que é o Esclarecimento?"
+  },
+  {
+   "id": 63,
+   "t": "Duas coisas enchem o ânimo de admiração: o céu estrelado acima de mim e a lei moral dentro de mim.",
+   "a": "Immanuel Kant",
+   "o": "Crítica da Razão Prática, Conclusão"
+  },
+  {
+   "id": 64,
+   "t": "Trate a humanidade sempre como fim e nunca apenas como meio.",
+   "a": "Immanuel Kant",
+   "o": "Fundamentação da Metafísica dos Costumes (paráfrase)"
+  },
+  {
+   "id": 65,
+   "t": "Tudo o que é inteligente já foi pensado; é preciso apenas tentar pensá-lo de novo.",
+   "a": "Goethe",
+   "o": "Máximas e Reflexões"
+  },
+  {
+   "id": 66,
+   "t": "A coruja de Minerva só levanta voo ao anoitecer.",
+   "a": "Hegel",
+   "o": "Princípios da Filosofia do Direito, Prefácio"
+  },
+  {
+   "id": 67,
+   "t": "A vida oscila, como um pêndulo, entre a dor e o tédio.",
+   "a": "Arthur Schopenhauer",
+   "o": "O Mundo como Vontade e Representação (paráfrase)"
+  },
+  {
+   "id": 68,
+   "t": "A saúde não é tudo, mas sem ela tudo o mais é nada.",
+   "a": "Arthur Schopenhauer",
+   "o": "frase atribuída (Aforismos para a Sabedoria de Vida)"
+  },
+  {
+   "id": 69,
+   "t": "A vida só pode ser compreendida olhando-se para trás, mas precisa ser vivida olhando-se para a frente.",
+   "a": "Søren Kierkegaard",
+   "o": "Diários, 1843"
+  },
+  {
+   "id": 70,
+   "t": "A angústia é a vertigem da liberdade.",
+   "a": "Søren Kierkegaard",
+   "o": "O Conceito de Angústia"
+  },
+  {
+   "id": 71,
+   "t": "Quem tem um porquê para viver suporta quase qualquer como.",
+   "a": "Friedrich Nietzsche",
+   "o": "Crepúsculo dos Ídolos, Máximas 12"
+  },
+  {
+   "id": 72,
+   "t": "O que não me mata me fortalece.",
+   "a": "Friedrich Nietzsche",
+   "o": "Crepúsculo dos Ídolos, Máximas 8"
+  },
+  {
+   "id": 73,
+   "t": "Sem a música, a vida seria um erro.",
+   "a": "Friedrich Nietzsche",
+   "o": "Crepúsculo dos Ídolos, Máximas 33"
+  },
+  {
+   "id": 74,
+   "t": "Os filósofos apenas interpretaram o mundo de diversas maneiras; o que importa é transformá-lo.",
+   "a": "Karl Marx",
+   "o": "Teses sobre Feuerbach, XI"
+  },
+  {
+   "id": 75,
+   "t": "É melhor ser um Sócrates insatisfeito do que um tolo satisfeito.",
+   "a": "John Stuart Mill",
+   "o": "Utilitarismo, cap. 2"
+  },
+  {
+   "id": 76,
+   "t": "A maior parte dos homens leva uma vida de silencioso desespero.",
+   "a": "Henry David Thoreau",
+   "o": "Walden"
+  },
+  {
+   "id": 77,
+   "t": "Confia em ti mesmo: todo coração vibra com essa corda de aço.",
+   "a": "Ralph Waldo Emerson",
+   "o": "Autoconfiança"
+  },
+  {
+   "id": 78,
+   "t": "Os limites da minha linguagem significam os limites do meu mundo.",
+   "a": "Ludwig Wittgenstein",
+   "o": "Tractatus 5.6"
+  },
+  {
+   "id": 79,
+   "t": "Sobre aquilo de que não se pode falar, deve-se calar.",
+   "a": "Ludwig Wittgenstein",
+   "o": "Tractatus 7"
+  },
+  {
+   "id": 80,
+   "t": "A linguagem é a casa do ser.",
+   "a": "Martin Heidegger",
+   "o": "Carta sobre o Humanismo"
+  },
+  {
+   "id": 81,
+   "t": "Eu sou eu e a minha circunstância.",
+   "a": "José Ortega y Gasset",
+   "o": "Meditações do Quixote"
+  },
+  {
+   "id": 82,
+   "t": "O problema do mundo é que os tolos e fanáticos têm certeza de tudo, e os sábios, cheios de dúvidas.",
+   "a": "Bertrand Russell",
+   "o": "Conquista da Felicidade (paráfrase)"
+  },
+  {
+   "id": 83,
+   "t": "A existência precede a essência.",
+   "a": "Jean-Paul Sartre",
+   "o": "O existencialismo é um humanismo"
+  },
+  {
+   "id": 84,
+   "t": "O homem está condenado a ser livre.",
+   "a": "Jean-Paul Sartre",
+   "o": "O Ser e o Nada"
+  },
+  {
+   "id": 85,
+   "t": "Ninguém nasce mulher: torna-se mulher.",
+   "a": "Simone de Beauvoir",
+   "o": "O Segundo Sexo"
+  },
+  {
+   "id": 86,
+   "t": "É preciso imaginar Sísifo feliz.",
+   "a": "Albert Camus",
+   "o": "O Mito de Sísifo"
+  },
+  {
+   "id": 87,
+   "t": "No meio do inverno, aprendi finalmente que havia em mim um verão invencível.",
+   "a": "Albert Camus",
+   "o": "O Verão (Retorno a Tipasa)"
+  },
+  {
+   "id": 88,
+   "t": "Quando não podemos mudar uma situação, somos desafiados a mudar a nós mesmos.",
+   "a": "Viktor Frankl",
+   "o": "Em Busca de Sentido (paráfrase)"
+  },
+  {
+   "id": 89,
+   "t": "Quem olha para fora sonha; quem olha para dentro desperta.",
+   "a": "Carl Gustav Jung",
+   "o": "frase atribuída (carta, 1916)"
+  },
+  {
+   "id": 90,
+   "t": "Pessimismo da inteligência, otimismo da vontade.",
+   "a": "Antonio Gramsci",
+   "o": "Cadernos do Cárcere (a partir de Romain Rolland)"
+  },
+  {
+   "id": 91,
+   "t": "Ninguém educa ninguém, ninguém educa a si mesmo: os homens se educam entre si, mediatizados pelo mundo.",
+   "a": "Paulo Freire",
+   "o": "Pedagogia do Oprimido"
+  },
+  {
+   "id": 92,
+   "t": "Tudo vale a pena se a alma não é pequena.",
+   "a": "Fernando Pessoa",
+   "o": "Mensagem, Mar Português"
+  },
+  {
+   "id": 93,
+   "t": "Há mais coisas entre o céu e a terra do que sonha a nossa filosofia.",
+   "a": "William Shakespeare",
+   "o": "Hamlet, ato I, cena 5"
+  },
+  {
+   "id": 94,
+   "t": "Procuro um homem.",
+   "a": "Diógenes de Sinope",
+   "o": "frase atribuída (Diógenes Laércio)"
+  },
+  {
+   "id": 95,
+   "t": "Só sei que nada sei.",
+   "a": "Sócrates",
+   "o": "frase atribuída (paráfrase da Apologia 21d)"
+  },
+  {
+   "id": 96,
+   "t": "Onde estava o id, ali deve estar o ego.",
+   "a": "Sigmund Freud",
+   "o": "Novas Conferências Introdutórias, 31"
+  },
+  {
+   "id": 97,
+   "t": "O homem é a medida de todas as coisas.",
+   "a": "Protágoras",
+   "o": "Platão, Teeteto 152a"
+  },
+  {
+   "id": 98,
+   "t": "A coragem é saber o que se deve e o que não se deve temer.",
+   "a": "Platão",
+   "o": "Laques 199 (paráfrase)"
+  },
+  {
+   "id": 99,
+   "t": "A amizade é uma só alma habitando dois corpos.",
+   "a": "Aristóteles",
+   "o": "frase atribuída (Diógenes Laércio V, 20)"
+  },
+  {
+   "id": 100,
+   "t": "O caminho para cima e para baixo é um só e o mesmo.",
+   "a": "Heráclito",
+   "o": "fr. 60"
+  },
+  {
+   "id": 101,
+   "t": "Que ninguém, sendo jovem, hesite em filosofar, nem, sendo velho, se canse de filosofar.",
+   "a": "Epicuro",
+   "o": "Carta a Meneceu 122 (paráfrase)"
+  },
+  {
+   "id": 102,
+   "t": "Nada nasce do nada.",
+   "a": "Lucrécio",
+   "o": "Da Natureza das Coisas I, 150"
+  },
+  {
+   "id": 103,
+   "t": "Sou humano; nada do que é humano me é estranho.",
+   "a": "Terêncio",
+   "o": "Heautontimorumenos, v. 77"
+  },
+  {
+   "id": 104,
+   "t": "A vida, se sabes usá-la, é longa.",
+   "a": "Sêneca",
+   "o": "Sobre a brevidade da vida 2"
+  },
+  {
+   "id": 105,
+   "t": "A melhor vingança é não ser semelhante a quem te ofendeu.",
+   "a": "Marco Aurélio",
+   "o": "Meditações VI, 6"
+  },
+  {
+   "id": 106,
+   "t": "Não faças aos outros o que não queres que te façam.",
+   "a": "Confúcio",
+   "o": "Analectos XV, 24"
+  },
+  {
+   "id": 107,
+   "t": "A natureza só se comanda obedecendo-lhe.",
+   "a": "Francis Bacon",
+   "o": "Novum Organum I, 3"
+  },
+  {
+   "id": 108,
+   "t": "O homem não passa de um caniço, o mais fraco da natureza, mas é um caniço pensante.",
+   "a": "Blaise Pascal",
+   "o": "Pensamentos 347"
+  },
+  {
+   "id": 109,
+   "t": "O silêncio eterno desses espaços infinitos me apavora.",
+   "a": "Blaise Pascal",
+   "o": "Pensamentos 206"
+  },
+  {
+   "id": 110,
+   "t": "O sinal mais certo da sabedoria é uma alegria constante.",
+   "a": "Montaigne",
+   "o": "Ensaios I, 26 (paráfrase)"
+  },
+  {
+   "id": 111,
+   "t": "Vivemos no melhor dos mundos possíveis.",
+   "a": "Gottfried Leibniz",
+   "o": "Teodiceia (paráfrase)"
+  },
+  {
+   "id": 112,
+   "t": "Do tronco torto da humanidade jamais se fez algo inteiramente reto.",
+   "a": "Immanuel Kant",
+   "o": "Ideia de uma história universal, 6ª proposição"
+  },
+  {
+   "id": 113,
+   "t": "É preciso ter ainda caos dentro de si para dar à luz uma estrela dançante.",
+   "a": "Friedrich Nietzsche",
+   "o": "Assim falou Zaratustra, Prólogo 5"
+  },
+  {
+   "id": 114,
+   "t": "Torna-te quem tu és.",
+   "a": "Friedrich Nietzsche",
+   "o": "A Gaia Ciência 270"
+  },
+  {
+   "id": 115,
+   "t": "Quem luta com monstros deve cuidar para não se tornar também um monstro.",
+   "a": "Friedrich Nietzsche",
+   "o": "Além do Bem e do Mal 146"
+  },
+  {
+   "id": 116,
+   "t": "Às coisas mesmas!",
+   "a": "Edmund Husserl",
+   "o": "Investigações Lógicas"
+  },
+  {
+   "id": 117,
+   "t": "O inferno são os outros.",
+   "a": "Jean-Paul Sartre",
+   "o": "Entre Quatro Paredes"
+  },
+  {
+   "id": 118,
+   "t": "A própria luta em direção aos cumes basta para preencher um coração humano.",
+   "a": "Albert Camus",
+   "o": "O Mito de Sísifo"
+  },
+  {
+   "id": 119,
+   "t": "Viver é muito perigoso.",
+   "a": "Guimarães Rosa",
+   "o": "Grande Sertão: Veredas"
+  },
+  {
+   "id": 120,
+   "t": "É mais seguro ser temido do que amado.",
+   "a": "Nicolau Maquiavel",
+   "o": "O Príncipe XVII (paráfrase)"
+  },
+  {
+   "id": 121,
+   "t": "Ama, e faze o que quiseres.",
+   "a": "Santo Agostinho",
+   "o": "Comentário à Primeira Epístola de João 7, 8"
+  }
+ ]
+}
