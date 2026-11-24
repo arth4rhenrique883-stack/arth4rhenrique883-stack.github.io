@@ -1034,8 +1034,8 @@ async function questoes(av,mat,gs){document.body.classList.remove("bookmode");on
   const Q=[];
   for(const g of G)for(const id of g.ids)for(const c of P.cat){const bi=c.secs.findIndex(s=>s.id===id);if(bi<0)continue;
     const D=await need(c),s=D.sections[bi];if(!s)continue;
-    pages(s.blocks).forEach((p,pi)=>p.blocks.forEach(b=>{if(b.t==="mcq"||b.t==="prova")Q.push({b,esp:g.esp,cid:c.id,bi,pi:p.i,sid:s.id,aula:strip(s.title),pg:p.title,pa:QPA(b,s.id)})}))}
-  document.title="Questões · "+mat+" · Caro-Kann Med";
+    pages(s.blocks).forEach((p,pi)=>p.blocks.forEach(b=>{if(b.t==="mcq"||b.t==="prova")Q.push({b,esp:g.esp,cid:c.id,bi,pi,sid:s.id,aula:strip(s.title),pg:p.title,pa:QPA(b,s.id)})}))}
+  document.title="Questões · "+mat+" · xequemate med";
   const esps=[...new Set(G.map(g=>g.esp).filter(Boolean))];if(!esps.includes(QE))QE="";
   const draw=()=>{const L1=Q.filter(q=>!QE||q.esp===QE),L=L1.filter(q=>QF!=="pa"||q.pa),npa=L1.filter(q=>q.pa).length;
     let h=`<header class="head"><span class="kick">${esc(mat)} · ${esc(av)} · questões</span><h1>Questões</h1><p class="sub">${Q.length?`${Q.length} ${Q.length===1?"questão":"questões"} das apostilas desta matéria, com comentário. As de provas antigas levam o selo.`:"As questões desta matéria entram aqui junto com as apostilas."}</p>`;
