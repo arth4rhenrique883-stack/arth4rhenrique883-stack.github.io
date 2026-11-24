@@ -11,6 +11,8 @@ Não mexe em sw.js (trocar a versão à parte).
 """
 import re, sys, json, pathlib
 
+import base64
+XMRETO = base64.b64encode((pathlib.Path(__file__).parent / "xm-reto-completo.woff2").read_bytes()).decode()
 RAIZ = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else ".").resolve()
 P = RAIZ / "periodos"
 ALVOS = ["index.html"] + [f"p{i}.html" for i in range(1, 9)] + ["primeiro/index.html", "sexto/index.html", "oitavo/index.html"]
@@ -114,8 +116,10 @@ CSS2 = r"""
 .asmed{animation:none!important;will-change:auto!important}
 .xm-mini,.asmed .qw{animation:ck-pulso 2.4s ease-in-out infinite!important;will-change:transform;transform-origin:50% 55%}
 @keyframes ck-pulso{0%,39%{transform:scale(1)}43%{transform:scale(1.14)}49%,100%{transform:scale(1)}}}
+/* "Caro-Kann" um pouco menor que "Med", na mesma fonte (XM Reto completa) */
+.asmed .t .ck-a{font-size:.86em}
 /* nome maior e com letras que alternam verde/azul */
-html .brand .word .asmed{font-size:clamp(21px,6.3vw,28px)}
+html .brand .word .asmed{font-size:clamp(24px,7.4vw,32px)}
 .asmed .t .ck-l{transition:color 1s ease,text-shadow 1s ease}
 .asmed .t .ck-l.g{color:var(--ck-verde)!important;text-shadow:0 0 14px rgba(60,196,142,.2)}
 .asmed .t .ck-l.b{color:var(--ck-azul)!important;text-shadow:0 0 14px rgba(79,150,234,.2)}
@@ -256,8 +260,8 @@ JS2 = r"""
 var ts=document.querySelectorAll(".asmed .t");if(!ts.length)return;
 var SEQ=[[0,"C"],[1,"a"],[2,"r"],[3,"o"],[4,"-"],[5,"K"],[6,"a"],[7,"n"],[8,"n"]];
 ts.forEach(function(t){if(t.dataset.ckl)return;t.dataset.ckl="1";
- var h="";"Caro-Kann".split("").forEach(function(c,i){h+='<span class="ck-l'+(i===0?" g":i===5?" b":"")+'">'+c+"</span>"});
- h+=" <b>"+"Med".split("").map(function(c){return '<span class="ck-l">'+c+"</span>"}).join("")+"</b>";t.innerHTML=h});
+ var h='<span class="ck-a">';"Caro-Kann".split("").forEach(function(c,i){h+='<span class="ck-l'+(i===0?" g":i===5?" b":"")+'">'+c+"</span>"});
+ h+='</span> <b>'+"Med".split("").map(function(c){return '<span class="ck-l">'+c+"</span>"}).join("")+"</b>";t.innerHTML=h});
 if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;
 var G=[].slice.call(document.querySelectorAll(".asmed .t")).map(function(t){return [].slice.call(t.querySelectorAll(".ck-l"))});
 var N=12,v=0;
@@ -356,6 +360,8 @@ def patch(f):
     # 1. nome
     t = t.replace('<span class="t">Caro-Kann <b>Med</b></span>',
                   '<span class="t"><span class="ck-c">C</span>aro-<span class="ck-k">K</span>ann <b>Med</b></span>')
+    # 1a. fonte do nome: XM Reto com C O R N K e hífen no mesmo desenho
+    t = re.sub(r'(font-family:"XM Reto";[^}]*?base64,)[A-Za-z0-9+/=]+', lambda m: m.group(1) + XMRETO, t)
     # 1b. textos que citavam slides como origem do material
     for a, b in [
         ("Os slides de cada aula são a base. O que vem de fora", "O que vem de fora"),
