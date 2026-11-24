@@ -1615,9 +1615,12 @@ body.ini nav.pers a:nth-child(2){animation-delay:.04s}body.ini nav.pers a:nth-ch
 .ck-box li{position:relative;padding:3px 0 3px 16px;font:400 13.5px/1.55 Merriweather,Georgia,serif;color:#c6c6c6}
 .ck-box li::before{content:"";position:absolute;left:2px;top:.85em;width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,var(--ck-verde),var(--ck-azul))}
 .ck-box li b{color:#f0f0f0;font-family:Lato,system-ui,sans-serif;font-weight:700}
-.ck-box footer{margin:16px 22px 0;padding:14px 16px;border-radius:12px;background:linear-gradient(135deg,var(--ck-verde-s),var(--ck-azul-s));border:1px solid #232a2d;font:400 13.5px/1.55 Merriweather,Georgia,serif;color:#e6e6e6;text-align:center}
+.ck-box footer{display:block!important;margin:16px 22px 0;padding:14px 16px;border-radius:12px;background:linear-gradient(135deg,var(--ck-verde-s),var(--ck-azul-s));border:1px solid #232a2d;font:400 13.5px/1.55 Merriweather,Georgia,serif;color:#e6e6e6;text-align:center}
 .ck-box footer b{font-family:Lato,system-ui,sans-serif;display:inline!important}
 .ck-box footer small{display:block;margin-top:6px;color:var(--muted);font:400 11.5px/1.5 Lato,system-ui,sans-serif}
+.ck-acoes{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:14px;flex-wrap:wrap}.ck-acoes .ck-ok{margin:0}.ck-ct{min-height:44px;padding:0 22px;border-radius:999px;border:1px solid #2a3338;background:transparent;color:var(--muted);font:700 13px Lato,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:transform .15s,border-color .2s,color .2s}.ck-ct:hover{color:var(--fg);border-color:var(--ck-azul)}.ck-ct:active{transform:scale(.96)}
+.ck-rodape{display:flex;justify-content:center;margin-top:-6px}.ck-rodape .ck-ct{min-height:38px;border-color:transparent;letter-spacing:.1em;font-size:12px}
+.ck-toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 24px);transform:translate(-50%,12px);z-index:10002;max-width:min(92vw,360px);padding:12px 18px;border-radius:12px;border:1px solid #2a3338;background:#0e1214;color:#eee;font:600 13px/1.4 Lato,system-ui,sans-serif;text-align:center;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s}.ck-toast.on{opacity:1;transform:translate(-50%,0)}
 .ck-ok{display:block;margin:14px auto 0;min-height:44px;padding:0 30px;border-radius:999px;border:1px solid #FFBE0B;background:#030303;color:#E6E6EA;font:700 13px Lato,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:transform .15s,background .2s}
 .ck-ok:hover{background:rgba(255,190,11,.16)}.ck-ok:active{transform:scale(.96)}
 html.ck-trava,html.ck-trava body{overflow:hidden}
@@ -1707,18 +1710,25 @@ if(!matchMedia("(prefers-reduced-motion:reduce)").matches){
 addEventListener("pointerdown",function(e){var t=e.target;if(!t.closest||!t.closest("button,a,[role=button],[role=tab],[role=switch],.chip,.grade,.ck-card,summary"))return;
  var r=document.createElement("span");r.className="ck-rip";r.style.left=e.clientX+"px";r.style.top=e.clientY+"px";B.appendChild(r);
  setTimeout(function(){r.remove()},600)},{passive:true,capture:true});}
+/* contato: troque o e-mail aqui quando existir (vazio = "em breve") */
+var CK_EMAIL="";
+function aviso(m){var t=$(".ck-toast")||B.appendChild(Object.assign(document.createElement("div"),{className:"ck-toast",role:"status"}));t.textContent=m;t.classList.add("on");clearTimeout(aviso.t);aviso.t=setTimeout(function(){t.classList.remove("on")},3200)}
+function contato(){if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(CK_EMAIL)){aviso("E-mail de contato em breve.");return}
+ var per=(location.pathname.match(/p([1-8])\.html$/)||[])[1];
+ location.href="mailto:"+CK_EMAIL+"?subject="+encodeURIComponent("Caro-Kann Med · contato")+"&body="+encodeURIComponent("Escreva sua dúvida, sugestão ou reclamação aqui.\n\n---\nApp: Caro-Kann Med (ckp)"+(per?" · "+per+"º período":"")+"\n"+navigator.userAgent)}
+addEventListener("click",function(e){var c=e.target.closest&&e.target.closest("[data-contato]");if(c){e.preventDefault();contato()}});
 /* janela Sobre o app */
 var TXT={
  sub:"ckp · app dos períodos",
  blocos:[
  ["O que é","Aplicativo de estudo para o 1º ao 8º período de Medicina, baseado em resumos de alunos e na análise de relatos de provas antigas 👀."],
- ["O que tem",["<b>Apostilas</b>: aulas em páginas curtas, com sumário, resumo, “O que aprendemos” e fontes com link.","<b>Flashcards</b>: baralhos por assunto; avalie como Errei, Difícil, Bom ou Fácil e o app programa as revisões.","<b>Questões para treinar</b>: casos e perguntas no modelo das provas antigas, com resposta comentada e seu desempenho salvo.","<b>Destaques</b>: grife trechos, anote e transforme em cartão de revisão.","<b>Temas</b> claro e escuro, <b>impressão</b> (Ctrl+P) e uso <b>sem internet</b> depois de aberto uma vez.","<b>Conta opcional</b> para sincronizar entre aparelhos."]]
+ ["O que tem",["<b>Apostilas</b>: aulas com sumário, resumo, “O que aprendemos” e fontes com link.","<b>Flashcards</b>: baralhos por assunto; avalie como Errei, Difícil, Bom ou Fácil e o app programa as revisões.","<b>Questões para treinar</b>: casos e perguntas no modelo das provas antigas, com resposta comentada e seu desempenho salvo.","<b>Destaques</b>: grife trechos, anote e transforme em cartão de revisão.","<b>Temas</b> claro e escuro, <b>impressão</b> (Ctrl+P) e uso <b>sem internet</b> depois de aberto uma vez."]]
  ]};
 function monta(){
  var bk=document.createElement("div");bk.className="ck-bk";bk.setAttribute("role","dialog");bk.setAttribute("aria-modal","true");bk.setAttribute("aria-labelledby","ck-ttl");
  var h='<div class="ck-box"><button type="button" class="ck-x" aria-label="Fechar">×</button><header><h2 id="ck-ttl"><span class="c">C</span>aro-<span class="k">K</span>ann Med</h2><p class="ck-sub">'+TXT.sub+'</p></header>';
  TXT.blocos.forEach(function(b){h+="<section><h3>"+b[0]+"</h3>"+(typeof b[1]==="string"?"<p>"+b[1]+"</p>":"<ul>"+b[1].map(function(x){return "<li>"+x+"</li>"}).join("")+"</ul>")+"</section>"});
- h+='<footer>Desenvolvido por um <b>acadêmico da FCMS-JF Suprema</b>.<small>Material de apoio ao estudo; não substitui aulas, livros-texto nem diretrizes. Versão de teste (BETA).</small></footer><button type="button" class="ck-ok">Entendi</button></div>';
+ h+='<footer>Desenvolvido por um <b>acadêmico da FCMS-JF Suprema</b>.<small>Material de apoio ao estudo; não substitui aulas, livros-texto nem diretrizes. Versão de teste (BETA).</small></footer><div class="ck-acoes"><button type="button" class="ck-ct" data-contato>Contato</button><button type="button" class="ck-ok">Entendi</button></div></div>';
  bk.innerHTML=h;B.appendChild(bk);return bk}
 var bk=null,voltaA=null;
 function abre(){if(!bk)bk=monta();voltaA=document.activeElement;bk.classList.add("on");R.classList.add("ck-trava");var x=$(".ck-x",bk);x&&x.focus();bk.scrollTop=0;$(".ck-box",bk).scrollTop=0}
@@ -1733,7 +1743,7 @@ addEventListener("keydown",function(e){
 document.querySelectorAll(".xm-canto,.asmed").forEach(function(g){g.setAttribute("role","button");g.tabIndex=0;g.setAttribute("aria-label","Sobre o Caro-Kann Med: como funciona e o que o app tem")});
 /* escolha de ciclo (início) */
 var cic=$(".ck-ciclos");
-if(cic){
+if(cic){var so=$(".soon");if(!$(".ck-rodape")){var rp=document.createElement("div");rp.className="ck-rodape";rp.innerHTML='<button type="button" class="ck-ct" data-contato>Contato</button>';(so||cic).after(rp)}
  var H=["#ciclos","#basico","#clinico"];
  function aplica(){var h=location.hash,i=H.indexOf(h);
   if(i<0){B.removeAttribute("data-ciclo");return}
