@@ -14,7 +14,7 @@
   img.logo { width: 72px; height: 72px; border-radius: 18px; display: block; margin-bottom: 14px; }
   h1 { font-weight: 500; margin: 0 0 6px; }
   .sub { color: #9a978f; margin: 0 0 24px; }
-  button, a.btn { display: inline-block; font: inherit; font-weight: 600; background: #F0B429; color: #111; border: 0;
+  button, a.btn { display: inline-block; font: inherit; font-weight: 600; background: #FFBE0B; color: #111; border: 0;
     border-radius: 99px; padding: 12px 24px; text-decoration: none; cursor: pointer; margin: 0 8px 10px 0; }
   a.btn.sec { background: transparent; color: #e8e6e1; border: 1px solid #444; }
   button[hidden] { display: none; }
@@ -47,5 +47,16 @@ b.onclick = async () => { if (!ev) return; ev.prompt(); await ev.userChoice; ev 
 addEventListener("appinstalled", () => { b.hidden = true; document.getElementById("ok").hidden = false; });
 if ("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js").catch(() => {});
 </script>
+<style data-ck109>
+/* v109 (24/11/2026): preto mais profundo no escuro e amarelo mais intenso nos dois temas.
+   Escuro: amarelo #FFBE0B. Claro (o tema claro é o escuro com filtro invert+hue-rotate): amarelo pré-compensado #C37800, que o filtro mostra como âmbar vivo. */
+html:root:not([data-tema=claro]){--bg:#000!important;--surface:#020202!important;--surface-2:#050505!important;--raise:#020202!important;--line:#131313!important;--line-2:#202020!important;--upd-bg:#010101!important;--muted:#ADADAD}
+html:not([data-tema=claro]),html:not([data-tema=claro]) body{background:#000!important;background-color:#000!important;background-image:none!important}
+html:not([data-tema=claro]) body::after{background:radial-gradient(90% 40% at 50% -10%,rgba(28,70,130,.05),transparent 70%)!important}
+html:root{--xm-acc:#FFBE0B;--xm-acc-ink:#FFD84D;--amber:#FFBE0B;--pro-amb:#FFBE0B}
+html[data-tema=claro]:root{--xm-acc:#C37800;--xm-acc-ink:#BE7300;--amber:#C37800;--pro-amb:#C37800}
+html[data-tema=claro] button,html[data-tema=claro] a.btn{display: inline-block; font: inherit; font-weight: 600; background: #C37800; color: #111; border: 0;
+    border-radius: 99px; padding: 12px 24px; text-decoration: none; cursor: pointer; margin: 0 8px 10px 0;}
+</style>
 </body>
 </html>
