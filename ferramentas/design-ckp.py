@@ -102,7 +102,10 @@ body.ini nav.pers a:nth-child(2){animation-delay:.04s}body.ini nav.pers a:nth-ch
 .ck-ok{display:block;margin:14px auto 0;min-height:44px;padding:0 30px;border-radius:999px;border:1px solid #FFBE0B;background:#030303;color:#E6E6EA;font:700 13px Lato,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:transform .15s,background .2s}
 .ck-ok:hover{background:rgba(255,190,11,.16)}.ck-ok:active{transform:scale(.96)}
 html.ck-trava,html.ck-trava body{overflow:hidden}
-@media print{.ck-bk,.ck-aura,.ck-rip{display:none!important}}
+@media print{.ck-bk,.ck-aura,.ck-rip,.ck-toast,.ck-rodape,.ck-ciclos,.ck-volta,.ck-outro{display:none!important}
+/* sem isto as páginas criadas na hora de imprimir saem invisíveis (animação começa em opacidade 0) */
+*,*::before,*::after{animation:none!important;transition:none!important}
+html:not(#x),html:not(#x) body:not(#x),html:not(#x) .wrap:not(#x),html:not(#x) #app:not(#x){background:#fff!important;background-color:#fff!important;background-image:none!important}}
 """
 
 CSS2 = r"""
@@ -203,7 +206,7 @@ addEventListener("click",function(e){var c=e.target.closest&&e.target.closest("[
 var TXT={
  sub:"ckp · app dos períodos",
  blocos:[
- ["O que é","Aplicativo de estudo para o 1º ao 8º período de Medicina, baseado em resumos de alunos e na análise de relatos de provas antigas 👀."],
+ ["O que é","Aplicativo de estudo para o 1º ao 8º período de Medicina, baseado em resumos de alunos e na análise de relatos de provas antigas 👀. O conteúdo traz atualizações e referências atuais, com diretrizes e artigos recentes sempre com fonte em link."],
  ["O que tem",["<b>Apostilas</b>: aulas com sumário, resumo, “O que aprendemos” e fontes com link.","<b>Flashcards</b>: baralhos por assunto; avalie como Errei, Difícil, Bom ou Fácil e o app programa as revisões.","<b>Questões para treinar</b>: casos e perguntas no modelo das provas antigas, com resposta comentada e seu desempenho salvo.","<b>Destaques</b>: grife trechos, anote e transforme em cartão de revisão.","<b>Temas</b> claro e escuro, <b>impressão</b> (Ctrl+P) e uso <b>sem internet</b> depois de aberto uma vez."]]
  ]};
 function monta(){
