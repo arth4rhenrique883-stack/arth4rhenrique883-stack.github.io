@@ -713,7 +713,7 @@ body.xm-rolando .nv-beta{opacity:0!important;pointer-events:none}
   </footer>
 </div>
 
-<script>const PER={"id":"p4","site":"","aulas":[],"grade":[["Imunologia",[["",[]]]],["Método clínico I",[["",[]]]],["Microbiologia",[["",[]]]],["Parasitologia",[["",[]]]],["Patologia",[["",[]]]]],"cards":[],"provas":[],"datas":{},"soon":"As apostilas do 4º período entram aqui quando chegarem os slides."};</script>
+<script>const PER={"id":"p4","site":"","aulas":[],"grade":[["Imunologia",[["",[]]]],["Método clínico I",[["",[]]]],["Microbiologia",[["",[]]]],["Parasitologia",[["",[]]]],["Patologia",[["",[]]]]],"cards":[],"provas":[],"datas":{},"soon":"As apostilas do 4º período entram aqui em breve."};</script>
 <script>
 const APOSTILA="bloco1.html";
 const CHAPTERS={};
@@ -1301,7 +1301,7 @@ nav.pers.xm-abre a.ck-fora{display:none!important}
 nav.pers.xm-abre + .ck-outro{display:flex!important}
 .ck-outro:hover{color:var(--fg);border-color:var(--ck-verde)}.ck-outro:active{transform:scale(.97)}
 html[data-tema=claro] .ck-aura{opacity:.4}
-.ck-outro,.ck-volta,.ck-ok,.ck-card :is(.ck-t,.ck-s,.ck-d span),.ck-box :is(.ck-sub,footer b,footer small,li b){font-family:Lato,system-ui,sans-serif!important}
+.tr-row>span,.tr-meta span,.tr-stats :is(b,span),.tr-cob,.tr-head h2,.tr-res .big,.ck-outro,.ck-volta,.ck-ok,.ck-card :is(.ck-t,.ck-s,.ck-d span),.ck-box :is(.ck-sub,footer b,footer small,li b){font-family:Lato,system-ui,sans-serif!important}
 /* entrada suave */
 @media (prefers-reduced-motion:no-preference){
 .ck-card,body.ini nav.pers a{animation:ck-in .5s cubic-bezier(.2,.7,.2,1) both}
@@ -1333,12 +1333,81 @@ body.ini nav.pers a:nth-child(2){animation-delay:.04s}body.ini nav.pers a:nth-ch
 .ck-box li::before{content:"";position:absolute;left:2px;top:.85em;width:6px;height:6px;border-radius:50%;background:linear-gradient(135deg,var(--ck-verde),var(--ck-azul))}
 .ck-box li b{color:#f0f0f0;font-family:Lato,system-ui,sans-serif;font-weight:700}
 .ck-box footer{margin:16px 22px 0;padding:14px 16px;border-radius:12px;background:linear-gradient(135deg,var(--ck-verde-s),var(--ck-azul-s));border:1px solid #232a2d;font:400 13.5px/1.55 Merriweather,Georgia,serif;color:#e6e6e6;text-align:center}
-.ck-box footer b{font-family:Lato,system-ui,sans-serif}
+.ck-box footer b{font-family:Lato,system-ui,sans-serif;display:inline!important}
 .ck-box footer small{display:block;margin-top:6px;color:var(--muted);font:400 11.5px/1.5 Lato,system-ui,sans-serif}
 .ck-ok{display:block;margin:14px auto 0;min-height:44px;padding:0 30px;border-radius:999px;border:1px solid #FFBE0B;background:#030303;color:#E6E6EA;font:700 13px Lato,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:transform .15s,background .2s}
 .ck-ok:hover{background:rgba(255,190,11,.16)}.ck-ok:active{transform:scale(.96)}
 html.ck-trava,html.ck-trava body{overflow:hidden}
 @media print{.ck-bk,.ck-aura,.ck-rip{display:none!important}}
+
+/* nome maior e com letras que alternam verde/azul */
+html .brand .word .asmed{font-size:clamp(21px,6.3vw,28px)}
+.asmed .t .ck-l{transition:color .55s ease,text-shadow .55s ease}
+.asmed .t .ck-l.g{color:var(--ck-verde)!important;text-shadow:0 0 14px rgba(60,196,142,.38)}
+.asmed .t .ck-l.b{color:var(--ck-azul)!important;text-shadow:0 0 14px rgba(79,150,234,.38)}
+/* acabamento geral */
+::selection{background:rgba(79,150,234,.32);color:inherit}
+html{scroll-behavior:smooth;scrollbar-color:#2a3338 transparent}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{-webkit-tap-highlight-color:transparent;text-rendering:optimizeLegibility}
+:focus-visible{outline-color:var(--ck-azul)!important}
+nav.tabs a,.chip,button,a.back,.grade{touch-action:manipulation}
+nav.tabs a{position:relative;transition:color .2s,border-color .2s,background .2s,transform .15s}
+nav.tabs a:active{transform:scale(.96)}
+nav.tabs a[aria-current]::after{content:"";position:absolute;left:22%;right:22%;bottom:3px;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--ck-verde),var(--ck-azul))}
+@media (prefers-reduced-motion:no-preference){nav.tabs a[aria-current]::after{animation:ck-tab .35s cubic-bezier(.2,.8,.2,1) both}@keyframes ck-tab{from{transform:scaleX(0)}}}
+.stat,.card,.item,.mat,.bitem,.ap-card{transition:border-color .2s,box-shadow .25s,transform .2s}
+.ck-outro{font-family:Lato,system-ui,sans-serif}
+/* questões para treinar */
+#v-treinar{gap:14px}
+.tr-head{display:flex;flex-direction:column;gap:6px;padding:4px 2px 0}
+.tr-head h2{margin:0;font:900 20px/1.2 Lato,system-ui,sans-serif;letter-spacing:.04em;color:#f2f2f2}
+.tr-head p{margin:0;font:400 13px/1.55 Merriweather,Georgia,serif;color:var(--muted)}
+.tr-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.tr-stats div{padding:10px 8px;border:1px solid #1d2326;border-radius:12px;background:#0a0c0d;text-align:center}
+.tr-stats b{display:block;font:900 20px/1.1 Lato,system-ui,sans-serif;color:#f1f1f1;font-variant-numeric:tabular-nums}
+.tr-stats span{display:block;margin-top:3px;font:500 10.5px/1.2 Lato,system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.tr-stats div:nth-child(1) b{color:var(--ck-azul)}.tr-stats div:nth-child(3) b{color:var(--ck-verde)}
+.tr-fil{display:flex;flex-direction:column;gap:8px}
+.tr-row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.tr-row>span{flex:0 0 100%;font:700 10.5px/1 Lato,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.tr-chip{min-height:36px;padding:0 13px;border-radius:999px;border:1px solid #232a2d;background:#0a0c0d;color:var(--muted);font:600 12.5px Lato,system-ui,sans-serif;cursor:pointer;transition:border-color .2s,color .2s,background .2s,transform .12s}
+.tr-chip:hover{color:var(--fg);border-color:#3a464b}.tr-chip:active{transform:scale(.95)}
+.tr-chip[aria-pressed=true]{color:#fff;border-color:var(--ck-azul);background:var(--ck-azul-s)}
+.tr-go{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:14px;border:1px solid var(--ck-verde);background:linear-gradient(135deg,var(--ck-verde-s),var(--ck-azul-s));color:#f4f4f4;font:700 14px Lato,system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:transform .15s,box-shadow .25s,opacity .2s}
+.tr-go:hover{box-shadow:0 10px 26px -14px var(--ck-verde)}.tr-go:active{transform:scale(.98)}.tr-go[disabled]{opacity:.4;cursor:not-allowed;box-shadow:none}
+.tr-cob{margin:0;font:400 12px/1.5 Lato,system-ui,sans-serif;color:var(--dim);text-align:center}
+.tr-vazio{padding:22px 16px;border:1px dashed #2a3338;border-radius:14px;text-align:center;font:400 13.5px/1.6 Merriweather,Georgia,serif;color:var(--muted)}
+.tr-top{display:flex;align-items:center;gap:12px}
+.tr-top .n{font:700 12px Lato,system-ui,sans-serif;letter-spacing:.08em;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.tr-bar{flex:1;height:5px;border-radius:5px;background:#161b1d;overflow:hidden}
+.tr-bar i{display:block;height:100%;width:0;border-radius:5px;background:linear-gradient(90deg,var(--ck-verde),var(--ck-azul));transition:width .4s cubic-bezier(.2,.7,.2,1)}
+.tr-sair{min-height:34px;padding:0 12px;border-radius:999px;border:1px solid #232a2d;background:transparent;color:var(--muted);font:600 12px Lato,system-ui,sans-serif;cursor:pointer}
+.tr-card{padding:18px 16px;border:1px solid #1d2326;border-radius:16px;background:linear-gradient(180deg,#0c0f11,#080a0b);display:flex;flex-direction:column;gap:12px;box-shadow:0 12px 30px -18px #000}
+.tr-meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font:600 11px Lato,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.tr-tag{padding:3px 9px;border-radius:999px;border:1px solid #FFBE0B;color:#FFBE0B;font-weight:700}
+.tr-tag.t2{border-color:var(--ck-azul);color:var(--ck-azul)}
+.tr-q{margin:0;font:400 15.5px/1.7 Merriweather,Georgia,serif;color:#ececec}
+.tr-ask{margin:0;font:700 15px/1.6 Merriweather,Georgia,serif;color:#f6f6f6}
+.tr-show{min-height:46px;border-radius:12px;border:1px solid #2a3338;background:#0f1315;color:#e6e6e6;font:700 13px Lato,system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:border-color .2s,transform .12s}
+.tr-show:hover{border-color:var(--ck-azul)}.tr-show:active{transform:scale(.98)}
+.tr-ans{padding:12px 14px;border-left:3px solid var(--ck-azul);border-radius:0 12px 12px 0;background:rgba(79,150,234,.07)}
+.tr-ans p{margin:0 0 8px;font:400 14px/1.7 Merriweather,Georgia,serif;color:#d6d6d6}.tr-ans p:last-child{margin:0}
+.tr-rate{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tr-rate button{min-height:50px;border-radius:12px;border:1px solid #2a3338;background:#0f1315;color:#f0f0f0;font:700 14px Lato,system-ui,sans-serif;letter-spacing:.06em;cursor:pointer;transition:transform .12s,border-color .2s,background .2s}
+.tr-rate button:active{transform:scale(.97)}
+.tr-rate .ok{border-color:var(--ck-verde)}.tr-rate .ok:hover{background:var(--ck-verde-s)}
+.tr-rate .no{border-color:#c2414a}.tr-rate .no:hover{background:rgba(194,65,74,.15)}
+.tr-res{text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;padding:22px 16px}
+.tr-res .big{font:900 44px/1 Lato,system-ui,sans-serif;background:linear-gradient(90deg,var(--ck-verde),var(--ck-azul));-webkit-background-clip:text;background-clip:text;color:transparent!important}
+.tr-res p{margin:0;font:400 13.5px/1.6 Merriweather,Georgia,serif;color:var(--muted)}
+.tr-erros{width:100%;text-align:left;margin:4px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+.tr-erros li{padding:9px 12px;border:1px solid #2a2024;border-radius:10px;background:rgba(194,65,74,.07);font:400 12.5px/1.5 Merriweather,Georgia,serif;color:#cfcfcf}
+.tr-btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;width:100%}
+.tr-btns .tr-go{flex:1 1 150px}
+@media (prefers-reduced-motion:no-preference){.tr-card,.tr-res{animation:ck-in .35s cubic-bezier(.2,.7,.2,1) both}}
+@media (max-width:520px){.tr-lg{display:none}}
+nav.tabs{flex-wrap:nowrap}nav.tabs a{white-space:nowrap}
 </style><script data-ckp>
 (function(){
 var R=document.documentElement,B=document.body;
@@ -1354,20 +1423,14 @@ addEventListener("pointerdown",function(e){var t=e.target;if(!t.closest||!t.clos
 var TXT={
  sub:"ckp · app dos períodos",
  blocos:[
- ["O que é","Aplicativo de estudo para o 1º ao 8º período de Medicina. A base são os slides das aulas, reescritos como apostila em texto de livro-texto, com complementos de fontes atuais sempre separados do conteúdo do professor."],
- ["Como funciona",["<b>1.</b> Toque em Iniciar, escolha o ciclo (básico, 1º ao 5º; clínico, 6º ao 8º) e depois o período.","<b>2.</b> Em cada período há duas abas: <b>Apostilas</b> e <b>Flashcards</b>.","<b>3.</b> As aulas são organizadas por prova (<b>A1</b> e <b>A2</b>) e, onde existir, por <b>TO</b> (técnica operatória).","<b>4.</b> Pelo nome ou pela rainha no canto você volta a esta janela."]],
- ["Apostilas",["Cada aula vira páginas curtas, com <b>sumário</b>, resumo e a seção <b>“O que aprendemos”</b>.","<b>Fontes e artigos</b> com link no fim da aula; atualizações e divergências com diretrizes aparecem em quadros destacados.","<b>Slide ao lado</b>: nos períodos em que os slides são exibidos (6º e 8º), mostra o slide de origem de cada trecho.","Tamanho da letra (<b>A−</b> e <b>A+</b>), serifa ligada ou desligada e <b>Marcar a aula como lida</b>.","<b>Revisão rápida</b> da aula e botão <b>Continuar</b> para retomar de onde parou."]],
- ["Questões comentadas",["Perguntas dentro da aula, com <b>Mostrar resposta</b> e comentário da correta e das erradas.","Questões baseadas em provas antigas levam o selo <b>já caiu</b>."]],
- ["Flashcards",["Baralhos por assunto, prova (A1, A2, TO) ou todos de uma vez.","Avalie cada cartão como <b>Errei, Difícil, Bom ou Fácil</b>; o app programa as revisões.","Painel com <b>sequência</b> de dias estudados e aulas <b>lidas</b>."]],
- ["Seus destaques",["<b>Grife</b> trechos da apostila, adicione notas e use o botão <b>Destaques</b> para ver tudo.","Cada destaque pode virar cartão de revisão."]],
- ["No dia a dia",["<b>Tema claro e escuro</b> (sol/lua no canto) e <b>Cores quentes</b> para o claro virar papel creme.","<b>Imprimir</b> (Ctrl+P) gera a aula inteira em A4.","Suporte a <b>caneta</b> em tablet: a palma da mão é ignorada enquanto você escreve.","Funciona <b>sem internet</b> depois de aberto uma vez no aparelho."]],
- ["Conta (opcional)","O progresso fica salvo neste aparelho. Se quiser, entre pelo ícone de conta para sincronizar entre celular, tablet e computador. Sem conta, tudo continua funcionando."]
+ ["O que é","Aplicativo de estudo para o 1º ao 8º período de Medicina, baseado em resumos de alunos e na análise de relatos de provas antigas 👀."],
+ ["O que tem",["<b>Apostilas</b>: aulas em páginas curtas, com sumário, resumo, “O que aprendemos” e fontes com link.","<b>Flashcards</b>: baralhos por assunto; avalie como Errei, Difícil, Bom ou Fácil e o app programa as revisões.","<b>Questões para treinar</b>: casos e perguntas no modelo das provas antigas, com resposta comentada e seu desempenho salvo.","<b>Destaques</b>: grife trechos, anote e transforme em cartão de revisão.","<b>Temas</b> claro e escuro, <b>impressão</b> (Ctrl+P) e uso <b>sem internet</b> depois de aberto uma vez.","<b>Conta opcional</b> para sincronizar entre aparelhos."]]
  ]};
 function monta(){
  var bk=document.createElement("div");bk.className="ck-bk";bk.setAttribute("role","dialog");bk.setAttribute("aria-modal","true");bk.setAttribute("aria-labelledby","ck-ttl");
  var h='<div class="ck-box"><button type="button" class="ck-x" aria-label="Fechar">×</button><header><h2 id="ck-ttl"><span class="c">C</span>aro-<span class="k">K</span>ann Med</h2><p class="ck-sub">'+TXT.sub+'</p></header>';
  TXT.blocos.forEach(function(b){h+="<section><h3>"+b[0]+"</h3>"+(typeof b[1]==="string"?"<p>"+b[1]+"</p>":"<ul>"+b[1].map(function(x){return "<li>"+x+"</li>"}).join("")+"</ul>")+"</section>"});
- h+='<footer>Desenvolvido por um <b>acadêmico da FCMS-JF Suprema</b> (Faculdade de Ciências Médicas e da Saúde de Juiz de Fora), para estudar melhor com os colegas.<small>Material de apoio ao estudo. Não substitui as aulas, os livros-texto nem as diretrizes vigentes. Versão de teste (BETA).</small></footer><button type="button" class="ck-ok">Entendi</button></div>';
+ h+='<footer>Desenvolvido por um <b>acadêmico da FCMS-JF Suprema</b>.<small>Material de apoio ao estudo; não substitui aulas, livros-texto nem diretrizes. Versão de teste (BETA).</small></footer><button type="button" class="ck-ok">Entendi</button></div>';
  bk.innerHTML=h;B.appendChild(bk);return bk}
 var bk=null,voltaA=null;
 function abre(){if(!bk)bk=monta();voltaA=document.activeElement;bk.classList.add("on");R.classList.add("ck-trava");var x=$(".ck-x",bk);x&&x.focus();bk.scrollTop=0;$(".ck-box",bk).scrollTop=0}
@@ -1399,6 +1462,101 @@ var nav=$("nav.pers"),m=/\/p([1-8])\.html$/.exec(location.pathname);
 if(nav&&m){var n=+m[1],b=n<=5;
  nav.querySelectorAll("a[data-per]").forEach(function(a){var k=+a.dataset.per.slice(1);if((k<=5)!==b)a.classList.add("ck-fora")});
  if(!$(".ck-outro")){var l=document.createElement("a");l.className="ck-outro";l.href="index.html#ciclos";l.textContent="Trocar de ciclo";nav.after(l)}}
+})();
+</script><script data-ckp2>
+/* nome: letras trocando entre verde e azul até o nome inteiro ficar verde ou azul, e recomeça */
+(function(){
+var ts=document.querySelectorAll(".asmed .t");if(!ts.length)return;
+var SEQ=[[0,"C"],[1,"a"],[2,"r"],[3,"o"],[4,"-"],[5,"K"],[6,"a"],[7,"n"],[8,"n"]];
+ts.forEach(function(t){if(t.dataset.ckl)return;t.dataset.ckl="1";
+ var h="";"Caro-Kann".split("").forEach(function(c,i){h+='<span class="ck-l'+(i===0?" g":i===5?" b":"")+'">'+c+"</span>"});
+ h+=" <b>"+"Med".split("").map(function(c){return '<span class="ck-l">'+c+"</span>"}).join("")+"</b>";t.innerHTML=h});
+if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;
+var G=[].slice.call(document.querySelectorAll(".asmed .t")).map(function(t){return [].slice.call(t.querySelectorAll(".ck-l"))});
+var N=12,v=0;
+function set(i,c){G.forEach(function(g){var e=g[i];e.classList.remove("g","b");if(c)e.classList.add(c)})}
+function rnd(n){return Math.floor(Math.random()*n)}
+function repouso(){for(var i=0;i<N;i++)set(i,i===0?"g":i===5?"b":"")}
+function cor(i){var e=G[0][i];return e.classList.contains("g")?"g":e.classList.contains("b")?"b":""}
+function espera(f,ms){setTimeout(function(){if(document.hidden){espera(f,1500);return}f()},ms)}
+function mistura(k){if(k>=16){converge(v%2?"b":"g");return}
+ for(var j=0;j<2;j++)set(rnd(N),Math.random()<.5?"g":"b");espera(function(){mistura(k+1)},360)}
+function converge(w){var f=[];for(var i=0;i<N;i++)if(cor(i)!==w)f.push(i);
+ if(!f.length){espera(function(){repouso();v++;espera(ciclo,3200)},3000);return}
+ set(f[rnd(f.length)],w);espera(function(){converge(w)},280)}
+function ciclo(){mistura(0)}
+repouso();espera(ciclo,3200);
+})();
+
+/* questões para treinar */
+(function(){
+var tabs=document.querySelector("nav.tabs"),vc=document.getElementById("v-cards");
+if(!tabs||!vc||typeof PER==="undefined")return;
+var ARQ=[];
+var a=document.createElement("a");a.href="#treinar";a.dataset.view="treinar";a.innerHTML="Questões<span class=\"tr-lg\"> para treinar</span>";a.setAttribute("aria-label","Questões para treinar");tabs.appendChild(a);
+var V=document.createElement("div");V.className="view";V.id="v-treinar";V.hidden=true;V.setAttribute("aria-label","Questões para treinar");vc.after(V);
+var KEY="medaj-"+PER.id+"-treino",H={};try{H=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){}
+function grava(){try{localStorage.setItem(KEY,JSON.stringify(H))}catch(e){}}
+var ITENS=null,CARREGA=null,F={g:"",d:"",t:""},S=null;
+function esc(x){return String(x==null?"":x)}
+function strip(x){return String(x||"").replace(/<[^>]+>/g," ").replace(/\s+/g," ").trim()}
+function carrega(){if(ITENS)return Promise.resolve();if(CARREGA)return CARREGA;
+ CARREGA=Promise.all(ARQ.map(function(u){return new Promise(function(ok){var s=document.createElement("script");s.src=u;s.onload=ok;s.onerror=ok;document.head.appendChild(s)})})).then(coleta);return CARREGA}
+function coleta(){var meta={};(PER.aulas||[]).forEach(function(x){meta[x.id]=x});var out=[],DS=window.__DS||{};
+ Object.keys(DS).forEach(function(k){var d=DS[k];if(!d||!d.sections)return;
+  d.sections.forEach(function(sec){var m=meta[sec.id]||{};
+   var disc=m.disc||sec.esp||strip(sec.title).split("·")[0].replace(/^\d+\.\s*/,"").trim();
+   var gr=(m.mat==="Técnica operatória"||/^ci-to/.test(sec.id))?"TO":(m.av||sec.av||"");
+   var ja=/^pa\d/.test(sec.id);
+   (sec.blocks||[]).forEach(function(b,bi){
+    if(b.t==="prova")out.push({id:sec.id+":"+bi,k:"p",g:gr,d:disc,aula:strip(sec.title),ja:true,src:b.src,q:b.stem,ask:b.ask,a:(b.reveal||[]).map(function(x){return "<p>"+x+"</p>"}).join("")});
+    else if(b.t==="q")(b.v||[]).forEach(function(q,ii){out.push({id:sec.id+":"+bi+":"+ii,k:"q",g:gr,d:disc,aula:strip(sec.title),ja:ja,q:q.q,a:"<p>"+q.a+"</p>"})});
+    else if(b.t==="lance")out.push({id:sec.id+":"+bi,k:"q",g:gr,d:disc,aula:strip(sec.title),ja:ja,q:b.q,a:"<p>"+b.a+"</p>"})})})});
+ ITENS=out}
+function pool(){return (ITENS||[]).filter(function(i){return (!F.g||i.g===F.g)&&(!F.d||i.d===F.d)&&(!F.t||(F.t==="p"?i.k==="p":i.k==="q"))})}
+function opts(campo,filtrarPor){var m={};(ITENS||[]).forEach(function(i){if(i[campo])m[i[campo]]=(m[i[campo]]||0)+1});return Object.keys(m).sort()}
+function chips(rot,campo,lista,fmt){return '<div class="tr-row"><span>'+rot+'</span><button type="button" class="tr-chip" data-f="'+campo+'" data-v="" aria-pressed="'+(F[campo]===""?"true":"false")+'">Todas</button>'+lista.map(function(x){return '<button type="button" class="tr-chip" data-f="'+campo+'" data-v="'+x[0]+'" aria-pressed="'+(F[campo]===x[0]?"true":"false")+'">'+x[1]+'</button>'}).join("")+"</div>"}
+function resumo(){var v=0,ac=0,tot=ITENS.length;ITENS.forEach(function(i){var h=H[i.id];if(h){v++;if(h[0])ac++}});return {tot:tot,v:v,ac:ac}}
+function home(){
+ if(!ITENS){V.innerHTML='<p class="tr-vazio">Carregando as questões…</p>';return}
+ if(!ITENS.length){V.innerHTML='<div class="tr-head"><h2>Questões para treinar</h2></div><p class="tr-vazio">Este período ainda não tem questões. Elas aparecem aqui assim que as apostilas chegarem.</p>';return}
+ var r=resumo(),pl=pool(),np=ITENS.filter(function(i){return i.k==="p"}).length;
+ var gs=opts("g").map(function(x){return [x,x==="TO"?"TO":x]}),ds=opts("d").map(function(x){return [x,x]});
+ var h='<div class="tr-head"><h2>Questões para treinar</h2><p>Casos e perguntas no modelo das provas antigas. Responda de cabeça, confira a resposta comentada e diga se acertou.</p></div>';
+ h+='<div class="tr-stats"><div><b>'+r.tot+'</b><span>questões</span></div><div><b>'+r.v+'</b><span>já treinadas</span></div><div><b>'+(r.v?Math.round(r.ac*100/r.v)+"%":"–")+'</b><span>acerto</span></div></div>';
+ h+='<div class="tr-fil">';
+ if(gs.length>1)h+=chips("Prova","g",gs);
+ if(ds.length>1)h+=chips("Disciplina","d",ds);
+ if(np)h+=chips("Tipo","t",[["p","Casos de prova"],["q","Perguntas"]]);
+ h+="</div>";
+ h+='<button type="button" class="tr-go" data-go'+(pl.length?"":" disabled")+'>Treinar '+Math.min(10,pl.length)+' questões</button>';
+ h+='<p class="tr-cob">'+pl.length+' no filtro atual · '+np+' casos de prova antiga e '+(r.tot-np)+' perguntas neste período</p>';
+ V.innerHTML=h}
+function sorteia(){var pl=pool().map(function(i){var h=H[i.id];return {i:i,s:(h?(h[0]?2+h[1]/1e13:1):0)+Math.random()*.5}});
+ pl.sort(function(x,y){return x.s-y.s});return pl.slice(0,10).map(function(x){return x.i})}
+function pergunta(){var it=S.l[S.n];
+ var h='<div class="tr-top"><span class="n">'+(S.n+1)+" / "+S.l.length+'</span><div class="tr-bar"><i style="width:'+(S.n*100/S.l.length)+'%"></i></div><button type="button" class="tr-sair" data-sair>Sair</button></div>';
+ h+='<article class="tr-card"><div class="tr-meta">'+(it.ja?'<span class="tr-tag">já caiu</span>':'<span class="tr-tag t2">treino</span>')+'<span>'+esc(it.d)+(it.g?" · "+it.g:"")+"</span></div>";
+ h+='<p class="tr-q">'+it.q+"</p>"+(it.ask?'<p class="tr-ask">'+it.ask+"</p>":"");
+ h+='<button type="button" class="tr-show" data-show>Mostrar resposta</button><div class="tr-ans" hidden>'+it.a+'</div><div class="tr-rate" hidden><button type="button" class="no" data-r="0">Errei</button><button type="button" class="ok" data-r="1">Acertei</button></div></article>';
+ V.innerHTML=h;window.scrollTo({top:0})}
+function fim(){var ac=S.l.filter(function(i){return S.r[i.id]}).length,er=S.l.filter(function(i){return !S.r[i.id]});
+ var h='<div class="tr-card tr-res"><div class="big">'+ac+" / "+S.l.length+"</div><p>"+(ac===S.l.length?"Sem erros. Bora para a próxima rodada.":er.length>S.l.length/2?"Vale rever as apostilas dos temas abaixo e tentar de novo.":"Boa rodada. As erradas voltam primeiro nas próximas.")+"</p>";
+ if(er.length)h+='<ul class="tr-erros">'+er.map(function(i){return "<li><b>"+esc(i.d)+":</b> "+esc(strip(i.q).slice(0,110))+(strip(i.q).length>110?"…":"")+"</li>"}).join("")+"</ul>";
+ h+='<div class="tr-btns"><button type="button" class="tr-go" data-go>Treinar de novo</button><button type="button" class="tr-chip" data-sair>Mudar filtros</button></div></div>';
+ V.innerHTML=h;S=null;window.scrollTo({top:0})}
+V.addEventListener("click",function(e){var t=e.target;if(!t.closest)return;
+ var c=t.closest("[data-f]");if(c){F[c.dataset.f]=c.dataset.v;home();return}
+ if(t.closest("[data-go]")){var l=sorteia();if(!l.length)return;S={l:l,n:0,r:{}};pergunta();return}
+ if(t.closest("[data-sair]")){S=null;home();return}
+ if(t.closest("[data-show]")){var b=t.closest("[data-show]");b.hidden=true;V.querySelector(".tr-ans").hidden=false;V.querySelector(".tr-rate").hidden=false;return}
+ var r=t.closest("[data-r]");if(r&&S){var it=S.l[S.n],ok=r.dataset.r==="1";S.r[it.id]=ok;H[it.id]=[ok?1:0,Date.now()];grava();S.n++;if(S.n>=S.l.length)fim();else pergunta()}});
+function mostra(){var on=location.hash==="#treinar";
+ if(!on){return}
+ document.querySelectorAll(".view").forEach(function(x){x.hidden=x!==V});
+ document.querySelectorAll(".tabs a").forEach(function(a){if(a.dataset.view==="treinar")a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});
+ if(!S)home();carrega().then(function(){if(location.hash==="#treinar"&&!S)home()})}
+addEventListener("hashchange",mostra);mostra();
 })();
 </script><!--/ckp-->
 </body>
