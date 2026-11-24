@@ -1440,6 +1440,7 @@ addEventListener("pointerdown",function(e){var t=e.target;if(!t.closest||!t.clos
  setTimeout(function(){r.remove()},600)},{passive:true,capture:true});}
 /* contato: troque o e-mail aqui quando existir (vazio = "em breve") */
 var CK_EMAIL="carokannmed@gmail.com";
+var CK_CONTATO_ATIVO=false; /* true religa os botões "Contato" (Sobre e rodapé do início) */
 function aviso(m){var t=$(".ck-toast")||B.appendChild(Object.assign(document.createElement("div"),{className:"ck-toast",role:"status"}));t.textContent=m;t.classList.add("on");clearTimeout(aviso.t);aviso.t=setTimeout(function(){t.classList.remove("on")},3200)}
 function contato(){if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(CK_EMAIL)){aviso("E-mail de contato em breve.");return}
  var per=(location.pathname.match(/p([1-8])\.html$/)||[])[1];
@@ -1450,13 +1451,14 @@ var TXT={
  sub:"ckp · app dos períodos",
  blocos:[
  ["O que é","Aplicativo de estudo para o 1º ao 8º período de Medicina, baseado em resumos de alunos e na análise de relatos de provas antigas 👀. O conteúdo traz atualizações e referências atuais, com diretrizes e artigos recentes sempre com fonte em link."],
+ ["Sempre melhorando","O aplicativo é atualizado constantemente. As assinaturas e o feedback da comunidade são fundamentais para mantê-lo estável e melhorar cada vez mais o conteúdo."],
  ["O que tem",["<b>Apostilas</b>: aulas com sumário, resumo, “O que aprendemos” e fontes com link.","<b>Flashcards</b>: baralhos por assunto; avalie como Errei, Difícil, Bom ou Fácil e o app programa as revisões.","<b>Questões para treinar</b>: casos e perguntas no modelo das provas antigas, com resposta comentada e seu desempenho salvo.","<b>Destaques</b>: grife trechos, anote e transforme em cartão de revisão.","<b>Temas</b> claro e escuro, <b>impressão</b> (Ctrl+P) e uso <b>sem internet</b> depois de aberto uma vez."]]
  ]};
 function monta(){
  var bk=document.createElement("div");bk.className="ck-bk";bk.setAttribute("role","dialog");bk.setAttribute("aria-modal","true");bk.setAttribute("aria-labelledby","ck-ttl");
  var h='<div class="ck-box"><button type="button" class="ck-x" aria-label="Fechar">×</button><header><h2 id="ck-ttl"><span class="c">C</span>aro-<span class="k">K</span>ann Med</h2><p class="ck-sub">'+TXT.sub+'</p></header>';
  TXT.blocos.forEach(function(b){h+="<section><h3>"+b[0]+"</h3>"+(typeof b[1]==="string"?"<p>"+b[1]+"</p>":"<ul>"+b[1].map(function(x){return "<li>"+x+"</li>"}).join("")+"</ul>")+"</section>"});
- h+='<footer>Desenvolvido por um <b>acadêmico da FCMS-JF Suprema</b>.<small>Material de apoio ao estudo; não substitui aulas, livros-texto nem diretrizes. Versão de teste (BETA).</small></footer><div class="ck-acoes"><button type="button" class="ck-ct" data-contato>Contato</button><button type="button" class="ck-ok">Entendi</button></div></div>';
+ h+='<footer>Desenvolvido por um <b>acadêmico da FCMS-JF Suprema</b>.<small>Material de apoio ao estudo; não substitui aulas, livros-texto nem diretrizes. Versão de teste (BETA).</small></footer><div class="ck-acoes'+(CK_CONTATO_ATIVO?'':' ck-so')+''+'">'+(CK_CONTATO_ATIVO?'<button type="button" class="ck-ct" data-contato>Contato</button>':'')+'<button type="button" class="ck-ok">Entendi</button></div></div>';
  bk.innerHTML=h;B.appendChild(bk);return bk}
 var bk=null,voltaA=null;
 function abre(){if(!bk)bk=monta();voltaA=document.activeElement;bk.classList.add("on");R.classList.add("ck-trava");var x=$(".ck-x",bk);x&&x.focus();bk.scrollTop=0;$(".ck-box",bk).scrollTop=0}
@@ -1471,7 +1473,7 @@ addEventListener("keydown",function(e){
 document.querySelectorAll(".xm-canto,.asmed").forEach(function(g){g.setAttribute("role","button");g.tabIndex=0;g.setAttribute("aria-label","Sobre o Caro-Kann Med: como funciona e o que o app tem")});
 /* escolha de ciclo (início) */
 var cic=$(".ck-ciclos");
-if(cic){var so=$(".soon");if(!$(".ck-rodape")){var rp=document.createElement("div");rp.className="ck-rodape";rp.innerHTML='<button type="button" class="ck-ct" data-contato>Contato</button>';(so||cic).after(rp)}
+if(cic){var so=$(".soon");if(CK_CONTATO_ATIVO&&!$(".ck-rodape")){var rp=document.createElement("div");rp.className="ck-rodape";rp.innerHTML='<button type="button" class="ck-ct" data-contato>Contato</button>';(so||cic).after(rp)}
  var H=["#ciclos","#basico","#clinico"];
  function aplica(){var h=location.hash,i=H.indexOf(h);
   if(i<0){B.removeAttribute("data-ciclo");return}
