@@ -1623,11 +1623,16 @@ body.ini nav.pers a:nth-child(2){animation-delay:.04s}body.ini nav.pers a:nth-ch
 html.ck-trava,html.ck-trava body{overflow:hidden}
 @media print{.ck-bk,.ck-aura,.ck-rip{display:none!important}}
 
+/* só a rainha pulsa; o nome fica parado e só muda de cor, bem de leve */
+@media (prefers-reduced-motion:no-preference){
+.asmed{animation:none!important;will-change:auto!important}
+.xm-mini,.asmed .qw{animation:ck-pulso 2.4s ease-in-out infinite!important;will-change:transform;transform-origin:50% 55%}
+@keyframes ck-pulso{0%,39%{transform:scale(1)}43%{transform:scale(1.14)}49%,100%{transform:scale(1)}}}
 /* nome maior e com letras que alternam verde/azul */
 html .brand .word .asmed{font-size:clamp(21px,6.3vw,28px)}
-.asmed .t .ck-l{transition:color .55s ease,text-shadow .55s ease}
-.asmed .t .ck-l.g{color:var(--ck-verde)!important;text-shadow:0 0 14px rgba(60,196,142,.38)}
-.asmed .t .ck-l.b{color:var(--ck-azul)!important;text-shadow:0 0 14px rgba(79,150,234,.38)}
+.asmed .t .ck-l{transition:color 1s ease,text-shadow 1s ease}
+.asmed .t .ck-l.g{color:var(--ck-verde)!important;text-shadow:0 0 14px rgba(60,196,142,.2)}
+.asmed .t .ck-l.b{color:var(--ck-azul)!important;text-shadow:0 0 14px rgba(79,150,234,.2)}
 /* acabamento geral */
 ::selection{background:rgba(79,150,234,.32);color:inherit}
 html{scroll-behavior:smooth;scrollbar-color:#2a3338 transparent}
@@ -1763,10 +1768,10 @@ function repouso(){for(var i=0;i<N;i++)set(i,i===0?"g":i===5?"b":"")}
 function cor(i){var e=G[0][i];return e.classList.contains("g")?"g":e.classList.contains("b")?"b":""}
 function espera(f,ms){setTimeout(function(){if(document.hidden){espera(f,1500);return}f()},ms)}
 function mistura(k){if(k>=16){converge(v%2?"b":"g");return}
- for(var j=0;j<2;j++)set(rnd(N),Math.random()<.5?"g":"b");espera(function(){mistura(k+1)},360)}
+ for(var j=0;j<2;j++)set(rnd(N),Math.random()<.5?"g":"b");espera(function(){mistura(k+1)},650)}
 function converge(w){var f=[];for(var i=0;i<N;i++)if(cor(i)!==w)f.push(i);
  if(!f.length){espera(function(){repouso();v++;espera(ciclo,3200)},3000);return}
- set(f[rnd(f.length)],w);espera(function(){converge(w)},280)}
+ set(f[rnd(f.length)],w);espera(function(){converge(w)},520)}
 function ciclo(){mistura(0)}
 repouso();espera(ciclo,3200);
 })();

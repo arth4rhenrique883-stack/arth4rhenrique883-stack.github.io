@@ -103,11 +103,16 @@ html.ck-trava,html.ck-trava body{overflow:hidden}
 """
 
 CSS2 = r"""
+/* só a rainha pulsa; o nome fica parado e só muda de cor, bem de leve */
+@media (prefers-reduced-motion:no-preference){
+.asmed{animation:none!important;will-change:auto!important}
+.xm-mini,.asmed .qw{animation:ck-pulso 2.4s ease-in-out infinite!important;will-change:transform;transform-origin:50% 55%}
+@keyframes ck-pulso{0%,39%{transform:scale(1)}43%{transform:scale(1.14)}49%,100%{transform:scale(1)}}}
 /* nome maior e com letras que alternam verde/azul */
 html .brand .word .asmed{font-size:clamp(21px,6.3vw,28px)}
-.asmed .t .ck-l{transition:color .55s ease,text-shadow .55s ease}
-.asmed .t .ck-l.g{color:var(--ck-verde)!important;text-shadow:0 0 14px rgba(60,196,142,.38)}
-.asmed .t .ck-l.b{color:var(--ck-azul)!important;text-shadow:0 0 14px rgba(79,150,234,.38)}
+.asmed .t .ck-l{transition:color 1s ease,text-shadow 1s ease}
+.asmed .t .ck-l.g{color:var(--ck-verde)!important;text-shadow:0 0 14px rgba(60,196,142,.2)}
+.asmed .t .ck-l.b{color:var(--ck-azul)!important;text-shadow:0 0 14px rgba(79,150,234,.2)}
 /* acabamento geral */
 ::selection{background:rgba(79,150,234,.32);color:inherit}
 html{scroll-behavior:smooth;scrollbar-color:#2a3338 transparent}
@@ -247,10 +252,10 @@ function repouso(){for(var i=0;i<N;i++)set(i,i===0?"g":i===5?"b":"")}
 function cor(i){var e=G[0][i];return e.classList.contains("g")?"g":e.classList.contains("b")?"b":""}
 function espera(f,ms){setTimeout(function(){if(document.hidden){espera(f,1500);return}f()},ms)}
 function mistura(k){if(k>=16){converge(v%2?"b":"g");return}
- for(var j=0;j<2;j++)set(rnd(N),Math.random()<.5?"g":"b");espera(function(){mistura(k+1)},360)}
+ for(var j=0;j<2;j++)set(rnd(N),Math.random()<.5?"g":"b");espera(function(){mistura(k+1)},650)}
 function converge(w){var f=[];for(var i=0;i<N;i++)if(cor(i)!==w)f.push(i);
  if(!f.length){espera(function(){repouso();v++;espera(ciclo,3200)},3000);return}
- set(f[rnd(f.length)],w);espera(function(){converge(w)},280)}
+ set(f[rnd(f.length)],w);espera(function(){converge(w)},520)}
 function ciclo(){mistura(0)}
 repouso();espera(ciclo,3200);
 })();
@@ -273,7 +278,7 @@ function coleta(){var meta={};(PER.aulas||[]).forEach(function(x){meta[x.id]=x})
  Object.keys(DS).forEach(function(k){var d=DS[k];if(!d||!d.sections)return;
   d.sections.forEach(function(sec){var m=meta[sec.id]||{};
    var disc=m.disc||sec.esp||strip(sec.title).split("·")[0].replace(/^\d+\.\s*/,"").trim();
-   var gr=(m.mat==="Técnica operatória"||/^ci-to/.test(sec.id))?"TO":(m.av||sec.av||"");
+   var gr=(m.mat==="Técnica operatória")?"":(m.av||sec.av||"");
    var ja=/^pa\d/.test(sec.id);
    (sec.blocks||[]).forEach(function(b,bi){
     if(b.t==="prova")out.push({id:sec.id+":"+bi,k:"p",g:gr,d:disc,aula:strip(sec.title),ja:true,src:b.src,q:b.stem,ask:b.ask,a:(b.reveal||[]).map(function(x){return "<p>"+x+"</p>"}).join("")});
@@ -288,7 +293,7 @@ function home(){
  if(!ITENS){V.innerHTML='<p class="tr-vazio">Carregando as questões…</p>';return}
  if(!ITENS.length){V.innerHTML='<div class="tr-head"><h2>Questões para treinar</h2></div><p class="tr-vazio">Este período ainda não tem questões. Elas aparecem aqui assim que as apostilas chegarem.</p>';return}
  var r=resumo(),pl=pool(),np=ITENS.filter(function(i){return i.k==="p"}).length;
- var gs=opts("g").map(function(x){return [x,x==="TO"?"TO":x]}),ds=opts("d").map(function(x){return [x,x]});
+ var gs=opts("g").map(function(x){return [x,x]}),ds=opts("d").map(function(x){return [x,x]});
  var h='<div class="tr-head"><h2>Questões para treinar</h2><p>Casos e perguntas no modelo das provas antigas. Responda de cabeça, confira a resposta comentada e diga se acertou.</p></div>';
  h+='<div class="tr-stats"><div><b>'+r.tot+'</b><span>questões</span></div><div><b>'+r.v+'</b><span>já treinadas</span></div><div><b>'+(r.v?Math.round(r.ac*100/r.v)+"%":"–")+'</b><span>acerto</span></div></div>';
  h+='<div class="tr-fil">';
