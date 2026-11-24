@@ -1711,7 +1711,7 @@ addEventListener("pointerdown",function(e){var t=e.target;if(!t.closest||!t.clos
  var r=document.createElement("span");r.className="ck-rip";r.style.left=e.clientX+"px";r.style.top=e.clientY+"px";B.appendChild(r);
  setTimeout(function(){r.remove()},600)},{passive:true,capture:true});}
 /* contato: troque o e-mail aqui quando existir (vazio = "em breve") */
-var CK_EMAIL="";
+var CK_EMAIL="carokannmed@gmail.com";
 function aviso(m){var t=$(".ck-toast")||B.appendChild(Object.assign(document.createElement("div"),{className:"ck-toast",role:"status"}));t.textContent=m;t.classList.add("on");clearTimeout(aviso.t);aviso.t=setTimeout(function(){t.classList.remove("on")},3200)}
 function contato(){if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(CK_EMAIL)){aviso("E-mail de contato em breve.");return}
  var per=(location.pathname.match(/p([1-8])\.html$/)||[])[1];
