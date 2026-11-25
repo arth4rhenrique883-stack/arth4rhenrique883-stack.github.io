@@ -947,7 +947,9 @@ function renderApostilas(){
     const n=PER.aulas.filter(a=>a.mat===mat&&a.av===AV).length,lid=PER.aulas.filter(a=>a.mat===mat&&a.av===AV&&LIDAS[a.id]).length;
     h+=`<details class="mat"${ABERTA[mat]?" open":""} data-mat="${e_(mat)}"><summary><b>${e_(mat)}</b><span>${n?`${lid} de ${n} lidas`:"em breve"}</span></summary>`;
     /* 28/10: matéria com especialidades = uma fileira de botões; mostra só a especialidade escolhida (pedido dele: mais simples) */
-    const nomes=subs.map(x=>x[0]).filter(Boolean),de=sub=>PER.aulas.filter(a=>a.mat===mat&&a.sub===sub&&a.av===AV);
+    /* 25/11: provas antigas no topo de cada matéria (pedido do Arthur): só na ordem da lista, sem mexer nos dados */
+    const isPA=t=>/^Provas? antigas?/i.test(t||""),paTop=L=>L.filter(a=>isPA(a.t)).concat(L.filter(a=>!isPA(a.t)));
+    const nomes=subs.map(x=>x[0]).filter(Boolean).sort((x,y)=>isPA(y)-isPA(x)),de=sub=>paTop(PER.aulas.filter(a=>a.mat===mat&&a.sub===sub&&a.av===AV));
     if(nomes.length>1){let cur=ESP[mat];if(!nomes.includes(cur))cur=nomes.find(x=>de(x).length)||nomes[0];
       h+=`<div class="espbar">${nomes.map(x=>`<button class="chip" type="button" data-esp="${e_(x)}" data-espmat="${e_(mat)}" aria-pressed="${x===cur}">${e_(x)}<span class="n">${de(x).length}</span></button>`).join("")}</div>`;
       const L=de(cur);h+=L.length?`<div class="blist">${L.map(item).join("")}</div>`:`<p class="soon">${e_(cur)} da ${AV}: em breve.</p>`}
